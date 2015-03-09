@@ -27,7 +27,4 @@
   "dependencies": {
     "normalize.css": "~3.0.2"
   },
-  "devDependencies": {
-    "less": "~2.4.0"
-  }
 }
