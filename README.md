@@ -5,24 +5,23 @@ Pronounced "Cross Meter".
 
 ## Installation
 
-    $ bower install normalize.css
-    $ bower install xmeter.css
-
-*(still working on dependencies)*
+    $ bower install xmeter
 
 ## Usage
 
-This stylesheet depends on **normalize.css** but does *not* `@import normalize.css`. In order for it
+This package depends on **normalize.css**. It is listed under the package dependencies,
+so there is no need to install it separately. However this stylesheet does *not*
+`@import normalize.css`. In order for it
 to work properly, you *must* link **normalize.css** in your HTML *before* linking this stylesheet.
-The best way to do this is to `bower install` both of them, and then use the following `link` elements
+Use the following `link` elements
 in the HTML head:
 
-    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css"/>
-    <link rel="stylesheet" href="bower_components/xmeter.css/xmeter.css"/>
+    <link rel="stylesheet" href="path/to/bower_components/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="path/to/bower_components/xmeter/xmeter.css"/>
 
 To use this stylesheet in your own Less project, import (reference) it:
 
-    @import (reference) url(default.less);
+    @import (reference) url(xmeter.less);
 
 This allows you access to all the mixins and selectors, so you can build on top of them.
 
@@ -36,9 +35,10 @@ elements, providing only the very basic and necessary styles, **xmeter.css** add
 styles for a more streamlined look and a vertical rhythm system. (For more information on
 vertical rhythm, see these articles in
 [24ways](http://24ways.org/2006/compose-to-a-vertical-rhythm/) and
-[Smashing Magazine](http://www.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/#tt-rhythm).
+[Smashing Magazine](http://www.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/#tt-rhythm).)
 
-Features of this stylesheet include the following. See the [test page](./index.html) for a demo.
+Features of this stylesheet include the following. See the test page (`./index.html`)
+for a demo.
 
 - Vertical rhythm &mdash; every line on the page is exactly the same height
   (dubbed a "vertical rhythm unit" or "vru") regardless of font size, and typographical
@@ -54,4 +54,4 @@ Features of this stylesheet include the following. See the [test page](./index.h
   when nested inside elements with a larger font size (style *does* depend on location).
 - Line-height for all inline (text-level) elements is 0. This allows the vertical rhythm to
   remain unaffected.
-- Minor, nevertheless prettier, style changes to some text-level elements from the browser default.
+- Minor, albeit prettier, style changes to some text-level elements from the browser default.
