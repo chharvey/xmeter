@@ -21,7 +21,7 @@ in the HTML head:
 
 To use this stylesheet in your own Less project, import (reference) it:
 
-    @import (reference) url(xmeter.less);
+    @import (reference) url(path/to/bower_components/xmeter/src/xmeter.less);
 
 This allows you access to all the mixins and selectors, so you can build on top of them.
 
