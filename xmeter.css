@@ -1,6 +1,10 @@
 /*###############*\
     xmeter.less
 \*###############*/
+/*##################*\
+    _settings.less
+\*##################*/
+/*@VERTICAL RHYTHM*/
 /*#################*\
     _flexbox.less
 \*#################*/
@@ -92,6 +96,70 @@
 @updated
 : 2015-02-12
   */
+/*##################*\
+    _clearfix.less
+\*##################*/
+/**
+  * This tool is used on **containers of floats** (not on floats themselves).
+  * It pushes subsequent content to the bottom of the container.
+@tags
+: #float
+@author
+: Chris Harevy
+@updated
+: 2014-05-12
+  */
+/*################*\
+    _rotate.less
+\*################*/
+/**
+  * Use this tool to apply a rotation transformation to an Object.
+@params
+: @rotation : the angle, in degrees, to rotate the Object
+@tags
+: #transformation
+: #vendorspecific
+@author
+: Chris Harvey
+@updated
+: 2014-05-10
+  */
+/*##################*\
+    _gradient.less
+\*##################*/
+/**
+  * Applies a linear gradient background on an Element.
+  * See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) for more info.
+  * See [WPD](http://docs.webplatform.org/wiki/css/functions/linear-gradient) for more info.
+@params
+: ... : any number of parameters
+@tags
+: #background-image
+: #gradient
+: #vendorspecific
+@author
+: Chris Harvey
+@updated
+: 2014-07-08
+  */
+/*####################*\
+    _transition.less
+\*####################*/
+/**
+  * Applies a transition timing effect on an Element.
+@params
+: @props : the CSS property name(s). If more than one, they must be comma-separated
+: @dura  : the length in time, in seconds, the transition is to be in effect
+: @func  : the timing-function. See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
+: @delay : the length in time, in seconds, the transition will wait before starting
+@tags
+: #transition
+: #vendorspecific
+@author
+: Chris Harvey
+@updated
+: 2014-06-17
+  */
 /*#################*\
     _spacing.less
 \*#################*/
@@ -163,34 +231,6 @@
 : 2015-03-18
   */
 /*################*\
-    _floats.less
-\*################*/
-/**
-  * This tool is used on **containers of floats** (not on floats themselves).
-  * It pushes subsequent content to the bottom of the container.
-@tags
-: #float
-@author
-: Chris Harevy
-@updated
-: 2014-05-12
-  */
-/*###################*\
-    _transform.less
-\*###################*/
-/**
-  * Use this tool to apply a rotation transformation to an Object.
-@params
-: @rotation : the angle, in degrees, to rotate the Object
-@tags
-: #transformation
-: #vendorspecific
-@author
-: Chris Harvey
-@updated
-: 2014-05-10
-  */
-/*################*\
     _delims.less
 \*################*/
 /**
@@ -224,29 +264,14 @@
 @updated
 : 2015-02-12
   */
-/*#################*\
-    _bground.less
-\*#################*/
-/**
-  * Applies a linear gradient background on an Element.
-  * See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) for more info.
-  * See [WPD](http://docs.webplatform.org/wiki/css/functions/linear-gradient) for more info.
-@params
-: ... : any number of parameters
-@tags
-: #background-image
-: #gradient
-: #vendorspecific
-@author
-: Chris Harvey
-@updated
-: 2014-07-08
-  */
+/*################*\
+    _sprite.less
+\*################*/
 /**
   * Sets the background position of an Object's background sprite image.
-  * This assumes the sprite's images are linearly horizontally ordered.
 @params
-: @position : the position of the sprite's image to be used. must be a positive integer.
+: [horizontal|vertcial] whether the sprite's images are linearly horizontally or vertically ordered.
+: @position : the position of the sprite's image to be used, starting at 1. must be a positive integer.
 : @iconsize : the horizontal (x) size of the sprite's image. in pixels.
 : @iconpadd : the padding between images in the sprite's image. in pixels.
 @tags
@@ -254,7 +279,7 @@
 @author
 : Chris Harvey
 @updated
-: 2014-07-18
+: 2015-03-24
   */
 /*#####################*\
     _translucent.less
@@ -269,28 +294,9 @@
 @updated
 : 2014-10-07
   */
-/*####################*\
-    _transition.less
-\*####################*/
-/**
-  * Applies a transition timing effect on an Element.
-@params
-: @props : the CSS property name(s). If more than one, they must be comma-separated
-: @dura  : the length in time, in seconds, the transition is to be in effect
-: @func  : the timing-function. See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
-: @delay : the length in time, in seconds, the transition will wait before starting
-@tags
-: #transition
-: #vendorspecific
-@author
-: Chris Harvey
-@updated
-: 2014-06-17
-  */
 /*##################*\
     _sections.less
 \*##################*/
-/*@SETTINGS*/
 /*@SECTIONS*/
 html {
   font-size: 100%;
