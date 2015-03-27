@@ -30,9 +30,9 @@
 
 /**
   * Sets the background position of an Object's background sprite image.
-  * This assumes the sprite's images are linearly horizontally ordered.
 @params
-: @position : the position of the sprite's image to be used. must be a positive integer.
+: [horizontal|vertcial] whether the sprite's images are linearly horizontally or vertically ordered.
+: @position : the position of the sprite's image to be used, starting at 1. must be a positive integer.
 : @iconsize : the horizontal (x) size of the sprite's image. in pixels.
 : @iconpadd : the padding between images in the sprite's image. in pixels.
 @tags
@@ -40,8 +40,15 @@
 @author
 : Chris Harvey
 @updated
-: 2014-07-18
+: 2015-03-24
   */
+// DEPRECATED // CHANGED
 .sprite(@position; @iconsize; @iconpadd) {
+  .sprite(horizontal; @position; @iconsize; @iconpadd);
+}
+.sprite(horizontal; @position; @iconsize; @iconpadd) {
   background-position: ((@position - 1) * -(@iconsize + @iconpadd)) 0;
+}
+.sprite(vertical; @position; @iconsize; @iconpadd) {
+  background-position: 0 ((@position - 1) * -(@iconsize + @iconpadd));
 }
