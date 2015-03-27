@@ -1,0 +1,30 @@
+
+/*#################*\
+    _generic.less
+\*#################*/
+
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, pre,
+dd {
+  margin: 0;
+}
+
+body, main,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, pre,
+ol, ul, dl, // dd! + dt, // uncomment this when `!` selector is supported in CSS4
+table {
+  .spacing-bottom(@default_vru);
+}
+dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
+  margin-top: @default_vru;
+}
+
+
+main,
+figure, blockquote, pre {
+  margin-left:  1rem;
+  margin-right: 1rem;
+}

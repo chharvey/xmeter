@@ -41,6 +41,51 @@
 /*#####################*\
     _translucent.less
 \*#####################*/
+/*#################*\
+    _generic.less
+\*#################*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+pre,
+dd {
+  margin: 0;
+}
+body,
+main,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+pre,
+ol,
+ul,
+dl,
+table {
+  margin-bottom: 1.5rem;
+}
+dd + dt {
+  margin-top: 1.5rem;
+}
+main,
+figure,
+blockquote,
+pre {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 /*##################*\
     _sections.less
 \*##################*/
@@ -48,20 +93,6 @@
 html {
   font-size: 100%;
   line-height: 1.5;
-}
-body {
-  margin: 0 0 1.5rem;
-}
-main {
-  margin: 0 1rem 1.5rem;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 1.5rem;
 }
 h1 {
   font-size: 2rem;
@@ -98,19 +129,7 @@ address {
 hr {
   display: none;
 }
-p,
-ol,
-ul,
-dl,
-table {
-  margin: 0 0 1.5rem;
-}
 /*@Paragraph-Like Content*/
-figure,
-blockquote,
-pre {
-  margin: 0 1rem 1.5rem;
-}
 /*@Lists*/
 ol,
 ul {
@@ -118,12 +137,6 @@ ul {
 }
 dt {
   font-weight: bold;
-}
-dd {
-  margin: 0;
-}
-dd + dt {
-  margin-top: 1.5rem;
 }
 /*@Tables*/
 th {
