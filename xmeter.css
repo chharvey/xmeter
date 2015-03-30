@@ -86,6 +86,12 @@ pre {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+@media print {
+  body,
+  main {
+    margin: 0;
+  }
+}
 /*##################*\
     _sections.less
 \*##################*/

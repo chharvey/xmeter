@@ -22,9 +22,14 @@ dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
   margin-top: @default_vru;
 }
 
-
 main,
 figure, blockquote, pre {
   margin-left:  1rem;
   margin-right: 1rem;
+}
+
+@media print {
+  body, main {
+    margin: 0;
+  }
 }
