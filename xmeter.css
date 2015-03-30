@@ -141,6 +141,10 @@ ol,
 ul {
   padding: 0 0 0 4rem;
 }
+li > ol,
+li > ul {
+  margin-bottom: 0;
+}
 dt {
   font-weight: bold;
 }
