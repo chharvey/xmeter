@@ -38,15 +38,20 @@ ul {
 dl {
 }
 li {
-  > ol,
-  > ul {
-    .spacing-bottom(0);
-  }
 }
 dt {
   font-weight: bold;
 }
 dd {
+}
+li,
+dt,
+dd {
+  > ol,
+  > ul,
+  > dl {
+    .spacing-bottom(0);
+  }
 }
 //---- @end Lists ----//
 

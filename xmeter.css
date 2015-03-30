@@ -141,12 +141,19 @@ ol,
 ul {
   padding: 0 0 0 4rem;
 }
-li > ol,
-li > ul {
-  margin-bottom: 0;
-}
 dt {
   font-weight: bold;
+}
+li > ol,
+dt > ol,
+dd > ol,
+li > ul,
+dt > ul,
+dd > ul,
+li > dl,
+dt > dl,
+dd > dl {
+  margin-bottom: 0;
 }
 /*@Tables*/
 th {
