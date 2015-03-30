@@ -243,3 +243,8 @@ samp {
     _embedded.less
 \*##################*/
 /*@EMBEDDED CONTENT*/
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
