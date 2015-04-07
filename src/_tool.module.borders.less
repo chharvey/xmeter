@@ -8,16 +8,14 @@
 // vertical rhythm intact when adding border widths (by slightly adjusting position and margins).
 // Do *not* use these mixins on INLINE Objects!
 //
-// Note: These mixins affect border width only (for structure). They do not affect cosmetics,
+// Note: This mixin affects border width only (for structure). It does not affect cosmetics,
 //       i.e., border style or color. To change these, you must include the `border-style` and
 //       `border-color` properties after including this mixin.
 //
-// Methods with same # of params cannot be overloaded; thus mixin names have modifiers.
-//
-// `.border-vert-one(top; ...)`     - adjust the top border
-// `.border-vert-one(bottom; ...)`  - adjust the bottom border
-// `.border-vert-both(topbot; ...)` - adjust both the top and bottom borders
-// `.border-vert-both(all; ...)`    - adjust all four borders
+// `.border-vert(top; ...)`    - adjust the top border
+// `.border-vert(bottom; ...)` - adjust the bottom border
+// `.border-vert(topbot; ...)` - adjust both the top and bottom borders
+// `.border-vert(all; ...)`    - adjust all four borders
 //
 // @width - (optional: `0`)            value of `border-width`
 // @style - (optional: `solid`)        value of `border-style`
@@ -26,68 +24,68 @@
 // : Chris Harvey
 // ^updated
 // : 2015-04-07
-// .border-vert-one(top; @width; @style; @color) {
+// .border-vert(top; @width; @style; @color) {
 //   border-top: @width  @style  @color;
 //   .pull-this(@width);
 // }
-// .border-vert-one(top; @width; @style) {
-//   .border-vert-one(top; @width; @style; currentColor);
+// .border-vert(top; @width; @style) {
+//   .border-vert(top; @width; @style; currentColor);
 // }
-.border-vert-one(top; @width) {
-  // .border-vert-one(top; @width; solid);
+.border-vert(top; @width) {
+  // .border-vert(top; @width; solid);
   border-top-width: @width;
   .pull-this(@width);
 }
-.border-vert-one(top) {
-  .border-vert-one(top; 0);
+.border-vert(top) {
+  .border-vert(top; 0);
 }
 
-// .border-vert-one(bottom; @width; @style; @color) {
+// .border-vert(bottom; @width; @style; @color) {
 //   border-bottom: @width  @style  @color;
 //   .pull-this(@width);
 // }
-// .border-vert-one(bottom; @width; @style) {
-//   .border-vert-one(bottom; @width; @style; currentColor);
+// .border-vert(bottom; @width; @style) {
+//   .border-vert(bottom; @width; @style; currentColor);
 // }
-.border-vert-one(bottom; @width) {
-  // .border-vert-one(bottom; @width; solid);
+.border-vert(bottom; @width) {
+  // .border-vert(bottom; @width; solid);
   border-bottom-width: @width;
   .pull-this(@width);
 }
-.border-vert-one(bottom) {
-  .border-vert-one(bottom; 0);
+.border-vert(bottom) {
+  .border-vert(bottom; 0);
 }
 
-// .border-vert-both(topbot; @width; @style; @color) {
+// .border-vert(topbot; @width; @style; @color) {
 //   border-top:    @width  @style  @color;
 //   border-bottom: @width  @style  @color;
 //   .pull-this(2 * @width);
 // }
-// .border-vert-both(topbot; @width; @style) {
-//   .border-vert-both(topbot; @width; @style; currentColor);
+// .border-vert(topbot; @width; @style) {
+//   .border-vert(topbot; @width; @style; currentColor);
 // }
-.border-vert-both(topbot; @width) {
-  // .border-vert-both(topbot; @width; solid);
+.border-vert(topbot; @width) {
+  // .border-vert(topbot; @width; solid);
   border-top-width:    @width;
   border-bottom-width: @width;
   .pull-this(2 * @width);
 }
-.border-vert-both(topbot) {
-  .border-vert-one(topbot; 0);
+.border-vert(topbot) {
+  .border-vert(topbot; 0);
 }
 
-// .border-vert-both(all; @width; @style; @color) {
+// .border-vert(all; @width; @style; @color) {
 //   border: @width  @style  @color;
 //   .pull-this(2 * @width);
 // }
-// .border-vert-both(all; @width; @style) {
-//   .border-vert-both(all; @width; @style; currentColor);
+// .border-vert(all; @width; @style) {
+//   .border-vert(all; @width; @style; currentColor);
 // }
-.border-vert-both(all; @width) {
-  // .border-vert-both(all; @width; solid);
+.border-vert(all; @width) {
+  // .border-vert(all; @width; solid);
   border-width: @width;
   .pull-this(2 * @width);
 }
-.border-vert-both(all) {
-  .border-vert-one(all; 0);
+.border-vert(all) {
+  .border-vert(all; 0);
 }
