@@ -10,9 +10,9 @@
 //   - inline elements should not affect vertical rhythm, thus line-heights are zero
 
 
-//+++++++++++++++++++++//
-/*@TEXT-LEVEL SEMANTICS*/
-//+++++++++++++++++++++//
+/*+++++++++++++++++++++++++*\
+    #TEXT-LEVEL SEMANTICS
+\*+++++++++++++++++++++++++*/
 span, a, br,
 em, strong, i, mark, u, small, s,
 dfn, b, var, q, cite, sup, sub,
@@ -40,9 +40,9 @@ address > br {
   display: inline;
 }
 
-//--------------//
-/*@Stressed Text*/
-//--------------//
+/*------------------*\
+    #Stressed Text
+\*------------------*/
 em {
 }
 strong {
@@ -63,11 +63,11 @@ small {
 s {
   color: #e00;
 }
-//---- @end Stressed Text ----//
+//---- #end Stressed Text ----//
 
-//------------------------//
-/*@Documentation and Edits*/
-//------------------------//
+/*----------------------------*\
+    #Documentation and Edits
+\*----------------------------*/
 ins {
   // text-decoration: none;
   background: #a6f3a6; // GitHub-flavored
@@ -97,11 +97,11 @@ sup {
 }
 sub {
 }
-//---- @end Documentation and Edits ----//
+//---- #end Documentation and Edits ----//
 
-//------------------------//
-/*@Machine-Readable Data*/
-//------------------------//
+/*----------------------------*\
+    #Machine-Readable Data
+\*----------------------------*/
 abbr {
   &[title] {
     cursor: help;
@@ -122,5 +122,5 @@ kbd {
 }
 samp {
 }
-//---- @end Machine-Readable Data ----//
-//++++ @end TEXT-LEVEL SEMANTICS ++++//
+//---- #end Machine-Readable Data ----//
+//++++ #end TEXT-LEVEL SEMANTICS ++++//

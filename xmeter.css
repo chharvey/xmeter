@@ -4,13 +4,21 @@
 /*##################*\
     _settings.less
 \*##################*/
-/*@VERTICAL RHYTHM*/
+/*++++++++++++++++++++*\
+    #VERTICAL RHYTHM
+\*++++++++++++++++++++*/
 /*#################*\
     _flexbox.less
 \*#################*/
-/*@FLEXBOXES*/
-/*@Containers*/
-/*@Items*/
+/*++++++++++++++*\
+    #FLEXBOXES
+\*++++++++++++++*/
+/*---------------*\
+    #Containers
+\*---------------*/
+/*----------*\
+    #Items
+\*----------*/
 /*##################*\
     _clearfix.less
 \*##################*/
@@ -95,7 +103,9 @@ pre {
 /*##################*\
     _sections.less
 \*##################*/
-/*@SECTIONS*/
+/*+++++++++++++*\
+    #SECTIONS
+\*+++++++++++++*/
 html {
   font-size: 100%;
   line-height: 1.5;
@@ -156,13 +166,18 @@ dd > dl {
   margin-bottom: 0;
 }
 /*@Tables*/
+table {
+  max-width: 100%;
+}
 th {
   text-align: center;
 }
 /*##############*\
     _text.less
 \*##############*/
-/*@TEXT-LEVEL SEMANTICS*/
+/*+++++++++++++++++++++++++*\
+    #TEXT-LEVEL SEMANTICS
+\*+++++++++++++++++++++++++*/
 span,
 a,
 br,
@@ -197,7 +212,9 @@ br {
 address > br {
   display: inline;
 }
-/*@Stressed Text*/
+/*------------------*\
+    #Stressed Text
+\*------------------*/
 i:not([lang]) {
   quotes: '\201c' '\201d';
 }
@@ -216,7 +233,9 @@ small {
 s {
   color: #e00;
 }
-/*@Documentation and Edits*/
+/*----------------------------*\
+    #Documentation and Edits
+\*----------------------------*/
 ins {
   background: #a6f3a6;
 }
@@ -231,7 +250,9 @@ sup,
 sub {
   font-size: 0.75em;
 }
-/*@Machine-Readable Data*/
+/*----------------------------*\
+    #Machine-Readable Data
+\*----------------------------*/
 abbr[title] {
   cursor: help;
   border-bottom: 0;
@@ -245,11 +266,15 @@ samp {
 /*###############*\
     _forms.less
 \*###############*/
-/*@FORMS*/
+/*++++++++++*\
+    #FORMS
+\*++++++++++*/
 /*##################*\
     _embedded.less
 \*##################*/
-/*@EMBEDDED CONTENT*/
+/*+++++++++++++++++++++*\
+    #EMBEDDED CONTENT
+\*+++++++++++++++++++++*/
 img {
   max-width: 100%;
   font-style: italic;
