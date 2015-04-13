@@ -15,20 +15,20 @@ so there is no need to install it separately. However this stylesheet does *not*
 to work properly, you *must* link **normalize.css** in your HTML *before* linking this stylesheet.
 Use the following `link` elements
 in the HTML head:
-
-    <link rel="stylesheet" href="path/to/bower_components/normalize.css/normalize.css"/>
-    <link rel="stylesheet" href="path/to/bower_components/xmeter/xmeter.css"/>
-
+```html
+<link rel="stylesheet" href="path/to/bower_components/normalize.css/normalize.css"/>
+<link rel="stylesheet" href="path/to/bower_components/xmeter/xmeter.css"/>
+```
 If for some reason you do not have these stylesheets installed locally, you may fetch them off the
 web as you would from a CDN (though this is not recommended).
-
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"/>
-    <link rel="stylesheet" href="https://chharvey.github.io/xmeter/xmeter.css"/>
-
+```html
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"/>
+<link rel="stylesheet" href="https://chharvey.github.io/xmeter/xmeter.css"/>
+```
 To use this stylesheet in your own Less project, import (reference) it:
-
-    @import (reference) url(path/to/bower_components/xmeter/src/xmeter.less);
-
+```css
+@import (reference) url('path/to/bower_components/xmeter/src/xmeter.less');
+```
 This allows you access to all the mixins and selectors, so you can build on top of them.
 
 ## About
