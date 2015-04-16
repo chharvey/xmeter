@@ -30,6 +30,11 @@ pre {
 //------//
 ol, ul {
   padding: 0 0 0 4rem;
+  li > &,
+  dt > &,
+  dd > & {
+    padding-left: 2rem;
+  }
 }
 ol {
 }
@@ -43,15 +48,6 @@ dt {
   font-weight: bold;
 }
 dd {
-}
-li,
-dt,
-dd {
-  > ol,
-  > ul,
-  > dl {
-    .spacing-bottom(0);
-  }
 }
 //---- @end Lists ----//
 

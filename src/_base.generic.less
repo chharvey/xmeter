@@ -8,7 +8,11 @@ body,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
 dd {
-  margin: 0;
+  margin: 0; // reset browser default margin
+}
+
+li, dt, dd /* more elements here if necessary */ {
+  box-sizing: border-box;
 }
 
 body, main,
@@ -20,6 +24,11 @@ table {
 }
 dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
   margin-top: @default_vru;
+}
+li, dt, dd {
+  > ol, > ul, > dl {
+    .spacing-bottom(0); // undo default spacing-bottom for lists
+  }
 }
 
 main,

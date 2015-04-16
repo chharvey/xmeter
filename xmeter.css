@@ -66,6 +66,11 @@ pre,
 dd {
   margin: 0;
 }
+li,
+dt,
+dd {
+  box-sizing: border-box;
+}
 body,
 main,
 h1,
@@ -86,6 +91,17 @@ table {
 }
 dd + dt {
   margin-top: 1.5rem;
+}
+li > ol,
+dt > ol,
+dd > ol,
+li > ul,
+dt > ul,
+dd > ul,
+li > dl,
+dt > dl,
+dd > dl {
+  margin-bottom: 0;
 }
 main,
 figure,
@@ -151,19 +167,16 @@ ol,
 ul {
   padding: 0 0 0 4rem;
 }
+li > ol,
+li > ul,
+dt > ol,
+dt > ul,
+dd > ol,
+dd > ul {
+  padding-left: 2rem;
+}
 dt {
   font-weight: bold;
-}
-li > ol,
-dt > ol,
-dd > ol,
-li > ul,
-dt > ul,
-dd > ul,
-li > dl,
-dt > dl,
-dd > dl {
-  margin-bottom: 0;
 }
 /*@Tables*/
 table {
