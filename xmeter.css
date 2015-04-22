@@ -4,9 +4,6 @@
 /*##################*\
     _settings.less
 \*##################*/
-/*++++++++++++++++++++*\
-    #VERTICAL RHYTHM
-\*++++++++++++++++++++*/
 /*#################*\
     _flexbox.less
 \*#################*/
@@ -87,9 +84,15 @@ ol,
 ul,
 dl,
 table {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   margin-bottom: 1.5rem;
 }
 dd + dt {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   margin-top: 1.5rem;
 }
 li > ol,
@@ -123,31 +126,52 @@ pre {
     #SECTIONS
 \*+++++++++++++*/
 html {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   font-size: 100%;
   line-height: 1.5;
 }
 h1 {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   font-size: 2rem;
   line-height: 0.75;
   padding-top: 1.5rem;
 }
 h2 {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   font-size: 1.5rem;
   line-height: 1;
 }
 h3 {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   font-size: 1.25rem;
   line-height: 1.2;
 }
 h4 {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   font-size: 1rem;
   line-height: 1.5;
 }
 h5 {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   font-size: 0.75rem;
   line-height: 2;
 }
 h6 {
+  /*++++++++++++++++++++*\
+      #VERTICAL RHYTHM
+  \*++++++++++++++++++++*/
   font-size: 0.625rem;
   line-height: 2.4;
 }

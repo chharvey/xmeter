@@ -8,8 +8,9 @@
     #SECTIONS
 \*+++++++++++++*/
 html {
-  font-size: @default_font_size;
-  line-height: @default_line_height;
+  .XMETER();
+  font-size: @xmeter_font_size;
+  line-height: @xmeter_line_height;
 }
 body {
 }
@@ -28,42 +29,52 @@ header {
 footer {
 }
 
-@font_size_h1: 32/16; // 2.000
-@font_size_h2: 24/16; // 1.500
-@font_size_h3: 20/16; // 1.250
-@font_size_h4: 16/16; // 1.000
-@font_size_h5: 12/16; // 0.750
-@font_size_h6: 10/16; // 0.625
+.HEADINGS() {
+  .XMETER();
 
-@line_height_h1: @default_line_height / @font_size_h1; // 0.75
-@line_height_h2: @default_line_height / @font_size_h2; // 1.00
-@line_height_h3: @default_line_height / @font_size_h3; // 1.20
-@line_height_h4: @default_line_height / @font_size_h4; // 1.50
-@line_height_h5: @default_line_height / @font_size_h5; // 2.00
-@line_height_h6: @default_line_height / @font_size_h6; // 2.40
+  @font_size_h1: (32/16); // 2.000
+  @font_size_h2: (24/16); // 1.500
+  @font_size_h3: (20/16); // 1.250
+  @font_size_h4: (16/16); // 1.000
+  @font_size_h5: (12/16); // 0.750
+  @font_size_h6: (10/16); // 0.625
+
+  @line_height_h1: (@xmeter_line_height / @font_size_h1); // 0.75
+  @line_height_h2: (@xmeter_line_height / @font_size_h2); // 1.00
+  @line_height_h3: (@xmeter_line_height / @font_size_h3); // 1.20
+  @line_height_h4: (@xmeter_line_height / @font_size_h4); // 1.50
+  @line_height_h5: (@xmeter_line_height / @font_size_h5); // 2.00
+  @line_height_h6: (@xmeter_line_height / @font_size_h6); // 2.40
+}
 
 h1 {
+  .HEADINGS();
   font-size: (@font_size_h1 * 1rem);
   line-height: @line_height_h1;
-  padding-top: @default_vru;
+  .spacing-top(@xmeter_vru)
 }
 h2 {
+  .HEADINGS();
   font-size: (@font_size_h2 * 1rem);
   line-height: @line_height_h2;
 }
 h3 {
+  .HEADINGS();
   font-size: (@font_size_h3 * 1rem);
   line-height: @line_height_h3;
 }
 h4 {
+  .HEADINGS();
   font-size: (@font_size_h4 * 1rem);
   line-height: @line_height_h4;
 }
 h5 {
+  .HEADINGS();
   font-size: (@font_size_h5 * 1rem);
   line-height: @line_height_h5;
 }
 h6 {
+  .HEADINGS();
   font-size: (@font_size_h6 * 1rem);
   line-height: @line_height_h6;
 }

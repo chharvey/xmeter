@@ -48,9 +48,7 @@ em {
 strong {
 }
 i:not([lang]) {
-  quotes: '\201c' '\201d'; // '“' '”' // &ldquo;  &rdquo;
-  &::before {content: open-quote;}
-  &::after  {content: close-quote;}
+  .quotes-double();
 }
 mark {
 }

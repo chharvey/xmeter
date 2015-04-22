@@ -20,10 +20,12 @@ h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
 ol, ul, dl, // dd! + dt, // uncomment this when `!` selector is supported in CSS4
 table {
-  .spacing-bottom(@default_vru);
+  .XMETER();
+  .spacing-bottom(@xmeter_vru);
 }
 dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
-  margin-top: @default_vru;
+  .XMETER();
+  margin-top: @xmeter_vru;
 }
 li, dt, dd {
   > ol, > ul, > dl {
