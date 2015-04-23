@@ -300,6 +300,17 @@ samp {
   font-size: 0.75em;
   white-space: nowrap;
 }
+code code,
+kbd code,
+samp code,
+code kbd,
+kbd kbd,
+samp kbd,
+code samp,
+kbd samp,
+samp samp {
+  font-size: inherit;
+}
 /*###############*\
     _forms.less
 \*###############*/
