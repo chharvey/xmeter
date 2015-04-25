@@ -186,6 +186,10 @@ hr {
   display: none;
 }
 /*@Paragraph-Like Content*/
+pre {
+  text-align: left;
+  text-indent: 0;
+}
 /*@Lists*/
 ol,
 ul {
