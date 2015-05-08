@@ -60,6 +60,8 @@ p,
 figure,
 blockquote,
 pre,
+ol,
+ul,
 dd {
   margin: 0;
 }
@@ -183,6 +185,9 @@ h6 {
   font-size: 0.625rem;
   line-height: 2.4;
 }
+hr {
+  display: none;
+}
 address {
   font-style: inherit;
 }
@@ -190,9 +195,6 @@ address {
     _grouping.less
 \*##################*/
 /*@GROUPING CONTENT*/
-hr {
-  display: none;
-}
 /*@Paragraph-Like Content*/
 pre {
   text-align: left;
@@ -218,7 +220,11 @@ dt {
 table {
   max-width: 100%;
 }
+caption {
+  text-align: center;
+}
 th {
+  font-weight: bold;
   text-align: center;
 }
 /*##############*\

@@ -31,13 +31,12 @@ a[href] {
 }
 // Do not use `br` to indicate line breaks, use CSS instead.
 // One exception: MAY use `address > br` to indicate line breaks (by convention), but
-// preferred method is to use `address > ol` and use CSS to remove item markers
+// PREFERRED method is to use `address > ol` and use CSS to remove item markers
 br {
   display: none;
-}
-address > br {
-  // convention dictates that line breaks in `address` be marked up with `br`
-  display: inline;
+  address > & {
+    display: inline;
+  }
 }
 
 /*------------------*\
