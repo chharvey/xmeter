@@ -47,6 +47,9 @@ footer {
   @line_height_h6: (@xmeter_line_height / @font_size_h6); // 2.40
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; // explicitly defined by browser default but not extendable
+}
 h1 {
   .HEADINGS();
   font-size: (@font_size_h1 * 1rem);
