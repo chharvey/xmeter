@@ -7,8 +7,12 @@
 body,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
-dd {
-  margin: 0;
+ol, ul, dd {
+  margin: 0; // reset browser default margin
+}
+
+li, dt, dd /* more elements here if necessary */ {
+  box-sizing: border-box;
 }
 
 body, main,
@@ -16,10 +20,17 @@ h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
 ol, ul, dl, // dd! + dt, // uncomment this when `!` selector is supported in CSS4
 table {
-  .spacing-bottom(@default_vru);
+  #XMETER .VARS();
+  #XMETER .spacing-bottom(@xmeter_vru);
 }
 dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
-  margin-top: @default_vru;
+  #XMETER .VARS();
+  margin-top: @xmeter_vru;
+}
+li, dt, dd {
+  > ol, > ul, > dl {
+    #XMETER .spacing-bottom(0); // undo default spacing-bottom for lists
+  }
 }
 
 main,

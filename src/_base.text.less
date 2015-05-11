@@ -10,9 +10,9 @@
 //   - inline elements should not affect vertical rhythm, thus line-heights are zero
 
 
-//+++++++++++++++++++++//
-/*@TEXT-LEVEL SEMANTICS*/
-//+++++++++++++++++++++//
+/*+++++++++++++++++++++++++*\
+    #TEXT-LEVEL SEMANTICS
+\*+++++++++++++++++++++++++*/
 span, a, br,
 em, strong, i, mark, u, small, s,
 dfn, b, var, q, cite, sup, sub,
@@ -31,26 +31,23 @@ a[href] {
 }
 // Do not use `br` to indicate line breaks, use CSS instead.
 // One exception: MAY use `address > br` to indicate line breaks (by convention), but
-// preferred method is to use `address > ol` and use CSS to remove item markers
+// PREFERRED method is to use `address > ol` and use CSS to remove item markers
 br {
   display: none;
-}
-address > br {
-  // convention dictates that line breaks in `address` be marked up with `br`
-  display: inline;
+  address > & {
+    display: inline;
+  }
 }
 
-//--------------//
-/*@Stressed Text*/
-//--------------//
+/*------------------*\
+    #Stressed Text
+\*------------------*/
 em {
 }
 strong {
 }
 i:not([lang]) {
-  quotes: '\201c' '\201d'; // '“' '”' // &ldquo;  &rdquo;
-  &::before {content: open-quote;}
-  &::after  {content: close-quote;}
+  #XMETER .quotes-double();
 }
 mark {
 }
@@ -63,11 +60,11 @@ small {
 s {
   color: #e00;
 }
-//---- @end Stressed Text ----//
+//---- #end Stressed Text ----//
 
-//------------------------//
-/*@Documentation and Edits*/
-//------------------------//
+/*----------------------------*\
+    #Documentation and Edits
+\*----------------------------*/
 ins {
   // text-decoration: none;
   background: #a6f3a6; // GitHub-flavored
@@ -97,11 +94,11 @@ sup {
 }
 sub {
 }
-//---- @end Documentation and Edits ----//
+//---- #end Documentation and Edits ----//
 
-//------------------------//
-/*@Machine-Readable Data*/
-//------------------------//
+/*----------------------------*\
+    #Machine-Readable Data
+\*----------------------------*/
 abbr {
   &[title] {
     cursor: help;
@@ -115,6 +112,9 @@ time {
 code, kbd, samp {
   font-size: 0.75em;
   white-space: nowrap;
+  code, kbd, samp {
+    font-size: inherit; // undo compounding font sizes
+  }
 }
 code {
 }
@@ -122,5 +122,5 @@ kbd {
 }
 samp {
 }
-//---- @end Machine-Readable Data ----//
-//++++ @end TEXT-LEVEL SEMANTICS ++++//
+//---- #end Machine-Readable Data ----//
+//++++ #end TEXT-LEVEL SEMANTICS ++++//

@@ -1,46 +1,56 @@
 /*###############*\
     xmeter.less
 \*###############*/
-/*##################*\
+#XMETER {
+  /*##################*\
     _settings.less
 \*##################*/
-/*@VERTICAL RHYTHM*/
-/*#################*\
+  /*++++++++++++++++++++*\
+    #VERTICAL RHYTHM
+\*++++++++++++++++++++*/
+  /*#################*\
     _flexbox.less
 \*#################*/
-/*@FLEXBOXES*/
-/*@Containers*/
-/*@Items*/
-/*##################*\
+  /*++++++++++++++*\
+    #FLEXBOXES
+\*++++++++++++++*/
+  /*---------------*\
+    #Containers
+\*---------------*/
+  /*----------*\
+    #Items
+\*----------*/
+  /*##################*\
     _clearfix.less
 \*##################*/
-/*################*\
+  /*################*\
     _rotate.less
 \*################*/
-/*##################*\
+  /*##################*\
     _gradient.less
 \*##################*/
-/*####################*\
+  /*####################*\
     _transition.less
 \*####################*/
-/*#################*\
+  /*#################*\
     _spacing.less
 \*#################*/
-/*#################*\
+  /*#################*\
     _borders.less
 \*#################*/
-/*################*\
+  /*################*\
     _delims.less
 \*################*/
-/*##################*\
+  /*##################*\
     _fontsize.less
 \*##################*/
-/*################*\
+  /*################*\
     _sprite.less
 \*################*/
-/*#####################*\
+  /*#####################*\
     _translucent.less
 \*#####################*/
+}
 /*#################*\
     _generic.less
 \*#################*/
@@ -55,8 +65,15 @@ p,
 figure,
 blockquote,
 pre,
+ol,
+ul,
 dd {
   margin: 0;
+}
+li,
+dt,
+dd {
+  box-sizing: border-box;
 }
 body,
 main,
@@ -79,6 +96,17 @@ table {
 dd + dt {
   margin-top: 1.5rem;
 }
+li > ol,
+dt > ol,
+dd > ol,
+li > ul,
+dt > ul,
+dd > ul,
+li > dl,
+dt > dl,
+dd > dl {
+  margin-bottom: 0;
+}
 main,
 figure,
 blockquote,
@@ -95,10 +123,20 @@ pre {
 /*##################*\
     _sections.less
 \*##################*/
-/*@SECTIONS*/
+/*+++++++++++++*\
+    #SECTIONS
+\*+++++++++++++*/
 html {
   font-size: 100%;
   line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
 }
 h1 {
   font-size: 2rem;
@@ -125,44 +163,62 @@ h6 {
   font-size: 0.625rem;
   line-height: 2.4;
 }
+hr {
+  display: none;
+}
 address {
   font-style: inherit;
 }
 /*##################*\
     _grouping.less
 \*##################*/
-/*@GROUPING CONTENT*/
-hr {
-  display: none;
+/*+++++++++++++++++++++*\
+    #GROUPING CONTENT
+\*+++++++++++++++++++++*/
+/*---------------------------*\
+    #Paragraph-Like Content
+\*---------------------------*/
+pre {
+  text-align: left;
+  text-indent: 0;
 }
-/*@Paragraph-Like Content*/
-/*@Lists*/
+/*----------*\
+    #Lists
+\*----------*/
 ol,
 ul {
   padding: 0 0 0 4rem;
 }
+li > ol,
+li > ul,
+dt > ol,
+dt > ul,
+dd > ol,
+dd > ul {
+  padding-left: 2rem;
+}
 dt {
   font-weight: bold;
 }
-li > ol,
-dt > ol,
-dd > ol,
-li > ul,
-dt > ul,
-dd > ul,
-li > dl,
-dt > dl,
-dd > dl {
-  margin-bottom: 0;
+/*-----------*\
+    #Tables
+\*-----------*/
+table {
+  max-width: 100%;
 }
-/*@Tables*/
+caption {
+  text-align: center;
+}
 th {
+  font-weight: bold;
   text-align: center;
 }
 /*##############*\
     _text.less
 \*##############*/
-/*@TEXT-LEVEL SEMANTICS*/
+/*+++++++++++++++++++++++++*\
+    #TEXT-LEVEL SEMANTICS
+\*+++++++++++++++++++++++++*/
 span,
 a,
 br,
@@ -197,7 +253,9 @@ br {
 address > br {
   display: inline;
 }
-/*@Stressed Text*/
+/*------------------*\
+    #Stressed Text
+\*------------------*/
 i:not([lang]) {
   quotes: '\201c' '\201d';
 }
@@ -216,7 +274,9 @@ small {
 s {
   color: #e00;
 }
-/*@Documentation and Edits*/
+/*----------------------------*\
+    #Documentation and Edits
+\*----------------------------*/
 ins {
   background: #a6f3a6;
 }
@@ -231,7 +291,9 @@ sup,
 sub {
   font-size: 0.75em;
 }
-/*@Machine-Readable Data*/
+/*----------------------------*\
+    #Machine-Readable Data
+\*----------------------------*/
 abbr[title] {
   cursor: help;
   border-bottom: 0;
@@ -242,14 +304,29 @@ samp {
   font-size: 0.75em;
   white-space: nowrap;
 }
+code code,
+kbd code,
+samp code,
+code kbd,
+kbd kbd,
+samp kbd,
+code samp,
+kbd samp,
+samp samp {
+  font-size: inherit;
+}
 /*###############*\
     _forms.less
 \*###############*/
-/*@FORMS*/
+/*++++++++++*\
+    #FORMS
+\*++++++++++*/
 /*##################*\
     _embedded.less
 \*##################*/
-/*@EMBEDDED CONTENT*/
+/*+++++++++++++++++++++*\
+    #EMBEDDED CONTENT
+\*+++++++++++++++++++++*/
 img {
   max-width: 100%;
   font-style: italic;

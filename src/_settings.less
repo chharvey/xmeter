@@ -4,10 +4,26 @@
 \*##################*/
 
 
-//++++++++++++++++//
-/*@VERTICAL RHYTHM*/
-//++++++++++++++++//
-@default_font_size: 100%; // defined by user agent
-@default_line_height: 1.5;
-@default_vru: (@default_line_height * 1rem);
-//++++ @end VERTICAL RHYTHM ++++//
+/*++++++++++++++++++++*\
+    #VERTICAL RHYTHM
+\*++++++++++++++++++++*/
+.VARS() {
+  @xmeter_font_size: 100%; // defined by user agent
+  @xmeter_line_height: 1.5;
+  @xmeter_vru: (@xmeter_line_height * 1rem);
+
+  @h1_font_size: (32/16); // 2.000
+  @h2_font_size: (24/16); // 1.500
+  @h3_font_size: (20/16); // 1.250
+  @h4_font_size: (16/16); // 1.000
+  @h5_font_size: (12/16); // 0.750
+  @h6_font_size: (10/16); // 0.625
+
+  @h1_line_height: (@xmeter_line_height / @h1_font_size); // 0.75
+  @h2_line_height: (@xmeter_line_height / @h2_font_size); // 1.00
+  @h3_line_height: (@xmeter_line_height / @h3_font_size); // 1.20
+  @h4_line_height: (@xmeter_line_height / @h4_font_size); // 1.50
+  @h5_line_height: (@xmeter_line_height / @h5_font_size); // 2.00
+  @h6_line_height: (@xmeter_line_height / @h6_font_size); // 2.40
+}
+//++++ #end VERTICAL RHYTHM ++++//

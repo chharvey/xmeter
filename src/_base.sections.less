@@ -4,12 +4,13 @@
 \*##################*/
 
 
-//+++++++++//
-/*@SECTIONS*/
-//+++++++++//
+/*+++++++++++++*\
+    #SECTIONS
+\*+++++++++++++*/
 html {
-  font-size: @default_font_size;
-  line-height: @default_line_height;
+  #XMETER .VARS();
+  font-size: @xmeter_font_size;
+  line-height: @xmeter_line_height;
 }
 body {
 }
@@ -28,47 +29,24 @@ header {
 footer {
 }
 
-@font_size_h1: 32/16; // 2.000
-@font_size_h2: 24/16; // 1.500
-@font_size_h3: 20/16; // 1.250
-@font_size_h4: 16/16; // 1.000
-@font_size_h5: 12/16; // 0.750
-@font_size_h6: 10/16; // 0.625
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; // explicitly defined by browser default but not extendable
+}
+h1 { #XMETER .VARS(); font-size: (@h1_font_size * 1rem); line-height: @h1_line_height; #XMETER .spacing-top(@xmeter_vru); }
+h2 { #XMETER .VARS(); font-size: (@h2_font_size * 1rem); line-height: @h2_line_height; }
+h3 { #XMETER .VARS(); font-size: (@h3_font_size * 1rem); line-height: @h3_line_height; }
+h4 { #XMETER .VARS(); font-size: (@h4_font_size * 1rem); line-height: @h4_line_height; }
+h5 { #XMETER .VARS(); font-size: (@h5_font_size * 1rem); line-height: @h5_line_height; }
+h6 { #XMETER .VARS(); font-size: (@h6_font_size * 1rem); line-height: @h6_line_height; }
 
-@line_height_h1: @default_line_height / @font_size_h1; // 0.75
-@line_height_h2: @default_line_height / @font_size_h2; // 1.00
-@line_height_h3: @default_line_height / @font_size_h3; // 1.20
-@line_height_h4: @default_line_height / @font_size_h4; // 1.50
-@line_height_h5: @default_line_height / @font_size_h5; // 2.00
-@line_height_h6: @default_line_height / @font_size_h6; // 2.40
+hgroup {
+}
 
-h1 {
-  font-size: (@font_size_h1 * 1rem);
-  line-height: @line_height_h1;
-  padding-top: @default_vru;
-}
-h2 {
-  font-size: (@font_size_h2 * 1rem);
-  line-height: @line_height_h2;
-}
-h3 {
-  font-size: (@font_size_h3 * 1rem);
-  line-height: @line_height_h3;
-}
-h4 {
-  font-size: (@font_size_h4 * 1rem);
-  line-height: @line_height_h4;
-}
-h5 {
-  font-size: (@font_size_h5 * 1rem);
-  line-height: @line_height_h5;
-}
-h6 {
-  font-size: (@font_size_h6 * 1rem);
-  line-height: @line_height_h6;
+hr {
+  display: none;
 }
 
 address {
   font-style: inherit;
 }
-//++++ @end SECTIONS ++++//
+//++++ #end SECTIONS ++++//
