@@ -194,13 +194,19 @@ address {
 /*##################*\
     _grouping.less
 \*##################*/
-/*@GROUPING CONTENT*/
-/*@Paragraph-Like Content*/
+/*+++++++++++++++++++++*\
+    #GROUPING CONTENT
+\*+++++++++++++++++++++*/
+/*---------------------------*\
+    #Paragraph-Like Content
+\*---------------------------*/
 pre {
   text-align: left;
   text-indent: 0;
 }
-/*@Lists*/
+/*----------*\
+    #Lists
+\*----------*/
 ol,
 ul {
   padding: 0 0 0 4rem;
@@ -216,7 +222,9 @@ dd > ul {
 dt {
   font-weight: bold;
 }
-/*@Tables*/
+/*-----------*\
+    #Tables
+\*-----------*/
 table {
   max-width: 100%;
 }
