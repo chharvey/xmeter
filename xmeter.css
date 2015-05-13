@@ -231,6 +231,13 @@ table {
 caption {
   text-align: center;
 }
+thead,
+tfoot {
+  vertical-align: bottom;
+}
+tbody {
+  vertical-align: top;
+}
 th {
   font-weight: bold;
   text-align: center;
