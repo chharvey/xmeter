@@ -225,9 +225,6 @@ dt {
 /*-----------*\
     #Tables
 \*-----------*/
-table {
-  max-width: 100%;
-}
 caption {
   text-align: center;
 }
