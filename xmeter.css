@@ -68,9 +68,13 @@ ul,
 dd {
   margin: 0;
 }
+ol,
+ul,
+dl,
 li,
 dt,
-dd {
+dd,
+table {
   box-sizing: border-box;
 }
 body,
