@@ -50,6 +50,7 @@
     _generic.less
 \*#################*/
 * {
+  box-sizing: border-box;
   border: 0px solid;
 }
 body,
@@ -67,15 +68,6 @@ ol,
 ul,
 dd {
   margin: 0;
-}
-ol,
-ul,
-dl,
-li,
-dt,
-dd,
-table {
-  box-sizing: border-box;
 }
 body,
 main,
