@@ -32,12 +32,25 @@ footer {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; // explicitly defined by browser default but not extendable
 }
-h1 { #XMETER .VARS(); font-size: (@h1_font_size * 1rem); line-height: @h1_line_height; #XMETER .spacing-top(@xmeter_vru); }
-h2 { #XMETER .VARS(); font-size: (@h2_font_size * 1rem); line-height: @h2_line_height; }
-h3 { #XMETER .VARS(); font-size: (@h3_font_size * 1rem); line-height: @h3_line_height; }
-h4 { #XMETER .VARS(); font-size: (@h4_font_size * 1rem); line-height: @h4_line_height; }
-h5 { #XMETER .VARS(); font-size: (@h5_font_size * 1rem); line-height: @h5_line_height; }
-h6 { #XMETER .VARS(); font-size: (@h6_font_size * 1rem); line-height: @h6_line_height; }
+.XMETER_HEADINGS() { // here temporarily
+  @h1_font_size: (24/12); // 2.000
+  @h2_font_size: (18/12); // 1.500
+  @h3_font_size: (15/12); // 1.250
+  @h4_font_size: (12/12); // 1.000
+  @h5_font_size: ( 9/12); // 0.750
+  @h6_font_size: ( 8/12); // 0.667
+}
+h1 { #XMETER .VARS(); .XMETER_HEADINGS(); #XMETER .font-size-block(@h1_font_size; @xmeter_line_height); }
+h2 { #XMETER .VARS(); .XMETER_HEADINGS(); #XMETER .font-size-block(@h2_font_size; @xmeter_line_height); }
+h3 { #XMETER .VARS(); .XMETER_HEADINGS(); #XMETER .font-size-block(@h3_font_size; @xmeter_line_height); }
+h4 { #XMETER .VARS(); .XMETER_HEADINGS(); #XMETER .font-size-block(@h4_font_size; @xmeter_line_height); }
+h5 { #XMETER .VARS(); .XMETER_HEADINGS(); #XMETER .font-size-block(@h5_font_size; @xmeter_line_height); }
+h6 { #XMETER .VARS(); .XMETER_HEADINGS(); #XMETER .font-size-block(@h6_font_size; @xmeter_line_height); }
+
+h1 {
+  #XMETER .VARS();
+  #XMETER .spacing-top(@xmeter_vru);
+}
 
 hgroup {
 }

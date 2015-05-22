@@ -141,7 +141,6 @@ h6 {
 h1 {
   font-size: 2rem;
   line-height: 0.75;
-  padding-top: 1.5rem;
 }
 h2 {
   font-size: 1.5rem;
@@ -160,8 +159,11 @@ h5 {
   line-height: 2;
 }
 h6 {
-  font-size: 0.625rem;
-  line-height: 2.4;
+  font-size: 0.66666667rem;
+  line-height: 2.25;
+}
+h1 {
+  padding-top: 1.5rem;
 }
 hr {
   display: none;
