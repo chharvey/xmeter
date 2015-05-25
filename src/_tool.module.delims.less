@@ -1,28 +1,24 @@
 
-/*################*\
+/*################################*\
     _delims.less
-\*################*/
+\*################################*/
 
 
-/**
-  * This tool adds opening and closing punctuation marks surrounding an Object. The
-  * punctuation marks are given by the `quotes` property.
-@params
-: @left  : the character for the left delimiter
-: @right : the character for the right delimiter
-@tags
-: #typography
-: #quote
-@author
-: Chris Harvey
-@updated
-: 2014-10-11
-  */
+// This tool adds opening and closing punctuation marks surrounding an Object. The
+// punctuation marks are given by the `quotes` property.
+//
+// @left  - the character for the left delimiter
+// @right - the character for the right delimiter
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2014-10-11
 .delimiters(@left; @right) {
   quotes: @left @right;
   &::before {content: open-quote;}
   &::after  {content: close-quote;}
 }
+
 .parens()            {.delimiters('('; ')');}
 .brackets()          {.delimiters('['; ']');}
 .braces()            {.delimiters('{'; '}');}
