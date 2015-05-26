@@ -1,17 +1,22 @@
 
-/*##################*\
+/*################################*\
     _grouping.less
-\*##################*/
+\*################################*/
 
 
-/*+++++++++++++++++++++*\
-    #GROUPING CONTENT
-\*+++++++++++++++++++++*/
+// Table of Contents
+// - PARAGRAPHS
+// - LISTS
+// - TABLES
+
+
 div {
 }
-/*---------------------------*\
-    #Paragraph-Like Content
-\*---------------------------*/
+
+
+/*++++++++++++++++++++++++++++++++*\
+    #PARAGRAPHS
+\*++++++++++++++++++++++++++++++++*/
 p {
 }
 figure {
@@ -24,11 +29,12 @@ pre {
   text-align: left;
   text-indent: 0;
 }
-//---- #end Paragraphic-Like Content ----//
+//++++ #end PARAGRAPHS ++++//
 
-/*----------*\
-    #Lists
-\*----------*/
+
+/*++++++++++++++++++++++++++++++++*\
+    #LISTS
+\*++++++++++++++++++++++++++++++++*/
 ol, ul {
   padding: 0 0 0 4rem;
   li > &,
@@ -50,20 +56,27 @@ dt {
 }
 dd {
 }
-//---- #end Lists ----//
+//++++ #end LISTS ++++//
 
-/*-----------*\
-    #Tables
-\*-----------*/
+
+/*++++++++++++++++++++++++++++++++*\
+    #TABLES
+\*++++++++++++++++++++++++++++++++*/
 table {
-  max-width: 100%; // fluid tables for responsive purposes
+  // max-width: 100%; // fluid tables for responsive purposes
+  // CHANGED: for some reason max-width is default at 100% for tables. maybe a Chrome thing?
 }
 caption {
   text-align: center;
 }
+thead,
+tfoot {
+  vertical-align: bottom; // for heading alignment
+}
 thead {
 }
 tbody {
+  vertical-align: top; // for data alignment
 }
 tfoot {
 }
@@ -75,5 +88,4 @@ th {
 }
 td {
 }
-//---- #end Tables ----//
-//++++ #end GROUPING CONTENT ++++//
+//++++ #end TABLES ++++//
