@@ -10,7 +10,9 @@
     "less": "~2.5.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lessc:main": "lessc src/xmeter.less xmeter.css",
+    "lessc:each": "node lessc-each.js src/ src/css/"
   },
   "repository": {
     "type": "git",

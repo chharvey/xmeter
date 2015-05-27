@@ -102,3 +102,7 @@ for a demo.
 - Minor, albeit prettier, style changes to some text-level elements from the browser default.
 - Fallback tools for browser discrepancies on CSS3 properties.
 - `.sprite()` mixin makes it easy to work with background image sprites.
+
+## Changelog
+
+See it on [Github](https://github.com/chharvey/xmeter/releases).
