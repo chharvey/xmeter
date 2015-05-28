@@ -1,0 +1,27 @@
+// out: xmeter.css
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*\
+    xmeter.less
+\*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+// This stylesheet is a concatenation of all the base subsheets.
+// Use it as a starting point for your new project.
+//
+// This stylesheet is pure CSS. There is no Less (e.g. mixins, etc.).
+// While this file imports only css files, those files themselves are
+// compiled Less files (they themselves have access to the mixins).
+//
+// If you want the Less tools and mixins, import `xmeter-tools.less`
+// in your own project stylesheet.
+//
+// IMPORTANT: `out/` folder is ignored by git (and subsequently, by npm).
+// If you `npm install`ed this package, be sure to compile the
+// Less source files before compiling this file!
+
+@import (inline) url('out/_base.generic.css');
+@import (inline) url('out/_base.sections.css');
+@import (inline) url('out/_base.grouping.css');
+@import (inline) url('out/_base.text.css');
+@import (inline) url('out/_base.forms.css');
+@import (inline) url('out/_base.embedded.css');
