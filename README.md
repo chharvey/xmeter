@@ -5,14 +5,23 @@ Pronounced "Cross Meter".
 
 ## Installation and Usage
 
-There are 2 ways you can use this package. One option is if you’re
-developing your own front-end package (such as a CSS library) that *uses* this
-package as a dependency, and the other option is if you’re deploying
-a project (such as a website or app) that *mentions* (i.e., references) this stylesheet.
+This package is really a two-in-one. First, it is a set of tools (functions,
+fallbacks, modules, etc.) that make your life easier when working on a site's
+existing stylesheet or starting a brand new one. Secondly, it provides a base
+stylesheet, a starting point, for developing a new site. It is geared towards
+sites (or sections of sites) that are more static and typographically inclined
+and not so dynamic like “web apps.”
+Read the [About](#about) section for more info.
+
+There are two ways you can use this package. One option is if you’re
+**developing** your own front-end package (such as a CSS library or site-wide
+stylesheet) that *uses* this package as a dependency, and the other option is
+if you’re **deploying** a project (such as a website or blog) that *mentions*
+(i.e., references) this stylesheet.
 
 This package uses **normalize.css** as a dependency.
 If you’re *developing* a package, then it is automatically installed,
-but if you’re *deploying* a project, you have to install it manually.
+but if you’re *deploying* a project, you have to install it manually (via `bower`, etc.).
 
 **Important:** `xmeter.css` does *not* `@import normalize.css`
 (*this may change in the future—stay tuned for updates*).
@@ -27,27 +36,74 @@ To install:
 
     $ npm install xmeter
 
-To use this stylesheet (and its mixins) in your own Less project:
+#### Using the Tools
+
+Take a look in the `src/` folder. In here you will find a set of tools, starting
+with `_tool`, from which to pick and choose to use for your package. Note that
+the contents of each file are wrapped with the id selector `#XMETER {}` to keep
+it encapsulated. Think of `#XMETER` as one huge object whose properties are
+the mixins. Or think of it as a namespace. Whatever.
+
+If you want to use a particular tool in your stylesheet, you will have to
+`@import (reference)` that tool, and then invoke it with `#XMETER`. For example,
+if you plan to use the `.font-size-block()` mixin in your Less, you must include
 
 ```less
-@import url('/node_modules/xmeter/node_modules/normalize.css/normalize.css');
-@import url('/node_modules/xmeter/src/xmeter.less');
+@import (reference) url('/node_modules/xmeter/src/_tool.module.fontsize.less');
 ```
 
-Or if you don’t want to concatenate stylesheets:
+at the top of your stylesheet. Then when you want to “call” the mixin, do
+
+```less
+.my-selector {
+  #XMETER .font-size-block(2.0; 1.5);
+}
+```
+
+To use the xmeter variables,
+
+```less
+@import (reference) url('/node_modules/xmeter/src/_settings.less');
+
+.my-selector {
+  #XMETER .VARS();
+  margin-bottom: @xmeter_vru;
+}
+```
+
+#### Using the Base
+
+Also in the `src/` folder are a set of files starting with `_base`. These files,
+unlike tools, provide actual styles for actual elements. Also unlike tools, these
+stylesheets are *not* meant to be cherrypicked. They are compiled separately<sup>&lowast;</sup> and
+concatenated together in the main file `xmeter.css`. If you’re developing a
+stylesheet that you want built off of xmeter, include
 
 ```less
 @import url('/node_modules/xmeter/node_modules/normalize.css/normalize.css');
 @import url('/node_modules/xmeter/xmeter.css');
-@import (reference) url('/node_modules/xmeter/src/xmeter.less');
 ```
+
+at the top of  your file. Notice that **normalize.css** must be imported separately,
+and before **xmeter**.
 
 This package also comes installed with a [test page](./test.html)
 that links to the main stylesheet.
 
+*<sup>&lowast;</sup>The reason the stylesheets are compiled separately is to increase
+encapsulation. They still have access to global variables (such as `#XMETER`),
+but now local variables and mixins can be defined within the file without
+affecting other files.*
+
 ### Deployment
 
 (The Second Option)
+
+This option is for you if you don’t wanna develop with **xmeter**, you just
+wanna use it on your site. It’s a great starting point that “normalizes”
+unclassed HTML elements before any specific classes and styles get added on.
+
+See the [test page](./test.html) for a preview.
 
 To install:
 
@@ -105,4 +161,4 @@ for a demo.
 
 ## Changelog
 
-See it on [Github](https://github.com/chharvey/xmeter/releases).
+It’s on [Github](https://github.com/chharvey/xmeter/releases).
