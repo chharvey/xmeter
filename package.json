@@ -11,8 +11,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc:main": "lessc src/xmeter.less xmeter.css",
-    "lessc:each": "node lessc-each.js src/ src/css/"
+    "lessc"      : "lessc",
+    "lessc:main" : "lessc xmeter.less xmeter.css",
+    "lessc:each" : "cd ~/repositories/xmeter/src/; node ../lessc-each.js ./ ../out/"
   },
   "repository": {
     "type": "git",
