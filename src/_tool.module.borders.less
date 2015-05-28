@@ -4,6 +4,7 @@
 \*################################*/
 
 
+#XMETER {
 // The following mixins adjust border widths for **BLOCK** Objects only! They will keep the
 // vertical rhythm intact when adding border widths (by slightly adjusting position and margins).
 // Do *not* use these mixins on INLINE Objects!
@@ -41,4 +42,5 @@
 .border-vert(all; @width: 0) {
   border-width: @width;
   .pull-this(2 * @width);
+}
 }

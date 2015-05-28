@@ -4,6 +4,7 @@
 \*################################*/
 
 
+#XMETER {
 // Sets the background position of an Object’s background sprite image.
 //
 // @{[horizontal|vertcial]} - whether the sprite’s images are linearly horizontally or vertically ordered.
@@ -22,4 +23,5 @@
 }
 .sprite(vertical; @position; @iconsize; @iconpadd) {
   background-position: 0 ((@position - 1) * -(@iconsize + @iconpadd));
+}
 }
