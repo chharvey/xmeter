@@ -1,7 +1,9 @@
 
 /*################################*\
-    _generic.less
+    _base.generic.less
 \*################################*/
+@import (reference) url('_settings.less');
+@import (reference) url('_tool.module.spacing.less');
 
 
 * {
@@ -21,16 +23,16 @@ h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
 ol, ul, dl, // dd! + dt, // uncomment this when `!` selector is supported in CSS4
 table {
-  .XMETER();
-  .spacing-bottom(@xmeter_vru);
+  #XMETER .VARS();
+  #XMETER .spacing-bottom(@xmeter_vru);
 }
 dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
-  .XMETER();
+  #XMETER .VARS();
   margin-top: @xmeter_vru;
 }
 li, dt, dd {
   > ol, > ul, > dl {
-    .spacing-bottom(0); // undo default spacing-bottom for lists
+    #XMETER .spacing-bottom(0); // undo default spacing-bottom for lists
   }
 }
 

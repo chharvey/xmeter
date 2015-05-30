@@ -1,14 +1,8 @@
 
 /*################################*\
-    _text.less
+    _base.text.less
 \*################################*/
 
-
-// Table of Contents
-// - HYPERLINKS
-// - STRESSED TEXT
-// - DOCUMENTATION AND EDITS
-// - MACHINE-READABLE DATA
 
 // In this section,
 // - font sizes should be in units of `em` instead of `rem` because
@@ -31,104 +25,3 @@ br {
     display: inline;
   }
 }
-
-/*++++++++++++++++++++++++++++++++*\
-    #HYPERLINKS
-\*++++++++++++++++++++++++++++++++*/
-a {
-}
-a:not([href]) {
-  opacity: 0.5;
-}
-a[href] {
-  // color: #00e;    // default link
-  // color: #551a8b; // default visited
-  // color: #f00;    // default active
-}
-//++++ #end HYPERLINKS ++++//
-
-
-/*++++++++++++++++++++++++++++++++*\
-    #STRESSED TEXT
-\*++++++++++++++++++++++++++++++++*/
-em {
-}
-strong {
-}
-i:not([lang]) {
-  .quotes-double();
-}
-mark {
-}
-u {
-  color: #080;
-}
-small {
-  font-size: 0.75em;
-}
-s {
-  color: #e00;
-}
-//++++ #end STRESSED TEXT ++++//
-
-/*++++++++++++++++++++++++++++++++*\
-    #DOCUMENTATION AND EDITS
-\*++++++++++++++++++++++++++++++++*/
-ins {
-  // text-decoration: none;
-  background: #a6f3a6; // GitHub-flavored
-  // background: #d1e1ad; // StackOverflow-flavored
-}
-del {
-  // text-decoration: none;
-  background: #f8cbcb; // GitHub-flavored
-  // background: #e5bdb2; // StackOverflow-flavored
-}
-dfn {
-  font-style: inherit;
-  font-weight: bold;
-}
-b {
-}
-var {
-}
-q {
-}
-cite {
-}
-sup, sub {
-  font-size: 0.75em;
-}
-sup {
-}
-sub {
-}
-//++++ #end DOCUMENTATION AND EDITS ++++//
-
-/*++++++++++++++++++++++++++++++++*\
-    #MACHINE-READABLE DATA
-\*++++++++++++++++++++++++++++++++*/
-abbr {
-  &[title] {
-    cursor: help;
-    border-bottom: 0;
-  }
-}
-data {
-}
-time {
-}
-code, kbd, samp {
-  font-size: 0.75em;
-  white-space: nowrap;
-  code, kbd, samp {
-    font-size: inherit; // undo compounding font sizes
-  }
-}
-code {
-}
-kbd {
-}
-samp {
-}
-//++++ #end MACHINE-READABLE DATA ++++//

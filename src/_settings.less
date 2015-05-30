@@ -4,8 +4,10 @@
 \*################################*/
 
 
-.XMETER() {
-  @xmeter_font_size: 100%; // defined by user agent
-  @xmeter_line_height: 1.5;
-  @xmeter_vru: (@xmeter_line_height * 1rem);
+#XMETER {
+  .VARS() {
+    @xmeter_font_size: 100%; // defined by user agent
+    @xmeter_line_height: 1.5;
+    @xmeter_vru: (@xmeter_line_height * 1rem);
+  }
 }

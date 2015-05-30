@@ -1,11 +1,22 @@
 
 /*################################*\
-    _sections.less
+    _base.sections.less
 \*################################*/
+@import (reference) url('_settings.less');
+@import (reference) url('_tool.module.spacing.less');
+@import (reference) url('_tool.module.fontsize.less');
+
+
+@h1_font_size: (24/12); // 2.000
+@h2_font_size: (18/12); // 1.500
+@h3_font_size: (15/12); // 1.250
+@h4_font_size: (12/12); // 1.000
+@h5_font_size: ( 9/12); // 0.750
+@h6_font_size: ( 8/12); // 0.667
 
 
 html {
-  .XMETER();
+  #XMETER .VARS();
   font-size: @xmeter_font_size;
   line-height: @xmeter_line_height;
 }
@@ -26,57 +37,19 @@ header {
 footer {
 }
 
-.HEADINGS() {
-  .XMETER();
-
-  @font_size_h1: (24/12); // 2.000
-  @font_size_h2: (18/12); // 1.500
-  @font_size_h3: (15/12); // 1.250
-  @font_size_h4: (12/12); // 1.000
-  @font_size_h5: ( 9/12); // 0.750
-  @font_size_h6: ( 8/12); // 0.667
-
-  @line_height_h1: (@xmeter_line_height / @font_size_h1); // 0.75
-  @line_height_h2: (@xmeter_line_height / @font_size_h2); // 1.00
-  @line_height_h3: (@xmeter_line_height / @font_size_h3); // 1.20
-  @line_height_h4: (@xmeter_line_height / @font_size_h4); // 1.50
-  @line_height_h5: (@xmeter_line_height / @font_size_h5); // 2.00
-  @line_height_h6: (@xmeter_line_height / @font_size_h6); // 2.25
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; // explicitly defined by browser default but not extendable
 }
+h1 { #XMETER .VARS(); #XMETER .font-size-block(@h1_font_size; @xmeter_line_height); }
+h2 { #XMETER .VARS(); #XMETER .font-size-block(@h2_font_size; @xmeter_line_height); }
+h3 { #XMETER .VARS(); #XMETER .font-size-block(@h3_font_size; @xmeter_line_height); }
+h4 { #XMETER .VARS(); #XMETER .font-size-block(@h4_font_size; @xmeter_line_height); }
+h5 { #XMETER .VARS(); #XMETER .font-size-block(@h5_font_size; @xmeter_line_height); }
+h6 { #XMETER .VARS(); #XMETER .font-size-block(@h6_font_size; @xmeter_line_height); }
+
 h1 {
-  .HEADINGS();
-  font-size: (@font_size_h1 * 1rem);
-  line-height: @line_height_h1;
-  .spacing-top(@xmeter_vru)
-}
-h2 {
-  .HEADINGS();
-  font-size: (@font_size_h2 * 1rem);
-  line-height: @line_height_h2;
-}
-h3 {
-  .HEADINGS();
-  font-size: (@font_size_h3 * 1rem);
-  line-height: @line_height_h3;
-}
-h4 {
-  .HEADINGS();
-  font-size: (@font_size_h4 * 1rem);
-  line-height: @line_height_h4;
-}
-h5 {
-  .HEADINGS();
-  font-size: (@font_size_h5 * 1rem);
-  line-height: @line_height_h5;
-}
-h6 {
-  .HEADINGS();
-  font-size: (@font_size_h6 * 1rem);
-  line-height: @line_height_h6;
+  #XMETER .VARS();
+  #XMETER .spacing-top(@xmeter_vru);
 }
 
 hgroup {
