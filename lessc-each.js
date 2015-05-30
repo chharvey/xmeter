@@ -39,7 +39,7 @@ var
 
 
 fs.readdir(process.argv[2], function (err, files) {
-  if (err) console.log(err)
+  if (err) return console.error('There was an error: ', err)
 
   var less_files = files.filter(function (el) {
 
@@ -53,18 +53,18 @@ fs.readdir(process.argv[2], function (err, files) {
     var css_fullpath  = path.normalize(process.argv[3] + '/' + el.slice(0, el.length-5) + '.css')
 
     fs.readFile(less_fullpath, 'utf8', function (err, data) {
-      if (err) console.log(err)
+      if (err) return console.error('There was an error: ', err)
       less.render(data, function (error, output) {
         if (error) {
-          console.warn('FATAL! ' + less_fullpath + ' does NOT compile due to:' + '\n    ' + error.message)
+          console.error('FATAL! ' + less_fullpath + ' does NOT compile due to:' + '\n    ' + error.message)
           console.log('Continuing to next file...')
         } else {
           fs.writeFile(css_fullpath, output.css, function (err, data) {
-            if (err) console.log(err)
+            if (err) return console.error('There was an error: ', err)
             console.log('Success! ' + less_fullpath + ' > ' + css_fullpath)
-          });
+          })
         }
-      });
-    });
-  });
-});
+      })
+    })
+  })
+})
