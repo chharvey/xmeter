@@ -2,6 +2,7 @@
 /*################################*\
     _tool.module.borders.less
 \*################################*/
+@import (reference) url('_tool.module.spacing.less');
 
 
 #XMETER {
@@ -25,22 +26,22 @@
   // : 2015-05-11
   .border-vert(top; @width: 0) {
     border-top-width: @width;
-    .pull-this(@width);
+    #XMETER .pull-this(@width);
   }
 
   .border-vert(bottom; @width: 0) {
     border-bottom-width: @width;
-    .pull-this(@width);
+    #XMETER .pull-this(@width);
   }
 
   .border-vert(topbot; @width: 0) {
     border-top-width:    @width;
     border-bottom-width: @width;
-    .pull-this(2 * @width);
+    #XMETER .pull-this(2 * @width);
   }
 
   .border-vert(all; @width: 0) {
     border-width: @width;
-    .pull-this(2 * @width);
+    #XMETER .pull-this(2 * @width);
   }
 }
