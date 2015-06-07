@@ -14,7 +14,8 @@
 body,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
-ol, ul, dd {
+ol, ul, dl,
+dd {
   margin: 0; // reset browser default margin
 }
 
@@ -32,7 +33,7 @@ dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
 }
 li, dt, dd {
   > ol, > ul, > dl {
-    #XMETER .spacing-bottom(0); // undo default spacing-bottom for lists
+    #XMETER .spacing-bottom(0); // undo default spacing-bottom for nested lists
   }
 }
 
