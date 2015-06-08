@@ -40,9 +40,18 @@ figure, blockquote, pre {
   margin-left:  1rem;
   margin-right: 1rem;
 }
-
-@media print {
-  body, main {
+main {
+  @media print {
     margin: 0;
   }
+}
+
+// Font sizes for text-level elements should be in units of `em` instead of `rem` because
+// they should scale with their parents.
+// Also, inline elements should not affect vertical rhythm, thus line-heights are zero.
+span, a, br,
+em, strong, i, mark, u, small, s,
+dfn, b, var, q, cite, sup, sub,
+abbr, data, time, code, kbd, samp {
+  line-height: 0;
 }
