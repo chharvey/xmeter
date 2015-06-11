@@ -120,6 +120,9 @@ html {
   font-size: 100%;
   line-height: 1.5;
 }
+body {
+  text-align: left;
+}
 h1,
 h2,
 h3,
