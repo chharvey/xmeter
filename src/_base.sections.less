@@ -15,11 +15,13 @@
 @h6_font_size: ( 8/12); // 0.667
 
 
+// *[1] addresses support for `rem` units
 html {
-  font-size: @xmeter_font_size;
-  line-height: @xmeter_line_height;
+  font-size: @xmeter_font_size;     // *[1]
+  line-height: @xmeter_line_height; // *[1]
 }
 body {
+  text-align: left;
 }
 section {
 }
