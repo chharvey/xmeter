@@ -23,6 +23,12 @@ html {
 body {
   text-align: left;
 }
+main {
+  margin: 0 1rem;
+  @media print {
+    margin: 0;
+  }
+}
 section {
 }
 article {
@@ -50,9 +56,6 @@ h6 { #XMETER .font-size-block(@h6_font_size; @xmeter_line_height); }
 
 h1 {
   #XMETER .spacing-top(@xmeter_vru);
-}
-
-hgroup {
 }
 
 hr {

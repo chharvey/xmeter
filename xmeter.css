@@ -39,8 +39,7 @@ blockquote,
 pre,
 ol,
 ul,
-dl,
-dd {
+dl {
   margin: 0;
 }
 body,
@@ -74,18 +73,6 @@ li > dl,
 dt > dl,
 dd > dl {
   margin-bottom: 0;
-}
-main,
-figure,
-blockquote,
-pre {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-@media print {
-  main {
-    margin: 0;
-  }
 }
 span,
 a,
@@ -122,6 +109,14 @@ html {
 }
 body {
   text-align: left;
+}
+main {
+  margin: 0 1rem;
+}
+@media print {
+  main {
+    margin: 0;
+  }
 }
 h1,
 h2,
@@ -172,6 +167,11 @@ address {
 /*################################*\
     _base.grouping.paras.less
 \*################################*/
+figure,
+blockquote,
+pre {
+  margin: 0 1rem;
+}
 pre {
   text-align: left;
   text-indent: 0;
@@ -194,6 +194,9 @@ dd > ul {
 }
 dt {
   font-weight: bold;
+}
+dd {
+  margin: 0;
 }
 
 /*################################*\

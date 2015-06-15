@@ -14,15 +14,15 @@
 body,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
-ol, ul, dl,
-dd {
-  margin: 0; // reset browser default margin
+ol, ul, dl {
+  margin: 0; // reset browser default vertical margin
 }
 
 body, main,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
-ol, ul, dl, // dd! + dt, // uncomment this when `!` selector is supported in CSS4
+ol, ul, dl,
+// dd! + dt, // uncomment this when `!` selector is supported in CSS4
 table {
   #XMETER .spacing-bottom(@xmeter_vru);
 }
@@ -35,16 +35,6 @@ li, dt, dd {
   }
 }
 
-main,
-figure, blockquote, pre {
-  margin-left:  1rem;
-  margin-right: 1rem;
-}
-main {
-  @media print {
-    margin: 0;
-  }
-}
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
