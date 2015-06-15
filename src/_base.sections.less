@@ -17,6 +17,7 @@
 
 // *[1] addresses support for `rem` units
 html {
+  #XMETER .VARS();
   font-size: @xmeter_font_size;     // *[1]
   line-height: @xmeter_line_height; // *[1]
 }
@@ -47,14 +48,15 @@ footer {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; // explicitly defined by browser default but not extendable
 }
-h1 { #XMETER .font-size-block(@h1_font_size; @xmeter_line_height); }
-h2 { #XMETER .font-size-block(@h2_font_size; @xmeter_line_height); }
-h3 { #XMETER .font-size-block(@h3_font_size; @xmeter_line_height); }
-h4 { #XMETER .font-size-block(@h4_font_size; @xmeter_line_height); }
-h5 { #XMETER .font-size-block(@h5_font_size; @xmeter_line_height); }
-h6 { #XMETER .font-size-block(@h6_font_size; @xmeter_line_height); }
+h1 { #XMETER .VARS(); #XMETER .font-size-block(@h1_font_size; @xmeter_line_height); }
+h2 { #XMETER .VARS(); #XMETER .font-size-block(@h2_font_size; @xmeter_line_height); }
+h3 { #XMETER .VARS(); #XMETER .font-size-block(@h3_font_size; @xmeter_line_height); }
+h4 { #XMETER .VARS(); #XMETER .font-size-block(@h4_font_size; @xmeter_line_height); }
+h5 { #XMETER .VARS(); #XMETER .font-size-block(@h5_font_size; @xmeter_line_height); }
+h6 { #XMETER .VARS(); #XMETER .font-size-block(@h6_font_size; @xmeter_line_height); }
 
 h1 {
+  #XMETER .VARS();
   #XMETER .spacing-top(@xmeter_vru);
 }
 
