@@ -45,7 +45,7 @@ fs.readdir(process.argv[2], function (err, files) {
 
     var ext = path.parse(el).ext
     var name = path.parse(el).name
-    return (ext === '.less') && (name.slice(0,5) === '_base')
+    return (ext === '.less') && (name.slice(0,2) !== '__')
   })
 
   less_files.forEach(function (el) {

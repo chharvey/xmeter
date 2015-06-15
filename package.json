@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {
@@ -13,7 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc"      : "lessc",
     "lessc:main" : "lessc xmeter.less xmeter.css",
-    "lessc:each" : "cd ~/repositories/xmeter/src/; node ../lessc-each.js ./ ../out/"
+    "lessc:each" : "cd ~/repositories/xmeter/src/; node ../lessc-each.js ./ ../out/",
+    "lessc:all"  : "npm run lessc:each; npm run lessc:main"
   },
   "repository": {
     "type": "git",
