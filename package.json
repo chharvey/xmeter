@@ -13,8 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc"      : "lessc",
     "lessc:main" : "lessc xmeter.less xmeter.css",
-    "lessc:each" : "cd ~/repositories/xmeter/src/; node ../lessc-each.js ./ ../out/",
-    "lessc:all"  : "npm run lessc:each; npm run lessc:main"
+    "lessc:each" : "node lessc-each.js ./src/ ./out/",
+    "lessc:all"  : "npm run lessc:each ; npm run lessc:main"
   },
   "repository": {
     "type": "git",
