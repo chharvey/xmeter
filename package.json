@@ -7,14 +7,15 @@
     "normalize.css": "~3.0.3"
   },
   "devDependencies": {
-    "less": "~2.5.1"
+    "less": "~2.5.1",
+    "lessc-each": "~1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc"      : "lessc",
-    "lessc:main" : "lessc xmeter.less xmeter.css",
-    "lessc:each" : "node lessc-each.js ./src/ ./out/",
-    "lessc:all"  : "npm run lessc:each ; npm run lessc:main"
+    "lessc": "lessc",
+    "lessc:main": "lessc xmeter.less xmeter.css",
+    "lessc:each": "lessc-each ./src/ ./out/",
+    "lessc:all": "npm run lessc:each ; npm run lessc:main"
   },
   "repository": {
     "type": "git",
