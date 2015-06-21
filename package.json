@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {
