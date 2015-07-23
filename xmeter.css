@@ -237,15 +237,6 @@ a:not([href]) {
 /*################################*\
     _base.text.stress.less
 \*################################*/
-i:not([lang]) {
-  quotes: '\201c' '\201d';
-}
-i:not([lang])::before {
-  content: open-quote;
-}
-i:not([lang])::after {
-  content: close-quote;
-}
 u {
   color: #080;
 }
