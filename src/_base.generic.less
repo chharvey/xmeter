@@ -14,16 +14,19 @@
 body,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
-ol, ul, dl {
+ol, ul, dl,
+fieldset {
   margin: 0; // reset browser default vertical margin
 }
 
+// Vertical spacing between block Elements
 body, main,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
 ol, ul, dl,
 // dd! + dt, // uncomment this when `!` selector is supported in CSS4
-table {
+table,
+fieldset {
   #XMETER .VARS();
   #XMETER .spacing-bottom(@xmeter_vru);
 }

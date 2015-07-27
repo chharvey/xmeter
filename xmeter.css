@@ -39,7 +39,8 @@ blockquote,
 pre,
 ol,
 ul,
-dl {
+dl,
+fieldset {
   margin: 0;
 }
 body,
@@ -57,7 +58,8 @@ pre,
 ol,
 ul,
 dl,
-table {
+table,
+fieldset {
   margin-bottom: 1.5rem;
 }
 dd + dt {
@@ -302,6 +304,21 @@ samp samp {
 /*################################*\
     _base.forms.less
 \*################################*/
+fieldset {
+  padding: 0 1rem;
+  border-width: 1px;
+  margin-top: -2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+input,
+textarea {
+  padding: 0;
+  border-width: 1px;
+  margin-top: -2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25);
+}
 
 /*################################*\
     _base.embedded.less

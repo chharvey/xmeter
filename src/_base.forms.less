@@ -2,3 +2,27 @@
 /*################################*\
     _base.forms.less
 \*################################*/
+@import (reference) url('__settings.less');
+@import (reference) url('__tool.module.borders.less');
+
+
+fieldset {
+  padding: 0 1rem;
+  #XMETER .border-vert(all; 1px);
+  border-style: solid;
+  border-color: fadeout(#000, 50%);
+}
+
+input,
+textarea {
+  padding: 0;
+  #XMETER .border-vert(all; 1px);
+  border-style: solid;
+  border-color: fadeout(#000, 75%);
+}
+
+// textarea {
+//   #XMETER .VARS();
+//   width: 30rem;
+//   height: 6 * @xmeter_vru;
+// }
