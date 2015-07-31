@@ -325,6 +325,11 @@ textarea {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.25);
 }
+textarea {
+  width: 30rem;
+  height: 9rem;
+  line-height: 1.5;
+}
 
 /*################################*\
     _base.embedded.less
