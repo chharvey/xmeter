@@ -4,6 +4,7 @@
 \*################################*/
 @import (reference) url('__settings.less');
 @import (reference) url('__tool.module.borders.less');
+@import (reference) url('__tool.module.fontsize.less');
 
 
 fieldset {
@@ -14,8 +15,15 @@ fieldset {
 }
 
 input,
+select,
 textarea {
-  padding: 0;
+  #XMETER .VARS();
+  #XMETER .font-size-block(0.75; @xmeter_line_height);
+}
+
+input,
+textarea {
+  padding: 0 0.25rem;
   #XMETER .border-vert(all; 1px);
   border-style: solid;
   border-color: fadeout(#000, 75%);

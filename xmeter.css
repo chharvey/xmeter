@@ -312,8 +312,14 @@ fieldset {
   border-color: rgba(0, 0, 0, 0.5);
 }
 input,
+select,
 textarea {
-  padding: 0;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+input,
+textarea {
+  padding: 0 0.25rem;
   border-width: 1px;
   margin-top: -2px;
   border-style: solid;
