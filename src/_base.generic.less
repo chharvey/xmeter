@@ -9,6 +9,11 @@
 * {
   box-sizing: border-box;
   border: 0px solid; // reset browser default border
+  @media print {
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+  }
 }
 
 body,

@@ -13,9 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc": "lessc",
-    "lessc:main": "lessc xmeter.less xmeter.css",
-    "lessc:each": "lessc-each ./src/ ./out/",
-    "lessc:all": "npm run lessc:each ; npm run lessc:main"
+    "lessc:all": "lessc-each ./src/ ./out/  ;  lessc xmeter.less xmeter.css"
   },
   "repository": {
     "type": "git",

@@ -26,6 +26,13 @@
   box-sizing: border-box;
   border: 0px solid;
 }
+@media print {
+  * {
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
 body,
 h1,
 h2,
@@ -109,6 +116,8 @@ html {
 }
 body {
   text-align: left;
+  color: #000;
+  background: #fff;
 }
 main {
   margin: 0 1rem;
