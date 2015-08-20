@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc": "lessc",
-    "lessc:all": "lessc-each ./src/ ./out/  ;  lessc xmeter.less xmeter.css"
+    "lessc:all": "lessc-each ./src/ ./build/  ;  lessc xmeter.less xmeter.css"
   },
   "repository": {
     "type": "git",
