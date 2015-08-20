@@ -4,8 +4,14 @@
 \*################################*/
 
 
+// [1] Correct squishing when one dimension changes
+// [2] fluid images for responsive purposes
+// [3] offset `alt` text from surrounding copy
+// [4] safer alternative to `display: block;`
 img {
-  max-width: 100%; // fluid images for responsive purposes
-  font-style: italic; // offset `alt` text from surrounding copy
-  vertical-align: middle; // safer alternative to `display: block;`
+  width: auto;  // [1]
+  height: auto; // [1]
+  max-width: 100%; // [2]
+  font-style: italic; // [3]
+  vertical-align: middle; // [4]
 }

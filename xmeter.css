@@ -298,6 +298,8 @@ samp samp {
     _base.embedded.less
 \*################################*/
 img {
+  width: auto;
+  height: auto;
   max-width: 100%;
   font-style: italic;
   vertical-align: middle;
