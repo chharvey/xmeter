@@ -22,7 +22,9 @@
 /*################################*\
     _base.generic.less
 \*################################*/
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   border: 0px solid;
 }
