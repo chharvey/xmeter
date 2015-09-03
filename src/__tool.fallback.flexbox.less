@@ -70,15 +70,60 @@
   //          - `space-between`        - extra space is distributed between items,
   //                                     leaving them flush left/right
   //          - `space-around`         - extra space is distributed around items,
-  //                                     leaving margin on left/right. Good for centering one item
-  //                                     without using `margin-left: auto; margin-right: auto;`!!!
+  //                                     leaving margin on left/right.
+  //                                     Good for centering one item without using
+  //                                     `margin-left: auto; margin-right: auto;`!!!
   // ^author
   // : Chris Harvey
   // ^updated
   // : 2015-02-20
-  .justify-content(@justify) {
+  .justify-content(@justify) { // TODO change this to .flex-justify-content() on next major release
     -webkit-justify-content: @justify;
             justify-content: @justify;
+  }
+
+  // Defines default behavior for aligining flex items along cross axis
+  // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
+  //
+  // @align - how content is aligned
+  //        - `flex-start`        - cross-start margin edge of the items is placed on the cross-start line
+  //        - `flex-end`          - cross-end margin edge of the items is placed on the cross-end line
+  //        - `center`            - items are centered in the cross-axis
+  //        - `baseline`          - items are aligned such as their baselines align
+  //        - `stretch` (default) - stretch to fill the container
+  //                                (still respect min-width/max-width)
+  // ^author
+  // : Chris Harvey
+  // ^updated
+  // : 2015-09-03
+  .flex-align-items(@align) {
+    -webkit-align-items: @align;
+       -moz-align-items: @align;
+        -ms-align-items: @align;
+            align-items: @align;
+  }
+
+  // Aligns a flex container's lines when there is empty space in the cross-axis.
+  // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
+  //
+  // @align - how content is aligned
+  //        - `flex-start`        - lines packed to the start of the container
+  //        - `flex-end`          - lines packed to the end of the container
+  //        - `center`            - lines packed to the center of the container
+  //        - `space-between`     - extra space is distributed between lines,
+  //                                leaving them flush top/bottom
+  //        - `space-around`      - extra space is distributed around lines,
+  //                                leaving margin on top/bottom.
+  //        - `stretch` (default) - lines stretch to take up the remaining space
+  // ^author
+  // : Chris Harvey
+  // ^updated
+  // : 2015-09-03
+  .flex-align-content(@align) {
+    -webkit-align-content: @align;
+       -moz-align-content: @align;
+        -ms-align-content: @align;
+            align-content: @align;
   }
   //++++ #end CONTAINERS ++++//
 
