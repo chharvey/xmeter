@@ -29,7 +29,9 @@
   border: 0px solid;
 }
 @media print {
-  * {
+  *,
+  *::before,
+  *::after {
     background: transparent;
     box-shadow: none;
     text-shadow: none;
@@ -51,8 +53,6 @@ ul,
 dl {
   margin: 0;
 }
-body,
-main,
 h1,
 h2,
 h3,
@@ -121,12 +121,9 @@ body {
   color: #000;
   background: #fff;
 }
-main {
-  margin: 0 1rem;
-}
-@media print {
+@media screen {
   main {
-    margin: 0;
+    margin: 0 1rem;
   }
 }
 h1,
