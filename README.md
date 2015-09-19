@@ -6,7 +6,7 @@ Pronounced "Cross Meter".
 ## Installation and Usage
 
 This package is really a two-in-one. First, it is a set of tools (functions,
-fallbacks, modules, etc.) that make your life easier when working on a site's
+fallbacks, modules, etc.) that make your life easier when working on a site’s
 existing stylesheet or starting a brand new one. Secondly, it provides a base
 stylesheet, a starting point, for developing a new site. It is geared towards
 sites (or sections of sites) that are more static and typographically inclined
@@ -75,18 +75,18 @@ To use the xmeter variables and constants,
 }
 ```
 
-*The difference between **variables** and **constants** is that values are reflected in
+<i>The difference between **variables** and **constants** is that values are reflected in
 the names of constants but not variables. For example, `@xmeter_line_height` so happens to be 1.5.
 This value may change in the future (though it probably won’t), but the variable name need not change.
 This merely indicates the line height has been changed.
 On the other hand, `@1o2` is a constant whose value is 50%. It would be silly to change this value
-for obvious reasons.*
+for obvious reasons.</i>
 
 #### Using the Base
 
 Also in the `src/` folder are a set of files starting with `_base`. These files,
-unlike tools, provide actual styles for actual elements. Also unlike tools, these
-stylesheets are *not* meant to be cherrypicked. They are compiled separately<sup>&lowast;</sup> and
+unlike tools, provide actual styles for actual elements. Also unlike tools, **these
+stylesheets are *not* meant to be cherrypicked**. They are compiled separately<sup>&lowast;</sup> and
 concatenated together in the main file `xmeter.css`. If you’re developing a
 stylesheet that you want built off of xmeter, include
 
@@ -101,10 +101,10 @@ and before **xmeter**.
 This package also comes installed with a [test page](./test.html)
 that links to the main stylesheet.
 
-*<sup>&lowast;</sup>The reason the stylesheets are compiled separately is to increase
+<i><sup>&lowast;</sup>The reason the stylesheets are compiled separately is to increase
 encapsulation. They still have access to global variables (such as `#XMETER`),
 but now local variables and mixins can be defined within the file without
-affecting other files.*
+affecting other files.</i>
 
 ### Deployment
 
@@ -118,7 +118,7 @@ See the [test page](./test.html) for a preview.
 
 To install:
 
-    $ bower install https://github.com/chharvey/xmeter.git
+    $ bower install https://github.com/chharvey/xmeter.git # not on bower registry
     $ bower install normalize.css
 
 To reference this stylesheet on your own site:
@@ -159,7 +159,7 @@ for a demo.
   All other font-sizes are relative (either `rem`s or `em`s, no pixels or inches).
 - All line-height values are unitless.
 - Units for font-size, margin, and padding on block elements are in `rem`s
-  rather than `em`s, thus the size of an element's font remains the same
+  rather than `em`s, thus the size of an element’s font remains the same
   regardless of where that element is placed (style does not depend on location).
 - **However:** `em`s are used on text-level elements, so that these elements
   scale accordingly when nested inside elements with a larger font size

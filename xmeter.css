@@ -22,7 +22,9 @@
 /*################################*\
     _base.generic.less
 \*################################*/
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   border: 0px solid;
 }
@@ -179,7 +181,8 @@ address {
 figure,
 blockquote,
 pre {
-  margin: 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 pre {
   text-align: left;
@@ -211,6 +214,9 @@ dd {
 /*################################*\
     _base.grouping.tables.less
 \*################################*/
+table {
+  max-width: 100%;
+}
 caption {
   text-align: center;
 }
@@ -246,15 +252,6 @@ a:not([href]) {
 /*################################*\
     _base.text.stress.less
 \*################################*/
-i:not([lang]) {
-  quotes: '\201c' '\201d';
-}
-i:not([lang])::before {
-  content: open-quote;
-}
-i:not([lang])::after {
-  content: close-quote;
-}
 u {
   color: #080;
 }
@@ -316,6 +313,8 @@ samp samp {
     _base.embedded.less
 \*################################*/
 img {
+  width: auto;
+  height: auto;
   max-width: 100%;
   font-style: italic;
   vertical-align: middle;
