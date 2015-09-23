@@ -313,17 +313,18 @@ fieldset {
 }
 input,
 select,
-textarea {
-  font-size: 0.75rem;
-  line-height: 2;
-}
-input,
-textarea {
-  padding: 0 0.25rem;
+textarea,
+button {
   border-width: 1px;
   margin-top: -2px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.25);
+}
+input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+textarea {
+  padding: 0 0.25rem;
+  font-size: 0.75rem;
+  line-height: 2;
 }
 textarea {
   width: 30rem;

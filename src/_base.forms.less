@@ -7,6 +7,8 @@
 @import (reference) url('__tool.module.fontsize.less');
 
 
+@font_size_small: 0.75;
+
 fieldset {
   padding: 0 1rem;
   #XMETER .border-vert(all; 1px);
@@ -14,24 +16,38 @@ fieldset {
   border-color: fadeout(#000, 50%);
 }
 
+// consistent borders for all
 input,
 select,
-textarea {
-  #XMETER .VARS();
-  #XMETER .font-size-block(0.75; @xmeter_line_height);
-}
-
-input,
-textarea {
-  padding: 0 0.25rem;
+textarea,
+button {
   #XMETER .border-vert(all; 1px);
   border-style: solid;
   border-color: fadeout(#000, 75%);
 }
 
+// small font size for textual inputs
+input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 textarea {
+  padding: 0 0.25rem;
   #XMETER .VARS();
+  #XMETER .font-size-block(@font_size_small; @xmeter_line_height);
+}
+
+textarea {
   width: 30rem;
+  #XMETER .VARS();
   height: 6 * @xmeter_vru;
-  line-height: 1.5; // simply looks better
+  line-height: @xmeter_line_height; // simply looks better
+}
+
+input[type="button"]
+input[type="reset"]
+input[type="submit"],
+button {
+  // border: 2px outset buttonface;
+}
+
+button {
+
 }
