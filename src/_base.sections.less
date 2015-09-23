@@ -15,7 +15,7 @@
 @h6_font_size: ( 8/12); // 0.667
 
 
-// *[1] addresses support for `rem` units
+// *[1] addresses support for `rem` units (otherwise these would be in `body` selector)
 html {
   #XMETER .VARS();
   font-size: @xmeter_font_size;     // *[1]
@@ -23,11 +23,12 @@ html {
 }
 body {
   text-align: left;
+  color: #000;
+  background: #fff;
 }
 main {
-  margin: 0 1rem;
-  @media print {
-    margin: 0;
+  @media screen {
+    margin: 0 1rem;
   }
 }
 section {

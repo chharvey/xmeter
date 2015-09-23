@@ -22,28 +22,22 @@
 /*################################*\
     _base.generic.less
 \*################################*/
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   border: 0px solid;
 }
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote,
-pre,
-ol,
-ul,
-dl {
-  margin: 0;
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+  }
 }
 body,
-main,
 h1,
 h2,
 h3,
@@ -57,7 +51,24 @@ pre,
 ol,
 ul,
 dl,
-table {
+fieldset {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+pre,
+ol,
+ul,
+dl,
+table,
+fieldset {
   margin-bottom: 1.5rem;
 }
 dd + dt {
@@ -109,13 +120,12 @@ html {
 }
 body {
   text-align: left;
+  color: #000;
+  background: #fff;
 }
-main {
-  margin: 0 1rem;
-}
-@media print {
+@media screen {
   main {
-    margin: 0;
+    margin: 0 1rem;
   }
 }
 h1,
@@ -170,7 +180,8 @@ address {
 figure,
 blockquote,
 pre {
-  margin: 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 pre {
   text-align: left;
@@ -202,6 +213,9 @@ dd {
 /*################################*\
     _base.grouping.tables.less
 \*################################*/
+table {
+  max-width: 100%;
+}
 caption {
   text-align: center;
 }
@@ -237,15 +251,6 @@ a:not([href]) {
 /*################################*\
     _base.text.stress.less
 \*################################*/
-i:not([lang]) {
-  quotes: '\201c' '\201d';
-}
-i:not([lang])::before {
-  content: open-quote;
-}
-i:not([lang])::after {
-  content: close-quote;
-}
 u {
   color: #080;
 }
@@ -302,11 +307,46 @@ samp samp {
 /*################################*\
     _base.forms.less
 \*################################*/
+fieldset {
+  padding: 0 1rem;
+  border-width: 1px;
+  margin-top: -2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+input,
+select,
+textarea,
+button {
+  padding: 0 0.25rem;
+  border-width: 1px;
+  margin-top: -2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+textarea {
+  font-size: 0.75rem;
+  line-height: 2;
+}
+textarea {
+  width: 30rem;
+  height: 9rem;
+  line-height: 1.5;
+}
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
+  background-color: rgba(0, 0, 0, 0.25);
+}
 
 /*################################*\
     _base.embedded.less
 \*################################*/
 img {
+  width: auto;
+  height: auto;
   max-width: 100%;
   font-style: italic;
   vertical-align: middle;
