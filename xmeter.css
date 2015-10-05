@@ -153,12 +153,12 @@ h4 {
   line-height: 1.5;
 }
 h5 {
-  font-size: 0.75rem;
-  line-height: 2;
+  font-size: 0.875rem;
+  line-height: 1.71428571;
 }
 h6 {
-  font-size: 0.66666667rem;
-  line-height: 2.25;
+  font-size: 0.75rem;
+  line-height: 2;
 }
 h1 {
   padding-top: 1.5rem;
