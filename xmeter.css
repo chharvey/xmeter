@@ -137,28 +137,34 @@ h6 {
   font-weight: bold;
 }
 h1 {
+  font-size: 32px;
   font-size: 2rem;
   line-height: 0.75;
 }
 h2 {
+  font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
 }
 h3 {
+  font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
 }
 h4 {
+  font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
 h5 {
-  font-size: 0.75rem;
-  line-height: 2;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71428571;
 }
 h6 {
-  font-size: 0.66666667rem;
-  line-height: 2.25;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2;
 }
 h1 {
   padding-top: 1.5rem;
@@ -326,6 +332,7 @@ button {
 }
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 textarea {
+  font-size: 12px;
   font-size: 0.75rem;
   line-height: 2;
 }
