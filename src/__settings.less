@@ -88,5 +88,45 @@
     @6o8: (100% * (6/8));    @12o12: (100% * (12/12));
     @7o8: (100% * (7/8));
     @8o8: (100% * (8/8));
+
+
+    // ---- Solarized Colors ----
+    // Solarized Bases
+    @solar_base03:  #002b36;
+    @solar_base02:  #073642;
+    @solar_base01:  #586e75;
+    @solar_base00:  #657b83;
+    @solar_base0:   #839496;
+    @solar_base1:   #93a1a1;
+    @solar_base2:   #eee8d5;
+    @solar_base3:   #fdf6e3;
+    // Solarized Accents
+    @solar_red:     #dc322f;
+    @solar_orange:  #cb4b16;
+    @solar_yellow:  #b58900;
+    @solar_green:   #859900;
+    @solar_cyan:    #2aa198;
+    @solar_blue:    #268bd2;
+    @solar_violet:  #6c71c4;
+    @solar_magenta: #d33682;
+    // ---- Lunarized Colors ----
+    // Lunarized Bases -- Inverses of Solarized Bases
+    @lunar_base03: spin(@solar_base03, 180); // #360b00
+    @lunar_base02: spin(@solar_base02, 180); // #421307
+    @lunar_base01: spin(@solar_base01, 180); // #755f58
+    @lunar_base00: spin(@solar_base00, 180); // #836d65
+    @lunar_base0:  spin(@solar_base0,  180); // #968583
+    @lunar_base1:  spin(@solar_base1,  180); // #a19393
+    @lunar_base2:  spin(@solar_base2,  180); // #d5dbee
+    @lunar_base3:  spin(@solar_base3,  180); // #e3eafd
+    // Lunarized Accents -- Complements of Solarized Accents
+    @lunar_cyan:   rgb(255-red(@solar_red    ), 255-green(@solar_red    ), 255-blue(@_solar_red    )); // #23cdd0
+    @lunar_blue:   rgb(255-red(@solar_orange ), 255-green(@solar_orange ), 255-blue(@_solar_orange )); // #34b4e9
+    @lunar_indigo: rgb(255-red(@solar_yellow ), 255-green(@solar_yellow ), 255-blue(@_solar_yellow )); // #4a76ff
+    @lunar_violet: rgb(255-red(@solar_green  ), 255-green(@solar_green  ), 255-blue(@_solar_green  )); // #7a66ff
+    @lunar_red:    rgb(255-red(@solar_cyan   ), 255-green(@solar_cyan   ), 255-blue(@_solar_cyan   )); // #d55e67
+    @lunar_orange: rgb(255-red(@solar_blue   ), 255-green(@solar_blue   ), 255-blue(@_solar_blue   )); // #d9742d
+    @lunar_yellow: rgb(255-red(@solar_violet ), 255-green(@solar_violet ), 255-blue(@_solar_violet )); // #938e3b
+    @lunar_green:  rgb(255-red(@solar_magenta), 255-green(@solar_magenta), 255-blue(@_solar_magenta)); // #2cc97d
   }
 }
