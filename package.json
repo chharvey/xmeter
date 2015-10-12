@@ -7,13 +7,15 @@
     "normalize.css": "~3.0.3"
   },
   "devDependencies": {
+    "clean-css": "^3.4.5",
     "less": "^2.5.3",
     "lessc-each": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc:all": "lessc-each ./src/ ./build/  ;  lessc xmeter.less xmeter.css",
-    "build": "npm run lessc:all"
+    "minify": "cleancss ./xmeter.css -o ./xmeter.min.css",
+    "build": "npm run lessc:all  ;  npm run minify"
   },
   "repository": {
     "type": "git",
