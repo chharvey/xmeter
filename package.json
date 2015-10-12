@@ -7,12 +7,11 @@
     "normalize.css": "~3.0.3"
   },
   "devDependencies": {
-    "less": "~2.5.1",
-    "lessc-each": "~1.0.1"
+    "less": "^2.5.3",
+    "lessc-each": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc": "lessc",
     "lessc:all": "lessc-each ./src/ ./build/  ;  lessc xmeter.less xmeter.css",
     "build": "npm run lessc:all"
   },
