@@ -20,13 +20,8 @@ if you’re **deploying** a project (such as a website or blog) that *mentions*
 (i.e., references) this stylesheet.
 
 This package uses **normalize.css** as a dependency.
-If you’re *developing* a package, then it is automatically installed,
-but if you’re *deploying* a project, you have to install it manually (via `bower`, etc.).
-
-**Important:** `xmeter.css` does *not* `@import normalize.css`
-(*this may change in the future—stay tuned for updates*).
-In order for it to work properly on your page,
-you *must* link **normalize.css** in your CSS / HTML *before* linking this stylesheet.
+**normalize.css** is now built in to xmeter.css, so there is *no need* to
+`bower install`, `@import`, or `<link/>` it manually.
 
 ### Development
 
@@ -91,12 +86,10 @@ concatenated together in the main file `xmeter.css`. If you’re developing a
 stylesheet that you want built off of xmeter, include
 
 ```less
-@import url('/node_modules/xmeter/node_modules/normalize.css/normalize.css');
 @import url('/node_modules/xmeter/xmeter.css');
 ```
 
-at the top of  your file. Notice that **normalize.css** must be imported separately,
-and before **xmeter**.
+at the top of  your file.
 
 This package also comes installed with a [test page](./test.html)
 that links to the main stylesheet.
@@ -119,20 +112,17 @@ See the [test page](./test.html) for a preview.
 To install:
 
     $ bower install https://github.com/chharvey/xmeter.git # not on bower registry
-    $ bower install normalize.css
 
 To reference this stylesheet on your own site:
 
 ```html
-<link rel="stylesheet" href="/bower_components/normalize.css/normalize.css"/>
 <link rel="stylesheet" href="/bower_components/xmeter/xmeter.css"/>
 ```
 
-If for some reason you do not have these stylesheets installed locally, you may
-fetch them off the web as you would from a CDN (though this is not recommended).
+If for some reason you do not have this stylesheet installed locally, you may
+fetch it off the web as you would from a CDN (though this is not recommended).
 
 ```html
-<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"/>
 <link rel="stylesheet" href="https://chharvey.github.io/xmeter/xmeter.css"/>
 ```
 
@@ -166,9 +156,10 @@ for a demo.
   (style *does* depend on location).
 - Line-height for all inline (text-level) elements is 0. This allows the
   vertical rhythm to remain unaffected.
-- Minor, albeit prettier, style changes to some text-level elements from the browser default.
-- Fallback tools for browser discrepancies on CSS3 properties.
+- Variables include commonly used numeric and color values.
 - `.sprite()` mixin makes it easy to work with background image sprites.
+- Fallback tools for browser discrepancies on CSS3 properties.
+- Minor, albeit prettier, style changes to some text-level elements from the browser default.
 
 ## Changelog
 

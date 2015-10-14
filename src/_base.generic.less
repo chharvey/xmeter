@@ -20,6 +20,13 @@
   }
 }
 
+// *[1] addresses support for `rem` units (otherwise these would be in `body` selector)
+html {
+  #XMETER .VARS();
+  font-size: @xmeter_font_size;     // *[1]
+  line-height: @xmeter_line_height; // *[1]
+}
+
 body,
 h1, h2, h3, h4, h5, h6,
 p, figure, blockquote, pre,
