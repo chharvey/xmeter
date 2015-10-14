@@ -1,26 +1,3 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
-    xmeter.less
-\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/**
-  * CONTENTS
-  *
-  * normalize.css.................imported inline from https://github.com/necolas/normalize.css
-  *
-  * BASE
-  * generic.......................styles that apply to `html` and very far-reaching groups of elements
-  * sections......................secioning content and section-related elements
-  * grouping......................grouping content
-  * ....paras.........................paragraphs, block-level textual elements
-  * ....lists.........................ordered, unordered, association
-  * ....tables........................tables
-  * text..........................text-level and inline elements
-  * ....links.........................inline hyperlinks
-  * ....stress........................text outstanding from surrounding prose (e.g., <em> and <u>)
-  * ....doctext.......................documentation elements (e.g., <dfn> and <var>)
-  * ....data..........................machine- or human-readable data (e.g., <time> and <code>)
-  * forms.........................form elements
-  * embedded......................images and other media
-  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -446,6 +423,29 @@ th {
   padding: 0;
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    xmeter.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/**
+  * CONTENTS
+  *
+  * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
+  *
+  * BASE
+  * generic.......................styles that apply to `html` and very far-reaching groups of elements
+  * sections......................secioning content and section-related elements
+  * grouping......................grouping content
+  * ....paras.........................paragraphs, block-level textual elements
+  * ....lists.........................ordered, unordered, association
+  * ....tables........................tables
+  * text..........................text-level and inline elements
+  * ....links.........................inline hyperlinks
+  * ....stress........................text outstanding from surrounding prose (e.g., <em> and <u>)
+  * ....doctext.......................documentation elements (e.g., <dfn> and <var>)
+  * ....data..........................machine- or human-readable data (e.g., <time> and <code>)
+  * forms.........................form elements
+  * embedded......................images and other media
+  */
 /*################################*\
     _base.generic.less
 \*################################*/
