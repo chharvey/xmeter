@@ -95,12 +95,12 @@
   // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
   //
   // @align - how content is aligned
+  //        - `stretch` (default) - stretch to fill the container
+  //                                (still respect min-width/max-width)
   //        - `flex-start`        - cross-start margin edge of the items is placed on the cross-start line
   //        - `flex-end`          - cross-end margin edge of the items is placed on the cross-end line
   //        - `center`            - items are centered in the cross-axis
   //        - `baseline`          - items are aligned such as their baselines align
-  //        - `stretch` (default) - stretch to fill the container
-  //                                (still respect min-width/max-width)
   // ^author
   // : Chris Harvey
   // ^updated
@@ -116,6 +116,7 @@
   // (align vertically for `flex-direction: row` or horizontally for `flex-direction: column`)
   //
   // @align - how content is aligned
+  //        - `stretch` (default) - lines stretch to take up the remaining space
   //        - `flex-start`        - lines packed to the start of the container
   //        - `flex-end`          - lines packed to the end of the container
   //        - `center`            - lines packed to the center of the container
@@ -123,7 +124,6 @@
   //                                leaving them flush top/bottom
   //        - `space-around`      - extra space is distributed around lines,
   //                                leaving margin on top/bottom.
-  //        - `stretch` (default) - lines stretch to take up the remaining space
   // ^author
   // : Chris Harvey
   // ^updated
@@ -176,12 +176,12 @@
   //
   // @align - how the item is aligned
   //        - `auto` (default) - value of parent’s `align-items` property
+  //        - `stretch`        - stretch to fill the container
+  //                             (still respect min-width/max-width)
   //        - `flex-start`     - cross-start margin edge of the items is placed on the cross-start line
   //        - `flex-end`       - cross-end margin edge of the items is placed on the cross-end line
   //        - `center`         - items are centered in the cross-axis
   //        - `baseline`       - items are aligned such as their baselines align
-  //        - `stretch`        - stretch to fill the container
-  //                             (still respect min-width/max-width)
   // ^author
   // : Chris Harvey
   // ^updated
