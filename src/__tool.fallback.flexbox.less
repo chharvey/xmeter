@@ -46,6 +46,8 @@
   // : 2015-02-12
   .flex-direction(@direction) {
     -webkit-flex-direction: @direction;
+       -moz-flex-direction: @direction;
+        -ms-flex-direction: @direction;
             flex-direction: @direction;
   }
 
@@ -61,6 +63,8 @@
   // : 2015-02-12
   .flex-wrap(@wrap) {
     -webkit-flex-wrap: @wrap;
+       -moz-flex-wrap: @wrap; // no support for Firefox 27 and older (28+ uses `flex-wrap`)
+        -ms-flex-wrap: @wrap;
             flex-wrap: @wrap;
   }
 
