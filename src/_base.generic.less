@@ -10,7 +10,9 @@
   &,
   &::before,
   &::after {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     border: 0px solid; // reset browser default border
     @media print {
       background: transparent;
