@@ -3,6 +3,7 @@
     _base.generic.less
 \*################################*/
 @import (reference) url('__settings.less');
+@import (reference) url('__tool.fallback.box-sizing.less');
 @import (reference) url('__tool.module.spacing.less');
 
 
@@ -10,7 +11,7 @@
   &,
   &::before,
   &::after {
-    box-sizing: border-box;
+    #XMETER .box-sizing(border-box);
     border: 0px solid; // reset browser default border
     @media print {
       background: transparent;
