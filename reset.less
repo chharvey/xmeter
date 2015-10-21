@@ -2,6 +2,8 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     reset.less
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@import (reference) url('src/__settings.less');
+@import (reference) url('src/__tool.fallback.box-sizing.less');
 
 
 // This is a reset stylesheet similar to Eric Meyer’s reset.css.
@@ -74,8 +76,9 @@
 
 // *[1] addresses support for `rem` units (otherwise these would be in `body` selector)
 html {
-  font-size: 16px;     // *[1]
-  line-height: 1.5; // *[1]
+  #XMETER .VARS();
+  font-size: @xmeter_font_size;     // *[1]
+  line-height: @xmeter_line_height; // *[1]
 }
 
 body {
