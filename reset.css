@@ -4,10 +4,35 @@
 *,
 *::before,
 *::after {
-  vertical-align: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: auto;
   padding: 0;
   margin: 0;
+  border: 0 solid;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+  opacity: 1;
+  text-decoration: none;
+  text-shadow: none;
+  text-overflow: clip;
+}
+@media print {
+  *,
+  *::before,
+  *::after {
+    box-shadow: none;
+    background: transparent;
+    text-shadow: none;
+  }
+}
+*,
+*::before,
+*::after {
+  vertical-align: inherit;
   font: inherit;
   line-height: inherit;
   letter-spacing: inherit;
@@ -16,25 +41,26 @@
   text-indent: inherit;
   white-space: inherit;
   overflow-wrap: inherit;
-  border: 0 solid;
-  outline: none;
-  box-shadow: none;
-  background: transparent;
-  overflow: visible;
-  opacity: 1;
   visibility: inherit;
   text-rendering: inherit;
   text-transform: inherit;
-  text-decoration: none;
-  text-shadow: none;
-  text-overflow: clip;
   list-style: inherit;
   quotes: inherit;
   color: inherit;
 }
+*::before,
+*::after {
+  content: '';
+  content: none;
+}
 html {
   font-size: 16px;
   line-height: 1.5;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 body {
   vertical-align: baseline;
@@ -48,12 +74,13 @@ body {
   text-indent: 0;
   white-space: normal;
   overflow-wrap: normal;
+  background: #fff;
   visibility: visible;
   text-rendering: optimizeSpeed;
   text-transform: none;
   list-style: none;
   quotes: none;
-  color: #000000;
+  color: #000;
 }
 body,
 section,
@@ -83,6 +110,7 @@ dl,
 dt,
 dd,
 hgroup,
+summary,
 details,
 menu {
   display: block;
@@ -92,8 +120,10 @@ li {
 }
 table {
   display: table;
-  border-collapse: collapse;
+}
+table {
   border-spacing: 0;
+  border-collapse: collapse;
 }
 caption {
   display: table-caption;
@@ -122,6 +152,22 @@ th {
 td {
   display: table-cell;
 }
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
 span,
 a,
 br,
@@ -147,4 +193,11 @@ kbd,
 samp {
   display: inline;
   line-height: 0;
+}
+a {
+  background-color: transparent;
+}
+a:hover,
+a:active {
+  outline: 0;
 }
