@@ -1,0 +1,127 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    reset.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+// This is a reset stylesheet similar to Eric Meyer’s reset.css.
+// It strips all elements of all browser-default styles so that everything looks
+// exactly the same. This stylesheet may be used independently, though xmeter.css
+// builds on top of it.
+//
+// I decided not to npm install Eric Meyer’s reset.css because there are some fixes
+// that I would like to make.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+* {
+  &,
+  &::before,
+  &::after {
+    // list all properties and, if inherited, `inherit`; otherwise, their initial values.
+    // the inherited properties will be defined in `body` and trickle down.
+    vertical-align: inherit;
+
+    width: auto;
+    padding: 0;
+    margin: 0;
+
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    text-align: inherit;
+    text-indent: inherit;
+    white-space: inherit;
+    overflow-wrap: inherit;
+
+    border: 0 solid;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
+    opacity: 1;
+    visibility: inherit;
+
+    text-rendering: inherit;
+    text-transform: inherit;
+    text-decoration: none;
+    text-shadow: none;
+    text-overflow: clip;
+    list-style: inherit;
+    quotes: inherit;
+    color: inherit;
+  }
+}
+
+// *[1] addresses support for `rem` units (otherwise these would be in `body` selector)
+html {
+  font-size: 16px;     // *[1]
+  line-height: 1.5; // *[1]
+}
+
+body {
+  // list all properties inherited in * selector, and their initial values
+  vertical-align: baseline;
+
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: left;
+  text-indent: 0;
+  white-space: normal;
+  overflow-wrap: normal;
+
+  visibility: visible;
+
+  text-rendering: optimizeSpeed;
+  text-transform: none;
+  list-style: none;
+  quotes: none;
+  color: #000000;
+}
+
+body,
+section, article, aside, nav,
+main, header, footer,
+h1, h2, h3, h4, h5, h6,
+hr, address,
+div, p, figure, figcaption, blockquote, pre,
+ol, ul, dl, dt, dd,
+hgroup, details, menu {
+  display: block;
+}
+
+li {
+  display: list-item;
+}
+
+table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption  { display: table-caption     ; }
+colgroup { display: table-column-group; }
+col      { display: table-column      ; }
+thead    { display: table-header-group; }
+tbody    { display: table-row-group   ; }
+tfoot    { display: table-footer-group; }
+tr       { display: table-row         ; }
+th       { display: table-cell        ; }
+td       { display: table-cell        ; }
+
+// Font sizes for text-level elements should be in units of `em` instead of `rem` because
+// they should scale with their parents.
+// Also, inline elements should not affect vertical rhythm, thus line-heights are zero.
+span, a, br,
+em, strong, i, mark, u, small, s,
+dfn, b, var, q, cite, sup, sub,
+abbr, data, time, code, kbd, samp {
+  display: inline;
+  line-height: 0;
+}
