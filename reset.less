@@ -73,12 +73,28 @@
     color: inherit;
   }
 }
+// From Eric Meyer’s `reset.css`
+* {
+  &::before,
+  &::after {
+    content: ''; // fallback
+    content: none;
+  }
+}
 
-// *[1] addresses support for `rem` units (otherwise these would be in `body` selector)
+// [1] addresses support for `rem` units (otherwise these would be in `body` selector)
 html {
   #XMETER .VARS();
-  font-size: @xmeter_font_size;     // *[1]
-  line-height: @xmeter_line_height; // *[1]
+  font-size: @xmeter_font_size;     // [1]
+  line-height: @xmeter_line_height; // [1]
+}
+// From Nicolas Gallagher’s `normalize.css`
+// [2] Set default font family to sans-serif. (normalize.css)
+// [3] Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom. (normalize.css)
+html {
+  font-family: sans-serif;          // [2]
+  -webkit-text-size-adjust: 100%;   // [3]
+      -ms-text-size-adjust: 100%;   // [3]
 }
 
 body {
@@ -106,6 +122,8 @@ body {
   color: #000;
 }
 
+// From Nicolas Gallagher’s `normalize.css`
+// From Eric Meyer’s `reset.css`
 body,
 section, article, aside, nav,
 main, header, footer,
@@ -113,7 +131,7 @@ h1, h2, h3, h4, h5, h6,
 hr, address,
 div, p, figure, figcaption, blockquote, pre,
 ol, ul, dl, dt, dd,
-hgroup, details, menu {
+hgroup, summary, details, menu {
   display: block;
 }
 
@@ -123,6 +141,9 @@ li {
 
 table {
   display: table;
+}
+// From Eric Meyer’s `reset.css`
+table {
   border-spacing: 0; // fallback
   border-collapse: collapse;
 }
@@ -136,6 +157,32 @@ tr       { display: table-row         ; }
 th       { display: table-cell        ; }
 td       { display: table-cell        ; }
 
+// From Nicolas Gallagher’s `normalize.css`
+// [1] Correct `inline-block` display not defined in IE 8/9.
+audio, canvas, progress, video {
+  display: inline-block; // [1]
+}
+
+// From Nicolas Gallagher’s `normalize.css`
+// [1] Prevent modern browsers from displaying `audio` without controls.
+// [2] Remove excess height in iOS 5 devices.
+audio:not([controls]) {
+  display: none; // [1]
+  height: 0;     // [2]
+}
+
+// From Nicolas Gallagher’s `normalize.css`
+// [1] Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+template {
+  display: none; // [1]
+}
+
+// From Nicolas Gallagher’s `normalize.css`
+// [1] Address `[hidden]` styling not present in IE 8/9/10.
+[hidden] {
+  display: none; // [1]
+}
+
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
 // Also, inline elements should not affect vertical rhythm, thus line-heights are zero.
@@ -145,4 +192,14 @@ dfn, b, var, q, cite, sup, sub,
 abbr, data, time, code, kbd, samp {
   display: inline;
   line-height: 0;
+}
+
+// From Nicolas Gallagher’s `normalize.css`
+// [1] Remove the gray background color from active links in IE 10.
+// [2] Improve readability of focused elements when they are also in an active/hover state.
+a {
+  background-color: transparent; // [1]
+  &:hover, &:active {
+    outline: 0; // [2]
+  }
 }
