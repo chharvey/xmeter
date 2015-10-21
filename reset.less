@@ -6,11 +6,11 @@
 
 // This is a reset stylesheet similar to Eric Meyer’s reset.css.
 // It strips all elements of all browser-default styles so that everything looks
-// exactly the same. This stylesheet may be used independently, though xmeter.css
+// exactly the same.
+// This stylesheet may be used independently of xmeter, though xmeter.css
 // builds on top of it.
 //
-// I decided not to npm install Eric Meyer’s reset.css because there are some fixes
-// that I would like to make.
+// I decided not to npm install Eric Meyer’s reset.css because I’ve applied some fixes.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -21,11 +21,37 @@
   &::after {
     // list all properties and, if inherited, `inherit`; otherwise, their initial values.
     // the inherited properties will be defined in `body` and trickle down.
-    vertical-align: inherit;
-
+    #XMETER .box-sizing(border-box);
     width: auto;
     padding: 0;
     margin: 0;
+
+    border: 0 solid;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
+    opacity: 1;
+
+    text-decoration: none;
+    text-shadow: none;
+    text-overflow: clip;
+
+    @media print {
+      // use this selector to set print styles for ALL elements
+      box-shadow: none;
+      background: transparent;
+      text-shadow: none;
+    }
+  }
+}
+* {
+  &,
+  &::before,
+  &::after {
+    // list all properties and, if inherited, `inherit`; otherwise, their initial values.
+    // the inherited properties will be defined in `body` and trickle down.
+    vertical-align: inherit;
 
     font: inherit;
     line-height: inherit;
@@ -36,19 +62,10 @@
     white-space: inherit;
     overflow-wrap: inherit;
 
-    border: 0 solid;
-    outline: none;
-    box-shadow: none;
-    background: transparent;
-    overflow: visible;
-    opacity: 1;
     visibility: inherit;
 
     text-rendering: inherit;
     text-transform: inherit;
-    text-decoration: none;
-    text-shadow: none;
-    text-overflow: clip;
     list-style: inherit;
     quotes: inherit;
     color: inherit;
@@ -76,13 +93,14 @@ body {
   white-space: normal;
   overflow-wrap: normal;
 
+  background: #fff;
   visibility: visible;
 
   text-rendering: optimizeSpeed;
   text-transform: none;
   list-style: none;
   quotes: none;
-  color: #000000;
+  color: #000;
 }
 
 body,
@@ -102,8 +120,8 @@ li {
 
 table {
   display: table;
+  border-spacing: 0; // fallback
   border-collapse: collapse;
-  border-spacing: 0;
 }
 caption  { display: table-caption     ; }
 colgroup { display: table-column-group; }
