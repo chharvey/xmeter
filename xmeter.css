@@ -1,3 +1,105 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    reset.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body {
+  text-align: left;
+  background: #fff;
+  color: #000;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+pre,
+ol,
+ul,
+dl,
+fieldset {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+hr {
+  margin: 0;
+}
+address {
+  font: inherit;
+}
+pre {
+  font: inherit;
+  white-space: inherit;
+}
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+}
+dd {
+  margin: 0;
+}
+table {
+  text-align: left;
+}
+caption,
+th {
+  text-align: inherit;
+}
+th,
+td {
+  padding: 0;
+}
+th {
+  font: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+em,
+strong,
+i,
+small,
+dfn,
+b,
+var,
+cite,
+sup,
+sub,
+code,
+kbd,
+samp {
+  font: inherit;
+}
+mark {
+  background: transparent;
+  color: inherit;
+}
+u,
+s,
+ins,
+del {
+  text-decoration: none;
+}
+q {
+  quotes: none;
+}
+sup,
+sub {
+  vertical-align: inherit;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -429,10 +531,10 @@ th {
 /**
   * CONTENTS
   *
+  * reset (above).................
   * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
   *
   * BASE
-  * reset.........................
   * generic.......................styles that apply to `html` and very far-reaching groups of elements
   * sections......................secioning content and section-related elements
   * grouping......................grouping content
@@ -448,10 +550,6 @@ th {
   * embedded......................images and other media
   */
 /*################################*\
-    _base.reset.less
-\*################################*/
-
-/*################################*\
     _base.generic.less
 \*################################*/
 *,
@@ -461,6 +559,8 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 0px solid;
+  content: '';
+  content: none;
 }
 @media print {
   *,
@@ -474,23 +574,6 @@ th {
 html {
   font-size: 16px;
   line-height: 1.5;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote,
-pre,
-ol,
-ul,
-dl,
-fieldset {
-  margin: 0;
 }
 h1,
 h2,
@@ -552,11 +635,6 @@ samp {
 /*################################*\
     _base.sections.less
 \*################################*/
-body {
-  text-align: left;
-  color: #000;
-  background: #fff;
-}
 @media screen {
   main {
     margin: 0 1rem;
@@ -606,9 +684,6 @@ h1 {
 hr {
   display: none;
 }
-address {
-  font-style: inherit;
-}
 
 /*################################*\
     _base.grouping.less
@@ -643,11 +718,14 @@ dd > ol,
 dd > ul {
   padding-left: 2rem;
 }
+ol {
+  list-style-type: decimal;
+}
+ul {
+  list-style-type: disc;
+}
 dt {
   font-weight: bold;
-}
-dd {
-  margin: 0;
 }
 
 /*################################*\
@@ -687,17 +765,22 @@ address > br {
 a:not([href]) {
   opacity: 0.5;
 }
+a[href] {
+  color: #00e;
+}
 
 /*################################*\
     _base.text.stress.less
 \*################################*/
 u {
+  text-decoration: underline;
   color: #080;
 }
 small {
   font-size: 0.75em;
 }
 s {
+  text-decoration: line-through;
   color: #e00;
 }
 
@@ -713,6 +796,15 @@ del {
 dfn {
   font-style: inherit;
   font-weight: bold;
+}
+var {
+  font-style: italic;
+}
+q {
+  quotes: initial;
+}
+cite {
+  font-style: italic;
 }
 sup,
 sub {

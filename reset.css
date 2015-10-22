@@ -2,8 +2,9 @@
     reset.less
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body {
-  color: #000;
+  text-align: left;
   background: #fff;
+  color: #000;
 }
 body,
 h1,
