@@ -14,6 +14,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+body {
+  color: #000;
+  background: #fff;
+}
 // reset vertical margin
 body,
 h1, h2, h3, h4, h5, h6,
@@ -23,7 +27,6 @@ fieldset {
   margin: 0;
 }
 
-// reset font-weight and size
 h1, h2, h3, h4, h5, h6 {
   font: inherit;
 }
@@ -44,7 +47,11 @@ ol, ul {
 dd {
   margin: 0;
 }
-caption {
+table {
+  text-align: left; // fix browser bug
+}
+caption,
+th {
   text-align: inherit;
 }
 th, td {
