@@ -11,6 +11,7 @@
 // `base` stylesheets.
 // This stylesheet may be used independently of xmeter, though xmeter.css
 // builds on top of it.
+// Rulesets are ordered by CSS property, not by selector.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -20,32 +21,31 @@ body {
   background: #fff;
   color: #000;
 }
+
+sup, sub {
+  vertical-align: inherit;
+}
 body,
 h1, h2, h3, h4, h5, h6,
+hr,
 p, figure, blockquote, pre,
 ol, ul, dl,
+dd,
 fieldset {
   margin: 0;
 }
-h1, h2, h3, h4, h5, h6 {
-  font: inherit;
-}
-hr {
-  margin: 0;
-}
-address {
-  font: inherit;
-}
-pre {
-  font: inherit;
-  white-space: inherit;
-}
-ol, ul {
+ol, ul,
+th, td {
   padding: 0;
-  list-style: none;
 }
-dd {
-  margin: 0;
+h1, h2, h3, h4, h5, h6,
+address,
+pre,
+th,
+em, strong, i, small,
+dfn, b, var, cite, sup, sub,
+code, kbd, samp {
+  font: inherit;
 }
 table {
   text-align: left; // fix browser bug
@@ -54,31 +54,23 @@ caption,
 th {
   text-align: inherit;
 }
-th, td {
-  padding: 0;
-}
-th {
-  font: inherit;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-em, strong, i, small,
-dfn, b, var, cite, sup, sub,
-code, kbd, samp {
-  font: inherit;
+pre {
+  white-space: inherit;
 }
 mark {
   background: transparent;
-  color: inherit;
 }
+a,
 u, s, ins, del {
   text-decoration: none;
+}
+ol, ul {
+  list-style: none;
 }
 q {
   quotes: none;
 }
-sup, sub {
-  vertical-align: inherit;
+a,
+mark {
+  color: inherit;
 }
