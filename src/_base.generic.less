@@ -12,7 +12,7 @@
   &::before,
   &::after {
     #XMETER .box-sizing(border-box);
-    border: 0px solid; // reset browser default border
+    border: 0 solid; // reset browser default border
     content: ''; content: none; // fallback
     @media print {
       background: transparent;
@@ -22,11 +22,11 @@
   }
 }
 
-// *[1] addresses support for `rem` units (otherwise these would be in `body` selector)
+// [1] addresses support for `rem` units (otherwise these would be in `body` selector)
 html {
   #XMETER .VARS();
-  font-size: @xmeter_font_size;     // *[1]
-  line-height: @xmeter_line_height; // *[1]
+  font-size: @xmeter_font_size;     // [1]
+  line-height: @xmeter_line_height; // [1]
 }
 
 // Vertical spacing between typographical blocks
@@ -49,7 +49,6 @@ li, dt, dd {
   }
 }
 
-
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
 // Also, inline elements should not affect vertical rhythm, thus line-heights are zero.
@@ -57,5 +56,6 @@ span, a, br,
 em, strong, i, mark, u, small, s,
 dfn, b, var, q, cite, sup, sub,
 abbr, data, time, code, kbd, samp {
+  display: inline;
   line-height: 0;
 }

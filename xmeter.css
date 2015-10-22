@@ -531,7 +531,7 @@ th {
 /**
   * CONTENTS
   *
-  * reset (above).................
+  * reset.css.....................strips all elements of all browser-default styles
   * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
   *
   * BASE
@@ -558,7 +558,7 @@ th {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 0px solid;
+  border: 0 solid;
   content: '';
   content: none;
 }
@@ -629,6 +629,7 @@ time,
 code,
 kbd,
 samp {
+  display: inline;
   line-height: 0;
 }
 
@@ -701,6 +702,7 @@ pre {
 pre {
   text-align: left;
   text-indent: 0;
+  white-space: pre;
 }
 
 /*################################*\
@@ -772,6 +774,15 @@ a[href] {
 /*################################*\
     _base.text.stress.less
 \*################################*/
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
 u {
   text-decoration: underline;
   color: #080;
@@ -795,6 +806,9 @@ del {
 }
 dfn {
   font-style: inherit;
+  font-weight: bold;
+}
+b {
   font-weight: bold;
 }
 var {
@@ -884,4 +898,3 @@ img {
   font-style: italic;
   vertical-align: middle;
 }
-
