@@ -1,0 +1,97 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    reset.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body {
+  color: #000;
+  background: #fff;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+pre,
+ol,
+ul,
+dl,
+fieldset {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+hr {
+  margin: 0;
+}
+address {
+  font: inherit;
+}
+pre {
+  font: inherit;
+  white-space: inherit;
+}
+ol,
+ul {
+  padding: 0;
+  list-style: none;
+}
+dd {
+  margin: 0;
+}
+caption {
+  text-align: inherit;
+}
+th,
+td {
+  padding: 0;
+}
+th {
+  font: inherit;
+  text-align: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+em,
+strong,
+i,
+small,
+dfn,
+b,
+var,
+cite,
+sup,
+sub,
+code,
+kbd,
+samp {
+  font: inherit;
+}
+mark {
+  background: transparent;
+  color: inherit;
+}
+u,
+s,
+ins,
+del {
+  text-decoration: none;
+}
+q {
+  quotes: none;
+}
+sup,
+sub {
+  vertical-align: inherit;
+}
