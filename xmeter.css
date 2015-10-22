@@ -1,3 +1,4 @@
+@import url('reset.css');
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -429,6 +430,7 @@ th {
 /**
   * CONTENTS
   *
+  * reset.css.....................strips all elements of all browser-default styles
   * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
   *
   * BASE
@@ -452,8 +454,12 @@ th {
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 0px solid;
+  border: 0 solid;
+  content: '';
+  content: none;
 }
 @media print {
   *,
@@ -467,23 +473,6 @@ th {
 html {
   font-size: 16px;
   line-height: 1.5;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote,
-pre,
-ol,
-ul,
-dl,
-fieldset {
-  margin: 0;
 }
 h1,
 h2,
@@ -539,17 +528,13 @@ time,
 code,
 kbd,
 samp {
+  display: inline;
   line-height: 0;
 }
 
 /*################################*\
     _base.sections.less
 \*################################*/
-body {
-  text-align: left;
-  color: #000;
-  background: #fff;
-}
 @media screen {
   main {
     margin: 0 1rem;
@@ -599,9 +584,6 @@ h1 {
 hr {
   display: none;
 }
-address {
-  font-style: inherit;
-}
 
 /*################################*\
     _base.grouping.less
@@ -619,6 +601,7 @@ pre {
 pre {
   text-align: left;
   text-indent: 0;
+  white-space: pre;
 }
 
 /*################################*\
@@ -636,11 +619,14 @@ dd > ol,
 dd > ul {
   padding-left: 2rem;
 }
+ol {
+  list-style-type: decimal;
+}
+ul {
+  list-style-type: disc;
+}
 dt {
   font-weight: bold;
-}
-dd {
-  margin: 0;
 }
 
 /*################################*\
@@ -680,17 +666,31 @@ address > br {
 a:not([href]) {
   opacity: 0.5;
 }
+a[href] {
+  color: #00e;
+}
 
 /*################################*\
     _base.text.stress.less
 \*################################*/
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
 u {
+  text-decoration: underline;
   color: #080;
 }
 small {
   font-size: 0.75em;
 }
 s {
+  text-decoration: line-through;
   color: #e00;
 }
 
@@ -706,6 +706,18 @@ del {
 dfn {
   font-style: inherit;
   font-weight: bold;
+}
+b {
+  font-weight: bold;
+}
+var {
+  font-style: italic;
+}
+q {
+  quotes: initial;
+}
+cite {
+  font-style: italic;
 }
 sup,
 sub {

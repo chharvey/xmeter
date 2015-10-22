@@ -1,0 +1,76 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    reset.less
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+// This is a reset stylesheet similar to Eric Meyer’s reset.css.
+// It strips all elements of all browser-default styles so that everything looks
+// exactly the same.
+// It does *not* account for vertical rhythm. That is taken care of in the
+// `base` stylesheets.
+// This stylesheet may be used independently of xmeter, though xmeter.css
+// builds on top of it.
+// Rulesets are ordered by CSS property, not by selector.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+body {
+  text-align: left;
+  background: #fff;
+  color: #000;
+}
+
+sup, sub {
+  vertical-align: inherit;
+}
+body,
+h1, h2, h3, h4, h5, h6,
+hr,
+p, figure, blockquote, pre,
+ol, ul, dl,
+dd,
+fieldset {
+  margin: 0;
+}
+ol, ul,
+th, td {
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6,
+address,
+pre,
+th,
+em, strong, i, small,
+dfn, b, var, cite, sup, sub,
+code, kbd, samp {
+  font: inherit;
+}
+table {
+  text-align: left; // fix browser bug
+}
+caption,
+th {
+  text-align: inherit;
+}
+pre {
+  white-space: inherit;
+}
+mark {
+  background: transparent;
+}
+a,
+u, s, ins, del {
+  text-decoration: none;
+}
+ol, ul {
+  list-style: none;
+}
+q {
+  quotes: none;
+}
+a,
+mark {
+  color: inherit;
+}
