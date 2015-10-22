@@ -45,10 +45,10 @@ fieldset {
   #XMETER .VARS();
   #XMETER .spacing-bottom(@xmeter_vru);
 }
-dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
-  #XMETER .VARS();
-  margin-top: @xmeter_vru;
-}
+// dd + dt { // only here because can’t add margin-bottom to last `dd` in a group
+//   #XMETER .VARS();
+//   margin-top: @xmeter_vru;
+// }
 li, dt, dd {
   > ol, > ul, > dl {
     #XMETER .spacing-bottom(0); // undo default spacing-bottom for nested lists
