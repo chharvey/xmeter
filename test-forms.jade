@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="A test of bare, unclassed elements.">
-    <title>xmeter.css Test &mdash; Forms</title>
-    <link rel="stylesheet" href="xmeter.css">
-  </head>
-  <body>
+doctype html
+html(lang="en", xmlns="http://www.w3.org/1999/xhtml")
+  head
+    meta(charset="UTF-8")
+    meta(name="description", content="A test of bare, unclassed elements.")
+    title xmeter.css Test &mdash; Forms
+    link(rel="stylesheet", href="xmeter.css")
+  body.
     <main>
     <form>
-    
+
       <fieldset>
         <legend>single line text inputs</legend>
         <input type="text" placeholder="input type text"/>
@@ -19,7 +18,7 @@
         <input type="tel" placeholder="input type tel"/>
         <input type="url" placeholder="input type url"/>
       </fieldset>
-    
+
       <fieldset>
         <legend>date/time</legend>
         <input type="datetime" placeholder="input type datetime"/>
@@ -29,7 +28,7 @@
         <input type="week" placeholder="input type week"/>
         <input type="month" placeholder="input type month"/>
       </fieldset>
-    
+
       <fieldset>
         <legend>without text input</legend>
         <input type="color" placeholder="input type color"/>
@@ -38,7 +37,7 @@
         <input type="number" placeholder="input type number"/>
         <input type="range" placeholder="input type range"/>
       </fieldset>
-    
+
       <fieldset>
         <legend>check boxes</legend>
         <input type="checkbox" placeholder="input type checkbox"/>
@@ -50,7 +49,7 @@
         <input type="checkbox" placeholder="input type checkbox"/>
         <label>applicable</label>
       </fieldset>
-    
+
       <fieldset>
         <legend>radio buttons</legend>
         <input type="radio" name="radiogroup1" placeholder="input type radio"/>
@@ -62,7 +61,7 @@
         <input type="radio" name="radiogroup1" placeholder="input type radio"/>
         <label>one</label>
       </fieldset>
-    
+
       <fieldset>
         <legend>drop-down list (select only one)</legend>
         <select>
@@ -85,7 +84,7 @@
           <option>option 3</option>
         </datalist>
       </fieldset>
-    
+
       <fieldset>
         <legend>drop-down list (select multiple)</legend>
         <select multiple>
@@ -98,7 +97,7 @@
           <option>option 3</option>
         </select>
       </fieldset>
-    
+
       <fieldset>
         <legend>buttons</legend>
         <input type="button" placeholder="input type button" value="button"/>
@@ -108,13 +107,11 @@
         <button type="reset" >reset </button>
         <button type="submit">submit</button>
       </fieldset>
-    
+
       <fieldset>
         <legend>textarea</legend>
         <textarea></textarea>
       </fieldset>
-    
+
     </form>
     </main>
-  </body>
-</html>

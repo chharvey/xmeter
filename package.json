@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "clean-css": "^3.4.5",
+    "jade": "^1.11.0",
     "less": "^2.5.3",
     "lessc-each": "^1.0.1"
   },
@@ -17,7 +18,8 @@
     "lessc:xmeter": "lessc-each ./src/ ./build/  ;  lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:reset  ;  npm run lessc:xmeter",
     "minify": "cleancss ./xmeter.css -o ./xmeter.min.css",
-    "build": "npm run lessc:all  ;  npm run minify"
+    "jade:all": "jade -P {test,test-forms}.jade",
+    "build": "npm run lessc:all  ;  npm run minify  ;  npm run jade:all"
   },
   "repository": {
     "type": "git",
