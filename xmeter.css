@@ -1,3 +1,101 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    reset.less
+    Version: 1.0.1
+    Licence: MIT
+    Repo   : https://github.com/chharvey/resetcss.git
+    Home   : https://chharvey.github.io/resetcss/
+    Author : https://chharvey.github.io/
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body {
+  text-align: left;
+  background: #fff;
+  color: #000;
+}
+sup,
+sub {
+  vertical-align: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+figure,
+blockquote,
+pre,
+ol,
+ul,
+dl,
+dd,
+fieldset {
+  margin: 0;
+}
+ol,
+ul,
+th,
+td {
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+pre,
+th,
+em,
+strong,
+i,
+small,
+dfn,
+b,
+var,
+cite,
+sup,
+sub,
+code,
+kbd,
+samp {
+  font: inherit;
+}
+table {
+  text-align: left;
+}
+caption,
+th {
+  text-align: inherit;
+}
+pre {
+  white-space: inherit;
+}
+mark {
+  background: transparent;
+}
+a,
+u,
+s,
+ins,
+del {
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+q {
+  quotes: none;
+}
+a,
+mark {
+  color: inherit;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -425,10 +523,16 @@ th {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter.less
+    Version: 3.2.0
+    Licence: MIT
+    Repo   : https://github.com/chharvey/xmeter.git
+    Home   : https://chharvey.github.io/xmeter/
+    Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /**
   * CONTENTS
   *
+  * reset.css (above).............strips all elements of all browser-default styles
   * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
   *
   * BASE
@@ -452,8 +556,12 @@ th {
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 0px solid;
+  border: 0 solid;
+  content: '';
+  content: none;
 }
 @media print {
   *,
@@ -467,23 +575,6 @@ th {
 html {
   font-size: 16px;
   line-height: 1.5;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote,
-pre,
-ol,
-ul,
-dl,
-fieldset {
-  margin: 0;
 }
 h1,
 h2,
@@ -501,9 +592,6 @@ dl,
 table,
 fieldset {
   margin-bottom: 1.5rem;
-}
-dd + dt {
-  margin-top: 1.5rem;
 }
 li > ol,
 dt > ol,
@@ -539,17 +627,13 @@ time,
 code,
 kbd,
 samp {
+  display: inline;
   line-height: 0;
 }
 
 /*################################*\
     _base.sections.less
 \*################################*/
-body {
-  text-align: left;
-  color: #000;
-  background: #fff;
-}
 @media screen {
   main {
     margin: 0 1rem;
@@ -561,7 +645,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
+  font-weight: 700;
 }
 h1 {
   font-size: 32px;
@@ -594,13 +678,11 @@ h6 {
   line-height: 2;
 }
 h1 {
+  margin-top: 0;
   padding-top: 1.5rem;
 }
 hr {
   display: none;
-}
-address {
-  font-style: inherit;
 }
 
 /*################################*\
@@ -619,6 +701,7 @@ pre {
 pre {
   text-align: left;
   text-indent: 0;
+  white-space: pre;
 }
 
 /*################################*\
@@ -636,11 +719,11 @@ dd > ol,
 dd > ul {
   padding-left: 2rem;
 }
-dt {
-  font-weight: bold;
+ol {
+  list-style-type: decimal;
 }
-dd {
-  margin: 0;
+ul {
+  list-style-type: disc;
 }
 
 /*################################*\
@@ -660,7 +743,7 @@ tbody {
   vertical-align: top;
 }
 th {
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -680,17 +763,31 @@ address > br {
 a:not([href]) {
   opacity: 0.5;
 }
+a[href] {
+  color: #00e;
+}
 
 /*################################*\
     _base.text.stress.less
 \*################################*/
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
 u {
+  text-decoration: underline;
   color: #080;
 }
 small {
   font-size: 0.75em;
 }
 s {
+  text-decoration: line-through;
   color: #e00;
 }
 
@@ -705,7 +802,19 @@ del {
 }
 dfn {
   font-style: inherit;
+  font-weight: 700;
+}
+b {
   font-weight: bold;
+}
+var {
+  font-style: italic;
+}
+q {
+  quotes: initial;
+}
+cite {
+  font-style: italic;
 }
 sup,
 sub {
@@ -773,6 +882,11 @@ input[type="reset"],
 input[type="submit"],
 button {
   background-color: rgba(0, 0, 0, 0.25);
+}
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*################################*\

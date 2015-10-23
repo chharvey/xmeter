@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {
@@ -9,13 +9,14 @@
   "devDependencies": {
     "clean-css": "^3.4.5",
     "less": "^2.5.3",
-    "lessc-each": "^1.0.1"
+    "lessc-each": "^1.0.1",
+    "resetcss": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc:all": "lessc-each ./src/ ./build/  ;  lessc xmeter.less xmeter.css",
-    "minify": "cleancss ./xmeter.css -o ./xmeter.min.css",
-    "build": "npm run lessc:all  ;  npm run minify"
+    "lessc": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
+    "minify": "cleancss xmeter.css -o xmeter.min.css",
+    "build": "npm run lessc  ;  npm run minify"
   },
   "repository": {
     "type": "git",
@@ -35,5 +36,5 @@
   "bugs": {
     "url": "https://github.com/chharvey/xmeter/issues"
   },
-  "homepage": "https://github.com/chharvey/xmeter"
+  "homepage": "https://chharvey.github.io/xmeter/"
 }
