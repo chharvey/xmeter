@@ -9,15 +9,14 @@
   "devDependencies": {
     "clean-css": "^3.4.5",
     "less": "^2.5.3",
-    "lessc-each": "^1.0.1"
+    "lessc-each": "^1.0.1",
+    "resetcss": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc:reset": "lessc reset.less reset.css",
-    "lessc:xmeter": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
-    "lessc:all": "npm run lessc:reset  ;  npm run lessc:xmeter",
-    "minify": "cleancss xmeter.css -o xmeter.min.css ; cleancss reset.css -o reset.min.css",
-    "build": "npm run lessc:all  ;  npm run minify"
+    "lessc": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
+    "minify": "cleancss xmeter.css -o xmeter.min.css",
+    "build": "npm run lessc  ;  npm run minify"
   },
   "repository": {
     "type": "git",

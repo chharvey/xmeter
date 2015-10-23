@@ -1,5 +1,10 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     reset.less
+    Version: 1.0.1
+    Licence: MIT
+    Repo   : https://github.com/chharvey/resetcss.git
+    Home   : https://chharvey.github.io/resetcss/
+    Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body {
   text-align: left;
@@ -518,11 +523,16 @@ th {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter.less
+    Version: 3.2.0
+    Licence: MIT
+    Repo   : https://github.com/chharvey/xmeter.git
+    Home   : https://chharvey.github.io/xmeter/
+    Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /**
   * CONTENTS
   *
-  * reset.css.....................strips all elements of all browser-default styles
+  * reset.css (above).............strips all elements of all browser-default styles
   * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
   *
   * BASE
