@@ -14,9 +14,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lessc:reset": "lessc reset.less reset.css",
-    "lessc:xmeter": "lessc-each ./src/ ./build/  ;  lessc xmeter.less xmeter.css",
+    "lessc:xmeter": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:reset  ;  npm run lessc:xmeter",
-    "minify": "cleancss ./xmeter.css -o ./xmeter.min.css",
+    "minify": "cleancss xmeter.css -o xmeter.min.css ; cleancss reset.css -o reset.min.css",
     "build": "npm run lessc:all  ;  npm run minify"
   },
   "repository": {
