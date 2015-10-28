@@ -698,6 +698,9 @@ pre {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+figure {
+  margin-top: 0;
+}
 pre {
   text-align: left;
   text-indent: 0;
