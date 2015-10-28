@@ -849,22 +849,27 @@ samp samp {
 /*################################*\
     _base.forms.less
 \*################################*/
-fieldset {
-  padding: 0 1rem;
+fieldset,
+input,
+select,
+textarea,
+button {
   border-width: 1px;
   margin-top: -2px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: #c0c0c0;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+fieldset {
+  padding: 0 1rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 input,
 select,
 textarea,
 button {
   padding: 0 0.25rem;
-  border-width: 1px;
-  margin-top: -2px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.25);
 }
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 textarea {
@@ -881,6 +886,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
+  background-color: #c0c0c0;
   background-color: rgba(0, 0, 0, 0.25);
 }
 input[type="search"] {
