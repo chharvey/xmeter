@@ -7,10 +7,16 @@
 #XMETER {
   .VARS() {
     // vertical rhythm
+    @1rem: 16px; // a shortcut variable used for fallbacks where rems aren’t supported
+    // where are rems not supported?
+    // - IE8 and below, and
+    // - IE9 and IE10 on the `font` shorthand property and on pseudo-elements/classes
+
     @xmeter_font_size: 100%; // defined by user agent
-    @xmeter_font_size: 16px; // fixes Chrome inheritance bug
+    @xmeter_font_size: @1rem; // fixes Chrome inheritance bug
     @xmeter_line_height: 1.5;
-    @xmeter_vru: (@xmeter_line_height * 1rem);
+    @xmeter_vru_px: (@xmeter_line_height * @1rem); // fallback for @xmeter_vru, which is in rems
+    @xmeter_vru:    (@xmeter_line_height *  1rem);
 
     @h1_font_size: (32/16); // 2.000
     @h2_font_size: (24/16); // 1.500
