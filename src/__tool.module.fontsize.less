@@ -17,8 +17,8 @@
   // ^updated
   // : 2015-10-04
   .font-size-block(@ratio; @line_height_orig: @xmeter_line_height) {
-    font-size: (@ratio * 16px); // legacy browsers
-    font-size: (@ratio * 1rem);
+    font-size: (@ratio * @1rem); // legacy browsers (see __settings for more info)
+    font-size: (@ratio *  1rem);
     line-height: (@line_height_orig / @ratio);
   }
 }
