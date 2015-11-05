@@ -2,29 +2,95 @@
 /*################################*\
     _base.text.doctext.less
 \*################################*/
+@import (reference) url('__tool.module.delims.less');
 
 
+// A span or block of text that has been inserted into a document.
+// This is used to explicitly indicate that the text has been intentionally inserted.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2014-06-13
 ins {
   background: #a6f3a6; // GitHub-flavored
   // background: #d1e1ad; // StackOverflow-flavored
 }
+// A span or block of text that has been deleted from a document.
+// This is used to explicitly indicate that the text has been intentionally deleted.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2014-06-13
 del {
   background: #f8cbcb; // GitHub-flavored
   // background: #e5bdb2; // StackOverflow-flavored
 }
+// A vocabulary term.
+// Every `dfn` should have an `id` attribute, thus there must only be one `dfn` per page that
+// contains a given term in question. Furthermore, hyperlinks can point to the defining instance
+// of the term.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-02-10
 dfn {
   font-style: inherit; // undo Normalize
   font-weight: 700;
 }
+// A keyword, technical or specific term, or key phrase
+// A `b` Element is any generic keyword or term, whose definition is not present. If the term is
+// being defined, use the `dfn` Element.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-11-05
 b {
-  font-weight: bold;
+  font-weight: 700;
 }
+// A placeholder for some textual element. Could be a filename, etc.
+// This does *not* represent a variable in a `code`, e.g., the following HTML would be incorrect:
+// ```
+// <code>String <var>$welcome</var> = "Hello world!";</code>
+// ```
+// It would be better to use a `span` with a class for syntax coloring.
+//
+// Rather, the `var` Element represents a placeholder of text. The following HTML is correct:
+// ```
+// <p>The following git commmand shows you diff:
+// <code>$ git diff <var>filepath</var></code>
+// where <var>filepath</var> is the path or name of the file you want to see the diff for.</p>
+// ```
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2014-07-21
 var {
   font-style: italic;
 }
+// An inline quotation: a span of text that is taken directly from another source
+// (real or fictional).
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2014-11-05
 q {
+  #XMETER .quotes-double(); // fallback for `initial`
   quotes: initial;
 }
+// Represents a placeholder reference to a name or title of a heading, section, figure,
+// table (or column in a table), or creative work.
+// This Object may also represent a proper noun traditionally italicized, e.g. periodical name or ship name.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-02-10
 cite {
   font-style: italic;
 }
