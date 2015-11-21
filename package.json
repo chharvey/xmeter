@@ -4,14 +4,14 @@
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "resetcss": "^1.0.2"
   },
   "devDependencies": {
     "clean-css": "^3.4.5",
     "jade": "^1.11.0",
     "less": "^2.5.3",
-    "lessc-each": "^1.0.1",
-    "resetcss": "^1.0.2"
+    "lessc-each": "^1.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
