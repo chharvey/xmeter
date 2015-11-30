@@ -8,14 +8,14 @@
   // Applies a transition timing effect on an Element.
   //
   // @props - the CSS property name(s). If more than one, they must be comma-separated
-  // @dura  - the length in time, in milliseconds, the transition is to be in effect
+  // @dura  - (optional: `0ms`) the length in time, in milliseconds, the transition is to be in effect
   // @func  - (optional: `ease`) the timing-function. See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
   // @delay - (optional: `0ms`) the length in time, in milliseconds, the transition will wait before starting
   // ^author
   // : Chris Harvey
   // ^updated
   // : 2014-06-17
-  .transition(@props; @dura; @func: ease; @delay: 0ms) {
+  .transition(@props; @dura: 0ms; @func: ease; @delay: 0ms) {
     -webkit-transition-property: @props;
        -moz-transition-property: @props;
         -ms-transition-property: @props;
