@@ -5,13 +5,16 @@
 
 
 a {
+  color: #00e;       // default :link
+  // color: #551a8b; // default :visited
+  // color: #f00;    // default :active
+  // NOTE: these used to be under `a[href]`, which selected both `a:link` and `a:visited`,
+  // in order to override browser default styles. However for some reason this works,
+  // so keeping it under `a`.
 }
 a:not([href]) {
   opacity: 0.5;
 }
 // `a[href]` selects both `a:link` and `a:visited`. all three have the same specificity (which is 11)
 a[href] {
-  color: #00e;    // default link
-  // color: #551a8b; // default visited
-  // color: #f00;    // default active
 }

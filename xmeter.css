@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 3.3.0
+    Version: 3.4.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://chharvey.github.io/xmeter/
@@ -754,11 +754,11 @@ th {
 /*################################*\
     _base.text.links.less
 \*################################*/
+a {
+  color: #00e;
+}
 a:not([href]) {
   opacity: 0.5;
-}
-a[href] {
-  color: #00e;
 }
 
 /*################################*\
