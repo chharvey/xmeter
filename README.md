@@ -55,7 +55,7 @@ at the top of your stylesheet. Then when you want to “call” the mixin, do
 }
 ```
 
-To use the xmeter variables and constants,
+To use the xmeter variables,
 
 ```less
 @import (reference) url('/node_modules/xmeter/src/__settings.less');
@@ -64,18 +64,7 @@ To use the xmeter variables and constants,
   #XMETER .VARS(); // invokes the set of variables
   line-height: 2 * @xmeter_line_height;
 }
-.my-other-selector {
-  #XMETER .CONSTS(); // invokes the set of constants
-  width: @1o2;
-}
 ```
-
-<i>The difference between **variables** and **constants** is that values are reflected in
-the names of constants but not variables. For example, `@xmeter_line_height` so happens to be 1.5.
-This value may change in the future (though it probably won’t), but the variable name need not change.
-This merely indicates the line height has been changed.
-On the other hand, `@1o2` is a constant whose value is 50%. It would be silly to change this value
-for obvious reasons.</i>
 
 #### Using the Base
 
