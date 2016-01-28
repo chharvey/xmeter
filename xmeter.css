@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 3.4.0
+    Version: 3.5.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://chharvey.github.io/xmeter/
@@ -557,7 +557,7 @@ th {
   * embedded......................images and other media
   */
 /*################################*\
-    _base.generic.less
+    xmeter  |  _base.generic.less
 \*################################*/
 *,
 *::before,
@@ -638,7 +638,7 @@ samp {
 }
 
 /*################################*\
-    _base.sections.less
+    xmeter  |  _base.sections.less
 \*################################*/
 h1,
 h2,
@@ -687,11 +687,11 @@ hr {
 }
 
 /*################################*\
-    _base.grouping.less
+    xmeter  |  _base.grouping.less
 \*################################*/
 
 /*################################*\
-    _base.grouping.paras.less
+    xmeter  |  _base.grouping.paras.less
 \*################################*/
 figure {
   margin-top: 0;
@@ -705,7 +705,7 @@ pre {
 }
 
 /*################################*\
-    _base.grouping.lists.less
+    xmeter  |  _base.grouping.lists.less
 \*################################*/
 ol,
 ul {
@@ -727,7 +727,7 @@ ul {
 }
 
 /*################################*\
-    _base.grouping.tables.less
+    xmeter  |  _base.grouping.tables.less
 \*################################*/
 table {
   max-width: 100%;
@@ -748,21 +748,23 @@ th {
 }
 
 /*################################*\
-    _base.text.less
+    xmeter  |  _base.text.less
 \*################################*/
 
 /*################################*\
-    _base.text.links.less
+    xmeter  |  _base.text.links.less
 \*################################*/
 a {
   color: #00e;
 }
-a:not([href]) {
-  opacity: 0.5;
+@media screen {
+  a:not([href]) {
+    opacity: 0.5;
+  }
 }
 
 /*################################*\
-    _base.text.stress.less
+    xmeter  |  _base.text.stress.less
 \*################################*/
 em {
   font-style: italic;
@@ -786,7 +788,7 @@ s {
 }
 
 /*################################*\
-    _base.text.doctext.less
+    xmeter  |  _base.text.doctext.less
 \*################################*/
 ins {
   background: #a6f3a6;
@@ -823,7 +825,7 @@ sub {
 }
 
 /*################################*\
-    _base.text.data.less
+    xmeter  |  _base.text.data.less
 \*################################*/
 abbr[title] {
   cursor: help;
@@ -848,7 +850,7 @@ samp samp {
 }
 
 /*################################*\
-    _base.forms.less
+    xmeter  |  _base.forms.less
 \*################################*/
 fieldset,
 input,
@@ -897,7 +899,7 @@ input[type="search"] {
 }
 
 /*################################*\
-    _base.embedded.less
+    xmeter  |  _base.embedded.less
 \*################################*/
 img {
   width: auto;
