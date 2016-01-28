@@ -1,6 +1,6 @@
 
 /*################################*\
-    __settings.less
+    xmeter  |  __settings.less
 \*################################*/
 
 
@@ -18,12 +18,20 @@
     @xmeter_vru_px: (@xmeter_line_height * @1rem); // fallback for @xmeter_vru, which is in rems
     @xmeter_vru:    (@xmeter_line_height *  1rem);
 
-    @h1_font_size: (32/16); // 2.000
-    @h2_font_size: (24/16); // 1.500
-    @h3_font_size: (20/16); // 1.250
-    @h4_font_size: (16/16); // 1.000
-    @h5_font_size: (14/16); // 0.875
-    @h6_font_size: (12/16); // 0.750
+    @xmeter_font_size_h1: 32/16; // 2.000
+    @xmeter_font_size_h2: 24/16; // 1.500
+    @xmeter_font_size_h3: 20/16; // 1.250
+    @xmeter_font_size_h4: 16/16; // 1.000
+    @xmeter_font_size_h5: 14/16; // 0.875
+    @xmeter_font_size_h6: 12/16; // 0.750
+
+    // TODO: remove these on next major release
+    @h1_font_size: @xmeter_font_size_h1;
+    @h2_font_size: @xmeter_font_size_h2;
+    @h3_font_size: @xmeter_font_size_h3;
+    @h4_font_size: @xmeter_font_size_h4;
+    @h5_font_size: @xmeter_font_size_h5;
+    @h6_font_size: @xmeter_font_size_h6;
   }
   .CONSTS() {
     // fractional percentages used for anything, usually widths

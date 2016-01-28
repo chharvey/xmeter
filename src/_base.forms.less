@@ -1,6 +1,6 @@
 
 /*################################*\
-    _base.forms.less
+    xmeter  |  _base.forms.less
 \*################################*/
 @import (reference) url('__settings.less');
 @import (reference) url('__tool.fallback.box-sizing.less');
@@ -39,14 +39,14 @@ button {
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 textarea {
   #XMETER .VARS();
-  #XMETER .font-size-block(@h6_font_size; @xmeter_line_height);
+  #XMETER .font-size-block(@xmeter_font_size_h6);
 }
 
 textarea {
   width: 30rem;
   #XMETER .VARS();
   height: 6 * @xmeter_vru;
-  line-height: @xmeter_line_height; // simply looks better
+  line-height: @xmeter_line_height; // override browser-default (simply looks better)
 }
 
 input[type="button"],
