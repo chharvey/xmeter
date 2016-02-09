@@ -11,11 +11,12 @@
   // ^author
   // : Chris Harevy
   // ^updated
-  // : 2014-05-12
+  // : 2016-02-08
   .clearfix() {
     &::after {
-      display: table;
-      content:' ';
+      content: ' '; // older browsers do not support empty content ('')
+      display: block;
+      height: 0;
       clear: both;
     }
   }
