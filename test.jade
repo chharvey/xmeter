@@ -1,264 +1,30 @@
-doctype html
-html(lang="en")
-  head
-    title Base Styles | Xmeter
-    meta(charset="utf-8")
-    meta(name="description" content="A test of bare, unclassed elements.")
-    link(rel="stylesheet", href="xmeter.css")
-    //- link(rel="stylesheet", href="xmeter.min.css")
-    style.
-      body {
-        background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
-        background-size: 1px 24px;
-        background-repeat: repeat;
-        background-position: left bottom;
-      }
-  body
-    main
-      header
-        h1 Xmeter &mdash; Base Typography
-        nav#table-contents
-          h2 Table of Contents
-          ol
-            li: a(href="#table-contents") Table of Contents
-            li: a(href="#headings-paragraphs") Headings &amp; Paragraphs
-            li: a(href="#lists") Lists
-            li: a(href="#tables") Tables
-            li
-              a(href="#text-level-elements") Text-Level Elements
-              ol
-                li: a(href="#links") Links
-                li: a(href="#stress") Stress
-                li: a(href="#documentation") Documentation
-                li: a(href="#data") Data
-            li: a(href="#embedded-elements") Embedded Elements
-            li: a(href="#interactive-elements") Interactive Elements
-      section#headings-paragraphs
-        h2 Headings &amp; Paragraphs
-        figure.sg-fig
-          h1 Heading 1 #[code.sg-code h1]
-          p.
-            Paragraph #[code.sg-code p]
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquam sagittis suscipit nunc, a cursus libero euismod at.
-            Nulla placerat neque massa, quis interdum leo efficitur vel.
-            Donec feugiat varius arcu non volutpat.
-            Mauris eget mauris ut mauris auctor mattis id vel justo.
-            Nulla dictum arcu nec suscipit mollis.
-            Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.
-          h2 Heading 2 #[code.sg-code h2]
-          p.
-            Paragraph #[code.sg-code p]
-            Suspendisse ut auctor enim.
-            Aliquam viverra enim vitae ante aliquet venenatis.
-            Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
-            Praesent dapibus velit quis lectus tempus, ut ullamcorper nibh facilisis.
-            Aenean tincidunt ante risus, semper malesuada libero consectetur id.
-            Praesent vel ligula ut enim porttitor porta. Aenean eu ullamcorper mi.
-            Integer blandit est quam, eget mattis urna scelerisque quis.
-            Maecenas sapien sapien, ornare nec lobortis eget, tincidunt sed ligula.
-            Maecenas risus nibh, volutpat sed euismod non, semper eget neque.
-            Integer varius egestas risus, volutpat sagittis turpis convallis eget.
-            Vivamus pulvinar ligula eget mi tincidunt, eget faucibus justo laoreet.
-            In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
-            Sed luctus congue tortor a scelerisque.
-          h3 Heading 3 #[code.sg-code h3]
-          p.
-            Paragraph #[code.sg-code p]
-            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
-            Quisque id justo elit.
-            Fusce ut quam non sem efficitur accumsan sed id neque.
-            Mauris finibus dignissim gravida.
-            In dignissim mauris ac odio molestie volutpat.
-            Nulla tellus justo, finibus sed volutpat sed, tristique ac lacus.
-            Suspendisse sit amet fermentum sapien.
-            Aliquam luctus laoreet iaculis.
-            Proin lacinia orci vitae tellus pellentesque porttitor.
-          h4 Heading 4 #[code.sg-code h4]
-          p.
-            Paragraph #[code.sg-code p]
-            Aenean consectetur suscipit urna, non vehicula lacus blandit et.
-            Integer at lacus et diam tristique suscipit.
-            Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
-            Vestibulum vitae magna ac tellus accumsan pharetra vulputate vitae erat.
-            Vestibulum est dui, elementum non sagittis ac, sagittis accumsan justo.
-            Donec at vestibulum diam. Nam et volutpat dolor, at pulvinar nisi.
-            Curabitur aliquam maximus nulla eu venenatis.
-            Nam aliquam lorem non felis dignissim dictum.
-            Pellentesque sagittis vehicula nisl non luctus.
-            Pellentesque eget ligula hendrerit, blandit enim consequat, dictum sem.
-            In quis lectus in lectus interdum laoreet eu quis quam.
-            Fusce auctor posuere purus, quis semper libero dignissim euismod.
-            Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.
-          h5 Heading 5 #[code.sg-code h5]
-          p.
-            Paragraph #[code.sg-code p]
-            Donec finibus ut lectus finibus pellentesque.
-            Nulla euismod feugiat nulla nec posuere.
-            Sed ac est id sem sagittis rhoncus eu ac neque.
-            Aliquam eu metus sagittis, porta turpis id, scelerisque magna.
-            Nulla venenatis elementum est, semper viverra felis tristique sit amet.
-            Mauris nec ipsum id orci porttitor auctor sed sit amet sem.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.
-          h6 Heading 6 #[code.sg-code h6]
-          p.
-            Paragraph #[code.sg-code p]
-            Donec vel dolor ut felis dapibus ultricies vitae a nibh.
-            Ut semper odio est, sed lacinia ligula gravida ut.
-            Vestibulum facilisis viverra pulvinar.
-            Suspendisse maximus nisl sit amet augue vulputate, vel porta nunc molestie.
-            Aliquam mauris diam, pharetra vel consectetur quis, rhoncus in risus.
-            Donec ut quam massa.
-            Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
-            Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        figure.sg-fig
-          h1 Lorem Ipsum #[code.sg-code h1]
-          h2 Lorem Ipsum #[code.sg-code h2]
-          h3 Lorem Ipsum #[code.sg-code h3]
-          h4 Lorem Ipsum #[code.sg-code h4]
-          h5 Lorem Ipsum #[code.sg-code h5]
-          h6 Lorem Ipsum #[code.sg-code h6]
-        figure.sg-fig
-          address.
-            12345 #[code address] Ave #[code br]#[br]
-            Washington, DC 00000 #[code br]#[br]
-            United States of America
-        figure.sg-fig
-          figure Aenean consectetur #[code.sg-code figure] suscipit urna, non vehicula lacus blandit et.
-            figcaption Integer at lacus et diam tristique #[code.sg-code figure] #[code.sg-code figcaption] suscipit.
-        figure.sg-fig
-          blockquote Donec #[code.sg-code blockquote] vel dolor ut felis dapibus ultricies vitae a nibh.
-        figure.sg-fig
-          pre.
-            Pellentesque #[code.sg-code pre] habitant() {
-              morbi.tristique = senectus;
-              et (netus = malesuada; fames &lt; ac; turpis.egestas++) {
-                Nunc.sit += [amet, scelerisque][et];
-                Cras = {
-                  lectus: cursus
-                , sed: dui
-                , quis: convallis(id () { justo Quisque.elit; })
-                };
-              }
-            }
-        //- figure.sg-fig
-          figcaption.
-            A horizontal rule #[code.sg-code hr] is shown below. I&rsquo;m honestly not sure when
-            you would ever use this instead of a CSS border.
-          hr
-      section#lists
-        h2 Lists
-        figure.sg-fig
-          figcaption Ordered List #[code.sg-code ol]
-          ol
-            li List item #[code.sg-code li]
-            li List item #[code.sg-code li]
-              ol
-                li Nested list item
-                li Nested list item
-                  ol
-                    li Another nested list item
-                    li Another nested list item
-        figure.sg-fig
-          figcaption Unrdered List #[code.sg-code ul]
-          ul
-            li List item #[code.sg-code li]
-            li List item #[code.sg-code li]
-              ul
-                li Nested list item
-                li Nested list item
-                  ul
-                    li Another nested list item
-                    li Another nested list item
-        figure.sg-fig
-          figcaption Dictionary List #[code.sg-code dl]
-          dl
-            dt key #[code.sg-code dt]
-            dd value #[code.sg-code dd]
-            dt
-              ul
-                li 1st key
-                li 2nd key
-            dd value
-            dt key
-            dd
-              ul
-                li 1st value
-                li 2nd value
-      section#tables
-        h2 Tables
-        figure.sg-fig
-          table
-            caption #[code table] #[code caption]
-            thead
-              tr
-                th(scope="col") #[code thead]er #[code tr]ow 1 #[code th]eading 1
-                th(scope="col") #[code thead]er #[code tr]ow 1 #[code th]eading 2
-                th(scope="col") #[code thead]er #[code tr]ow 1 #[code th]eading 3
-            tfoot
-              tr
-                td #[code tfoot]er #[code tr]ow 1 #[code td]ata 1
-                td #[code tfoot]er #[code tr]ow 1 #[code td]ata 2
-                td #[code tfoot]er #[code tr]ow 1 #[code td]ata 3
-              tr
-                td #[code tfoot]er #[code tr]ow 2 #[code td]ata 1
-                td #[code tfoot]er #[code tr]ow 2 #[code td]ata 2
-                td #[code tfoot]er #[code tr]ow 2 #[code td]ata 3
-            tbody
-              tr
-                td #[code tbody] #[code tr]ow 1 #[code td]ata 1
-                td #[code tbody] #[code tr]ow 1 #[code td]ata 2
-                td #[code tbody] #[code tr]ow 1 #[code td]ata 3
-              tr
-                td #[code tbody] #[code tr]ow 2 #[code td]ata 1
-                td #[code tbody] #[code tr]ow 2 #[code td]ata 2
-                td #[code tbody] #[code tr]ow 2 #[code td]ata 3
-              tr
-                td #[code tbody] #[code tr]ow 3 #[code td]ata 1
-                td #[code tbody] #[code tr]ow 3 #[code td]ata 2
-                td #[code tbody] #[code tr]ow 3 #[code td]ata 3
-      section#text-level-elements
-        h2 Text-Level Elements
-        section#links
-          h3 Links
-          figure.sg-fig: ul
-            li: a a
-            li: a(href) a[href]
-        section#stress
-          h3 Stress
-          figure.sg-fig: ul
-            li: em     emphasized text #[code.sg-code em]
-            li: strong important text #[code.sg-code strong]
-            li: i      alternate voice/mood (scare quotes, mentioning words, foreign expressions) #[code.sg-code i]
-            li: mark   relevant in some context #[code.sg-code mark]
-            li: u      unarticulated annotation #[code.sg-code u]
-            li: small  side comment #[code.sg-code small]
-            li: s      text shown to be no longer relevant #[code.sg-code s]
-        section#documentation
-          h3 Documentation
-          figure.sg-fig: ul
-            li: ins    content shown to be inserted into a document #[code.sg-code ins]
-            li: del    content shown to be deleted from a document #[code.sg-code del]
-            li: dfn    definining instance of a term  #[code.sg-code dfn]
-            li: b      keyword or technical term #[code.sg-code b]
-            li: var    variable  #[code.sg-code var]
-            li: q      quoted material #[code.sg-code q]
-            li: cite   reference to a work, some part of a work, or the creator of a work #[code.sg-code cite]
-            li: sup    superscript #[code.sg-code sup]
-            li: sub    subscript #[code.sg-code sub]
-        section#data
-          h3 Data
-          figure.sg-fig: ul
-            li: abbr(title) abbreviation or acronym #[code.sg-code abbr[title]]
-            li: time        a specific date or time #[code.sg-code time]
-            li: data        generic machine-readable data #[code.sg-code data]
-            li: code        a fragment of code #[code.sg-code code]
-            li: kbd         user input #[code kbd]
-            li: kbd: kbd    a button or key on a physical device #[code kbd &gt; kbd]
-            li: samp        sample computer output #[code samp]
-      section#embedded-elements
-        h2 Embedded Elements
-      section#interactive-elements
-        h2 Interactive Elements
+extends base-tpl.jade
+
+block append vars
+  - project = 'Xmeter'
+  - classnames.code = 'x-c-Code'
+  - classnames.figure = 'x-c-Fig'
+
+block style
+  style.
+    body {
+      background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
+      background-size: 1px 24px;
+      background-repeat: repeat;
+      background-position: left bottom;
+    }
+    .x-c-Code {
+      padding: 1px 2px;
+      border-radius: 3px;
+      background-color: #f4f8f0;
+      color: #008080;
+    }
+    .x-c-Fig {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #e5eaef;
+      border-radius: 8px;
+      position: relative;
+      background: rgba(245, 250, 255, 0.5);
+    }
