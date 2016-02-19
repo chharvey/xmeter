@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "3.6.1",
+  "version": "4.0.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {
@@ -40,5 +40,5 @@
   "bugs": {
     "url": "https://github.com/chharvey/xmeter/issues"
   },
-  "homepage": "https://chharvey.github.io/xmeter/"
+  "homepage": "https://github.com/chharvey/xmeter/blob/gh-pages/README.md"
 }
