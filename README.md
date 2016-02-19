@@ -34,13 +34,10 @@ To install:
 #### Using the Tools
 
 Take a look in the `src/` folder. In here you will find a set of tools, starting
-with `__tool`, from which to pick and choose to use for your package. Note that
-the contents of each file are wrapped with the id selector `#XMETER {}` to keep
-it encapsulated. Think of `#XMETER` as one huge object whose properties are
-the mixins. Or think of it as a namespace. Whatever.
+with `__tool`, from which to pick and choose to use for your package.
 
 If you want to use a particular tool in your stylesheet, you will have to
-`@import (reference)` that tool, and then invoke it with `#XMETER`. For example,
+`@import (reference)` the stylesheet for that tool. For example,
 if you plan to use the `.font-size-block()` mixin in your Less, you must include
 
 ```less
@@ -51,28 +48,28 @@ at the top of your stylesheet. Then when you want to “call” the mixin, do
 
 ```less
 .my-selector {
-  #XMETER .font-size-block(2.0; 1.5);
+  .font-size-block(2.0; 1.5);
 }
 ```
 
-To use the xmeter variables,
+To use the xmeter variables, import the `__settings` stylesheet.
 
 ```less
 @import (reference) url('/node_modules/xmeter/src/__settings.less');
 
 .my-selector {
-  #XMETER .VARS(); // invokes the set of variables
-  line-height: 2 * @xmeter_line_height;
+  line-height: 2 * @g-line_height;
 }
 ```
 
 #### Using the Base
 
 Also in the `src/` folder are a set of files starting with `_base`. These files,
-unlike tools, provide actual styles for actual elements. Also unlike tools, **these
-stylesheets are *not* meant to be cherrypicked**. They are compiled separately<sup>&lowast;</sup> and
+unlike tools, provide actual styles for actual elements. Also unlike tools,
+**these stylesheets are *not* meant to be cherrypicked**. They are compiled
+separately<sup>&lowast;</sup> and
 concatenated together in the main file `xmeter.css`. If you’re developing a
-stylesheet that you want built off of xmeter, include
+stylesheet that you want built off of Xmeter, include
 
 ```less
 @import url('/node_modules/xmeter/xmeter.css');
@@ -84,15 +81,14 @@ This package also comes installed with a [test page](./test.html)
 that links to the main stylesheet.
 
 <i><sup>&lowast;</sup>The reason the stylesheets are compiled separately is to increase
-encapsulation. They still have access to global variables (such as `#XMETER`),
-but now local variables and mixins can be defined within the file without
+encapsulation: private variables and mixins can be defined within the file without
 affecting other files.</i>
 
 ### Deployment
 
 (The Second Option)
 
-This option is for you if you don’t wanna develop with **xmeter**, you just
+This option is for you if you don’t wanna develop with **Xmeter**, you just
 wanna use it on your site. It’s a great starting point that “normalizes”
 unclassed HTML elements before any specific classes and styles get added on.
 
@@ -131,7 +127,7 @@ Features of this stylesheet include the following. See the test page (`doc/test.
 for a demo.
 
 - Vertical rhythm &mdash; every line on the page is exactly the same height
-  (dubbed a "vertical rhythm unit" or "vru") regardless of font size, and
+  (dubbed a “vertical rhythm unit” or “vru”) regardless of font size, and
   typographical elements (headings, paragraphs, figures, blockquotes, lists,
   tables, etc.) are separated by integer multiples of that height.
 - Font-size for `html` is set to `100%` to accommodate for user agent settings.
@@ -145,9 +141,13 @@ for a demo.
   (style *does* depend on location).
 - Line-height for all inline (text-level) elements is 0. This allows the
   vertical rhythm to remain unaffected.
-- Variables include commonly used numeric and color values.
-- `.sprite()` mixin makes it easy to work with background image sprites.
 - Fallback tools for browser discrepancies on CSS3 properties.
+- Module tools add styles to blocks (font-size, borders) without disrupting vertical rhythm
+- A few other modules to make your life easier:
+  - `.sprite()` sets background image sprites
+  - `.clearfix()` does exactly what it sounds like
+  - `.delimiters()` sets quotes and other things
+  - `.translucent()` **may be removed in the future**
 - Minor, albeit prettier, style changes to some text-level elements from the browser default.
 
 ## Changelog

@@ -11,9 +11,10 @@
   &,
   &::before,
   &::after {
-    #XMETER .box-sizing(border-box);
+    .box-sizing(border-box);
     border: 0 solid; // reset browser default border
-    content: ''; content: none; // fallback
+    content: ''; // fallback
+    content: none;
     @media print {
       background: transparent;
       box-shadow: none;
@@ -24,9 +25,8 @@
 
 // [1] addresses support for `rem` units (otherwise these would be in `body` selector)
 html {
-  #XMETER .VARS();
-  font-size: @xmeter_font_size;     // [1]
-  line-height: @xmeter_line_height; // [1]
+  font-size: @g-font_size;     // [1]
+  line-height: @g-line_height; // [1]
 }
 
 // Vertical spacing between typographical blocks
@@ -35,12 +35,11 @@ p, figure, blockquote, pre,
 ol, ul, dl,
 table,
 fieldset {
-  #XMETER .VARS();
-  #XMETER .spacing-bottom(@xmeter_vru);
+  .spacing-bottom(@g-vru);
 }
 li, dt, dd {
   > ol, > ul, > dl {
-    #XMETER .spacing-bottom(0); // undo default spacing-bottom for nested lists
+    .spacing-bottom(0); // undo default spacing-bottom for nested lists
   }
 }
 

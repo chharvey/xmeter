@@ -5,7 +5,6 @@
 @import (reference) url('__tool.module.spacing.less');
 
 
-#XMETER {
   // The following mixins adjust border widths for **BLOCK** Objects only! They will keep the
   // vertical rhythm intact when adding border widths (by slightly adjusting position and margins).
   // Do *not* use these mixins on INLINE Objects!
@@ -26,22 +25,21 @@
   // : 2015-05-11
   .border-vert(top; @width: 0) {
     border-top-width: @width;
-    #XMETER .pull-this(@width);
+    .pull-this(@width);
   }
 
   .border-vert(bottom; @width: 0) {
     border-bottom-width: @width;
-    #XMETER .pull-this(@width);
+    .pull-this(@width);
   }
 
   .border-vert(topbot; @width: 0) {
     border-top-width:    @width;
     border-bottom-width: @width;
-    #XMETER .pull-this(2 * @width);
+    .pull-this(2 * @width);
   }
 
   .border-vert(all; @width: 0) {
     border-width: @width;
-    #XMETER .pull-this(2 * @width);
+    .pull-this(2 * @width);
   }
-}
