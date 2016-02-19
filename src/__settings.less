@@ -4,26 +4,26 @@
 \*################################*/
 
 
-    // NOTE: the prefix `g-` on each variable stands for "global" because these variables
-    // are globally (project-wide) accessible.
-    // In each partial file, if need a private variable, use prefix `p-` for "private".
-    // Parameters in mixins shall not use any prefixes.
+// NOTE: the prefix `g-` on each variable stands for "global" because these variables
+// are globally (project-wide) accessible.
+// In each partial file, if need a private variable, use prefix `p-` for "private".
+// Parameters in mixins shall not use any prefixes.
 
-    // vertical rhythm
-    @g-1rem: 16px; // a shortcut variable used for fallbacks where rems aren’t supported
-    // where are rems not supported?
-    // - IE8 and below, and
-    // - IE9 and IE10 on the `font` shorthand property and on pseudo-elements/classes
+// vertical rhythm
+@g-1rem: 16px; // a shortcut variable used for fallbacks where rems aren’t supported
+// where are rems not supported?
+// - IE8 and below, and
+// - IE9 and IE10 on the `font` shorthand property and on pseudo-elements/classes
 
-    @g-font_size: 100%; // defined by user agent
-    @g-font_size: @g-1rem; // HACK fixes Chrome inheritance bug
-    @g-line_height: 1.5;
-    @g-vru_px: (@g-line_height * @g-1rem); // fallback for @g-vru, which is in rems
-    @g-vru:    (@g-line_height *  1rem);
+@g-font_size: 100%; // defined by user agent
+@g-font_size: @g-1rem; // HACK fixes Chrome inheritance bug
+@g-line_height: 1.5;
+@g-vru_px: (@g-line_height * @g-1rem); // fallback for @g-vru, which is in rems
+@g-vru:    (@g-line_height *  1rem);
 
-    @g-font_size_h1: 32/16; // 2.000
-    @g-font_size_h2: 24/16; // 1.500
-    @g-font_size_h3: 20/16; // 1.250
-    @g-font_size_h4: 16/16; // 1.000
-    @g-font_size_h5: 14/16; // 0.875
-    @g-font_size_h6: 12/16; // 0.750
+@g-font_size_h1: 32/16; // 2.000
+@g-font_size_h2: 24/16; // 1.500
+@g-font_size_h3: 20/16; // 1.250
+@g-font_size_h4: 16/16; // 1.000
+@g-font_size_h5: 14/16; // 0.875
+@g-font_size_h6: 12/16; // 0.750
