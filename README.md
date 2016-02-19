@@ -1,7 +1,7 @@
 # xmeter
 A default stylesheet with a set of tools that make designing with vertical rhythm easy.
 
-Pronounced "Cross Meter".
+Pronounced “Cross Meter”.
 
 ## Installation and Usage
 
@@ -127,7 +127,7 @@ vertical rhythm system. (For more information on vertical rhythm, see these arti
 [24ways](http://24ways.org/2006/compose-to-a-vertical-rhythm/) and
 [Smashing Magazine](http://www.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/#tt-rhythm).)
 
-Features of this stylesheet include the following. See the test page (`./test.html`)
+Features of this stylesheet include the following. See the test page (`doc/test.html`)
 for a demo.
 
 - Vertical rhythm &mdash; every line on the page is exactly the same height

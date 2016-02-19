@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "3.4.1",
+  "version": "3.6.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {
@@ -15,10 +15,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
+    "jade:all": "jade doc/",
+    "lessc:doc": "lessc doc/styles/doc.less doc/styles/doc.css",
+    "lessc:xmeter": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
+    "lessc:all": "npm run lessc:doc  ;  npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
-    "jade:all": "jade -P {test,test-forms}.jade",
-    "build": "npm run lessc  ;  npm run minify  ;  npm run jade:all"
+    "build": "npm run jade:all  ;  npm run lessc:all  ;  npm run minify"
   },
   "repository": {
     "type": "git",

@@ -13,7 +13,7 @@
     // - IE9 and IE10 on the `font` shorthand property and on pseudo-elements/classes
 
     @xmeter_font_size: 100%; // defined by user agent
-    @xmeter_font_size: @1rem; // fixes Chrome inheritance bug
+    @xmeter_font_size: @1rem; // HACK fixes Chrome inheritance bug
     @xmeter_line_height: 1.5;
     @xmeter_vru_px: (@xmeter_line_height * @1rem); // fallback for @xmeter_vru, which is in rems
     @xmeter_vru:    (@xmeter_line_height *  1rem);

@@ -13,8 +13,7 @@ a {
   // so keeping it under `a`.
 }
 a:not([href]) {
-  opacity: 0.5;
-}
-// `a[href]` selects both `a:link` and `a:visited`. all three have the same specificity (which is 11)
-a[href] {
+  @media screen {
+    opacity: 0.5;
+  }
 }
