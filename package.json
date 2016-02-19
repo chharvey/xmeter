@@ -15,10 +15,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
+    "jade:all": "jade doc/",
+    "lessc:all": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
-    "jade:all": "jade -P {test,test-forms}.jade",
-    "build": "npm run lessc  ;  npm run minify  ;  npm run jade:all"
+    "build": "npm run jade:all  ;  npm run lessc:all  ;  npm run minify"
   },
   "repository": {
     "type": "git",
