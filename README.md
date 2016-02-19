@@ -91,7 +91,7 @@ stylesheet that you want built off of xmeter, include
 
 at the top of  your file.
 
-This package also comes installed with a [test page](./test.html)
+This package also comes installed with a test page (`doc/test.html`)
 that links to the main stylesheet.
 
 <i><sup>&lowast;</sup>The reason the stylesheets are compiled separately is to increase
@@ -107,7 +107,7 @@ This option is for you if you don’t wanna develop with **xmeter**, you just
 wanna use it on your site. It’s a great starting point that “normalizes”
 unclassed HTML elements before any specific classes and styles get added on.
 
-See the [test page](./test.html) for a preview.
+See the test page (`doc/test.html`) for a preview.
 
 To install:
 
