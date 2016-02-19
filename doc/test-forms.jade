@@ -1,117 +1,82 @@
-doctype html
-html(lang="en", xmlns="http://www.w3.org/1999/xhtml")
-  head
-    meta(charset="UTF-8")
-    meta(name="description", content="A test of bare, unclassed elements.")
-    title xmeter.css Test &mdash; Forms
-    link(rel="stylesheet", href="xmeter.css")
-  body.
-    <main>
-    <form>
+extends test.jade
 
-      <fieldset>
-        <legend>single line text inputs</legend>
-        <input type="text" placeholder="input type text"/>
-        <input type="email" placeholder="input type email"/>
-        <input type="password" placeholder="input type password"/>
-        <input type="search" placeholder="input type search"/>
-        <input type="tel" placeholder="input type tel"/>
-        <input type="url" placeholder="input type url"/>
-      </fieldset>
-
-      <fieldset>
-        <legend>date/time</legend>
-        <input type="datetime" placeholder="input type datetime"/>
-        <input type="datetime-local" placeholder="input type datetime-local"/>
-        <input type="date" placeholder="input type date"/>
-        <input type="time" placeholder="input type time"/>
-        <input type="week" placeholder="input type week"/>
-        <input type="month" placeholder="input type month"/>
-      </fieldset>
-
-      <fieldset>
-        <legend>without text input</legend>
-        <input type="color" placeholder="input type color"/>
-        <input type="file" placeholder="input type file"/>
-        <input type="hidden" placeholder="input type hidden"/>
-        <input type="number" placeholder="input type number"/>
-        <input type="range" placeholder="input type range"/>
-      </fieldset>
-
-      <fieldset>
-        <legend>check boxes</legend>
-        <input type="checkbox" placeholder="input type checkbox"/>
-        <label>select</label>
-        <label>
-          <input type="checkbox" placeholder="input type checkbox"/>
-          all
-        </label>
-        <input type="checkbox" placeholder="input type checkbox"/>
-        <label>applicable</label>
-      </fieldset>
-
-      <fieldset>
-        <legend>radio buttons</legend>
-        <input type="radio" name="radiogroup1" placeholder="input type radio"/>
-        <label>select</label>
-        <label>
-          <input type="radio" name="radiogroup1" placeholder="input type radio"/>
-          only
-        </label>
-        <input type="radio" name="radiogroup1" placeholder="input type radio"/>
-        <label>one</label>
-      </fieldset>
-
-      <fieldset>
-        <legend>drop-down list (select only one)</legend>
-        <select>
-          <option>option 1</option>
-          <optgroup label="label for option 2">
-            <option>option 2a</option>
-            <option>option 2b</option>
-            <option>option 2c</option>
-          </optgroup>
-          <option>option 3</option>
-        </select>
-        <input list="b" placeholder="select it or type it"/>
-        <datalist id="b">
-          <option>option 1</option>
-          <optgroup label="label for option 2">
-            <option>option 2a</option>
-            <option>option 2b</option>
-            <option>option 2c</option>
-          </optgroup>
-          <option>option 3</option>
-        </datalist>
-      </fieldset>
-
-      <fieldset>
-        <legend>drop-down list (select multiple)</legend>
-        <select multiple>
-          <option>option 1</option>
-          <optgroup label="label for option 2">
-            <option>option 2a</option>
-            <option>option 2b</option>
-            <option>option 2c</option>
-          </optgroup>
-          <option>option 3</option>
-        </select>
-      </fieldset>
-
-      <fieldset>
-        <legend>buttons</legend>
-        <input type="button" placeholder="input type button" value="button"/>
-        <input type="reset" placeholder="input type reset"/>
-        <input type="submit" placeholder="input type submit"/>
-        <button type="button">button</button>
-        <button type="reset" >reset </button>
-        <button type="submit">submit</button>
-      </fieldset>
-
-      <fieldset>
-        <legend>textarea</legend>
-        <textarea></textarea>
-      </fieldset>
-
-    </form>
-    </main>
+block forms
+  form(style="background-color: rgb(245,250,255);")
+    fieldset
+      legend single line text inputs
+      input(type="text" placeholder="input type text")
+      input(type="email" placeholder="input type email")
+      input(type="password" placeholder="input type password")
+      input(type="search" placeholder="input type search")
+      input(type="tel" placeholder="input type tel")
+      input(type="url" placeholder="input type url")
+    fieldset
+      legend date/time
+      input(type="datetime" placeholder="input type datetime")
+      input(type="datetime-local" placeholder="input type datetime-local")
+      input(type="date" placeholder="input type date")
+      input(type="time" placeholder="input type time")
+      input(type="week" placeholder="input type week")
+      input(type="month" placeholder="input type month")
+    fieldset
+      legend without text input
+      input(type="color" placeholder="input type color")
+      input(type="file" placeholder="input type file")
+      input(type="hidden" placeholder="input type hidden")
+      input(type="number" placeholder="input type number")
+      input(type="range" placeholder="input type range")
+    fieldset
+      legend check boxes
+      input(type="checkbox" placeholder="input type checkbox")
+      label select
+      label
+        input(type="checkbox" placeholder="input type checkbox")
+        | all
+      input(type="checkbox" placeholder="input type checkbox")
+      label applicable
+    fieldset
+      legend radio buttons
+      input(type="radio" name="radiogroup1" placeholder="input type radio")
+      label select
+      label
+        input(type="radio" name="radiogroup1" placeholder="input type radio")
+        | only
+      input(type="radio" name="radiogroup1" placeholder="input type radio")
+      label one
+    fieldset
+      legend drop-down list (select only one)
+      select
+        option option 1
+        optgroup(label="label for option 2")
+          option option 2a
+          option option 2b
+          option option 2c
+        option option 3
+      input(list="b" placeholder="select it or type it")
+      datalist#b
+        option option 1
+        optgroup(label="label for option 2")
+          option option 2a
+          option option 2b
+          option option 2c
+        option option 3
+    fieldset
+      legend drop-down list (select multiple)
+      select(multiple="")
+        option option 1
+        optgroup(label="label for option 2")
+          option option 2a
+          option option 2b
+          option option 2c
+        option option 3
+    fieldset
+      legend buttons
+      input(type="button" placeholder="input type button" value="button")
+      input(type="reset" placeholder="input type reset")
+      input(type="submit" placeholder="input type submit")
+      button(type="button") button
+      button(type="reset")  reset
+      button(type="submit") submit
+    fieldset
+      legend textarea
+      textarea
