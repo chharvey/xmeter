@@ -1,12 +1,11 @@
 doctype html
 html(lang="en")
   block vars
+    - var page_name = 'Base Typography'
     - var project_names = []
     - var classnames = {};
   head
-    - var title = 'Base Typography'
-    - for (var i = 0; i < project_names.length; i++) title += ' | ' + project_names[project_names.length-i-1]
-    title= title
+    title= project_names.concat(page_name).reduceRight(function (a, b) { return a + ' | ' + b })
     meta(charset="utf-8")
     meta(name="description" content="A test of bare, unclassed elements.")
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -16,9 +15,7 @@ html(lang="en")
     block body
       main
         header
-          - var title = 'Base Typography'
-          - for (var i = 0; i < project_names.length; i++) title = project_names[project_names.length-i-1] + ' &mdash; ' + title
-          h1!= title
+          h1!= project_names.concat(page_name).reduce(function (a, b) { return a + ' &mdash; ' + b })
           nav#table-contents
             h2 Table of Contents
             ol
