@@ -1,25 +1,30 @@
-header
-  h1!= project_names.concat(page_name).reduce(function (a, b) { return a + ' &mdash; ' + b }, '')
-  nav#table-contents
-    h2 Table of Contents
-    ol
-      li: a(href="#table-contents") Table of Contents
-      li: a(href="#headings-paragraphs") Headings &amp; Paragraphs
-      li: a(href="#lists") Lists
-      li: a(href="#tables") Tables
-      li
-        a(href="#text-level-elements") Text-Level Elements
-        ol
-          li: a(href="#links") Links
-          li: a(href="#stress") Stress
-          li: a(href="#documentation") Documentation
-          li: a(href="#data") Data
-      li: a(href="#embedded-elements") Embedded Elements
-      li: a(href="#forms") Forms
-      li: a(href="#interactive-elements") Interactive Elements
-section#headings-paragraphs
-  h2 Headings &amp; Paragraphs
-  block headings-paragraphs
+mixin main-content(page_title, classnames, appending)
+  - var classnames = classnames || {}
+  - var appending = appending || []
+  - var appendages = {}
+  - for (el of appending) { appendages[el] = true }
+  block
+  header
+    h1= page_title
+    nav#table-contents
+      h2 Table of Contents
+      ol
+        li: a(href="#table-contents") Table of Contents
+        li: a(href="#headings-paragraphs") Headings &amp; Paragraphs
+        li: a(href="#lists") Lists
+        li: a(href="#tables") Tables
+        li
+          a(href="#text-level-elements") Text-Level Elements
+          ol
+            li: a(href="#links") Links
+            li: a(href="#stress") Stress
+            li: a(href="#documentation") Documentation
+            li: a(href="#data") Data
+        li: a(href="#embedded-elements") Embedded Elements
+        li: a(href="#forms") Forms
+        li: a(href="#interactive-elements") Interactive Elements
+  section#headings-paragraphs
+    h2 Headings &amp; Paragraphs
     figure(class=classnames.figure)
       h1 Heading 1 #[code(class=classnames.code) h1]
       p.
@@ -133,9 +138,10 @@ section#headings-paragraphs
         A horizontal rule #[code(class=classnames.code) hr] is shown below. I&rsquo;m honestly not sure when
         you would ever use this instead of a CSS border.
       hr
-section#lists
-  h2 Lists
-  block lists
+    if appendages['headings-paragraphs']
+      +headings-paragraphs()
+  section#lists
+    h2 Lists
     figure(class=classnames.figure)
       figcaption Ordered List #[code(class=classnames.code) ol]
       ol
@@ -173,9 +179,10 @@ section#lists
           ul
             li 1st value
             li 2nd value
-section#tables
-  h2 Tables
-  block tables
+    if appendages['lists']
+      +lists()
+  section#tables
+    h2 Tables
     figure(class=classnames.figure)
       table
         caption #[code(class=classnames.code) table] #[code(class=classnames.code) caption]
@@ -200,60 +207,61 @@ section#tables
                 - for (var j = 0; j < cols; j++)
                   td #[code(class=classnames.code) tbody] #[code(class=classnames.code) tr]ow #{i+1} #[code(class=classnames.code) td]ata #{j+1}
           +tablebodyrows(3,3)
-section#text-level-elements
-  h2 Text-Level Elements
-  block text-level-elements
+    if appendages.tables
+      +tables()
+  section#text-level-elements
+    h2 Text-Level Elements
     section#links
       h3 Links
-      block links
-        figure(class=classnames.figure): ul
-          block links__list
-            li: a a
-            li: a(href) a[href]
+      figure(class=classnames.figure): ul
+        li: a a
+        li: a(href) a[href]
+        if appendages['links__list']
+          +links__list()
     section#stress
       h3 Stress
-      block stress
-        figure(class=classnames.figure): ul
-          block stress__list
-            li: em     emphasized text #[code(class=classnames.code) em]
-            li: strong important text #[code(class=classnames.code) strong]
-            li: i      alternate voice/mood (scare quotes, mentioning words, foreign expressions) #[code(class=classnames.code) i]
-            li: mark   relevant in some context #[code(class=classnames.code) mark]
-            li: u      unarticulated annotation #[code(class=classnames.code) u]
-            li: small  side comment #[code(class=classnames.code) small]
-            li: s      text shown to be no longer relevant #[code(class=classnames.code) s]
+      figure(class=classnames.figure): ul
+        li: em     emphasized text #[code(class=classnames.code) em]
+        li: strong important text #[code(class=classnames.code) strong]
+        li: i      alternate voice/mood (scare quotes, mentioning words, foreign expressions) #[code(class=classnames.code) i]
+        li: mark   relevant in some context #[code(class=classnames.code) mark]
+        li: u      unarticulated annotation #[code(class=classnames.code) u]
+        li: small  side comment #[code(class=classnames.code) small]
+        li: s      text shown to be no longer relevant #[code(class=classnames.code) s]
+        if appendages['stress__list']
+          +stress__list()
     section#documentation
       h3 Documentation
-      block documentation
-        figure(class=classnames.figure): ul
-          block documentation__list
-            li: ins  content shown to be inserted into a document #[code(class=classnames.code) ins]
-            li: del  content shown to be deleted from a document #[code(class=classnames.code) del]
-            li: dfn  definining instance of a term  #[code(class=classnames.code) dfn]
-            li: b    keyword or technical term #[code(class=classnames.code) b]
-            li: var  variable  #[code(class=classnames.code) var]
-            li: q    quoted material #[code(class=classnames.code) q]
-            li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classnames.code) cite]
-            li: sup  superscript #[code(class=classnames.code) sup]
-            li: sub  subscript #[code(class=classnames.code) sub]
+      figure(class=classnames.figure): ul
+        li: ins  content shown to be inserted into a document #[code(class=classnames.code) ins]
+        li: del  content shown to be deleted from a document #[code(class=classnames.code) del]
+        li: dfn  definining instance of a term  #[code(class=classnames.code) dfn]
+        li: b    keyword or technical term #[code(class=classnames.code) b]
+        li: var  variable  #[code(class=classnames.code) var]
+        li: q    quoted material #[code(class=classnames.code) q]
+        li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classnames.code) cite]
+        li: sup  superscript #[code(class=classnames.code) sup]
+        li: sub  subscript #[code(class=classnames.code) sub]
+        if appendages['documentation__list']
+          +documentation__list()
     section#data
       h3 Data
-      block data
-        figure(class=classnames.figure): ul
-          block data__list
-            li: abbr(title)        abbreviation or acronym #[code(class=classnames.code) abbr[title]]
-            li: time(datetime="Z") a specific date or time #[code(class=classnames.code) time]
-            li: data(value)        generic machine-readable data #[code(class=classnames.code) data]
-            li: code               a fragment of code #[code(class=classnames.code) code]
-            li: kbd                user input #[code(class=classnames.code) kbd]
-            li: kbd: kbd           a button or key on a physical device #[code(class=classnames.code) kbd &gt; kbd]
-            li: samp               sample computer output #[code(class=classnames.code) samp]
-section#embedded-elements
-  h2 Embedded Elements
-  block embedded-elements
-section#forms
-  h2 Forms
-  block forms
+      figure(class=classnames.figure): ul
+        li: abbr(title)        abbreviation or acronym #[code(class=classnames.code) abbr[title]]
+        li: time(datetime="Z") a specific date or time #[code(class=classnames.code) time]
+        li: data(value)        generic machine-readable data #[code(class=classnames.code) data]
+        li: code               a fragment of code #[code(class=classnames.code) code]
+        li: kbd                user input #[code(class=classnames.code) kbd]
+        li: kbd: kbd           a button or key on a physical device #[code(class=classnames.code) kbd &gt; kbd]
+        li: samp               sample computer output #[code(class=classnames.code) samp]
+        if appendages['data__list']
+          +data__list()
+  section#embedded-elements
+    h2 Embedded Elements
+    if appendages['embedded-elements']
+      +embedded-elements()
+  section#forms
+    h2 Forms
     form(style="background-color: #fff;")
       figure(class=classnames.figure)
         fieldset
@@ -340,6 +348,9 @@ section#forms
         fieldset
           legend textarea
           textarea
-section#interactive-elements
-  h2 Interactive Elements
-  block interactive-elements
+    if appendages['forms']
+      +forms()
+  section#interactive-elements
+    h2 Interactive Elements
+    if appendages['interactive-elements']
+      +interactive-elements()
