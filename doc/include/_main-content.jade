@@ -1,5 +1,5 @@
 header
-  h1!= main_heading || project_names.concat(page_name).reduce(function (a, b) { return a + ' &mdash; ' + b })
+  h1!= project_names.concat(page_name).reduce(function (a, b) { return a + ' &mdash; ' + b }, '')
   nav#table-contents
     h2 Table of Contents
     ol
