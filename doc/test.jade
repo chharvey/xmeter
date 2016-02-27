@@ -2,7 +2,6 @@ doctype html
 html(lang="en")
   - var project_name = 'Xmeter'
   - var page_title = 'Base Typography'
-  - var classnames = { figure : 'x-c-Fig' , code : 'x-c-Code' }
   head
     title #{page_title} | #{project_name}
     meta(charset="utf-8")
@@ -13,4 +12,10 @@ html(lang="en")
   body
     main
       include include/_main-content.jade
-      +main-content(project_name + ' — ' + page_title, classnames)
+      +main-content({
+        page_title: project_name + ' — ' + page_title
+      , classnames: {
+          figure: 'x-c-Fig'
+        , code  : 'x-c-Code'
+        }
+      })

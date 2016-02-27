@@ -1,8 +1,9 @@
-mixin main-content(page_title, classnames, appending)
-  - var classnames = classnames || {}
-  - var appending = appending || []
-  - var appendages = {}
-  - for (el of appending) { appendages[el] = true }
+mixin main-content(args)
+  - var page_title = args.page_title || ''
+  - var classnames = args.classnames || {}
+  - var appendages = args.appendages || []
+  - var appending = {}
+  - for (el of appendages) { appending[el] = true }
   block
   header
     h1= page_title
@@ -138,7 +139,7 @@ mixin main-content(page_title, classnames, appending)
         A horizontal rule #[code(class=classnames.code) hr] is shown below. I&rsquo;m honestly not sure when
         you would ever use this instead of a CSS border.
       hr
-    if appendages['headings-paragraphs']
+    if appending['headings-paragraphs']
       +headings-paragraphs()
   section#lists
     h2 Lists
@@ -179,7 +180,7 @@ mixin main-content(page_title, classnames, appending)
           ul
             li 1st value
             li 2nd value
-    if appendages['lists']
+    if appending['lists']
       +lists()
   section#tables
     h2 Tables
@@ -207,7 +208,7 @@ mixin main-content(page_title, classnames, appending)
                 - for (var j = 0; j < cols; j++)
                   td #[code(class=classnames.code) tbody] #[code(class=classnames.code) tr]ow #{i+1} #[code(class=classnames.code) td]ata #{j+1}
           +tablebodyrows(3,3)
-    if appendages.tables
+    if appending['tables']
       +tables()
   section#text-level-elements
     h2 Text-Level Elements
@@ -216,7 +217,7 @@ mixin main-content(page_title, classnames, appending)
       figure(class=classnames.figure): ul
         li: a a
         li: a(href) a[href]
-        if appendages['links__list']
+        if appending['links__list']
           +links__list()
     section#stress
       h3 Stress
@@ -228,7 +229,7 @@ mixin main-content(page_title, classnames, appending)
         li: u      unarticulated annotation #[code(class=classnames.code) u]
         li: small  side comment #[code(class=classnames.code) small]
         li: s      text shown to be no longer relevant #[code(class=classnames.code) s]
-        if appendages['stress__list']
+        if appending['stress__list']
           +stress__list()
     section#documentation
       h3 Documentation
@@ -242,7 +243,7 @@ mixin main-content(page_title, classnames, appending)
         li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classnames.code) cite]
         li: sup  superscript #[code(class=classnames.code) sup]
         li: sub  subscript #[code(class=classnames.code) sub]
-        if appendages['documentation__list']
+        if appending['documentation__list']
           +documentation__list()
     section#data
       h3 Data
@@ -254,11 +255,11 @@ mixin main-content(page_title, classnames, appending)
         li: kbd                user input #[code(class=classnames.code) kbd]
         li: kbd: kbd           a button or key on a physical device #[code(class=classnames.code) kbd &gt; kbd]
         li: samp               sample computer output #[code(class=classnames.code) samp]
-        if appendages['data__list']
+        if appending['data__list']
           +data__list()
   section#embedded-elements
     h2 Embedded Elements
-    if appendages['embedded-elements']
+    if appending['embedded-elements']
       +embedded-elements()
   section#forms
     h2 Forms
@@ -348,9 +349,9 @@ mixin main-content(page_title, classnames, appending)
         fieldset
           legend textarea
           textarea
-    if appendages['forms']
+    if appending['forms']
       +forms()
   section#interactive-elements
     h2 Interactive Elements
-    if appendages['interactive-elements']
+    if appending['interactive-elements']
       +interactive-elements()
