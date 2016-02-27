@@ -227,27 +227,27 @@ section#text-level-elements
       block documentation
         figure(class=classnames.figure): ul
           block documentation__list
-            li: ins    content shown to be inserted into a document #[code(class=classnames.code) ins]
-            li: del    content shown to be deleted from a document #[code(class=classnames.code) del]
-            li: dfn    definining instance of a term  #[code(class=classnames.code) dfn]
-            li: b      keyword or technical term #[code(class=classnames.code) b]
-            li: var    variable  #[code(class=classnames.code) var]
-            li: q      quoted material #[code(class=classnames.code) q]
-            li: cite   reference to a work, some part of a work, or the creator of a work #[code(class=classnames.code) cite]
-            li: sup    superscript #[code(class=classnames.code) sup]
-            li: sub    subscript #[code(class=classnames.code) sub]
+            li: ins  content shown to be inserted into a document #[code(class=classnames.code) ins]
+            li: del  content shown to be deleted from a document #[code(class=classnames.code) del]
+            li: dfn  definining instance of a term  #[code(class=classnames.code) dfn]
+            li: b    keyword or technical term #[code(class=classnames.code) b]
+            li: var  variable  #[code(class=classnames.code) var]
+            li: q    quoted material #[code(class=classnames.code) q]
+            li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classnames.code) cite]
+            li: sup  superscript #[code(class=classnames.code) sup]
+            li: sub  subscript #[code(class=classnames.code) sub]
     section#data
       h3 Data
       block data
         figure(class=classnames.figure): ul
           block data__list
-            li: abbr(title) abbreviation or acronym #[code(class=classnames.code) abbr[title]]
-            li: time        a specific date or time #[code(class=classnames.code) time]
-            li: data        generic machine-readable data #[code(class=classnames.code) data]
-            li: code        a fragment of code #[code(class=classnames.code) code]
-            li: kbd         user input #[code(class=classnames.code) kbd]
-            li: kbd: kbd    a button or key on a physical device #[code(class=classnames.code) kbd &gt; kbd]
-            li: samp        sample computer output #[code(class=classnames.code) samp]
+            li: abbr(title)        abbreviation or acronym #[code(class=classnames.code) abbr[title]]
+            li: time(datetime="Z") a specific date or time #[code(class=classnames.code) time]
+            li: data(value)        generic machine-readable data #[code(class=classnames.code) data]
+            li: code               a fragment of code #[code(class=classnames.code) code]
+            li: kbd                user input #[code(class=classnames.code) kbd]
+            li: kbd: kbd           a button or key on a physical device #[code(class=classnames.code) kbd &gt; kbd]
+            li: samp               sample computer output #[code(class=classnames.code) samp]
 section#embedded-elements
   h2 Embedded Elements
   block embedded-elements
@@ -267,39 +267,39 @@ section#forms
       figure(class=classnames.figure)
         fieldset
           legend date/time
-          input(type="datetime" placeholder="input type datetime")
-          input(type="datetime-local" placeholder="input type datetime-local")
-          input(type="date" placeholder="input type date")
-          input(type="time" placeholder="input type time")
-          input(type="week" placeholder="input type week")
-          input(type="month" placeholder="input type month")
+          input(type="datetime")
+          input(type="datetime-local")
+          input(type="date")
+          input(type="time")
+          input(type="week")
+          input(type="month")
       figure(class=classnames.figure)
         fieldset
           legend without text input
-          input(type="color" placeholder="input type color")
-          input(type="file" placeholder="input type file")
-          input(type="hidden" placeholder="input type hidden")
+          input(type="color")
+          input(type="file")
+          input(type="hidden")
           input(type="number" placeholder="input type number")
-          input(type="range" placeholder="input type range")
+          input(type="range")
       figure(class=classnames.figure)
         fieldset
           legend check boxes
-          input(type="checkbox" placeholder="input type checkbox")
+          input(type="checkbox")
           label select
           label
-            input(type="checkbox" placeholder="input type checkbox")
+            input(type="checkbox")
             | all
-          input(type="checkbox" placeholder="input type checkbox")
+          input(type="checkbox")
           label applicable
       figure(class=classnames.figure)
         fieldset
           legend radio buttons
-          input(type="radio" name="radiogroup1" placeholder="input type radio")
+          input(type="radio" name="radiogroup1")
           label select
           label
-            input(type="radio" name="radiogroup1" placeholder="input type radio")
+            input(type="radio" name="radiogroup1")
             | only
-          input(type="radio" name="radiogroup1" placeholder="input type radio")
+          input(type="radio" name="radiogroup1")
           label one
       figure(class=classnames.figure)
         fieldset
@@ -314,10 +314,8 @@ section#forms
           input(list="b" placeholder="select it or type it")
           datalist#b
             option option 1
-            optgroup(label="label for option 2")
-              option option 2a
-              option option 2b
-              option option 2c
+            //- optgroup not a valid child of datalist
+            option option 2
             option option 3
       figure(class=classnames.figure)
         fieldset
@@ -332,9 +330,9 @@ section#forms
       figure(class=classnames.figure)
         fieldset
           legend buttons
-          input(type="button" placeholder="input type button" value="button")
-          input(type="reset" placeholder="input type reset")
-          input(type="submit" placeholder="input type submit")
+          input(type="button" value="button")
+          input(type="reset")
+          input(type="submit")
           button(type="button") button
           button(type="reset")  reset
           button(type="submit") submit
