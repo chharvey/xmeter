@@ -1,12 +1,12 @@
 mixin main-content(args)
-  - var page_title = args.page_title || ''
+  - var main_heading = args.main_heading || ''
   - var classnames = args.classnames || {}
   - var appendages = args.appendages || []
   - var appending = {}
   - for (el of appendages) { appending[el] = true }
   block
   header
-    h1= page_title
+    h1= main_heading
     nav#table-contents
       h2 Table of Contents
       ol
@@ -257,6 +257,8 @@ mixin main-content(args)
         li: samp               sample computer output #[code(class=classnames.code) samp]
         if appending['data__list']
           +data__list()
+    if appending['text-level-elements']
+      +text-level-elements()
   section#embedded-elements
     h2 Embedded Elements
     if appending['embedded-elements']
