@@ -1,12 +1,23 @@
-extends base-tpl.jade
-
-block append vars
-  - project_names = ['Xmeter']
-  - classnames.code = 'x-c-Code'
-  - classnames.figure = 'x-c-Fig'
-
-block append style
-  link(rel="stylesheet" href="styles/doc.css")
-
-block forms
-  p: a(href="test-forms.html#forms") go here
+doctype html
+html(lang="en")
+  - var project_name = 'Xmeter'
+  - var page_title = 'Base Typography'
+  head
+    title #{page_title} | #{project_name}
+    meta(charset="utf-8")
+    meta(name="description" content="A test of bare, unclassed elements.")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="../xmeter.min.css")
+    link(rel="stylesheet" href="styles/doc.css")
+  body
+    main
+      include include/_main-content.jade
+      +main-content({
+        page_title: project_name + ' — ' + page_title
+      , classnames: {
+          figure: 'x-c-Fig'
+        , code  : 'x-c-Code'
+        }
+      })
+    script.
+      document.querySelectorAll('#forms > form')[0].style.backgroundColor = '#fff'
