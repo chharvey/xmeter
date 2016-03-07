@@ -117,11 +117,6 @@ mixin main-content(args)
         Washington, DC 00000 #[code(class=classnames.code) br]#[br]
         United States of America
     figure(class=classnames.figure)
-      figure Aenean consectetur #[code(class=classnames.code) figure] suscipit urna, non vehicula lacus blandit et.
-        figcaption Integer at lacus et diam tristique #[code(class=classnames.code) figure] #[code(class=classnames.code) figcaption] suscipit.
-    figure(class=classnames.figure)
-      blockquote Donec #[code(class=classnames.code) blockquote] vel dolor ut felis dapibus ultricies vitae a nibh.
-    figure(class=classnames.figure)
       pre.
         Pellentesque #[code(class=classnames.code) pre] habitant() {
           morbi.tristique = senectus;
@@ -134,6 +129,11 @@ mixin main-content(args)
             };
           }
         }
+    figure(class=classnames.figure)
+      figure Aenean consectetur #[code(class=classnames.code) figure] suscipit urna, non vehicula lacus blandit et.
+        figcaption Integer at lacus et diam tristique #[code(class=classnames.code) figure] #[code(class=classnames.code) figcaption] suscipit.
+    figure(class=classnames.figure)
+      blockquote Donec #[code(class=classnames.code) blockquote] vel dolor ut felis dapibus ultricies vitae a nibh.
     // figure(class=classnames.figure)
       figcaption.
         A horizontal rule #[code(class=classnames.code) hr] is shown below. I&rsquo;m honestly not sure when
@@ -238,6 +238,7 @@ mixin main-content(args)
         li: del  content shown to be deleted from a document #[code(class=classnames.code) del]
         li: dfn  definining instance of a term  #[code(class=classnames.code) dfn]
         li: b    keyword or technical term #[code(class=classnames.code) b]
+        li: abbr(title) abbreviation or acronym #[code(class=classnames.code) abbr[title]]
         li: var  variable  #[code(class=classnames.code) var]
         li: q    quoted material #[code(class=classnames.code) q]
         li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classnames.code) cite]
@@ -248,7 +249,6 @@ mixin main-content(args)
     section#data
       h3 Data
       figure(class=classnames.figure): ul
-        li: abbr(title)        abbreviation or acronym #[code(class=classnames.code) abbr[title]]
         li: time(datetime="Z") a specific date or time #[code(class=classnames.code) time]
         li: data(value)        generic machine-readable data #[code(class=classnames.code) data]
         li: code               a fragment of code #[code(class=classnames.code) code]
