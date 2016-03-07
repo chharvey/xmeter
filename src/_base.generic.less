@@ -46,10 +46,29 @@ li, dt, dd {
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
 // Also, inline elements should not affect vertical rhythm, thus line-heights are zero.
-span, a, br,
-em, strong, i, mark, u, small, s,
+span, br,
+em, strong, i, mark, u, small,
 dfn, b, var, q, cite, sup, sub,
 abbr, data, time, code, kbd, samp {
   display: inline;
   line-height: 0;
+}
+
+// Elements with a transparent content model
+// should inherit their display and line-height, except
+// if they are inside an element containing
+// only text and/or other inline elements.
+// This behavior may be overrided with classes/inline styles.
+a, s, ins, del {
+  display: inherit;
+  line-height: inherit;
+  h1 > &, h2 > &, h3 > &, h4 > &, h5 > &, h6 > &,
+  p > &, pre > &,
+  figure > &, figcaption > &, blockquote > &,
+  li > &, dt > &, dd > &,
+  caption > &, th > &, td > &,
+  legend > &, summary > & {
+    display: inline;
+    line-height: 0;
+  }
 }
