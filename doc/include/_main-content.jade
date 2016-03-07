@@ -130,7 +130,8 @@ mixin main-content(args)
           }
         }
     figure(class=classnames.figure)
-      figure Aenean consectetur #[code(class=classnames.code) figure] suscipit urna, non vehicula lacus blandit et.
+      figure
+        | Aenean consectetur #[code(class=classnames.code) figure] suscipit urna, non vehicula lacus blandit et.
         figcaption Integer at lacus et diam tristique #[code(class=classnames.code) figure] #[code(class=classnames.code) figcaption] suscipit.
     figure(class=classnames.figure)
       blockquote Donec #[code(class=classnames.code) blockquote] vel dolor ut felis dapibus ultricies vitae a nibh.
@@ -268,6 +269,10 @@ mixin main-content(args)
     form
       figure(class=classnames.figure)
         fieldset
+          legend Integer at lacus et diam tristique #[code(class=classnames.code) fieldset legend] suscipit.
+          | Aenean consectetur #[code(class=classnames.code) fieldset] suscipit urna, non vehicula lacus blandit et.
+      figure(class=classnames.figure)
+        fieldset
           legend single line text inputs
           input(type="text" placeholder="input type text")
           input(type="email" placeholder="input type email")
@@ -355,5 +360,9 @@ mixin main-content(args)
       +forms()
   section#interactive-elements
     h2 Interactive Elements
+    figure(class=classnames.figure)
+      details
+        summary Integer at lacus et diam tristique #[code(class=classnames.code) details summary] suscipit.
+        | Aenean consectetur #[code(class=classnames.code) details] suscipit urna, non vehicula lacus blandit et.
     if appending['interactive-elements']
       +interactive-elements()
