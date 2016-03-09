@@ -1,9 +1,9 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 3.6.0
+    Version: 4.0.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
-    Home   : https://chharvey.github.io/xmeter/
+    Home   : https://github.com/chharvey/xmeter/blob/gh-pages/README.md
     Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
@@ -539,22 +539,23 @@ th {
   * CONTENTS
   *
   * reset.css (above).............strips all elements of all browser-default styles
-  * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
+  * normalize.css (above).........(@necolas) addresses browser discrepancies
   *
   * BASE
   * generic.......................styles that apply to `html` and very far-reaching groups of elements
   * sections......................secioning content and section-related elements
   * grouping......................grouping content
   * ....paras.........................paragraphs, block-level textual elements
-  * ....lists.........................ordered, unordered, association
+  * ....lists.........................ordered, unordered, dictionary
   * ....tables........................tables
   * text..........................text-level and inline elements
   * ....links.........................inline hyperlinks
-  * ....stress........................text outstanding from surrounding prose (e.g., <em> and <u>)
-  * ....doctext.......................documentation elements (e.g., <dfn> and <var>)
-  * ....data..........................machine- or human-readable data (e.g., <time> and <code>)
-  * forms.........................form elements
+  * ....stress........................text outstanding from surrounding prose
+  * ....doctext.......................documentation elements
+  * ....data..........................machine- or human-readable data
   * embedded......................images and other media
+  * forms.........................form elements
+  * interactive...................interactive elements
   */
 /*################################*\
     xmeter  |  _base.generic.less
@@ -566,6 +567,7 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 0 solid;
+  content: ' ';
   content: '';
   content: none;
 }
@@ -573,9 +575,9 @@ th {
   *,
   *::before,
   *::after {
-    background: transparent;
-    box-shadow: none;
-    text-shadow: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 }
 html {
@@ -589,9 +591,9 @@ h4,
 h5,
 h6,
 p,
+pre,
 figure,
 blockquote,
-pre,
 ol,
 ul,
 dl,
@@ -611,7 +613,6 @@ dd > dl {
   margin-bottom: 0;
 }
 span,
-a,
 br,
 em,
 strong,
@@ -619,20 +620,105 @@ i,
 mark,
 u,
 small,
-s,
 dfn,
 b,
+abbr,
 var,
 q,
 cite,
 sup,
 sub,
-abbr,
 data,
 time,
 code,
 kbd,
 samp {
+  display: inline;
+  line-height: 0;
+}
+a,
+s,
+ins,
+del {
+  display: inherit;
+  line-height: inherit;
+}
+h1 > a,
+h1 > s,
+h1 > ins,
+h1 > del,
+h2 > a,
+h2 > s,
+h2 > ins,
+h2 > del,
+h3 > a,
+h3 > s,
+h3 > ins,
+h3 > del,
+h4 > a,
+h4 > s,
+h4 > ins,
+h4 > del,
+h5 > a,
+h5 > s,
+h5 > ins,
+h5 > del,
+h6 > a,
+h6 > s,
+h6 > ins,
+h6 > del,
+p > a,
+p > s,
+p > ins,
+p > del,
+pre > a,
+pre > s,
+pre > ins,
+pre > del,
+figure > a,
+figure > s,
+figure > ins,
+figure > del,
+figcaption > a,
+figcaption > s,
+figcaption > ins,
+figcaption > del,
+blockquote > a,
+blockquote > s,
+blockquote > ins,
+blockquote > del,
+li > a,
+li > s,
+li > ins,
+li > del,
+dt > a,
+dt > s,
+dt > ins,
+dt > del,
+dd > a,
+dd > s,
+dd > ins,
+dd > del,
+caption > a,
+caption > s,
+caption > ins,
+caption > del,
+th > a,
+th > s,
+th > ins,
+th > del,
+td > a,
+td > s,
+td > ins,
+td > del,
+legend > a,
+legend > s,
+legend > ins,
+legend > del,
+summary > a,
+summary > s,
+summary > ins,
+summary > del {
   display: inline;
   line-height: 0;
 }
@@ -693,15 +779,15 @@ hr {
 /*################################*\
     xmeter  |  _base.grouping.paras.less
 \*################################*/
-figure {
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
 pre {
   text-align: left;
   text-indent: 0;
   white-space: pre;
+}
+figure {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /*################################*\
@@ -784,7 +870,7 @@ small {
 }
 s {
   text-decoration: line-through;
-  color: #e00;
+  color: #b00;
 }
 
 /*################################*\
@@ -802,6 +888,10 @@ dfn {
 }
 b {
   font-weight: 700;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 0;
 }
 var {
   font-style: italic;
@@ -827,10 +917,6 @@ sub {
 /*################################*\
     xmeter  |  _base.text.data.less
 \*################################*/
-abbr[title] {
-  cursor: help;
-  border-bottom: 0;
-}
 code,
 kbd,
 samp {
@@ -847,6 +933,17 @@ code samp,
 kbd samp,
 samp samp {
   font-size: inherit;
+}
+
+/*################################*\
+    xmeter  |  _base.embedded.less
+\*################################*/
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
 }
 
 /*################################*\
@@ -899,13 +996,6 @@ input[type="search"] {
 }
 
 /*################################*\
-    xmeter  |  _base.embedded.less
+    xmeter  |  _base.interactive.less
 \*################################*/
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  font-style: italic;
-  vertical-align: middle;
-}
 
