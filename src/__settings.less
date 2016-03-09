@@ -4,112 +4,26 @@
 \*################################*/
 
 
-#XMETER {
-  .VARS() {
-    // vertical rhythm
-    @1rem: 16px; // a shortcut variable used for fallbacks where rems aren’t supported
-    // where are rems not supported?
-    // - IE8 and below, and
-    // - IE9 and IE10 on the `font` shorthand property and on pseudo-elements/classes
+// NOTE: the prefix `g-` on each variable stands for "global" because these variables
+// are globally (project-wide) accessible.
+// In each partial file, if need a private variable, use prefix `p-` for "private".
+// Parameters in mixins shall not use any prefixes.
 
-    @xmeter_font_size: 100%; // defined by user agent
-    @xmeter_font_size: @1rem; // fixes Chrome inheritance bug
-    @xmeter_line_height: 1.5;
-    @xmeter_vru_px: (@xmeter_line_height * @1rem); // fallback for @xmeter_vru, which is in rems
-    @xmeter_vru:    (@xmeter_line_height *  1rem);
+// vertical rhythm
+@g-1rem: 16px; // a shortcut variable used for fallbacks where rems aren’t supported
+// where are rems not supported?
+// - IE8 and below, and
+// - IE9 and IE10 on the `font` shorthand property and on pseudo-elements/classes
 
-    @xmeter_font_size_h1: 32/16; // 2.000
-    @xmeter_font_size_h2: 24/16; // 1.500
-    @xmeter_font_size_h3: 20/16; // 1.250
-    @xmeter_font_size_h4: 16/16; // 1.000
-    @xmeter_font_size_h5: 14/16; // 0.875
-    @xmeter_font_size_h6: 12/16; // 0.750
+@g-font_size: 100%; // defined by user agent
+@g-font_size: @g-1rem; // HACK fixes Chrome inheritance bug
+@g-line_height: 1.5;
+@g-vru_px: (@g-line_height * @g-1rem); // fallback for @g-vru, which is in rems
+@g-vru:    (@g-line_height *  1rem);
 
-    // TODO: remove these on next major release
-    @h1_font_size: @xmeter_font_size_h1;
-    @h2_font_size: @xmeter_font_size_h2;
-    @h3_font_size: @xmeter_font_size_h3;
-    @h4_font_size: @xmeter_font_size_h4;
-    @h5_font_size: @xmeter_font_size_h5;
-    @h6_font_size: @xmeter_font_size_h6;
-  }
-  .CONSTS() {
-    // fractional percentages used for anything, usually widths
-    // TODO remove all of these variables on next major release,
-    // unless there is any reason to keep them.
-    @1o1: (100% * (1/1));      @1o9:   (100% * (1/9));
-                               @2o9:   (100% * (2/9));
-    @1o2: (100% * (1/2));      @3o9:   (100% * (3/9));
-    @2o2: (100% * (2/2));      @4o9:   (100% * (4/9));
-                               @5o9:   (100% * (5/9));
-    @1o3: (100% * (1/3));      @6o9:   (100% * (6/9));
-    @2o3: (100% * (2/3));      @7o9:   (100% * (7/9));
-    @3o3: (100% * (3/3));      @8o9:   (100% * (8/9));
-                               @9o9:   (100% * (9/9));
-    @1o4: (100% * (1/4));
-    @2o4: (100% * (2/4));     @1o10: (100% * ( 1/10));
-    @3o4: (100% * (3/4));     @2o10: (100% * ( 2/10));
-    @4o4: (100% * (4/4));     @3o10: (100% * ( 3/10));
-                              @4o10: (100% * ( 4/10));
-    @1o5: (100% * (1/5));     @5o10: (100% * ( 5/10));
-    @2o5: (100% * (2/5));     @6o10: (100% * ( 6/10));
-    @3o5: (100% * (3/5));     @7o10: (100% * ( 7/10));
-    @4o5: (100% * (4/5));     @8o10: (100% * ( 8/10));
-    @5o5: (100% * (5/5));     @9o10: (100% * ( 9/10));
-                             @10o10: (100% * (10/10));
-    @1o6: (100% * (1/6));
-    @2o6: (100% * (2/6));     @1o12: (100% * ( 1/12));
-    @3o6: (100% * (3/6));     @2o12: (100% * ( 2/12));
-    @4o6: (100% * (4/6));     @3o12: (100% * ( 3/12));
-    @5o6: (100% * (5/6));     @4o12: (100% * ( 4/12));
-    @6o6: (100% * (6/6));     @5o12: (100% * ( 5/12));
-                              @6o12: (100% * ( 6/12));
-    @1o8: (100% * (1/8));     @7o12: (100% * ( 7/12));
-    @2o8: (100% * (2/8));     @8o12: (100% * ( 8/12));
-    @3o8: (100% * (3/8));     @9o12: (100% * ( 9/12));
-    @4o8: (100% * (4/8));    @10o12: (100% * (10/12));
-    @5o8: (100% * (5/8));    @11o12: (100% * (11/12));
-    @6o8: (100% * (6/8));    @12o12: (100% * (12/12));
-    @7o8: (100% * (7/8));
-    @8o8: (100% * (8/8));
-
-    // ---- Solarized Colors ----
-    // Solarized Bases
-    @solar_base03:  #002b36;
-    @solar_base02:  #073642;
-    @solar_base01:  #586e75;
-    @solar_base00:  #657b83;
-    @solar_base0:   #839496;
-    @solar_base1:   #93a1a1;
-    @solar_base2:   #eee8d5;
-    @solar_base3:   #fdf6e3;
-    // Solarized Accents
-    @solar_red:     #dc322f;
-    @solar_orange:  #cb4b16;
-    @solar_yellow:  #b58900;
-    @solar_green:   #859900;
-    @solar_cyan:    #2aa198;
-    @solar_blue:    #268bd2;
-    @solar_violet:  #6c71c4;
-    @solar_magenta: #d33682;
-    // ---- Lunarized Colors ----
-    // Lunarized Bases -- Inverses of Solarized Bases
-    @lunar_base03: spin(@solar_base03, 180); // #360b00
-    @lunar_base02: spin(@solar_base02, 180); // #421307
-    @lunar_base01: spin(@solar_base01, 180); // #755f58
-    @lunar_base00: spin(@solar_base00, 180); // #836d65
-    @lunar_base0:  spin(@solar_base0,  180); // #968583
-    @lunar_base1:  spin(@solar_base1,  180); // #a19393
-    @lunar_base2:  spin(@solar_base2,  180); // #d5dbee
-    @lunar_base3:  spin(@solar_base3,  180); // #e3eafd
-    // Lunarized Accents -- Complements of Solarized Accents
-    @lunar_cyan:   rgb(255-red(@solar_red    ), 255-green(@solar_red    ), 255-blue(@solar_red    )); // #23cdd0
-    @lunar_blue:   rgb(255-red(@solar_orange ), 255-green(@solar_orange ), 255-blue(@solar_orange )); // #34b4e9
-    @lunar_indigo: rgb(255-red(@solar_yellow ), 255-green(@solar_yellow ), 255-blue(@solar_yellow )); // #4a76ff
-    @lunar_violet: rgb(255-red(@solar_green  ), 255-green(@solar_green  ), 255-blue(@solar_green  )); // #7a66ff
-    @lunar_red:    rgb(255-red(@solar_cyan   ), 255-green(@solar_cyan   ), 255-blue(@solar_cyan   )); // #d55e67
-    @lunar_orange: rgb(255-red(@solar_blue   ), 255-green(@solar_blue   ), 255-blue(@solar_blue   )); // #d9742d
-    @lunar_yellow: rgb(255-red(@solar_violet ), 255-green(@solar_violet ), 255-blue(@solar_violet )); // #938e3b
-    @lunar_green:  rgb(255-red(@solar_magenta), 255-green(@solar_magenta), 255-blue(@solar_magenta)); // #2cc97d
-  }
-}
+@g-font_size_h1: 32/16; // 2.000
+@g-font_size_h2: 24/16; // 1.500
+@g-font_size_h3: 20/16; // 1.250
+@g-font_size_h4: 16/16; // 1.000
+@g-font_size_h5: 14/16; // 0.875
+@g-font_size_h6: 12/16; // 0.750

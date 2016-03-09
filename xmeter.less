@@ -1,10 +1,10 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 3.6.0
+    Version: 4.0.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
-    Home   : https://chharvey.github.io/xmeter/
+    Home   : https://github.com/chharvey/xmeter/blob/gh-pages/README.md
     Author : https://chharvey.github.io/
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -22,22 +22,23 @@
   * CONTENTS
   *
   * reset.css (above).............strips all elements of all browser-default styles
-  * normalize.css (above).........imported inline from https://github.com/necolas/normalize.css
+  * normalize.css (above).........(@necolas) addresses browser discrepancies
   *
   * BASE
   * generic.......................styles that apply to `html` and very far-reaching groups of elements
   * sections......................secioning content and section-related elements
   * grouping......................grouping content
   * ....paras.........................paragraphs, block-level textual elements
-  * ....lists.........................ordered, unordered, association
+  * ....lists.........................ordered, unordered, dictionary
   * ....tables........................tables
   * text..........................text-level and inline elements
   * ....links.........................inline hyperlinks
-  * ....stress........................text outstanding from surrounding prose (e.g., <em> and <u>)
-  * ....doctext.......................documentation elements (e.g., <dfn> and <var>)
-  * ....data..........................machine- or human-readable data (e.g., <time> and <code>)
-  * forms.........................form elements
+  * ....stress........................text outstanding from surrounding prose
+  * ....doctext.......................documentation elements
+  * ....data..........................machine- or human-readable data
   * embedded......................images and other media
+  * forms.........................form elements
+  * interactive...................interactive elements
   */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -54,5 +55,6 @@
 @import (inline) url('build/_base.text.stress.css');
 @import (inline) url('build/_base.text.doctext.css');
 @import (inline) url('build/_base.text.data.css');
-@import (inline) url('build/_base.forms.css');
 @import (inline) url('build/_base.embedded.css');
+@import (inline) url('build/_base.forms.css');
+@import (inline) url('build/_base.interactive.css');

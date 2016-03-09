@@ -4,20 +4,18 @@
 \*################################*/
 
 
-#XMETER {
-  // This tool is used on **containers of floats** (not on floats themselves).
-  // It pushes subsequent content to the bottom of the container.
-  //
-  // ^author
-  // : Chris Harevy
-  // ^updated
-  // : 2016-02-08
-  .clearfix() {
-    &::after {
-      content: ' '; // older browsers do not support empty content ('')
-      display: block;
-      height: 0;
-      clear: both;
-    }
+// This tool is used on **containers of floats** (not on floats themselves).
+// It pushes subsequent content to the bottom of the container.
+//
+// ^author
+// : Chris Harevy
+// ^updated
+// : 2016-02-08
+.clearfix() {
+  &::after {
+    content: ' '; // older browsers do not support empty content ('')
+    display: block;
+    height: 0;
+    clear: both;
   }
 }

@@ -8,8 +8,8 @@
 @import (reference) url('__tool.module.fontsize.less');
 
 
-@color_gray_fb:     #c0c0c0; // fallback
-@color_gray:        fadeout(#000, 75%);
+@p-color_gray_fb: #c0c0c0; // fallback
+@p-color_gray:    fadeout(#000, 75%);
 
 // consistent borders for all
 fieldset,
@@ -17,10 +17,10 @@ input,
 select,
 textarea,
 button {
-  #XMETER .border-vert(all; 1px);
+  .border-vert(all; 1px);
   border-style: solid;
-  border-color: @color_gray_fb;
-  border-color: @color_gray;
+  border-color: @p-color_gray_fb;
+  border-color: @p-color_gray;
 }
 
 fieldset {
@@ -38,26 +38,24 @@ button {
 // small font size for textual inputs
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 textarea {
-  #XMETER .VARS();
-  #XMETER .font-size-block(@xmeter_font_size_h6);
+  .font-size-block(@g-font_size_h6);
 }
 
 textarea {
   width: 30rem;
-  #XMETER .VARS();
-  height: 6 * @xmeter_vru;
-  line-height: @xmeter_line_height; // override browser-default (simply looks better)
+  height: 6 * @g-vru;
+  line-height: @g-line_height; // override browser-default (simply looks better)
 }
 
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
-  background-color: @color_gray_fb;
-  background-color: @color_gray;
+  background-color: @p-color_gray_fb;
+  background-color: @p-color_gray;
 }
 
 // Override content-box in Normalize (* in base.generic isn’t specific enough)
 input[type="search"] {
-  #XMETER .box-sizing(border-box);
+  .box-sizing(border-box);
 }

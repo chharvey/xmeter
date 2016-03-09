@@ -1,24 +1,25 @@
 {
   "name": "xmeter",
-  "version": "3.6.0",
+  "version": "4.0.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
-  "dependencies": {
-    "normalize.css": "~3.0.3",
-    "resetcss": "^1.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "clean-css": "^3.4.5",
     "jade": "^1.11.0",
     "less": "^2.5.3",
-    "lessc-each": "^1.1.0"
+    "lessc-each": "^1.1.0",
+    "normalize.css": "^3.0.3",
+    "resetcss": "^1.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
+    "jade:all": "jade doc/test.jade",
+    "lessc:doc": "lessc doc/styles/doc.less doc/styles/doc.css",
+    "lessc:xmeter": "lessc-each src/ build/  ;  lessc xmeter.less xmeter.css",
+    "lessc:all": "npm run lessc:doc  ;  npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
-    "jade:all": "jade -P {test,test-forms}.jade",
-    "build": "npm run lessc  ;  npm run minify  ;  npm run jade:all"
+    "build": "npm run jade:all  ;  npm run lessc:all  ;  npm run minify"
   },
   "repository": {
     "type": "git",
@@ -38,5 +39,5 @@
   "bugs": {
     "url": "https://github.com/chharvey/xmeter/issues"
   },
-  "homepage": "https://chharvey.github.io/xmeter/"
+  "homepage": "https://github.com/chharvey/xmeter/blob/gh-pages/README.md"
 }
