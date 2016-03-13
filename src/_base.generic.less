@@ -55,20 +55,18 @@ data, time, code, kbd, samp {
 }
 
 // Elements with a transparent content model
-// should inherit their display and line-height, except
-// if they are inside an element containing
-// only text and/or other inline elements.
-// This behavior may be overrided with classes/inline styles.
+// should display what their contents display.
 a, s, ins, del {
-  display: inherit;
-  line-height: inherit;
-  h1 > &, h2 > &, h3 > &, h4 > &, h5 > &, h6 > &,
-  p > &, pre > &,
+  // display: inherit;
+  // line-height: inherit;
+  // h1 > &, h2 > &, h3 > &, h4 > &, h5 > &, h6 > &,
+  // p > &, pre > &,
   // figure > &, figcaption > &, blockquote > &,
   // li > &, dt > &, dd > &,
   // caption > &, th > &, td > &,
-  legend > &, summary > & {
-    display: inline;
-    line-height: 0;
-  }
+  // legend > &, summary > & {
+  //   display: inline;
+  //   line-height: 0;
+  // }
+  display: contents;
 }
