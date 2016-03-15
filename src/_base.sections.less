@@ -7,6 +7,16 @@
 @import (reference) url('__tool.module.fontsize.less');
 
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  // addresses support for `rem` units (otherwise these would be in `body` selector)
+  font-size: @g-font_size;
+  line-height: @g-line_height;
+}
 body {
 }
 main {
