@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 4.0.0
+    Version: 4.0.1
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter/blob/gh-pages/README.md
@@ -580,10 +580,6 @@ th {
     text-shadow: none !important;
   }
 }
-html {
-  font-size: 16px;
-  line-height: 1.5;
-}
 h1,
 h2,
 h3,
@@ -633,99 +629,28 @@ time,
 code,
 kbd,
 samp {
-  display: inline;
   line-height: 0;
 }
 a,
 s,
 ins,
 del {
-  display: inherit;
-  line-height: inherit;
-}
-h1 > a,
-h1 > s,
-h1 > ins,
-h1 > del,
-h2 > a,
-h2 > s,
-h2 > ins,
-h2 > del,
-h3 > a,
-h3 > s,
-h3 > ins,
-h3 > del,
-h4 > a,
-h4 > s,
-h4 > ins,
-h4 > del,
-h5 > a,
-h5 > s,
-h5 > ins,
-h5 > del,
-h6 > a,
-h6 > s,
-h6 > ins,
-h6 > del,
-p > a,
-p > s,
-p > ins,
-p > del,
-pre > a,
-pre > s,
-pre > ins,
-pre > del,
-figure > a,
-figure > s,
-figure > ins,
-figure > del,
-figcaption > a,
-figcaption > s,
-figcaption > ins,
-figcaption > del,
-blockquote > a,
-blockquote > s,
-blockquote > ins,
-blockquote > del,
-li > a,
-li > s,
-li > ins,
-li > del,
-dt > a,
-dt > s,
-dt > ins,
-dt > del,
-dd > a,
-dd > s,
-dd > ins,
-dd > del,
-caption > a,
-caption > s,
-caption > ins,
-caption > del,
-th > a,
-th > s,
-th > ins,
-th > del,
-td > a,
-td > s,
-td > ins,
-td > del,
-legend > a,
-legend > s,
-legend > ins,
-legend > del,
-summary > a,
-summary > s,
-summary > ins,
-summary > del {
-  display: inline;
-  line-height: 0;
+  display: contents;
 }
 
 /*################################*\
     xmeter  |  _base.sections.less
 \*################################*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  font-size: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
 h1,
 h2,
 h3,
@@ -768,13 +693,13 @@ h1 {
   margin-top: 0;
   padding-top: 1.5rem;
 }
-hr {
-  display: none;
-}
 
 /*################################*\
     xmeter  |  _base.grouping.less
 \*################################*/
+hr {
+  display: none;
+}
 
 /*################################*\
     xmeter  |  _base.grouping.paras.less

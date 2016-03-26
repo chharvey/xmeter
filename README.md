@@ -52,7 +52,7 @@ at the top of your stylesheet. Then when you want to “call” the mixin, do
 }
 ```
 
-To use the xmeter variables, import the `__settings` stylesheet.
+To use the Xmeter global variables, import the `__settings` stylesheet.
 
 ```less
 @import (reference) url('/node_modules/xmeter/src/__settings.less');

@@ -1,19 +1,9 @@
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
 /*================================*\
     doc.less
 \*================================*/
-@import (reference) url('../../src/__settings.less');
-@import (reference) url('../../src/__tool.module.borders.less');
-
-
-// Stylesheet for Xmeter documentation files.
-
-
 body {
   background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
   background-size: 1px 24px;
@@ -29,8 +19,9 @@ body {
 .x-c-Fig {
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: (0.5*@g-vru) 0.5rem;
-  .border-vert(all; 1px);
+  padding: 0.75rem 0.5rem;
+  border-width: 1px;
+  margin-top: -2px;
   border-style: solid;
   border-color: #e5eaef;
   border-radius: 8px;
