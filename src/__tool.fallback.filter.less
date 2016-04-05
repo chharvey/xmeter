@@ -1,0 +1,22 @@
+
+/*################################*\
+    xmeter  |  __tool.fallback.filter.less
+\*################################*/
+
+
+// Applies a graphical filter effects on an element.
+// See `https://developer.mozilla.org/en-US/docs/Web/CSS/filter`
+//
+// ^params
+// @filter - the CSS filter effect(s). If more than one, they must be space-separated.
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-04-05
+.filter(@filter) {
+  -webkit-filter: @filter;
+     -moz-filter: @filter;
+      -ms-filter: @filter;
+       -o-filter: @filter;
+          filter: @filter;
+}
