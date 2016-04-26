@@ -4,7 +4,6 @@
 \*################################*/
 @import (reference) url('__settings.less');
 @import (reference) url('__tool.fallback.box-sizing.less');
-@import (reference) url('__tool.module.spacing.less');
 
 
 * {
@@ -37,11 +36,11 @@ p, pre, figure, blockquote,
 ol, ul, dl,
 table,
 fieldset {
-  .spacing-bottom(@g-vru);
+  margin-bottom: @g-vru;
 }
 li, dt, dd {
   > ol, > ul, > dl {
-    .spacing-bottom(0); // undo default spacing-bottom for nested lists
+    margin-bottom: 0; // undo default bottom spacing for nested lists
   }
 }
 

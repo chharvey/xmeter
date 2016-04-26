@@ -3,7 +3,6 @@
     xmeter  |  _base.sections.less
 \*################################*/
 @import (reference) url('__settings.less');
-@import (reference) url('__tool.module.spacing.less');
 @import (reference) url('__tool.module.fontsize.less');
 
 
@@ -43,7 +42,7 @@ h6 { .font-size-block(@g-font_size_h6); }
 
 h1 {
   margin-top: 0; // undo Normalize
-  .spacing-top(@g-vru);
+  padding-top: @g-vru;
 }
 
 address {
