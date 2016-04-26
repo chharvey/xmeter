@@ -24,6 +24,13 @@
   }
 }
 
+html {
+  // addresses support for `rem` units (otherwise these would be in `body` selector)
+  font-size: @g-font_size;
+  font-size: @g-1rem; // HACK fixes Chrome inheritance bug
+  line-height: @g-line_height;
+}
+
 // Vertical spacing between typographical blocks
 h1, h2, h3, h4, h5, h6,
 p, pre, figure, blockquote,
