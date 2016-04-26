@@ -130,6 +130,10 @@ for a demo.
   (dubbed a “vertical rhythm unit” or “vru”) regardless of font size, and
   typographical elements (headings, paragraphs, figures, blockquotes, lists,
   tables, etc.) are separated by integer multiples of that height.
+- The following convention is used to preserve vertical rhythm:
+  - Bottom margin is added to an element in order to push subsequent elements down the page.
+  - Top padding is added to an element to push *itself* down the page.
+  - Negative top margin is added to an element to pull it up the page.
 - Font-size for `html` is set to `100%` to accommodate for user agent settings.
   All other font-sizes are relative (either `rem`s or `em`s, no pixels or inches).
 - All line-height values are unitless.
