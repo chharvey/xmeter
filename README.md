@@ -94,21 +94,16 @@ unclassed HTML elements before any specific classes and styles get added on.
 
 See the test page (`doc/test.html`) for a preview.
 
-To install:
-
-    $ bower install https://github.com/chharvey/xmeter.git # not on bower registry
-
-To reference this stylesheet on your own site:
-
-```html
-<link rel="stylesheet" href="/bower_components/xmeter/xmeter.css"/>
+Locally
 ```
-
-If for some reason you do not have this stylesheet installed locally, you may
-fetch it off the web as you would from a CDN (though this is not recommended).
-
+$ npm install xmeter
+```
 ```html
-<link rel="stylesheet" href="https://chharvey.github.io/xmeter/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/xmeter[.min].css"/>
+```
+Remotely (from a CDN; not recommended)
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/chharvey/xmeter/master/xmeter[.min].css"/>
 ```
 
 ## About
