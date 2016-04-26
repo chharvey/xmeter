@@ -2,7 +2,6 @@
 /*################################*\
     xmeter  |  __tool.module.borders.less
 \*################################*/
-@import (reference) url('__tool.module.spacing.less');
 
 
 // The following mixins adjust border widths for **BLOCK** Objects only! They will keep the
@@ -25,21 +24,21 @@
 // : 2015-05-11
 .border-vert(top; @width: 0) {
   border-top-width: @width;
-  .pull-this(@width);
+  margin-top: (-@width);
 }
 
 .border-vert(bottom; @width: 0) {
   border-bottom-width: @width;
-  .pull-this(@width);
+  margin-top: (-@width);
 }
 
 .border-vert(topbot; @width: 0) {
   border-top-width:    @width;
   border-bottom-width: @width;
-  .pull-this(2 * @width);
+  margin-top: (-2 * @width);
 }
 
 .border-vert(all; @width: 0) {
   border-width: @width;
-  .pull-this(2 * @width);
+  margin-top: (-2 * @width);
 }

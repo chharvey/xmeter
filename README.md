@@ -38,7 +38,7 @@ with `__tool`, from which to pick and choose to use for your package.
 
 If you want to use a particular tool in your stylesheet, you will have to
 `@import (reference)` the stylesheet for that tool. For example,
-if you plan to use the `.font-size-block()` mixin in your Less, you must include
+if you plan to use the `.font-size-el()` mixin in your Less, you must include
 
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.module.fontsize.less');
@@ -48,7 +48,7 @@ at the top of your stylesheet. Then when you want to “call” the mixin, do
 
 ```less
 .my-selector {
-  .font-size-block(2.0; 1.5);
+  .font-size-el(2.0; 1.5);
 }
 ```
 
@@ -137,21 +137,26 @@ for a demo.
 - Font-size for `html` is set to `100%` to accommodate for user agent settings.
   All other font-sizes are relative (either `rem`s or `em`s, no pixels or inches).
 - All line-height values are unitless.
-- Units for font-size, margin, and padding on block elements are in `rem`s
+- Units for font-size, margin, and padding on **modules** (not explicitly defined in this project)
+  should be set in `rem`s, so that their vertical typography remains the same
+  regardless of where that module is placed (style does not depend on location).
+- Within a module however, font-size, margin, and padding on an element
+  should be set in `em`s, so that its vertical typography scales with
+  its parent module’s font size.
+- ~~Units for font-size, margin, and padding on block elements are in `rem`s
   rather than `em`s, thus the size of an element’s font remains the same
-  regardless of where that element is placed (style does not depend on location).
-- **However:** `em`s are used on text-level elements, so that these elements
+  regardless of where that element is placed (style does not depend on location).~~
+- ~~`em`s are used on text-level elements, so that these elements
   scale accordingly when nested inside elements with a larger font size
-  (style *does* depend on location).
-- Line-height for all inline (text-level) elements is 0. This allows the
-  vertical rhythm to remain unaffected.
+  (style *does* depend on location).~~
+- Line-height for all inline (text-level) elements is 0.
+  This preserves vertical rhythm within a block.
 - Fallback tools for browser discrepancies on CSS3 properties.
 - Module tools add styles to blocks (font-size, borders) without disrupting vertical rhythm
 - A few other modules to make your life easier:
   - `.sprite()` sets background image sprites
   - `.clearfix()` does exactly what it sounds like
   - `.delimiters()` sets quotes and other things
-  - `.translucent()` **may be removed in the future**
 - Minor, albeit prettier, style changes to some text-level elements from the browser default.
 
 ## Changelog

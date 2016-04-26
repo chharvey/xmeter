@@ -1,0 +1,24 @@
+
+/*################################*\
+    xmeter  |  __tool.module.vertspacing.less
+\*################################*/
+@import (reference) url('__settings.less');
+
+
+// Sets the vertical spacing between typographical blocks.
+// Add elements to this list if necessary.
+// ^params
+// @spacing-bottom (default: @g-vru) - the length of space to add to the bottom of the typographical block
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-04-26
+.vertspacing(@spacing-bottom: @g-vru) {
+  h1, h2, h3, h4, h5, h6,
+  p, pre, figure, blockquote,
+  ol, ul, dl,
+  table,
+  fieldset {
+    margin-bottom: @spacing-bottom;
+  }
+}
