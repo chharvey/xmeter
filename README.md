@@ -38,7 +38,7 @@ with `__tool`, from which to pick and choose to use for your package.
 
 If you want to use a particular tool in your stylesheet, you will have to
 `@import (reference)` the stylesheet for that tool. For example,
-if you plan to use the `.font-size-block()` mixin in your Less, you must include
+if you plan to use the `.font-size-el()` mixin in your Less, you must include
 
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.module.fontsize.less');
@@ -48,7 +48,7 @@ at the top of your stylesheet. Then when you want to “call” the mixin, do
 
 ```less
 .my-selector {
-  .font-size-block(2.0; 1.5);
+  .font-size-el(2.0; 1.5);
 }
 ```
 
