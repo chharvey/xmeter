@@ -8,17 +8,20 @@
 // Sets the vertical spacing between typographical blocks.
 // Add elements to this list if necessary.
 // ^params
-// @spacing-bottom (default: @g-vru) - the length of space to add to the bottom of the typographical block
+// @spacing (default: @g-vru) - the length of space to add between typographical blocks
 // ^author
 // : Chris Harvey
 // ^updated
 // : 2016-04-26
-.vertspacing(@spacing-bottom: @g-vru) {
+.vertspacing(@spacing: @g-vru) {
   h1, h2, h3, h4, h5, h6,
   p, pre, figure, blockquote,
   ol, ul, dl,
   table,
   fieldset {
-    margin-bottom: @spacing-bottom;
+    margin-bottom: @spacing;
+  }
+  h1 {
+    padding-top: @spacing;
   }
 }
