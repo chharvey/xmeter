@@ -103,8 +103,9 @@ $ npm install xmeter
 ```
 Remotely (from a CDN; not recommended)
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/chharvey/xmeter/master/xmeter[.min].css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/xmeter[.min].css"/>
 ```
+where `‹master›` can be a branch or a tag, and optional `[.min]` is for the minified version.
 
 ## About
 
