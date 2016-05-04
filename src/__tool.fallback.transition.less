@@ -39,3 +39,20 @@
        -o-transition-delay: @delay;
           transition-delay: @delay;
 }
+
+// Applies multiple transition timing effects on an element.
+//
+// ^params
+// : @arg - (optional: `all 0ms ease 0ms`) a list of (zero or more) comma-separated transition effects.
+//          Must be terminated with a semicolon (;).
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2014-06-17
+.transition-multi(@arg: all 0ms ease 0ms) {
+  -webkit-transition: @arg;
+     -moz-transition: @arg;
+      -ms-transition: @arg;
+       -o-transition: @arg;
+          transition: @arg;
+}
