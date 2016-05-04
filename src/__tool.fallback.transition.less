@@ -4,12 +4,15 @@
 \*################################*/
 
 
-// Applies a transition timing effect on an Element.
+// Applies a single transition timing effect on an element.
+// Each parameter must be a list of (zero or more) comma-separated values.
+// The default value of each parameter is the default value of its corresponding css property.
 //
-// @props - the CSS property name(s). If more than one, they must be comma-separated
-// @dura  - (optional: `0ms`) the length in time, in milliseconds, the transition is to be in effect
-// @func  - (optional: `ease`) the timing-function. See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
-// @delay - (optional: `0ms`) the length in time, in milliseconds, the transition will wait before starting
+// ^params
+// : @props - the CSS property name(s)
+// : @dura  - (optional: `0ms`) the length(s) in time, in milliseconds, the transition is to be in effect
+// : @func  - (optional: `ease`) the timing-function(s). See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
+// : @delay - (optional: `0ms`) the length(s) in time, in milliseconds, the transition will wait before starting
 // ^author
 // : Chris Harvey
 // ^updated
