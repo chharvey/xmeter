@@ -1,0 +1,23 @@
+
+/*################################*\
+    xmeter  |  __tool.fallback.filter.less
+\*################################*/
+
+
+// Applies one or more graphical filter effects on an element.
+//
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+// ^params
+// : @arg - a list of space-separated filter functions
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-04-05
+.filter(@arg) {
+  -webkit-filter: @arg;
+     -moz-filter: @arg;
+      -ms-filter: @arg;
+       -o-filter: @arg;
+          filter: @arg;
+}
