@@ -602,6 +602,9 @@ table,
 fieldset {
   margin-bottom: 1.5rem;
 }
+h1 {
+  padding-top: 1.5rem;
+}
 li > ol,
 dt > ol,
 dd > ol,
@@ -685,7 +688,6 @@ h6 {
 }
 h1 {
   margin-top: 0;
-  padding-top: 1.5rem;
 }
 
 /*################################*\
