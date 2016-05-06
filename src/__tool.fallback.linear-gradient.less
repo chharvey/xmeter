@@ -14,13 +14,14 @@
 // See [WPD](http://docs.webplatform.org/wiki/css/functions/linear-gradient) for more info.
 //
 // ^params
-// : @arg - a list of comma-separated components (each as a component of one gradient value).
+// : @arg - (default: `0deg, #fff`) a list of comma-separated components,
+//          each as a component of one gradient value.
 //          Must be terminated with a semicolon (;).
 // ^author
 // : Chris Harvey
 // ^updated
 // : 2014-07-08
-.linear-gradient(@arg) {
+.linear-gradient(@arg: 0deg, #fff;) {
   background-image: -webkit-linear-gradient(@arg);
   background-image:    -moz-linear-gradient(@arg);
   background-image:     -ms-linear-gradient(@arg);

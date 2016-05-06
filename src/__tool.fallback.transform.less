@@ -9,12 +9,12 @@
 // ^url
 // : https://developer.mozilla.org/en-US/docs/Web/CSS/transform
 // ^params
-// : @arg - a list of space-separated transformation functions
+// : @arg - (default: `none`) a list of space-separated transformation functions
 // ^author
 // : Chris Harvey
 // ^updated
 // : 2016-05-04
-.transform(@arg) {
+.transform(@arg: none) {
   -webkit-transform: @arg;
      -moz-transform: @arg;
       -ms-transform: @arg;
