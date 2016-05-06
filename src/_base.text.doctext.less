@@ -23,7 +23,7 @@ b {
 abbr {
   &[title] {
     cursor: help;
-    border-bottom: 0; // undo Normalize
+    text-decoration: none; // undo Normalize
   }
 }
 var {
@@ -37,7 +37,7 @@ cite {
   font-style: italic;
 }
 sup, sub {
-  font-size: 0.75em;
+  font-size: (@g-font_size_h6 * 1em);
 }
 sup {
 }

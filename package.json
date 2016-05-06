@@ -9,7 +9,7 @@
     "jade": "^1.11.0",
     "less": "^2.5.3",
     "lessc-each": "^1.1.0",
-    "normalize.css": "^3.0.3",
+    "normalize.css": "^4.1.1",
     "resetcss": "^1.0.2"
   },
   "scripts": {
