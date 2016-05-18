@@ -4,25 +4,30 @@
 \*################################*/
 
 
-// Applies individual longhand transition-* properties on an element.
-// Each parameter must be a list of (zero or more) comma-separated values.
-// The default value of each parameter is the default value of its
-// corresponding longhand css property.
+// Applies multiple transition timing effects on an element.
+// Each transition effect must have the syntax:
+//     [ none | ‹single-transition-property› ] || ‹time› || ‹single-transition-timing-function› || ‹time›
+// If more than one, list of transitions must be comma-separated and terminated with a semicolon.
 //
 // ^params
-// : @props - (default: `all`)  the CSS property name(s)
-// : @dura  - (default: `0ms`)  the length(s) in time, in milliseconds, the transition is to be in effect
-// : @func  - (default: `ease`) the timing-function(s). See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
-// : @delay - (default: `0ms`)  the length(s) in time, in milliseconds, the transition will wait before starting
+// : @arg - (optional: `all 0ms ease 0ms`) a list of (zero or more) comma-separated transition effects.
+//          Must be terminated with a semicolon (;).
 // ^author
 // : Chris Harvey
 // ^updated
 // : 2016-05-18
-.transitions(@props: all; @dura: 0ms; @func: ease; @delay: 0ms) {
-  .transition-property(@props);
-  .transition-duration(@dura);
-  .transition-timing-function(@func);
-  .transition-delay(@delay);
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. see `.transition()` below
+///////////////////////////////////////////////////////////////////////////////
+.transition-multi(@arg: all 0ms ease 0ms) {
+  .transition(@arg);
+}
+.transition(@arg: all 0ms ease 0ms) {
+  -webkit-transition: @arg;
+     -moz-transition: @arg;
+      -ms-transition: @arg;
+       -o-transition: @arg;
+          transition: @arg;
 }
 
 // The following 4 mixins set one or more longhand transition-* values on an element
@@ -70,29 +75,23 @@
           transition-delay: @delay;
 }
 
-// Applies multiple transition timing effects on an element.
-// Each transition effect must have the syntax:
-//     [ none | ‹single-transition-property› ] || ‹time› || ‹single-transition-timing-function› || ‹time›
-// If more than one, list of transitions must be comma-separated and terminated with a semicolon.
+// Applies individual longhand transition-* properties on an element.
+// Each parameter must be a list of (zero or more) comma-separated values.
+// The default value of each parameter is the default value of its
+// corresponding longhand css property.
 //
 // ^params
-// : @arg - (optional: `all 0ms ease 0ms`) a list of (zero or more) comma-separated transition effects.
-//          Must be terminated with a semicolon (;).
+// : @props - (default: `all`)  the CSS property name(s)
+// : @dura  - (default: `0ms`)  the length(s) in time, in milliseconds, the transition is to be in effect
+// : @func  - (default: `ease`) the timing-function(s). See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
+// : @delay - (default: `0ms`)  the length(s) in time, in milliseconds, the transition will wait before starting
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-05-04
 // : 2016-05-18
-///////////////////////////////////////////////////////////////////////////////
-// CHANGED: THIS MIXIN IS DEPRECATED. see `.transition()` below
-///////////////////////////////////////////////////////////////////////////////
-.transition-multi(@arg: all 0ms ease 0ms) {
-  .transition(@arg);
-}
-.transition(@arg: all 0ms ease 0ms) {
-  -webkit-transition: @arg;
-     -moz-transition: @arg;
-      -ms-transition: @arg;
-       -o-transition: @arg;
-          transition: @arg;
+.transitions(@props: all; @dura: 0ms; @func: ease; @delay: 0ms) {
+  .transition-property(@props);
+  .transition-duration(@dura);
+  .transition-timing-function(@func);
+  .transition-delay(@delay);
 }
