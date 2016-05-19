@@ -600,17 +600,6 @@ fieldset {
 h1 {
   padding-top: 1.5rem;
 }
-li > ol,
-dt > ol,
-dd > ol,
-li > ul,
-dt > ul,
-dd > ul,
-li > dl,
-dt > dl,
-dd > dl {
-  margin-bottom: 0;
-}
 span,
 br,
 em,
@@ -711,6 +700,17 @@ figure {
 /*################################*\
     xmeter  |  _base.grouping.lists.less
 \*################################*/
+li > ol,
+li > ul,
+li > dl,
+dt > ol,
+dt > ul,
+dt > dl,
+dd > ol,
+dd > ul,
+dd > dl {
+  margin-bottom: 0;
+}
 ol,
 ul {
   padding: 0 0 0 4rem;
