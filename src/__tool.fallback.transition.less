@@ -6,7 +6,7 @@
 
 // Applies multiple transition timing effects on an element.
 // Each transition effect must have the syntax:
-//     [ none | ‹single-transition-property› ] || ‹time› || ‹single-transition-timing-function› || ‹time›
+//     [ none | all | ‹single-transition-property› ] || ‹time› || ‹single-transition-timing-function› || ‹time›
 // If more than one, list of transitions must be comma-separated and terminated with a semicolon.
 //
 // ^params
@@ -27,7 +27,7 @@
 // The following 4 mixins set one or more longhand transition-* values on an element
 // (`transition-property`, `transition-duration`, `transition-timing-function`, and
 // `transition-delay`, repsectively).
-// Each mixin takes one argument, which is a list of (one or more) comma-separated values.
+// Each mixin takes one argument, which is a list of (zero or more) comma-separated values.
 // If the list contains more than one value, you MUST terminate it with a semicolon,
 // or the Less compiler will interpret your comma-separated list as multiple arguments.
 //
