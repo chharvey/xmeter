@@ -4,6 +4,11 @@
 \*################################*/
 
 
+ol, ul, dl {
+  li > &, dt > &, dd > & {
+    margin-bottom: 0; // undo default bottom spacing for nested lists
+  }
+}
 ol, ul {
   padding: 0 0 0 4rem;
   li > &,
