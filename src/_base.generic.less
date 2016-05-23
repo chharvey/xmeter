@@ -26,18 +26,13 @@
 
 html {
   // addresses support for `rem` units (otherwise these would be in `body` selector)
-  font-size: @g-font_size;
+  font-size: 100%; // defined by user agent
   font-size: @g-1rem; // HACK fixes Chrome inheritance bug
   line-height: @g-line_height;
 }
 
 // Vertical spacing between typographical blocks
 .vertspacing();
-li, dt, dd {
-  > ol, > ul, > dl {
-    margin-bottom: 0; // undo default bottom spacing for nested lists
-  }
-}
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
