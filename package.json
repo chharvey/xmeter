@@ -14,6 +14,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "unbuild": "rm doc/test.html doc/styles/doc.css xmeter.css xmeter.min.css",
     "jade:all": "jade doc/test.jade",
     "lessc:doc": "lessc doc/styles/doc.less doc/styles/doc.css",
     "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
