@@ -30,8 +30,7 @@
     "default",
     "stylesheet",
     "normalize",
-    "vertical",
-    "rhythm",
+    "vertical rhythm",
     "less"
   ],
   "author": "Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)",
@@ -39,5 +38,5 @@
   "bugs": {
     "url": "https://github.com/chharvey/xmeter/issues"
   },
-  "homepage": "https://github.com/chharvey/xmeter/blob/gh-pages/README.md"
+  "homepage": "https://github.com/chharvey/xmeter#readme"
 }
