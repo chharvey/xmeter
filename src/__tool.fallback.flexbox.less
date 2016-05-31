@@ -177,6 +177,43 @@
                       order: @integer;
 }
 
+// Shorthand for `flex-grow`, `flex-shrink`, and `flex-basis` properties (in that order).
+// Options for the argument:
+// 0. `initial` - (default) computes to `0 1 auto` [1]
+// 1. `none`    - computes to `0 0 auto`           [2]
+// 2. `auto`    - computes to `1 1 auto`           [3]
+// 3. `‹flex-grow›`
+// 4. `‹flex-grow› ‹flex-shrink›`
+// 5. `‹flex-basis›`
+// 6. `‹flex-grow› ‹flex-basis›`
+// 7. `‹flex-grow› ‹flex-shrink› ‹flex-basis›`
+// Notes:
+// [1] `initial` - the flex item retains its content width but will shrink
+//     if there is not enough space in the flex container.
+//     It will not grow if there is extra space.
+// [2] `none` - the flex item is set to its content width, and
+//     will neither grow nor shrink, regardless of
+//     whether there is extra or not enough space in the container.
+// [3] `auto` - the flex item is set to its content width, but
+//     will either grow or shrink, based on
+//     whether there is extra or not enough space in the container.
+//
+// @arg - a space-separated list of:
+//        none | [ ‹number› ‹number›? || ‹length› ]
+//        (see options above)
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2015-09-03
+.flex(@arg: initial) {
+  -webkit-box-flex: @arg;
+     -moz-box-flex: @arg;
+      -webkit-flex: @arg;
+         -moz-flex: @arg;
+          -ms-flex: @arg;
+              flex: @arg;
+}
+
 // Specifies what amount of space inside the flex container this item should take up.
 //
 // ^param
@@ -223,42 +260,5 @@
   -webkit-flex-basis: @width;
       -ms-flex-basis: @width;
           flex-basis: @width;
-}
-
-// Shorthand for `flex-grow`, `flex-shrink`, and `flex-basis` properties (in that order).
-// Options for the argument:
-// 0. `initial` - (default) computes to `0 1 auto` [1]
-// 1. `none`    - computes to `0 0 auto`           [2]
-// 2. `auto`    - computes to `1 1 auto`           [3]
-// 3. `‹flex-grow›`
-// 4. `‹flex-grow› ‹flex-shrink›`
-// 5. `‹flex-basis›`
-// 6. `‹flex-grow› ‹flex-basis›`
-// 7. `‹flex-grow› ‹flex-shrink› ‹flex-basis›`
-// Notes:
-// [1] `initial` - the flex item retains its content width but will shrink
-//     if there is not enough space in the flex container.
-//     It will not grow if there is extra space.
-// [2] `none` - the flex item is set to its content width, and
-//     will neither grow nor shrink, regardless of
-//     whether there is extra or not enough space in the container.
-// [3] `auto` - the flex item is set to its content width, but
-//     will either grow or shrink, based on
-//     whether there is extra or not enough space in the container.
-//
-// @arg - a space-separated list of:
-//        none | [ ‹number› ‹number›? || ‹length› ]
-//        (see options above)
-// ^author
-// : Chris Harvey
-// ^updated
-// : 2015-09-03
-.flex(@arg: initial) {
-  -webkit-box-flex: @arg;
-     -moz-box-flex: @arg;
-      -webkit-flex: @arg;
-         -moz-flex: @arg;
-          -ms-flex: @arg;
-              flex: @arg;
 }
 //++++ end # ITEMS ++++//
