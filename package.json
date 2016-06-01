@@ -14,9 +14,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "unbuild": "rm doc/test.html doc/styles/doc.css xmeter.css xmeter.min.css",
-    "jade:all": "jade doc/test.jade",
-    "lessc:doc": "lessc doc/styles/doc.less doc/styles/doc.css",
+    "unbuild": "rm docs/base.html docs/obj.html docs/styles/doc.css xmeter.css xmeter.min.css",
+    "jade:docs": "jade docs/{base,obj}.jade",
+    "jade:all": "npm run jade:docs",
+    "lessc:docs": "lessc docs/styles/doc.less docs/styles/doc.css",
     "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:doc  &&  npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
