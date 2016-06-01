@@ -1,23 +1,18 @@
-doctype html
-html(lang="en")
-  - var project_name = 'Xmeter'
+extends doc.tpl.jade
+
+block append vars
   - var page_title = 'Base Typography'
-  head
-    title #{page_title} | #{project_name}
-    meta(charset="utf-8")
-    meta(name="description" content="A test of bare, unclassed elements.")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="stylesheet" href="../xmeter.css")
-    link(rel="stylesheet" href="styles/doc.css")
-  body
-    main
-      include includes/_main-content.jade
-      +main-content({
-        main_heading: project_name + ' — ' + page_title
-      , classnames: {
-          figure: 'x-figure'
-        , code  : 'x-code'
-        }
-      })
+
+block main
+  include includes/_main-content.jade
+  +main-content({
+    main_heading: project_name + ' — ' + page_title
+  , classnames: {
+      figure: 'x-figure'
+    , code  : 'x-code'
+    }
+  })
+
+block append scripts
     script.
       document.querySelectorAll('#forms > form')[0].style.backgroundColor = '#fff'

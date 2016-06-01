@@ -1,177 +1,170 @@
-doctype html
-html(lang="en")
-  - var project_name = 'Xmeter'
+extends doc.tpl.jade
+
+block append vars
   - var page_title = 'Objects'
-  head
-    title #{page_title} | #{project_name}
-    meta(charset="utf-8")
-    meta(name="description" content="A test of bare, unclassed elements.")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="stylesheet" href="../xmeter.css")
-    link(rel="stylesheet" href="styles/doc.css")
-  body
-    main
-      h1= project_name + ' — ' + page_title
-      nav#table-contents
-        h2 Table of Contents
-        ol
-          li: a(href="#table-contents") Table of Contents
-          li: a(href="#block-object") The Block Object
-          li: a(href="#inline-object") The Inline Object
-          li: a(href="#bare-list") The Bare List
-          li: a(href="#flex-object") The Flex Object
-          li: a(href="#grid-object") The Grid Object
-      section#block-object
-        h2 The Block Object
-        figure.x-figure
-          p.
-            A simple block object. Use this class to display an element as a
-            #[span.o-Block block element,]
-            with an inherited line-height to maintain vertical rhythm.
-          pre.x-pre.
-            ... to display an element as a &lt;span class="#[u o-Block]"&gt;block element,&lt;/span&gt; with ...
-      section#inline-object
-        h2 The Inline Object
-        p.
-          A simple inline object. Use this class to display an element as an
-          inline element,
-          with zero line-height to maintain vertical rhythm.
-        p.
-          This class is useful for creating inline lists, that is,
-          lists whose items are each displayed one right after another, inline.
-        figure.x-figure
-          ul
-            li.o-Inline Burns &amp; McDonnell Engineering
-            li.o-Inline DIS-TRAN Steel, LLC
-            li.o-Inline EDM International
-            li.o-Inline Electrical Consultants, Inc.
-            li.o-Inline Fabrimet Inc.
-            li.o-Inline Falcon Steel Company
-          pre.x-pre.
-            &lt;ul&gt;
-              &lt;li class="#[u o-Inline]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-              &lt;li class="#[u o-Inline]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-              ...
-            &lt;/ul&gt;
-      section#bare-list
-        h2 The Bare List
-        p.
-          Use the Bare List object to remove the usual padding and list item markers accompanied by
-          (un)ordered lists. The result is a list of items, each on its own line.
-          Combine this class with other classes to create a variety of styles.
-        figure.x-figure
-          ul.o-ListBare
-            li Burns &amp; McDonnell Engineering
-            li DIS-TRAN Steel, LLC
-            li EDM International
-            li Electrical Consultants, Inc.
-            li Fabrimet Inc.
-            li Falcon Steel Company
-          pre.x-pre.
-            &lt;ul class="#[u o-ListBare]"&gt;
-              &lt;li&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-              &lt;li&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-              ...
-            &lt;/ul&gt;
-      section#flex-object
-        h2 The Flex Object
-        p.
-          A Flex Object is simply a container of flexible items arranged in one dimension.
-          It has the structure of a list in that all items share the same container
-          (unlike tables where items are in different rows), while at the same time
-          appearing like a table with rows and columns.
-        figure.x-figure
-          figcaption.
-            #[strong Figure 1.] A Flex Object with extra space.
-            #[s The flex items grow to fill the extra space.]
-            The flex items retain an automatic flex-basis, while the extra space
-            is distributed between the items.
-          ul.o-ListBare.o-Flex
-            li.o-Flex__Item Burns &amp; McDonnell Engineering
-            li.o-Flex__Item DIS-TRAN Steel, LLC
-            li.o-Flex__Item EDM International
-          pre.x-pre.
-            &lt;ul class="o-ListBare  #[u o-Flex]"&gt;
-              &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-              &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-              ...
-            &lt;/ul&gt;
-        figure.x-figure
-          figcaption.
-            #[strong Figure 2.] A Flex Object with not enough space.
-            The flex items shrink to fit in the alloted space.
-          ul.o-ListBare.o-Flex
-            li.o-Flex__Item Burns &amp; McDonnell Engineering
-            li.o-Flex__Item DIS-TRAN Steel, LLC
-            li.o-Flex__Item EDM International
-            li.o-Flex__Item Electrical Consultants, Inc.
-            li.o-Flex__Item Fabrimet Inc.
-            li.o-Flex__Item Falcon Steel Company
-            li.o-Flex__Item Sabre-FWT
-            li.o-Flex__Item HDR
-            li.o-Flex__Item Mitas Energy
-            li.o-Flex__Item Power Consulting Associates, LLC
-            li.o-Flex__Item Power Line Systems, Inc.
-            li.o-Flex__Item Quanta Services
-            li.o-Flex__Item ReliaPOLE Inspection Services
-          pre.x-pre.
-            &lt;ul class="o-ListBare  #[u o-Flex]"&gt;
-              &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-              &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-              ...
-            &lt;/ul&gt;
-      section#grid-object
-        h2 The Grid Object
-        p.
-          The Grid Object is similar to the Flex Object except that it can be extended
-          to two dimensions. Ideally, all the items within a #[i column] (or row) will
-          have the same flex-basis (that is, width or height, depending on the flex-direction).
-        p.
-          The Grid Object is flexible and responsive, adjusting the number of
-          columns based on screen size.
-          By default, each item has a flex-basis of 100%. This can be overridden
-          with the #[code.x-code flex-basis] property
-          (use Xmeter&rsquo;s #[code.x-code .flex-basis()] fallback mixin).
-        figure.x-figure
-          figcaption.
-            #[strong Figure 1.] A Grid Object with extra space.
-          ul.o-ListBare.o-Grid
-            li.o-Grid__Item Burns &amp; McDonnell Engineering
-            li.o-Grid__Item DIS-TRAN Steel, LLC
-            li.o-Grid__Item EDM International
-          pre.x-pre.
-            &lt;ul class="o-ListBare  #[u o-Grid]"&gt;
-              &lt;li class="#[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-              &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-              ...
-            &lt;/ul&gt;
-        figure.x-figure
-          figcaption.
-            #[strong Figure 2.] A Grid Object with not enough space.
-          ul.o-ListBare.o-Grid
-            li.o-Grid__Item Burns &amp; McDonnell Engineering
-            li.o-Grid__Item DIS-TRAN Steel, LLC
-            li.o-Grid__Item EDM International
-            li.o-Grid__Item Electrical Consultants, Inc.
-            li.o-Grid__Item Fabrimet Inc.
-            li.o-Grid__Item Falcon Steel Company
-            li.o-Grid__Item Sabre-FWT
-            li.o-Grid__Item HDR
-            li.o-Grid__Item Mitas Energy
-            li.o-Grid__Item Power Consulting Associates, LLC
-            li.o-Grid__Item Power Line Systems, Inc.
-            li.o-Grid__Item Quanta Services
-            li.o-Grid__Item ReliaPOLE Inspection Services
-            li.o-Grid__Item Sabre-FWT
-            li.o-Grid__Item SAE Towers
-            li.o-Grid__Item TAPP Steel Poles
-            li.o-Grid__Item Trinity Meyer Utility Structures
-            li.o-Grid__Item TRC Engineers
-            li.o-Grid__Item Underground Devices
-            li.o-Grid__Item Valmont Newmark
-          pre.x-pre.
-            &lt;ul class="o-ListBare  #[u o-Grid]"&gt;
-              &lt;li class="#[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-              &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-              ...
-            &lt;/ul&gt;
+
+block main
+  h1= project_name + ' — ' + page_title
+  nav#table-contents
+    h2 Table of Contents
+    ol
+      li: a(href="#table-contents") Table of Contents
+      li: a(href="#block-object") The Block Object
+      li: a(href="#inline-object") The Inline Object
+      li: a(href="#bare-list") The Bare List
+      li: a(href="#flex-object") The Flex Object
+      li: a(href="#grid-object") The Grid Object
+  section#block-object
+    h2 The Block Object
+    figure.x-figure
+      p.
+        A simple block object. Use this class to display an element as a
+        #[span.o-Block block element,]
+        with an inherited line-height to maintain vertical rhythm.
+      pre.x-pre.
+        ... to display an element as a &lt;span class="#[u o-Block]"&gt;block element,&lt;/span&gt; with ...
+  section#inline-object
+    h2 The Inline Object
+    p.
+      A simple inline object. Use this class to display an element as an
+      inline element,
+      with zero line-height to maintain vertical rhythm.
+    p.
+      This class is useful for creating inline lists, that is,
+      lists whose items are each displayed one right after another, inline.
+    figure.x-figure
+      ul
+        li.o-Inline Burns &amp; McDonnell Engineering
+        li.o-Inline DIS-TRAN Steel, LLC
+        li.o-Inline EDM International
+        li.o-Inline Electrical Consultants, Inc.
+        li.o-Inline Fabrimet Inc.
+        li.o-Inline Falcon Steel Company
+      pre.x-pre.
+        &lt;ul&gt;
+          &lt;li class="#[u o-Inline]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-Inline]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+  section#bare-list
+    h2 The Bare List
+    p.
+      Use the Bare List object to remove the usual padding and list item markers accompanied by
+      (un)ordered lists. The result is a list of items, each on its own line.
+      Combine this class with other classes to create a variety of styles.
+    figure.x-figure
+      ul.o-ListBare
+        li Burns &amp; McDonnell Engineering
+        li DIS-TRAN Steel, LLC
+        li EDM International
+        li Electrical Consultants, Inc.
+        li Fabrimet Inc.
+        li Falcon Steel Company
+      pre.x-pre.
+        &lt;ul class="#[u o-ListBare]"&gt;
+          &lt;li&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+  section#flex-object
+    h2 The Flex Object
+    p.
+      A Flex Object is simply a container of flexible items arranged in one dimension.
+      It has the structure of a list in that all items share the same container
+      (unlike tables where items are in different rows), while at the same time
+      appearing like a table with rows and columns.
+    figure.x-figure
+      figcaption.
+        #[strong Figure 1.] A Flex Object with extra space.
+        #[s The flex items grow to fill the extra space.]
+        The flex items retain an automatic flex-basis, while the extra space
+        is distributed between the items.
+      ul.o-ListBare.o-Flex
+        li.o-Flex__Item Burns &amp; McDonnell Engineering
+        li.o-Flex__Item DIS-TRAN Steel, LLC
+        li.o-Flex__Item EDM International
+      pre.x-pre.
+        &lt;ul class="o-ListBare  #[u o-Flex]"&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+    figure.x-figure
+      figcaption.
+        #[strong Figure 2.] A Flex Object with not enough space.
+        The flex items shrink to fit in the alloted space.
+      ul.o-ListBare.o-Flex
+        li.o-Flex__Item Burns &amp; McDonnell Engineering
+        li.o-Flex__Item DIS-TRAN Steel, LLC
+        li.o-Flex__Item EDM International
+        li.o-Flex__Item Electrical Consultants, Inc.
+        li.o-Flex__Item Fabrimet Inc.
+        li.o-Flex__Item Falcon Steel Company
+        li.o-Flex__Item Sabre-FWT
+        li.o-Flex__Item HDR
+        li.o-Flex__Item Mitas Energy
+        li.o-Flex__Item Power Consulting Associates, LLC
+        li.o-Flex__Item Power Line Systems, Inc.
+        li.o-Flex__Item Quanta Services
+        li.o-Flex__Item ReliaPOLE Inspection Services
+      pre.x-pre.
+        &lt;ul class="o-ListBare  #[u o-Flex]"&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+  section#grid-object
+    h2 The Grid Object
+    p.
+      The Grid Object is similar to the Flex Object except that it can be extended
+      to two dimensions. Ideally, all the items within a #[i column] (or row) will
+      have the same flex-basis (that is, width or height, depending on the flex-direction).
+    p.
+      The Grid Object is flexible and responsive, adjusting the number of
+      columns based on screen size.
+      By default, each item has a flex-basis of 100%. This can be overridden
+      with the #[code.x-code flex-basis] property
+      (use Xmeter&rsquo;s #[code.x-code .flex-basis()] fallback mixin).
+    figure.x-figure
+      figcaption.
+        #[strong Figure 1.] A Grid Object with extra space.
+      ul.o-ListBare.o-Grid
+        li.o-Grid__Item Burns &amp; McDonnell Engineering
+        li.o-Grid__Item DIS-TRAN Steel, LLC
+        li.o-Grid__Item EDM International
+      pre.x-pre.
+        &lt;ul class="o-ListBare  #[u o-Grid]"&gt;
+          &lt;li class="#[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+    figure.x-figure
+      figcaption.
+        #[strong Figure 2.] A Grid Object with not enough space.
+      ul.o-ListBare.o-Grid
+        li.o-Grid__Item Burns &amp; McDonnell Engineering
+        li.o-Grid__Item DIS-TRAN Steel, LLC
+        li.o-Grid__Item EDM International
+        li.o-Grid__Item Electrical Consultants, Inc.
+        li.o-Grid__Item Fabrimet Inc.
+        li.o-Grid__Item Falcon Steel Company
+        li.o-Grid__Item Sabre-FWT
+        li.o-Grid__Item HDR
+        li.o-Grid__Item Mitas Energy
+        li.o-Grid__Item Power Consulting Associates, LLC
+        li.o-Grid__Item Power Line Systems, Inc.
+        li.o-Grid__Item Quanta Services
+        li.o-Grid__Item ReliaPOLE Inspection Services
+        li.o-Grid__Item Sabre-FWT
+        li.o-Grid__Item SAE Towers
+        li.o-Grid__Item TAPP Steel Poles
+        li.o-Grid__Item Trinity Meyer Utility Structures
+        li.o-Grid__Item TRC Engineers
+        li.o-Grid__Item Underground Devices
+        li.o-Grid__Item Valmont Newmark
+      pre.x-pre.
+        &lt;ul class="o-ListBare  #[u o-Grid]"&gt;
+          &lt;li class="#[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
