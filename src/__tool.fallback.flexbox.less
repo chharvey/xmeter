@@ -181,12 +181,11 @@
 // Options for the argument:
 // 0. `initial` - (default) computes to `0 1 auto` [1]
 // 1. `none`    - computes to `0 0 auto`           [2]
-// 2. `auto`    - computes to `1 1 auto`           [3]
-// 3. `‹flex-grow›`
-// 4. `‹flex-grow› ‹flex-shrink›`
-// 5. `‹flex-basis›`
-// 6. `‹flex-grow› ‹flex-basis›`
-// 7. `‹flex-grow› ‹flex-shrink› ‹flex-basis›`
+// 2. `‹flex-grow›`                                [3]
+// 3. `‹flex-grow› ‹flex-shrink›`                  [3]
+// 4. `‹flex-basis›`                               [3]
+// 5. `‹flex-grow› ‹flex-basis›`                   [3]
+// 6. `‹flex-grow› ‹flex-shrink› ‹flex-basis›`
 // Notes:
 // [1] `initial` - the flex item retains its content width but will shrink
 //     if there is not enough space in the flex container.
@@ -194,9 +193,22 @@
 // [2] `none` - the flex item is set to its content width, and
 //     will neither grow nor shrink, regardless of
 //     whether there is extra or not enough space in the container.
-// [3] `auto` - the flex item is set to its content width, but
-//     will either grow or shrink, based on
-//     whether there is extra or not enough space in the container.
+// [3] When a value is left out, it defaults to the following:
+//     - `‹flex-grow›`   - 1
+//     - `‹flex-shrink›` - 1
+//     - `‹flex-basis›`  - `0%`
+//     For example:
+//     - `flex: auto;` = `flex: 1 1 auto;`
+//       the flex item is set to its content width, but
+//       will either grow or shrink, based on
+//       whether there is extra or not enough space in the container.
+//     - `flex: 1;` = `flex: 1 1 0%;`
+//       The flex item starts at 0% but grows or shrinks as necessary
+//       with the other items to fill or reduce the extra space.
+//       If all items have `flex: 1` then they will be equal.
+//       (If there are 4 items then they will all be 25%.)
+//     - `flex: 50%;` = `flex: 1 1 50%;`
+//       The flex item starts at 50% but grows or shrinks as necessary.
 //
 // @arg - a space-separated list of:
 //        none | [ ‹number› ‹number›? || ‹length› ]
