@@ -70,15 +70,11 @@ block main
     h2 The Flex Object
     p.
       A Flex Object is simply a container of flexible items arranged in one dimension.
-      It has the structure of a list in that all items share the same container
-      (unlike tables where items are in different rows), while at the same time
-      appearing like a table with rows and columns.
     figure.x-figure
       figcaption.
         #[strong Figure 1.] A Flex Object with extra space.
-        #[s The flex items grow to fill the extra space.]
-        The flex items retain an automatic flex-basis, while the extra space
-        is distributed between the items.
+        The flex items have an equal #[b main size], and grow to fill the extra space.
+        If overridden, the extra space will be distributed between the items.
       ul.o-ListBare.o-Flex
         li.o-Flex__Item Burns &amp; McDonnell Engineering
         li.o-Flex__Item DIS-TRAN Steel, LLC
@@ -92,7 +88,7 @@ block main
     figure.x-figure
       figcaption.
         #[strong Figure 2.] A Flex Object with not enough space.
-        The flex items shrink to fit in the alloted space.
+        The flex items have an equal #[b main size] and shrink to fit in the alloted space.
       ul.o-ListBare.o-Flex
         li.o-Flex__Item Burns &amp; McDonnell Engineering
         li.o-Flex__Item DIS-TRAN Steel, LLC
@@ -117,14 +113,21 @@ block main
     h2 The Grid Object
     p.
       The Grid Object is similar to the Flex Object except that it can be extended
-      to two dimensions. Ideally, all the items within a #[i column] (or row) will
-      have the same flex-basis (that is, width or height, depending on the flex-direction).
+      to two dimensions.
+      It has the structure of a list in that all items share the same container
+      (unlike tables where cells might not share the same row), while at the same time
+      appearing like a table with rows and columns.
     p.
-      The Grid Object is flexible and responsive, adjusting the number of
-      columns based on screen size.
-      By default, each item has a flex-basis of 100%. This can be overridden
-      with the #[code.x-code flex-basis] property
+      By default, each item has a #[b main size] of 100%.
+      This behavior can be overridden with the
+      #[code.x-code flex-basis] property
       (use Xmeter&rsquo;s #[code.x-code .flex-basis()] fallback mixin).
+      Using media queries, you can achieve a flexible and responsive table effect,
+      adjusting the number of #[b cross axes]&mdash;columns if
+      #[code.x-code flex-direction: row;], or rows if
+      #[code.x-code flex-direction: column;])&mdash;based on screen size.
+      In order to appear like a table, all the items within
+      a #[b cross axis] should have the same #[b main size].
     figure.x-figure
       figcaption.
         #[strong Figure 1.] A Grid Object with extra space.
