@@ -8,11 +8,11 @@
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     resetcss
-    Version: 1.0.2
+    Version: 1.0.3
     Licence: MIT
     Repo   : https://github.com/chharvey/resetcss.git
-    Home   : https://chharvey.github.io/resetcss/
-    Author : https://chharvey.github.io/
+    Home   : https://github.com/chharvey/resetcss#readme
+    Author : Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*================================*\
     reset.less
@@ -48,7 +48,8 @@ fieldset {
 ol,
 ul,
 th,
-td {
+td,
+legend {
   padding: 0;
 }
 h1,
@@ -74,9 +75,6 @@ code,
 kbd,
 samp {
   font: inherit;
-}
-table {
-  text-align: left;
 }
 caption,
 th {
