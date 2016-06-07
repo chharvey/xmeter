@@ -1,0 +1,18 @@
+extends doc.tpl.jade
+
+block append vars
+  - var page_title = 'Base Typography'
+
+block main
+  include includes/_main-content.jade
+  +mainContent({
+    main_heading: project_name + ' — ' + page_title
+  , classnames: {
+      figure: 'x-figure'
+    , code  : 'x-code'
+    }
+  })
+
+block append scripts
+    script.
+      document.querySelectorAll('#forms > form')[0].style.backgroundColor = '#fff'

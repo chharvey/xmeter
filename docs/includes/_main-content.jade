@@ -1,4 +1,4 @@
-mixin main-content(args)
+mixin mainContent(args)
   - var main_heading = args.main_heading || ''
   - var classnames = args.classnames || {}
   - var appendages = args.appendages || []
@@ -140,8 +140,8 @@ mixin main-content(args)
         A horizontal rule #[code(class=classnames.code) hr] is shown below. I&rsquo;m honestly not sure when
         you would ever use this instead of a CSS border.
       hr
-    if appending['headings-paragraphs']
-      +headings-paragraphs()
+    if appending['headingsParagraphs']
+      +headingsParagraphs()
   section#lists
     h2 Lists
     figure(class=classnames.figure)
@@ -258,12 +258,12 @@ mixin main-content(args)
         li: samp               sample computer output #[code(class=classnames.code) samp]
         if appending['data__list']
           +data__list()
-    if appending['text-level-elements']
-      +text-level-elements()
+    if appending['textLevelElements']
+      +textLevelElements()
   section#embedded-elements
     h2 Embedded Elements
-    if appending['embedded-elements']
-      +embedded-elements()
+    if appending['embeddedElements']
+      +embeddedElements()
   section#forms
     h2 Forms
     form
@@ -364,5 +364,5 @@ mixin main-content(args)
       details
         summary Integer at lacus et diam tristique #[code(class=classnames.code) details summary] suscipit.
         | Aenean consectetur #[code(class=classnames.code) details] suscipit urna, non vehicula lacus blandit et.
-    if appending['interactive-elements']
-      +interactive-elements()
+    if appending['interactiveElements']
+      +interactiveElements()

@@ -14,11 +14,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jade:all": "jade doc/test.jade",
-    "lessc:doc": "lessc doc/styles/doc.less doc/styles/doc.css",
+    "jade:docs": "jade docs/{base,obj}.jade",
+    "jade:all": "npm run jade:docs",
+    "lessc:docs": "lessc docs/styles/docs.less docs/styles/docs.css",
     "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
-    "lessc:all": "npm run lessc:doc  &&  npm run lessc:xmeter",
+    "lessc:all": "npm run lessc:docs  &&  npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
+    "unbuild": "rm docs/base.html docs/obj.html docs/styles/docs.css xmeter.css xmeter.min.css",
     "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify"
   },
   "repository": {
@@ -30,8 +32,7 @@
     "default",
     "stylesheet",
     "normalize",
-    "vertical",
-    "rhythm",
+    "vertical rhythm",
     "less"
   ],
   "author": "Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)",
@@ -39,5 +40,5 @@
   "bugs": {
     "url": "https://github.com/chharvey/xmeter/issues"
   },
-  "homepage": "https://github.com/chharvey/xmeter/blob/gh-pages/README.md"
+  "homepage": "https://github.com/chharvey/xmeter#readme"
 }

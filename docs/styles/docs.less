@@ -5,7 +5,7 @@
 
 
 /*================================*\
-    doc.less
+    docs.less
 \*================================*/
 @import (reference) url('../../src/__settings.less');
 @import (reference) url('../../src/__tool.module.borders.less');
@@ -20,20 +20,26 @@ body {
   background-repeat: repeat;
   background-position: left top;
 }
-.x-c-Code {
-  padding: 1px 2px;
-  border-radius: 3px;
-  background-color: #f4f8f0;
-  color: #008080;
+.x-code, .x-pre {
+  background-color: #333;
+  color: #ccc;
+  border-radius: 0.25rem;
+  u { color: #6c6; } // good contrast ratio
 }
-.x-c-Fig {
+.x-code {
+  padding: 2px 4px;
+}
+.x-pre {
+  padding: (0.5*@g-vru) 0.5rem;
+}
+.x-figure {
   margin-left: 1rem;
   margin-right: 1rem;
   padding: (0.5*@g-vru) 0.5rem;
   .border-vert(all; 1px);
   border-style: solid;
-  border-color: #e5eaef;
-  border-radius: 8px;
+  border-color: #ddd;
+  border-radius: 0.5rem;
   position: relative;
-  background: rgba(245, 250, 255, 0.5);
+  background-color: #eee;
 }
