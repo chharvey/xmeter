@@ -20,16 +20,16 @@ block main
       Combine this class with other classes to create a variety of styles.
     figure.x-figure
       ul.o-ListBare
-        li Burns &amp; McDonnell Engineering
-        li DIS-TRAN Steel, LLC
-        li EDM International
-        li Electrical Consultants, Inc.
-        li Fabrimet Inc.
-        li Falcon Steel Company
+        li.o-ListBare__Item Burns &amp; McDonnell Engineering
+        li.o-ListBare__Item DIS-TRAN Steel, LLC
+        li.o-ListBare__Item EDM International
+        li.o-ListBare__Item Electrical Consultants, Inc.
+        li.o-ListBare__Item Fabrimet Inc.
+        li.o-ListBare__Item Falcon Steel Company
       pre.x-pre.
         &lt;ul class="#[u o-ListBare]"&gt;
-          &lt;li&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-          &lt;li&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          &lt;li class="#[u o-ListBare__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-ListBare__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
           ...
         &lt;/ul&gt;
   section#flex-object
@@ -37,10 +37,6 @@ block main
     p.
       A Flex Object is simply a container of flexible items arranged in one dimension.
     figure.x-figure
-      figcaption.
-        #[strong Figure 1.] A Flex Object with extra space.
-        The flex items have an equal #[b main size], and grow to fill the extra space.
-        If overridden, the extra space will be distributed between the items.
       ul.o-ListBare.o-Flex
         li.o-Flex__Item Burns &amp; McDonnell Engineering
         li.o-Flex__Item DIS-TRAN Steel, LLC
@@ -51,10 +47,11 @@ block main
           &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
           ...
         &lt;/ul&gt;
-    figure.x-figure
       figcaption.
-        #[strong Figure 2.] A Flex Object with not enough space.
-        The flex items have an equal #[b main size] and shrink to fit in the alloted space.
+        A Flex Object with extra space.
+        The flex items have an equal #[b main size], and grow to fill the extra space.
+        If overridden, the extra space will be distributed between the items.
+    figure.x-figure
       ul.o-ListBare.o-Flex
         li.o-Flex__Item Burns &amp; McDonnell Engineering
         li.o-Flex__Item DIS-TRAN Steel, LLC
@@ -75,6 +72,9 @@ block main
           &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
           ...
         &lt;/ul&gt;
+      figcaption.
+        A Flex Object with not enough space.
+        The flex items have an equal #[b main size] and shrink to fit in the alloted space.
   section#grid-object
     h2 The Grid Object
     p.
@@ -86,17 +86,15 @@ block main
     p.
       By default, each item has a #[b main size] of 100%.
       This behavior can be overridden with the
-      #[code.x-code flex-basis] property
-      (use Xmeter&rsquo;s #[code.x-code .flex-basis()] fallback mixin).
+      #[code.x-code flex] or
+      #[code.x-code flex-basis] properties.
       Using media queries, you can achieve a flexible and responsive table effect,
       adjusting the number of #[b cross axes]&mdash;columns if
       #[code.x-code flex-direction: row;], or rows if
-      #[code.x-code flex-direction: column;])&mdash;based on screen size.
+      #[code.x-code flex-direction: column;]&mdash;based on screen size.
       In order to appear like a table, all the items within
       a #[b cross axis] should have the same #[b main size].
     figure.x-figure
-      figcaption.
-        #[strong Figure 1.] A Grid Object with extra space.
       ul.o-ListBare.o-Grid
         li.o-Grid__Item Burns &amp; McDonnell Engineering
         li.o-Grid__Item DIS-TRAN Steel, LLC
@@ -107,9 +105,8 @@ block main
           &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
           ...
         &lt;/ul&gt;
+      figcaption A Grid Object with extra space.
     figure.x-figure
-      figcaption.
-        #[strong Figure 2.] A Grid Object with not enough space.
       ul.o-ListBare.o-Grid
         li.o-Grid__Item Burns &amp; McDonnell Engineering
         li.o-Grid__Item DIS-TRAN Steel, LLC
@@ -137,3 +134,4 @@ block main
           &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
           ...
         &lt;/ul&gt;
+      figcaption A Grid Object with not enough space.
