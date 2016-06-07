@@ -6,7 +6,7 @@ Pronounced “Cross Meter”.
 ## Installation and Usage
 
 This package is really a two-in-one. First, it is a set of tools (functions,
-fallbacks, modules, etc.) that make your life easier when working on a site’s
+fallbacks, etc.) that make your life easier when working on a site’s
 existing stylesheet or starting a brand new one. Secondly, it provides a base
 stylesheet, a starting point, for developing a new site. It is geared towards
 sites (or sections of sites) that are more static and typographically inclined
@@ -19,13 +19,14 @@ stylesheet) that *uses* this package as a dependency, and the other option is
 if you’re **deploying** a project (such as a website or blog) that *mentions*
 (i.e., references) this stylesheet.
 
-This package uses **normalize.css** as a dependency.
-**normalize.css** is now built in to xmeter.css, so there is *no need* to
+This package has **normalize.css** as an npm dependency.
+**normalize.css** is built in to xmeter.css, so there is *no need* to
 `bower install`, `@import`, or `<link/>` it manually.
 
 ### Development
 
-(The First Option)
+This option is if you want to use Xmeter in your own codebase. Your codebase
+uses the tools and styles available in the Xmeter project.
 
 To install:
 
@@ -62,37 +63,44 @@ To use the Xmeter global variables, import the `__settings` stylesheet.
 }
 ```
 
-#### Using the Base
+#### Using the Styles
 
-Also in the `src/` folder are a set of files starting with `_base`. These files,
-unlike tools, provide actual styles for actual elements. Also unlike tools,
+Files in the `src/` folder not starting with `__tool`
+provide actual styles for actual elements. Also unlike tools,
 **these stylesheets are *not* meant to be cherrypicked**. They are compiled
 separately<sup>&lowast;</sup> and
 concatenated together in the main file `xmeter.css`. If you’re developing a
 stylesheet that you want built off of Xmeter, include
-
 ```less
 @import url('/node_modules/xmeter/xmeter.css');
 ```
+in your codebase.
 
-at the top of  your file.
+Alternatively, you could include
+```html
+<link rel="stylesheet" href="/node_modules/xmeter/xmeter.css"/>
+```
+in the `<head>` of your document.
 
-This package also comes installed with a test page (`doc/test.html`)
-that links to the main stylesheet.
+Don’t like Xmeter’s default styles but still want to use the tools?
+That’s okay! Just don’t import or link the css file.
 
 <i><sup>&lowast;</sup>The reason the stylesheets are compiled separately is to increase
 encapsulation: private variables and mixins can be defined within the file without
 affecting other files.</i>
 
+In addition to base styles are classes for Objects (`src/_o-*.less`) and Helpers (`src/_h-*.less`),
+for aiding in a consistent, easy-to-use, vertical rhythm system.
+These classes are meant to be directly injected into elements’ HTML `[class]` attribute on your site.
+However you may, if you wish, `@extend` or include (mix-in) them into your
+codebase—though this is *not recommended*.
+
 ### Deployment
 
-(The Second Option)
-
-This option is for you if you don’t wanna develop with **Xmeter**, you just
-wanna use it on your site. It’s a great starting point that “normalizes”
+This option is for you if you don’t want to develop with **Xmeter**, you just
+want to use it, as is, on your site. It’s a great starting point that “normalizes”
 unclassed HTML elements before any specific classes and styles get added on.
-
-See the test page (`doc/test.html`) for a preview.
+And now that Xmeter has Object and Helper classes, you can use them in your markup too!
 
 Locally
 ```
@@ -101,7 +109,7 @@ $ npm install xmeter
 ```html
 <link rel="stylesheet" href="/node_modules/xmeter/xmeter[.min].css"/>
 ```
-Remotely (from a CDN; not recommended)
+Remotely from a CDN (not recommended, unless deploying your `/node_modules/` isn’t possible)
 ```html
 <link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/xmeter[.min].css"/>
 ```
@@ -119,8 +127,7 @@ vertical rhythm system. (For more information on vertical rhythm, see these arti
 [24ways](http://24ways.org/2006/compose-to-a-vertical-rhythm/) and
 [Smashing Magazine](http://www.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/#tt-rhythm).)
 
-Features of this stylesheet include the following. See the test page (`doc/test.html`)
-for a demo.
+Features of this stylesheet include the following.
 
 - Vertical rhythm &mdash; every line on the page is exactly the same height
   (dubbed a “vertical rhythm unit” or “vru”) regardless of font size, and
@@ -130,29 +137,21 @@ for a demo.
   - Bottom margin is added to an element in order to push subsequent elements down the page.
   - Top padding is added to an element to push *itself* down the page.
   - Negative top margin is added to an element to pull it up the page.
-- Font-size for `html` is set to `100%` to accommodate for user agent settings.
-  All other font-sizes are relative (either `rem`s or `em`s, no pixels or inches).
-- All line-height values are unitless.
-- Units for font-size, margin, and padding on **modules** (not explicitly defined in this project)
+- Font-size of `<html>` is set to `100%` to accommodate for user agent settings.
+- Units for font-size on **modules** (not explicitly defined in this project)
   should be set in `rem`s, so that their vertical typography remains the same
   regardless of where that module is placed (style does not depend on location).
-- Within a module however, font-size, margin, and padding on an element
+  (`<html>` is considered a module.)
+- Within a module however, font-size on an element
   should be set in `em`s, so that its vertical typography scales with
   its parent module’s font size.
-- ~~Units for font-size, margin, and padding on block elements are in `rem`s
-  rather than `em`s, thus the size of an element’s font remains the same
-  regardless of where that element is placed (style does not depend on location).~~
-- ~~`em`s are used on text-level elements, so that these elements
-  scale accordingly when nested inside elements with a larger font size
-  (style *does* depend on location).~~
-- Line-height for all inline (text-level) elements is 0.
+- All line-height values are unitless. Line-height for all inline (text-level) elements is 0.
   This preserves vertical rhythm within a block.
 - Fallback tools for browser discrepancies on CSS3 properties.
-- Module tools add styles to blocks (font-size, borders) without disrupting vertical rhythm
-- A few other modules to make your life easier:
+- Tools add styles to blocks (font-size, borders) without disrupting vertical rhythm
+- A few other tools to make your life easier:
   - `.sprite()` sets background image sprites
-  - `.clearfix()` does exactly what it sounds like
-  - `.delimiters()` sets quotes and other things
+  - `.delims()` sets quotes and other things
 - Minor, albeit prettier, style changes to some text-level elements from the browser default.
 
 ## Changelog
