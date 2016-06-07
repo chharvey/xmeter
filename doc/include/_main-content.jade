@@ -217,7 +217,7 @@ mixin main-content(args)
       h3 Links
       figure(class=classnames.figure): ul
         li: a a
-        li: a(href) a[href]
+        li: a(href="") a[href]
         if appending['links__list']
           +links__list()
     section#stress
@@ -239,7 +239,7 @@ mixin main-content(args)
         li: del  content shown to be deleted from a document #[code(class=classnames.code) del]
         li: dfn  definining instance of a term  #[code(class=classnames.code) dfn]
         li: b    keyword or technical term #[code(class=classnames.code) b]
-        li: abbr(title) abbreviation or acronym #[code(class=classnames.code) abbr[title]]
+        li: abbr(title="") abbreviation or acronym #[code(class=classnames.code) abbr[title]]
         li: var  variable  #[code(class=classnames.code) var]
         li: q    quoted material #[code(class=classnames.code) q]
         li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classnames.code) cite]
@@ -251,7 +251,7 @@ mixin main-content(args)
       h3 Data
       figure(class=classnames.figure): ul
         li: time(datetime="Z") a specific date or time #[code(class=classnames.code) time]
-        li: data(value)        generic machine-readable data #[code(class=classnames.code) data]
+        li: data(value="")     generic machine-readable data #[code(class=classnames.code) data]
         li: code               a fragment of code #[code(class=classnames.code) code]
         li: kbd                user input #[code(class=classnames.code) kbd]
         li: kbd: kbd           a button or key on a physical device #[code(class=classnames.code) kbd &gt; kbd]

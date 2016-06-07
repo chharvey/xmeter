@@ -5,12 +5,12 @@
   "main": "xmeter.css",
   "dependencies": {},
   "devDependencies": {
-    "clean-css": "^3.4.5",
+    "clean-css": "^3.4.17",
     "jade": "^1.11.0",
-    "less": "^2.5.3",
+    "less": "^2.7.1",
     "lessc-each": "^1.1.0",
     "normalize.css": "^4.1.1",
-    "resetcss": "^1.0.2"
+    "resetcss": "^1.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
