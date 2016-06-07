@@ -1,16 +1,16 @@
 {
   "name": "xmeter",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {},
   "devDependencies": {
-    "clean-css": "^3.4.5",
+    "clean-css": "^3.4.17",
     "jade": "^1.11.0",
-    "less": "^2.5.3",
+    "less": "^2.7.1",
     "lessc-each": "^1.1.0",
     "normalize.css": "^4.1.1",
-    "resetcss": "^1.0.2"
+    "resetcss": "^1.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,7 @@
     "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:doc  &&  npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
+    "unbuild": "rm doc/test.html doc/styles/doc.css xmeter.css xmeter.min.css",
     "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify"
   },
   "repository": {
@@ -30,8 +31,7 @@
     "default",
     "stylesheet",
     "normalize",
-    "vertical",
-    "rhythm",
+    "vertical rhythm",
     "less"
   ],
   "author": "Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)",
@@ -39,5 +39,5 @@
   "bugs": {
     "url": "https://github.com/chharvey/xmeter/issues"
   },
-  "homepage": "https://github.com/chharvey/xmeter/blob/gh-pages/README.md"
+  "homepage": "https://github.com/chharvey/xmeter#readme"
 }
