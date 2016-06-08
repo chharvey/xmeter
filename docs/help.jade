@@ -1,17 +1,14 @@
 extends doc.tpl.jade
 
 block append vars
-  - var page_title = 'Helpers'
+  - var page = getPage('help.html')
+  - var page_title = page.name
 
 block main
   h1= project_name + ' — ' + page_title
   nav#table-contents
     h2 Table of Contents
-    ol
-      li: a(href="#table-contents") Table of Contents
-      li: a(href="#block") Block
-      li: a(href="#inline") Inline
-      li: a(href="#cleafix") Clearfix
+    +libtoc({pages: page.sub, depth: Infinity})
   section#block
     h2 Block
     p.

@@ -1,17 +1,14 @@
 extends doc.tpl.jade
 
 block append vars
-  - var page_title = 'Objects'
+  - var page = getPage('obj.html')
+  - var page_title = page.name
 
 block main
   h1= project_name + ' — ' + page_title
   nav#table-contents
     h2 Table of Contents
-    ol
-      li: a(href="#table-contents") Table of Contents
-      li: a(href="#bare-list") The Bare List
-      li: a(href="#flex-object") The Flex Object
-      li: a(href="#grid-object") The Grid Object
+    +libtoc({pages: page.sub, depth: Infinity})
   section#bare-list
     h2 The Bare List
     p.
