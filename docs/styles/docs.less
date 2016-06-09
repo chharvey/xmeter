@@ -14,28 +14,29 @@
 // Stylesheet for Xmeter documentation files.
 
 
-body {
+.docs-body {
   background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
+  background-position: left top;
   background-size: 1px 24px;
   background-repeat: repeat;
-  background-position: left top;
 }
-.x-code, .x-pre {
+.docs-pre,
+.docs-code {
   background-color: #333;
   color: #ccc;
   border-radius: 0.25rem;
-  u { color: #6c6; } // good contrast ratio
+  u { color: #6c6; } // override bad contrast ratio
 }
-.x-code {
+.docs-pre,
+.docs-figure {
+  padding: (0.5*@g-vru) 0.5rem;
+}
+.docs-code {
   padding: 2px 4px;
 }
-.x-pre {
-  padding: (0.5*@g-vru) 0.5rem;
-}
-.x-figure {
+.docs-figure {
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: (0.5*@g-vru) 0.5rem;
   .border-vert(all; 1px);
   border-style: solid;
   border-color: #ddd;
@@ -46,6 +47,6 @@ body {
     font-style: italic;
   }
 }
-.x-form {
+.docs-form {
   background: #fff;
 }
