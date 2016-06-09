@@ -1,10 +1,11 @@
+- var classname = classname || {}
 section#headings-paragraphs
   block headingsParagraphs
     h2 Headings &amp; Paragraphs
-    figure
-      h1 Heading 1 #[code h1]
+    figure(class=classname.figure)
+      h1 Heading 1 #[code(class=classname.code) h1]
       p.
-        Paragraph #[code p]
+        Paragraph #[code(class=classname.code) p]
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Aliquam sagittis suscipit nunc, a cursus libero euismod at.
         Nulla placerat neque massa, quis interdum leo efficitur vel.
@@ -12,9 +13,9 @@ section#headings-paragraphs
         Mauris eget mauris ut mauris auctor mattis id vel justo.
         Nulla dictum arcu nec suscipit mollis.
         Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.
-      h2 Heading 2 #[code h2]
+      h2 Heading 2 #[code(class=classname.code) h2]
       p.
-        Paragraph #[code p]
+        Paragraph #[code(class=classname.code) p]
         Suspendisse ut auctor enim.
         Aliquam viverra enim vitae ante aliquet venenatis.
         Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
@@ -28,9 +29,9 @@ section#headings-paragraphs
         Vivamus pulvinar ligula eget mi tincidunt, eget faucibus justo laoreet.
         In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
         Sed luctus congue tortor a scelerisque.
-      h3 Heading 3 #[code h3]
+      h3 Heading 3 #[code(class=classname.code) h3]
       p.
-        Paragraph #[code p]
+        Paragraph #[code(class=classname.code) p]
         Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
         Quisque id justo elit.
@@ -41,9 +42,9 @@ section#headings-paragraphs
         Suspendisse sit amet fermentum sapien.
         Aliquam luctus laoreet iaculis.
         Proin lacinia orci vitae tellus pellentesque porttitor.
-      h4 Heading 4 #[code h4]
+      h4 Heading 4 #[code(class=classname.code) h4]
       p.
-        Paragraph #[code p]
+        Paragraph #[code(class=classname.code) p]
         Aenean consectetur suscipit urna, non vehicula lacus blandit et.
         Integer at lacus et diam tristique suscipit.
         Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
@@ -57,9 +58,9 @@ section#headings-paragraphs
         In quis lectus in lectus interdum laoreet eu quis quam.
         Fusce auctor posuere purus, quis semper libero dignissim euismod.
         Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.
-      h5 Heading 5 #[code h5]
+      h5 Heading 5 #[code(class=classname.code) h5]
       p.
-        Paragraph #[code p]
+        Paragraph #[code(class=classname.code) p]
         Donec finibus ut lectus finibus pellentesque.
         Nulla euismod feugiat nulla nec posuere.
         Sed ac est id sem sagittis rhoncus eu ac neque.
@@ -68,9 +69,9 @@ section#headings-paragraphs
         Mauris nec ipsum id orci porttitor auctor sed sit amet sem.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.
-      h6 Heading 6 #[code h6]
+      h6 Heading 6 #[code(class=classname.code) h6]
       p.
-        Paragraph #[code p]
+        Paragraph #[code(class=classname.code) p]
         Donec vel dolor ut felis dapibus ultricies vitae a nibh.
         Ut semper odio est, sed lacinia ligula gravida ut.
         Vestibulum facilisis viverra pulvinar.
@@ -79,21 +80,21 @@ section#headings-paragraphs
         Donec ut quam massa.
         Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
         Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    figure
-      h1 Lorem Ipsum #[code h1]
-      h2 Lorem Ipsum #[code h2]
-      h3 Lorem Ipsum #[code h3]
-      h4 Lorem Ipsum #[code h4]
-      h5 Lorem Ipsum #[code h5]
-      h6 Lorem Ipsum #[code h6]
-    figure
+    figure(class=classname.figure)
+      h1 Lorem Ipsum #[code(class=classname.code) h1]
+      h2 Lorem Ipsum #[code(class=classname.code) h2]
+      h3 Lorem Ipsum #[code(class=classname.code) h3]
+      h4 Lorem Ipsum #[code(class=classname.code) h4]
+      h5 Lorem Ipsum #[code(class=classname.code) h5]
+      h6 Lorem Ipsum #[code(class=classname.code) h6]
+    figure(class=classname.figure)
       address.
-        12345 #[code address] Ave #[code br]#[br]
-        Washington, DC 00000 #[code br]#[br]
+        12345 #[code(class=classname.code) address] Ave #[code(class=classname.code) br]#[br]
+        Washington, DC 00000 #[code(class=classname.code) br]#[br]
         United States of America
-    figure
+    figure(class=classname.figure)
       pre.
-        Pellentesque #[code pre] habitant() {
+        Pellentesque #[code(class=classname.code) pre] habitant() {
           morbi.tristique = senectus;
           et (netus = malesuada; fames &lt; ac; turpis.egestas++) {
             Nunc.sit += [amet, scelerisque][et];
@@ -104,46 +105,46 @@ section#headings-paragraphs
             };
           }
         }
-    figure
+    figure(class=classname.figure)
       figure
-        | Aenean consectetur #[code figure] suscipit urna, non vehicula lacus blandit et.
-        figcaption Integer at lacus et diam tristique #[code figure] #[code figcaption] suscipit.
-    figure
-      blockquote Donec #[code blockquote] vel dolor ut felis dapibus ultricies vitae a nibh.
-    figure
+        | Aenean consectetur #[code(class=classname.code) figure] suscipit urna, non vehicula lacus blandit et.
+        figcaption Integer at lacus et diam tristique #[code(class=classname.code) figure] #[code(class=classname.code) figcaption] suscipit.
+    figure(class=classname.figure)
+      blockquote Donec #[code(class=classname.code) blockquote] vel dolor ut felis dapibus ultricies vitae a nibh.
+    figure(class=classname.figure)
       figcaption.
-        A horizontal rule #[code hr] is present below.
+        A horizontal rule #[code(class=classname.code) hr] is present below.
       hr
 section#lists
   block lists
     h2 Lists
-    figure
-      figcaption Ordered List #[code ol]
+    figure(class=classname.figure)
+      figcaption Ordered List #[code(class=classname.code) ol]
       ol
-        li List item #[code li]
-        li List item #[code li]
+        li List item #[code(class=classname.code) li]
+        li List item #[code(class=classname.code) li]
           ol
             li Nested list item
             li Nested list item
               ol
                 li Another nested list item
                 li Another nested list item
-    figure
-      figcaption Unrdered List #[code ul]
+    figure(class=classname.figure)
+      figcaption Unrdered List #[code(class=classname.code) ul]
       ul
-        li List item #[code li]
-        li List item #[code li]
+        li List item #[code(class=classname.code) li]
+        li List item #[code(class=classname.code) li]
           ul
             li Nested list item
             li Nested list item
               ul
                 li Another nested list item
                 li Another nested list item
-    figure
-      figcaption Dictionary List #[code dl]
+    figure(class=classname.figure)
+      figcaption Dictionary List #[code(class=classname.code) dl]
       dl
-        dt key #[code dt]
-        dd value #[code dd]
+        dt key #[code(class=classname.code) dt]
+        dd value #[code(class=classname.code) dd]
         dt
           ul
             li 1st key
@@ -157,29 +158,29 @@ section#lists
 section#tables
   block tables
     h2 Tables
-    figure
+    figure(class=classname.figure)
       table
-        caption #[code table] #[code caption]
+        caption #[code(class=classname.code) table] #[code(class=classname.code) caption]
         thead
           mixin tableheaderrows(rows, cols)
             - for (var i = 0; i < rows; i++)
               tr
                 - for (var j = 0; j < cols; j++)
-                  th(scope="col") #[code thead]er #[code tr]ow #{i+1} #[code th]eading #{j+1}
+                  th(scope="col") #[code(class=classname.code) thead]er #[code(class=classname.code) tr]ow #{i+1} #[code(class=classname.code) th]eading #{j+1}
           +tableheaderrows(1,3)
         tfoot
           mixin tablefooterrows(rows, cols)
             - for (var i = 0; i < rows; i++)
               tr
                 - for (var j = 0; j < cols; j++)
-                  td #[code tfoot]er #[code tr]ow #{i+1} #[code td]ata #{j+1}
+                  td #[code(class=classname.code) tfoot]er #[code(class=classname.code) tr]ow #{i+1} #[code(class=classname.code) td]ata #{j+1}
           +tablefooterrows(2,3)
         tbody
           mixin tablebodyrows(rows, cols)
             - for (var i = 0; i < rows; i++)
               tr
                 - for (var j = 0; j < cols; j++)
-                  td #[code tbody] #[code tr]ow #{i+1} #[code td]ata #{j+1}
+                  td #[code(class=classname.code) tbody] #[code(class=classname.code) tr]ow #{i+1} #[code(class=classname.code) td]ata #{j+1}
           +tablebodyrows(3,3)
 section#text-level-elements
   block textLevelElements
@@ -187,48 +188,48 @@ section#text-level-elements
     section#links
       block links
         h3 Links
-        figure: ul
+        figure(class=classname.figure): ul
           block linksList
             li: a a
             li: a(href) a[href]
     section#stress
       block stress
         h3 Stress
-        figure: ul
+        figure(class=classname.figure): ul
           block stressList
-            li: em     emphasized text #[code em]
-            li: strong important text #[code strong]
-            li: i      alternate voice/mood (scare quotes, mentioning words, foreign expressions) #[code i]
-            li: mark   relevant in some context #[code mark]
-            li: u      unarticulated annotation #[code u]
-            li: small  side comment #[code small]
-            li: s      text shown to be no longer relevant #[code s]
+            li: em     emphasized text #[code(class=classname.code) em]
+            li: strong important text #[code(class=classname.code) strong]
+            li: i      alternate voice/mood (scare quotes, mentioning words, foreign expressions) #[code(class=classname.code) i]
+            li: mark   relevant in some context #[code(class=classname.code) mark]
+            li: u      unarticulated annotation #[code(class=classname.code) u]
+            li: small  side comment #[code(class=classname.code) small]
+            li: s      text shown to be no longer relevant #[code(class=classname.code) s]
     section#documentation
       block documentation
         h3 Documentation
-        figure: ul
+        figure(class=classname.figure): ul
           block documentationList
-            li: ins  content shown to be inserted into a document #[code ins]
-            li: del  content shown to be deleted from a document #[code del]
-            li: dfn  definining instance of a term  #[code dfn]
-            li: b    keyword or technical term #[code b]
-            li: abbr(title) abbreviation or acronym #[code abbr[title]]
-            li: var  variable  #[code var]
-            li: q    quoted material #[code q]
-            li: cite reference to a work, some part of a work, or the creator of a work #[code cite]
-            li: sup  superscript #[code sup]
-            li: sub  subscript #[code sub]
+            li: ins  content shown to be inserted into a document #[code(class=classname.code) ins]
+            li: del  content shown to be deleted from a document #[code(class=classname.code) del]
+            li: dfn  definining instance of a term  #[code(class=classname.code) dfn]
+            li: b    keyword or technical term #[code(class=classname.code) b]
+            li: abbr(title) abbreviation or acronym #[code(class=classname.code) abbr[title]]
+            li: var  variable  #[code(class=classname.code) var]
+            li: q    quoted material #[code(class=classname.code) q]
+            li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classname.code) cite]
+            li: sup  superscript #[code(class=classname.code) sup]
+            li: sub  subscript #[code(class=classname.code) sub]
     section#data
       block data
         h3 Data
-        figure: ul
+        figure(class=classname.figure): ul
           block dataList
-            li: time(datetime="Z") a specific date or time #[code time]
-            li: data(value)        generic machine-readable data #[code data]
-            li: code               a fragment of code #[code code]
-            li: kbd                user input #[code kbd]
-            li: kbd: kbd           a button or key on a physical device #[code kbd &gt; kbd]
-            li: samp               sample computer output #[code samp]
+            li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
+            li: data(value)        generic machine-readable data #[code(class=classname.code) data]
+            li: code               a fragment of code #[code(class=classname.code) code]
+            li: kbd                user input #[code(class=classname.code) kbd]
+            li: kbd: kbd           a button or key on a physical device #[code(class=classname.code) kbd &gt; kbd]
+            li: samp               sample computer output #[code(class=classname.code) samp]
 section#embedded-elements
   block embeddedElements
     h2 Embedded Elements
@@ -236,11 +237,11 @@ section#forms
   block forms
     h2 Forms
     form(style="background: #fff;")
-      figure
+      figure(class=classname.figure)
         fieldset
-          legend Integer at lacus et diam tristique #[code fieldset legend] suscipit.
-          | Aenean consectetur #[code fieldset] suscipit urna, non vehicula lacus blandit et.
-      figure
+          legend Integer at lacus et diam tristique #[code(class=classname.code) fieldset legend] suscipit.
+          | Aenean consectetur #[code(class=classname.code) fieldset] suscipit urna, non vehicula lacus blandit et.
+      figure(class=classname.figure)
         fieldset
           legend single line text inputs
           input(type="text" placeholder="input type text")
@@ -249,7 +250,7 @@ section#forms
           input(type="search" placeholder="input type search")
           input(type="tel" placeholder="input type tel")
           input(type="url" placeholder="input type url")
-      figure
+      figure(class=classname.figure)
         fieldset
           legend date/time
           input(type="datetime")
@@ -258,7 +259,7 @@ section#forms
           input(type="time")
           input(type="week")
           input(type="month")
-      figure
+      figure(class=classname.figure)
         fieldset
           legend without text input
           input(type="color")
@@ -266,7 +267,7 @@ section#forms
           input(type="hidden")
           input(type="number" placeholder="input type number")
           input(type="range")
-      figure
+      figure(class=classname.figure)
         fieldset
           legend check boxes
           input(type="checkbox")
@@ -276,7 +277,7 @@ section#forms
             | all
           input(type="checkbox")
           label applicable
-      figure
+      figure(class=classname.figure)
         fieldset
           legend radio buttons
           input(type="radio" name="radiogroup1")
@@ -286,7 +287,7 @@ section#forms
             | only
           input(type="radio" name="radiogroup1")
           label one
-      figure
+      figure(class=classname.figure)
         fieldset
           legend drop-down list (select only one)
           select
@@ -302,7 +303,7 @@ section#forms
             //- optgroup not a valid child of datalist
             option option 2
             option option 3
-      figure
+      figure(class=classname.figure)
         fieldset
           legend drop-down list (select multiple)
           select(multiple="")
@@ -312,7 +313,7 @@ section#forms
               option option 2b
               option option 2c
             option option 3
-      figure
+      figure(class=classname.figure)
         fieldset
           legend buttons
           input(type="button" value="button")
@@ -321,14 +322,14 @@ section#forms
           button(type="button") button
           button(type="reset")  reset
           button(type="submit") submit
-      figure
+      figure(class=classname.figure)
         fieldset
           legend textarea
           textarea
 section#interactive-elements
   block interactiveElements
     h2 Interactive Elements
-    figure
+    figure(class=classname.figure)
       details
-        summary Integer at lacus et diam tristique #[code details summary] suscipit.
-        | Aenean consectetur #[code details] suscipit urna, non vehicula lacus blandit et.
+        summary Integer at lacus et diam tristique #[code(class=classname.code) details summary] suscipit.
+        | Aenean consectetur #[code(class=classname.code) details] suscipit urna, non vehicula lacus blandit et.
