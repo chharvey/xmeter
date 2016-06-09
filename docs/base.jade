@@ -5,15 +5,8 @@ block append vars
   - var page_title = page.name
 
 block main
-  include includes/_main-content.jade
-  +mainContent({
-    main_heading: project_name + ' — ' + page_title
-  , classnames: {
-      figure: 'x-figure'
-    , code  : 'x-code'
-    }
-  })
-
-block append scripts
-    script.
-      document.querySelectorAll('#forms > form')[0].style.backgroundColor = '#fff'
+  h1= project_name + ' — ' + page_title
+  nav#table-contents
+    h2 Table of Contents
+    +libtoc({pages: page.sub, depth: Infinity})
+  include includes/_base-content.jade
