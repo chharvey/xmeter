@@ -1,0 +1,35 @@
+extends doc.tpl.jade
+
+block append vars
+  - var page = getPage('atom.html')
+  - var page_title = page.name
+
+block main
+  h1= project_name + ' — ' + page_title
+  nav#table-contents
+    h2 Table of Contents
+    +libtoc({pages: page.sub, depth: Infinity})
+  section#margin-bottom
+    h2 margin-bottom
+    p.
+      This atom sets the bottom margin to one #[dfn vertical rhythm unit] (1vru),
+      which is equal to the #[code html] element&rsquo;s #[code line-height]
+      multiplied by #[code 1rem].
+    pre.docs-pre.
+      @g-vru: @g-line_height * 1rem;
+      .-mb-1vru { margin-bottom: @g-vru; }
+    figure.docs-figure
+      div.-mb-1vru Most typographical block elements like paragraphs and lists are automatically given this style.
+      pre.docs-pre.
+        &lt;div class="#[u -mb-1vru]"&gt;Most ...&lt;/div&gt;
+  section#padding-top
+    h2 padding-top
+    p.
+      This atom sets the top padding to 1#[b: abbr(title="vertical rhythm unit") vru].
+    pre.docs-pre.
+      @g-vru: @g-line_height * 1rem;
+      .-pt-1vru { padding-top: @g-vru; }
+    figure.docs-figure
+      div.-pt-1vru Usually only Heading 1 is given this style, but it is also useful for moving an element down the page.
+      pre.docs-pre.
+        &lt;div class="#[u -pt-1vru]"&gt;Usually only ...&lt;/div&gt;

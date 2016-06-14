@@ -62,7 +62,11 @@ html(lang="en")
       , {
           name: 'Atoms', url: 'atom.html'
         , description: 'Very specific classes used for creating anomalies or fixing broken styles.'
-        , is_hidden: true
+        , sub: [
+            { name: 'Table of Contents', url: 'atom.html#table-contents' }
+          , { name: 'margin-bottom'    , url: 'atom.html#margin-bottom' }
+          , { name: 'padding-top'      , url: 'atom.html#padding-top' }
+          ]
         }
       ]
       function getPage(url0) {
