@@ -3,12 +3,6 @@ extends doc.tpl.jade
 block append vars
   - var page = getPage('obj.html')
   - var page_title = page.name
-  -
-    var classname = {
-      figure : 'docs-figure'
-    , pre    : 'docs-pre'
-    , code   : 'docs-code'
-    }
 
 block main
   h1= project_name + ' — ' + page_title
