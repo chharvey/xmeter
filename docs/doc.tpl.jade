@@ -110,7 +110,7 @@ html(lang="en")
         , code   : 'docs-code'
         , form   : 'docs-form'
         }
-    title= page_title + ' | ' + project_name
+    title= page.name + ' | ' + project_name
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="description" content="A demo of Xmeter styles.")
@@ -119,6 +119,11 @@ html(lang="en")
   body.docs-body
     main
       block main
+        header
+          h1= project_name + ' — ' + page.name
+          nav#table-contents
+            h2 Table of Contents
+            block toc
     footer
       unless page.url === 'index.html'
         footer: nav
