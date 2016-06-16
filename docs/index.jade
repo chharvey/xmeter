@@ -4,4 +4,4 @@ block append vars
   - var page = getPage('index.html')
 
 block toc
-    +libtoc({pages: lib, depth: Infinity})
+  +doctoc({pages: docs_pages, depth: Infinity})

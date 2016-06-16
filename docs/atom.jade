@@ -4,7 +4,7 @@ block append vars
   - var page = getPage('atom.html')
 
 block toc
-    +libtoc({pages: page.sub, depth: Infinity})
+  +doctoc({pages: page.sub, depth: Infinity})
 
 block append main
   include includes/_content-atom.jade
