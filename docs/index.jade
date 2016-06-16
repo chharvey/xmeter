@@ -1,7 +1,7 @@
 extends doc.tpl.jade
 
 block append vars
-  - var page = getPage('index.html')
+  - var page = Xmeter.getPage('index.html')
 
 block toc
-  +doctoc({pages: docs_pages, depth: Infinity})
+  +doctoc({pages: Xmeter.docs_pages, depth: Infinity})

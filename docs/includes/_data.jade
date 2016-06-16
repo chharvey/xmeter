@@ -1,5 +1,6 @@
 -
-  var docs_pages = [
+  var Xmeter = {
+  docs_pages: [
     {
       name: 'Pattern Library Home', url: 'index.html'
     , description: ''
@@ -66,12 +67,13 @@
       ]
     }
   ]
-  function getPage(url0) {
+  }
+  Xmeter.getPage = function getPage(url0) {
     //- function arrayFind(array, prop, val) {
     //-   return array.find(function (item) { return item[prop] === val })
     //- }
-    //- return arrayFind(docs_pages, 'url', url0)
-    return docs_pages.find(function (item) { return item.url === url0 })
+    //- return arrayFind(Xmeter.docs_pages, 'url', url0) || {}
+    return Xmeter.docs_pages.find(function (item) { return item.url === url0 }) || {}
   }
 //- mixin doctoc(args)
 //-   //- use this mixin if you want classes
