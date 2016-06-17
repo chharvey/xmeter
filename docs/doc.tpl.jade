@@ -26,9 +26,8 @@ html(lang="en")
           nav#table-contents
             h2 Table of Contents
             block toc
-    footer
-      unless page.url === 'index.html'
-        footer: nav
-          h1 Sitemap
-          +doctoc({pages: Xmeter.docs_pages})
+    unless page === Xmeter.getPage('index.html')
+      footer: nav
+        h1 Sitemap
+        +doctoc({pages: Xmeter.PAGES})
     block scripts
