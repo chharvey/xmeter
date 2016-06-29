@@ -152,6 +152,7 @@ Features of this stylesheet include the following.
 - A few other tools to make your life easier:
   - `.sprite()` sets background image sprites
   - `.delims()` sets quotes and other things
+  - `.border-*-radius()` sets the border-radius on one side of a box, e.g., only the left side
 - Minor, albeit prettier, style changes to some text-level elements from the browser default.
 
 ## Changelog
