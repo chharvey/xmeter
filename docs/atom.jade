@@ -3,8 +3,5 @@ extends doc.tpl.jade
 block append vars
   - var page = Xmeter.getPage('atom.html')
 
-block toc
-  +doctoc({pages: page.sub, depth: Infinity})
-
 block append main
   include includes/_content-atom.jade

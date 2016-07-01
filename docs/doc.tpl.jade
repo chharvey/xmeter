@@ -26,6 +26,7 @@ html(lang="en")
           nav#table-contents
             h2 Table of Contents
             block toc
+              +doctoc({pages: page.sub, depth: Infinity})
     unless page === Xmeter.getPage('index.html')
       footer: nav
         h1 Sitemap
