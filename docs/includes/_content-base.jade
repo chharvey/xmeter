@@ -191,7 +191,7 @@ section#text-level-elements
         figure(class=classname.figure): ul
           block linksList
             li: a a
-            li: a(href) a[href]
+            li: a(href="#0") a[href]
     section#stress
       block stress
         h3 Stress
@@ -213,7 +213,7 @@ section#text-level-elements
             li: del  content shown to be deleted from a document #[code(class=classname.code) del]
             li: dfn  definining instance of a term  #[code(class=classname.code) dfn]
             li: b    keyword or technical term #[code(class=classname.code) b]
-            li: abbr(title) abbreviation or acronym #[code(class=classname.code) abbr[title]]
+            li: abbr(title="") abbreviation or acronym #[code(class=classname.code) abbr[title]]
             li: var  variable  #[code(class=classname.code) var]
             li: q    quoted material #[code(class=classname.code) q]
             li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classname.code) cite]
@@ -225,11 +225,11 @@ section#text-level-elements
         figure(class=classname.figure): ul
           block dataList
             li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
-            li: data(value)        generic machine-readable data #[code(class=classname.code) data]
-            li: code               a fragment of code #[code(class=classname.code) code]
-            li: kbd                user input #[code(class=classname.code) kbd]
-            li: kbd: kbd           a button or key on a physical device #[code(class=classname.code) kbd &gt; kbd]
-            li: samp               sample computer output #[code(class=classname.code) samp]
+            li: data(value="") generic machine-readable data #[code(class=classname.code) data]
+            li: code     a fragment of code #[code(class=classname.code) code]
+            li: kbd      user input #[code(class=classname.code) kbd]
+            li: kbd: kbd a button or key on a physical device #[code(class=classname.code) kbd &gt; kbd]
+            li: samp     sample computer output #[code(class=classname.code) samp]
 section#embedded-elements
   block embeddedElements
     h2 Embedded Elements
