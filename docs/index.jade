@@ -1,11 +1,7 @@
-extends doc.tpl.jade
+extends _docs.tpl.jade
 
 block append vars
-  - var page = getPage('index.html')
-  - var page_title = page.name
+  - var page = Xmeter.getPage('index.html')
 
-block main
-  h1= project_name + ' — ' + page_title
-  nav#table-contents
-    h2 Table of Contents
-    +libtoc({pages: lib, depth: Infinity})
+block toc
+  +doctoc({pages: Xmeter.PAGES, depth: Infinity})
