@@ -1,0 +1,16 @@
+extends _docs.tpl.jade
+
+block append vars
+  - var page = Xmeter.getPage('tool.html')
+
+block append main
+  include includes/_content-tool.jade
+
+block append mainIntro
+  p.
+    Tools are mixins and/or functions in the codebase that are used in development.
+    These rules don&rsquo;t output any CSS, but they do make writing CSS a lot easier
+    by encapsulating reusable sets of property declarations.
+    #[a(href="#fallback-tools") Fallback Tools] are simply mixins that address
+    browser vendor prefixes for CSS properties and values,
+    whereas #[a(href="#module-tools") Module Tools] combine properties commonly used together.
