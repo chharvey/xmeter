@@ -50,3 +50,19 @@
 .docs-form {
   background: #fff;
 }
+
+
+.docs-_fragid {
+  display: inline;
+  line-height: 0;
+  margin-left: 1rem;
+  font-weight: 100;
+  &::before {
+    content: '\00a7';
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  &:not(:hover) > .docs-_fragid {
+    visibility: hidden;
+  }
+}
