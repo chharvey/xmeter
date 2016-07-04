@@ -1,22 +1,22 @@
 - var classname = classname || {}
-section#bare-list
-  h2 The Bare List
+section#list-object
+  h2 The List Object
   p.
-    Use the Bare List object to remove the usual padding and list item markers accompanied by
+    Use the List Object to remove the usual padding and list item markers accompanied by
     (un)ordered lists. The result is a list of items, each on its own line.
     Combine this class with other classes to create a variety of styles.
   figure(class=classname.figure)
-    ul.o-ListBare
-      li.o-ListBare__Item Burns &amp; McDonnell Engineering
-      li.o-ListBare__Item DIS-TRAN Steel, LLC
-      li.o-ListBare__Item EDM International
-      li.o-ListBare__Item Electrical Consultants, Inc.
-      li.o-ListBare__Item Fabrimet Inc.
-      li.o-ListBare__Item Falcon Steel Company
+    ul.o-List
+      li.o-List__Item Burns &amp; McDonnell Engineering
+      li.o-List__Item DIS-TRAN Steel, LLC
+      li.o-List__Item EDM International
+      li.o-List__Item Electrical Consultants, Inc.
+      li.o-List__Item Fabrimet Inc.
+      li.o-List__Item Falcon Steel Company
     pre(class=classname.pre).
-      &lt;ul class="#[u o-ListBare]"&gt;
-        &lt;li class="#[u o-ListBare__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-        &lt;li class="#[u o-ListBare__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+      &lt;ul class="#[u o-List]"&gt;
+        &lt;li class="#[u o-List__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+        &lt;li class="#[u o-List__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
         ...
       &lt;/ul&gt;
 section#flex-object
@@ -24,12 +24,12 @@ section#flex-object
   p.
     A Flex Object is simply a container of flexible items arranged in one dimension.
   figure(class=classname.figure)
-    ul.o-ListBare.o-Flex
+    ul.o-List.o-Flex
       li.o-Flex__Item Burns &amp; McDonnell Engineering
       li.o-Flex__Item DIS-TRAN Steel, LLC
       li.o-Flex__Item EDM International
     pre(class=classname.pre).
-      &lt;ul class="o-ListBare  #[u o-Flex]"&gt;
+      &lt;ul class="o-List  #[u o-Flex]"&gt;
         &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
         &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
         ...
@@ -39,7 +39,7 @@ section#flex-object
       The flex items have an equal #[b main size], and grow to fill the extra space.
       If overridden, the extra space will be distributed between the items.
   figure(class=classname.figure)
-    ul.o-ListBare.o-Flex
+    ul.o-List.o-Flex
       li.o-Flex__Item Burns &amp; McDonnell Engineering
       li.o-Flex__Item DIS-TRAN Steel, LLC
       li.o-Flex__Item EDM International
@@ -54,7 +54,7 @@ section#flex-object
       li.o-Flex__Item Quanta Services
       li.o-Flex__Item ReliaPOLE Inspection Services
     pre(class=classname.pre).
-      &lt;ul class="o-ListBare  #[u o-Flex]"&gt;
+      &lt;ul class="o-List  #[u o-Flex]"&gt;
         &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
         &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
         ...
@@ -82,19 +82,19 @@ section#grid-object
     In order to appear like a table, all the items within
     a #[b cross axis] should have the same #[b main size].
   figure(class=classname.figure)
-    ul.o-ListBare.o-Grid
+    ul.o-List.o-Grid
       li.o-Grid__Item Burns &amp; McDonnell Engineering
       li.o-Grid__Item DIS-TRAN Steel, LLC
       li.o-Grid__Item EDM International
     pre(class=classname.pre).
-      &lt;ul class="o-ListBare  #[u o-Grid]"&gt;
+      &lt;ul class="o-List  #[u o-Grid]"&gt;
         &lt;li class="#[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
         &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
         ...
       &lt;/ul&gt;
     figcaption A Grid Object with extra space.
   figure(class=classname.figure)
-    ul.o-ListBare.o-Grid
+    ul.o-List.o-Grid
       li.o-Grid__Item Burns &amp; McDonnell Engineering
       li.o-Grid__Item DIS-TRAN Steel, LLC
       li.o-Grid__Item EDM International
@@ -116,7 +116,7 @@ section#grid-object
       li.o-Grid__Item Underground Devices
       li.o-Grid__Item Valmont Newmark
     pre(class=classname.pre).
-      &lt;ul class="o-ListBare  #[u o-Grid]"&gt;
+      &lt;ul class="o-List  #[u o-Grid]"&gt;
         &lt;li class="#[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
         &lt;li class="#[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
         ...
