@@ -93,6 +93,7 @@
     }
     return Xmeter
   })()
+
 //- mixin doctoc(args)
 //-   //- use this mixin if you want classes
 //-   - var pages     = args.pages     || []
@@ -107,6 +108,7 @@
 //-             | #{' '}&mdash;#{' ' + item.description}
 //-           if item.sub && depth > 0
 //-             +doctoc({pages: item.sub, class_obj: (class_obj.sub || {}), depth: depth-1})
+
 mixin doctoc(args)
   - var pages = args.pages  || []
   - var depth = +args.depth || 0
@@ -119,3 +121,18 @@ mixin doctoc(args)
             = ': ' + item.description
           if item.sub && depth > 0
             +doctoc({pages: item.sub, depth: depth-1})
+
+mixin markupify(thing, classes)
+  - classes = classes || {}
+  if typeof thing === 'object'
+    if Array.isArray(thing)
+      ul(class=classes.list)
+        each val,key in thing
+          li(class=classes.val): +markupify(val)
+    else
+      dl(class=classes.list)
+        each val,key in thing
+          dt(class=classes.key)= key
+          dd(class=classes.val): +markupify(val)
+  else
+    = thing
