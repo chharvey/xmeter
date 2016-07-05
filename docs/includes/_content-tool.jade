@@ -4,10 +4,9 @@ section#fallback-tools
   section#box-sizing
     h3 box-sizing
     pre.docs-pre.
-      .box-sizing(@box: content-box) {
-        -webkit-box-sizing: @box;
-           -moz-box-sizing: @box;
-                box-sizing: @box;
+      @import (reference) url('__tool.fallback.box-sizing.less');
+      .your-class {
+        .box-sizing([#[strong content-box] | border-box]?);
       }
   section#flexbox-tools
     h3 The Flexbox Tools

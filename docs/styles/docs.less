@@ -9,6 +9,7 @@
 \*================================*/
 @import (reference) url('../../src/__settings.less');
 @import (reference) url('../../src/__tool.module.borders.less');
+@import (reference) url('../../src/__tool.module.delims.less');
 
 
 // Stylesheet for Xmeter documentation files.
@@ -26,6 +27,8 @@
   color: #ccc;
   border-radius: 0.25rem;
   u { color: #6c6; } // override bad contrast ratio
+  strong { color: #eee; }
+  var { .guillemets-single(); }
 }
 .docs-pre,
 .docs-figure {
