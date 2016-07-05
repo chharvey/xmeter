@@ -4,33 +4,104 @@ section#fallback-tools
   section#box-sizing
     h3 box-sizing
     pre.docs-pre.
-      @import (reference) url('__tool.fallback.box-sizing.less');
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.box-sizing.less');
       .your-class {
-        .box-sizing([#[strong content-box] | border-box]?);
+        .box-sizing([content-box | border-box]:#[strong content-box]);
       }
   section#flexbox-tools
     h3 The Flexbox Tools
   section#transform
     h3 transform
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.transform.less');
+      .your-class {
+        .transform(#[var @transform-list]:#[strong none]);
+      }
   section#transform-origin
     h3 transform-origin
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.transform-origin.less');
+      .your-class {
+        .transform-origin(#[var @point]:(#[strong 50% 50% 0]));
+      }
   section#column-count
     h3 column-count
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.column-count.less');
+      .your-class {
+        .column-count(#[var @integer]:#[strong auto]);
+      }
   section#column-width
     h3 column-width
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.column-width.less');
+      .your-class {
+        .column-width(#[var @length]:#[strong auto]);
+      }
   section#filter
     h3 filter
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.filter.less');
+      .your-class {
+        .column-width(#[var @filter-function-list]:#[strong none]);
+      }
 section#module-tools
   h2 Module Tools
   section#borders
     h3 borders
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.module.borders.less');
+      .your-class {
+        .border-vert([top | bot | topbot | all]; #[var @length:#[strong 0]]);
+      }
   section#border-radius
     h3 border-radius
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.module.border-radius.less');
+      .your-class {
+        .border-left-radius(#[var @length]:#[strong 0]);
+        .border-right-radius(#[var @length]:#[strong 0]);
+        .border-top-radius(#[var @length]:#[strong 0]);
+        .border-bottom-radius(#[var @length]:#[strong 0]);
+      }
   section#font-size
     h3 font-size
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.module.fontsize.less');
+      .your-module {
+        .font-size-mod(#[var @number]:#[strong 1]);
+        .your-element {
+          .font-size-el(#[var @number]:#[strong 1]; #[var @integer]:#[strong 1]; #[var @number]:#[strong @g-line_height]);
+        }
+      }
   section#vertspacing
     h3 vertspacing
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.module.vertspacing.less');
+      .your-module {
+        .vertspacing(#[var @length]:#[strong @g-vru]);
+      }
   section#delims
     h3 delims
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.module.delims.less');
+      .your-class {
+        .delims(#[var @strings]:#[strong @none]);
+        .parens();            // ( )
+        .brackets();          // [ ]
+        .braces();            // { }
+        .angles();            // &lt; &gt;
+        .apos();              // &apos; &apos;
+        .quot();              // &quot; &quot;
+        .quotes-single();     // &lsquo; &rsquo;
+        .quotes-double();     // &ldquo; &rdquo;
+        .guillemets-single(); // &lsaquo; &rsaquo;
+        .guillemets-double(); // &laquo; &raquo;
+      }
   section#sprite
     h3 sprite
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.module.delims.less');
+      .your-class {
+        .sprite([horizontal | vertical]; #[var @integer]; #[var @length]; #[var @length]);
+      }
