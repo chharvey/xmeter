@@ -122,7 +122,7 @@ mixin doctoc(args)
           if item.sub && depth > 0
             +doctoc({pages: item.sub, depth: depth-1})
 
-mixin markupify(thing, classes)
+//- mixin markupify(thing, classes)
   - classes = classes || {}
   if typeof thing === 'object'
     if Array.isArray(thing)

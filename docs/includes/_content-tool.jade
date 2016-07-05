@@ -3,29 +3,6 @@ section#fallback-tools
   h2 Fallback Tools
   section#box-sizing
     h3 box-sizing
-    +markupify({
-      "name": "box-sizing"
-    , "description": "Alters the CSS box model used to calculate width and height."
-    , "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"
-    , "syntax": ".box-sizing(@box);"
-    , "params": [
-        {
-          "name": "@box"
-        , "description": "the way the box is sized"
-        , "values": [
-            {
-              "value": "content-box"
-            , "description": "`width` and `height` properties measured include only the content"
-            , "default": true
-            }
-          , {
-              "value": "border-box"
-            , "description": "`width` and `height` properties measured include padding and border as well as content"
-            }
-          ]
-        }
-      ]
-    }, {list:'docs-c-Api'})
     pre.docs-pre.
       .box-sizing(@box: content-box) {
         -webkit-box-sizing: @box;
