@@ -4,5 +4,9 @@ block append vars
   - var page = Xmeter.getPage('obj.html')
 
 block append main
-  include includes/_content-obj.jade
-  +contentObj(Xmeter.DOCS_CLASSES)
+  include includes/_docs.obj.list-object.jade
+  +docs_list(Xmeter.DOCS_CLASSES)
+  include includes/_docs.obj.flex-object.jade
+  +docs_flex(Xmeter.DOCS_CLASSES)
+  include includes/_docs.obj.grid-object.jade
+  +docs_grid(Xmeter.DOCS_CLASSES)
