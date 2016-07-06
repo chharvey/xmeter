@@ -1,41 +1,5 @@
-mixin contentHelp(classname)
+mixin docs_clearfix(classname)
   - classname = classname || {}
-  section#block
-    h2 Block
-    p.
-      The Block Helper creates a blocky look,
-      with an inherited line-height to maintain vertical rhythm.
-    figure(class=classname.figure)
-      p.
-        Albert Einstein was made famous by his equation
-        #[b.h-Block(style="text-align:center;") E = mc#[sup 2]]
-        which explains the relationship between energy and mass.
-      pre(class=classname.pre).
-        &lt;p&gt;... his famous equation
-          &lt;b class="#[u h-Block]" style="text-align:center;"&gt;E = mc&lt;sup&gt;2&lt/sup&gt;&lt;/b&gt;
-          which explains ...&lt;/p&gt;
-  section#inline
-    h2 Inline
-    p.
-      Creates an inline look,
-      with zero line-height to maintain vertical rhythm.
-    p.
-      This class is useful for creating inline lists, that is,
-      lists whose items are each displayed in line, one right after another.
-    figure(class=classname.figure)
-      ul
-        li.h-Inline spacetime#{' '}
-        li.h-Inline black hole#{' '}
-        li.h-Inline singularity#{' '}
-        li.h-Inline gravity#{' '}
-        li.h-Inline supernova#{' '}
-        li.h-Inline neutron star#{' '}
-      pre(class=classname.pre).
-        &lt;ul&gt;
-          &lt;li class="#[u h-Inline]"&gt;spacetime &lt;/li&gt;
-          &lt;li class="#[u h-Inline]"&gt;black hole &lt;/li&gt;
-          ...
-        &lt;/ul&gt;
   section#clearfix
     h2 Clearfix
     p.
