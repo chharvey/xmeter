@@ -1,0 +1,45 @@
+mixin docs_flex(classname)
+  - classname = classname || {}
+  section#flex-object
+    h2 The Flex Object
+    p.
+      A Flex Object is simply a container of flexible items arranged in one dimension.
+    figure(class=classname.figure)
+      ul.o-List.o-Flex
+        li.o-Flex__Item Burns &amp; McDonnell Engineering
+        li.o-Flex__Item DIS-TRAN Steel, LLC
+        li.o-Flex__Item EDM International
+      pre(class=classname.pre).
+        &lt;ul class="o-List  #[u o-Flex]"&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+      figcaption.
+        A Flex Object with extra space.
+        The flex items have an equal #[b main size], and grow to fill the extra space.
+        If overridden, the extra space will be distributed between the items.
+    figure(class=classname.figure)
+      ul.o-List.o-Flex
+        li.o-Flex__Item Burns &amp; McDonnell Engineering
+        li.o-Flex__Item DIS-TRAN Steel, LLC
+        li.o-Flex__Item EDM International
+        li.o-Flex__Item Electrical Consultants, Inc.
+        li.o-Flex__Item Fabrimet Inc.
+        li.o-Flex__Item Falcon Steel Company
+        li.o-Flex__Item Sabre-FWT
+        li.o-Flex__Item HDR
+        li.o-Flex__Item Mitas Energy
+        li.o-Flex__Item Power Consulting Associates, LLC
+        li.o-Flex__Item Power Line Systems, Inc.
+        li.o-Flex__Item Quanta Services
+        li.o-Flex__Item ReliaPOLE Inspection Services
+      pre(class=classname.pre).
+        &lt;ul class="o-List  #[u o-Flex]"&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+          &lt;li class="#[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+      figcaption.
+        A Flex Object with not enough space.
+        The flex items have an equal #[b main size] and shrink to fit in the alloted space.
