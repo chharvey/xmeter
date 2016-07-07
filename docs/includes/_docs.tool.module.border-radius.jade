@@ -1,0 +1,12 @@
+mixin docs_borderRadius(classname)
+  - var classname = classname || {}
+  section#border-radius
+    h3 border-radius
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.module.border-radius.less');
+      .your-class {
+        .border-left-radius(#[var @length]:#[strong 0]);
+        .border-right-radius(#[var @length]:#[strong 0]);
+        .border-top-radius(#[var @length]:#[strong 0]);
+        .border-bottom-radius(#[var @length]:#[strong 0]);
+      }

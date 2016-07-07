@@ -1,0 +1,9 @@
+mixin docs_filter(classname)
+  - var classname = classname || {}
+  section#filter
+    h3 filter
+    pre.docs-pre.
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.filter.less');
+      .your-class {
+        .column-width(#[var @filter-function-list]:#[strong none]);
+      }

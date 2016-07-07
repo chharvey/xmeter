@@ -4,7 +4,36 @@ block append vars
   - var page = Xmeter.getPage('tool.html')
 
 block append main
-  include includes/_content-tool.jade
+  section#fallback-tools
+    h2 Fallback Tools
+    include includes/_docs.tool.fallback.box-sizing.jade
+    +docs_boxSizing(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.flexbox-tools.jade
+    +docs_flexboxTools(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.transform.jade
+    +docs_transform(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.transform-origin.jade
+    +docs_transformOrigin(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.column-count.jade
+    +docs_columnCount(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.column-width.jade
+    +docs_columnWidth(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.filter.jade
+    +docs_filter(Xmeter.DOCS_CLASSES)
+  section#module-tools
+    h2 Module Tools
+    include includes/_docs.tool.module.vertspacing.jade
+    +docs_vertspacing(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.borders.jade
+    +docs_borders(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.border-radius.jade
+    +docs_borderRadius(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.font-sizing-tools.jade
+    +docs_fontSizingTools(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.delims.jade
+    +docs_delims(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.sprite.jade
+    +docs_sprite(Xmeter.DOCS_CLASSES)
 
 block append mainIntro
   p.
