@@ -4,7 +4,7 @@ block append vars
   - var page = Xmeter.getPage('atom.html')
 
 block append main
-  include includes/_docs.atom.margin-bottom.jade
+  include includes/_atom.margin-bottom.docs.jade
   +docs_marginBottom(Xmeter.DOCS_CLASSES)
-  include includes/_docs.atom.padding-top.jade
+  include includes/_atom.padding-top.docs.jade
   +docs_paddingTop(Xmeter.DOCS_CLASSES)
