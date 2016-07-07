@@ -2,7 +2,7 @@ mixin docs_delims(classname)
   - var classname = classname || {}
   section#delims
     h3 delims
-    pre.docs-pre.
+    pre(class=classname.pre).
       @import (reference) url('/node_modules/xmeter/src/__tool.module.delims.less');
       .your-class {
         .delims(#[var @strings]:#[strong @none]);

@@ -2,7 +2,7 @@ mixin docs_columnCount(classname)
   - var classname = classname || {}
   section#column-count
     h3 column-count
-    pre.docs-pre.
+    pre(class=classname.pre).
       @import (reference) url('/node_modules/xmeter/src/__tool.fallback.column-count.less');
       .your-class {
         .column-count(#[var @integer]:#[strong auto]);

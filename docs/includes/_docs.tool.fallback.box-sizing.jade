@@ -2,7 +2,7 @@ mixin docs_boxSizing(classname)
   - var classname = classname || {}
   section#box-sizing
     h3 box-sizing
-    pre.docs-pre.
+    pre(class=classname.pre).
       @import (reference) url('/node_modules/xmeter/src/__tool.fallback.box-sizing.less');
       .your-class {
         .box-sizing([content-box | border-box]:#[strong content-box]);

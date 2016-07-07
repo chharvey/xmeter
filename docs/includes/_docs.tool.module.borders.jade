@@ -2,7 +2,7 @@ mixin docs_borders(classname)
   - var classname = classname || {}
   section#borders
     h3 borders
-    pre.docs-pre.
+    pre(class=classname.pre).
       @import (reference) url('/node_modules/xmeter/src/__tool.module.borders.less');
       .your-class {
         .border-vert([top | bot | topbot | all]; #[var @length:#[strong 0]]);

@@ -2,7 +2,7 @@ mixin docs_fontSizingTools(classname)
   - var classname = classname || {}
   section#font-sizing-tools
     h3 Font Sizing Tools
-    pre.docs-pre.
+    pre(class=classname.pre).
       @import (reference) url('/node_modules/xmeter/src/__tool.module.fontsize.less');
       .your-module {
         .font-size-mod(#[var @number]:#[strong 1]);

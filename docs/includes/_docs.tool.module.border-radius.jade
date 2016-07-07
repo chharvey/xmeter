@@ -2,7 +2,7 @@ mixin docs_borderRadius(classname)
   - var classname = classname || {}
   section#border-radius
     h3 border-radius
-    pre.docs-pre.
+    pre(class=classname.pre).
       @import (reference) url('/node_modules/xmeter/src/__tool.module.border-radius.less');
       .your-class {
         .border-left-radius(#[var @length]:#[strong 0]);

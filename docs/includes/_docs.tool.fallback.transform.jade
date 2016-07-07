@@ -2,7 +2,7 @@ mixin docs_transform(classname)
   - var classname = classname || {}
   section#transform
     h3 transform
-    pre.docs-pre.
+    pre(class=classname.pre).
       @import (reference) url('/node_modules/xmeter/src/__tool.fallback.transform.less');
       .your-class {
         .transform(#[var @transform-list]:#[strong none]);
