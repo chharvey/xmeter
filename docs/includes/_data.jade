@@ -7,6 +7,26 @@
       , description: ''
       }
     , {
+        name: 'Tools', url: 'tool.html'
+      , description: 'Functions and mixins used for development.'
+      , sub: [
+          { name: 'Table of Contents' , url: 'tool.html#table-contents' }
+        , { name: 'box-sizing'        , url: 'tool.html#box-sizing' }
+        , { name: 'The Flexbox Tools' , url: 'tool.html#flexbox-tools' }
+        , { name: 'transform'         , url: 'tool.html#transform' }
+        , { name: 'transform-origin'  , url: 'tool.html#transform-origin' }
+        , { name: 'column-count'      , url: 'tool.html#column-count' }
+        , { name: 'column-width'      , url: 'tool.html#column-width' }
+        , { name: 'filter'            , url: 'tool.html#filter' }
+        , { name: 'vertspacing'       , url: 'tool.html#vertspacing' }
+        , { name: 'borders'           , url: 'tool.html#borders' }
+        , { name: 'border-radius'     , url: 'tool.html#border-radius' }
+        , { name: 'Font Sizing Tools' , url: 'tool.html#font-sizing-tools' }
+        , { name: 'delims'            , url: 'tool.html#delims' }
+        , { name: 'sprite'            , url: 'tool.html#sprite' }
+        ]
+      }
+    , {
         name: 'Visual Design', url: 'visual.html'
       , description: 'Color and font schemes, look-and-feel, overall mood and tone.'
       , is_hidden: true
@@ -38,7 +58,7 @@
       , description: 'Patterns of structure that can be reused many times for many different purposes.'
       , sub: [
           { name: 'Table of Contents', url: 'obj.html#table-contents' }
-        , { name: 'The Bare List'    , url: 'obj.html#bare-list' }
+        , { name: 'The List Object'  , url: 'obj.html#list-object' }
         , { name: 'The Flex Object'  , url: 'obj.html#flex-object' }
         , { name: 'The Grid Object'  , url: 'obj.html#grid-object' }
         ]
@@ -68,11 +88,18 @@
         ]
       }
     ]
+    Xmeter.DOCS_CLASSES = {
+      figure : 'docs-figure'
+    , pre    : 'docs-pre'
+    , code   : 'docs-code'
+    , form   : 'docs-form'
+    }
     Xmeter.getPage = function getPage(url0) {
       return Xmeter.PAGES.find(function (item) { return item.url === url0 }) || {}
     }
     return Xmeter
   })()
+
 //- mixin doctoc(args)
 //-   //- use this mixin if you want classes
 //-   - var pages     = args.pages     || []
@@ -87,6 +114,7 @@
 //-             | #{' '}&mdash;#{' ' + item.description}
 //-           if item.sub && depth > 0
 //-             +doctoc({pages: item.sub, class_obj: (class_obj.sub || {}), depth: depth-1})
+
 mixin doctoc(args)
   - var pages = args.pages  || []
   - var depth = +args.depth || 0
@@ -99,3 +127,18 @@ mixin doctoc(args)
             = ': ' + item.description
           if item.sub && depth > 0
             +doctoc({pages: item.sub, depth: depth-1})
+
+//- mixin markupify(thing, classes)
+  - classes = classes || {}
+  if typeof thing === 'object'
+    if Array.isArray(thing)
+      ul(class=classes.list)
+        each val,key in thing
+          li(class=classes.val): +markupify(val)
+    else
+      dl(class=classes.list)
+        each val,key in thing
+          dt(class=classes.key)= key
+          dd(class=classes.val): +markupify(val)
+  else
+    = thing

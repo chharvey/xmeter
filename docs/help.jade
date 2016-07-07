@@ -4,4 +4,9 @@ block append vars
   - var page = Xmeter.getPage('help.html')
 
 block append main
-  include includes/_content-help.jade
+  include includes/_docs.help.block.jade
+  +docs_block(Xmeter.DOCS_CLASSES)
+  include includes/_docs.help.inline.jade
+  +docs_inline(Xmeter.DOCS_CLASSES)
+  include includes/_docs.help.clearfix.jade
+  +docs_clearfix(Xmeter.DOCS_CLASSES)

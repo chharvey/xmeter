@@ -6,12 +6,6 @@ html(lang="en")
       -
         var project_name = 'Xmeter'
         var page = {}
-        var classname = {
-          figure : 'docs-figure'
-        , pre    : 'docs-pre'
-        , code   : 'docs-code'
-        , form   : 'docs-form'
-        }
     title= page.name + ' | ' + project_name
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -23,7 +17,8 @@ html(lang="en")
       block main
         header
           h1= project_name + ' — ' + page.name
-          p= page.description
+          block mainIntro
+            p= page.description
           nav#table-contents
             h2 Table of Contents
             block toc
@@ -32,4 +27,14 @@ html(lang="en")
       footer: nav
         h1 Sitemap
         +doctoc({pages: Xmeter.PAGES})
-    block scripts
+    script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
+    script.
+      function toURL(string) {
+        return encodeURIComponent(string.toLowerCase().replace(/[\W]+/g, '-'))
+      }
+      $('h1, h2, h3, h4, h5, h6').each(function () {
+        if (!$(this).parents('figure').length) {
+          var id = '_' + toURL($(this).text())
+          $(this).append($('<a>').addClass('docs-_fragid').attr('id', id).attr('href', '#' + id))
+        }
+      })

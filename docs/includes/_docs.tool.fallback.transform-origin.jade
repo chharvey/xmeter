@@ -1,0 +1,9 @@
+mixin docs_transformOrigin(classname)
+  - var classname = classname || {}
+  section#transform-origin
+    h3 transform-origin
+    pre(class=classname.pre).
+      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.transform-origin.less');
+      .your-class {
+        .transform-origin(#[var @point]:(#[strong 50% 50% 0]));
+      }

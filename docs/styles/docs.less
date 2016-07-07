@@ -9,6 +9,7 @@
 \*================================*/
 @import (reference) url('../../src/__settings.less');
 @import (reference) url('../../src/__tool.module.borders.less');
+@import (reference) url('../../src/__tool.module.delims.less');
 
 
 // Stylesheet for Xmeter documentation files.
@@ -26,6 +27,7 @@
   color: #ccc;
   border-radius: 0.25rem;
   u { color: #6c6; } // override bad contrast ratio
+  strong { color: #eee; }
 }
 .docs-pre,
 .docs-figure {
@@ -49,4 +51,37 @@
 }
 .docs-form {
   background: #fff;
+}
+
+
+// .docs-c-Api {
+//   dt,
+//   dd {
+//     display: inline;
+//   }
+//   dt {
+//     padding-right: 1rem;
+//     font-weight:700;
+//   }
+//   dd::after {
+//     content: '';
+//     display:block;
+//     clear:both;
+//   }
+// }
+
+
+.docs-_fragid {
+  display: inline;
+  line-height: 0;
+  margin-left: 1rem;
+  font-weight: 100;
+  &::before {
+    content: '\00a7';
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  &:not(:hover) > .docs-_fragid {
+    visibility: hidden;
+  }
 }

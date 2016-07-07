@@ -1,0 +1,45 @@
+extends _docs.tpl.jade
+
+block append vars
+  - var page = Xmeter.getPage('tool.html')
+
+block append main
+  section#fallback-tools
+    h2 Fallback Tools
+    include includes/_docs.tool.fallback.box-sizing.jade
+    +docs_boxSizing(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.flexbox-tools.jade
+    +docs_flexboxTools(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.transform.jade
+    +docs_transform(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.transform-origin.jade
+    +docs_transformOrigin(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.column-count.jade
+    +docs_columnCount(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.column-width.jade
+    +docs_columnWidth(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.fallback.filter.jade
+    +docs_filter(Xmeter.DOCS_CLASSES)
+  section#module-tools
+    h2 Module Tools
+    include includes/_docs.tool.module.vertspacing.jade
+    +docs_vertspacing(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.borders.jade
+    +docs_borders(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.border-radius.jade
+    +docs_borderRadius(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.font-sizing-tools.jade
+    +docs_fontSizingTools(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.delims.jade
+    +docs_delims(Xmeter.DOCS_CLASSES)
+    include includes/_docs.tool.module.sprite.jade
+    +docs_sprite(Xmeter.DOCS_CLASSES)
+
+block append mainIntro
+  p.
+    Tools are mixins and/or functions in the codebase that are used in development.
+    These rules don&rsquo;t output any CSS, but they do make writing CSS a lot easier
+    by encapsulating reusable sets of property declarations.
+    #[a(href="#fallback-tools") Fallback&nbsp;Tools] are simply mixins that address
+    browser vendor prefixes for CSS properties and values,
+    whereas #[a(href="#module-tools") Module&nbsp;Tools] combine properties commonly used together.
