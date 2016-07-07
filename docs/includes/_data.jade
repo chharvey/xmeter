@@ -79,29 +79,18 @@
     }
     return Xmeter
   })()
-//- mixin doctoc(args)
-//-   //- use this mixin if you want classes
-//-   - var pages     = args.pages     || []
-//-   - var class_obj = args.class_obj || {}
-//-   - var depth     = +args.depth    || 0
-//-   ol(class=class_obj.listclasses)
-//-     each item in pages
-//-       unless item.is_hidden
-//-         li(class=class_obj.itemclasses)
-//-           a(class=class_obj.linkclasses href=item.url)= item.name
-//-           if item.description
-//-             | #{' '}&mdash;#{' ' + item.description}
-//-           if item.sub && depth > 0
-//-             +doctoc({pages: item.sub, class_obj: (class_obj.sub || {}), depth: depth-1})
+
 mixin doctoc(args)
-  - var pages = args.pages  || []
-  - var depth = +args.depth || 0
-  ol
+  -
+    var pages     = args.pages     || []
+    var class_obj = args.class_obj || {}
+    var depth     = +args.depth    || 0
+  ol(class=class_obj.listclasses)
     each item in pages
       unless item.is_hidden
-        li
-          a(href=item.url)= item.name
+        li(class=class_obj.itemclasses)
+          a(class=class_obj.linkclasses href=item.url)= item.name
           if item.description
             = ': ' + item.description
           if item.sub && depth > 0
-            +doctoc({pages: item.sub, depth: depth-1})
+            +doctoc({pages: item.sub, class_obj: (class_obj.sub || {}), depth: depth-1})
