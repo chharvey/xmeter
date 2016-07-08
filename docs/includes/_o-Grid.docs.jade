@@ -9,10 +9,7 @@ mixin docs_grid(classname)
       (unlike tables where cells might not share the same row), while at the same time
       appearing like a table with rows and columns.
     p.
-      By default, each item has a #[b main size] of 100%.
-      This behavior can be overridden with the
-      #[code(class=classname.code) flex] or
-      #[code(class=classname.code) flex-basis] properties.
+      By default, each item has a #[b main size] of #[code(class=classname.code) 100%] (unless overridden).
       Using media queries, you can achieve a flexible and responsive table effect,
       adjusting the number of #[b cross axes]&mdash;columns if
       #[code(class=classname.code) flex-direction: row;], or rows if

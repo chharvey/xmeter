@@ -4,6 +4,10 @@ mixin docs_flex(classname)
     h2 The Flex Object
     p.
       A Flex Object is simply a container of flexible items arranged in one dimension.
+      Each flex item has a #[b main size] of #[code(class=classname.code) auto],
+      depending on its contents.
+      The flex items will grow or shrink together to fit into the allotted space.
+      If overridden, the extra space (if any) will be distributed #[em between] the items.
     figure(class=classname.figure)
       ul.o-List.o-Flex
         li.o-List__Item.o-Flex__Item Burns &amp; McDonnell Engineering
@@ -17,8 +21,6 @@ mixin docs_flex(classname)
         &lt;/ul&gt;
       figcaption.
         A Flex Object with extra space.
-        The flex items have an equal #[b main size], and grow to fill the extra space.
-        If overridden, the extra space will be distributed between the items.
     figure(class=classname.figure)
       ul.o-List.o-Flex
         li.o-List__Item.o-Flex__Item Burns &amp; McDonnell Engineering
@@ -42,4 +44,3 @@ mixin docs_flex(classname)
         &lt;/ul&gt;
       figcaption.
         A Flex Object with not enough space.
-        The flex items have an equal #[b main size] and shrink to fit in the alloted space.
