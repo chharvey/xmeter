@@ -1,9 +1,0 @@
-mixin docs_columnWidth(classname)
-  - var classname = classname || {}
-  section#column-width
-    h3 column-width
-    pre(class=classname.pre).
-      @import (reference) url('/node_modules/xmeter/src/__tool.fallback.column-width.less');
-      .your-class {
-        .column-width(#[var @length]:#[strong auto]);
-      }

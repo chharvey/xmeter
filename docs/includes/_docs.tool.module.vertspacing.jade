@@ -1,9 +1,0 @@
-mixin docs_vertspacing(classname)
-  - var classname = classname || {}
-  section#vertspacing
-    h3 vertspacing
-    pre(class=classname.pre).
-      @import (reference) url('/node_modules/xmeter/src/__tool.module.vertspacing.less');
-      .your-module {
-        .vertspacing(#[var @length]:#[strong @g-vru]);
-      }
