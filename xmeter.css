@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 4.3.0
+    Version: 5.0.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -529,27 +529,40 @@ textarea {
     xmeter.less
 \*================================*/
 /**
-  * CONTENTS
-  *
-  * reset.css (above).............strips all elements of all browser-default styles
-  * normalize.css (above).........(@necolas) addresses browser discrepancies
-  *
-  * BASE
-  * generic.......................styles that apply to `html` and very far-reaching groups of elements
-  * sections......................secioning content and section-related elements
-  * grouping......................grouping content
-  * ....paras.........................paragraphs, block-level textual elements
-  * ....lists.........................ordered, unordered, dictionary
-  * ....tables........................tables
-  * text..........................text-level and inline elements
-  * ....links.........................inline hyperlinks
-  * ....stress........................text outstanding from surrounding prose
-  * ....doctext.......................documentation elements
-  * ....data..........................machine- or human-readable data
-  * embedded......................images and other media
-  * forms.........................form elements
-  * interactive...................interactive elements
-  */
+ * CONTENTS
+ *
+ * reset.css (above).............strips all elements of all browser-default styles
+ * normalize.css (above).........(@necolas) addresses browser discrepancies
+ *
+ * BASE
+ * generic........................styles that apply to `html` and very far-reaching groups of elements
+ * sections.......................secioning content and section-related elements
+ * grouping.......................grouping content
+ * ....paras..........................paragraphs, block-level textual elements
+ * ....lists..........................ordered, unordered, dictionary
+ * ....tables.........................tables
+ * text...........................text-level and inline elements
+ * ....links..........................inline hyperlinks
+ * ....stress.........................text outstanding from surrounding prose
+ * ....doctext........................documentation elements
+ * ....data...........................machine- or human-readable data
+ * embedded.......................images and other media
+ * forms..........................form elements
+ * interactive....................interactive elements
+ *
+ * OBJECTS
+ * List...........................plain, unstyled, blocky list
+ * Flex...........................one-dimensional flexible box
+ * Grid...........................two-dimensional flexible box
+ *
+ * HELPERS
+ * Block..........................gives a blocky look
+ * Inline.........................a simple inline object
+ * Clearfix.......................creates a line break and clears floats
+ *
+ * ATOMS
+ * atom...........................single-use classes
+ */
 /*################################*\
     xmeter  |  _base.generic.less
 \*################################*/
@@ -606,7 +619,8 @@ i,
 mark,
 u,
 small,
-s dfn,
+s,
+dfn,
 b,
 abbr,
 var,
@@ -910,4 +924,648 @@ input[type="search"] {
 /*################################*\
     xmeter  |  _base.interactive.less
 \*################################*/
+
+/*################################*\
+    xmeter  |  _o-List.less
+\*################################*/
+.o-List {
+  padding-left: 0;
+  list-style: none;
+}
+@media screen {
+  .o-List-s {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+@media print {
+  .o-List-p {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 30em) {
+  .o-List-sK {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 45em) {
+  .o-List-sM {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 60em) {
+  .o-List-sG {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 75em) {
+  .o-List-sT {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 90em) {
+  .o-List-sP {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+/*################################*\
+    xmeter  |  _o-Flex.less
+\*################################*/
+.o-Flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  line-height: inherit;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+.o-Flex__Item {
+  -webkit-box-flex: auto;
+  -moz-box-flex: auto;
+  -webkit-flex: auto;
+  -moz-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+}
+@media screen {
+  .o-Flex-s {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .o-Flex__Item-s {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+}
+@media print {
+  .o-Flex-p {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .o-Flex__Item-p {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+}
+@media screen and (min-width: 30em) {
+  .o-Flex-sK {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .o-Flex__Item-sK {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+}
+@media screen and (min-width: 45em) {
+  .o-Flex-sM {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .o-Flex__Item-sM {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+}
+@media screen and (min-width: 60em) {
+  .o-Flex-sG {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .o-Flex__Item-sG {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+}
+@media screen and (min-width: 75em) {
+  .o-Flex-sT {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .o-Flex__Item-sT {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+}
+@media screen and (min-width: 90em) {
+  .o-Flex-sP {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .o-Flex__Item-sP {
+    -webkit-box-flex: auto;
+    -moz-box-flex: auto;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+  }
+}
+
+/*################################*\
+    xmeter  |  _o-Grid.less
+\*################################*/
+.o-Grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  line-height: inherit;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.o-Grid__Item {
+  -webkit-box-flex: 100%;
+  -moz-box-flex: 100%;
+  -webkit-flex: 100%;
+  -moz-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;
+}
+@media screen {
+  .o-Grid-s {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .o-Grid__Item-s {
+    -webkit-box-flex: 100%;
+    -moz-box-flex: 100%;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+}
+@media print {
+  .o-Grid-p {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .o-Grid__Item-p {
+    -webkit-box-flex: 100%;
+    -moz-box-flex: 100%;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+}
+@media screen and (min-width: 30em) {
+  .o-Grid-sK {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .o-Grid__Item-sK {
+    -webkit-box-flex: 100%;
+    -moz-box-flex: 100%;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+}
+@media screen and (min-width: 45em) {
+  .o-Grid-sM {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .o-Grid__Item-sM {
+    -webkit-box-flex: 100%;
+    -moz-box-flex: 100%;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+}
+@media screen and (min-width: 60em) {
+  .o-Grid-sG {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .o-Grid__Item-sG {
+    -webkit-box-flex: 100%;
+    -moz-box-flex: 100%;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+}
+@media screen and (min-width: 75em) {
+  .o-Grid-sT {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .o-Grid__Item-sT {
+    -webkit-box-flex: 100%;
+    -moz-box-flex: 100%;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+}
+@media screen and (min-width: 90em) {
+  .o-Grid-sP {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    line-height: inherit;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .o-Grid__Item-sP {
+    -webkit-box-flex: 100%;
+    -moz-box-flex: 100%;
+    -webkit-flex: 100%;
+    -moz-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+}
+
+/*################################*\
+    xmeter  |  _h-Block.less
+\*################################*/
+.h-Block {
+  display: block;
+  line-height: inherit;
+}
+@media screen {
+  .h-Block-s {
+    display: block;
+    line-height: inherit;
+  }
+}
+@media print {
+  .h-Block-p {
+    display: block;
+    line-height: inherit;
+  }
+}
+@media screen and (min-width: 30em) {
+  .h-Block-sK {
+    display: block;
+    line-height: inherit;
+  }
+}
+@media screen and (min-width: 45em) {
+  .h-Block-sM {
+    display: block;
+    line-height: inherit;
+  }
+}
+@media screen and (min-width: 60em) {
+  .h-Block-sG {
+    display: block;
+    line-height: inherit;
+  }
+}
+@media screen and (min-width: 75em) {
+  .h-Block-sT {
+    display: block;
+    line-height: inherit;
+  }
+}
+@media screen and (min-width: 90em) {
+  .h-Block-sP {
+    display: block;
+    line-height: inherit;
+  }
+}
+
+/*################################*\
+    xmeter  |  _h-Inline.less
+\*################################*/
+.h-Inline {
+  display: inline;
+  line-height: 0;
+}
+@media screen {
+  .h-Inline-s {
+    display: inline;
+    line-height: 0;
+  }
+}
+@media print {
+  .h-Inline-p {
+    display: inline;
+    line-height: 0;
+  }
+}
+@media screen and (min-width: 30em) {
+  .h-Inline-sK {
+    display: inline;
+    line-height: 0;
+  }
+}
+@media screen and (min-width: 45em) {
+  .h-Inline-sM {
+    display: inline;
+    line-height: 0;
+  }
+}
+@media screen and (min-width: 60em) {
+  .h-Inline-sG {
+    display: inline;
+    line-height: 0;
+  }
+}
+@media screen and (min-width: 75em) {
+  .h-Inline-sT {
+    display: inline;
+    line-height: 0;
+  }
+}
+@media screen and (min-width: 90em) {
+  .h-Inline-sP {
+    display: inline;
+    line-height: 0;
+  }
+}
+
+/*################################*\
+    xmeter  |  _h-Clearfix.less
+\*################################*/
+.h-Clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+@media screen {
+  .h-Clearfix-s::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@media print {
+  .h-Clearfix-p::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@media screen and (min-width: 30em) {
+  .h-Clearfix-sK::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@media screen and (min-width: 45em) {
+  .h-Clearfix-sM::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@media screen and (min-width: 60em) {
+  .h-Clearfix-sG::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@media screen and (min-width: 75em) {
+  .h-Clearfix-sT::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@media screen and (min-width: 90em) {
+  .h-Clearfix-sP::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+/*################################*\
+    xmeter  |  _atom.less
+\*################################*/
+.-mb-1vru {
+  margin-bottom: 1.5rem;
+}
+@media screen {
+  .-mb-1vru-s {
+    margin-bottom: 1.5rem;
+  }
+}
+@media print {
+  .-mb-1vru-p {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 30em) {
+  .-mb-1vru-sK {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 45em) {
+  .-mb-1vru-sM {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 60em) {
+  .-mb-1vru-sG {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .-mb-1vru-sT {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 90em) {
+  .-mb-1vru-sP {
+    margin-bottom: 1.5rem;
+  }
+}
+.-pt-1vru {
+  padding-top: 1.5rem;
+}
+@media screen {
+  .-pt-1vru-s {
+    padding-top: 1.5rem;
+  }
+}
+@media print {
+  .-pt-1vru-p {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 30em) {
+  .-pt-1vru-sK {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 45em) {
+  .-pt-1vru-sM {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 60em) {
+  .-pt-1vru-sG {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .-pt-1vru-sT {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 90em) {
+  .-pt-1vru-sP {
+    padding-top: 1.5rem;
+  }
+}
 

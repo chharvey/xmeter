@@ -1,0 +1,56 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    xmeter
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*================================*\
+    docs.less
+\*================================*/
+@import (reference) url('../../src/__settings.less');
+@import (reference) url('../../src/__tool.borders.less');
+
+
+// Stylesheet for Xmeter documentation files.
+
+
+.docs-body {
+  background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
+  background-position: left top;
+  background-size: 1px 24px;
+  background-repeat: repeat;
+}
+.docs-main {
+  margin: 0 1rem @g-vru;
+}
+.docs-pre,
+.docs-code {
+  background-color: #333;
+  color: #ccc;
+  border-radius: 0.25rem;
+  u { color: #6c6; } // override bad contrast ratio
+}
+.docs-pre,
+.docs-figure {
+  padding: (0.5*@g-vru) 0.5rem;
+}
+.docs-code {
+  padding: 2px 4px;
+}
+.docs-figure {
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  .border-vert(all; 1px);
+  border-style: solid;
+  border-color: #ddd;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  overflow: auto;
+  & > figcaption {
+    font-style: italic;
+  }
+}
+.docs-form {
+  background: #fff;
+}

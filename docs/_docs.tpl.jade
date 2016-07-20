@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    include includes/_data.jade
+    block vars
+      -
+        var project_name = 'Xmeter'
+        var page = {}
+    title= page.name + ' | ' + project_name
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="A demo of Xmeter styles.")
+    link(rel="stylesheet" href="../xmeter.css")
+    link(rel="stylesheet" href="styles/docs.css")
+  body.docs-body
+    main.docs-main
+      block main
+        header
+          h1= project_name + ' — ' + page.name
+          p= page.description
+          nav#table-contents
+            h2 Table of Contents
+            block toc
+              +doctoc({pages: page.sub, depth: Infinity})
+    unless page === Xmeter.getPage('index.html')
+      footer: nav
+        h1 Sitemap
+        +doctoc({pages: Xmeter.PAGES})
+    block scripts
