@@ -34,15 +34,21 @@ To install:
 
 #### Using the Tools
 
-Take a look in the `src/` folder. In here you will find a set of tools, starting
-with `__tool`, from which to pick and choose to use for your package.
+Take a look in the `src/` folder. In here you will find a set of partials
+from which to pick and choose to use for your package.
+
+Some are *fallbacks*, starting with `__fallback`, which are simply mixins that
+include properties supported by different browser vendors.
+Others are *tools*, starting with `__tool`, which group similar properties
+to create one functional styling unit.
+The settings file, `__settings.less`, contains all global variables.
 
 If you want to use a particular tool in your stylesheet, you will have to
 `@import (reference)` the stylesheet for that tool. For example,
 if you plan to use the `.font-size-el()` mixin in your Less, you must include
 
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.module.fontsize.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.fontsize.less');
 ```
 
 at the top of your stylesheet. Then when you want to “call” the mixin, do
@@ -65,8 +71,8 @@ To use the Xmeter global variables, import the `__settings` stylesheet.
 
 #### Using the Styles
 
-Files in the `src/` folder not starting with `__tool`
-provide actual styles for actual elements. Also unlike tools,
+Files in the `src/` folder not starting with `__`
+provide actual styles for actual elements. Also unlike those partials,
 **these stylesheets are *not* meant to be cherrypicked**. They are compiled
 separately<sup>&lowast;</sup> and
 concatenated together in the main file `xmeter.css`. If you’re developing a
