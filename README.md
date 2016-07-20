@@ -168,14 +168,14 @@ The following convention of naming Less variables is used:
 <dl>
   <dt>Global variables</dt>
   <dd>accessible throughout the entire site’s stylesheets</dd>
-  <dd>prefixed with `@g-`</dd>
+  <dd>prefixed with <code>@g-</code></dd>
   <dt>Local variables</dt>
   <dd>accessible within a page’s or subsite’s stylesheets
     (No such variables are in this package but the naming convention exists for your own packages.)</dd>
-  <dd>prefixed with `@l-`</dd>
+  <dd>prefixed with <code>@l-</code></dd>
   <dt>Private variables</dt>
   <dd>visible only within a partial Less file</dd>
-  <dd>prefixed with `@p-`</dd>
+  <dd>prefixed with <code>@p-</code></dd>
   <dt>Scoped variables</dt>
   <dd>(including parameters) within blocks and mixins</dd>
   <dd>not prefixed</dd>
