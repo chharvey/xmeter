@@ -1,12 +1,11 @@
 doctype html
 html(lang="en")
+  include includes/_data.jade
+  block vars
+    -
+      var page = Xmeter.site
   head
-    include includes/_data.jade
-    block vars
-      -
-        var project_name = 'Xmeter'
-        var page = {}
-    title= page.name + ' | ' + project_name
+    title= page.title || (page.name + ' | ' + Xmeter.site.name)
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="description" content="A demo of Xmeter styles.")
@@ -16,17 +15,17 @@ html(lang="en")
     main.docs-main
       block main
         header
-          h1= project_name + ' — ' + page.name
+          h1= page.title || (Xmeter.site.name + ' — ' + page.name)
           block mainIntro
-            p= page.description
+            p= page.getDescription()
           nav#table-contents
             h2 Table of Contents
             block toc
-              +doctoc({pages: page.sub, depth: Infinity})
-    unless page === Xmeter.getPage('index.html')
+              +doctoc({pages: page.getPagesAll(), depth: Infinity})
+    unless page === Xmeter.site
       footer: nav
         h1 Sitemap
-        +doctoc({pages: Xmeter.PAGES})
+        +doctoc({pages: Xmeter.site.getPagesAll()})
     block scripts
       script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
       script.

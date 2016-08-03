@@ -15,9 +15,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "js2pug": "js2pug docs/scripts/Xmeter.class.js && mv docs/scripts/Xmeter.class.js.pug docs/includes/class/_Xmeter.class.jade",
+    "js2pug:page": "js2pug docs/scripts/Page.class.js && mv docs/scripts/Page.class.js.pug docs/includes/class/_Page.class.jade",
+    "js2pug:sg": "js2pug docs/scripts/Styleguide.class.js && mv docs/scripts/Styleguide.class.js.pug docs/includes/class/_Styleguide.class.jade",
+    "js2pug:all": "npm run js2pug:page  &&  npm run js2pug:sg",
     "jade:docs": "jade docs/{index,base,obj,help,atom}.jade",
-    "jade:all": "npm run js2pug && npm run jade:docs",
+    "jade:all": "npm run js2pug:all && npm run jade:docs",
     "lessc:docs": "lessc docs/styles/docs.less docs/styles/docs.css",
     "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:docs  &&  npm run lessc:xmeter",
