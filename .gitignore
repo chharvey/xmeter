@@ -31,3 +31,4 @@ node_modules
 
 # Compiled source files
 build/
+docs/_classes/*.jade
