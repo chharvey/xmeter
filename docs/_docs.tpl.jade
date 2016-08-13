@@ -3,9 +3,10 @@ html(lang="en")
   include includes/_data.jade
   block vars
     -
-      var page = Xmeter.docs
+      var xm = (new Xmeter()).init()
+      var page = xm
   head
-    title= page.title || (page.name + ' | ' + Xmeter.docs.name)
+    title= page.title || (page.name + ' | ' + xm.name)
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="description" content="A demo of Xmeter styles.")
@@ -15,17 +16,21 @@ html(lang="en")
     main.docs-main
       block main
         header
-          h1= page.title || (Xmeter.docs.name + ' — ' + page.name)
+          //- h1= page.title || (xm.name + ' — ' + page.name)
+          if page.title
+            h1= page.title
+          else
+            h1 #[a(href=xm.getURL())= xm.name] &mdash; #{page.name}
           block mainIntro
             p= page.getDescription()
           nav#table-contents
             h2 Table of Contents
             block toc
-              +doctoc({pages: page.getPagesAll(), depth: Infinity})
-    unless page === Xmeter.docs
+              +doctoc({page: page, depth: Infinity})
+    block footer
       footer: nav
         h1 Sitemap
-        +doctoc({pages: Xmeter.docs.getPagesAll()})
+        +doctoc({page: xm})
     block scripts
       script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
       script.
