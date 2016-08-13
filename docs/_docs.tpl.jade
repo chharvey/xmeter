@@ -2,11 +2,9 @@ doctype html
 html(lang="en")
   include includes/_data.jade
   block vars
-    -
-      var xm = (new Xmeter()).init()
-      var page = xm
+    - var xm = new Xmeter().init()
   head
-    title= page.title || (page.name + ' | ' + xm.name)
+    title= page.getTitle() || (page.name + ' | ' + xm.name)
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="description" content="A demo of Xmeter styles.")
@@ -16,11 +14,11 @@ html(lang="en")
     main.docs-main
       block main
         header
-          //- h1= page.title || (xm.name + ' — ' + page.name)
-          if page.title
-            h1= page.title
+          //- h1= page.getTitle() || (xm.getName() + ' — ' + page.getName())
+          if page.getTitle()
+            h1= page.getTitle()
           else
-            h1 #[a(href=xm.getURL())= xm.name] &mdash; #{page.name}
+            h1 #[a(href=xm.getURL())= xm.getName()] &mdash; #{page.getName()}
           block mainIntro
             p= page.getDescription()
           nav#table-contents

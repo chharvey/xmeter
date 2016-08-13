@@ -2,7 +2,7 @@ var Page = (function () {
   // CONSTRUCTOR
   function Page($pageinfo) {
     var self = this
-    $pageinfo = $pageinfo || {}
+    $pageinfo = $pageinfo || {} // NOTE constructor overloading
     self.name = $pageinfo.name
     self.url  = $pageinfo.url
     self.title       = ''
@@ -63,6 +63,10 @@ var Page = (function () {
     }
     var index = this.pages.indexOf(page)
     if (index >= 0) this.pages.splice(index, 1)
+    return this
+  }
+  Page.prototype.removeAllPages = function removeAllPages() {
+    this.pages = []
     return this
   }
 

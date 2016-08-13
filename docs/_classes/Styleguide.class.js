@@ -1,5 +1,4 @@
-// var
-//     Page = require('./Page.class.js')
+// var Page = require('./Page.class.js')
 
 // TODO change classname to `StyleGuide`
 var Styleguide = (function () {
@@ -16,7 +15,8 @@ var Styleguide = (function () {
   Styleguide.prototype.init = function init() {
     var self = this
     if (!self.was_initialized) {
-      self
+      self.was_initialized = true
+      return self
         .addPage(new Page({ name: self.name, url: 'index.html' }))
         .addPage(new Page({ name: 'Visual Design', url: 'visual.html' })
           .setDescription('Color and font schemes, look-and-feel, overall voice and tone.')
@@ -49,9 +49,7 @@ var Styleguide = (function () {
         .addPage(new Page({ name: 'Atoms', url: 'atom.html' })
           .setDescription('Very specific classes used for creating anomalies or fixing broken styles.')
         )
-        .was_initialized = true
-    }
-    return self
+    } else return
   }
 
   return Styleguide
