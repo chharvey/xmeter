@@ -31,4 +31,4 @@ node_modules
 
 # Compiled source files
 build/
-docs/_classes/*.class.jade
+docs/_classes/*.jade
