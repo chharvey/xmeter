@@ -23,11 +23,11 @@ html(lang="en")
           nav#table-contents
             h2 Table of Contents
             block toc
-              +doctoc({page: page, depth: Infinity})
+              +doctoc({pages: page.getPagesAll(), depth: Infinity})
     block footer
       footer: nav
         h1 Sitemap
-        +doctoc({page: Xmeter.DOCS})
+        +doctoc({pages: Xmeter.DOCS.getPagesAll()})
     block scripts
       script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
       script.
