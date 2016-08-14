@@ -2,14 +2,14 @@
 
 var Xmeter = (function () {
   // CONSTRUCTOR
-  function Xmeter() {
-  }
+  function Xmeter() {}
 
   // METHODS
 
   // STATIC MEMBERS
   Xmeter.DOCS = new Styleguide('Xmeter', '/docs/')
     .setTitle('Xmeter Style Guide')
+    .setDescription('A demo of Xmeter styles.')
     .init()
   ;(function () {
     // adding pages to Xmeter.DOCS
