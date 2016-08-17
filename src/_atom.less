@@ -39,3 +39,173 @@
 @media screen and (min-width: 60em) { .-pt-1vru-sG { .-pt-1vru; } }
 @media screen and (min-width: 75em) { .-pt-1vru-sT { .-pt-1vru; } }
 @media screen and (min-width: 90em) { .-pt-1vru-sP { .-pt-1vru; } }
+
+
+@import (reference) url('__tool.fontsize.less');
+// Sets font-size properties.
+// First group sets only font-size in ems;
+// second group uses the `.font-size-el()` mixin for vertical rhythm.
+// See `__tool.fontsize.less` for more info.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-08-17
+.-fz-micr { font-size: @g-font_size_micr * 1em; }
+.-fz-mill { font-size: @g-font_size_mill * 1em; }
+.-fz-norm { font-size: @g-font_size_norm * 1em; }
+.-fz-kilo { font-size: @g-font_size_kilo * 1em; }
+.-fz-mega { font-size: @g-font_size_mega * 1em; }
+.-fz-giga { font-size: @g-font_size_giga * 1em; }
+.-fz-tera { font-size: @g-font_size_tera * 1em; }
+.-fz-peta { font-size: @g-font_size_peta * 1em; }
+@media screen {
+  .-fz-micr-s { .-fz-micr; }
+  .-fz-mill-s { .-fz-mill; }
+  .-fz-norm-s { .-fz-norm; }
+  .-fz-kilo-s { .-fz-kilo; }
+  .-fz-mega-s { .-fz-mega; }
+  .-fz-giga-s { .-fz-giga; }
+  .-fz-tera-s { .-fz-tera; }
+  .-fz-peta-s { .-fz-peta; }
+}
+@media print {
+  .-fz-micr-p { .-fz-micr; }
+  .-fz-mill-p { .-fz-mill; }
+  .-fz-norm-p { .-fz-norm; }
+  .-fz-kilo-p { .-fz-kilo; }
+  .-fz-mega-p { .-fz-mega; }
+  .-fz-giga-p { .-fz-giga; }
+  .-fz-tera-p { .-fz-tera; }
+  .-fz-peta-p { .-fz-peta; }
+}
+@media screen and (min-width: 30em) {
+  .-fz-micr-sK { .-fz-micr; }
+  .-fz-mill-sK { .-fz-mill; }
+  .-fz-norm-sK { .-fz-norm; }
+  .-fz-kilo-sK { .-fz-kilo; }
+  .-fz-mega-sK { .-fz-mega; }
+  .-fz-giga-sK { .-fz-giga; }
+  .-fz-tera-sK { .-fz-tera; }
+  .-fz-peta-sK { .-fz-peta; }
+}
+@media screen and (min-width: 45em) {
+  .-fz-micr-sM { .-fz-micr; }
+  .-fz-mill-sM { .-fz-mill; }
+  .-fz-norm-sM { .-fz-norm; }
+  .-fz-kilo-sM { .-fz-kilo; }
+  .-fz-mega-sM { .-fz-mega; }
+  .-fz-giga-sM { .-fz-giga; }
+  .-fz-tera-sM { .-fz-tera; }
+  .-fz-peta-sM { .-fz-peta; }
+}
+@media screen and (min-width: 60em) {
+  .-fz-micr-sG { .-fz-micr; }
+  .-fz-mill-sG { .-fz-mill; }
+  .-fz-norm-sG { .-fz-norm; }
+  .-fz-kilo-sG { .-fz-kilo; }
+  .-fz-mega-sG { .-fz-mega; }
+  .-fz-giga-sG { .-fz-giga; }
+  .-fz-tera-sG { .-fz-tera; }
+  .-fz-peta-sG { .-fz-peta; }
+}
+@media screen and (min-width: 75em) {
+  .-fz-micr-sT { .-fz-micr; }
+  .-fz-mill-sT { .-fz-mill; }
+  .-fz-norm-sT { .-fz-norm; }
+  .-fz-kilo-sT { .-fz-kilo; }
+  .-fz-mega-sT { .-fz-mega; }
+  .-fz-giga-sT { .-fz-giga; }
+  .-fz-tera-sT { .-fz-tera; }
+  .-fz-peta-sT { .-fz-peta; }
+}
+@media screen and (min-width: 90em) {
+  .-fz-micr-sP { .-fz-micr; }
+  .-fz-mill-sP { .-fz-mill; }
+  .-fz-norm-sP { .-fz-norm; }
+  .-fz-kilo-sP { .-fz-kilo; }
+  .-fz-mega-sP { .-fz-mega; }
+  .-fz-giga-sP { .-fz-giga; }
+  .-fz-tera-sP { .-fz-tera; }
+  .-fz-peta-sP { .-fz-peta; }
+}
+
+
+.-fz-el-micr { .font-size-el(@g-font_size_micr); }
+.-fz-el-mill { .font-size-el(@g-font_size_mill); }
+.-fz-el-norm { .font-size-el(@g-font_size_norm); }
+.-fz-el-kilo { .font-size-el(@g-font_size_kilo); }
+.-fz-el-mega { .font-size-el(@g-font_size_mega); }
+.-fz-el-giga { .font-size-el(@g-font_size_giga); }
+.-fz-el-tera { .font-size-el(@g-font_size_tera); }
+.-fz-el-peta { .font-size-el(@g-font_size_peta); }
+@media screen {
+  .-fz-el-micr-s { .-fz-el-micr; }
+  .-fz-el-mill-s { .-fz-el-mill; }
+  .-fz-el-norm-s { .-fz-el-norm; }
+  .-fz-el-kilo-s { .-fz-el-kilo; }
+  .-fz-el-mega-s { .-fz-el-mega; }
+  .-fz-el-giga-s { .-fz-el-giga; }
+  .-fz-el-tera-s { .-fz-el-tera; }
+  .-fz-el-peta-s { .-fz-el-peta; }
+}
+@media print {
+  .-fz-el-micr-p { .-fz-el-micr; }
+  .-fz-el-mill-p { .-fz-el-mill; }
+  .-fz-el-norm-p { .-fz-el-norm; }
+  .-fz-el-kilo-p { .-fz-el-kilo; }
+  .-fz-el-mega-p { .-fz-el-mega; }
+  .-fz-el-giga-p { .-fz-el-giga; }
+  .-fz-el-tera-p { .-fz-el-tera; }
+  .-fz-el-peta-p { .-fz-el-peta; }
+}
+@media screen and (min-width: 30em) {
+  .-fz-el-micr-sK { .-fz-el-micr; }
+  .-fz-el-mill-sK { .-fz-el-mill; }
+  .-fz-el-norm-sK { .-fz-el-norm; }
+  .-fz-el-kilo-sK { .-fz-el-kilo; }
+  .-fz-el-mega-sK { .-fz-el-mega; }
+  .-fz-el-giga-sK { .-fz-el-giga; }
+  .-fz-el-tera-sK { .-fz-el-tera; }
+  .-fz-el-peta-sK { .-fz-el-peta; }
+}
+@media screen and (min-width: 45em) {
+  .-fz-el-micr-sM { .-fz-el-micr; }
+  .-fz-el-mill-sM { .-fz-el-mill; }
+  .-fz-el-norm-sM { .-fz-el-norm; }
+  .-fz-el-kilo-sM { .-fz-el-kilo; }
+  .-fz-el-mega-sM { .-fz-el-mega; }
+  .-fz-el-giga-sM { .-fz-el-giga; }
+  .-fz-el-tera-sM { .-fz-el-tera; }
+  .-fz-el-peta-sM { .-fz-el-peta; }
+}
+@media screen and (min-width: 60em) {
+  .-fz-el-micr-sG { .-fz-el-micr; }
+  .-fz-el-mill-sG { .-fz-el-mill; }
+  .-fz-el-norm-sG { .-fz-el-norm; }
+  .-fz-el-kilo-sG { .-fz-el-kilo; }
+  .-fz-el-mega-sG { .-fz-el-mega; }
+  .-fz-el-giga-sG { .-fz-el-giga; }
+  .-fz-el-tera-sG { .-fz-el-tera; }
+  .-fz-el-peta-sG { .-fz-el-peta; }
+}
+@media screen and (min-width: 75em) {
+  .-fz-el-micr-sT { .-fz-el-micr; }
+  .-fz-el-mill-sT { .-fz-el-mill; }
+  .-fz-el-norm-sT { .-fz-el-norm; }
+  .-fz-el-kilo-sT { .-fz-el-kilo; }
+  .-fz-el-mega-sT { .-fz-el-mega; }
+  .-fz-el-giga-sT { .-fz-el-giga; }
+  .-fz-el-tera-sT { .-fz-el-tera; }
+  .-fz-el-peta-sT { .-fz-el-peta; }
+}
+@media screen and (min-width: 90em) {
+  .-fz-el-micr-sP { .-fz-el-micr; }
+  .-fz-el-mill-sP { .-fz-el-mill; }
+  .-fz-el-norm-sP { .-fz-el-norm; }
+  .-fz-el-kilo-sP { .-fz-el-kilo; }
+  .-fz-el-mega-sP { .-fz-el-mega; }
+  .-fz-el-giga-sP { .-fz-el-giga; }
+  .-fz-el-tera-sP { .-fz-el-tera; }
+  .-fz-el-peta-sP { .-fz-el-peta; }
+}

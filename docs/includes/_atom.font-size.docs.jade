@@ -1,0 +1,34 @@
+mixin docs_fontSize(classname)
+  - classname = classname || {}
+  section#font-size
+    h2 font-size
+    p.
+      These are two groups of atoms. The first group simply sets the font size of an element.
+      The second group uses the #[code(class=classname.code) .font-size-el()] mixin,
+      for maintaining vertical rhythm.
+    p.
+      See all the font sizes in the source file #[code(class=classname.code) /src/__settings.less],
+      and all atoms in #[code(class=classname.code) /src/_atom.less]
+    pre(class=classname.pre).
+      @g-font_size_peta: 96/16;
+      @g-font_size_tera: 64/16;
+      @g-font_size_giga: 48/16;
+      @g-font_size_mega: 32/16;
+      @g-font_size_kilo: 24/16;
+      @g-font_size_norm: 16/16;
+      @g-font_size_mill: 12/16;
+      @g-font_size_micr:  8/16;
+      .-fz-norm { font-size: @g-font_size_norm * 1em; }
+      .-fz-el-norm { .font-size-el(@g-font_size_norm); }
+    figure(class=classname.figure)
+      p
+        | The following #[code(class=classname.code) u] element is one step bigger than normal:#{' '}
+        u.-fz-kilo this is the element.
+      pre(class=classname.pre).
+        &lt;u class="#[u -fz-kilo]"&gt;this is the element.&lt;/u&gt;
+    figure(class=classname.figure)
+      p.-fz-el-mill.
+        This entire paragraph is one step smaller than normal.
+        Use #[code(class=classname.code) .-fz-el-*] on blocks.
+      pre(class=classname.pre).
+        &lt;p class="#[u -fz-el-mill]"&gt;This entire paragraph ...&lt;/p&gt;
