@@ -26,10 +26,20 @@
 @g-font_size_h5: 14/16; // 0.875
 @g-font_size_h6: 12/16; // 0.750
 
-// new font sizes as of 2016-08-17
-@g-font_size_h1: 48/16; // 3.000
-@g-font_size_h2: 32/16; // 2.000
-@g-font_size_h3: 24/16; // 1.500
-@g-font_size_h4: 16/16; // 1.000
-@g-font_size_h5: 12/16; // 0.750
-@g-font_size_h6:  8/16; // 0.500
+// new global font sizes as of 2016-08-17
+@g-font_size_peta: 96/16; // 6.00 // lines: 4
+@g-font_size_tera: 64/16; // 4.00 // lines: 3
+@g-font_size_giga: 48/16; // 3.00 // lines: 2
+@g-font_size_mega: 32/16; // 2.00 // lines: 2
+@g-font_size_kilo: 24/16; // 1.50 // lines: 1
+@g-font_size_norm: 16/16; // 1.00 // lines: 1
+@g-font_size_mill: 12/16; // 0.75 // lines: 1
+@g-font_size_micr:  8/16; // 0.50 // lines: 1
+
+// new heading sizes
+@g-font_size_h1: @g-font_size_giga;
+@g-font_size_h2: @g-font_size_mega;
+@g-font_size_h3: @g-font_size_kilo;
+@g-font_size_h4: @g-font_size_norm;
+@g-font_size_h5: @g-font_size_mill;
+@g-font_size_h6: @g-font_size_micr;
