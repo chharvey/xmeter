@@ -8,8 +8,7 @@
     docs.less
 \*================================*/
 @import (reference) url('../../src/__settings.less');
-@import (reference) url('../../src/__tool.module.borders.less');
-@import (reference) url('../../src/__tool.module.delims.less');
+@import (reference) url('../../src/__tool.borders.less');
 
 
 // Stylesheet for Xmeter documentation files.
@@ -20,6 +19,9 @@
   background-position: left top;
   background-size: 1px 24px;
   background-repeat: repeat;
+}
+.docs-main {
+  margin: 0 1rem @g-vru;
 }
 .docs-pre,
 .docs-code {
@@ -37,14 +39,15 @@
   padding: 2px 4px;
 }
 .docs-figure {
+  position: relative;
   margin-left: 1rem;
   margin-right: 1rem;
   .border-vert(all; 1px);
   border-style: solid;
   border-color: #ddd;
   border-radius: 0.5rem;
-  position: relative;
   background-color: #eee;
+  overflow: auto;
   & > figcaption {
     font-style: italic;
   }
@@ -52,23 +55,6 @@
 .docs-form {
   background: #fff;
 }
-
-
-// .docs-c-Api {
-//   dt,
-//   dd {
-//     display: inline;
-//   }
-//   dt {
-//     padding-right: 1rem;
-//     font-weight:700;
-//   }
-//   dd::after {
-//     content: '';
-//     display:block;
-//     clear:both;
-//   }
-// }
 
 
 .docs-_fragid {
