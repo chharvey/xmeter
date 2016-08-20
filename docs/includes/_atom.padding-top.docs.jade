@@ -1,13 +1,11 @@
 mixin docs_paddingTop(classname)
   - classname = classname || {}
-  section#padding-top
-    h2 padding-top
-    p.
-      This atom sets the top padding to 1#[b: abbr(title="vertical rhythm unit") vru].
+  p.
+    This atom sets the top padding to 1#[b: abbr(title="vertical rhythm unit") vru].
+  pre(class=classname.pre).
+    @g-vru: @g-line_height * 1rem;
+    .-pt-1vru { padding-top: @g-vru; }
+  figure(class=classname.figure)
+    div.-pt-1vru Usually only Heading 1 is given this style, but it is also useful for moving an element down the page.
     pre(class=classname.pre).
-      @g-vru: @g-line_height * 1rem;
-      .-pt-1vru { padding-top: @g-vru; }
-    figure(class=classname.figure)
-      div.-pt-1vru Usually only Heading 1 is given this style, but it is also useful for moving an element down the page.
-      pre(class=classname.pre).
-        &lt;div class="#[u -pt-1vru]"&gt;Usually only ...&lt;/div&gt;
+      &lt;div class="#[u -pt-1vru]"&gt;Usually only ...&lt;/div&gt;

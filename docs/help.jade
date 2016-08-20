@@ -4,9 +4,12 @@ block append vars
   - var page = Xmeter.DOCS.getPage('help.html')
 
 block append main
-  include includes/_h-Block.docs.jade
-  +docs_block(Xmeter.DOCS_CLASSES)
-  include includes/_h-Inline.docs.jade
-  +docs_inline(Xmeter.DOCS_CLASSES)
-  include includes/_h-Clearfix.docs.jade
-  +docs_clearfix(Xmeter.DOCS_CLASSES)
+  +newSection(2, Xmeter.DOCS.findPage('help.html#block'))
+    include includes/_h-Block.docs.jade
+    +docs_block(Xmeter.DOCS_CLASSES)
+  +newSection(2, Xmeter.DOCS.findPage('help.html#inline'))
+    include includes/_h-Inline.docs.jade
+    +docs_inline(Xmeter.DOCS_CLASSES)
+  +newSection(2, Xmeter.DOCS.findPage('help.html#cleafix'))
+    include includes/_h-Clearfix.docs.jade
+    +docs_clearfix(Xmeter.DOCS_CLASSES)

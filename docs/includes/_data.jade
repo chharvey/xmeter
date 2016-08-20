@@ -17,3 +17,18 @@ mixin doctoc(args)
             = ': ' + item.getDescription()
           if item.getPagesAll().length && depth > 0
             +doctoc({pages: item.getPagesAll(), classes: (classes.sub || {}), depth: depth-1})
+
+mixin newSection(hn, page)
+  -
+    var text = page.getName()
+      , id = page.getURL().split('#')[1]
+  section(id=id)
+    if hn === 1
+      h1 #{text} #[a.docs-_fragid(href='#' + id)]
+    else if hn === 2
+      h2 #{text} #[a.docs-_fragid(href='#' + id)]
+    else if hn === 3
+      h3 #{text} #[a.docs-_fragid(href='#' + id)]
+    else
+      p #{text}
+    block

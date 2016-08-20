@@ -52,5 +52,7 @@ var Styleguide = (function () {
     } else return
   }
 
+  // STATIC MEMBERS
+
   return Styleguide
 })()

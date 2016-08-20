@@ -1,7 +1,7 @@
 - classname = classname || {}
 section#headings-paragraphs
   block headingsParagraphs
-    h2 Headings &amp; Paragraphs
+    h2 Headings &amp; Paragraphs #[a.docs-_fragid(href='#headings-paragraphs')]
     figure(class=classname.figure)
       h1 Heading 1 #[code(class=classname.code) h1]
       p.
@@ -117,7 +117,7 @@ section#headings-paragraphs
       hr
 section#lists
   block lists
-    h2 Lists
+    h2 Lists #[a.docs-_fragid(href='#lists')]
     figure(class=classname.figure)
       figcaption Ordered List #[code(class=classname.code) ol]
       ol
@@ -157,7 +157,7 @@ section#lists
             li 2nd value
 section#tables
   block tables
-    h2 Tables
+    h2 Tables #[a.docs-_fragid(href='#tables')]
     figure(class=classname.figure)
       table
         caption #[code(class=classname.code) table] #[code(class=classname.code) caption]
@@ -184,17 +184,17 @@ section#tables
           +tablebodyrows(3,3)
 section#text-level-elements
   block textLevelElements
-    h2 Text-Level Elements
+    h2 Text-Level Elements #[a.docs-_fragid(href='#text-level-elements')]
     section#links
       block links
-        h3 Links
+        h3 Links #[a.docs-_fragid(href='#links')]
         figure(class=classname.figure): ul
           block linksList
             li: a a
             li: a(href="#0") a[href]
     section#stress
       block stress
-        h3 Stress
+        h3 Stress #[a.docs-_fragid(href='#stress')]
         figure(class=classname.figure): ul
           block stressList
             li: em     emphasized text #[code(class=classname.code) em]
@@ -206,7 +206,7 @@ section#text-level-elements
             li: s      text shown to be no longer relevant #[code(class=classname.code) s]
     section#documentation
       block documentation
-        h3 Documentation
+        h3 Documentation #[a.docs-_fragid(href='#documentation')]
         figure(class=classname.figure): ul
           block documentationList
             li: ins  content shown to be inserted into a document #[code(class=classname.code) ins]
@@ -221,7 +221,7 @@ section#text-level-elements
             li: sub  subscript #[code(class=classname.code) sub]
     section#data
       block data
-        h3 Data
+        h3 Data #[a.docs-_fragid(href='#data')]
         figure(class=classname.figure): ul
           block dataList
             li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
@@ -232,10 +232,10 @@ section#text-level-elements
             li: samp     sample computer output #[code(class=classname.code) samp]
 section#embedded-elements
   block embeddedElements
-    h2 Embedded Elements
+    h2 Embedded Elements #[a.docs-_fragid(href='#embedded-elements')]
 section#forms
   block forms
-    h2 Forms
+    h2 Forms #[a.docs-_fragid(href='#forms')]
     form(class=classname.form)
       figure(class=classname.figure)
         fieldset
@@ -328,7 +328,7 @@ section#forms
           textarea
 section#interactive-elements
   block interactiveElements
-    h2 Interactive Elements
+    h2 Interactive Elements #[a.docs-_fragid(href='#interactive-elements')]
     figure(class=classname.figure)
       details
         summary Integer at lacus et diam tristique #[code(class=classname.code) details summary] suscipit.

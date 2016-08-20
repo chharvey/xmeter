@@ -1,35 +1,33 @@
 mixin docs_clearfix(classname)
   - classname = classname || {}
-  section#clearfix
-    h2 Clearfix
-    p.
-      The Clearfix Helper creates a line break after an element.
-      This could be a container of floats, or it could simply be an inline list item.
-      Use this as an alternative to the #[code(class=classname.code) br] element.
-    figure(class=classname.figure)
-      div.h-Clearfix
-        div(style="font-weight: 700; float:  left;") gravity
-        div(style="font-weight: 700; float: right;") supernova
-      div spacetime black hole singularity
-      pre(class=classname.pre).
-        &lt;div class="#[u h-Clearfix]"&gt;
-          &lt;div style="float:  left;"&gt;gravity&lt;/div&gt;
-          &lt;div style="float: right;"&gt;supernova&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div&gt;spacetime black hole singularity&lt;/div&gt;
-      figcaption The Clearfix Helper is used in the classical sense.
-    figure(class=classname.figure)
-      ul
-        span.o-Inline spacetime#{' '}
-        span.o-Inline.h-Clearfix black hole#{' '}
-        span.o-Inline singularity#{' '}
-        span.o-Inline neutron star#{' '}
-      pre(class=classname.pre).
-        &lt;ul&gt;
-          &lt;li class="o-Inline"&gt;spacetime &lt;/li&gt;
-          &lt;li class="o-Inline  #[u h-Clearfix]"&gt;black hole &lt;/li&gt;
-          &lt;li class="o-Inline"&gt;singularity &lt;/li&gt;
-          &lt;li class="o-Inline"&gt;neutron star &lt;/li&gt;
-        &lt;/ul&gt;
-      figcaption.
-        The Clearfix Helper creates a line break after the 2nd inline item.
+  p.
+    The Clearfix Helper creates a line break after an element.
+    This could be a container of floats, or it could simply be an inline list item.
+    Use this as an alternative to the #[code(class=classname.code) br] element.
+  figure(class=classname.figure)
+    div.h-Clearfix
+      div(style="font-weight: 700; float:  left;") gravity
+      div(style="font-weight: 700; float: right;") supernova
+    div spacetime black hole singularity
+    pre(class=classname.pre).
+      &lt;div class="#[u h-Clearfix]"&gt;
+        &lt;div style="float:  left;"&gt;gravity&lt;/div&gt;
+        &lt;div style="float: right;"&gt;supernova&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;spacetime black hole singularity&lt;/div&gt;
+    figcaption The Clearfix Helper is used in the classical sense.
+  figure(class=classname.figure)
+    ul
+      span.o-Inline spacetime#{' '}
+      span.o-Inline.h-Clearfix black hole#{' '}
+      span.o-Inline singularity#{' '}
+      span.o-Inline neutron star#{' '}
+    pre(class=classname.pre).
+      &lt;ul&gt;
+        &lt;li class="o-Inline"&gt;spacetime &lt;/li&gt;
+        &lt;li class="o-Inline  #[u h-Clearfix]"&gt;black hole &lt;/li&gt;
+        &lt;li class="o-Inline"&gt;singularity &lt;/li&gt;
+        &lt;li class="o-Inline"&gt;neutron star &lt;/li&gt;
+      &lt;/ul&gt;
+    figcaption.
+      The Clearfix Helper creates a line break after the 2nd inline item.
