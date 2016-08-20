@@ -15,7 +15,7 @@ block append scripts
     }
     $('h1, h2, h3, h4, h5, h6').each(function () {
       if (!$(this).parents('figure').length) {
-        var id = toURL($(this).text())
+        var id = '_' + toURL($(this).text()) // underscore avoids conflict with section ids
         $(this).append($('<a>').addClass('docs-_fragid').attr('id', id).attr('href', '#' + id))
       }
     })
