@@ -1,7 +1,6 @@
 mixin docs_flex(classname)
   - classname = classname || {}
-  section#flex-object
-    h2 The Flex Object
+  +newSection(2, Xmeter.DOCS.findPage('obj.html#flex-object'))
     p.
       A Flex Object is simply a container of flexible items arranged in one dimension.
       Each flex item has a #[b main size] of #[code(class=classname.code) auto],

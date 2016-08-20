@@ -29,14 +29,3 @@ html(lang="en")
         h1 Sitemap
         +doctoc({pages: Xmeter.DOCS.getPagesAll()})
     block scripts
-      script(src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous")
-      script.
-        function toURL(string) {
-          return encodeURIComponent(string.toLowerCase().replace(/[\W]+/g, '-'))
-        }
-        $('h1, h2, h3, h4, h5, h6').each(function () {
-          if (!$(this).parents('figure').length) {
-            var id = '_' + toURL($(this).text())
-            $(this).append($('<a>').addClass('docs-_fragid').attr('id', id).attr('href', '#' + id))
-          }
-        })

@@ -1,7 +1,6 @@
 mixin docs_clearfix(classname)
   - classname = classname || {}
-  section#clearfix
-    h2 Clearfix
+  +newSection(2, Xmeter.DOCS.findPage('help.html#cleafix'))
     p.
       The Clearfix Helper creates a line break after an element.
       This could be a container of floats, or it could simply be an inline list item.

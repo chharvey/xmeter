@@ -1,7 +1,6 @@
 mixin docs_marginBottom(classname)
   - classname = classname || {}
-  section#margin-bottom
-    h2 margin-bottom
+  +newSection(2, Xmeter.DOCS.findPage('atom.html#margin-bottom'))
     p.
       This atom sets the bottom margin to one #[dfn vertical rhythm unit] (1vru),
       which is equal to the #[code(class=classname.code) html] element&rsquo;s

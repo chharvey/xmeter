@@ -1,7 +1,6 @@
 mixin docs_paddingTop(classname)
   - classname = classname || {}
-  section#padding-top
-    h2 padding-top
+  +newSection(2, Xmeter.DOCS.findPage('atom.html#padding-top'))
     p.
       This atom sets the top padding to 1#[b: abbr(title="vertical rhythm unit") vru].
     pre(class=classname.pre).

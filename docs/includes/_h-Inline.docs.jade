@@ -1,7 +1,6 @@
 mixin docs_inline(classname)
   - classname = classname || {}
-  section#inline
-    h2 Inline
+  +newSection(2, Xmeter.DOCS.findPage('help.html#inline'))
     p.
       Creates an inline look,
       with zero line-height to maintain vertical rhythm.

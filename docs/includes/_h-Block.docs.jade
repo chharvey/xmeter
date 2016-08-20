@@ -1,7 +1,6 @@
 mixin docs_block(classname)
   - classname = classname || {}
-  section#block
-    h2 Block
+  +newSection(2, Xmeter.DOCS.findPage('help.html#block'))
     p.
       The Block Helper creates a blocky look,
       with an inherited line-height to maintain vertical rhythm.
