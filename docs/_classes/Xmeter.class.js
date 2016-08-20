@@ -31,6 +31,7 @@ var Xmeter = (function () {
       .addPage(new Page({ name: 'Table of Contents', url: 'atom.html#table-contents' }))
       .addPage(new Page({ name: 'margin-bottom'    , url: 'atom.html#margin-bottom' }))
       .addPage(new Page({ name: 'padding-top'      , url: 'atom.html#padding-top' }))
+      .addPage(new Page({ name: 'font-size'        , url: 'atom.html#font-size' }))
   })()
 
   Xmeter.DOCS_CLASSES = {
