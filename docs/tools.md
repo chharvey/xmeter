@@ -2,17 +2,20 @@
 
 Functions and mixins used for development.
 
-Tools are mixins and/or functions in the codebase that are used in development.
+These are the mixins and/or functions in the codebase that are used in development.
 These rules don’t output any CSS, but they do make writing CSS a lot easier
 by encapsulating reusable sets of property declarations.
-[Fallback Tools](#fallback-tools) are simply mixins that address
+[Fallbacks](#fallbacks) are simply mixins that address
 browser vendor prefixes for CSS properties and values,
-whereas [Module Tools](#module-tools) combine properties commonly used together.
+whereas [Tools](#tools) combine properties commonly used together.
+
+WARNING: Syntax shown in code below has not been completely resolved.
+Watch out for changes.
 
 ## Table of Contents
 
 1. [Table of Contents](#table-contents)
-- [Fallback Tools](#fallback-tools)
+- [Fallbacks](#fallbacks)
   1. [box-sizing](#box-sizing)
   - [The Flexbox Tools](#flexbox-tools)
   - [transform](#transform)
@@ -20,7 +23,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
   - [column-count](#column-count)
   - [column-width](#column-width)
   - [filter](#filter)
-- [Module Tools](#module-tools)
+- [Tools](#tools)
   1. [vertspacing](#vertspacing)
   - [borders](#borders)
   - [border-radius](#border-radius)
@@ -28,11 +31,11 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
   - [delims](#delims)
   - [sprite](#sprite)
 
-## Fallback Tools
+## Fallbacks
 
 ### box-sizing
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fallback.box-sizing.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.box-sizing.less');
 .your-class {
   .box-sizing([!content-box | border-box]?);
 }
@@ -45,7 +48,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### transform
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fallback.transform.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.transform.less');
 .your-class {
   .transform([!none | <transform-list>]?);
 }
@@ -53,7 +56,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### transform-origin
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fallback.transform-origin.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.transform-origin.less');
 .your-class {
   .transform-origin(<point>?:[50% 50% 0]);
 }
@@ -67,7 +70,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### column-count
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fallback.column-count.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.column-count.less');
 .your-class {
   .column-count([!auto | <integer>]?);
 }
@@ -75,7 +78,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### column-width
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fallback.column-width.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.column-width.less');
 .your-class {
   .column-width([!auto | <length>]?);
 }
@@ -83,17 +86,17 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### filter
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fallback.filter.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.filter.less');
 .your-class {
   .column-width([!none | <filter-function-list>]?);
 }
 ```
 
-## Module Tools
+## Tools
 
 ### vertspacing
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.module.vertspacing.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.vertspacing.less');
 .your-module {
   .vertspacing(<length>?:@g-vru);
 }
@@ -101,7 +104,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### borders
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.module.borders.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.borders.less');
 .your-class {
   .border-vert([top | bot | topbot | all]; <length>?:0);
 }
@@ -109,7 +112,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### border-radius
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.module.border-radius.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.border-radius.less');
 .your-class {
   .border-left-radius(<length>?:0);
   .border-right-radius(<length>?:0);
@@ -120,7 +123,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### Font Sizing Tools
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.module.fontsize.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.fontsize.less');
 .your-module {
   .font-size-mod(<number>?:1);
   .your-element {
@@ -131,7 +134,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### delims
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.module.delims.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.delims.less');
 .your-class {
   .delims([!none | [<string> <string>]+]?);
   .parens();            // ( )
@@ -149,7 +152,7 @@ whereas [Module Tools](#module-tools) combine properties commonly used together
 
 ### sprite
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.module.delims.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.delims.less');
 .your-class {
   .sprite([horizontal | vertical]; <integer>; <length>; <length>);
 }
