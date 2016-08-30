@@ -15,8 +15,8 @@ mixin doctoc(args)
           a(class=classes.linkclasses href=item.getURL())= item.getName()
           if item.getDescription()
             = ': ' + item.getDescription()
-          if item.getPagesAll().length && depth > 0
-            +doctoc({pages: item.getPagesAll(), classes: (classes.sub || {}), depth: depth-1})
+          if item.findAll().length && depth > 0
+            +doctoc({pages: item.findAll(), classes: (classes.sub || {}), depth: depth-1})
 
 mixin newSection(hn, page)
   -

@@ -3,7 +3,7 @@ html(lang="en")
   include includes/_data.jade
   block vars
   head
-    title= page.getTitle() || (page.name + ' | ' + Xmeter.DOCS.name)
+    title= page.getTitle() || (page.getName() + ' | ' + Xmeter.DOCS.getName())
     meta(charset="utf-8")
     meta(name="description" content=Xmeter.DOCS.getDescription())
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -23,8 +23,8 @@ html(lang="en")
           nav#table-contents
             h2 Table of Contents
             block toc
-              +doctoc({pages: page.getPagesAll(), depth: Infinity})
+              +doctoc({pages: page.findAll(), depth: Infinity})
     block footer
       footer: nav
         h1 Sitemap
-        +doctoc({pages: Xmeter.DOCS.getPagesAll()})
+        +doctoc({pages: Xmeter.DOCS.findAll()})
