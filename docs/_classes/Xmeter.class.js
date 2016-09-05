@@ -1,6 +1,7 @@
-// var Styleguide = require('../_classes/Styleguide.class.js')
+var Page = require('./Page.class.js')
+var Styleguide = require('./Styleguide.class.js')
 
-var Xmeter = (function () {
+module.exports = (function () {
   // CONSTRUCTOR
   function Xmeter() {}
 

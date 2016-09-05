@@ -1,7 +1,7 @@
-// var Page = require('./Page.class.js')
+var Page = require('./Page.class.js')
 
 // TODO change classname to `StyleGuide`
-var Styleguide = (function () {
+module.exports = (function () {
   // CONSTRUCTOR
   function StyleGuide(name, url) {
     var self = this

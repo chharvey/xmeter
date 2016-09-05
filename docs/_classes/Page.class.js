@@ -1,4 +1,4 @@
-var Page = (function () {
+module.exports = (function () {
   // CONSTRUCTOR
   function Page($pageinfo) {
     var self = this
