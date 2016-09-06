@@ -8,16 +8,16 @@ mixin doctoc(args)
     each item in pages
       unless item.isHidden()
         li(class=classes.itemclasses)
-          a(class=classes.linkclasses href=item.getURL())= item.getName()
-          if item.getDescription()
-            = ': ' + item.getDescription()
+          a(class=classes.linkclasses href=item.url())= item.name()
+          if item.description()
+            = ': ' + item.description()
           if item.findAll().length && depth > 0
             +doctoc({pages: item.findAll(), classes: (classes.sub || {}), depth: depth-1})
 
 mixin newSection(hn, page)
   -
-    var text = page.getName()
-      , id = page.getURL().split('#')[1]
+    var text = page.name()
+      , id = page.url().split('#')[1]
   section(id=id)
     if hn === 1
       h1 #{text} #[a.docs-_fragid(href='#' + id)]

@@ -9,8 +9,8 @@ module.exports = (function () {
 
   // STATIC MEMBERS
   Xmeter.DOCS = new StyleGuide('Xmeter', '/docs/')
-    .setTitle('Xmeter Style Guide')
-    .setDescription('A demo of Xmeter styles.')
+    .title('Xmeter Style Guide')
+    .description('A demo of Xmeter styles.')
     .init()
   ;(function () {
     // adding pages to Xmeter.DOCS
