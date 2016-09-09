@@ -1,5 +1,5 @@
-var Page = require('./Page.class.js')
-var Styleguide = require('./Styleguide.class.js')
+var Page = require('sitepage').Page
+var StyleGuide = require('sitepage').StyleGuide
 
 module.exports = (function () {
   // CONSTRUCTOR
@@ -8,9 +8,9 @@ module.exports = (function () {
   // METHODS
 
   // STATIC MEMBERS
-  Xmeter.DOCS = new Styleguide('Xmeter', '/docs/')
-    .setTitle('Xmeter Style Guide')
-    .setDescription('A demo of Xmeter styles.')
+  Xmeter.DOCS = new StyleGuide('Xmeter', '/docs/')
+    .title('Xmeter Style Guide')
+    .description('A demo of Xmeter styles.')
     .init()
   ;(function () {
     // adding pages to Xmeter.DOCS

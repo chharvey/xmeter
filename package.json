@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jade:docs": "pug -O options.js docs/{index,base,obj,help,atom}.jade",
+    "jade:docs": "pug -O docs/models/options.js docs/{index,base,obj,help,atom}.jade",
     "jade:all": "jade index.jade  &&  npm run jade:docs",
     "lessc:docs": "lessc docs/styles/docs.less docs/styles/docs.css",
     "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
