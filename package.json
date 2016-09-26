@@ -1,26 +1,23 @@
 {
   "name": "xmeter",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {},
   "devDependencies": {
     "clean-css": "^3.4.17",
     "jade": "^1.11.0",
-    "js2pug": "^1.0.0",
     "less": "^2.7.1",
     "lessc-each": "^1.1.0",
     "normalize.css": "~4.1.1",
-    "resetcss": "^1.0.3"
+    "pug-cli": "^1.0.0-alpha6",
+    "resetcss": "^1.0.3",
+    "sitepage": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "js2pug:page": "js2pug docs/_classes/Page.class.js && mv docs/_classes/Page.class.js.pug docs/_classes/Page.class.jade",
-    "js2pug:sg": "js2pug docs/_classes/Styleguide.class.js && mv docs/_classes/Styleguide.class.js.pug docs/_classes/Styleguide.class.jade",
-    "js2pug:xm": "js2pug docs/_classes/Xmeter.class.js && mv docs/_classes/Xmeter.class.js.pug docs/_classes/Xmeter.class.jade",
-    "js2pug:all": "npm run js2pug:page  &&  npm run js2pug:sg  &&  npm run js2pug:xm",
-    "jade:docs": "jade docs/{index,base,obj,help,atom}.jade",
-    "jade:all": "npm run js2pug:all && npm run jade:docs",
+    "jade:docs": "pug -O docs/models/options.js docs/{index,base,obj,help,atom}.jade",
+    "jade:all": "jade index.jade  &&  npm run jade:docs",
     "lessc:docs": "lessc docs/styles/docs.less docs/styles/docs.css",
     "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:docs  &&  npm run lessc:xmeter",

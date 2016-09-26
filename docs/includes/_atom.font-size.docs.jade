@@ -19,14 +19,46 @@ mixin docs_fontSize(classname)
     .-fz-norm { font-size: @g-font_size_norm * 1em; }
     .-fz-el-norm { .font-size-el(@g-font_size_norm); }
   figure(class=classname.figure)
-    p
-      | The following #[code(class=classname.code) u] element is one step bigger than normal:#{' '}
-      u.-fz-kilo this is the element.
+    figcaption.-mb-1vru.
+      Use #[code(class=classname.code) .-fz-*] on inline elements.
+      Numbers shown are font-sizes(ems).
+    ul
+      li #[u.-fz-peta universe] (6.00)
+      li #[u.-fz-tera galaxy  ] (4.00)
+      li #[u.-fz-giga star    ] (3.00)
+      li #[u.-fz-mega planet  ] (2.00)
+      li #[u.-fz-kilo asteroid] (1.50)
+      li #[u.-fz-norm molecule] (1.00)
+      li #[u.-fz-mill atom    ] (0.75)
+      li #[u.-fz-micr quark   ] (0.50)
     pre(class=classname.pre).
-      &lt;u class="#[u -fz-kilo]"&gt;this is the element.&lt;/u&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-peta]"&gt;universe&lt;/u&gt; (6.00)&lt;/li&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-tera]"&gt;galaxy  &lt;/u&gt; (4.00)&lt;/li&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-giga]"&gt;star    &lt;/u&gt; (3.00)&lt;/li&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-mega]"&gt;planet  &lt;/u&gt; (2.00)&lt;/li&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-kilo]"&gt;asteroid&lt;/u&gt; (1.50)&lt;/li&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-norm]"&gt;molecule&lt;/u&gt; (1.00)&lt;/li&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-mill]"&gt;atom    &lt;/u&gt; (0.75)&lt;/li&gt;
+      &lt;li&gt;&lt;u class="#[u -fz-micr]"&gt;quark   &lt;/u&gt; (0.50)&lt;/li&gt;
   figure(class=classname.figure)
-    p.-fz-el-mill.
-      This entire paragraph is one step smaller than normal.
-      Use #[code(class=classname.code) .-fz-el-*] on blocks.
+    figcaption.
+      Use #[code(class=classname.code) .-fz-el-*] on block elements.
+      Numbers shown are font-sizes(ems)/line-heights.
+    ul(style="overflow:auto;white-space:nowrap;")
+      li.-fz-el-peta universe (6.00/0.250)
+      li.-fz-el-tera galaxy   (4.00/0.375)
+      li.-fz-el-giga star     (3.00/0.500)
+      li.-fz-el-mega planet   (2.00/0.750)
+      li.-fz-el-kilo asteroid (1.50/1.000)
+      li.-fz-el-norm molecule (1.00/1.500)
+      li.-fz-el-mill atom     (0.75/2.000)
+      li.-fz-el-micr quark    (0.50/3.000)
     pre(class=classname.pre).
-      &lt;p class="#[u -fz-el-mill]"&gt;This entire paragraph ...&lt;/p&gt;
+      &lt;li class="#[u -fz-el-peta]"&gt;universe (6.00/0.250)&lt;/li&gt;
+      &lt;li class="#[u -fz-el-tera]"&gt;galaxy   (4.00/0.375)&lt;/li&gt;
+      &lt;li class="#[u -fz-el-giga]"&gt;star     (3.00/0.500)&lt;/li&gt;
+      &lt;li class="#[u -fz-el-mega]"&gt;planet   (2.00/0.750)&lt;/li&gt;
+      &lt;li class="#[u -fz-el-kilo]"&gt;asteroid (1.50/1.000)&lt;/li&gt;
+      &lt;li class="#[u -fz-el-norm]"&gt;molecule (1.00/1.500)&lt;/li&gt;
+      &lt;li class="#[u -fz-el-mill]"&gt;atom     (0.75/2.000)&lt;/li&gt;
+      &lt;li class="#[u -fz-el-micr]"&gt;quark    (0.50/3.000)&lt;/li&gt;
