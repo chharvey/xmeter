@@ -1,6 +1,34 @@
 doctype html
 html(lang="en")
-  include includes/_data.jade
+  mixin doctoc(args)
+    //- NOTE parameter validation
+    -
+      var pages   = args.pages   || []
+      var classes = args.classes || {}
+      var depth   = +args.depth  || 0
+    ol(class=classes.listclasses)
+      each item in pages
+        unless item.isHidden()
+          li(class=classes.itemclasses)
+            a(class=classes.linkclasses href=item.url())= item.name()
+            if item.description()
+              = ': ' + item.description()
+            if item.findAll().length && depth > 0
+              +doctoc({pages: item.findAll(), classes: (classes.sub || {}), depth: depth-1})
+  mixin newSection(hn, page)
+    -
+      var text = page.name()
+      var id = page.url().split('#')[1]
+    section(id=id)
+      if hn === 1
+        h1 #{text} #[a.docs-_fragid(href='#' + id)]
+      else if hn === 2
+        h2 #{text} #[a.docs-_fragid(href='#' + id)]
+      else if hn === 3
+        h3 #{text} #[a.docs-_fragid(href='#' + id)]
+      else
+        p #{text}
+      block
   block vars
   head
     title= page.title() || (page.name() + ' | ' + Xmeter.DOCS.name())
