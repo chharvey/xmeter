@@ -41,7 +41,7 @@ module.exports = (function () {
 
   /**
    * Static classes for Xmeter style guide elements.
-   * REVIEW : may not need this
+   * REVIEW : only need this in docs/base.jade
    * @type {Object}
    */
   Xmeter.DOCS_CLASSES = {

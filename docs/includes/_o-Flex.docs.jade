@@ -2,16 +2,16 @@ mixin docs_flex(classname)
   - classname = classname || {}
   p.
     A Flex Object is simply a container of flexible items arranged in one dimension.
-    Each flex item has a #[b main size] of #[code(class=classname.code) auto],
+    Each flex item has a #[b main size] of #[code.docs-code auto],
     depending on its contents.
     The flex items will grow or shrink together to fit into the allotted space.
     If overridden, the extra space (if any) will be distributed #[em between] the items.
-  figure(class=classname.figure)
+  figure.docs-figure
     ul.o-List.o-Flex
       li.o-List__Item.o-Flex__Item Burns &amp; McDonnell Engineering
       li.o-List__Item.o-Flex__Item DIS-TRAN Steel, LLC
       li.o-List__Item.o-Flex__Item EDM International
-    pre(class=classname.pre).
+    pre.docs-pre.
       &lt;ul class="o-List  #[u o-Flex]"&gt;
         &lt;li class="o-List__Item  #[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
         &lt;li class="o-List__Item  #[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
@@ -19,7 +19,7 @@ mixin docs_flex(classname)
       &lt;/ul&gt;
     figcaption.
       A Flex Object with extra space.
-  figure(class=classname.figure)
+  figure.docs-figure
     ul.o-List.o-Flex
       li.o-List__Item.o-Flex__Item Burns &amp; McDonnell Engineering
       li.o-List__Item.o-Flex__Item DIS-TRAN Steel, LLC
@@ -34,7 +34,7 @@ mixin docs_flex(classname)
       li.o-List__Item.o-Flex__Item Power Line Systems, Inc.
       li.o-List__Item.o-Flex__Item Quanta Services
       li.o-List__Item.o-Flex__Item ReliaPOLE Inspection Services
-    pre(class=classname.pre).
+    pre.docs-pre.
       &lt;ul class="o-List  #[u o-Flex]"&gt;
         &lt;li class="o-List__Item  #[u o-Flex__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
         &lt;li class="o-List__Item  #[u o-Flex__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
