@@ -1,20 +1,18 @@
-mixin docs_list(classname)
-  - classname = classname || {}
-  p.
-    Use the List Object to remove the usual padding and list item markers accompanied by
-    (un)ordered lists. The result is a list of items, each on its own line.
-    Combine this class with other classes to create a variety of styles.
-  figure(class=classname.figure)
-    ul.o-List
-      li.o-List__Item Burns &amp; McDonnell Engineering
-      li.o-List__Item DIS-TRAN Steel, LLC
-      li.o-List__Item EDM International
-      li.o-List__Item Electrical Consultants, Inc.
-      li.o-List__Item Fabrimet Inc.
-      li.o-List__Item Falcon Steel Company
-    pre(class=classname.pre).
-      &lt;ul class="#[u o-List]"&gt;
-        &lt;li class="#[u o-List__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-        &lt;li class="#[u o-List__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-        ...
-      &lt;/ul&gt;
+p.
+  Use the List Object to remove the usual padding and list item markers accompanied by
+  (un)ordered lists. The result is a list of items, each on its own line.
+  Combine this class with other classes to create a variety of styles.
+figure.docs-figure
+  ul.o-List
+    li.o-List__Item Burns &amp; McDonnell Engineering
+    li.o-List__Item DIS-TRAN Steel, LLC
+    li.o-List__Item EDM International
+    li.o-List__Item Electrical Consultants, Inc.
+    li.o-List__Item Fabrimet Inc.
+    li.o-List__Item Falcon Steel Company
+  pre.docs-pre.
+    &lt;ul class="#[u o-List]"&gt;
+      &lt;li class="#[u o-List__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+      &lt;li class="#[u o-List__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
