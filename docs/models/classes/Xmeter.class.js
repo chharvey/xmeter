@@ -39,17 +39,5 @@ module.exports = (function () {
     return docs
   })()
 
-  /**
-   * Static classes for Xmeter style guide elements.
-   * REVIEW : only need this in docs/base.jade
-   * @type {Object}
-   */
-  Xmeter.DOCS_CLASSES = {
-    figure : 'docs-figure'
-  , pre    : 'docs-pre'
-  , code   : 'docs-code'
-  , form   : 'docs-form'
-  }
-
   return Xmeter
 })()
