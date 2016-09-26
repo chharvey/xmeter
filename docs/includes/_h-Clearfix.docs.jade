@@ -29,3 +29,19 @@ figure.docs-figure
     &lt;/ul&gt;
   figcaption.
     The Clearfix Helper creates a line break after the 2nd inline item.
+figure.docs-figure
+  p
+    span.h-Clearfix The White House
+    span.h-Clearfix 1600 Pennsylvania Ave NW
+    span Washington, DC 20500
+  pre.docs-pre.
+    &lt;p&gt;
+      &lt;span class="#[u h-Clearfix]"&gt;The White House&lt;/span&gt;
+      &lt;span class="#[u h-Clearfix]"&gt;1600 Pennsylvania Ave NW&lt;/span&gt;
+      &lt;span&gt;Washington, DC 20500&lt;/span&gt;
+    &lt;/p&gt;
+  figcaption.
+    Instead of adding #[code.docs-code br] elements to create line breaks in
+    postal addresses&mdash;the traditional approach&mdash;you may wrap each line of the address
+    with spans using the Clearfix Helper. This approach may be easier if the spans are already present,
+    for example, from microdata markup.
