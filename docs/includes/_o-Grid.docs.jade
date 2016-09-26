@@ -1,57 +1,55 @@
-mixin docs_grid(classname)
-  - classname = classname || {}
-  p.
-    The Grid Object is similar to the Flex Object except that it can be extended
-    to two dimensions.
-    It has the structure of a list in that all items share the same container
-    (unlike tables where cells might not share the same row), while at the same time
-    appearing like a table with rows and columns.
-  p.
-    By default, each item has a #[b main size] of #[code.docs-code 100%] (unless overridden).
-    Using media queries, you can achieve a flexible and responsive table effect,
-    adjusting the number of #[b cross axes]&mdash;columns if
-    #[code.docs-code flex-direction: row;], or rows if
-    #[code.docs-code flex-direction: column;]&mdash;based on screen size.
-    In order to appear like a table, all the items within
-    a #[b cross axis] should have the same #[b main size].
-  figure.docs-figure
-    ul.o-List.o-Grid
-      li.o-List__Item.o-Grid__Item Burns &amp; McDonnell Engineering
-      li.o-List__Item.o-Grid__Item DIS-TRAN Steel, LLC
-      li.o-List__Item.o-Grid__Item EDM International
-    pre.docs-pre.
-      &lt;ul class="o-List  #[u o-Grid]"&gt;
-        &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-        &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-        ...
-      &lt;/ul&gt;
-    figcaption A Grid Object with extra space.
-  figure.docs-figure
-    ul.o-List.o-Grid
-      li.o-List__Item.o-Grid__Item Burns &amp; McDonnell Engineering
-      li.o-List__Item.o-Grid__Item DIS-TRAN Steel, LLC
-      li.o-List__Item.o-Grid__Item EDM International
-      li.o-List__Item.o-Grid__Item Electrical Consultants, Inc.
-      li.o-List__Item.o-Grid__Item Fabrimet Inc.
-      li.o-List__Item.o-Grid__Item Falcon Steel Company
-      li.o-List__Item.o-Grid__Item Sabre-FWT
-      li.o-List__Item.o-Grid__Item HDR
-      li.o-List__Item.o-Grid__Item Mitas Energy
-      li.o-List__Item.o-Grid__Item Power Consulting Associates, LLC
-      li.o-List__Item.o-Grid__Item Power Line Systems, Inc.
-      li.o-List__Item.o-Grid__Item Quanta Services
-      li.o-List__Item.o-Grid__Item ReliaPOLE Inspection Services
-      li.o-List__Item.o-Grid__Item Sabre-FWT
-      li.o-List__Item.o-Grid__Item SAE Towers
-      li.o-List__Item.o-Grid__Item TAPP Steel Poles
-      li.o-List__Item.o-Grid__Item Trinity Meyer Utility Structures
-      li.o-List__Item.o-Grid__Item TRC Engineers
-      li.o-List__Item.o-Grid__Item Underground Devices
-      li.o-List__Item.o-Grid__Item Valmont Newmark
-    pre.docs-pre.
-      &lt;ul class="o-List  #[u o-Grid]"&gt;
-        &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
-        &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
-        ...
-      &lt;/ul&gt;
-    figcaption A Grid Object with not enough space.
+p.
+  The Grid Object is similar to the Flex Object except that it can be extended
+  to two dimensions.
+  It has the structure of a list in that all items share the same container
+  (unlike tables where cells might not share the same row), while at the same time
+  appearing like a table with rows and columns.
+p.
+  By default, each item has a #[b main size] of #[code.docs-code 100%] (unless overridden).
+  Using media queries, you can achieve a flexible and responsive table effect,
+  adjusting the number of #[b cross axes]&mdash;columns if
+  #[code.docs-code flex-direction: row;], or rows if
+  #[code.docs-code flex-direction: column;]&mdash;based on screen size.
+  In order to appear like a table, all the items within
+  a #[b cross axis] should have the same #[b main size].
+figure.docs-figure
+  ul.o-List.o-Grid
+    li.o-List__Item.o-Grid__Item Burns &amp; McDonnell Engineering
+    li.o-List__Item.o-Grid__Item DIS-TRAN Steel, LLC
+    li.o-List__Item.o-Grid__Item EDM International
+  pre.docs-pre.
+    &lt;ul class="o-List  #[u o-Grid]"&gt;
+      &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+      &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  figcaption A Grid Object with extra space.
+figure.docs-figure
+  ul.o-List.o-Grid
+    li.o-List__Item.o-Grid__Item Burns &amp; McDonnell Engineering
+    li.o-List__Item.o-Grid__Item DIS-TRAN Steel, LLC
+    li.o-List__Item.o-Grid__Item EDM International
+    li.o-List__Item.o-Grid__Item Electrical Consultants, Inc.
+    li.o-List__Item.o-Grid__Item Fabrimet Inc.
+    li.o-List__Item.o-Grid__Item Falcon Steel Company
+    li.o-List__Item.o-Grid__Item Sabre-FWT
+    li.o-List__Item.o-Grid__Item HDR
+    li.o-List__Item.o-Grid__Item Mitas Energy
+    li.o-List__Item.o-Grid__Item Power Consulting Associates, LLC
+    li.o-List__Item.o-Grid__Item Power Line Systems, Inc.
+    li.o-List__Item.o-Grid__Item Quanta Services
+    li.o-List__Item.o-Grid__Item ReliaPOLE Inspection Services
+    li.o-List__Item.o-Grid__Item Sabre-FWT
+    li.o-List__Item.o-Grid__Item SAE Towers
+    li.o-List__Item.o-Grid__Item TAPP Steel Poles
+    li.o-List__Item.o-Grid__Item Trinity Meyer Utility Structures
+    li.o-List__Item.o-Grid__Item TRC Engineers
+    li.o-List__Item.o-Grid__Item Underground Devices
+    li.o-List__Item.o-Grid__Item Valmont Newmark
+  pre.docs-pre.
+    &lt;ul class="o-List  #[u o-Grid]"&gt;
+      &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
+      &lt;li class="o-List__Item  #[u o-Grid__Item]"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
+      ...
+    &lt;/ul&gt;
+  figcaption A Grid Object with not enough space.
