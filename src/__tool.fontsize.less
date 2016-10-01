@@ -26,7 +26,7 @@
   font-size: (@ratio *    1rem);
   // line-height: inherit; // NOTE clarification
   & > * {
-    --vru: calc(var(--line-height) ~'*' @ratio * 1rem);
+    --vru: calc(~'var(--line-height) * ' @ratio*1rem);
   }
   .vertspacing(@l-vru); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
 }
@@ -54,5 +54,5 @@
 .font-size-el(@ratio: 1; @lines: 1; @line_height_parent: @g-line_height) {
   font-size: (@ratio * 1em);
   line-height: (@g-line_height / (@ratio/@lines)); // HACK fallback
-  line-height: calc(var(--line-height) ~'/' (@ratio/@lines));
+  line-height: calc(~'var(--line-height) / ' (@ratio/@lines));
 }

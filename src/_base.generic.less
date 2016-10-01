@@ -26,7 +26,7 @@
 
 html {
   --line-height: @g-line_height;
-  --vru: calc(var(--line-height) ~'*' 1rem);
+  --vru: calc(~'var(--line-height) * 1rem');
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
   font-size: @g-1rem; // HACK fixes Chrome inheritance bug
