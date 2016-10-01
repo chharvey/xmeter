@@ -44,7 +44,8 @@ textarea {
 textarea {
   width: 30rem;
   height: 6 * @g-vru;
-  line-height: @g-line_height; // override browser-default (simply looks better)
+  line-height: @g-line_height; // HACK fallback
+  line-height: var(--line-height); // override browser-default (simply looks better)
 }
 
 input[type="button"],

@@ -12,11 +12,12 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-06-14
+// : 2016-10-01
 
 
 .-mb-1vru {
-  margin-bottom: @g-vru;
+  margin-bottom: @g-vru; // HACK fallback
+  margin-bottom: var(--vru);
 }
 
 @media screen                       { .-mb-1vru-s  { .-mb-1vru; } }
@@ -29,7 +30,8 @@
 
 
 .-pt-1vru {
-  padding-top: @g-vru;
+  padding-top: @g-vru; // HACK fallback
+  padding-top: var(--vru);
 }
 
 @media screen                       { .-pt-1vru-s  { .-pt-1vru; } }

@@ -7,6 +7,9 @@
 
 // Sets the vertical spacing between typographical blocks.
 // Add elements to this list if necessary.
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. will be dropped in favor of CSS Custom Properties
+///////////////////////////////////////////////////////////////////////////////
 // ^params
 // @spacing (default: @g-vru) - the length of space to add between typographical blocks
 // ^author
@@ -19,9 +22,11 @@
   ol, ul, dl,
   table,
   fieldset {
-    margin-bottom: @spacing;
+    margin-bottom: @spacing; // HACK fallback
+    margin-bottom: var(--vru);
   }
   h1 {
-    padding-top: @spacing;
+    padding-top: @spacing; // HACK fallback
+    padding-top: var(--vru);
   }
 }
