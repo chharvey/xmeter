@@ -19,7 +19,7 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-04-26
+// : 2016-10-01
 .font-size-mod(@ratio: 1) {
   @l-vru: @ratio * @g-vru; // in rems // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
   --vru: calc(var(--line-height) ~'*' @ratio * 1rem);
@@ -48,8 +48,9 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-04-26
-.font-size-el(@ratio: 1; @lines: 1; @line_height_parent) {
+// : 2016-10-01
+.font-size-el(@ratio: 1; @lines: 1; @line_height_parent: @g-line_height) {
   font-size: (@ratio * 1em);
+  line-height: (@g-line_height / (@ratio/@lines)); // HACK fallback
   line-height: calc(var(--line-height) ~'/' (@ratio/@lines));
 }
