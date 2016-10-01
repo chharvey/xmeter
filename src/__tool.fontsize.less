@@ -22,10 +22,12 @@
 // : 2016-10-01
 .font-size-mod(@ratio: 1) {
   @l-vru: @ratio * @g-vru; // in rems // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
-  --vru: calc(var(--line-height) ~'*' @ratio * 1rem);
   font-size: (@ratio * @g-1rem); // legacy browsers (see __settings for more info)
   font-size: (@ratio *    1rem);
   // line-height: inherit; // NOTE clarification
+  & > * {
+    --vru: calc(var(--line-height) ~'*' @ratio * 1rem);
+  }
   .vertspacing(@l-vru); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
 }
 
