@@ -41,13 +41,11 @@
 //          the parent font size, i.e., the number of ems
 // @lines - (default: 1) the number of vrus each line of text will take up.
 //          should be a whole number to satisfy vertical rhythm.
-// @line_height_parent - (default: @g-line_height) the `line-height` of the parent element.
-//                       this param should only be used if the parent’s line height has changed.
 // ^author
 // : Chris Harvey
 // ^updated
 // : 2016-04-26
-.font-size-el(@ratio: 1; @lines: 1; @line_height_parent: @g-line_height) {
+.font-size-el(@ratio: 1; @lines: 1) {
   font-size: (@ratio * 1em);
-  line-height: ((@line_height_parent / @ratio) * @lines);
+  line-height: ((@g-line_height / @ratio) * @lines);
 }
