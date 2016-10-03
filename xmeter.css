@@ -654,11 +654,11 @@ h6 {
 }
 h1 {
   font-size: 3em;
-  line-height: 0.5;
+  line-height: 1;
 }
 h2 {
   font-size: 2em;
-  line-height: 0.75;
+  line-height: 1.5;
 }
 h3 {
   font-size: 1.5em;
@@ -1792,19 +1792,19 @@ input[type="search"] {
 }
 .-fz-el-mega {
   font-size: 2em;
-  line-height: 0.75;
+  line-height: 1.5;
 }
 .-fz-el-giga {
   font-size: 3em;
-  line-height: 0.5;
+  line-height: 1;
 }
 .-fz-el-tera {
   font-size: 4em;
-  line-height: 0.375;
+  line-height: 1.125;
 }
 .-fz-el-peta {
   font-size: 6em;
-  line-height: 0.25;
+  line-height: 1;
 }
 @media screen {
   .-fz-el-micr-s {
@@ -1825,19 +1825,19 @@ input[type="search"] {
   }
   .-fz-el-mega-s {
     font-size: 2em;
-    line-height: 0.75;
+    line-height: 1.5;
   }
   .-fz-el-giga-s {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
   }
   .-fz-el-tera-s {
     font-size: 4em;
-    line-height: 0.375;
+    line-height: 1.125;
   }
   .-fz-el-peta-s {
     font-size: 6em;
-    line-height: 0.25;
+    line-height: 1;
   }
 }
 @media print {
@@ -1859,19 +1859,19 @@ input[type="search"] {
   }
   .-fz-el-mega-p {
     font-size: 2em;
-    line-height: 0.75;
+    line-height: 1.5;
   }
   .-fz-el-giga-p {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
   }
   .-fz-el-tera-p {
     font-size: 4em;
-    line-height: 0.375;
+    line-height: 1.125;
   }
   .-fz-el-peta-p {
     font-size: 6em;
-    line-height: 0.25;
+    line-height: 1;
   }
 }
 @media screen and (min-width: 30em) {
@@ -1893,19 +1893,19 @@ input[type="search"] {
   }
   .-fz-el-mega-sK {
     font-size: 2em;
-    line-height: 0.75;
+    line-height: 1.5;
   }
   .-fz-el-giga-sK {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
   }
   .-fz-el-tera-sK {
     font-size: 4em;
-    line-height: 0.375;
+    line-height: 1.125;
   }
   .-fz-el-peta-sK {
     font-size: 6em;
-    line-height: 0.25;
+    line-height: 1;
   }
 }
 @media screen and (min-width: 45em) {
@@ -1927,19 +1927,19 @@ input[type="search"] {
   }
   .-fz-el-mega-sM {
     font-size: 2em;
-    line-height: 0.75;
+    line-height: 1.5;
   }
   .-fz-el-giga-sM {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
   }
   .-fz-el-tera-sM {
     font-size: 4em;
-    line-height: 0.375;
+    line-height: 1.125;
   }
   .-fz-el-peta-sM {
     font-size: 6em;
-    line-height: 0.25;
+    line-height: 1;
   }
 }
 @media screen and (min-width: 60em) {
@@ -1961,19 +1961,19 @@ input[type="search"] {
   }
   .-fz-el-mega-sG {
     font-size: 2em;
-    line-height: 0.75;
+    line-height: 1.5;
   }
   .-fz-el-giga-sG {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
   }
   .-fz-el-tera-sG {
     font-size: 4em;
-    line-height: 0.375;
+    line-height: 1.125;
   }
   .-fz-el-peta-sG {
     font-size: 6em;
-    line-height: 0.25;
+    line-height: 1;
   }
 }
 @media screen and (min-width: 75em) {
@@ -1995,19 +1995,19 @@ input[type="search"] {
   }
   .-fz-el-mega-sT {
     font-size: 2em;
-    line-height: 0.75;
+    line-height: 1.5;
   }
   .-fz-el-giga-sT {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
   }
   .-fz-el-tera-sT {
     font-size: 4em;
-    line-height: 0.375;
+    line-height: 1.125;
   }
   .-fz-el-peta-sT {
     font-size: 6em;
-    line-height: 0.25;
+    line-height: 1;
   }
 }
 @media screen and (min-width: 90em) {
@@ -2029,19 +2029,19 @@ input[type="search"] {
   }
   .-fz-el-mega-sP {
     font-size: 2em;
-    line-height: 0.75;
+    line-height: 1.5;
   }
   .-fz-el-giga-sP {
     font-size: 3em;
-    line-height: 0.5;
+    line-height: 1;
   }
   .-fz-el-tera-sP {
     font-size: 4em;
-    line-height: 0.375;
+    line-height: 1.125;
   }
   .-fz-el-peta-sP {
     font-size: 6em;
-    line-height: 0.25;
+    line-height: 1;
   }
 }
 
