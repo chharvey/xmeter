@@ -3,7 +3,6 @@
     xmeter  |  _base.forms.less
 \*################################*/
 @import (reference) url('__settings.less');
-@import (reference) url('__fallback.box-sizing.less');
 @import (reference) url('__tool.borders.less');
 @import (reference) url('__tool.fontsize.less');
 
@@ -54,5 +53,5 @@ button {
 
 // Override content-box in Normalize (* in base.generic isn’t specific enough)
 input[type="search"] {
-  .box-sizing(border-box);
+  box-sizing: border-box;
 }
