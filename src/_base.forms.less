@@ -3,12 +3,10 @@
     xmeter  |  _base.forms.less
 \*################################*/
 @import (reference) url('__settings.less');
-@import (reference) url('__fallback.box-sizing.less');
 @import (reference) url('__tool.borders.less');
 @import (reference) url('__tool.fontsize.less');
 
 
-@p-color_gray_fb: #c0c0c0; // fallback
 @p-color_gray: fadeout(#000, 75%);
 
 // consistent borders for all
@@ -19,7 +17,6 @@ textarea,
 button {
   .border-vert(all; 1px);
   border-style: solid;
-  border-color: @p-color_gray_fb;
   border-color: @p-color_gray;
 }
 
@@ -51,11 +48,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
-  background-color: @p-color_gray_fb;
   background-color: @p-color_gray;
 }
 
 // Override content-box in Normalize (* in base.generic isn’t specific enough)
 input[type="search"] {
-  .box-sizing(border-box);
+  box-sizing: border-box;
 }

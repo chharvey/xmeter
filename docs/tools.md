@@ -16,8 +16,7 @@ Watch out for changes.
 
 1. [Table of Contents](#table-contents)
 - [Fallbacks](#fallbacks)
-  1. [box-sizing](#box-sizing)
-  - [The Flexbox Tools](#flexbox-tools)
+  1. [The Flexbox Tools](#flexbox-tools)
   - [transform](#transform)
   - [transform-origin](#transform-origin)
   - [column-count](#column-count)
@@ -32,14 +31,6 @@ Watch out for changes.
   - [sprite](#sprite)
 
 ## Fallbacks
-
-### box-sizing
-```less
-@import (reference) url('/node_modules/xmeter/src/__fallback.box-sizing.less');
-.your-class {
-  .box-sizing([!content-box | border-box]?);
-}
-```
 
 ### The Flexbox Tools
 ```less

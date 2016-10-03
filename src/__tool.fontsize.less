@@ -22,7 +22,6 @@
 // : 2016-04-26
 .font-size-mod(@ratio: 1) {
   @l-vru: @ratio * @g-vru; // in rems
-  font-size: (@ratio * @g-1rem); // legacy browsers (see __settings for more info)
   font-size: (@ratio *    1rem);
   line-height: @g-line_height; // NOTE this is redundant but here for clarification.
   .vertspacing(@l-vru);
