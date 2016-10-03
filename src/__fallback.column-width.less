@@ -1,0 +1,20 @@
+
+/*################################*\
+    xmeter  |  __fallback.column-width.less
+\*################################*/
+
+
+// Sets the width of columns of text.
+// See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/column-width) for more info.
+//
+// @width - a length indicating the optimal width of the columns, or
+//        - auto (initial) - indicates the width of columns should be determined by the `column-count` property
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-02-08
+.column-width(@width: auto) {
+  -webkit-column-width: @width;
+     -moz-column-width: @width;
+          column-width: @width;
+}

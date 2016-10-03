@@ -1,8 +1,8 @@
 
 /*################################*\
-    xmeter  |  _obj.Flex.less
+    xmeter  |  _o-Flex.less
 \*################################*/
-@import (reference) url('__tool.fallback.flexbox.less');
+@import (reference) url('__fallback.flexbox.less');
 
 
 // A one-dimensional flexbox container of flex items.
@@ -21,7 +21,7 @@
 }
 
 .o-Flex__Item {
-  .flex(1);
+  .flex(auto);
 }
 
 @media screen                       { .o-Flex-s  { .o-Flex; } .o-Flex__Item-s  { .o-Flex__Item; } }

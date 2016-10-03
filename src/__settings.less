@@ -19,9 +19,21 @@
 @g-vru_px: (@g-line_height * @g-1rem); // fallback for @g-vru, which is in rems
 @g-vru:    (@g-line_height *  1rem);
 
-@g-font_size_h1: 32/16; // 2.000
-@g-font_size_h2: 24/16; // 1.500
-@g-font_size_h3: 20/16; // 1.250
-@g-font_size_h4: 16/16; // 1.000
-@g-font_size_h5: 14/16; // 0.875
-@g-font_size_h6: 12/16; // 0.750
+
+// new global font sizes as of 2016-08-17
+@g-font_size_peta: 96/16; // 6.00 // lines: ceil(6.00/@g-line_height) == 4
+@g-font_size_tera: 64/16; // 4.00 // lines: ceil(4.00/@g-line_height) == 3
+@g-font_size_giga: 48/16; // 3.00 // lines: ceil(3.00/@g-line_height) == 2
+@g-font_size_mega: 32/16; // 2.00 // lines: ceil(2.00/@g-line_height) == 2
+@g-font_size_kilo: 24/16; // 1.50 // lines: ceil(1.50/@g-line_height) == 1
+@g-font_size_norm: 16/16; // 1.00 // lines: ceil(1.00/@g-line_height) == 1
+@g-font_size_mill: 12/16; // 0.75 // lines: ceil(0.75/@g-line_height) == 1
+@g-font_size_micr:  8/16; // 0.50 // lines: ceil(0.50/@g-line_height) == 1
+
+// new heading sizes
+@g-font_size_h1: @g-font_size_giga;
+@g-font_size_h2: @g-font_size_mega;
+@g-font_size_h3: @g-font_size_kilo;
+@g-font_size_h4: @g-font_size_norm;
+@g-font_size_h5: @g-font_size_mill;
+@g-font_size_h6: @g-font_size_micr;

@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  mixin doctoc(args)
+    //- NOTE parameter validation
+    -
+      var pages   = args.pages   || []
+      var classes = args.classes || {}
+      var depth   = +args.depth  || 0
+    ol(class=classes.listclasses)
+      each item in pages
+        unless item.isHidden()
+          li(class=classes.itemclasses)
+            a(class=classes.linkclasses href=item.url())= item.name()
+            if item.description()
+              = ': ' + item.description()
+            if item.findAll().length && depth > 0
+              +doctoc({pages: item.findAll(), classes: (classes.sub || {}), depth: depth-1})
+  mixin newSection(hn, page)
+    -
+      var text = page.name()
+      var id = page.url().split('#')[1]
+    section(id=id)
+      if hn === 1
+        h1 #{text} #[a.docs-_fragid(href='#' + id)]
+      else if hn === 2
+        h2 #{text} #[a.docs-_fragid(href='#' + id)]
+      else if hn === 3
+        h3 #{text} #[a.docs-_fragid(href='#' + id)]
+      else
+        p #{text}
+      block
+  block vars
+  head
+    title= page.title() || (page.name() + ' | ' + Xmeter.DOCS.name())
+    meta(charset="utf-8")
+    meta(name="description" content=Xmeter.DOCS.description())
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="../xmeter.css")
+    link(rel="stylesheet" href="styles/docs.css")
+  body.docs-body
+    main.docs-main
+      block main
+        header
+          //- h1= page.title() || (Xmeter.DOCS.name() + ' — ' + page.name())
+          if page.title()
+            h1= page.title()
+          else
+            h1 #[a(href=Xmeter.DOCS.url())= Xmeter.DOCS.name()] &mdash; #{page.name()}
+          block mainIntro
+            p= page.description()
+          nav#table-contents
+            h2 Table of Contents
+            block toc
+              +doctoc({pages: page.findAll(), depth: Infinity})
+    block footer
+      footer: nav
+        h1 Sitemap
+        +doctoc({pages: Xmeter.DOCS.findAll()})

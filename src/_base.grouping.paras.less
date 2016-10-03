@@ -3,16 +3,17 @@
     xmeter  |  _base.grouping.paras.less
 \*################################*/
 @import (reference) url('__settings.less');
-@import (reference) url('__tool.module.fontsize.less');
+@import (reference) url('__tool.fontsize.less');
 
 
 p {
 }
 pre {
-  .font-size-el(@g-font_size_h6);
+  .font-size-el(@g-font_size_mill);
   text-align: left;
   text-indent: 0;
   white-space: pre;
+  overflow: auto;
 }
 figure {
   // undo Normalize

@@ -1,0 +1,62 @@
+p.
+  These are two groups of atoms. The first group simply sets the font size of an element.
+  The second group uses the #[code.docs-code .font-size-el()] mixin,
+  for maintaining vertical rhythm.
+p.
+  See all the font sizes in the source file #[code.docs-code /src/__settings.less],
+  and all atoms in #[code.docs-code /src/_atom.less]
+pre.docs-pre.
+  @g-font_size_peta: 96/16;
+  @g-font_size_tera: 64/16;
+  @g-font_size_giga: 48/16;
+  @g-font_size_mega: 32/16;
+  @g-font_size_kilo: 24/16;
+  @g-font_size_norm: 16/16;
+  @g-font_size_mill: 12/16;
+  @g-font_size_micr:  8/16;
+  .-fz-norm { font-size: @g-font_size_norm * 1em; }
+  .-fz-el-norm { .font-size-el(@g-font_size_norm); }
+figure.docs-figure
+  figcaption.-mb-1vru.
+    Use #[code.docs-code .-fz-*] on inline elements.
+    Numbers shown are font-sizes(ems).
+  ul
+    li #[u.-fz-peta universe] (6.00)
+    li #[u.-fz-tera galaxy  ] (4.00)
+    li #[u.-fz-giga star    ] (3.00)
+    li #[u.-fz-mega planet  ] (2.00)
+    li #[u.-fz-kilo asteroid] (1.50)
+    li #[u.-fz-norm molecule] (1.00)
+    li #[u.-fz-mill atom    ] (0.75)
+    li #[u.-fz-micr quark   ] (0.50)
+  pre.docs-pre.
+    &lt;li&gt;&lt;u class="#[u -fz-peta]"&gt;universe&lt;/u&gt; (6.00)&lt;/li&gt;
+    &lt;li&gt;&lt;u class="#[u -fz-tera]"&gt;galaxy  &lt;/u&gt; (4.00)&lt;/li&gt;
+    &lt;li&gt;&lt;u class="#[u -fz-giga]"&gt;star    &lt;/u&gt; (3.00)&lt;/li&gt;
+    &lt;li&gt;&lt;u class="#[u -fz-mega]"&gt;planet  &lt;/u&gt; (2.00)&lt;/li&gt;
+    &lt;li&gt;&lt;u class="#[u -fz-kilo]"&gt;asteroid&lt;/u&gt; (1.50)&lt;/li&gt;
+    &lt;li&gt;&lt;u class="#[u -fz-norm]"&gt;molecule&lt;/u&gt; (1.00)&lt;/li&gt;
+    &lt;li&gt;&lt;u class="#[u -fz-mill]"&gt;atom    &lt;/u&gt; (0.75)&lt;/li&gt;
+    &lt;li&gt;&lt;u class="#[u -fz-micr]"&gt;quark   &lt;/u&gt; (0.50)&lt;/li&gt;
+figure.docs-figure
+  figcaption.
+    Use #[code.docs-code .-fz-el-*] on block elements.
+    Numbers shown are font-sizes(ems)/line-heights.
+  ul(style="overflow:auto;white-space:nowrap;")
+    li.-fz-el-peta universe (6.00/0.250)
+    li.-fz-el-tera galaxy   (4.00/0.375)
+    li.-fz-el-giga star     (3.00/0.500)
+    li.-fz-el-mega planet   (2.00/0.750)
+    li.-fz-el-kilo asteroid (1.50/1.000)
+    li.-fz-el-norm molecule (1.00/1.500)
+    li.-fz-el-mill atom     (0.75/2.000)
+    li.-fz-el-micr quark    (0.50/3.000)
+  pre.docs-pre.
+    &lt;li class="#[u -fz-el-peta]"&gt;universe (6.00/0.250)&lt;/li&gt;
+    &lt;li class="#[u -fz-el-tera]"&gt;galaxy   (4.00/0.375)&lt;/li&gt;
+    &lt;li class="#[u -fz-el-giga]"&gt;star     (3.00/0.500)&lt;/li&gt;
+    &lt;li class="#[u -fz-el-mega]"&gt;planet   (2.00/0.750)&lt;/li&gt;
+    &lt;li class="#[u -fz-el-kilo]"&gt;asteroid (1.50/1.000)&lt;/li&gt;
+    &lt;li class="#[u -fz-el-norm]"&gt;molecule (1.00/1.500)&lt;/li&gt;
+    &lt;li class="#[u -fz-el-mill]"&gt;atom     (0.75/2.000)&lt;/li&gt;
+    &lt;li class="#[u -fz-el-micr]"&gt;quark    (0.50/3.000)&lt;/li&gt;
