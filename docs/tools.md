@@ -95,7 +95,7 @@ Watch out for changes.
 ## Tools
 
 ### vertspacing
-**NOTE!** *DEPRECATED*
+**NOTE!** *DEPRECATED* CHANGED: this will be removed on next major release.
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.vertspacing.less');
 .your-module {
