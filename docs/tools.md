@@ -34,6 +34,7 @@ Watch out for changes.
 ## Fallbacks
 
 ### box-sizing
+**NOTE!** *DEPRECATED* CHANGED: use plain CSS `box-sizing` property instead.
 ```less
 @import (reference) url('/node_modules/xmeter/src/__fallback.box-sizing.less');
 .your-class {
