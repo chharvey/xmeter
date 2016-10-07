@@ -24,21 +24,7 @@
  * reset.css (above).............strips all elements of all browser-default styles
  * normalize.css (above).........(@necolas) addresses browser discrepancies
  *
- * BASE
- * generic........................styles that apply to `html` and very far-reaching groups of elements
- * sections.......................secioning content and section-related elements
- * grouping.......................grouping content
- * ....paras..........................paragraphs, block-level textual elements
- * ....lists..........................ordered, unordered, dictionary
- * ....tables.........................tables
- * text...........................text-level and inline elements
- * ....links..........................inline hyperlinks
- * ....stress.........................text outstanding from surrounding prose
- * ....doctext........................documentation elements
- * ....data...........................machine- or human-readable data
- * embedded.......................images and other media
- * forms..........................form elements
- * interactive....................interactive elements
+ * BASE...........................unclassed html elements. see _base.less
  *
  * OBJECTS
  * List...........................plain, unstyled, blocky list
@@ -57,6 +43,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
+@import (inline) url('build/_base.css');
 @import (inline) url('build/_base.generic.css');
 @import (inline) url('build/_base.sections.css');
 @import (inline) url('build/_base.grouping.css');
