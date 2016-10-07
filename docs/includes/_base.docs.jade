@@ -193,8 +193,8 @@ section#text-level-elements
         h3 Links #[a.docs-_fragid(href='#links')]
         figure(class=classname.figure): ul
           block linksList
-            li: a a
-            li: a(href="#0") a[href]
+            li: a placeholder link #[code(class=classname.code) a]
+            li: a(href="#0") regular link #[code(class=classname.code)= 'a[href]']
     section#stress
       block stress
         h3 Stress #[a.docs-_fragid(href='#stress')]
@@ -216,7 +216,7 @@ section#text-level-elements
             li: del  content shown to be deleted from a document #[code(class=classname.code) del]
             li: dfn  definining instance of a term  #[code(class=classname.code) dfn]
             li: b    keyword or technical term #[code(class=classname.code) b]
-            li: abbr(title="") abbreviation or acronym #[code(class=classname.code) abbr[title]]
+            li: abbr(title="") abbreviation or acronym #[code(class=classname.code)= 'abbr[title]']
             li: var  variable  #[code(class=classname.code) var]
             li: q    quoted material #[code(class=classname.code) q]
             li: cite reference to a work, some part of a work, or the creator of a work #[code(class=classname.code) cite]
