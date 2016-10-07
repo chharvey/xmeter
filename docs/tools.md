@@ -96,6 +96,7 @@ Watch out for changes.
 ## Tools
 
 ### vertspacing
+**NOTE!** *DEPRECATED* CHANGED: this will be removed on next major release.
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.vertspacing.less');
 .your-module {
@@ -128,7 +129,7 @@ Watch out for changes.
 .your-module {
   .font-size-mod(<number>?:1);
   .your-element {
-    .font-size-el(<number>?:1; <integer>?:1; <number>?:@g-line_height);
+    .font-size-el(<number>?:1; <integer>?:1);
   }
 }
 ```
