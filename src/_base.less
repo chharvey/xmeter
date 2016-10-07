@@ -130,19 +130,97 @@ address {
 //++++++++++++++++++++++++++++++++//
 //    # GROUPING
 //++++++++++++++++++++++++++++++++//
+div {
+}
+hr {
+  display: none;
+}
   //--------------------------------//
   //    ## Paragraphs
   //--------------------------------//
+  p {
+  }
+  pre {
+    .font-size-el(@g-font_size_mill);
+    text-align: left;
+    text-indent: 0;
+    white-space: pre;
+    overflow: auto;
+  }
+  figure {
+    // undo Normalize
+    margin-top:   0;
+    margin-left:  0;
+    margin-right: 0;
+  }
+  figcaption {
+  }
+  blockquote {
+  }
   //---- end ## Paragraphs ----//
 
   //--------------------------------//
   //    ## Lists
   //--------------------------------//
+  ol, ul, dl {
+    li > &, dt > &, dd > & {
+      margin-bottom: 0; // undo default bottom spacing for nested lists
+    }
+  }
+  ol, ul {
+    padding: 0 0 0 4rem;
+    li > &,
+    dt > &,
+    dd > & {
+      padding-left: 2rem;
+    }
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  dl {
+  }
+  li {
+  }
+  dt {
+  }
+  dd {
+  }
   //---- end ## Lists ----//
 
   //--------------------------------//
   //    ## Tables
   //--------------------------------//
+  table {
+    max-width: 100%; // fluid tables for responsive purposes
+    border-collapse: collapse;
+    text-align: left; // fix browser bug
+  }
+  caption {
+    text-align: center;
+  }
+  thead,
+  tfoot {
+    vertical-align: bottom; // for heading alignment
+  }
+  thead {
+  }
+  tfoot {
+  }
+  tbody {
+    vertical-align: top; // for data alignment
+  }
+  tr {
+  }
+  th {
+    font-weight: 700;
+    text-align: center;
+  }
+  td {
+  }
   //---- end ## Tables ----//
 //++++ end # GROUPING ++++//
 
