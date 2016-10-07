@@ -11,7 +11,6 @@
     "lessc-each": "^1.1.0",
     "normalize.css": "~4.1.1",
     "pug-cli": "^1.0.0-alpha6",
-    "resetcss": "^1.0.3",
     "sitepage": "^1.0.0"
   },
   "scripts": {

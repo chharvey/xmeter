@@ -6,17 +6,18 @@
 
 
 // Sets some spacing properties to 1vru ("vertical rhythm unit"),
-// which is equal to `1rem * @g-line_height`.
-// See `__settings.less` for more info.
+// which is equal to 1rem times the line-height.
+// See `__settings.less` and `__base.generic.less` for more info.
 //
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-06-14
+// : 2016-10-01
 
 
 .-mb-1vru {
-  margin-bottom: @g-vru;
+  margin-bottom: @g-vru; // HACK fallback
+  margin-bottom: var(--vru);
 }
 
 @media screen                       { .-mb-1vru-s  { .-mb-1vru; } }
@@ -29,7 +30,8 @@
 
 
 .-pt-1vru {
-  padding-top: @g-vru;
+  padding-top: @g-vru; // HACK fallback
+  padding-top: var(--vru);
 }
 
 @media screen                       { .-pt-1vru-s  { .-pt-1vru; } }
@@ -135,10 +137,10 @@
 .-fz-el-mill { .font-size-el(@g-font_size_mill); }
 .-fz-el-norm { .font-size-el(@g-font_size_norm); }
 .-fz-el-kilo { .font-size-el(@g-font_size_kilo); }
-.-fz-el-mega { .font-size-el(@g-font_size_mega); }
-.-fz-el-giga { .font-size-el(@g-font_size_giga); }
-.-fz-el-tera { .font-size-el(@g-font_size_tera); }
-.-fz-el-peta { .font-size-el(@g-font_size_peta); }
+.-fz-el-mega { .font-size-el(@g-font_size_mega; 2); }
+.-fz-el-giga { .font-size-el(@g-font_size_giga; 2); }
+.-fz-el-tera { .font-size-el(@g-font_size_tera; 3); }
+.-fz-el-peta { .font-size-el(@g-font_size_peta; 4); }
 @media screen {
   .-fz-el-micr-s { .-fz-el-micr; }
   .-fz-el-mill-s { .-fz-el-mill; }

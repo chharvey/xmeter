@@ -19,12 +19,15 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-04-26
+// : 2016-10-01
 .font-size-mod(@ratio: 1) {
-  @l-vru: @ratio * @g-vru; // in rems
+  @l-vru: @ratio * @g-vru; // in rems // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
   font-size: (@ratio *    1rem);
-  line-height: @g-line_height; // NOTE this is redundant but here for clarification.
-  .vertspacing(@l-vru);
+  // line-height: inherit; // NOTE clarification
+  & > * {
+    --vru: calc(~'var(--line-height) * ' @ratio*1rem);
+  }
+  .vertspacing(@l-vru); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
 }
 
 // Sets the font size of an element within a module (or if not, in the root)
@@ -43,8 +46,9 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-04-26
+// : 2016-10-01
 .font-size-el(@ratio: 1; @lines: 1) {
   font-size: (@ratio * 1em);
-  line-height: ((@g-line_height / @ratio) * @lines);
+  line-height: (@g-line_height / (@ratio/@lines)); // HACK fallback
+  line-height: calc(~'var(--line-height) / ' (@ratio/@lines));
 }
