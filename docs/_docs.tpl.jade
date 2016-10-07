@@ -1,29 +1,30 @@
 doctype html
 html(lang="en")
+  include includes/_data.jade
+  block vars
   head
-    include includes/_data.jade
-    block vars
-      -
-        var project_name = 'Xmeter'
-        var page = {}
-    title= page.name + ' | ' + project_name
+    title= page.title() || (page.name() + ' | ' + Xmeter.DOCS.name())
     meta(charset="utf-8")
+    meta(name="description" content=Xmeter.DOCS.description())
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(name="description" content="A demo of Xmeter styles.")
     link(rel="stylesheet" href="../xmeter.css")
     link(rel="stylesheet" href="styles/docs.css")
   body.docs-body
     main.docs-main
       block main
         header
-          h1= project_name + ' — ' + page.name
-          p= page.description
+          //- h1= page.title() || (Xmeter.DOCS.name() + ' — ' + page.name())
+          if page.title()
+            h1= page.title()
+          else
+            h1 #[a(href=Xmeter.DOCS.url())= Xmeter.DOCS.name()] &mdash; #{page.name()}
+          block mainIntro
+            p= page.description()
           nav#table-contents
             h2 Table of Contents
             block toc
-              +doctoc({pages: page.sub, depth: Infinity})
-    unless page === Xmeter.getPage('index.html')
+              +doctoc({pages: page.findAll(), depth: Infinity})
+    block footer
       footer: nav
         h1 Sitemap
-        +doctoc({pages: Xmeter.PAGES})
-    block scripts
+        +doctoc({pages: Xmeter.DOCS.findAll()})

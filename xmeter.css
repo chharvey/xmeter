@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.0.0
+    Version: 5.1.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -653,28 +653,28 @@ h6 {
   font-weight: 700;
 }
 h1 {
-  font-size: 2em;
-  line-height: 0.75;
-}
-h2 {
-  font-size: 1.5em;
+  font-size: 3em;
   line-height: 1;
 }
+h2 {
+  font-size: 2em;
+  line-height: 1.5;
+}
 h3 {
-  font-size: 1.25em;
-  line-height: 1.2;
+  font-size: 1.5em;
+  line-height: 1;
 }
 h4 {
   font-size: 1em;
   line-height: 1.5;
 }
 h5 {
-  font-size: 0.875em;
-  line-height: 1.71428571;
-}
-h6 {
   font-size: 0.75em;
   line-height: 2;
+}
+h6 {
+  font-size: 0.5em;
+  line-height: 3;
 }
 h1 {
   margin-top: 0;
@@ -1566,6 +1566,482 @@ input[type="search"] {
 @media screen and (min-width: 90em) {
   .-pt-1vru-sP {
     padding-top: 1.5rem;
+  }
+}
+.-fz-micr {
+  font-size: 0.5em;
+}
+.-fz-mill {
+  font-size: 0.75em;
+}
+.-fz-norm {
+  font-size: 1em;
+}
+.-fz-kilo {
+  font-size: 1.5em;
+}
+.-fz-mega {
+  font-size: 2em;
+}
+.-fz-giga {
+  font-size: 3em;
+}
+.-fz-tera {
+  font-size: 4em;
+}
+.-fz-peta {
+  font-size: 6em;
+}
+@media screen {
+  .-fz-micr-s {
+    font-size: 0.5em;
+  }
+  .-fz-mill-s {
+    font-size: 0.75em;
+  }
+  .-fz-norm-s {
+    font-size: 1em;
+  }
+  .-fz-kilo-s {
+    font-size: 1.5em;
+  }
+  .-fz-mega-s {
+    font-size: 2em;
+  }
+  .-fz-giga-s {
+    font-size: 3em;
+  }
+  .-fz-tera-s {
+    font-size: 4em;
+  }
+  .-fz-peta-s {
+    font-size: 6em;
+  }
+}
+@media print {
+  .-fz-micr-p {
+    font-size: 0.5em;
+  }
+  .-fz-mill-p {
+    font-size: 0.75em;
+  }
+  .-fz-norm-p {
+    font-size: 1em;
+  }
+  .-fz-kilo-p {
+    font-size: 1.5em;
+  }
+  .-fz-mega-p {
+    font-size: 2em;
+  }
+  .-fz-giga-p {
+    font-size: 3em;
+  }
+  .-fz-tera-p {
+    font-size: 4em;
+  }
+  .-fz-peta-p {
+    font-size: 6em;
+  }
+}
+@media screen and (min-width: 30em) {
+  .-fz-micr-sK {
+    font-size: 0.5em;
+  }
+  .-fz-mill-sK {
+    font-size: 0.75em;
+  }
+  .-fz-norm-sK {
+    font-size: 1em;
+  }
+  .-fz-kilo-sK {
+    font-size: 1.5em;
+  }
+  .-fz-mega-sK {
+    font-size: 2em;
+  }
+  .-fz-giga-sK {
+    font-size: 3em;
+  }
+  .-fz-tera-sK {
+    font-size: 4em;
+  }
+  .-fz-peta-sK {
+    font-size: 6em;
+  }
+}
+@media screen and (min-width: 45em) {
+  .-fz-micr-sM {
+    font-size: 0.5em;
+  }
+  .-fz-mill-sM {
+    font-size: 0.75em;
+  }
+  .-fz-norm-sM {
+    font-size: 1em;
+  }
+  .-fz-kilo-sM {
+    font-size: 1.5em;
+  }
+  .-fz-mega-sM {
+    font-size: 2em;
+  }
+  .-fz-giga-sM {
+    font-size: 3em;
+  }
+  .-fz-tera-sM {
+    font-size: 4em;
+  }
+  .-fz-peta-sM {
+    font-size: 6em;
+  }
+}
+@media screen and (min-width: 60em) {
+  .-fz-micr-sG {
+    font-size: 0.5em;
+  }
+  .-fz-mill-sG {
+    font-size: 0.75em;
+  }
+  .-fz-norm-sG {
+    font-size: 1em;
+  }
+  .-fz-kilo-sG {
+    font-size: 1.5em;
+  }
+  .-fz-mega-sG {
+    font-size: 2em;
+  }
+  .-fz-giga-sG {
+    font-size: 3em;
+  }
+  .-fz-tera-sG {
+    font-size: 4em;
+  }
+  .-fz-peta-sG {
+    font-size: 6em;
+  }
+}
+@media screen and (min-width: 75em) {
+  .-fz-micr-sT {
+    font-size: 0.5em;
+  }
+  .-fz-mill-sT {
+    font-size: 0.75em;
+  }
+  .-fz-norm-sT {
+    font-size: 1em;
+  }
+  .-fz-kilo-sT {
+    font-size: 1.5em;
+  }
+  .-fz-mega-sT {
+    font-size: 2em;
+  }
+  .-fz-giga-sT {
+    font-size: 3em;
+  }
+  .-fz-tera-sT {
+    font-size: 4em;
+  }
+  .-fz-peta-sT {
+    font-size: 6em;
+  }
+}
+@media screen and (min-width: 90em) {
+  .-fz-micr-sP {
+    font-size: 0.5em;
+  }
+  .-fz-mill-sP {
+    font-size: 0.75em;
+  }
+  .-fz-norm-sP {
+    font-size: 1em;
+  }
+  .-fz-kilo-sP {
+    font-size: 1.5em;
+  }
+  .-fz-mega-sP {
+    font-size: 2em;
+  }
+  .-fz-giga-sP {
+    font-size: 3em;
+  }
+  .-fz-tera-sP {
+    font-size: 4em;
+  }
+  .-fz-peta-sP {
+    font-size: 6em;
+  }
+}
+.-fz-el-micr {
+  font-size: 0.5em;
+  line-height: 3;
+}
+.-fz-el-mill {
+  font-size: 0.75em;
+  line-height: 2;
+}
+.-fz-el-norm {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.-fz-el-kilo {
+  font-size: 1.5em;
+  line-height: 1;
+}
+.-fz-el-mega {
+  font-size: 2em;
+  line-height: 1.5;
+}
+.-fz-el-giga {
+  font-size: 3em;
+  line-height: 1;
+}
+.-fz-el-tera {
+  font-size: 4em;
+  line-height: 1.125;
+}
+.-fz-el-peta {
+  font-size: 6em;
+  line-height: 1;
+}
+@media screen {
+  .-fz-el-micr-s {
+    font-size: 0.5em;
+    line-height: 3;
+  }
+  .-fz-el-mill-s {
+    font-size: 0.75em;
+    line-height: 2;
+  }
+  .-fz-el-norm-s {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .-fz-el-kilo-s {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .-fz-el-mega-s {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .-fz-el-giga-s {
+    font-size: 3em;
+    line-height: 1;
+  }
+  .-fz-el-tera-s {
+    font-size: 4em;
+    line-height: 1.125;
+  }
+  .-fz-el-peta-s {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+@media print {
+  .-fz-el-micr-p {
+    font-size: 0.5em;
+    line-height: 3;
+  }
+  .-fz-el-mill-p {
+    font-size: 0.75em;
+    line-height: 2;
+  }
+  .-fz-el-norm-p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .-fz-el-kilo-p {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .-fz-el-mega-p {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .-fz-el-giga-p {
+    font-size: 3em;
+    line-height: 1;
+  }
+  .-fz-el-tera-p {
+    font-size: 4em;
+    line-height: 1.125;
+  }
+  .-fz-el-peta-p {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 30em) {
+  .-fz-el-micr-sK {
+    font-size: 0.5em;
+    line-height: 3;
+  }
+  .-fz-el-mill-sK {
+    font-size: 0.75em;
+    line-height: 2;
+  }
+  .-fz-el-norm-sK {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .-fz-el-kilo-sK {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .-fz-el-mega-sK {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .-fz-el-giga-sK {
+    font-size: 3em;
+    line-height: 1;
+  }
+  .-fz-el-tera-sK {
+    font-size: 4em;
+    line-height: 1.125;
+  }
+  .-fz-el-peta-sK {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 45em) {
+  .-fz-el-micr-sM {
+    font-size: 0.5em;
+    line-height: 3;
+  }
+  .-fz-el-mill-sM {
+    font-size: 0.75em;
+    line-height: 2;
+  }
+  .-fz-el-norm-sM {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .-fz-el-kilo-sM {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .-fz-el-mega-sM {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .-fz-el-giga-sM {
+    font-size: 3em;
+    line-height: 1;
+  }
+  .-fz-el-tera-sM {
+    font-size: 4em;
+    line-height: 1.125;
+  }
+  .-fz-el-peta-sM {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 60em) {
+  .-fz-el-micr-sG {
+    font-size: 0.5em;
+    line-height: 3;
+  }
+  .-fz-el-mill-sG {
+    font-size: 0.75em;
+    line-height: 2;
+  }
+  .-fz-el-norm-sG {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .-fz-el-kilo-sG {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .-fz-el-mega-sG {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .-fz-el-giga-sG {
+    font-size: 3em;
+    line-height: 1;
+  }
+  .-fz-el-tera-sG {
+    font-size: 4em;
+    line-height: 1.125;
+  }
+  .-fz-el-peta-sG {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 75em) {
+  .-fz-el-micr-sT {
+    font-size: 0.5em;
+    line-height: 3;
+  }
+  .-fz-el-mill-sT {
+    font-size: 0.75em;
+    line-height: 2;
+  }
+  .-fz-el-norm-sT {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .-fz-el-kilo-sT {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .-fz-el-mega-sT {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .-fz-el-giga-sT {
+    font-size: 3em;
+    line-height: 1;
+  }
+  .-fz-el-tera-sT {
+    font-size: 4em;
+    line-height: 1.125;
+  }
+  .-fz-el-peta-sT {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 90em) {
+  .-fz-el-micr-sP {
+    font-size: 0.5em;
+    line-height: 3;
+  }
+  .-fz-el-mill-sP {
+    font-size: 0.75em;
+    line-height: 2;
+  }
+  .-fz-el-norm-sP {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .-fz-el-kilo-sP {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  .-fz-el-mega-sP {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .-fz-el-giga-sP {
+    font-size: 3em;
+    line-height: 1;
+  }
+  .-fz-el-tera-sP {
+    font-size: 4em;
+    line-height: 1.125;
+  }
+  .-fz-el-peta-sP {
+    font-size: 6em;
+    line-height: 1;
   }
 }
 

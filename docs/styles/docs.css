@@ -23,6 +23,10 @@
 .docs-code u {
   color: #6c6;
 }
+.docs-pre strong,
+.docs-code strong {
+  color: #eee;
+}
 .docs-pre,
 .docs-figure {
   padding: 0.75rem 0.5rem;
@@ -47,4 +51,21 @@
 }
 .docs-form {
   background: #fff;
+}
+.docs-_fragid {
+  display: inline;
+  line-height: 0;
+  margin-left: 1rem;
+  font-weight: 100;
+}
+.docs-_fragid::before {
+  content: '';
+}
+h1:hover > .docs-_fragid::before,
+h2:hover > .docs-_fragid::before,
+h3:hover > .docs-_fragid::before,
+h4:hover > .docs-_fragid::before,
+h5:hover > .docs-_fragid::before,
+h6:hover > .docs-_fragid::before {
+  content: '\00a7';
 }
