@@ -48,7 +48,7 @@ html(lang="en")
             h1 #[a(href=Xmeter.DOCS.url())= Xmeter.DOCS.name()] &mdash; #{page.name()}
           block mainIntro
             p= page.description()
-          nav#table-contents
+          nav
             h2 Table of Contents
             block toc
               +doctoc({pages: page.findAll(), depth: Infinity})
