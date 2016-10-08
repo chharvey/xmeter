@@ -1,5 +1,4 @@
 var Page = require('sitepage').Page
-var StyleGuide = require('./StyleGuide.class.js')
 
 module.exports = (function () {
   // CONSTRUCTOR
@@ -13,7 +12,7 @@ module.exports = (function () {
    * @type {StyleGuide}
    */
   Xmeter.DOCS = (function () {
-    var docs = new StyleGuide('Xmeter', '/docs/')
+    var docs = new Page({ name: 'Xmeter', url: '/docs/' })
       .title('Xmeter Style Guide')
       .description('A demo of Xmeter styles.')
     ;(function (self) {
