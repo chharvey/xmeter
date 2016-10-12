@@ -1,7 +1,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.1.0
+    Version: 5.2.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -9,7 +9,7 @@
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-@import (inline) url('node_modules/resetcss/reset.css');
+@import (inline) url('src/reset.css');
 @import (inline) url('node_modules/normalize.css/normalize.css');
 
 
@@ -25,20 +25,7 @@
  * normalize.css (above).........(@necolas) addresses browser discrepancies
  *
  * BASE
- * generic........................styles that apply to `html` and very far-reaching groups of elements
- * sections.......................secioning content and section-related elements
- * grouping.......................grouping content
- * ....paras..........................paragraphs, block-level textual elements
- * ....lists..........................ordered, unordered, dictionary
- * ....tables.........................tables
- * text...........................text-level and inline elements
- * ....links..........................inline hyperlinks
- * ....stress.........................text outstanding from surrounding prose
- * ....doctext........................documentation elements
- * ....data...........................machine- or human-readable data
- * embedded.......................images and other media
- * forms..........................form elements
- * interactive....................interactive elements
+ * _base.css......................unclassed html elements
  *
  * OBJECTS
  * List...........................plain, unstyled, blocky list
@@ -57,20 +44,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-@import (inline) url('build/_base.generic.css');
-@import (inline) url('build/_base.sections.css');
-@import (inline) url('build/_base.grouping.css');
-@import (inline) url('build/_base.grouping.paras.css');
-@import (inline) url('build/_base.grouping.lists.css');
-@import (inline) url('build/_base.grouping.tables.css');
-@import (inline) url('build/_base.text.css');
-@import (inline) url('build/_base.text.links.css');
-@import (inline) url('build/_base.text.stress.css');
-@import (inline) url('build/_base.text.doctext.css');
-@import (inline) url('build/_base.text.data.css');
-@import (inline) url('build/_base.embedded.css');
-@import (inline) url('build/_base.forms.css');
-@import (inline) url('build/_base.interactive.css');
+@import (inline) url('build/_base.css');
 @import (inline) url('build/_o-List.css');
 @import (inline) url('build/_o-Flex.css');
 @import (inline) url('build/_o-Grid.css');

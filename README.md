@@ -65,7 +65,7 @@ To use the Xmeter global variables, import the `__settings` stylesheet.
 @import (reference) url('/node_modules/xmeter/src/__settings.less');
 
 .my-selector {
-  line-height: 2 * @g-line_height;
+  font-size: 1.5 * @g-font_size_kilo;
 }
 ```
 

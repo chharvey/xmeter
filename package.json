@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {},
@@ -9,9 +9,8 @@
     "jade": "^1.11.0",
     "less": "^2.7.1",
     "lessc-each": "^1.1.0",
-    "normalize.css": "~4.1.1",
+    "normalize.css": "^5.0.0",
     "pug-cli": "^1.0.0-alpha6",
-    "resetcss": "^1.0.3",
     "sitepage": "^1.0.0"
   },
   "scripts": {

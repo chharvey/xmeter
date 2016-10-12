@@ -1,79 +1,47 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.1.0
+    Version: 5.2.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
     Author : Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
-    resetcss
-    Version: 1.0.3
-    Licence: MIT
-    Repo   : https://github.com/chharvey/resetcss.git
-    Home   : https://github.com/chharvey/resetcss#readme
-    Author : Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)
-\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 /*================================*\
-    reset.less
+    reset.css
 \*================================*/
+
+
 body {
   text-align: left;
   background: #fff;
   color: #000;
 }
-sup,
-sub {
+
+sup, sub {
   vertical-align: inherit;
 }
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1, h2, h3, h4, h5, h6,
 hr,
-p,
-figure,
-blockquote,
-pre,
-ol,
-ul,
-dl,
+p, figure, blockquote, pre,
+ol, ul, dl,
 dd,
 fieldset {
   margin: 0;
 }
-ol,
-ul,
-th,
-td,
+ol, ul,
+th, td,
 legend {
   padding: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1, h2, h3, h4, h5, h6,
 address,
 pre,
 th,
-em,
-strong,
-i,
-small,
-dfn,
-b,
-var,
-cite,
-sup,
-sub,
-code,
-kbd,
-samp {
+em, strong, i, small,
+dfn, b, var, cite, sup, sub,
+code, kbd, samp {
   font: inherit;
 }
 caption,
@@ -87,14 +55,10 @@ mark {
   background: transparent;
 }
 a,
-u,
-s,
-ins,
-del {
+u, s, ins, del {
   text-decoration: none;
 }
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 q {
@@ -105,18 +69,27 @@ mark {
   color: inherit;
 }
 
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
+
+/* Document
+   ========================================================================== */
 
 html {
   font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
 }
+
+/* Sections
+   ========================================================================== */
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -126,69 +99,73 @@ body {
   margin: 0;
 }
 
-/* HTML5 display definitions
-   ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
  */
 
 article,
 aside,
-details, /* 1 */
-figcaption,
-figure,
 footer,
 header,
-main, /* 2 */
-menu,
 nav,
-section,
-summary { /* 1 */
+section {
   display: block;
 }
 
 /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
  * Add the correct display in IE 9-.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Add the correct display in IE 10-.
  * 1. Add the correct display in IE.
  */
 
-template, /* 1 */
-[hidden] {
-  display: none;
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
 }
 
-/* Links
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
    ========================================================================== */
 
 /**
@@ -210,9 +187,6 @@ a:active,
 a:hover {
   outline-width: 0;
 }
-
-/* Text-level semantics
-   ========================================================================== */
 
 /**
  * 1. Remove the bottom border in Firefox 39-.
@@ -244,21 +218,23 @@ strong {
 }
 
 /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
  * Add the correct font style in Android 4.3-.
  */
 
 dfn {
   font-style: italic;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /**
@@ -303,6 +279,24 @@ sup {
    ========================================================================== */
 
 /**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
  * Remove the border on images inside links in IE 10-.
  */
 
@@ -318,63 +312,23 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct margin in IE 8.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
 /* Forms
    ========================================================================== */
 
 /**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
 
 button,
 input,
+optgroup,
 select,
 textarea {
-  font: inherit; /* 1 */
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
-}
-
-/**
- * Restore the font weight unset by the previous rule.
- */
-
-optgroup {
-  font-weight: bold;
 }
 
 /**
@@ -460,6 +414,16 @@ legend {
 }
 
 /**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
  * Remove the default vertical scrollbar in IE.
  */
 
@@ -498,21 +462,12 @@ textarea {
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
 }
 
 /**
@@ -525,6 +480,57 @@ textarea {
   font: inherit; /* 2 */
 }
 
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
 /*================================*\
     xmeter.less
 \*================================*/
@@ -535,20 +541,7 @@ textarea {
  * normalize.css (above).........(@necolas) addresses browser discrepancies
  *
  * BASE
- * generic........................styles that apply to `html` and very far-reaching groups of elements
- * sections.......................secioning content and section-related elements
- * grouping.......................grouping content
- * ....paras..........................paragraphs, block-level textual elements
- * ....lists..........................ordered, unordered, dictionary
- * ....tables.........................tables
- * text...........................text-level and inline elements
- * ....links..........................inline hyperlinks
- * ....stress.........................text outstanding from surrounding prose
- * ....doctext........................documentation elements
- * ....data...........................machine- or human-readable data
- * embedded.......................images and other media
- * forms..........................form elements
- * interactive....................interactive elements
+ * _base.css......................unclassed html elements
  *
  * OBJECTS
  * List...........................plain, unstyled, blocky list
@@ -564,13 +557,11 @@ textarea {
  * atom...........................single-use classes
  */
 /*################################*\
-    xmeter  |  _base.generic.less
+    xmeter  |  _base.less
 \*################################*/
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 0 solid;
   content: ' ';
@@ -587,9 +578,12 @@ textarea {
   }
 }
 html {
+  --line-height: 1.5;
+  --vru: calc(var(--line-height) * 1rem);
   font-size: 100%;
   font-size: 16px;
   line-height: 1.5;
+  line-height: var(--line-height);
 }
 h1,
 h2,
@@ -607,9 +601,11 @@ dl,
 table,
 fieldset {
   margin-bottom: 1.5rem;
+  margin-bottom: var(--vru);
 }
 h1 {
   padding-top: 1.5rem;
+  padding-top: var(--vru);
 }
 span,
 br,
@@ -640,10 +636,6 @@ ins,
 del {
   display: contents;
 }
-
-/*################################*\
-    xmeter  |  _base.sections.less
-\*################################*/
 h1,
 h2,
 h3,
@@ -655,44 +647,43 @@ h6 {
 h1 {
   font-size: 3em;
   line-height: 1;
+  line-height: calc(var(--line-height) /  1.5);
 }
 h2 {
   font-size: 2em;
   line-height: 1.5;
+  line-height: calc(var(--line-height) /  1);
 }
 h3 {
   font-size: 1.5em;
   line-height: 1;
+  line-height: calc(var(--line-height) /  1.5);
 }
 h4 {
   font-size: 1em;
   line-height: 1.5;
+  line-height: calc(var(--line-height) /  1);
 }
 h5 {
   font-size: 0.75em;
   line-height: 2;
+  line-height: calc(var(--line-height) /  0.75);
 }
 h6 {
   font-size: 0.5em;
   line-height: 3;
+  line-height: calc(var(--line-height) /  0.5);
 }
 h1 {
   margin-top: 0;
 }
-
-/*################################*\
-    xmeter  |  _base.grouping.less
-\*################################*/
 hr {
   display: none;
 }
-
-/*################################*\
-    xmeter  |  _base.grouping.paras.less
-\*################################*/
 pre {
   font-size: 0.75em;
   line-height: 2;
+  line-height: calc(var(--line-height) /  0.75);
   text-align: left;
   text-indent: 0;
   white-space: pre;
@@ -703,10 +694,6 @@ figure {
   margin-left: 0;
   margin-right: 0;
 }
-
-/*################################*\
-    xmeter  |  _base.grouping.lists.less
-\*################################*/
 li > ol,
 li > ul,
 li > dl,
@@ -736,10 +723,6 @@ ol {
 ul {
   list-style-type: disc;
 }
-
-/*################################*\
-    xmeter  |  _base.grouping.tables.less
-\*################################*/
 table {
   max-width: 100%;
   border-collapse: collapse;
@@ -759,14 +742,6 @@ th {
   font-weight: 700;
   text-align: center;
 }
-
-/*################################*\
-    xmeter  |  _base.text.less
-\*################################*/
-
-/*################################*\
-    xmeter  |  _base.text.links.less
-\*################################*/
 a {
   color: #00e;
 }
@@ -775,10 +750,6 @@ a {
     opacity: 0.5;
   }
 }
-
-/*################################*\
-    xmeter  |  _base.text.stress.less
-\*################################*/
 em {
   font-style: italic;
 }
@@ -799,10 +770,6 @@ s {
   text-decoration: line-through;
   color: #b00;
 }
-
-/*################################*\
-    xmeter  |  _base.text.doctext.less
-\*################################*/
 ins {
   background: #a6f3a6;
 }
@@ -840,10 +807,6 @@ sup,
 sub {
   font-size: 0.75em;
 }
-
-/*################################*\
-    xmeter  |  _base.text.data.less
-\*################################*/
 code,
 kbd,
 samp {
@@ -861,21 +824,6 @@ kbd samp,
 samp samp {
   font-size: inherit;
 }
-
-/*################################*\
-    xmeter  |  _base.embedded.less
-\*################################*/
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  font-style: italic;
-  vertical-align: middle;
-}
-
-/*################################*\
-    xmeter  |  _base.forms.less
-\*################################*/
 fieldset,
 input,
 select,
@@ -902,11 +850,13 @@ input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 textarea {
   font-size: 0.75em;
   line-height: 2;
+  line-height: calc(var(--line-height) /  0.75);
 }
 textarea {
   width: 30rem;
   height: 9rem;
   line-height: 1.5;
+  line-height: var(--line-height);
 }
 input[type="button"],
 input[type="reset"],
@@ -916,14 +866,15 @@ button {
   background-color: rgba(0, 0, 0, 0.25);
 }
 input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-/*################################*\
-    xmeter  |  _base.interactive.less
-\*################################*/
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
 
 /*################################*\
     xmeter  |  _o-List.less
@@ -1494,78 +1445,94 @@ input[type="search"] {
 \*################################*/
 .-mb-1vru {
   margin-bottom: 1.5rem;
+  margin-bottom: var(--vru);
 }
 @media screen {
   .-mb-1vru-s {
     margin-bottom: 1.5rem;
+    margin-bottom: var(--vru);
   }
 }
 @media print {
   .-mb-1vru-p {
     margin-bottom: 1.5rem;
+    margin-bottom: var(--vru);
   }
 }
 @media screen and (min-width: 30em) {
   .-mb-1vru-sK {
     margin-bottom: 1.5rem;
+    margin-bottom: var(--vru);
   }
 }
 @media screen and (min-width: 45em) {
   .-mb-1vru-sM {
     margin-bottom: 1.5rem;
+    margin-bottom: var(--vru);
   }
 }
 @media screen and (min-width: 60em) {
   .-mb-1vru-sG {
     margin-bottom: 1.5rem;
+    margin-bottom: var(--vru);
   }
 }
 @media screen and (min-width: 75em) {
   .-mb-1vru-sT {
     margin-bottom: 1.5rem;
+    margin-bottom: var(--vru);
   }
 }
 @media screen and (min-width: 90em) {
   .-mb-1vru-sP {
     margin-bottom: 1.5rem;
+    margin-bottom: var(--vru);
   }
 }
 .-pt-1vru {
   padding-top: 1.5rem;
+  padding-top: var(--vru);
 }
 @media screen {
   .-pt-1vru-s {
     padding-top: 1.5rem;
+    padding-top: var(--vru);
   }
 }
 @media print {
   .-pt-1vru-p {
     padding-top: 1.5rem;
+    padding-top: var(--vru);
   }
 }
 @media screen and (min-width: 30em) {
   .-pt-1vru-sK {
     padding-top: 1.5rem;
+    padding-top: var(--vru);
   }
 }
 @media screen and (min-width: 45em) {
   .-pt-1vru-sM {
     padding-top: 1.5rem;
+    padding-top: var(--vru);
   }
 }
 @media screen and (min-width: 60em) {
   .-pt-1vru-sG {
     padding-top: 1.5rem;
+    padding-top: var(--vru);
   }
 }
 @media screen and (min-width: 75em) {
   .-pt-1vru-sT {
     padding-top: 1.5rem;
+    padding-top: var(--vru);
   }
 }
 @media screen and (min-width: 90em) {
   .-pt-1vru-sP {
     padding-top: 1.5rem;
+    padding-top: var(--vru);
   }
 }
 .-fz-micr {
@@ -1777,271 +1744,335 @@ input[type="search"] {
 .-fz-el-micr {
   font-size: 0.5em;
   line-height: 3;
+  line-height: calc(var(--line-height) /  0.5);
 }
 .-fz-el-mill {
   font-size: 0.75em;
   line-height: 2;
+  line-height: calc(var(--line-height) /  0.75);
 }
 .-fz-el-norm {
   font-size: 1em;
   line-height: 1.5;
+  line-height: calc(var(--line-height) /  1);
 }
 .-fz-el-kilo {
   font-size: 1.5em;
   line-height: 1;
+  line-height: calc(var(--line-height) /  1.5);
 }
 .-fz-el-mega {
   font-size: 2em;
   line-height: 1.5;
+  line-height: calc(var(--line-height) /  1);
 }
 .-fz-el-giga {
   font-size: 3em;
   line-height: 1;
+  line-height: calc(var(--line-height) /  1.5);
 }
 .-fz-el-tera {
   font-size: 4em;
   line-height: 1.125;
+  line-height: calc(var(--line-height) /  1.33333333);
 }
 .-fz-el-peta {
   font-size: 6em;
   line-height: 1;
+  line-height: calc(var(--line-height) /  1.5);
 }
 @media screen {
   .-fz-el-micr-s {
     font-size: 0.5em;
     line-height: 3;
+    line-height: calc(var(--line-height) /  0.5);
   }
   .-fz-el-mill-s {
     font-size: 0.75em;
     line-height: 2;
+    line-height: calc(var(--line-height) /  0.75);
   }
   .-fz-el-norm-s {
     font-size: 1em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-kilo-s {
     font-size: 1.5em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-mega-s {
     font-size: 2em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-giga-s {
     font-size: 3em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-tera-s {
     font-size: 4em;
     line-height: 1.125;
+    line-height: calc(var(--line-height) /  1.33333333);
   }
   .-fz-el-peta-s {
     font-size: 6em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
 }
 @media print {
   .-fz-el-micr-p {
     font-size: 0.5em;
     line-height: 3;
+    line-height: calc(var(--line-height) /  0.5);
   }
   .-fz-el-mill-p {
     font-size: 0.75em;
     line-height: 2;
+    line-height: calc(var(--line-height) /  0.75);
   }
   .-fz-el-norm-p {
     font-size: 1em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-kilo-p {
     font-size: 1.5em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-mega-p {
     font-size: 2em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-giga-p {
     font-size: 3em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-tera-p {
     font-size: 4em;
     line-height: 1.125;
+    line-height: calc(var(--line-height) /  1.33333333);
   }
   .-fz-el-peta-p {
     font-size: 6em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
 }
 @media screen and (min-width: 30em) {
   .-fz-el-micr-sK {
     font-size: 0.5em;
     line-height: 3;
+    line-height: calc(var(--line-height) /  0.5);
   }
   .-fz-el-mill-sK {
     font-size: 0.75em;
     line-height: 2;
+    line-height: calc(var(--line-height) /  0.75);
   }
   .-fz-el-norm-sK {
     font-size: 1em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-kilo-sK {
     font-size: 1.5em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-mega-sK {
     font-size: 2em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-giga-sK {
     font-size: 3em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-tera-sK {
     font-size: 4em;
     line-height: 1.125;
+    line-height: calc(var(--line-height) /  1.33333333);
   }
   .-fz-el-peta-sK {
     font-size: 6em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
 }
 @media screen and (min-width: 45em) {
   .-fz-el-micr-sM {
     font-size: 0.5em;
     line-height: 3;
+    line-height: calc(var(--line-height) /  0.5);
   }
   .-fz-el-mill-sM {
     font-size: 0.75em;
     line-height: 2;
+    line-height: calc(var(--line-height) /  0.75);
   }
   .-fz-el-norm-sM {
     font-size: 1em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-kilo-sM {
     font-size: 1.5em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-mega-sM {
     font-size: 2em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-giga-sM {
     font-size: 3em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-tera-sM {
     font-size: 4em;
     line-height: 1.125;
+    line-height: calc(var(--line-height) /  1.33333333);
   }
   .-fz-el-peta-sM {
     font-size: 6em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
 }
 @media screen and (min-width: 60em) {
   .-fz-el-micr-sG {
     font-size: 0.5em;
     line-height: 3;
+    line-height: calc(var(--line-height) /  0.5);
   }
   .-fz-el-mill-sG {
     font-size: 0.75em;
     line-height: 2;
+    line-height: calc(var(--line-height) /  0.75);
   }
   .-fz-el-norm-sG {
     font-size: 1em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-kilo-sG {
     font-size: 1.5em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-mega-sG {
     font-size: 2em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-giga-sG {
     font-size: 3em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-tera-sG {
     font-size: 4em;
     line-height: 1.125;
+    line-height: calc(var(--line-height) /  1.33333333);
   }
   .-fz-el-peta-sG {
     font-size: 6em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
 }
 @media screen and (min-width: 75em) {
   .-fz-el-micr-sT {
     font-size: 0.5em;
     line-height: 3;
+    line-height: calc(var(--line-height) /  0.5);
   }
   .-fz-el-mill-sT {
     font-size: 0.75em;
     line-height: 2;
+    line-height: calc(var(--line-height) /  0.75);
   }
   .-fz-el-norm-sT {
     font-size: 1em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-kilo-sT {
     font-size: 1.5em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-mega-sT {
     font-size: 2em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-giga-sT {
     font-size: 3em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-tera-sT {
     font-size: 4em;
     line-height: 1.125;
+    line-height: calc(var(--line-height) /  1.33333333);
   }
   .-fz-el-peta-sT {
     font-size: 6em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
 }
 @media screen and (min-width: 90em) {
   .-fz-el-micr-sP {
     font-size: 0.5em;
     line-height: 3;
+    line-height: calc(var(--line-height) /  0.5);
   }
   .-fz-el-mill-sP {
     font-size: 0.75em;
     line-height: 2;
+    line-height: calc(var(--line-height) /  0.75);
   }
   .-fz-el-norm-sP {
     font-size: 1em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-kilo-sP {
     font-size: 1.5em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-mega-sP {
     font-size: 2em;
     line-height: 1.5;
+    line-height: calc(var(--line-height) /  1);
   }
   .-fz-el-giga-sP {
     font-size: 3em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
   .-fz-el-tera-sP {
     font-size: 4em;
     line-height: 1.125;
+    line-height: calc(var(--line-height) /  1.33333333);
   }
   .-fz-el-peta-sP {
     font-size: 6em;
     line-height: 1;
+    line-height: calc(var(--line-height) /  1.5);
   }
 }
 
