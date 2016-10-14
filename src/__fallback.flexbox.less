@@ -202,11 +202,18 @@
 //       the flex item is set to its content width, but
 //       will either grow or shrink, based on
 //       whether there is extra or not enough space in the container.
+//     - `flex: 0;` (unitless zero) == `flex: 0 1 0%;`
+//       The flex item starts at 0% or as close to it as possible.
+//       It will not grow into extra space, if any.
+//       If all items have `flex:0;`, they will be sized as small as possible.
 //     - `flex: 1;` == `flex: 1 1 0%;`
 //       The flex item starts at 0% but grows or shrinks as necessary
 //       with the other items to fill or reduce the extra space.
 //       If all items have `flex: 1` then they will be equal.
 //       (If there are 4 items then they will all be 25%.)
+//     - `flex: 0%;` (zero with unit) == `flex: 1 1 0%;`
+//       Equivalent to `flex: 1;`.
+//       Same as specifying `flex: 0px;`, `flex: 0rem;`, `flex: 0em;`, or any length 0 with unit.
 //     - `flex: 50%;` == `flex: 1 1 50%;`
 //       The flex item starts at 50% but grows or shrinks as necessary.
 //
