@@ -361,17 +361,29 @@ br {
 @p-color_gray_fb: #c0c0c0; // HACK fallback
 @p-color_gray: fadeout(#000, 75%);
 
-// consistent borders for all
+fieldset,
+textarea {
+  display: block;
+  line-height: inherit;
+  box-sizing: border-box;
+  .border-vert(all; 1px);
+}
+input,
+select,
+button {
+  display: inline-block;
+  border-width: 1px;
+}
 fieldset,
 input,
 select,
 textarea,
 button {
-  .border-vert(all; 1px);
   border-style: solid;
   border-color: @p-color_gray_fb; // HACK fallback
   border-color: @p-color_gray;
 }
+
 fieldset {
   padding: 0 1rem;
   margin-left: 0; margin-right: 0; // undo normalize
