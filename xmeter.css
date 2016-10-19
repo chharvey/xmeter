@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.2.0
+    Version: 5.2.1
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -554,7 +554,9 @@ template {
  * Clearfix.......................creates a line break and clears floats
  *
  * ATOMS
- * atom...........................single-use classes
+ * margin-bottom..................
+ * padding-top....................
+ * font-size......................
  */
 /*################################*\
     xmeter  |  _base.less
@@ -605,6 +607,27 @@ fieldset {
 }
 h1 {
   padding-top: 1.5rem;
+  padding-top: var(--vru);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+figure,
+blockquote,
+ol,
+ul,
+dl,
+table,
+fieldset,
+details {
+  margin-bottom: var(--vru);
+}
+h1 {
   padding-top: var(--vru);
 }
 span,
@@ -874,6 +897,9 @@ img {
   max-width: 100%;
   font-style: italic;
   vertical-align: middle;
+}
+summary {
+  cursor: pointer;
 }
 
 /*################################*\
@@ -1441,638 +1467,646 @@ img {
 }
 
 /*################################*\
-    xmeter  |  _atom.less
+    xmeter  |  _atom.margin-bottom.less
 \*################################*/
 .-mb-1vru {
-  margin-bottom: 1.5rem;
-  margin-bottom: var(--vru);
+  margin-bottom: 1.5rem !important;
+  margin-bottom: var(--vru) !important;
 }
 @media screen {
   .-mb-1vru-s {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
+    margin-bottom: 1.5rem !important;
+    margin-bottom: var(--vru) !important;
   }
 }
 @media print {
   .-mb-1vru-p {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
+    margin-bottom: 1.5rem !important;
+    margin-bottom: var(--vru) !important;
   }
 }
 @media screen and (min-width: 30em) {
   .-mb-1vru-sK {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
+    margin-bottom: 1.5rem !important;
+    margin-bottom: var(--vru) !important;
   }
 }
 @media screen and (min-width: 45em) {
   .-mb-1vru-sM {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
+    margin-bottom: 1.5rem !important;
+    margin-bottom: var(--vru) !important;
   }
 }
 @media screen and (min-width: 60em) {
   .-mb-1vru-sG {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
+    margin-bottom: 1.5rem !important;
+    margin-bottom: var(--vru) !important;
   }
 }
 @media screen and (min-width: 75em) {
   .-mb-1vru-sT {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
+    margin-bottom: 1.5rem !important;
+    margin-bottom: var(--vru) !important;
   }
 }
 @media screen and (min-width: 90em) {
   .-mb-1vru-sP {
-    margin-bottom: 1.5rem;
-    margin-bottom: var(--vru);
+    margin-bottom: 1.5rem !important;
+    margin-bottom: var(--vru) !important;
   }
 }
+
+/*################################*\
+    xmeter  |  _atom.padding-top.less
+\*################################*/
 .-pt-1vru {
-  padding-top: 1.5rem;
-  padding-top: var(--vru);
+  padding-top: 1.5rem !important;
+  padding-top: var(--vru) !important;
 }
 @media screen {
   .-pt-1vru-s {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
+    padding-top: 1.5rem !important;
+    padding-top: var(--vru) !important;
   }
 }
 @media print {
   .-pt-1vru-p {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
+    padding-top: 1.5rem !important;
+    padding-top: var(--vru) !important;
   }
 }
 @media screen and (min-width: 30em) {
   .-pt-1vru-sK {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
+    padding-top: 1.5rem !important;
+    padding-top: var(--vru) !important;
   }
 }
 @media screen and (min-width: 45em) {
   .-pt-1vru-sM {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
+    padding-top: 1.5rem !important;
+    padding-top: var(--vru) !important;
   }
 }
 @media screen and (min-width: 60em) {
   .-pt-1vru-sG {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
+    padding-top: 1.5rem !important;
+    padding-top: var(--vru) !important;
   }
 }
 @media screen and (min-width: 75em) {
   .-pt-1vru-sT {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
+    padding-top: 1.5rem !important;
+    padding-top: var(--vru) !important;
   }
 }
 @media screen and (min-width: 90em) {
   .-pt-1vru-sP {
-    padding-top: 1.5rem;
-    padding-top: var(--vru);
+    padding-top: 1.5rem !important;
+    padding-top: var(--vru) !important;
   }
 }
+
+/*################################*\
+    xmeter  |  _atom.font-size.less
+\*################################*/
 .-fz-micr {
-  font-size: 0.5em;
+  font-size: 0.5em !important;
 }
 .-fz-mill {
-  font-size: 0.75em;
+  font-size: 0.75em !important;
 }
 .-fz-norm {
-  font-size: 1em;
+  font-size: 1em !important;
 }
 .-fz-kilo {
-  font-size: 1.5em;
+  font-size: 1.5em !important;
 }
 .-fz-mega {
-  font-size: 2em;
+  font-size: 2em !important;
 }
 .-fz-giga {
-  font-size: 3em;
+  font-size: 3em !important;
 }
 .-fz-tera {
-  font-size: 4em;
+  font-size: 4em !important;
 }
 .-fz-peta {
-  font-size: 6em;
+  font-size: 6em !important;
+}
+.-fz-el-micr {
+  font-size: 0.5em !important;
+  line-height: 3 !important;
+  line-height: calc(var(--line-height) /  0.5) !important;
+}
+.-fz-el-mill {
+  font-size: 0.75em !important;
+  line-height: 2 !important;
+  line-height: calc(var(--line-height) /  0.75) !important;
+}
+.-fz-el-norm {
+  font-size: 1em !important;
+  line-height: 1.5 !important;
+  line-height: calc(var(--line-height) /  1) !important;
+}
+.-fz-el-kilo {
+  font-size: 1.5em !important;
+  line-height: 1 !important;
+  line-height: calc(var(--line-height) /  1.5) !important;
+}
+.-fz-el-mega {
+  font-size: 2em !important;
+  line-height: 1.5 !important;
+  line-height: calc(var(--line-height) /  1) !important;
+}
+.-fz-el-giga {
+  font-size: 3em !important;
+  line-height: 1 !important;
+  line-height: calc(var(--line-height) /  1.5) !important;
+}
+.-fz-el-tera {
+  font-size: 4em !important;
+  line-height: 1.125 !important;
+  line-height: calc(var(--line-height) /  1.33333333) !important;
+}
+.-fz-el-peta {
+  font-size: 6em !important;
+  line-height: 1 !important;
+  line-height: calc(var(--line-height) /  1.5) !important;
 }
 @media screen {
   .-fz-micr-s {
-    font-size: 0.5em;
+    font-size: 0.5em !important;
   }
   .-fz-mill-s {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
   }
   .-fz-norm-s {
-    font-size: 1em;
+    font-size: 1em !important;
   }
   .-fz-kilo-s {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .-fz-mega-s {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .-fz-giga-s {
-    font-size: 3em;
+    font-size: 3em !important;
   }
   .-fz-tera-s {
-    font-size: 4em;
+    font-size: 4em !important;
   }
   .-fz-peta-s {
-    font-size: 6em;
+    font-size: 6em !important;
   }
 }
 @media print {
   .-fz-micr-p {
-    font-size: 0.5em;
+    font-size: 0.5em !important;
   }
   .-fz-mill-p {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
   }
   .-fz-norm-p {
-    font-size: 1em;
+    font-size: 1em !important;
   }
   .-fz-kilo-p {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .-fz-mega-p {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .-fz-giga-p {
-    font-size: 3em;
+    font-size: 3em !important;
   }
   .-fz-tera-p {
-    font-size: 4em;
+    font-size: 4em !important;
   }
   .-fz-peta-p {
-    font-size: 6em;
+    font-size: 6em !important;
   }
 }
 @media screen and (min-width: 30em) {
   .-fz-micr-sK {
-    font-size: 0.5em;
+    font-size: 0.5em !important;
   }
   .-fz-mill-sK {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
   }
   .-fz-norm-sK {
-    font-size: 1em;
+    font-size: 1em !important;
   }
   .-fz-kilo-sK {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .-fz-mega-sK {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .-fz-giga-sK {
-    font-size: 3em;
+    font-size: 3em !important;
   }
   .-fz-tera-sK {
-    font-size: 4em;
+    font-size: 4em !important;
   }
   .-fz-peta-sK {
-    font-size: 6em;
+    font-size: 6em !important;
   }
 }
 @media screen and (min-width: 45em) {
   .-fz-micr-sM {
-    font-size: 0.5em;
+    font-size: 0.5em !important;
   }
   .-fz-mill-sM {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
   }
   .-fz-norm-sM {
-    font-size: 1em;
+    font-size: 1em !important;
   }
   .-fz-kilo-sM {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .-fz-mega-sM {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .-fz-giga-sM {
-    font-size: 3em;
+    font-size: 3em !important;
   }
   .-fz-tera-sM {
-    font-size: 4em;
+    font-size: 4em !important;
   }
   .-fz-peta-sM {
-    font-size: 6em;
+    font-size: 6em !important;
   }
 }
 @media screen and (min-width: 60em) {
   .-fz-micr-sG {
-    font-size: 0.5em;
+    font-size: 0.5em !important;
   }
   .-fz-mill-sG {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
   }
   .-fz-norm-sG {
-    font-size: 1em;
+    font-size: 1em !important;
   }
   .-fz-kilo-sG {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .-fz-mega-sG {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .-fz-giga-sG {
-    font-size: 3em;
+    font-size: 3em !important;
   }
   .-fz-tera-sG {
-    font-size: 4em;
+    font-size: 4em !important;
   }
   .-fz-peta-sG {
-    font-size: 6em;
+    font-size: 6em !important;
   }
 }
 @media screen and (min-width: 75em) {
   .-fz-micr-sT {
-    font-size: 0.5em;
+    font-size: 0.5em !important;
   }
   .-fz-mill-sT {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
   }
   .-fz-norm-sT {
-    font-size: 1em;
+    font-size: 1em !important;
   }
   .-fz-kilo-sT {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .-fz-mega-sT {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .-fz-giga-sT {
-    font-size: 3em;
+    font-size: 3em !important;
   }
   .-fz-tera-sT {
-    font-size: 4em;
+    font-size: 4em !important;
   }
   .-fz-peta-sT {
-    font-size: 6em;
+    font-size: 6em !important;
   }
 }
 @media screen and (min-width: 90em) {
   .-fz-micr-sP {
-    font-size: 0.5em;
+    font-size: 0.5em !important;
   }
   .-fz-mill-sP {
-    font-size: 0.75em;
+    font-size: 0.75em !important;
   }
   .-fz-norm-sP {
-    font-size: 1em;
+    font-size: 1em !important;
   }
   .-fz-kilo-sP {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .-fz-mega-sP {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .-fz-giga-sP {
-    font-size: 3em;
+    font-size: 3em !important;
   }
   .-fz-tera-sP {
-    font-size: 4em;
+    font-size: 4em !important;
   }
   .-fz-peta-sP {
-    font-size: 6em;
+    font-size: 6em !important;
   }
-}
-.-fz-el-micr {
-  font-size: 0.5em;
-  line-height: 3;
-  line-height: calc(var(--line-height) /  0.5);
-}
-.-fz-el-mill {
-  font-size: 0.75em;
-  line-height: 2;
-  line-height: calc(var(--line-height) /  0.75);
-}
-.-fz-el-norm {
-  font-size: 1em;
-  line-height: 1.5;
-  line-height: calc(var(--line-height) /  1);
-}
-.-fz-el-kilo {
-  font-size: 1.5em;
-  line-height: 1;
-  line-height: calc(var(--line-height) /  1.5);
-}
-.-fz-el-mega {
-  font-size: 2em;
-  line-height: 1.5;
-  line-height: calc(var(--line-height) /  1);
-}
-.-fz-el-giga {
-  font-size: 3em;
-  line-height: 1;
-  line-height: calc(var(--line-height) /  1.5);
-}
-.-fz-el-tera {
-  font-size: 4em;
-  line-height: 1.125;
-  line-height: calc(var(--line-height) /  1.33333333);
-}
-.-fz-el-peta {
-  font-size: 6em;
-  line-height: 1;
-  line-height: calc(var(--line-height) /  1.5);
 }
 @media screen {
   .-fz-el-micr-s {
-    font-size: 0.5em;
-    line-height: 3;
-    line-height: calc(var(--line-height) /  0.5);
+    font-size: 0.5em !important;
+    line-height: 3 !important;
+    line-height: calc(var(--line-height) /  0.5) !important;
   }
   .-fz-el-mill-s {
-    font-size: 0.75em;
-    line-height: 2;
-    line-height: calc(var(--line-height) /  0.75);
+    font-size: 0.75em !important;
+    line-height: 2 !important;
+    line-height: calc(var(--line-height) /  0.75) !important;
   }
   .-fz-el-norm-s {
-    font-size: 1em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-kilo-s {
-    font-size: 1.5em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 1.5em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-mega-s {
-    font-size: 2em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 2em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-giga-s {
-    font-size: 3em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 3em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-tera-s {
-    font-size: 4em;
-    line-height: 1.125;
-    line-height: calc(var(--line-height) /  1.33333333);
+    font-size: 4em !important;
+    line-height: 1.125 !important;
+    line-height: calc(var(--line-height) /  1.33333333) !important;
   }
   .-fz-el-peta-s {
-    font-size: 6em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 6em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
 @media print {
   .-fz-el-micr-p {
-    font-size: 0.5em;
-    line-height: 3;
-    line-height: calc(var(--line-height) /  0.5);
+    font-size: 0.5em !important;
+    line-height: 3 !important;
+    line-height: calc(var(--line-height) /  0.5) !important;
   }
   .-fz-el-mill-p {
-    font-size: 0.75em;
-    line-height: 2;
-    line-height: calc(var(--line-height) /  0.75);
+    font-size: 0.75em !important;
+    line-height: 2 !important;
+    line-height: calc(var(--line-height) /  0.75) !important;
   }
   .-fz-el-norm-p {
-    font-size: 1em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-kilo-p {
-    font-size: 1.5em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 1.5em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-mega-p {
-    font-size: 2em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 2em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-giga-p {
-    font-size: 3em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 3em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-tera-p {
-    font-size: 4em;
-    line-height: 1.125;
-    line-height: calc(var(--line-height) /  1.33333333);
+    font-size: 4em !important;
+    line-height: 1.125 !important;
+    line-height: calc(var(--line-height) /  1.33333333) !important;
   }
   .-fz-el-peta-p {
-    font-size: 6em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 6em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
 @media screen and (min-width: 30em) {
   .-fz-el-micr-sK {
-    font-size: 0.5em;
-    line-height: 3;
-    line-height: calc(var(--line-height) /  0.5);
+    font-size: 0.5em !important;
+    line-height: 3 !important;
+    line-height: calc(var(--line-height) /  0.5) !important;
   }
   .-fz-el-mill-sK {
-    font-size: 0.75em;
-    line-height: 2;
-    line-height: calc(var(--line-height) /  0.75);
+    font-size: 0.75em !important;
+    line-height: 2 !important;
+    line-height: calc(var(--line-height) /  0.75) !important;
   }
   .-fz-el-norm-sK {
-    font-size: 1em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-kilo-sK {
-    font-size: 1.5em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 1.5em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-mega-sK {
-    font-size: 2em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 2em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-giga-sK {
-    font-size: 3em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 3em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-tera-sK {
-    font-size: 4em;
-    line-height: 1.125;
-    line-height: calc(var(--line-height) /  1.33333333);
+    font-size: 4em !important;
+    line-height: 1.125 !important;
+    line-height: calc(var(--line-height) /  1.33333333) !important;
   }
   .-fz-el-peta-sK {
-    font-size: 6em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 6em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
 @media screen and (min-width: 45em) {
   .-fz-el-micr-sM {
-    font-size: 0.5em;
-    line-height: 3;
-    line-height: calc(var(--line-height) /  0.5);
+    font-size: 0.5em !important;
+    line-height: 3 !important;
+    line-height: calc(var(--line-height) /  0.5) !important;
   }
   .-fz-el-mill-sM {
-    font-size: 0.75em;
-    line-height: 2;
-    line-height: calc(var(--line-height) /  0.75);
+    font-size: 0.75em !important;
+    line-height: 2 !important;
+    line-height: calc(var(--line-height) /  0.75) !important;
   }
   .-fz-el-norm-sM {
-    font-size: 1em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-kilo-sM {
-    font-size: 1.5em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 1.5em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-mega-sM {
-    font-size: 2em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 2em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-giga-sM {
-    font-size: 3em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 3em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-tera-sM {
-    font-size: 4em;
-    line-height: 1.125;
-    line-height: calc(var(--line-height) /  1.33333333);
+    font-size: 4em !important;
+    line-height: 1.125 !important;
+    line-height: calc(var(--line-height) /  1.33333333) !important;
   }
   .-fz-el-peta-sM {
-    font-size: 6em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 6em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
 @media screen and (min-width: 60em) {
   .-fz-el-micr-sG {
-    font-size: 0.5em;
-    line-height: 3;
-    line-height: calc(var(--line-height) /  0.5);
+    font-size: 0.5em !important;
+    line-height: 3 !important;
+    line-height: calc(var(--line-height) /  0.5) !important;
   }
   .-fz-el-mill-sG {
-    font-size: 0.75em;
-    line-height: 2;
-    line-height: calc(var(--line-height) /  0.75);
+    font-size: 0.75em !important;
+    line-height: 2 !important;
+    line-height: calc(var(--line-height) /  0.75) !important;
   }
   .-fz-el-norm-sG {
-    font-size: 1em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-kilo-sG {
-    font-size: 1.5em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 1.5em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-mega-sG {
-    font-size: 2em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 2em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-giga-sG {
-    font-size: 3em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 3em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-tera-sG {
-    font-size: 4em;
-    line-height: 1.125;
-    line-height: calc(var(--line-height) /  1.33333333);
+    font-size: 4em !important;
+    line-height: 1.125 !important;
+    line-height: calc(var(--line-height) /  1.33333333) !important;
   }
   .-fz-el-peta-sG {
-    font-size: 6em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 6em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
 @media screen and (min-width: 75em) {
   .-fz-el-micr-sT {
-    font-size: 0.5em;
-    line-height: 3;
-    line-height: calc(var(--line-height) /  0.5);
+    font-size: 0.5em !important;
+    line-height: 3 !important;
+    line-height: calc(var(--line-height) /  0.5) !important;
   }
   .-fz-el-mill-sT {
-    font-size: 0.75em;
-    line-height: 2;
-    line-height: calc(var(--line-height) /  0.75);
+    font-size: 0.75em !important;
+    line-height: 2 !important;
+    line-height: calc(var(--line-height) /  0.75) !important;
   }
   .-fz-el-norm-sT {
-    font-size: 1em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-kilo-sT {
-    font-size: 1.5em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 1.5em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-mega-sT {
-    font-size: 2em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 2em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-giga-sT {
-    font-size: 3em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 3em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-tera-sT {
-    font-size: 4em;
-    line-height: 1.125;
-    line-height: calc(var(--line-height) /  1.33333333);
+    font-size: 4em !important;
+    line-height: 1.125 !important;
+    line-height: calc(var(--line-height) /  1.33333333) !important;
   }
   .-fz-el-peta-sT {
-    font-size: 6em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 6em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
 @media screen and (min-width: 90em) {
   .-fz-el-micr-sP {
-    font-size: 0.5em;
-    line-height: 3;
-    line-height: calc(var(--line-height) /  0.5);
+    font-size: 0.5em !important;
+    line-height: 3 !important;
+    line-height: calc(var(--line-height) /  0.5) !important;
   }
   .-fz-el-mill-sP {
-    font-size: 0.75em;
-    line-height: 2;
-    line-height: calc(var(--line-height) /  0.75);
+    font-size: 0.75em !important;
+    line-height: 2 !important;
+    line-height: calc(var(--line-height) /  0.75) !important;
   }
   .-fz-el-norm-sP {
-    font-size: 1em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 1em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-kilo-sP {
-    font-size: 1.5em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 1.5em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-mega-sP {
-    font-size: 2em;
-    line-height: 1.5;
-    line-height: calc(var(--line-height) /  1);
+    font-size: 2em !important;
+    line-height: 1.5 !important;
+    line-height: calc(var(--line-height) /  1) !important;
   }
   .-fz-el-giga-sP {
-    font-size: 3em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 3em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
   .-fz-el-tera-sP {
-    font-size: 4em;
-    line-height: 1.125;
-    line-height: calc(var(--line-height) /  1.33333333);
+    font-size: 4em !important;
+    line-height: 1.125 !important;
+    line-height: calc(var(--line-height) /  1.33333333) !important;
   }
   .-fz-el-peta-sP {
-    font-size: 6em;
-    line-height: 1;
-    line-height: calc(var(--line-height) /  1.5);
+    font-size: 6em !important;
+    line-height: 1 !important;
+    line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
 
