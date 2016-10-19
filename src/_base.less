@@ -56,6 +56,17 @@ html {
 
 // Vertical spacing between typographical blocks
 .vertspacing(); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
+h1, h2, h3, h4, h5, h6,
+p, pre, figure, blockquote,
+ol, ul, dl,
+table,
+fieldset,
+details {
+  margin-bottom: var(--vru);
+}
+h1 {
+  padding-top: var(--vru);
+}
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
@@ -415,4 +426,7 @@ img {
 //++++++++++++++++++++++++++++++++//
 //    # INTERACTIVE
 //++++++++++++++++++++++++++++++++//
+summary {
+  cursor: pointer;
+}
 //++++ end # INTERACTIVE ++++//
