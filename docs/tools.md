@@ -44,7 +44,22 @@ Watch out for changes.
 
 ### The Flexbox Tools
 ```less
-.content { --status: 'coming soon...'; }
+.your-flex-container {
+  .flexbox(); // display: flex;
+  .flex-direction(!row | column | row-reverse | column-reverse);
+  .flex-wrap(!nowrap | wrap | wrap-reverse);
+  .flex-justify-content(!flex-start | flex-end | center | space-between | space-around);
+  .flex-align-content(!stretch | flex-start | flex-end | center | space-between | space-around);
+  .flex-align-items(!stretch | flex-start | flex-end | center | baseline);
+}
+.your-flex-item {
+  .flex-align-self(!auto | strecth | flex-start | flex-end | center | baseline);
+  .flex-order(<integer>?:0);
+  .flex(none | [ <number>:0 <number>?:1 || <length>:auto ]);
+  .flex-grow(<number>?:0);
+  .flex-shrink(<number>?:1);
+  .flex-basis(!auto | content | <length>);
+}
 ```
 
 ### transform
