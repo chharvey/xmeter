@@ -9,7 +9,7 @@ module.exports = (function () {
   // STATIC MEMBERS
   /**
    * The style guide site for this project.
-   * @type {StyleGuide}
+   * @type {Page}
    */
   Xmeter.DOCS = (function () {
     var docs = new Page({ name: 'Xmeter', url: '/docs/' })
