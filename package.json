@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "5.2.1",
+  "version": "5.3.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {},
@@ -8,20 +8,19 @@
     "clean-css": "^3.4.17",
     "jade": "^1.11.0",
     "less": "^2.7.1",
-    "lessc-each": "^1.1.0",
     "normalize.css": "^5.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "sitepage": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jade:docs": "pug -O docs/models/options.js docs/{index,base,obj,help,atom}.jade",
+    "jade:docs": "pug -O docs/_models/options.js docs/{index,base,obj,help,atom}.jade",
     "jade:all": "jade index.jade  &&  npm run jade:docs",
     "lessc:docs": "lessc docs/styles/docs.less docs/styles/docs.css",
-    "lessc:xmeter": "lessc-each src/ build/  &&  lessc xmeter.less xmeter.css",
+    "lessc:xmeter": "lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:docs  &&  npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
-    "unbuild": "rm docs/{index,base,obj,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css  &&  rm -r build/",
+    "unbuild": "rm docs/{index,base,obj,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css",
     "build": "npm run jade:all  &&  npm run lessc:all  &&  npm run minify"
   },
   "repository": {

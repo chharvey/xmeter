@@ -47,7 +47,7 @@ module.exports = (function () {
           .description('Somewhat explicit classes used for enhancing default styles.')
           .add(new Page({ name: 'Block'            , url: 'help.html#block' }))
           .add(new Page({ name: 'Inline'           , url: 'help.html#inline' }))
-          .add(new Page({ name: 'Clearfix'         , url: 'help.html#cleafix' }))
+          .add(new Page({ name: 'Clearfix'         , url: 'help.html#clearfix' }))
         )
         .add(new Page({ name: 'Atoms', url: 'atom.html' })
           .description('Very specific classes used for creating anomalies or fixing broken styles.')

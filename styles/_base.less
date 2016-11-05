@@ -1,7 +1,4 @@
 
-///////////////////////////////////////////////////////////////////////////////
-// CHANGED: DEPRECATED. see `/styles/`
-///////////////////////////////////////////////////////////////////////////////
 /*################################*\
     xmeter  |  _base.less
 \*################################*/
@@ -38,6 +35,8 @@
   &::after {
     box-sizing: border-box;
     border: 0 solid; // reset browser default border
+    content: ' '; // fallback
+    content: ''; // fallback
     content: none;
     @media print {
       background: transparent !important;
@@ -52,7 +51,7 @@ html {
   --vru: calc(~'var(--line-height) * 1rem');
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
-  font-size: 16px; // HACK fixes Chrome inheritance bug
+  font-size: @g-1rem; // HACK fixes Chrome inheritance bug
   line-height: @g-line_height; // HACK fallback
   line-height: var(--line-height);
 }
@@ -317,7 +316,7 @@ br {
     font-style: italic;
   }
   q {
-    .quotes-double(); // HACK fallback for `initial` (IE)
+    .quotes-double(); // fallback for `initial`
     quotes: initial;
   }
   cite {
@@ -359,6 +358,7 @@ br {
 //++++++++++++++++++++++++++++++++//
 //    # FORMS
 //++++++++++++++++++++++++++++++++//
+@p-color_gray_fb: #c0c0c0; // HACK fallback
 @p-color_gray: fadeout(#000, 75%);
 
 // consistent borders for all
@@ -369,6 +369,7 @@ textarea,
 button {
   .border-vert(all; 1px);
   border-style: solid;
+  border-color: @p-color_gray_fb; // HACK fallback
   border-color: @p-color_gray;
 }
 fieldset {
@@ -399,6 +400,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
+  background-color: @p-color_gray_fb; // HACK fallback
   background-color: @p-color_gray;
 }
 
