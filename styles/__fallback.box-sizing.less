@@ -1,0 +1,24 @@
+
+/*################################*\
+    xmeter  |  __fallback.box-sizing.less
+\*################################*/
+
+
+// Alters the CSS box model used to calculate width and height.
+// See [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) for more info.
+//
+// @box - the way the box is sized
+//      - content-box - (default) `width` and `height` properties measured include only the content
+//      - border-box  - `width` and `height` properties measured include padding and border as well as content
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2014-10-21
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. use plain CSS `box-sizing` instead
+///////////////////////////////////////////////////////////////////////////////
+.box-sizing(@box: content-box) {
+  -webkit-box-sizing: @box;
+     -moz-box-sizing: @box;
+          box-sizing: @box;
+}

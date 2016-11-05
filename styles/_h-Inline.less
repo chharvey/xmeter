@@ -1,0 +1,30 @@
+
+/*################################*\
+    xmeter  |  _h-Inline.less
+\*################################*/
+
+
+// Displays an element in line,
+// with a line-height of 0 to maintain vertical rhythm.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-06-07
+.h-Inline {
+  display: inline;
+  line-height: 0;
+}
+
+@media screen                       { .h-Inline-s  { .h-Inline; } }
+@media print                        { .h-Inline-p  { .h-Inline; } }
+@media screen and (min-width: 30em) { .h-Inline-sK { .h-Inline; } }
+@media screen and (min-width: 45em) { .h-Inline-sM { .h-Inline; } }
+@media screen and (min-width: 60em) { .h-Inline-sG { .h-Inline; } }
+@media screen and (min-width: 75em) { .h-Inline-sT { .h-Inline; } }
+@media screen and (min-width: 90em) { .h-Inline-sP { .h-Inline; } }
+@media not all and (min-width: 30em) { .h-Inline-nsK { .h-Inline; } }
+@media not all and (min-width: 45em) { .h-Inline-nsM { .h-Inline; } }
+@media not all and (min-width: 60em) { .h-Inline-nsG { .h-Inline; } }
+@media not all and (min-width: 75em) { .h-Inline-nsT { .h-Inline; } }
+@media not all and (min-width: 90em) { .h-Inline-nsP { .h-Inline; } }
