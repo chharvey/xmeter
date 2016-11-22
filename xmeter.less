@@ -1,7 +1,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.3.0
+    Version: 5.3.1
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -9,7 +9,7 @@
 \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-@import (inline) url('src/reset.css');
+@import (inline) url('styles/reset.css');
 @import (inline) url('node_modules/normalize.css/normalize.css');
 
 
@@ -38,21 +38,21 @@
  * Clearfix.......................creates a line break and clears floats
  *
  * ATOMS
- * margin-bottom..................
- * padding-top....................
- * font-size......................
+ * mb.............................margin-bottom
+ * pt.............................padding-top
+ * fz.............................font-size
  */
 
 ///////////////////////////////////////////////////////////////////////////////
 
 
-@import (inline) url('build/_base.css');
-@import (inline) url('build/_o-List.css');
-@import (inline) url('build/_o-Flex.css');
-@import (inline) url('build/_o-Grid.css');
-@import (inline) url('build/_h-Block.css');
-@import (inline) url('build/_h-Inline.css');
-@import (inline) url('build/_h-Clearfix.css');
-@import (inline) url('build/_atom.margin-bottom.css');
-@import (inline) url('build/_atom.padding-top.css');
-@import (inline) url('build/_atom.font-size.css');
+@import url('styles/_base.less');
+@import url('styles/_o-List.less');
+@import url('styles/_o-Flex.less');
+@import url('styles/_o-Grid.less');
+@import url('styles/_h-Block.less');
+@import url('styles/_h-Inline.less');
+@import url('styles/_h-Clearfix.less');
+@import url('styles/_-mb.less');
+@import url('styles/_-pt.less');
+@import url('styles/_-fz.less');
