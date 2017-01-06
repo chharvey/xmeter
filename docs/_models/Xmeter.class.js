@@ -17,11 +17,12 @@ module.exports = (function () {
    * @type {Page}
    */
   Xmeter.DOCS = (function () {
-    var docs = new Page({ name: 'Xmeter', url: '/docs/' })
+    return new Page({ name: 'Xmeter Style Guide', url: '/docs/' })
       .title('Xmeter Style Guide')
       .description('A demo of Xmeter styles.')
-    docs
-      .add(new Page({ name: docs.name(), url: 'index.html' }).description(docs.description()))
+      .add(new Page({ name: 'Home', url: 'index.html' })
+        .description('Xmeter Homepage')
+      )
       .add(new Page({ name: 'Base Typography', url: 'base.html' })
         .description('Bare, unstyled HTML elements. No classes.')
         .add(new Page({ name: 'Grouping Elements', url: 'base.html#grouping-elements' })
@@ -57,7 +58,6 @@ module.exports = (function () {
         .add(new Page({ name: 'padding-top'      , url: 'atom.html#padding-top' }))
         .add(new Page({ name: 'font-size'        , url: 'atom.html#font-size' }))
       )
-    return docs
   })()
 
   return Xmeter
