@@ -1,0 +1,74 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    xmeter
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*================================*\
+    docs.less
+\*================================*/
+.docs-body {
+  background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
+  background-position: left top;
+  background-size: 1px 24px;
+  background-repeat: repeat;
+}
+.docs-main {
+  margin: 0 1rem var(--vru);
+}
+.docs-pre,
+.docs-code {
+  background-color: #333;
+  color: #ccc;
+  border-radius: 0.25rem;
+}
+.docs-pre u,
+.docs-code u {
+  color: #6c6;
+}
+.docs-pre strong,
+.docs-code strong {
+  color: #eee;
+}
+.docs-pre,
+.docs-figure {
+  padding: calc(0.5 * var(--vru)) 0.5rem;
+}
+.docs-code {
+  padding: 2px 4px;
+}
+.docs-figure {
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-width: 1px;
+  margin-top: -2px;
+  border-style: solid;
+  border-color: #ddd;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  overflow: auto;
+}
+.docs-figure > figcaption {
+  font-style: italic;
+}
+.docs-form {
+  background: #fff;
+}
+.docs-_fragid {
+  display: inline;
+  line-height: 0;
+  margin-left: 1rem;
+  font-weight: 100;
+}
+.docs-_fragid::before {
+  content: '';
+}
+h1:hover > .docs-_fragid::before,
+h2:hover > .docs-_fragid::before,
+h3:hover > .docs-_fragid::before,
+h4:hover > .docs-_fragid::before,
+h5:hover > .docs-_fragid::before,
+h6:hover > .docs-_fragid::before {
+  content: '\00a7';
+}
+.docs-_fragid:focus::before {
+  content: '\00a7';
+}
