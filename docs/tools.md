@@ -104,7 +104,7 @@ Watch out for changes.
 ```less
 @import (reference) url('/node_modules/xmeter/src/__fallback.filter.less');
 .your-class {
-  .column-width([!none | <filter-function-list>]?);
+  .filter([!none | <filter-function-list>]?);
 }
 ```
 
@@ -169,7 +169,7 @@ Watch out for changes.
 
 ### sprite
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.delims.less');
+@import (reference) url('/node_modules/xmeter/src/__tool.sprite.less');
 .your-class {
   .sprite([horizontal | vertical]; <integer>; <length>; <length>);
 }

@@ -15,19 +15,10 @@ html(lang="en")
               = ': ' + item.description()
             if item.findAll().length && depth > 0
               +doctoc({pages: item.findAll(), classes: (classes.sub || {}), depth: depth-1})
-  mixin newSection(hn, page)
-    -
-      var text = page.name()
-      var id = page.url().split('#')[1]
+  mixin newSection(n, page)
+    - var id = page.url().split('#')[1]
     section(id=id)
-      if hn === 1
-        h1 #{text} #[a.docs-_fragid(href='#' + id)]
-      else if hn === 2
-        h2 #{text} #[a.docs-_fragid(href='#' + id)]
-      else if hn === 3
-        h3 #{text} #[a.docs-_fragid(href='#' + id)]
-      else
-        p #{text}
+      | <h#{n}>#{page.name()} <a class="docs-_fragid" href="##{id}" aria-label="permalink"></a></h#{n}>
       block
   block vars
   head
