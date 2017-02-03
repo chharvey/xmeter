@@ -16,8 +16,7 @@ module.exports = (function () {
    * The style guide site for this project.
    * @type {Page}
    */
-  Xmeter.DOCS = (function () {
-    return new Page({ name: 'Xmeter Style Guide', url: '/docs/' })
+  Xmeter.DOCS = new Page({ name: 'Xmeter Style Guide', url: '/docs/' })
       .title('Xmeter Style Guide')
       .description('A demo of Xmeter styles.')
       .add(new Page({ name: 'Home', url: 'index.html' })
@@ -59,7 +58,6 @@ module.exports = (function () {
         .add(new Page({ name: 'padding-top'      , url: 'atom.html#padding-top' }))
         .add(new Page({ name: 'font-size'        , url: 'atom.html#font-size' }))
       )
-  })()
 
   return Xmeter
 })()
