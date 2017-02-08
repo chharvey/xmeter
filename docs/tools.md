@@ -9,8 +9,8 @@ by encapsulating reusable sets of property declarations.
 browser vendor prefixes for CSS properties and values,
 whereas [Tools](#tools) combine properties commonly used together.
 
-WARNING: Syntax shown in code below has not been completely resolved.
-Watch out for changes.
+**WARNING: Syntax shown in code below has not been completely resolved.
+Watch out for changes.**
 
 ## Table of Contents
 
