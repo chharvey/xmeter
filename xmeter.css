@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.3.0
+    Version: 5.4.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -554,9 +554,9 @@ template {
  * Clearfix.......................creates a line break and clears floats
  *
  * ATOMS
- * margin-bottom..................
- * padding-top....................
- * font-size......................
+ * mb.............................margin-bottom
+ * pt.............................padding-top
+ * fz.............................font-size
  */
 /*################################*\
     xmeter  |  _base.less
@@ -583,7 +583,6 @@ html {
   --line-height: 1.5;
   --vru: calc(var(--line-height) * 1rem);
   font-size: 100%;
-  font-size: 16px;
   line-height: 1.5;
   line-height: var(--line-height);
 }
@@ -901,7 +900,6 @@ img {
 summary {
   cursor: pointer;
 }
-
 /*################################*\
     xmeter  |  _o-List.less
 \*################################*/
@@ -981,7 +979,6 @@ summary {
     list-style: none;
   }
 }
-
 /*################################*\
     xmeter  |  _o-Flex.less
 \*################################*/
@@ -1269,7 +1266,6 @@ summary {
     flex: auto;
   }
 }
-
 /*################################*\
     xmeter  |  _o-Grid.less
 \*################################*/
@@ -1557,7 +1553,6 @@ summary {
     flex: 100%;
   }
 }
-
 /*################################*\
     xmeter  |  _h-Block.less
 \*################################*/
@@ -1637,7 +1632,6 @@ summary {
     line-height: inherit;
   }
 }
-
 /*################################*\
     xmeter  |  _h-Inline.less
 \*################################*/
@@ -1717,7 +1711,6 @@ summary {
     line-height: 0;
   }
 }
-
 /*################################*\
     xmeter  |  _h-Clearfix.less
 \*################################*/
@@ -1810,9 +1803,113 @@ summary {
     clear: both;
   }
 }
-
 /*################################*\
-    xmeter  |  _atom.margin-bottom.less
+    xmeter  |  _h-Hidden.less
+\*################################*/
+.h-Hidden {
+  left: -999999px;
+}
+.h-Hidden:not(:focus) {
+  position: absolute;
+}
+@media screen {
+  .h-Hidden-s {
+    left: -999999px;
+  }
+  .h-Hidden-s:not(:focus) {
+    position: absolute;
+  }
+}
+@media print {
+  .h-Hidden-p {
+    left: -999999px;
+  }
+  .h-Hidden-p:not(:focus) {
+    position: absolute;
+  }
+}
+@media screen and (min-width: 30em) {
+  .h-Hidden-sK {
+    left: -999999px;
+  }
+  .h-Hidden-sK:not(:focus) {
+    position: absolute;
+  }
+}
+@media screen and (min-width: 45em) {
+  .h-Hidden-sM {
+    left: -999999px;
+  }
+  .h-Hidden-sM:not(:focus) {
+    position: absolute;
+  }
+}
+@media screen and (min-width: 60em) {
+  .h-Hidden-sG {
+    left: -999999px;
+  }
+  .h-Hidden-sG:not(:focus) {
+    position: absolute;
+  }
+}
+@media screen and (min-width: 75em) {
+  .h-Hidden-sT {
+    left: -999999px;
+  }
+  .h-Hidden-sT:not(:focus) {
+    position: absolute;
+  }
+}
+@media screen and (min-width: 90em) {
+  .h-Hidden-sP {
+    left: -999999px;
+  }
+  .h-Hidden-sP:not(:focus) {
+    position: absolute;
+  }
+}
+@media not all and (min-width: 30em) {
+  .h-Hidden-nsK {
+    left: -999999px;
+  }
+  .h-Hidden-nsK:not(:focus) {
+    position: absolute;
+  }
+}
+@media not all and (min-width: 45em) {
+  .h-Hidden-nsM {
+    left: -999999px;
+  }
+  .h-Hidden-nsM:not(:focus) {
+    position: absolute;
+  }
+}
+@media not all and (min-width: 60em) {
+  .h-Hidden-nsG {
+    left: -999999px;
+  }
+  .h-Hidden-nsG:not(:focus) {
+    position: absolute;
+  }
+}
+@media not all and (min-width: 75em) {
+  .h-Hidden-nsT {
+    left: -999999px;
+  }
+  .h-Hidden-nsT:not(:focus) {
+    position: absolute;
+  }
+}
+@media not all and (min-width: 90em) {
+  .h-Hidden-nsP {
+    left: -999999px;
+  }
+  .h-Hidden-nsP:not(:focus) {
+    position: absolute;
+  }
+}
+/*################################*\
+    xmeter  |  _-mb.less
 \*################################*/
 .-mb-1vru {
   margin-bottom: 1.5rem !important;
@@ -1890,9 +1987,8 @@ summary {
     margin-bottom: var(--vru) !important;
   }
 }
-
 /*################################*\
-    xmeter  |  _atom.padding-top.less
+    xmeter  |  _-pt.less
 \*################################*/
 .-pt-1vru {
   padding-top: 1.5rem !important;
@@ -1970,9 +2066,8 @@ summary {
     padding-top: var(--vru) !important;
   }
 }
-
 /*################################*\
-    xmeter  |  _atom.font-size.less
+    xmeter  |  _-fz.less
 \*################################*/
 .-fz-micr {
   font-size: 0.5em !important;
@@ -2854,4 +2949,3 @@ summary {
     line-height: calc(var(--line-height) /  1.5) !important;
   }
 }
-

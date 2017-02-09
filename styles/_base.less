@@ -51,7 +51,6 @@ html {
   --vru: calc(~'var(--line-height) * 1rem');
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
-  font-size: @g-1rem; // HACK fixes Chrome inheritance bug
   line-height: @g-line_height; // HACK fallback
   line-height: var(--line-height);
 }
@@ -361,6 +360,9 @@ br {
 @p-color_gray_fb: #c0c0c0; // HACK fallback
 @p-color_gray: fadeout(#000, 75%);
 
+label {
+  cursor: pointer;
+}
 // consistent borders for all
 fieldset,
 input,
