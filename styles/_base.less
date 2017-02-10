@@ -72,10 +72,14 @@ h1 {
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
 // Also, inline elements should not affect vertical rhythm, thus line-heights are zero.
+// (The `display` property of these elements should automatically
+// have a value of `inline` (do not set manually), either by browser default
+// or by CSS **initial value**.)
 span, br,
 em, strong, i, mark, u, small, s,
 dfn, b, abbr, var, q, cite, sup, sub,
-data, time, code, kbd, samp {
+data, time, code, kbd, samp,
+label {
   line-height: 0;
 }
 
