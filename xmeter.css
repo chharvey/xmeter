@@ -650,7 +650,8 @@ data,
 time,
 code,
 kbd,
-samp {
+samp,
+label {
   line-height: 0;
 }
 a,
