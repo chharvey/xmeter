@@ -41,6 +41,7 @@ Some are *fallbacks*, starting with `__fallback`, which are simply mixins that
 include properties supported by different browser vendors.
 Others are *tools*, starting with `__tool`, which group similar properties
 to create one functional styling unit.
+(Read `/docs/tools.md` for details and usage.)
 The settings file, `__settings.less`, contains all global variables.
 
 If you want to use a particular tool in your stylesheet, you will have to
@@ -73,8 +74,7 @@ To use the Xmeter global variables, import the `__settings` stylesheet.
 
 Files in the `src/` folder not starting with `__`
 provide actual styles for actual elements. Also unlike those partials,
-**these stylesheets are *not* meant to be cherrypicked**. They are compiled
-separately<sup>&lowast;</sup> and
+**these stylesheets are *not* meant to be cherrypicked**. They are
 concatenated together in the main file `xmeter.css`. If you’re developing a
 stylesheet that you want built off of Xmeter, include
 ```less
@@ -91,15 +91,11 @@ in the `<head>` of your document.
 Don’t like Xmeter’s default styles but still want to use the tools?
 That’s okay! Just don’t import or link the css file.
 
-<i><sup>&lowast;</sup>The reason the stylesheets are compiled separately is to increase
-encapsulation: private variables and mixins can be defined within the file without
-affecting other files.</i>
-
 In addition to base styles are classes for Objects (`src/_o-*.less`) and Helpers (`src/_h-*.less`),
 for aiding in a consistent, easy-to-use, vertical rhythm system.
-These classes are meant to be directly injected into elements’ HTML `[class]` attribute on your site.
-However you may, if you wish, `@extend` or include (mix-in) them into your
-codebase—though this is *not recommended*.
+These classes are meant to be directly injected into elements’ HTML `[class]` attribute on your site,
+but you may, if you wish, `@extend` or include (mix-in) them into your
+codebase.
 
 ### Deployment
 
@@ -137,14 +133,14 @@ Features of this stylesheet include the following.
 
 - Vertical rhythm &mdash; every line on the page is exactly the same height
   (dubbed a “vertical rhythm unit” or “vru”) regardless of font size, and
-  typographical elements (headings, paragraphs, figures, blockquotes, lists,
+  typographical block elements (headings, paragraphs, figures, blockquotes, lists,
   tables, etc.) are separated by integer multiples of that height.
 - The following convention is used to preserve vertical rhythm:
   - Bottom margin is added to an element in order to push subsequent elements down the page.
   - Top padding is added to an element to push *itself* down the page.
   - Negative top margin is added to an element to pull it up the page.
 - Font-size of `<html>` is set to `100%` to accommodate for user agent settings.
-- Units for font-size on **modules** (not explicitly defined in this project)
+- Units for font-size on modules
   should be set in `rem`s, so that their vertical typography remains the same
   regardless of where that module is placed (style does not depend on location).
   (`<html>` is considered a module.)
