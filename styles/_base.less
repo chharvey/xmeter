@@ -359,7 +359,6 @@ br {
 //++++++++++++++++++++++++++++++++//
 //    # FORMS
 //++++++++++++++++++++++++++++++++//
-@p-color_gray_fb: #c0c0c0; // HACK fallback
 @p-color_gray: fadeout(#000, 75%);
 
 label {
@@ -373,7 +372,6 @@ textarea,
 button {
   .border-vert(all; 1px);
   border-style: solid;
-  border-color: @p-color_gray_fb; // HACK fallback
   border-color: @p-color_gray;
 }
 fieldset {
@@ -404,7 +402,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
-  background-color: @p-color_gray_fb; // HACK fallback
   background-color: @p-color_gray;
 }
 
