@@ -1,0 +1,23 @@
+
+/*################################*\
+    xmeter  |  __fallback.transform.less
+\*################################*/
+
+
+// Applies transformations to an element.
+//
+// ^url
+// : https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+// ^params
+// : @arg - (default: `none`) a list of zero or more space-separated transformation functions
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-05-04
+.transform(@arg: none) {
+  -webkit-transform: @arg;
+     -moz-transform: @arg;
+      -ms-transform: @arg;
+       -o-transform: @arg;
+          transform: @arg;
+}

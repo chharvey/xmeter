@@ -9,7 +9,7 @@ html(lang="en")
     ol(class=classes.listclasses)&attributes(inner ? {} : { role: 'directory' })
       each item in pages
         li(class=classes.itemclasses)
-          a(class=classes.linkclasses href=item.url())= item.name()
+          a(class=classes.linkclasses href=item.url())&attributes((page.url()===item.url()) ? {'aria-current':'page'} : {})= item.name()
           if item.description()
             = ': ' + item.description()
           if item.findAll().length && depth > 0

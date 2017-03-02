@@ -275,8 +275,8 @@ section#forms
           label
             input(type="checkbox")
             | all
-          input(type="checkbox")
-          label applicable
+          input#checkboxid(type="checkbox")
+          label(for="checkboxid") applicable
       figure(class=classname.figure)
         fieldset
           legend radio buttons
@@ -285,8 +285,8 @@ section#forms
           label
             input(type="radio" name="radiogroup1")
             | only
-          input(type="radio" name="radiogroup1")
-          label one
+          input#radioid(type="radio" name="radiogroup1")
+          label(for="radioid") one
       figure(class=classname.figure)
         fieldset
           legend drop-down list (select only one)
@@ -299,8 +299,8 @@ section#forms
             option option 3
           input(list="b" placeholder="select it or type it")
           datalist#b
+            // optgroup not a valid child of datalist
             option option 1
-            //- optgroup not a valid child of datalist
             option option 2
             option option 3
       figure(class=classname.figure)
