@@ -54,12 +54,13 @@ html {
 }
 
 // Vertical spacing between typographical blocks
+// NOTE: `textarea` is inline by default but overriding here: should be block (opinionated)
 .vertspacing(); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
 h1, h2, h3, h4, h5, h6,
 p, pre, figure, blockquote,
 ol, ul, dl,
 table,
-fieldset,
+fieldset, textarea,
 details {
   margin-bottom: var(--vru);
 }
@@ -359,50 +360,77 @@ br {
 //++++++++++++++++++++++++++++++++//
 //    # FORMS
 //++++++++++++++++++++++++++++++++//
-@p-color_gray: fadeout(#000, 75%);
+@p-color_gray: rgba(0,0,0, 0.25);
 
-label {
-  cursor: pointer;
+fieldset {
+  padding: 0 1rem;
+  margin-left: 0; margin-right: 0; // undo Normalize
 }
-// consistent borders for all
-fieldset,
+
+textarea,
+input {
+  padding: 0 0.25rem;
+}
+
+textarea,
 input,
 select,
-textarea,
-button {
+button,
+optgroup {
+  // undo Normalize
+  font-family: inherit;
+}
+
+input,
+button,
+optgroup {
+  // undo Normalize
+  font-size: inherit;
+  line-height: inherit;
+}
+
+fieldset,
+textarea {
   .border-vert(all; 1px);
   border-style: solid;
   border-color: @p-color_gray;
 }
-fieldset {
-  padding: 0 1rem;
-  margin-left: 0; margin-right: 0; // undo normalize
-}
+
 input,
 select,
-textarea,
 button {
-  padding: 0 0.25rem;
-}
-
-// small font size for textual inputs
-input:not([type="button"]):not([type="reset"]):not([type="submit"]),
-textarea {
-  .font-size-el(@g-font_size_mill);
+  border: 1px solid @p-color_gray;
 }
 
 textarea {
+  display: block; // override browser default
   width: 30rem;
-  height: 6 * @g-vru;
+  height: 6 * @g-vru; // HACK fallback
+  height: calc(~'6 * var(--vru)');
+  .font-size-mod(@g-font_size_mill);
   line-height: @g-line_height; // HACK fallback
-  line-height: var(--line-height); // override browser-default (simply looks better)
+  line-height: var(--line-height); // override browser default and Normalize
+}
+
+label {
+  cursor: pointer;
+}
+
+input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+select {
+  font-size: @g-font_size_mill * 1em;
 }
 
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
+  padding: 0.125em 0.25em;
   background-color: @p-color_gray;
+}
+
+select[multiple] > optgroup > option {
+  padding-left: 1rem;
 }
 
 // Override content-box in Normalize (* in base.generic isn’t specific enough)
