@@ -1,12 +1,12 @@
 extends _docs.tpl.jade
 
 block append vars
-  - var page = Xmeter.DOCS.find('obj.html')
+  - var page = Xmeter.DOCS.find('/docs/obj.html')
 
 block append main
-  +newSection(2, Xmeter.DOCS.find('obj.html#list-object'))
+  +newSection(2, Xmeter.DOCS.find('/docs/obj.html#list-object'))
     include _includes/_obj.list-object.jade
-  +newSection(2, Xmeter.DOCS.find('obj.html#flex-object'))
+  +newSection(2, Xmeter.DOCS.find('/docs/obj.html#flex-object'))
     include _includes/_obj.flex-object.jade
-  +newSection(2, Xmeter.DOCS.find('obj.html#grid-object'))
+  +newSection(2, Xmeter.DOCS.find('/docs/obj.html#grid-object'))
     include _includes/_obj.grid-object.jade
