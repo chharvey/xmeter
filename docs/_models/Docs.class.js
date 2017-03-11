@@ -7,7 +7,7 @@ module.exports = (function () {
    * Similar to a utility class.
    * @constructor
    */
-  function Xmeter() {}
+  function Docs() {}
 
   // METHODS
 
@@ -16,7 +16,7 @@ module.exports = (function () {
    * The style guide site for this project.
    * @type {Page}
    */
-  Xmeter.DOCS = new Page({ name: 'Xmeter Style Guide', url: '/docs/' })
+  Docs.DOCS = new Page({ name: 'Xmeter Style Guide', url: '/docs/' })
     .title('Xmeter Style Guide')
     .description('A demo of Xmeter styles.')
     .add(new Page({ name: 'Home', url: '/docs/index.html' })
@@ -59,5 +59,5 @@ module.exports = (function () {
       .add(new Page({ name: 'font-size'        , url: '/docs/atom.html#font-size' }))
     )
 
-  return Xmeter
+  return Docs
 })()
