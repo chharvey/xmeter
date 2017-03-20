@@ -157,11 +157,12 @@
 // : Chris Harvey
 // ^updated
 // : 2015-10-14
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. import __fallback.align-self.less instead.
+///////////////////////////////////////////////////////////////////////////////
+@import (reference) url('__fallback.align-self.less');
 .flex-align-self(@align: auto) {
-  -webkit-align-self: @align;
-     -moz-align-self: @align;
-      -ms-align-self: @align;
-          align-self: @align;
+  .align-self(@align);
 }
 
 // Determines the order in which items appear in the flex container.
