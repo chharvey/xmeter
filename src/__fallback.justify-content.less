@@ -1,0 +1,23 @@
+
+/*################################*\
+    xmeter  |  __fallback.justify-content.less
+\*################################*/
+
+
+
+
+// Defines how space is distributed along the inline/main/row-axis.
+// https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+// https://www.w3.org/TR/css-align-3/
+//
+// ^param
+// : @justify - how content is justified
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-19
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+      -ms-justify-content: @justify;
+          justify-content: @justify;
+}
