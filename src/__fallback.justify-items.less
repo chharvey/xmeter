@@ -1,0 +1,23 @@
+
+/*################################*\
+    xmeter  |  __fallback.justify-items.less
+\*################################*/
+
+
+
+
+// Defines how item contents are aligned along the inline/main/row-axis.
+// https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items
+// https://www.w3.org/TR/css-align-3/
+//
+// ^param
+// : @justify - how items are justified
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-20
+.justify-items(@justify: auto) {
+  -webkit-justify-items: @justify;
+      -ms-justify-items: @justify;
+          justify-items: @justify;
+}
