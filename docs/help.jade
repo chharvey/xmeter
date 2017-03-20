@@ -1,14 +1,14 @@
 extends _docs.tpl.jade
 
 block append vars
-  - var page = Xmeter.DOCS.find('help.html')
+  - var page = Docs.DOCS.find('/docs/help.html')
 
 block append main
-  +newSection(2, Xmeter.DOCS.find('help.html#block'))
+  +newSection(2, Docs.DOCS.find('/docs/help.html#block'))
     include _includes/_help.block.jade
-  +newSection(2, Xmeter.DOCS.find('help.html#inline'))
+  +newSection(2, Docs.DOCS.find('/docs/help.html#inline'))
     include _includes/_help.inline.jade
-  +newSection(2, Xmeter.DOCS.find('help.html#clearfix'))
+  +newSection(2, Docs.DOCS.find('/docs/help.html#clearfix'))
     include _includes/_help.clearfix.jade
-  +newSection(2, Xmeter.DOCS.find('help.html#hidden'))
+  +newSection(2, Docs.DOCS.find('/docs/help.html#hidden'))
     include _includes/_help.hidden.jade
