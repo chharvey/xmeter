@@ -1,9 +1,9 @@
 extends _docs.tpl.jade
 
 block append vars
-  - var page = Xmeter.DOCS.find('index.html')
+  - var page = Docs.DOCS.find('/docs/index.html')
 
 block toc
   nav#table-contents
     h2 Table of Contents
-    +doctoc({pages: Xmeter.DOCS.findAll(), depth: Infinity})
+    +doctoc({pages: Docs.DOCS.findAll(), depth: Infinity})

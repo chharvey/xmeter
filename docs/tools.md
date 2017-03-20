@@ -34,21 +34,38 @@ Watch out for changes.**
 
 ### The Flexbox Tools
 ```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.flexbox.less');
 .your-flex-container {
   .flexbox(); // display: flex;
   .flex-direction(!row | column | row-reverse | column-reverse);
   .flex-wrap(!nowrap | wrap | wrap-reverse);
-  .flex-justify-content(!flex-start | flex-end | center | space-between | space-around);
-  .flex-align-content(!stretch | flex-start | flex-end | center | space-between | space-around);
-  .flex-align-items(!stretch | flex-start | flex-end | center | baseline);
 }
 .your-flex-item {
-  .flex-align-self(!auto | strecth | flex-start | flex-end | center | baseline);
   .flex-order(<integer>?:0);
   .flex(none | [ <number>:0 <number>?:1 || <length>:auto ]);
   .flex-grow(<number>?:0);
   .flex-shrink(<number>?:1);
   .flex-basis(!auto | content | <length>);
+}
+```
+
+### CSS3 Align Tools
+```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.justify-content.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.align-content.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.justify-items.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.align-items.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.justify-self.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.align-self.less');
+.your-container {
+  .justify-content(!normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .align-content(!normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .justify-items(!auto | normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .align-items(!normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+}
+.your-item {
+  .justify-self(!auto | normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .align-self(!auto | normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
 }
 ```
 
