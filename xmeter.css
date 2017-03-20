@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.4.0
+    Version: 5.5.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -566,8 +566,6 @@ template {
 *::after {
   box-sizing: border-box;
   border: 0 solid;
-  content: ' ';
-  content: '';
   content: none;
 }
 @media print {
@@ -623,6 +621,7 @@ ul,
 dl,
 table,
 fieldset,
+textarea,
 details {
   margin-bottom: var(--vru);
 }
@@ -794,10 +793,10 @@ s {
   color: #b00;
 }
 ins {
-  background: #a6f3a6;
+  background-color: #a6f3a6;
 }
 del {
-  background: #f8cbcb;
+  background-color: #f8cbcb;
 }
 dfn {
   font-style: inherit;
@@ -847,49 +846,91 @@ kbd samp,
 samp samp {
   font-size: inherit;
 }
-label {
-  cursor: pointer;
-}
-fieldset,
-input,
-select,
-textarea,
-button {
-  border-width: 1px;
-  margin-top: -2px;
-  border-style: solid;
-  border-color: #c0c0c0;
-  border-color: rgba(0, 0, 0, 0.25);
-}
 fieldset {
   padding: 0 1rem;
   margin-left: 0;
   margin-right: 0;
 }
-input,
-select,
 textarea,
-button {
+input {
   padding: 0 0.25rem;
 }
-input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+textarea,
+input,
+select,
+button,
+optgroup {
+  font-family: inherit;
+}
+input,
+button,
+optgroup {
+  font-size: inherit;
+  line-height: inherit;
+}
+fieldset,
 textarea {
-  font-size: 0.75em;
-  line-height: 2;
-  line-height: calc(var(--line-height) /  0.75);
+  border-width: 1px;
+  margin-top: -2px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+input,
+select,
+button {
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
 textarea {
+  display: block;
   width: 30rem;
   height: 9rem;
+  height: calc(6 * var(--vru));
+  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   line-height: var(--line-height);
+}
+textarea > * {
+  --vru: calc(var(--line-height) *  0.75rem);
+}
+textarea h1,
+textarea h2,
+textarea h3,
+textarea h4,
+textarea h5,
+textarea h6,
+textarea p,
+textarea pre,
+textarea figure,
+textarea blockquote,
+textarea ol,
+textarea ul,
+textarea dl,
+textarea table,
+textarea fieldset {
+  margin-bottom: 1.125rem;
+  margin-bottom: var(--vru);
+}
+textarea h1 {
+  padding-top: 1.125rem;
+  padding-top: var(--vru);
+}
+label {
+  cursor: pointer;
+}
+input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+select {
+  font-size: 0.75em;
 }
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
-  background-color: #c0c0c0;
+  padding: 0.125em 0.25em;
   background-color: rgba(0, 0, 0, 0.25);
+}
+select[multiple] > optgroup > option {
+  padding-left: 1rem;
 }
 input[type="search"] {
   box-sizing: border-box;

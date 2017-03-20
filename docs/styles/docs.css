@@ -4,6 +4,9 @@
 /*================================*\
     docs.less
 \*================================*/
+[aria-current="page"] {
+  font-weight: bold;
+}
 .docs-body {
   background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
   background-position: left top;
@@ -50,7 +53,7 @@
   font-style: italic;
 }
 .docs-form {
-  background: #fff;
+  background-color: #fff;
 }
 .docs-_fragid {
   display: inline;
