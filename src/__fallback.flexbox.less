@@ -26,10 +26,14 @@
 // : 2015-09-03
 .flexbox() {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  display:     -ms-box;
+
+  display: -webkit-flexbox;
+  display:     -ms-flexbox;
+
   display: -webkit-flex;
-  display: flex;
+  display:     -ms-flex;
+  display:         flex;
 }
 
 // Determines the direction of the flow.
@@ -45,7 +49,6 @@
 // : 2015-02-12
 .flex-direction(@direction: row) {
   -webkit-flex-direction: @direction;
-     -moz-flex-direction: @direction;
       -ms-flex-direction: @direction;
           flex-direction: @direction;
 }
@@ -62,7 +65,6 @@
 // : 2015-02-12
 .flex-wrap(@wrap: nowrap) {
   -webkit-flex-wrap: @wrap;
-     -moz-flex-wrap: @wrap; // no support for Firefox 27 and older (28+ uses `flex-wrap`)
       -ms-flex-wrap: @wrap;
           flex-wrap: @wrap;
 }
@@ -175,7 +177,6 @@
 // : 2015-09-03
 .flex-order(@integer: 0) {
   -webkit-box-ordinal-group: @integer;
-     -moz-box-ordinal-group: @integer;
              -ms-flex-order: @integer;
               -webkit-order: @integer;
                       order: @integer;
@@ -230,9 +231,7 @@
 // : 2015-09-03
 .flex(@arg: 0 1 auto) {
   -webkit-box-flex: @arg;
-     -moz-box-flex: @arg;
       -webkit-flex: @arg;
-         -moz-flex: @arg;
           -ms-flex: @arg;
               flex: @arg;
 }
