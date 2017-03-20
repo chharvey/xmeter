@@ -44,21 +44,65 @@ Watch out for changes.**
 
 ### The Flexbox Tools
 ```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.flexbox.less');
 .your-flex-container {
   .flexbox(); // display: flex;
   .flex-direction(!row | column | row-reverse | column-reverse);
   .flex-wrap(!nowrap | wrap | wrap-reverse);
-  .flex-justify-content(!flex-start | flex-end | center | space-between | space-around);
-  .flex-align-content(!stretch | flex-start | flex-end | center | space-between | space-around);
-  .flex-align-items(!stretch | flex-start | flex-end | center | baseline);
 }
 .your-flex-item {
-  .flex-align-self(!auto | strecth | flex-start | flex-end | center | baseline);
   .flex-order(<integer>?:0);
   .flex(none | [ <number>:0 <number>?:1 || <length>:auto ]);
   .flex-grow(<number>?:0);
   .flex-shrink(<number>?:1);
   .flex-basis(!auto | content | <length>);
+}
+```
+
+### The CSS Grid Tools
+See [CSS Grid](https://www.w3.org/TR/css-grid-1/) for syntax.
+```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.grid.less');
+.your-grid-container {
+  .grid(); // display: grid;
+  .grid-template-columns(...);
+  .grid-template-rows(...);
+  .grid-template-areas(...);
+  .grid-column-gap(...);
+  .grid-row-gap(...);
+  .grid-gap(...);
+  .grid-auto-columns(...);
+  .grid-auto-rows(...);
+  .grid-auto-flow(!row | [[row | column] || dense]);
+}
+.your-grid-item {
+  .grid-column-start(...);
+  .grid-column-end(...);
+  .grid-column(...);
+  .grid-row-start(...);
+  .grid-row-end(...);
+  .grid-row(...);
+  .grid-area(...);
+}
+```
+
+### CSS3 Align Tools
+```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.justify-content.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.align-content.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.justify-items.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.align-items.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.justify-self.less');
+@import (reference) url('/node_modules/xmeter/src/__fallback.align-self.less');
+.your-container {
+  .justify-content(!normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .align-content(!normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .justify-items(!auto | normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .align-items(!normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+}
+.your-item {
+  .justify-self(!auto | normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
+  .align-self(!auto | normal | start | end | flex-start | flex-end | center | stretch | space-between | space-around | space-evenly);
 }
 ```
 

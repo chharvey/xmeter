@@ -1,0 +1,21 @@
+
+/*################################*\
+    xmeter  |  __fallback.align-items.less
+\*################################*/
+
+
+// Defines how item contents are aligned along the block/cross/column-axis.
+// https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+// https://www.w3.org/TR/css-align-3/
+//
+// ^param
+// : @align - how items are aligned
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-20
+.align-items(@align: normal) {
+  -webkit-align-items: @align;
+      -ms-align-items: @align;
+          align-items: @align;
+}

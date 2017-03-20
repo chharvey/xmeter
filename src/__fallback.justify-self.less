@@ -1,0 +1,21 @@
+
+/*################################*\
+    xmeter  |  __fallback.justify-self.less
+\*################################*/
+
+
+// Aligns an item’s content along the inline/main/row-axis. Overrides container’s `justify-items` property.
+// https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
+// https://www.w3.org/TR/css-align-3/
+//
+// ^param
+// : @justify - how the item is justified
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-20
+.justify-self(@justify: auto) {
+  -webkit-justify-self: @justify;
+      -ms-justify-self: @justify;
+          justify-self: @justify;
+}

@@ -1,0 +1,117 @@
+
+/*################################*\
+    xmeter  |  __fallback.grid.less
+\*################################*/
+
+
+// Read <https://css-tricks.com/snippets/css/complete-guide-grid/> for details.
+///////////////////////////////////////////////////////////////////////////////
+
+
+// Table of Contents
+// - CONTAINERS
+// - ITEMS
+
+
+//++++++++++++++++++++++++++++++++//
+//    # CONTAINERS
+//++++++++++++++++++++++++++++++++//
+// Sets up a grid container.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-18
+.grid() {
+  display: -ms-grid;
+  display:     grid;
+}
+
+.grid-template-columns(@arg) {
+  -ms-grid-template-columns: @arg;
+      grid-template-columns: @arg;
+}
+.grid-template-rows(@arg) {
+  -ms-grid-template-rows: @arg;
+      grid-template-rows: @arg;
+}
+.grid-template-areas(@arg) {
+  -ms-grid-template-areas: @arg;
+      grid-template-areas: @arg;
+}
+
+.grid-column-gap(@arg) {
+  -ms-grid-column-gap: @arg;
+      grid-column-gap: @arg;
+}
+.grid-row-gap(@arg) {
+  -ms-grid-row-gap: @arg;
+      grid-row-gap: @arg;
+}
+.grid-gap(@arg) {
+  -ms-grid-gap: @arg;
+      grid-gap: @arg;
+}
+
+.grid-auto-columns(@arg) {
+  -ms-grid-auto-columns: @arg;
+      grid-auto-columns: @arg;
+}
+.grid-auto-rows(@arg) {
+  -ms-grid-auto-rows: @arg;
+      grid-auto-rows: @arg;
+}
+
+// Specifies the auto placement algorithm.
+//
+// @flow - The direction of flow.
+//       - `row` (default) - fill in each row in turn, adding rows as necessary
+//       - `column`        - fill in each column in turn, adding columns as necessary
+//       - `dense`         - go back and fill in holes if latter items fit
+//       - `row dense`     - fill row completely before moving on to the next one
+//       - `column dense`  - fill column completely before moving on to the next one
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-20
+.grid-auto-flow(@flow: row) {
+  -ms-grid-auto-flow: @flow;
+      grid-auto-flow: @flow;
+}
+//++++ end # CONTAINERS ++++//
+
+
+//++++++++++++++++++++++++++++++++//
+//    # ITEMS
+//++++++++++++++++++++++++++++++++//
+.grid-column-start(@arg) {
+  -ms-grid-column-start: @arg;
+      grid-column-start: @arg;
+}
+.grid-column-end(@arg) {
+  -ms-grid-column-end: @arg;
+      grid-column-end: @arg;
+}
+.grid-column(@arg) {
+  -ms-grid-column: @arg;
+      grid-column: @arg;
+}
+
+.grid-row-start(@arg) {
+  -ms-grid-row-start: @arg;
+      grid-row-start: @arg;
+}
+.grid-row-end(@arg) {
+  -ms-grid-row-end: @arg;
+      grid-row-end: @arg;
+}
+.grid-row(@arg) {
+  -ms-grid-row: @arg;
+      grid-row: @arg;
+}
+
+.grid-area(@arg) {
+  -ms-grid-area: @arg;
+      grid-area: @arg;
+}
+//++++ end # ITEMS ++++//
