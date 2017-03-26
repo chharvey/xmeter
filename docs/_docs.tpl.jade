@@ -17,7 +17,7 @@ html(lang="en")
   mixin newSection(n, page)
     - var id = page.url().split('#')[1]
     section(id=id)
-      | <h#{n}>#{page.name()} <a class="docs-_fragid" href="##{id}" aria-label="permalink"></a></h#{n}>
+      | <h#{n}>#{page.name()} <a class="h-Inline h-Hidden docs-_fragid" href="##{id}" aria-label="permalink">&sect;</a></h#{n}>
       block
   block vars
   head
