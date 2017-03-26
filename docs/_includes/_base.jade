@@ -1,10 +1,10 @@
 - classname = classname || {}
 section#grouping-elements
   block groupingElements
-    h2 Grouping Elements #[a.docs-_fragid(href='#grouping-elements')]
+    h2 Grouping Elements #[a.docs-_fragid(href="#grouping-elements" aria-label="permalink")]
     section#headings-paragraphs
       block headingsParagraphs
-        h3 Headings &amp; Paragraphs #[a.docs-_fragid(href='#headings-paragraphs')]
+        h3 Headings &amp; Paragraphs #[a.docs-_fragid(href="#headings-paragraphs" aria-label="permalink")]
         figure(class=classname.figure)
           h1 Heading 1 #[code(class=classname.code) h1]
           p.
@@ -120,7 +120,7 @@ section#grouping-elements
           hr
     section#lists
       block lists
-        h3 Lists #[a.docs-_fragid(href='#lists')]
+        h3 Lists #[a.docs-_fragid(href="#lists" aria-label="permalink")]
         figure(class=classname.figure)
           figcaption Ordered List #[code(class=classname.code) ol]
           ol
@@ -160,7 +160,7 @@ section#grouping-elements
                 li 2nd value
     section#tables
       block tables
-        h3 Tables #[a.docs-_fragid(href='#tables')]
+        h3 Tables #[a.docs-_fragid(href="#tables" aria-label="permalink")]
         figure(class=classname.figure)
           table
             caption #[code(class=classname.code) table] #[code(class=classname.code) caption]
@@ -187,17 +187,17 @@ section#grouping-elements
               +tablebodyrows(3,3)
 section#text-level-elements
   block textLevelElements
-    h2 Text-Level Elements #[a.docs-_fragid(href='#text-level-elements')]
+    h2 Text-Level Elements #[a.docs-_fragid(href="#text-level-elements" aria-label="permalink")]
     section#links
       block links
-        h3 Links #[a.docs-_fragid(href='#links')]
+        h3 Links #[a.docs-_fragid(href="#links" aria-label="permalink")]
         figure(class=classname.figure): ul
           block linksList
             li: a placeholder link #[code(class=classname.code) a]
             li: a(href="#0") regular link #[code(class=classname.code)= 'a[href]']
     section#stress
       block stress
-        h3 Stress #[a.docs-_fragid(href='#stress')]
+        h3 Stress #[a.docs-_fragid(href="#stress" aria-label="permalink")]
         figure(class=classname.figure): ul
           block stressList
             li: em     emphasized text #[code(class=classname.code) em]
@@ -209,7 +209,7 @@ section#text-level-elements
             li: s      text shown to be no longer relevant #[code(class=classname.code) s]
     section#documentation
       block documentation
-        h3 Documentation #[a.docs-_fragid(href='#documentation')]
+        h3 Documentation #[a.docs-_fragid(href="#documentation" aria-label="permalink")]
         figure(class=classname.figure): ul
           block documentationList
             li: ins  content shown to be inserted into a document #[code(class=classname.code) ins]
@@ -224,7 +224,7 @@ section#text-level-elements
             li: sub  subscript #[code(class=classname.code) sub]
     section#data
       block data
-        h3 Data #[a.docs-_fragid(href='#data')]
+        h3 Data #[a.docs-_fragid(href="#data" aria-label="permalink")]
         figure(class=classname.figure): ul
           block dataList
             li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
@@ -235,7 +235,7 @@ section#text-level-elements
             li: samp     sample computer output #[code(class=classname.code) samp]
 section#forms
   block forms
-    h2 Forms #[a.docs-_fragid(href='#forms')]
+    h2 Forms #[a.docs-_fragid(href="#forms" aria-label="permalink")]
     form(class=classname.form)
       figure(class=classname.figure)
         fieldset
@@ -328,10 +328,10 @@ section#forms
           textarea
 section#embedded-elements
   block embeddedElements
-    h2 Embedded Elements #[a.docs-_fragid(href='#embedded-elements')]
+    h2 Embedded Elements #[a.docs-_fragid(href="#embedded-elements" aria-label="permalink")]
 section#interactive-elements
   block interactiveElements
-    h2 Interactive Elements #[a.docs-_fragid(href='#interactive-elements')]
+    h2 Interactive Elements #[a.docs-_fragid(href="#interactive-elements" aria-label="permalink")]
     figure(class=classname.figure)
       details
         summary Integer at lacus et diam tristique #[code(class=classname.code) details summary] suscipit.
