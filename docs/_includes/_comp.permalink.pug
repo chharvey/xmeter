@@ -5,7 +5,8 @@ p: small In fact, the Permalink Component is used in this very style guide!
 figure.docs-figure
   section#section-title: h1
     | Section Title
-    a.c-Permalink.h-Inline.h-Hidden(href="#section-title" aria-label="permalink") &sect;
+    include ../../_views/_c-Permalink.view.pug
+    +permalink('section-title')
   pre.docs-pre.
     &lt;section #[mark id="#[var #section-title]"]&gt;
       &lt;h1&gt;
