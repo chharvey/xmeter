@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><title>Helpers | Xmeter Style Guide</title><meta charset="utf-8"><meta name="description" content="A demo of Xmeter styles."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.9.0/bangs.min.css"><link rel="stylesheet" href="../xmeter.css"><link rel="stylesheet" href="styles/docs.css"></head><body class="docs-body"><a class="h-Hidden" href="#main">skip to main content</a><header><h1>Xmeter Style Guide</h1><p>A demo of Xmeter styles.</p><nav id="sitemap"><h1 class="h-Hidden">Sitemap</h1><ol role="directory"><li><a href="/docs/index.html">Home</a>: Xmeter Homepage</li><li><a href="/docs/base.html">Base Typography</a>: Bare, unstyled HTML elements. No classes.</li><li><a href="/docs/obj.html">Objects</a>: Patterns of structure that can be reused many times for many different purposes.</li><li><a href="/docs/comp.html">Components</a>: Patterns of look-and-feel that are each only used for one purpose.</li><li><a href="/docs/help.html" aria-current="page">Helpers</a>: Somewhat explicit classes used for enhancing default styles.</li><li><a href="/docs/atom.html">Atoms</a>: Very specific classes used for creating anomalies or fixing broken styles.</li></ol></nav></header><main class="docs-main" id="main"><header><h1>Helpers</h1><p>Somewhat explicit classes used for enhancing default styles.</p><nav id="table-contents"><h2>Table of Contents</h2><ol role="directory"><li><a href="/docs/help.html#block">Block</a></li><li><a href="/docs/help.html#inline">Inline</a></li><li><a href="/docs/help.html#clearfix">Clearfix</a></li><li><a href="/docs/help.html#hidden">Hidden</a></li></ol></nav></header><section id="block"><h2>Block<a class="c-Permalink h-Inline h-Hidden" href="#block" aria-label="permalink">&sect;</a></h2><p>The Block Helper creates a blocky look,
+with an inherited line-height to maintain vertical rhythm.</p><figure class="docs-figure"><p>Albert Einstein was made famous by his equation
+<b class="h-Block" style="text-align:center">E = mc<sup>2</sup></b>
+which explains the relationship between energy and mass.</p><pre class="docs-pre">&lt;p&gt;... his famous equation
+  &lt;b class="<u>h-Block</u>" style="text-align:center;"&gt;E = mc&lt;sup&gt;2&lt/sup&gt;&lt;/b&gt;
+  which explains ...&lt;/p&gt;</pre></figure></section><section id="inline"><h2>Inline<a class="c-Permalink h-Inline h-Hidden" href="#inline" aria-label="permalink">&sect;</a></h2><p>Creates an inline look,
+with zero line-height to maintain vertical rhythm.</p><p>This class is useful for creating inline lists, that is,
+lists whose items are each displayed in line, one right after another.</p><figure class="docs-figure"><ul><li class="h-Inline">spacetime </li><li class="h-Inline">black hole </li><li class="h-Inline">singularity </li><li class="h-Inline">gravity </li><li class="h-Inline">supernova </li><li class="h-Inline">neutron star </li></ul><pre class="docs-pre">&lt;ul&gt;
+  &lt;li class="<u>h-Inline</u>"&gt;spacetime &lt;/li&gt;
+  &lt;li class="<u>h-Inline</u>"&gt;black hole &lt;/li&gt;
+  ...
+&lt;/ul&gt;</pre></figure></section><section id="clearfix"><h2>Clearfix<a class="c-Permalink h-Inline h-Hidden" href="#clearfix" aria-label="permalink">&sect;</a></h2><p>The Clearfix Helper creates a line break after an element.
+This could be a container of floats, or it could simply be an inline list item.
+Use this as an alternative to the <code class="docs-code">br</code> element.</p><figure class="docs-figure"><div class="h-Clearfix"><div style="font-weight: 700; float:  left">gravity</div><div style="font-weight: 700; float: right">supernova</div></div><div>spacetime black hole singularity</div><pre class="docs-pre">&lt;div class="<u>h-Clearfix</u>"&gt;
+  &lt;div style="float:  left;"&gt;gravity&lt;/div&gt;
+  &lt;div style="float: right;"&gt;supernova&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;spacetime black hole singularity&lt;/div&gt;</pre><figcaption>The Clearfix Helper is used in the classical sense.</figcaption></figure><figure class="docs-figure"><ul><li class="h-Inline">spacetime </li><li class="h-Inline h-Clearfix">black hole </li><li class="h-Inline">singularity </li><li class="h-Inline">neutron star </li></ul><pre class="docs-pre">&lt;ul&gt;
+  &lt;li class="o-Inline"&gt;spacetime &lt;/li&gt;
+  &lt;li class="o-Inline  <u>h-Clearfix</u>"&gt;black hole &lt;/li&gt;
+  &lt;li class="o-Inline"&gt;singularity &lt;/li&gt;
+  &lt;li class="o-Inline"&gt;neutron star &lt;/li&gt;
+&lt;/ul&gt;</pre><figcaption>The Clearfix Helper creates a line break after the 2nd inline item.</figcaption></figure><figure class="docs-figure"><p><span class="h-Clearfix">The White House</span><span class="h-Clearfix">1600 Pennsylvania Ave NW</span><span>Washington, DC 20500</span></p><pre class="docs-pre">&lt;p&gt;
+  &lt;span class="<u>h-Clearfix</u>"&gt;The White House&lt;/span&gt;
+  &lt;span class="<u>h-Clearfix</u>"&gt;1600 Pennsylvania Ave NW&lt;/span&gt;
+  &lt;span&gt;Washington, DC 20500&lt;/span&gt;
+&lt;/p&gt;</pre><figcaption>Instead of adding <code class="docs-code">br</code> elements to create line breaks in
+postal addresses&mdash;the traditional approach&mdash;you may wrap each line of the address
+with spans using the Clearfix Helper. This approach may be easier if the spans are already present,
+for example, from microdata markup.</figcaption></figure></section><section id="hidden"><h2>Hidden<a class="c-Permalink h-Inline h-Hidden" href="#hidden" aria-label="permalink">&sect;</a></h2><p>The Hidden helper visually hides an element while keeping it accessible to non-visual
+media such as screen readers. A <b>skip link</b> is a common example.</p><figure class="docs-figure"><a class="h-Hidden" href="#0">skip to main content</a><pre class="docs-pre">&lt;a class="<u>h-Hidden</u>" href="#main"&gt;skip to main content&lt;/a&gt;</pre></figure></section></main></body></html>
