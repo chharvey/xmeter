@@ -1,0 +1,40 @@
+
+/*################################*\
+    xmeter  |  _h-Block.less
+\*################################*/
+
+
+// Internal documentation section link.
+// Use with `.h-Inline` and `.h-Hidden`.
+//
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-03-26
+.c-Permalink {
+  margin-left: 1rem;
+  font-weight: 100;
+  h1:hover > &,
+  h2:hover > &,
+  h3:hover > &,
+  h4:hover > &,
+  h5:hover > &,
+  h6:hover > & {
+    position: static; // HACK fallback
+    position: initial; // HACK fallback
+    position: unset; // unset `.h-Hidden`
+  }
+}
+
+@media screen                        { .c-Permalink-s  { .c-Permalink; } }
+@media print                         { .c-Permalink-p  { .c-Permalink; } }
+@media screen  and (min-width: 30em) { .c-Permalink-sK { .c-Permalink; } }
+@media screen  and (min-width: 45em) { .c-Permalink-sM { .c-Permalink; } }
+@media screen  and (min-width: 60em) { .c-Permalink-sG { .c-Permalink; } }
+@media screen  and (min-width: 75em) { .c-Permalink-sT { .c-Permalink; } }
+@media screen  and (min-width: 90em) { .c-Permalink-sP { .c-Permalink; } }
+@media not all and (min-width: 30em) { .c-Permalink-nK { .c-Permalink; } }
+@media not all and (min-width: 45em) { .c-Permalink-nM { .c-Permalink; } }
+@media not all and (min-width: 60em) { .c-Permalink-nG { .c-Permalink; } }
+@media not all and (min-width: 75em) { .c-Permalink-nT { .c-Permalink; } }
+@media not all and (min-width: 90em) { .c-Permalink-nP { .c-Permalink; } }
