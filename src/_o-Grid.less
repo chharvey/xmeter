@@ -2,12 +2,12 @@
 /*################################*\
     xmeter  |  _o-Grid.less
 \*################################*/
-@import (reference) url('__fallback.flexbox.less');
+@import (reference) url('__fallback.grid.less');
 
 
-// A two-dimensional flexbox container of flex items.
-// By default, each item has a flex-basis of 100%, which may be overridden.
-// See https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+// A two-dimensional grid container of grid items.
+// By default, it has one column at 100%, but this may be overridden.
+// See https://css-tricks.com/snippets/css/complete-guide-grid/
 //
 // ^subcomponents
 // : `__Item` - any item inside the grid
@@ -16,12 +16,11 @@
 // ^updated
 // : 2017-03-29
 .o-Grid {
-  .flexbox();
-  .flex-wrap(wrap);
+  .grid();
+  .grid-template-columns(100%);
 }
 
 .o-Grid__Item {
-  .flex(100%);
 }
 
 @media screen                       { .o-Grid-s  { .o-Grid; }  .o-Grid__Item-s  { .o-Grid__Item; } }
