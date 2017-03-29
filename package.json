@@ -19,7 +19,7 @@
     "lessc:xmeter": "lessc xmeter.less xmeter.css",
     "lessc:all": "npm run lessc:docs  &&  npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
-    "unbuild": "rm docs/{index,base,obj,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css",
+    "unbuild": "rm docs/{index,base,obj,comp,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css",
     "build": "npm run pug:all  &&  npm run lessc:all  &&  npm run minify"
   },
   "repository": {
