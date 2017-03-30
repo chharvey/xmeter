@@ -26,10 +26,14 @@
 // : 2015-09-03
 .flexbox() {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  display:     -ms-box;
+
+  display: -webkit-flexbox;
+  display:     -ms-flexbox;
+
   display: -webkit-flex;
-  display: flex;
+  display:     -ms-flex;
+  display:         flex;
 }
 
 // Determines the direction of the flow.
@@ -45,7 +49,6 @@
 // : 2015-02-12
 .flex-direction(@direction: row) {
   -webkit-flex-direction: @direction;
-     -moz-flex-direction: @direction;
       -ms-flex-direction: @direction;
           flex-direction: @direction;
 }
@@ -62,7 +65,6 @@
 // : 2015-02-12
 .flex-wrap(@wrap: nowrap) {
   -webkit-flex-wrap: @wrap;
-     -moz-flex-wrap: @wrap; // no support for Firefox 27 and older (28+ uses `flex-wrap`)
       -ms-flex-wrap: @wrap;
           flex-wrap: @wrap;
 }
@@ -83,11 +85,12 @@
 // : Chris Harvey
 // ^updated
 // : 2015-10-12
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. import __fallback.justify-content.less instead.
+///////////////////////////////////////////////////////////////////////////////
+@import (reference) url('__fallback.justify-content.less');
 .flex-justify-content(@justify: flex-start) {
-  -webkit-justify-content: @justify;
-     -moz-justify-content: @justify;
-      -ms-justify-content: @justify;
-          justify-content: @justify;
+  .justify-content(@justify);
 }
 
 // Aligns a flex container’s lines when there is empty space in the cross-axis.
@@ -106,11 +109,12 @@
 // : Chris Harvey
 // ^updated
 // : 2015-09-03
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. import __fallback.align-content.less instead.
+///////////////////////////////////////////////////////////////////////////////
+@import (reference) url('__fallback.align-content.less');
 .flex-align-content(@align: stretch) {
-  -webkit-align-content: @align;
-     -moz-align-content: @align;
-      -ms-align-content: @align;
-          align-content: @align;
+  .align-content(@align);
 }
 
 // Defines default behavior for aligining flex items along cross axis
@@ -127,11 +131,12 @@
 // : Chris Harvey
 // ^updated
 // : 2015-09-03
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. import __fallback.align-items.less instead.
+///////////////////////////////////////////////////////////////////////////////
+@import (reference) url('__fallback.align-items.less');
 .flex-align-items(@align: stretch) {
-  -webkit-align-items: @align;
-     -moz-align-items: @align;
-      -ms-align-items: @align;
-          align-items: @align;
+  .align-items(@align);
 }
 //++++ end # CONTAINERS ++++//
 
@@ -154,11 +159,12 @@
 // : Chris Harvey
 // ^updated
 // : 2015-10-14
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: THIS MIXIN IS DEPRECATED. import __fallback.align-self.less instead.
+///////////////////////////////////////////////////////////////////////////////
+@import (reference) url('__fallback.align-self.less');
 .flex-align-self(@align: auto) {
-  -webkit-align-self: @align;
-     -moz-align-self: @align;
-      -ms-align-self: @align;
-          align-self: @align;
+  .align-self(@align);
 }
 
 // Determines the order in which items appear in the flex container.
@@ -171,7 +177,6 @@
 // : 2015-09-03
 .flex-order(@integer: 0) {
   -webkit-box-ordinal-group: @integer;
-     -moz-box-ordinal-group: @integer;
              -ms-flex-order: @integer;
               -webkit-order: @integer;
                       order: @integer;
@@ -226,9 +231,7 @@
 // : 2015-09-03
 .flex(@arg: 0 1 auto) {
   -webkit-box-flex: @arg;
-     -moz-box-flex: @arg;
       -webkit-flex: @arg;
-         -moz-flex: @arg;
           -ms-flex: @arg;
               flex: @arg;
 }

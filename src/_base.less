@@ -278,14 +278,16 @@ br {
   mark {
   }
   u {
-    text-decoration: underline;
+    text-decoration: underline; // HACK fallback
+    text-decoration-line: underline;
     color: #080;
   }
   small {
     font-size: (@g-font_size_mill * 1em);
   }
   s {
-    text-decoration: line-through;
+    text-decoration: line-through; // HACK fallback
+    text-decoration-line: line-through;
     color: #b00;
   }
   //---- end ## Stress ----//

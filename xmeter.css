@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.5.0
+    Version: 5.6.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -19,7 +19,9 @@ body {
 }
 
 sup, sub {
-  vertical-align: inherit;
+  vertical-align: baseline; /* HACK fallback */
+  vertical-align: initial;  /* HACK fallback */
+  vertical-align: unset;
 }
 body,
 h1, h2, h3, h4, h5, h6,
@@ -548,6 +550,9 @@ template {
  * Flex...........................one-dimensional flexible box
  * Grid...........................two-dimensional flexible box
  *
+ * COMPONENTS
+ * Permalink......................internal documentation link
+ *
  * HELPERS
  * Block..........................gives a blocky look
  * Inline.........................a simple inline object
@@ -783,6 +788,7 @@ i {
 }
 u {
   text-decoration: underline;
+  text-decoration-line: underline;
   color: #080;
 }
 small {
@@ -790,6 +796,7 @@ small {
 }
 s {
   text-decoration: line-through;
+  text-decoration-line: line-through;
   color: #b00;
 }
 ins {
@@ -1059,42 +1066,40 @@ summary {
 \*################################*/
 .o-Flex {
   display: -webkit-box;
-  display: -moz-box;
+  display: -ms-box;
+  display: -webkit-flexbox;
   display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   line-height: inherit;
   -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
 }
 .o-Flex__Item {
   -webkit-box-flex: auto;
-  -moz-box-flex: auto;
   -webkit-flex: auto;
-  -moz-flex: auto;
   -ms-flex: auto;
   flex: auto;
 }
 @media screen {
   .o-Flex-s {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-s {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1102,21 +1107,20 @@ summary {
 @media print {
   .o-Flex-p {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-p {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1124,21 +1128,20 @@ summary {
 @media screen and (min-width: 30em) {
   .o-Flex-sK {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sK {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1146,21 +1149,20 @@ summary {
 @media screen and (min-width: 45em) {
   .o-Flex-sM {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sM {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1168,21 +1170,20 @@ summary {
 @media screen and (min-width: 60em) {
   .o-Flex-sG {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sG {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1190,21 +1191,20 @@ summary {
 @media screen and (min-width: 75em) {
   .o-Flex-sT {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sT {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1212,21 +1212,20 @@ summary {
 @media screen and (min-width: 90em) {
   .o-Flex-sP {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sP {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1234,21 +1233,20 @@ summary {
 @media not all and (min-width: 30em) {
   .o-Flex-nsK {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsK {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1256,21 +1254,20 @@ summary {
 @media not all and (min-width: 45em) {
   .o-Flex-nsM {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsM {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1278,21 +1275,20 @@ summary {
 @media not all and (min-width: 60em) {
   .o-Flex-nsG {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsG {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1300,21 +1296,20 @@ summary {
 @media not all and (min-width: 75em) {
   .o-Flex-nsT {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsT {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1322,21 +1317,20 @@ summary {
 @media not all and (min-width: 90em) {
   .o-Flex-nsP {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsP {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1344,21 +1338,20 @@ summary {
 @media not all and (min-width: 30em) {
   .o-Flex-nK {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nK {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1366,21 +1359,20 @@ summary {
 @media not all and (min-width: 45em) {
   .o-Flex-nM {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nM {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1388,21 +1380,20 @@ summary {
 @media not all and (min-width: 60em) {
   .o-Flex-nG {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nG {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1410,21 +1401,20 @@ summary {
 @media not all and (min-width: 75em) {
   .o-Flex-nT {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nT {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1432,21 +1422,20 @@ summary {
 @media not all and (min-width: 90em) {
   .o-Flex-nP {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nP {
     -webkit-box-flex: auto;
-    -moz-box-flex: auto;
     -webkit-flex: auto;
-    -moz-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1456,42 +1445,40 @@ summary {
 \*################################*/
 .o-Grid {
   display: -webkit-box;
-  display: -moz-box;
+  display: -ms-box;
+  display: -webkit-flexbox;
   display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   line-height: inherit;
   -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .o-Grid__Item {
   -webkit-box-flex: 100%;
-  -moz-box-flex: 100%;
   -webkit-flex: 100%;
-  -moz-flex: 100%;
   -ms-flex: 100%;
   flex: 100%;
 }
 @media screen {
   .o-Grid-s {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-s {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1499,21 +1486,20 @@ summary {
 @media print {
   .o-Grid-p {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-p {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1521,21 +1507,20 @@ summary {
 @media screen and (min-width: 30em) {
   .o-Grid-sK {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sK {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1543,21 +1528,20 @@ summary {
 @media screen and (min-width: 45em) {
   .o-Grid-sM {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sM {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1565,21 +1549,20 @@ summary {
 @media screen and (min-width: 60em) {
   .o-Grid-sG {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sG {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1587,21 +1570,20 @@ summary {
 @media screen and (min-width: 75em) {
   .o-Grid-sT {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sT {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1609,21 +1591,20 @@ summary {
 @media screen and (min-width: 90em) {
   .o-Grid-sP {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sP {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1631,21 +1612,20 @@ summary {
 @media not all and (min-width: 30em) {
   .o-Grid-nsK {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsK {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1653,21 +1633,20 @@ summary {
 @media not all and (min-width: 45em) {
   .o-Grid-nsM {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsM {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1675,21 +1654,20 @@ summary {
 @media not all and (min-width: 60em) {
   .o-Grid-nsG {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsG {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1697,21 +1675,20 @@ summary {
 @media not all and (min-width: 75em) {
   .o-Grid-nsT {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsT {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1719,21 +1696,20 @@ summary {
 @media not all and (min-width: 90em) {
   .o-Grid-nsP {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsP {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1741,21 +1717,20 @@ summary {
 @media not all and (min-width: 30em) {
   .o-Grid-nK {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nK {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1763,21 +1738,20 @@ summary {
 @media not all and (min-width: 45em) {
   .o-Grid-nM {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nM {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1785,21 +1759,20 @@ summary {
 @media not all and (min-width: 60em) {
   .o-Grid-nG {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nG {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1807,21 +1780,20 @@ summary {
 @media not all and (min-width: 75em) {
   .o-Grid-nT {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nT {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1829,23 +1801,231 @@ summary {
 @media not all and (min-width: 90em) {
   .o-Grid-nP {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
     display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     line-height: inherit;
     -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nP {
     -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
     -webkit-flex: 100%;
-    -moz-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
+  }
+}
+/*################################*\
+    xmeter  |  _h-Block.less
+\*################################*/
+.c-Permalink {
+  margin-left: 1rem;
+  font-weight: 100;
+}
+h1:hover > .c-Permalink,
+h2:hover > .c-Permalink,
+h3:hover > .c-Permalink,
+h4:hover > .c-Permalink,
+h5:hover > .c-Permalink,
+h6:hover > .c-Permalink {
+  position: static;
+  position: initial;
+  position: unset;
+}
+@media screen {
+  .c-Permalink-s {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-s,
+  h2:hover > .c-Permalink-s,
+  h3:hover > .c-Permalink-s,
+  h4:hover > .c-Permalink-s,
+  h5:hover > .c-Permalink-s,
+  h6:hover > .c-Permalink-s {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media print {
+  .c-Permalink-p {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-p,
+  h2:hover > .c-Permalink-p,
+  h3:hover > .c-Permalink-p,
+  h4:hover > .c-Permalink-p,
+  h5:hover > .c-Permalink-p,
+  h6:hover > .c-Permalink-p {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media screen and (min-width: 30em) {
+  .c-Permalink-sK {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-sK,
+  h2:hover > .c-Permalink-sK,
+  h3:hover > .c-Permalink-sK,
+  h4:hover > .c-Permalink-sK,
+  h5:hover > .c-Permalink-sK,
+  h6:hover > .c-Permalink-sK {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media screen and (min-width: 45em) {
+  .c-Permalink-sM {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-sM,
+  h2:hover > .c-Permalink-sM,
+  h3:hover > .c-Permalink-sM,
+  h4:hover > .c-Permalink-sM,
+  h5:hover > .c-Permalink-sM,
+  h6:hover > .c-Permalink-sM {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media screen and (min-width: 60em) {
+  .c-Permalink-sG {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-sG,
+  h2:hover > .c-Permalink-sG,
+  h3:hover > .c-Permalink-sG,
+  h4:hover > .c-Permalink-sG,
+  h5:hover > .c-Permalink-sG,
+  h6:hover > .c-Permalink-sG {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media screen and (min-width: 75em) {
+  .c-Permalink-sT {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-sT,
+  h2:hover > .c-Permalink-sT,
+  h3:hover > .c-Permalink-sT,
+  h4:hover > .c-Permalink-sT,
+  h5:hover > .c-Permalink-sT,
+  h6:hover > .c-Permalink-sT {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media screen and (min-width: 90em) {
+  .c-Permalink-sP {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-sP,
+  h2:hover > .c-Permalink-sP,
+  h3:hover > .c-Permalink-sP,
+  h4:hover > .c-Permalink-sP,
+  h5:hover > .c-Permalink-sP,
+  h6:hover > .c-Permalink-sP {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media not all and (min-width: 30em) {
+  .c-Permalink-nK {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-nK,
+  h2:hover > .c-Permalink-nK,
+  h3:hover > .c-Permalink-nK,
+  h4:hover > .c-Permalink-nK,
+  h5:hover > .c-Permalink-nK,
+  h6:hover > .c-Permalink-nK {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media not all and (min-width: 45em) {
+  .c-Permalink-nM {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-nM,
+  h2:hover > .c-Permalink-nM,
+  h3:hover > .c-Permalink-nM,
+  h4:hover > .c-Permalink-nM,
+  h5:hover > .c-Permalink-nM,
+  h6:hover > .c-Permalink-nM {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media not all and (min-width: 60em) {
+  .c-Permalink-nG {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-nG,
+  h2:hover > .c-Permalink-nG,
+  h3:hover > .c-Permalink-nG,
+  h4:hover > .c-Permalink-nG,
+  h5:hover > .c-Permalink-nG,
+  h6:hover > .c-Permalink-nG {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media not all and (min-width: 75em) {
+  .c-Permalink-nT {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-nT,
+  h2:hover > .c-Permalink-nT,
+  h3:hover > .c-Permalink-nT,
+  h4:hover > .c-Permalink-nT,
+  h5:hover > .c-Permalink-nT,
+  h6:hover > .c-Permalink-nT {
+    position: static;
+    position: initial;
+    position: unset;
+  }
+}
+@media not all and (min-width: 90em) {
+  .c-Permalink-nP {
+    margin-left: 1rem;
+    font-weight: 100;
+  }
+  h1:hover > .c-Permalink-nP,
+  h2:hover > .c-Permalink-nP,
+  h3:hover > .c-Permalink-nP,
+  h4:hover > .c-Permalink-nP,
+  h5:hover > .c-Permalink-nP,
+  h6:hover > .c-Permalink-nP {
+    position: static;
+    position: initial;
+    position: unset;
   }
 }
 /*################################*\

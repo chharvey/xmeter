@@ -59,22 +59,3 @@
 .docs-form {
   background-color: #fff;
 }
-
-
-.docs-_fragid {
-  display: inline; // override `a` base styles
-  line-height: 0;  // override `a` base styles
-  margin-left: 1rem;
-  font-weight: 100;
-  &::before {
-    content: '';
-  }
-}
-h1, h2, h3, h4, h5, h6 {
-  &:hover > .docs-_fragid::before {
-    content: '\00a7'; // §
-  }
-}
-.docs-_fragid:focus::before {
-  content: '\00a7'; // §
-}
