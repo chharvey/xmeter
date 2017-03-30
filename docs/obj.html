@@ -16,7 +16,15 @@ If overridden, the extra space (if any) will be distributed <em>between</em> the
   &lt;li class="o-List__Item  <u>o-Flex__Item</u>"&gt;Burns &amp; McDonnell Engineering&lt;/li&gt;
   &lt;li class="o-List__Item  <u>o-Flex__Item</u>"&gt;DIS-TRAN Steel, LLC&lt;/li&gt;
   ...
-&lt;/ul&gt;</pre><figcaption>A Flex Object with not enough space.</figcaption></figure></section><section id="grid-object"><h2>The Grid Object<a class="c-Permalink h-Inline h-Hidden" href="#grid-object" aria-label="permalink">&sect;</a></h2><p>The Grid Object is similar to the Flex Object except that it can be extended
+&lt;/ul&gt;</pre><figcaption>A Flex Object with not enough space.</figcaption></figure></section><section id="grid-object"><h2>The Grid Object<a class="c-Permalink h-Inline h-Hidden" href="#grid-object" aria-label="permalink">&sect;</a></h2><div style="width:75%;margin-left:auto;margin-right:auto;padding:calc(var(--vru) / 2) 1rem;background-color:#ff4b33;color:#222"><p><strong>WARNING: This Object is DEPRECATED</strong>. <br>
+The Grid Object will be repurposed in version 6, with the new
+<a href="https://www.w3.org/TR/css-grid-1/">CSS Grid specifications</a>.
+If you use <code class="docs-code">.o-Grid</code> in your code, it will no longer work with
+Flexbox-related properties after v6.0.0. You can prepare for this change by updating
+your codebase and modifying this object. This is what it will look like:</p><pre class="docs-pre">.o-Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}</pre></div><p>The Grid Object is similar to the Flex Object except that it can be extended
 to two dimensions.
 It has the structure of a list in that all items share the same container
 (unlike tables where cells might not share the same row), while at the same time
