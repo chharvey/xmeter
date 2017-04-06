@@ -374,28 +374,26 @@ input {
   padding: 0 0.25rem;
 }
 
-textarea,
 input,
+button {
+  font-size: inherit; // undo browser default
+}
+
+input,
+button,
 select,
-button,
-optgroup {
-  // undo Normalize
-  font-family: inherit;
-}
-
-input,
-button,
-optgroup {
-  // undo Normalize
-  font-size: inherit;
-  line-height: inherit;
-}
-
-fieldset,
 textarea {
+  line-height: inherit; // undo browser default
+}
+
+fieldset {
   .border-vert(all; 1px);
   border-style: solid;
   border-color: @p-color_gray;
+  // NOTE cannot use box-shadow hack due to shadow covering <legend>
+}
+textarea {
+  box-shadow: 0 0 0 1px @p-color_gray; // HACK vertical border hack
 }
 
 input,
@@ -410,8 +408,6 @@ textarea {
   height: 6 * @g-vru; // HACK fallback
   height: calc(~'6 * var(--vru)');
   .font-size-mod(@g-font_size_mill);
-  line-height: @g-line_height; // HACK fallback
-  line-height: var(--line-height); // override browser default and Normalize
 }
 
 label {
