@@ -381,9 +381,9 @@ button {
 
 input,
 button,
-optgroup {
-  // undo Normalize
-  line-height: inherit;
+select,
+textarea {
+  line-height: inherit; // undo browser default
 }
 
 fieldset,
@@ -405,8 +405,6 @@ textarea {
   height: 6 * @g-vru; // HACK fallback
   height: calc(~'6 * var(--vru)');
   .font-size-mod(@g-font_size_mill);
-  line-height: @g-line_height; // HACK fallback
-  line-height: var(--line-height); // override browser default and Normalize
 }
 
 label {
