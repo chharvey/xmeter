@@ -386,11 +386,14 @@ textarea {
   line-height: inherit; // undo browser default
 }
 
-fieldset,
-textarea {
+fieldset {
   .border-vert(all; 1px);
   border-style: solid;
   border-color: @p-color_gray;
+  // NOTE cannot use box-shadow hack due to shadow covering <legend>
+}
+textarea {
+  box-shadow: 0 0 0 1px @p-color_gray; // HACK vertical border hack
 }
 
 input,
