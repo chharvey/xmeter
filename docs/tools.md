@@ -17,7 +17,10 @@ Watch out for changes.**
 1. [Table of Contents](#table-contents)
 - [Fallbacks](#fallbacks)
   1. [box-sizing](#box-sizing)
+  - [The Multicol Tools](#multicol-tools)
   - [The Flexbox Tools](#flexbox-tools)
+  - [The CSS Grid Tools](#css-grid-tools)
+  - [CSS3 Align Tools](#css3-align-tools)
   - [transform](#transform)
   - [transform-origin](#transform-origin)
   - [column-count](#column-count)
@@ -39,6 +42,24 @@ Watch out for changes.**
 @import (reference) url('/node_modules/xmeter/src/__fallback.box-sizing.less');
 .your-class {
   .box-sizing([!content-box | border-box]?);
+}
+```
+
+### Multicol Tools
+
+#### column-count
+```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.column-count.less');
+.your-class {
+  .column-count([!auto | <integer>]?);
+}
+```
+
+#### column-width
+```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.column-width.less');
+.your-class {
+  .column-width([!auto | <length>]?);
 }
 ```
 
@@ -126,22 +147,6 @@ See [CSS Grid](https://www.w3.org/TR/css-grid-1/) for syntax.
 // <offset_x>   == [<percentage> | <length> | left | center | right ]:50%
 // <offset_y>   == [<percentage> | <length> | top  | center | bottom]:50%
 // <offset_z>   == [<length>]:0
-```
-
-### column-count
-```less
-@import (reference) url('/node_modules/xmeter/src/__fallback.column-count.less');
-.your-class {
-  .column-count([!auto | <integer>]?);
-}
-```
-
-### column-width
-```less
-@import (reference) url('/node_modules/xmeter/src/__fallback.column-width.less');
-.your-class {
-  .column-width([!auto | <length>]?);
-}
 ```
 
 ### filter
