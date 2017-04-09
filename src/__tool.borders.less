@@ -8,14 +8,26 @@
 // vertical rhythm intact when adding border widths (by slightly adjusting position and margins).
 // Do *not* use these mixins on INLINE Objects!
 //
-// Note: This mixin affects border width only (for structure). It does not affect cosmetics,
-//       i.e., border style or color. To change these, you must include the `border-style` and
-//       `border-color` properties after including this mixin.
+// NOTE: This mixin affects border width only (for structure). It does not affect cosmetics,
+// i.e., border style or color. To change these, you must include the `border-style` and
+// `border-color` properties after including this mixin.
 //
-// `.border-vert(top; ...)`    - adjust the top border
-// `.border-vert(bottom; ...)` - adjust the bottom border
-// `.border-vert(topbot; ...)` - adjust both the top and bottom borders
-// `.border-vert(all; ...)`    - adjust all four borders
+// ```
+// .border-vert(top   ; <length>); // adjust the top border
+// .border-vert(bottom; <length>); // adjust the bottom border
+// .border-vert(topbot; <length>); // adjust both the top and bottom borders
+// .border-vert(all   ; <length>); // adjust all four borders
+// ```
+//
+// NOTE: In place of `.border-vert(all; ...)`, you may use a hack involving `box-shadow` to create
+// an effective border around an element, without using this tool and thus affecting the element’s
+// `margin-top` value.
+// The box-shadow must be outset, have an offset-x of 0, an offset-y of 0, a blur of 0,
+// a spread of `<length>` (the effective border-width), and a color of `<color>` (the effective border-color).
+// The color must be specified in the same declaration, and the effective border-style will always be solid.
+// ```
+// box-shadow: 0 0 0 <length> <color>;
+// ```
 //
 // @width - (optional: `0`) value of `border-width`
 // ^author
