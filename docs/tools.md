@@ -197,10 +197,10 @@ in the same declaration, and the effective border-style cannot be specified; it 
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.border-radius.less');
 .your-class {
-  .border-left-radius(<length>?:0);
-  .border-right-radius(<length>?:0);
-  .border-top-radius(<length>?:0);
-  .border-bottom-radius(<length>?:0);
+  .border-left-radius  (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-right-radius (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-top-radius   (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-bottom-radius(<radius_h>?:0 <radius_v>?:<radius_h>);
 }
 ```
 
