@@ -57,17 +57,18 @@ html {
 // Vertical spacing between typographical blocks
 // NOTE: `textarea` is inline by default but overriding here: should be block (opinionated)
 .vertspacing(); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
-h1, h2, h3, h4, h5, h6,
-p, pre, figure, blockquote,
-ol, ul, dl,
-table,
-fieldset, textarea,
-details {
-  margin-bottom: var(--vru);
-}
-h1 {
-  padding-top: var(--vru);
-}
+// TODO uncomment the ruleset below once `.vertspacing();` is removed
+// h1, h2, h3, h4, h5, h6,
+// p, pre, figure, blockquote,
+// ol, ul, dl,
+// table,
+// form, fieldset, textarea,
+// details {
+//   margin-bottom: var(--vru);
+// }
+// h1 {
+//   padding-top: var(--vru);
+// }
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
