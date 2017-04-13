@@ -10,14 +10,8 @@
 // Parameters in mixins shall not use any prefixes.
 
 // vertical rhythm
-@g-1rem: 16px; // a shortcut variable used for fallbacks where rems aren’t supported
-// where are rems not supported?
-// - IE8 and below, and
-// - IE9 and IE10 on the `font` shorthand property and on pseudo-elements/classes
-
 @g-line_height: 1.5;
-@g-vru_px: (@g-line_height * @g-1rem); // fallback for @g-vru, which is in rems
-@g-vru:    (@g-line_height *  1rem);
+@g-vru: (@g-line_height * 1rem); // HACK fallback. use `var(--vru)` if supported.
 
 
 // new global font sizes as of 2016-08-17
