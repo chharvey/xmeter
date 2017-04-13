@@ -366,7 +366,6 @@ br {
 
 fieldset {
   padding: 0 1rem;
-  margin-left: 0; margin-right: 0; // undo Normalize
 }
 
 textarea,
@@ -429,11 +428,6 @@ button {
 
 select[multiple] > optgroup > option {
   padding-left: 1rem;
-}
-
-// Override content-box in Normalize (* in base.generic isn’t specific enough)
-input[type="search"] {
-  box-sizing: border-box;
 }
 //++++ end # FORMS ++++//
 
