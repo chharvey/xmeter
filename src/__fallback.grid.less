@@ -27,37 +27,37 @@
   display:     grid;
 }
 
-.grid-template-columns(@arg) {
+.grid-template-columns(@arg: none) {
   -ms-grid-template-columns: @arg;
       grid-template-columns: @arg;
 }
-.grid-template-rows(@arg) {
+.grid-template-rows(@arg: none) {
   -ms-grid-template-rows: @arg;
       grid-template-rows: @arg;
 }
-.grid-template-areas(@arg) {
+.grid-template-areas(@arg: none) {
   -ms-grid-template-areas: @arg;
       grid-template-areas: @arg;
 }
 
-.grid-column-gap(@arg) {
+.grid-column-gap(@arg: 0) {
   -ms-grid-column-gap: @arg;
       grid-column-gap: @arg;
 }
-.grid-row-gap(@arg) {
+.grid-row-gap(@arg: 0) {
   -ms-grid-row-gap: @arg;
       grid-row-gap: @arg;
 }
-.grid-gap(@arg) {
+.grid-gap(@arg: 0) {
   -ms-grid-gap: @arg;
       grid-gap: @arg;
 }
 
-.grid-auto-columns(@arg) {
+.grid-auto-columns(@arg: auto) {
   -ms-grid-auto-columns: @arg;
       grid-auto-columns: @arg;
 }
-.grid-auto-rows(@arg) {
+.grid-auto-rows(@arg: auto) {
   -ms-grid-auto-rows: @arg;
       grid-auto-rows: @arg;
 }
@@ -84,33 +84,33 @@
 //++++++++++++++++++++++++++++++++//
 //    # ITEMS
 //++++++++++++++++++++++++++++++++//
-.grid-column-start(@arg) {
+.grid-column-start(@arg: auto) {
   -ms-grid-column-start: @arg;
       grid-column-start: @arg;
 }
-.grid-column-end(@arg) {
+.grid-column-end(@arg: auto) {
   -ms-grid-column-end: @arg;
       grid-column-end: @arg;
 }
-.grid-column(@arg) {
+.grid-column(@arg: auto) {
   -ms-grid-column: @arg;
       grid-column: @arg;
 }
 
-.grid-row-start(@arg) {
+.grid-row-start(@arg: auto) {
   -ms-grid-row-start: @arg;
       grid-row-start: @arg;
 }
-.grid-row-end(@arg) {
+.grid-row-end(@arg: auto) {
   -ms-grid-row-end: @arg;
       grid-row-end: @arg;
 }
-.grid-row(@arg) {
+.grid-row(@arg: auto) {
   -ms-grid-row: @arg;
       grid-row: @arg;
 }
 
-.grid-area(@arg) {
+.grid-area(@arg: auto) {
   -ms-grid-area: @arg;
       grid-area: @arg;
 }
