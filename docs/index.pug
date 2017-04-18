@@ -4,6 +4,6 @@ block append vars
   - var page = Docs.DOCS.find('/docs/index.html')
 
 block toc
-  nav#table-contents
-    h2 Table of Contents
+  nav#contents
+    h2 Contents
     +doctoc({pages: Docs.DOCS.findAll(), depth: Infinity})

@@ -46,6 +46,6 @@ html(lang="en")
           h1= page.name()
           p= page.description()
           block toc
-            nav#table-contents
-              h2 Table of Contents
+            nav#contents
+              h2 Contents
               +doctoc({pages: page.findAll(), depth: Infinity})
