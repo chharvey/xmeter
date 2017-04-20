@@ -46,9 +46,11 @@
   position: relative;
   margin-left: 1rem;
   margin-right: 1rem;
+  /*
   .border-vert(all; 1px);
   border-style: solid;
   border-color: #ddd;
+  */ box-shadow: 0 0 0 1px #ddd; // HACK vertical border hack
   border-radius: 0.5rem;
   background-color: #eee;
   overflow: auto;
@@ -58,4 +60,24 @@
 }
 .docs-form {
   background-color: #fff;
+}
+
+body > a:last-of-type {
+  // TODO use a class instead
+  position: fixed;
+  bottom: var(--vru);
+  right: 1rem;
+}
+
+@media screen and (min-width: 60em) {
+  body {
+    width: 75%;
+  }
+  #contents {
+    position: fixed;
+    top: 0; bottom: 0;
+    right: 0;
+    width: 25%;
+    overflow: auto;
+  }
 }

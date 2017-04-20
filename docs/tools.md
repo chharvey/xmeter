@@ -17,7 +17,10 @@ Watch out for changes.**
 1. [Table of Contents](#table-contents)
 - [Fallbacks](#fallbacks)
   1. [box-sizing](#box-sizing)
+  - [The Multicol Tools](#multicol-tools)
   - [The Flexbox Tools](#flexbox-tools)
+  - [The CSS Grid Tools](#css-grid-tools)
+  - [CSS3 Align Tools](#css3-align-tools)
   - [transform](#transform)
   - [transform-origin](#transform-origin)
   - [column-count](#column-count)
@@ -39,6 +42,24 @@ Watch out for changes.**
 @import (reference) url('/node_modules/xmeter/src/__fallback.box-sizing.less');
 .your-class {
   .box-sizing([!content-box | border-box]?);
+}
+```
+
+### Multicol Tools
+
+#### column-count
+```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.column-count.less');
+.your-class {
+  .column-count([!auto | <integer>]?);
+}
+```
+
+#### column-width
+```less
+@import (reference) url('/node_modules/xmeter/src/__fallback.column-width.less');
+.your-class {
+  .column-width([!auto | <length>]?);
 }
 ```
 
@@ -128,22 +149,6 @@ See [CSS Grid](https://www.w3.org/TR/css-grid-1/) for syntax.
 // <offset_z>   == [<length>]:0
 ```
 
-### column-count
-```less
-@import (reference) url('/node_modules/xmeter/src/__fallback.column-count.less');
-.your-class {
-  .column-count([!auto | <integer>]?);
-}
-```
-
-### column-width
-```less
-@import (reference) url('/node_modules/xmeter/src/__fallback.column-width.less');
-.your-class {
-  .column-width([!auto | <length>]?);
-}
-```
-
 ### filter
 ```less
 @import (reference) url('/node_modules/xmeter/src/__fallback.filter.less');
@@ -164,21 +169,38 @@ See [CSS Grid](https://www.w3.org/TR/css-grid-1/) for syntax.
 ```
 
 ### borders
+Use this tool to create borders on the top side, the bottom side, both top and bottom sides,
+or all 4 sides on a box, while preserving vertical rhythm. This tool subtracts a length from
+the `margin-top` of the box, equal to the sum of the widths of the box’s top and bottom borders,
+so that subsequent elements will not be pushed down the page.
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.borders.less');
 .your-class {
   .border-vert([top | bot | topbot | all]; <length>?:0);
 }
 ```
+#### Box-Shadow Hack
+**Note**: You may use a hack involving `box-shadow` to create a border around all 4 sides,
+which will not affect vertical rhythm. The box-shadow must be outset, have an offset-x of 0,
+an offset-y of 0, a blur of 0, and a spread of `<length>`, which is the effective border width.
+```less
+.your-class {
+  // .border-vert(all; <length>); // using box-shadow instead
+  box-shadow 0 0 0 <length> <color>;
+}
+```
+There are a few limitations of this hack: it can only be used in the case of `.border-vert(all)`,
+because the box shadow must appear on all 4 sides. The effective border color must be provided
+in the same declaration, and the effective border-style cannot be specified; it will always be solid.
 
 ### border-radius
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.border-radius.less');
 .your-class {
-  .border-left-radius(<length>?:0);
-  .border-right-radius(<length>?:0);
-  .border-top-radius(<length>?:0);
-  .border-bottom-radius(<length>?:0);
+  .border-left-radius  (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-right-radius (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-top-radius   (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-bottom-radius(<radius_h>?:0 <radius_v>?:<radius_h>);
 }
 ```
 
