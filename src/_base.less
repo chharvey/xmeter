@@ -159,7 +159,7 @@ hr {
   }
   pre {
     .font-size-el(@g-font_size_mill);
-    text-align: left;
+    text-align: left; // code blocks are always aligned left, regardless of writing mode
     text-indent: 0;
     white-space: pre;
     overflow: auto;
@@ -215,7 +215,7 @@ hr {
   table {
     max-width: 100%; // fluid tables for responsive purposes
     border-collapse: collapse;
-    text-align: left; // fix browser bug
+    text-align: left; // FIXME fix browser bug... which? file an issue!
   }
   caption {
     text-align: center;
