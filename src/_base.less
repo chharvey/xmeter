@@ -35,13 +35,18 @@
   &::before,
   &::after {
     box-sizing: border-box;
-    border: 0 solid; // reset browser default border
     content: none;
     @media print {
       background: transparent !important;
       box-shadow: none !important;
       text-shadow: none !important;
     }
+  }
+  &:not(input):not(select):not(button),
+  // &:not(input, select, button),
+  &::before,
+  &::after {
+    border: 0 solid; // reset browser default border
   }
 }
 
@@ -377,11 +382,6 @@ input {
 }
 
 input,
-button {
-  font-size: inherit; // undo browser default
-}
-
-input,
 button,
 select,
 textarea {
@@ -398,12 +398,6 @@ textarea {
   box-shadow: 0 0 0 1px @p-color_gray; // HACK vertical border hack
 }
 
-input,
-select,
-button {
-  border: 1px solid @p-color_gray;
-}
-
 textarea {
   display: block; // override browser default
   width: 30rem;
@@ -417,6 +411,7 @@ label {
 }
 
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+// input:not([type="button"], [type="reset"], [type="submit"]),
 select {
   font-size: @g-font_size_mill * 1em;
 }
@@ -426,7 +421,6 @@ input[type="reset"],
 input[type="submit"],
 button {
   padding: 0.125em 0.25em;
-  background-color: @p-color_gray;
 }
 
 select[multiple] > optgroup > option {
