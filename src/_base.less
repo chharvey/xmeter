@@ -34,8 +34,9 @@
   &,
   &::before,
   &::after {
-    box-sizing: border-box;
     content: none;
+    box-sizing: border-box;
+    column-rule: 0 solid; // change initial column-rule from `medium none`
     @media print {
       background: transparent !important;
       box-shadow: none !important;
@@ -46,7 +47,7 @@
   // &:not(input, select, button),
   &::before,
   &::after {
-    border: 0 solid; // reset browser default border
+    border: 0 solid; // change initial border from `medium none`
   }
 }
 
