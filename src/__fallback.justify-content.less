@@ -13,9 +13,10 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-03-19
+// : 2017-06-02
 .justify-content(@justify: normal) {
-  -webkit-justify-content: @justify;
+         -webkit-box-pack: @justify;
+            -ms-flex-pack: @justify;
       -ms-justify-content: @justify;
           justify-content: @justify;
 }
