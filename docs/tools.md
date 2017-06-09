@@ -35,6 +35,11 @@ Watch out for changes.**
   - [sprite](#sprite)
 
 ## Fallbacks
+**NOTE!** *DEPRECATED* CHANGED!
+
+All fallback mixins are now deprecated.
+The fallback mixins below are available, but support will be dropped; they should not be relied upon.
+Use plain CSS instead, and install [Autoprefixer](https://github.com/postcss/autoprefixer) in your project.
 
 ### box-sizing
 **NOTE!** *DEPRECATED* CHANGED: use plain CSS `box-sizing` property instead.
