@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.6.1
+    Version: 5.6.2
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -13,7 +13,8 @@
 
 
 body {
-  text-align: left;
+  text-align: start; /* HACK fallback */
+  text-align: initial; /* fix unsupported browsers initial value */
   background: #fff;
   color: #000;
 }
@@ -535,9 +536,9 @@ template {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  border: 0 solid;
   content: none;
+  box-sizing: border-box;
+  column-rule: 0 solid;
 }
 @media print {
   *,
@@ -547,6 +548,11 @@ template {
     box-shadow: none !important;
     text-shadow: none !important;
   }
+}
+*:not(input):not(select):not(button),
+*::before,
+*::after {
+  border: 0 solid;
 }
 html {
   --line-height: 1.5;
@@ -604,11 +610,6 @@ kbd,
 samp,
 label {
   line-height: 0;
-}
-a,
-ins,
-del {
-  display: contents;
 }
 h1,
 h2,
@@ -811,10 +812,6 @@ input {
   padding: 0 0.25rem;
 }
 input,
-button {
-  font-size: inherit;
-}
-input,
 button,
 select,
 textarea {
@@ -828,11 +825,6 @@ fieldset {
 }
 textarea {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-}
-input,
-select,
-button {
-  border: 1px solid rgba(0, 0, 0, 0.25);
 }
 textarea {
   display: block;
@@ -882,7 +874,6 @@ input[type="reset"],
 input[type="submit"],
 button {
   padding: 0.125em 0.25em;
-  background-color: rgba(0, 0, 0, 0.25);
 }
 select[multiple] > optgroup > option {
   padding-left: 1rem;
@@ -1014,17 +1005,16 @@ summary {
   display: -ms-box;
   display: -webkit-flexbox;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   line-height: inherit;
-  -webkit-justify-content: space-between;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
 }
 .o-Flex__Item {
   -webkit-box-flex: auto;
-  -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
 }
@@ -1034,17 +1024,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-s {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1055,17 +1044,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-p {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1076,17 +1064,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sK {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1097,17 +1084,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sM {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1118,17 +1104,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sG {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1139,17 +1124,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sT {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1160,17 +1144,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-sP {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1181,17 +1164,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsK {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1202,17 +1184,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsM {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1223,17 +1204,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsG {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1244,17 +1224,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsT {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1265,17 +1244,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nsP {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1286,17 +1264,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nK {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1307,17 +1284,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nM {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1328,17 +1304,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nG {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1349,17 +1324,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nT {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1370,17 +1344,16 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
     -ms-justify-content: space-between;
     justify-content: space-between;
   }
   .o-Flex__Item-nP {
     -webkit-box-flex: auto;
-    -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
   }
@@ -1393,17 +1366,14 @@ summary {
   display: -ms-box;
   display: -webkit-flexbox;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   line-height: inherit;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .o-Grid__Item {
   -webkit-box-flex: 100%;
-  -webkit-flex: 100%;
   -ms-flex: 100%;
   flex: 100%;
 }
@@ -1413,17 +1383,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-s {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1434,17 +1401,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-p {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1455,17 +1419,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sK {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1476,17 +1437,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sM {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1497,17 +1455,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sG {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1518,17 +1473,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sT {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1539,17 +1491,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-sP {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1560,17 +1509,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsK {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1581,17 +1527,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsM {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1602,17 +1545,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsG {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1623,17 +1563,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsT {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1644,17 +1581,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nsP {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1665,17 +1599,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nK {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1686,17 +1617,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nM {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1707,17 +1635,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nG {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1728,17 +1653,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nT {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
@@ -1749,17 +1671,14 @@ summary {
     display: -ms-box;
     display: -webkit-flexbox;
     display: -ms-flexbox;
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     line-height: inherit;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .o-Grid__Item-nP {
     -webkit-box-flex: 100%;
-    -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
   }
