@@ -13,9 +13,10 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-03-20
+// : 2017-06-02
 .align-items(@align: normal) {
-  -webkit-align-items: @align;
+    -webkit-box-align: @align;
+       -ms-flex-align: @align;
       -ms-align-items: @align;
           align-items: @align;
 }

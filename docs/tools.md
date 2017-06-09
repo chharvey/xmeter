@@ -180,17 +180,44 @@ so that subsequent elements will not be pushed down the page.
 }
 ```
 #### Box-Shadow Hack
-**Note**: You may use a hack involving `box-shadow` to create a border around all 4 sides,
-which will not affect vertical rhythm. The box-shadow must be outset, have an offset-x of 0,
+**Tip:** You may use a hack involving `box-shadow` to emulate a border that won’t affect
+vertical rhythm. Borders add to the box’s height, which slightly but noticeably
+move subsequent content down the page, messing with typographical grid lines. Box shadows,
+on the other hand, do not affect the box’s height, so you can apply one without
+having to reposition the box or changing its top margin.
+
+Note that this hack is similar to using the `outline` property, except that
+[`outline` behaves slightly differently](https://css-tricks.com/almanac/properties/o/outline/).
+
+There are two ways you can use this hack:
+to emulate borders on all 4 sides, or to emulate a top (or bottom) border.
+
+To emulate a border on all sides, the box-shadow must be outset, have an offset-x of 0,
 an offset-y of 0, a blur of 0, and a spread of `<length>`, which is the effective border width.
 ```less
-.your-class {
+.border-all {
   // .border-vert(all; <length>); // using box-shadow instead
   box-shadow 0 0 0 <length> <color>;
 }
 ```
-There are a few limitations of this hack: it can only be used in the case of `.border-vert(all)`,
-because the box shadow must appear on all 4 sides. The effective border color must be provided
+To emulate a top or bottom border, use outset, offset-x 0, offset-y `<length>`, blur 0, and spread 0.
+The shadow will emulate a border-bottom if `<length>` is positive, or border-top if negative.
+```less
+.border-bottom {
+  // .border-vert(bottom; <length>); // using box-shadow instead
+  box-shadow 0 <length> 0 0 <color>;
+}
+.border-top {
+  // .border-vert(top; <length>); // using box-shadow instead
+  box-shadow 0 -<length> 0 0 <color>;
+}
+```
+
+**Sub-Tip:** Use `inset` to keep the box-shadow constrained within the bounds of the box’s `box-sizing`.
+
+There are a few limitations of this hack: it cannot be used in the case of `.border-vert(topbot)`,
+because you can’t get the box shadow to appear only on opposing sides.
+The effective border color must be provided
 in the same declaration, and the effective border-style cannot be specified; it will always be solid.
 
 ### border-radius
