@@ -265,6 +265,16 @@ in the same declaration, and the effective border-style cannot be specified; it 
 }
 ```
 
+### transitions
+```less
+@import (reference) url('/node_modules/xmeter/src/__tool.transitions.less');
+.your-class {
+  .transitions(<single-transition-property>#; <time>#; <timing-function>#; <time>#);
+  // example:
+  .transitions(color, background-color, border-color; 500ms; ease-in-out);
+}
+```
+
 ### sprite
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.sprite.less');
