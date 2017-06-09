@@ -34,14 +34,20 @@
   &,
   &::before,
   &::after {
-    box-sizing: border-box;
-    border: 0 solid; // fix initial values of border-width (`medium`) & border-style (`none`)
     content: none;
+    box-sizing: border-box;
+    column-rule: 0 solid; // change initial column-rule from `medium none`
     @media print {
       background: transparent !important;
       box-shadow: none !important;
       text-shadow: none !important;
     }
+  }
+  &:not(input):not(select):not(button),
+  // &:not(input, select, button),
+  &::before,
+  &::after {
+    border: 0 solid; // change initial border from `medium none`
   }
 }
 
@@ -98,7 +104,6 @@ a, ins, del {
   //   display: inline;
   //   line-height: 0;
   // }
-  display: contents;
 }
 //++++ end # GENERIC ++++//
 
@@ -159,7 +164,7 @@ hr {
   }
   pre {
     .font-size-el(@g-font_size_mill);
-    text-align: left;
+    text-align: left; // code blocks are always aligned left, regardless of writing mode
     text-indent: 0;
     white-space: pre;
     overflow: auto;
@@ -199,6 +204,7 @@ hr {
     list-style-type: disc;
   }
   dl {
+    list-style: none; // remove counters from `dl > li`
   }
   li {
   }
@@ -214,7 +220,7 @@ hr {
   table {
     max-width: 100%; // fluid tables for responsive purposes
     border-collapse: collapse;
-    text-align: left; // fix browser bug
+    text-align: left; // FIXME fix browser bug... which? file an issue!
   }
   caption {
     text-align: center;
@@ -376,11 +382,6 @@ input {
 }
 
 input,
-button {
-  font-size: inherit; // undo browser default
-}
-
-input,
 button,
 select,
 textarea {
@@ -397,12 +398,6 @@ textarea {
   box-shadow: 0 0 0 1px @p-color_gray; // HACK vertical border hack
 }
 
-input,
-select,
-button {
-  border: 1px solid @p-color_gray;
-}
-
 textarea {
   display: block; // override browser default
   width: 30rem;
@@ -416,6 +411,7 @@ label {
 }
 
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+// input:not([type="button"], [type="reset"], [type="submit"]),
 select {
   font-size: @g-font_size_mill * 1em;
 }
@@ -425,7 +421,6 @@ input[type="reset"],
 input[type="submit"],
 button {
   padding: 0.125em 0.25em;
-  background-color: @p-color_gray;
 }
 
 select[multiple] > optgroup > option {

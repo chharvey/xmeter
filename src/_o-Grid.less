@@ -2,7 +2,6 @@
 /*################################*\
     xmeter  |  _o-Grid.less
 \*################################*/
-@import (reference) url('__fallback.grid.less');
 
 
 // A two-dimensional grid container of grid items.
@@ -14,10 +13,11 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2017-03-29
+// : 2017-06-09
 .o-Grid {
-  .grid();
-  .grid-template-columns(1fr);
+  display: grid;
+  line-height: inherit; // override lh-z on text-level elements
+  grid-template-columns: 1fr;
 }
 
 .o-Grid__Item {

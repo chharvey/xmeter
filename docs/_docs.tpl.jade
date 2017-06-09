@@ -24,7 +24,7 @@ html(lang="en")
       block
   block vars
   head
-    title= page.title() || (page.name() + ' | ' + Docs.DOCS.name())
+    title= page.title() || `${page.name()} | ${Docs.DOCS.name()}`
     meta(charset="utf-8")
     meta(name="description" content=Docs.DOCS.description())
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -32,7 +32,7 @@ html(lang="en")
       //- link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.9.0/bangs.min.css")
       link(rel="stylesheet" href="../xmeter.css")
       link(rel="stylesheet" href="styles/docs.css")
-  body.docs-body
+  body.docs-body#top
     a.h-Hidden(href="#main") skip to main content
     header
       h1= Docs.DOCS.name()
@@ -46,6 +46,7 @@ html(lang="en")
           h1= page.name()
           p= page.description()
           block toc
-            nav#table-contents
-              h2 Table of Contents
+            nav#contents
+              h2 Contents
               +doctoc({pages: page.findAll(), depth: Infinity})
+    a(href="#top") jump to top

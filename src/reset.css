@@ -5,7 +5,8 @@
 
 
 body {
-  text-align: left;
+  text-align: start; /* HACK fallback */
+  text-align: initial; /* fix unsupported browsers initial value */
   background: #fff;
   color: #000;
 }

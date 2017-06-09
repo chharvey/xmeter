@@ -1,0 +1,32 @@
+
+/*################################*\
+    xmeter  |  __tool.transitions.less
+\*################################*/
+@import (reference) url('__fallback.transition.less');
+
+
+// Applies individual longhand transition-* properties on an element.
+// Each parameter must be a list of (zero or more) comma-separated values.
+// The default value of each parameter is the default value of its
+// corresponding longhand css property.
+//
+// ^params
+// : @props - (default: `all`)  the CSS property name(s)
+// : @dura  - (default: `0ms`)  the length(s) in time, in milliseconds, the transition is to be in effect
+// : @func  - (default: `ease`) the timing-function(s). See `https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function`
+// : @delay - (default: `0ms`)  the length(s) in time, in milliseconds, the transition will wait before starting
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-05-18
+.transitions(@props: all; @dura: 0ms; @func: ease; @delay: 0ms) {
+  .transition-property(@props);
+  .transition-duration(@dura);
+  .transition-timing-function(@func);
+  .transition-delay(@delay);
+  // CHANGED the above calls are DEPRECATED. uncomment below when above is removed.
+  // transition-property: @props;
+  // transition-duration: @dura;
+  // transition-timing-function: @func;
+  // transition-delay: @delay;
+}

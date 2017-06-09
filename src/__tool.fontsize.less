@@ -25,7 +25,7 @@
   font-size: (@ratio * 1rem);
   // line-height: inherit; // NOTE clarification
   & > * {
-    --vru: calc(~'var(--line-height) * ' @ratio*1rem);
+    --vru: calc(@ratio ~' * var(--line-height) * 1rem'); // @ratio * parent vru
   }
   .vertspacing(@l-vru); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
 }

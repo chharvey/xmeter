@@ -1,4 +1,12 @@
 
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// CHANGED: DEPRECATED. use **Autoprefixer** instead.
+///////////////////////////////////////////////////////////////////////////////
+
 /*################################*\
     xmeter  |  __fallback.flexbox.less
 \*################################*/
@@ -23,7 +31,7 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-09-03
+// : 2017-06-02
 .flexbox() {
   display: -webkit-box;
   display:     -ms-box;
@@ -31,7 +39,6 @@
   display: -webkit-flexbox;
   display:     -ms-flexbox;
 
-  display: -webkit-flex;
   display:     -ms-flex;
   display:         flex;
 }
@@ -46,9 +53,10 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-02-12
+// : 2017-06-02
 .flex-direction(@direction: row) {
-  -webkit-flex-direction: @direction;
+      -webkit-box-orient: @direction;
+   -webkit-box-direction: @direction;
       -ms-flex-direction: @direction;
           flex-direction: @direction;
 }
@@ -62,9 +70,8 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-02-12
+// : 2017-06-02
 .flex-wrap(@wrap: nowrap) {
-  -webkit-flex-wrap: @wrap;
       -ms-flex-wrap: @wrap;
           flex-wrap: @wrap;
 }
@@ -81,11 +88,10 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-09-03
+// : 2017-06-02
 .flex-order(@integer: 0) {
   -webkit-box-ordinal-group: @integer;
              -ms-flex-order: @integer;
-              -webkit-order: @integer;
                       order: @integer;
 }
 
@@ -135,10 +141,9 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2015-09-03
+// : 2017-06-02
 .flex(@arg: 0 1 auto) {
   -webkit-box-flex: @arg;
-      -webkit-flex: @arg;
           -ms-flex: @arg;
               flex: @arg;
 }
