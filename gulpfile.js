@@ -18,3 +18,9 @@ gulp.task('lessc:docs', function () {
     .pipe(less())
     .pipe(gulp.dest('./docs/styles/'))
 })
+
+gulp.task('lessc:xmeter', function () {
+  return gulp.src('xmeter.less')
+    .pipe(less())
+    .pipe(gulp.dest('./'))
+})

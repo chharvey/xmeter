@@ -9,17 +9,14 @@
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
-    "less": "^2.7.1",
     "normalize.css": "^6.0.0",
     "sitepage": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lessc:xmeter": "lessc xmeter.less xmeter.css",
-    "lessc:all": "npm run lessc:xmeter",
     "minify": "cleancss xmeter.css -o xmeter.min.css",
     "unbuild": "rm docs/{index,base,obj,comp,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css",
-    "build": "npm run lessc:all  &&  npm run minify"
+    "build": "npm run minify"
   },
   "repository": {
     "type": "git",
