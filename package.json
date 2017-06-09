@@ -5,18 +5,18 @@
   "main": "xmeter.css",
   "dependencies": {},
   "devDependencies": {
-    "clean-css": "^3.4.17",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
     "normalize.css": "^6.0.0",
     "sitepage": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minify": "cleancss xmeter.css -o xmeter.min.css",
     "unbuild": "rm docs/{index,base,obj,comp,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css",
-    "build": "npm run minify"
+    "build": ""
   },
   "repository": {
     "type": "git",
