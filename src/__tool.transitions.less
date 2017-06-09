@@ -2,7 +2,6 @@
 /*################################*\
     xmeter  |  __tool.transitions.less
 \*################################*/
-@import (reference) url('__fallback.transition.less');
 
 
 // Applies individual longhand transition-* properties on an element.
@@ -18,15 +17,10 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-05-18
+// : 2017-06-09
 .transitions(@props: all; @dura: 0ms; @func: ease; @delay: 0ms) {
-  .transition-property(@props);
-  .transition-duration(@dura);
-  .transition-timing-function(@func);
-  .transition-delay(@delay);
-  // CHANGED the above calls are DEPRECATED. uncomment below when above is removed.
-  // transition-property: @props;
-  // transition-duration: @dura;
-  // transition-timing-function: @func;
-  // transition-delay: @delay;
+  transition-property: @props;
+  transition-duration: @dura;
+  transition-timing-function: @func;
+  transition-delay: @delay;
 }
