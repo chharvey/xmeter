@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "unbuild": "rm docs/{index,base,obj,comp,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css",
-    "build": ""
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",

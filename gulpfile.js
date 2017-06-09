@@ -33,3 +33,5 @@ gulp.task('minify', ['lessc:xmeter'], function () {
     .pipe(rename('xmeter.min.css')) // TODO: use a SourceMap!
     .pipe(gulp.dest('./'))
 })
+
+gulp.task('build', ['pug:docs', 'lessc:docs', 'minify'])
