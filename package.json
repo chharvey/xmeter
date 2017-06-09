@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "clean-css": "^3.4.17",
+    "gulp": "^3.9.1",
     "less": "^2.7.1",
     "normalize.css": "^6.0.0",
     "pug-cli": "^1.0.0-alpha6",
