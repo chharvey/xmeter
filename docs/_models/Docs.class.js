@@ -58,8 +58,6 @@ module.exports = (function () {
     )
     .add(new Page({ name: 'Atoms', url: '/docs/atom.html' })
       .description('Very specific classes used for creating anomalies or fixing broken styles.')
-      .add(new Page({ name: 'margin-bottom'    , url: '/docs/atom.html#margin-bottom' }))
-      .add(new Page({ name: 'padding-top'      , url: '/docs/atom.html#padding-top' }))
       .add(new Page({ name: 'font-size'        , url: '/docs/atom.html#font-size' }))
     )
 
