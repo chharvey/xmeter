@@ -35,6 +35,11 @@ Watch out for changes.**
   - [sprite](#sprite)
 
 ## Fallbacks
+**NOTE!** *DEPRECATED* CHANGED!
+
+All fallback mixins are now deprecated.
+The fallback mixins below are available, but support will be dropped; they should not be relied upon.
+Use plain CSS instead, and install [Autoprefixer](https://github.com/postcss/autoprefixer) in your project.
 
 ### box-sizing
 **NOTE!** *DEPRECATED* CHANGED: use plain CSS `box-sizing` property instead.
@@ -257,6 +262,16 @@ in the same declaration, and the effective border-style cannot be specified; it 
   .quotes-double();     // “ ”
   .guillemets-single(); // ‹ ›
   .guillemets-double(); // « »
+}
+```
+
+### transitions
+```less
+@import (reference) url('/node_modules/xmeter/src/__tool.transitions.less');
+.your-class {
+  .transitions(<single-transition-property>#; <time>#; <timing-function>#; <time>#);
+  // example:
+  .transitions(color, background-color, border-color; 500ms; ease-in-out);
 }
 ```
 
