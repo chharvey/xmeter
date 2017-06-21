@@ -43,8 +43,8 @@
       text-shadow: none !important;
     }
   }
-  &:not(input):not(select):not(button),
-  // &:not(input, select, button),
+  &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
+  // &:not(input, button, select),
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
