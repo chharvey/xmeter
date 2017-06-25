@@ -2,6 +2,7 @@ var gulp = require('gulp')
 var rename = require('gulp-rename')
 var pug = require('gulp-pug')
 var less = require('gulp-less')
+var autoprefixer = require('gulp-autoprefixer')
 var clean_css = require('gulp-clean-css')
 
 gulp.task('pug:docs', function () {
@@ -18,6 +19,10 @@ gulp.task('pug:docs', function () {
 gulp.task('lessc:docs', function () {
   return gulp.src('docs/styles/docs.less')
     .pipe(less())
+    .pipe(autoprefixer({
+      grid: true
+    , cascade: false
+    }))
     .pipe(gulp.dest('./docs/styles/'))
 })
 
@@ -26,6 +31,7 @@ gulp.task('lessc:xmeter', function () {
     .pipe(less())
     .pipe(autoprefixer({
       grid: true
+    , cascade: false
     }))
     .pipe(gulp.dest('./'))
 })
