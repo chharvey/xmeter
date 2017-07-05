@@ -1,22 +1,7 @@
 var Page = require('sitepage').Page
 
-module.exports = (function () {
-  // CONSTRUCTOR
-  /**
-   * A set of static members used for the site.
-   * Similar to a utility class.
-   * @constructor
-   */
-  function Docs() {}
-
-  // METHODS
-
-  // STATIC MEMBERS
-  /**
-   * The style guide site for this project.
-   * @type {Page}
-   */
-  Docs.DOCS = new Page({ name: 'Xmeter Style Guide', url: '/docs/' })
+const DOCS = new Page({ name: 'Xmeter Style Guide', url: '/docs/' })
+  // REVIEW indentation
     .title('Xmeter Style Guide')
     .description('A demo of Xmeter styles.')
     .add(new Page({ name: 'Home', url: '/docs/index.html' })
@@ -63,5 +48,16 @@ module.exports = (function () {
       .add(new Page({ name: 'font-size'        , url: '/docs/atom.html#font-size' }))
     )
 
-  return Docs
-})()
+/**
+ * Static class for this project’s docs.
+ * @module
+ */
+module.exports = class Docs {
+  /** @private */ constructor() {}
+
+  /**
+   * The style guide site for this project.
+   * @type {Page}
+   */
+  static get DOCS() { return DOCS }
+}
