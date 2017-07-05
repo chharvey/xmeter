@@ -9,10 +9,10 @@ var sourcemaps = require('gulp-sourcemaps')
 gulp.task('pug:docs', function () {
   return gulp.src('docs/{index,base,obj,comp,help,atom}.pug')
     .pipe(pug({
-      basedir: './'
-    , locals: {
-        Docs: require('./docs/_models/Docs.class.js')
-      }
+      basedir: './',
+      locals: {
+        Docs: require('./docs/_models/Docs.class.js'),
+      },
     }))
     .pipe(gulp.dest('./docs/'))
 })
@@ -21,8 +21,8 @@ gulp.task('lessc:docs', function () {
   return gulp.src('docs/styles/docs.less')
     .pipe(less())
     .pipe(autoprefixer({
-      grid: true
-    , cascade: false
+      grid: true,
+      cascade: false,
     }))
     .pipe(gulp.dest('./docs/styles/'))
 })
@@ -31,8 +31,8 @@ gulp.task('lessc:xmeter', function () {
   return gulp.src('xmeter.less')
     .pipe(less())
     .pipe(autoprefixer({
-      grid: true
-    , cascade: false
+      grid: true,
+      cascade: false,
     }))
     .pipe(gulp.dest('./'))
 })
