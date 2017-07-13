@@ -27,7 +27,7 @@ gulp.task('lessc:docs', function () {
     .pipe(gulp.dest('./docs/styles/'))
 })
 
-gulp.task('lessc:xmeter', function () {
+gulp.task('lessc:core', function () {
   return gulp.src('xmeter.less')
     .pipe(less())
     .pipe(autoprefixer({
@@ -37,7 +37,7 @@ gulp.task('lessc:xmeter', function () {
     .pipe(gulp.dest('./'))
 })
 
-gulp.task('minify', ['lessc:xmeter'], function () {
+gulp.task('minify', ['lessc:core'], function () {
   return gulp.src('xmeter.css')
     .pipe(sourcemaps.init())
     .pipe(clean_css())
