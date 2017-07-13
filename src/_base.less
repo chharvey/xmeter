@@ -44,7 +44,7 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select),
+  // &:not(input, button, select), // CHANGED selector not supported yet
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
@@ -184,12 +184,17 @@ hr {
   //--------------------------------//
   //    ## Lists
   //--------------------------------//
-  ol, ul, dl {
-    li > &, dt > &, dd > & {
+  ol,
+  ul,
+  dl {
+    li > &,
+    dt > &,
+    dd > & {
       margin-bottom: 0; // undo default bottom spacing for nested lists
     }
   }
-  ol, ul {
+  ol,
+  ul {
     padding: 0 0 0 4rem;
     li > &,
     dt > &,
@@ -411,7 +416,7 @@ label {
 }
 
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
-// input:not([type="button"], [type="reset"], [type="submit"]),
+// input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED selector not supported yet
 select {
   font-size: @g-font-size-mill * 1em;
 }
