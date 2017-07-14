@@ -4,13 +4,28 @@
 \*################################*/
 
 
-// Internal documentation section link.
-// Use with `.h-Inline` and `.h-Hidden`.
+// The Permalink
 //
-// ^author
-// : Chris Harvey
-// ^updated
-// : 2017-03-26
+// The Permalink Component is added to the end of a heading in a documentation system,
+// style guide, or pattern library. This Component is an internal link, and makes sections
+// within a document easy to access.
+// Use with <code>.h-Inline</code> and <code>.h-Hidden</code>.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-03-26</time></dd>
+// </dl></header>
+//
+// Markup:
+// <section id="section-title">
+//   <h1>
+//     Section Title
+//     <a class="c-Permalink h-Inline h-Hidden" href="#section-title" aria-label="permalink">&sect;</a>
+//   </h1>
+// </section>
+//
+// Weight: 1
+//
+// Styleguide Components.Permalink
 .c-Permalink {
   margin-left: 1rem;
   font-weight: 100;

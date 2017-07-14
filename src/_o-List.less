@@ -4,17 +4,30 @@
 \*################################*/
 
 
-// A simple plain, unstyled, blocky list.
-// It has no list item markers or padding.
-// If it is a typographical block element, however, it will retain
-// the margin-bottom, which is specified in `_base.generic.less`.
+// The List Object
 //
-// ^subcomponents
-// : `__Item` - any item inside the list
-// ^author
-// : Chris Harvey
-// ^updated
-// : 2017-02-09
+// A simple, plain, blocky list.
+// It removes the usual padding and list item markers accompanied by (un)ordered lists.
+// The result is a list of items, each on its own line.
+// Combine this class with other classes to create a variety of styles.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-02-09</time></dd>
+// </dl></header>
+//
+// Markup:
+// <ul class="o-List">
+//   <li class="o-List__Item">Burns &amp; McDonnell Engineering</li>
+//   <li class="o-List__Item">DIS-TRAN Steel, LLC</li>
+//   <li class="o-List__Item">EDM International</li>
+//   <li class="o-List__Item">Electrical Consultants, Inc.</li>
+//   <li class="o-List__Item">Fabrimet Inc.</li>
+//   <li class="o-List__Item">Falcon Steel Company</li>
+// </ul>
+//
+// Weight: 1
+//
+// Styleguide Objects.List
 .o-List {
   padding-left: 0;
   list-style: none;

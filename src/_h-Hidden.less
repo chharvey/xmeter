@@ -4,14 +4,24 @@
 \*################################*/
 
 
-// This helper class hides an element from visual media while leaving it
-// accessible to non-visual media such as screen readers.
-// While focused, the element returns to static position.
+// Hidden
 //
-// ^author
-// : Chris Harevy
-// ^updated
-// : 2017-02-09
+// The Hidden Helper visually hides an element while keeping it accessible
+// to non-visual media such as screen readers.
+// A <b>skip link</b> is a common example.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-02-09</time></dd>
+// </dl></header>
+//
+// Markup:
+// <a class="h-Hidden {{ modifier_class }}" href="#0">skip to main content</a>
+//
+// :focus - On focus, the element returns to static position.
+//
+// Weight: 4
+//
+// Styleguide Helpers.Hidden
 .h-Hidden {
   &:not(:focus) {
     position: absolute;
