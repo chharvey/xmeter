@@ -10,7 +10,6 @@
     "gulp-clean-css": "^3.4.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
-    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.0",
     "normalize.css": "^6.0.0",
     "sitepage": "^1.0.0"
