@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "5.7.0",
+  "version": "5.7.1",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {},
@@ -11,6 +11,7 @@
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.0",
     "normalize.css": "^6.0.0",
     "sitepage": "^1.0.0"
   },
