@@ -46,6 +46,5 @@
 // : 2016-10-01
 .font-size-el(@ratio: 1; @lines: 1) {
   font-size: (@ratio * 1em);
-  line-height: (@g-line-height / (@ratio/@lines)); // HACK fallback
   line-height: calc(~'var(--line-height) / ' (@ratio/@lines));
 }

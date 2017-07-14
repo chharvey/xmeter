@@ -51,11 +51,10 @@
 }
 
 html {
-  --line-height: @g-line-height;
+  --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
   --vru: calc(~'var(--line-height) * 1rem');
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
-  line-height: @g-line-height; // HACK fallback
   line-height: var(--line-height);
 }
 
@@ -403,7 +402,6 @@ textarea {
 textarea {
   display: block; // override browser default
   width: 30rem;
-  height: 6 * @g-vru; // HACK fallback
   height: calc(~'6 * var(--vru)');
   .font-size-mod(@g-font-size-mill);
 }
