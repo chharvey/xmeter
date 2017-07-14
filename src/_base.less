@@ -3,7 +3,6 @@
     xmeter  |  _base.less
 \*################################*/
 @import (reference) url('__settings.less');
-@import (reference) url('__tool.vertspacing.less');
 @import (reference) url('__tool.borders.less');
 @import (reference) url('__tool.fontsize.less');
 @import (reference) url('__tool.delims.less');
@@ -52,29 +51,26 @@
 }
 
 html {
-  --line-height: @g-line-height;
+  --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
   --vru: calc(~'var(--line-height) * 1rem');
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
-  line-height: @g-line-height; // HACK fallback
   line-height: var(--line-height);
 }
 
 // Vertical spacing between typographical blocks
 // NOTE: `textarea` is inline by default but overriding here: should be block (opinionated)
-.vertspacing(); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
-// TODO uncomment the ruleset below once `.vertspacing();` is removed
-// h1, h2, h3, h4, h5, h6,
-// p, pre, figure, blockquote,
-// ol, ul, dl,
-// table,
-// form, fieldset, textarea,
-// details {
-//   margin-bottom: var(--vru);
-// }
-// h1 {
-//   padding-top: var(--vru);
-// }
+h1, h2, h3, h4, h5, h6,
+p, pre, figure, blockquote,
+ol, ul, dl,
+table,
+form, fieldset, textarea,
+details {
+  margin-bottom: var(--vru);
+}
+h1 {
+  padding-top: var(--vru);
+}
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
@@ -406,7 +402,6 @@ textarea {
 textarea {
   display: block; // override browser default
   width: 30rem;
-  height: 6 * @g-vru; // HACK fallback
   height: calc(~'6 * var(--vru)');
   .font-size-mod(@g-font-size-mill);
 }

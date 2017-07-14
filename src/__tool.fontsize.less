@@ -3,7 +3,6 @@
     xmeter  |  __tool.fontsize.less
 \*################################*/
 @import (reference) url('__settings.less');
-@import (reference) url('__tool.vertspacing.less');
 
 
 // Sets the font size of a module while preserving vertical rhythm.
@@ -21,13 +20,11 @@
 // ^updated
 // : 2016-10-01
 .font-size-mod(@ratio: 1) {
-  @l-vru: @ratio * @g-vru; // in rems // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
   font-size: (@ratio * 1rem);
   // line-height: inherit; // NOTE clarification
   & > * {
     --vru: calc(@ratio ~' * var(--line-height) * 1rem'); // @ratio * parent vru
   }
-  .vertspacing(@l-vru); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
 }
 
 // Sets the font size of an element within a module (or if not, in the root)
@@ -49,6 +46,5 @@
 // : 2016-10-01
 .font-size-el(@ratio: 1; @lines: 1) {
   font-size: (@ratio * 1em);
-  line-height: (@g-line-height / (@ratio/@lines)); // HACK fallback
   line-height: calc(~'var(--line-height) / ' (@ratio/@lines));
 }

@@ -16,23 +16,13 @@ Watch out for changes.**
 
 1. [Table of Contents](#table-contents)
 - [Tools](#tools)
-  1. [vertspacing](#vertspacing)
-  - [borders](#borders)
+  1. [borders](#borders)
   - [border-radius](#border-radius)
   - [Font Sizing Tools](#font-sizing-tools)
   - [delims](#delims)
   - [sprite](#sprite)
 
 ## Tools
-
-### vertspacing
-**NOTE!** *DEPRECATED* CHANGED: this will be removed on next major release.
-```less
-@import (reference) url('/node_modules/xmeter/src/__tool.vertspacing.less');
-.your-module {
-  .vertspacing(<length>?:@g-vru);
-}
-```
 
 ### borders
 Use this tool to create borders on the top side, the bottom side, both top and bottom sides,
