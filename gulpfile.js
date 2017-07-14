@@ -6,7 +6,7 @@ var clean_css = require('gulp-clean-css')
 var sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('pug:docs', function () {
-  return gulp.src('docs/{index,base,obj,comp,help,atom}.pug')
+  return gulp.src('docs/{index,base}.pug')
     .pipe(pug({
       basedir: './',
       locals: {
