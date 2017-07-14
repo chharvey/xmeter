@@ -27,7 +27,7 @@ gulp.task('lessc:docs', function () {
 })
 
 gulp.task('lessc:core', function () {
-  return gulp.src('xmeter.less')
+  return gulp.src('src/xmeter.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
