@@ -389,7 +389,7 @@ textarea {
   line-height: inherit; // undo browser default
 }
 
-fieldset {
+html > body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
   .border-vert(all; 1px);
   border-style: solid;
   border-color: @p-color-gray;
