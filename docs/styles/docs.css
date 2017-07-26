@@ -46,6 +46,7 @@
   border-style: solid;
   border-color: #ddd;
   */
+  -webkit-box-shadow: 0 0 0 1px #ddd;
   box-shadow: 0 0 0 1px #ddd;
   border-radius: 0.5rem;
   background-color: #eee;

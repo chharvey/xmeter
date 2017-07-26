@@ -2,10 +2,6 @@
 /*################################*\
     xmeter  |  _base.less
 \*################################*/
-@import (reference) url('__settings.less');
-@import (reference) url('__tool.borders.less');
-@import (reference) url('__tool.fontsize.less');
-@import (reference) url('__tool.delims.less');
 
 
 // Contents
@@ -354,8 +350,12 @@ br {
   code, kbd, samp {
     font-size: (@g-font-size-mill * 1em);
     white-space: nowrap;
-    code, kbd, samp {
+    & & {
       font-size: inherit; // undo compounding font sizes
+    }
+    pre & {
+      white-space: inherit; // HACK fallback
+      white-space: unset; // sometimes people put a `code` in a `pre` // override `nowrap` above
     }
   }
   code {
@@ -406,6 +406,10 @@ textarea {
   .font-size-mod(@g-font-size-mill);
 }
 
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button,
 label {
   cursor: pointer;
 }
