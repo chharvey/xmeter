@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 5.7.1
+    Version: 5.7.2
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -803,15 +803,21 @@ samp {
   white-space: nowrap;
 }
 code code,
-kbd code,
-samp code,
 code kbd,
-kbd kbd,
-samp kbd,
 code samp,
+kbd code,
+kbd kbd,
 kbd samp,
+samp code,
+samp kbd,
 samp samp {
   font-size: inherit;
+}
+pre code,
+pre kbd,
+pre samp {
+  white-space: inherit;
+  white-space: unset;
 }
 fieldset {
   padding: 0 1rem;
@@ -872,6 +878,10 @@ textarea h1 {
   padding-top: 1.125rem;
   padding-top: var(--vru);
 }
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button,
 label {
   cursor: pointer;
 }
