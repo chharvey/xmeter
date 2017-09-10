@@ -4,33 +4,60 @@
 \*################################*/
 
 
-// A two-dimensional flexbox container of flex items.
-// By default, each item has a flex-basis of 100%, which may be overridden.
-// See https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+// The Grid Object
 //
-// ^subcomponents
-// : `__Item` - any item inside the grid
-// ^author
-// : Chris Harvey
-// ^updated
-// : 2017-06-09
+// The Grid Object is similar to the Flex Object except that it can be controlled in two dimensions.
+//
+// It has the structure of a list in that all items share the same container
+// (unlike tables where cells might not share the same row), while at the same time
+// appearing like a table with rows and columns.
+//
+// The Grid Object has one column at <code>1fr</code>, unless overridden.
+// Using CSS Grid properties and media queries, you can achieve a flexible and responsive table effect,
+// adjusting the number of columns and rows based on screen size and/or content.
+//
+// See https://css-tricks.com/snippets/css/complete-guide-grid/ for details.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-06-09</time></dd>
+// </dl></header>
+//
+// Markup:
+// <ul class="o-List o-Grid">
+//   <li class="o-List__Item o-Grid__Item">Burns &amp; McDonnell Engineering</li>
+//   <li class="o-List__Item o-Grid__Item">DIS-TRAN Steel, LLC</li>
+//   <li class="o-List__Item o-Grid__Item">EDM International</li>
+//   <li class="o-List__Item o-Grid__Item">Electrical Consultants, Inc.</li>
+//   <li class="o-List__Item o-Grid__Item">Fabrimet Inc.</li>
+//   <li class="o-List__Item o-Grid__Item">Falcon Steel Company</li>
+//   <li class="o-List__Item o-Grid__Item">Sabre-FWT</li>
+//   <li class="o-List__Item o-Grid__Item">HDR</li>
+//   <li class="o-List__Item o-Grid__Item">Mitas Energy</li>
+//   <li class="o-List__Item o-Grid__Item">Power Consulting Associates, LLC</li>
+//   <li class="o-List__Item o-Grid__Item">Power Line Systems, Inc.</li>
+//   <li class="o-List__Item o-Grid__Item">Quanta Services</li>
+//   <li class="o-List__Item o-Grid__Item">ReliaPOLE Inspection Services</li>
+//   <li class="o-List__Item o-Grid__Item">Sabre-FWT</li>
+//   <li class="o-List__Item o-Grid__Item">SAE Towers</li>
+//   <li class="o-List__Item o-Grid__Item">TAPP Steel Poles</li>
+//   <li class="o-List__Item o-Grid__Item">Trinity Meyer Utility Structures</li>
+//   <li class="o-List__Item o-Grid__Item">TRC Engineers</li>
+//   <li class="o-List__Item o-Grid__Item">Underground Devices</li>
+//   <li class="o-List__Item o-Grid__Item">Valmont Newmark</li>
+// </ul>
+//
+// Weight: 3
+//
+// Styleguide Objects.Grid
 .o-Grid {
-  ///////////////////////////////////////////////////////////////////////////////
-  // CHANGED: DEPRECATED. this class will be repurposed in v6 with the following code:
-  // display: grid;
-  // grid-template-columns: 1fr;
-  ///////////////////////////////////////////////////////////////////////////////
-  display: flex;
+  display: grid;
   line-height: inherit; // override lh-z on text-level elements
-  flex-wrap: wrap;
+  grid-template-columns: 1fr;
 }
 
 .o-Grid__Item {
-  flex: 100%;
 }
 
-@media screen                        { .o-Grid-s  { .o-Grid; }  .o-Grid__Item-s  { .o-Grid__Item; } }
-@media print                         { .o-Grid-p  { .o-Grid; }  .o-Grid__Item-p  { .o-Grid__Item; } }
 @media screen  and (min-width: 30em) { .o-Grid-sK { .o-Grid; }  .o-Grid__Item-sK { .o-Grid__Item; } }
 @media screen  and (min-width: 45em) { .o-Grid-sM { .o-Grid; }  .o-Grid__Item-sM { .o-Grid__Item; } }
 @media screen  and (min-width: 60em) { .o-Grid-sG { .o-Grid; }  .o-Grid__Item-sG { .o-Grid__Item; } }
@@ -41,13 +68,3 @@
 @media not all and (min-width: 60em) { .o-Grid-nG { .o-Grid; }  .o-Grid__Item-nG { .o-Grid__Item; } }
 @media not all and (min-width: 75em) { .o-Grid-nT { .o-Grid; }  .o-Grid__Item-nT { .o-Grid__Item; } }
 @media not all and (min-width: 90em) { .o-Grid-nP { .o-Grid; }  .o-Grid__Item-nP { .o-Grid__Item; } }
-
-
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////// CHANGED DEPRECATED //////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-@media not all and (min-width: 30em) { .o-Grid-nsK { .o-Grid; }  .o-Grid__Item-nsK { .o-Grid__Item; } }
-@media not all and (min-width: 45em) { .o-Grid-nsM { .o-Grid; }  .o-Grid__Item-nsM { .o-Grid__Item; } }
-@media not all and (min-width: 60em) { .o-Grid-nsG { .o-Grid; }  .o-Grid__Item-nsG { .o-Grid__Item; } }
-@media not all and (min-width: 75em) { .o-Grid-nsT { .o-Grid; }  .o-Grid__Item-nsT { .o-Grid__Item; } }
-@media not all and (min-width: 90em) { .o-Grid-nsP { .o-Grid; }  .o-Grid__Item-nsP { .o-Grid__Item; } }

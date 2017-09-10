@@ -2,8 +2,6 @@
 /*################################*\
     xmeter  |  __tool.fontsize.less
 \*################################*/
-@import (reference) url('__settings.less');
-@import (reference) url('__tool.vertspacing.less');
 
 
 // Sets the font size of a module while preserving vertical rhythm.
@@ -21,14 +19,11 @@
 // ^updated
 // : 2016-10-01
 .font-size-mod(@ratio: 1) {
-  @l-vru: @ratio * @g-vru; // in rems // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
-  font-size: (@ratio * @g-1rem); // legacy browsers (see __settings for more info)
-  font-size: (@ratio *    1rem);
+  font-size: (@ratio * 1rem);
   // line-height: inherit; // NOTE clarification
   & > * {
     --vru: calc(@ratio ~' * var(--line-height) * 1rem'); // @ratio * parent vru
   }
-  .vertspacing(@l-vru); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
 }
 
 // Sets the font size of an element within a module (or if not, in the root)
@@ -44,15 +39,11 @@
 //          the parent font size, i.e., the number of ems
 // @lines - (default: 1) the number of vrus each line of text will take up.
 //          should be a whole number to satisfy vertical rhythm.
-// @line_height_parent - (default: @g-line_height) the `line-height` of the parent element.
-//                       this param should only be used if the parent’s line height has changed.
-//                       CHANGED remove on v6
 // ^author
 // : Chris Harvey
 // ^updated
 // : 2016-10-01
-.font-size-el(@ratio: 1; @lines: 1; @line_height_parent: @g-line_height) {
+.font-size-el(@ratio: 1; @lines: 1) {
   font-size: (@ratio * 1em);
-  line-height: (@g-line_height / (@ratio/@lines)); // HACK fallback
   line-height: calc(~'var(--line-height) / ' (@ratio/@lines));
 }

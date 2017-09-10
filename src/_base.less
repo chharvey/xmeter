@@ -47,29 +47,26 @@
 }
 
 html {
-  --line-height: @g-line_height;
+  --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
   --vru: calc(~'var(--line-height) * 1rem');
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
-  line-height: @g-line_height; // HACK fallback
   line-height: var(--line-height);
 }
 
 // Vertical spacing between typographical blocks
 // NOTE: `textarea` is inline by default but overriding here: should be block (opinionated)
-.vertspacing(); // CHANGED DEPRECATED! will be dropped in favor of CSS Custom Properties
-// TODO uncomment the ruleset below once `.vertspacing();` is removed
-// h1, h2, h3, h4, h5, h6,
-// p, pre, figure, blockquote,
-// ol, ul, dl,
-// table,
-// form, fieldset, textarea,
-// details {
-//   margin-bottom: var(--vru);
-// }
-// h1 {
-//   padding-top: var(--vru);
-// }
+h1, h2, h3, h4, h5, h6,
+p, pre, figure, blockquote,
+ol, ul, dl,
+table,
+form, fieldset, textarea,
+details {
+  margin-bottom: var(--vru);
+}
+h1 {
+  padding-top: var(--vru);
+}
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
 // they should scale with their parents.
@@ -128,12 +125,12 @@ footer {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
-h1 { .font-size-el(@g-font_size_h1; 2); }
-h2 { .font-size-el(@g-font_size_h2; 2); }
-h3 { .font-size-el(@g-font_size_h3); }
-h4 { .font-size-el(@g-font_size_h4); }
-h5 { .font-size-el(@g-font_size_h5); }
-h6 { .font-size-el(@g-font_size_h6); }
+h1 { .font-size-el(@g-font-size-h1; 2); }
+h2 { .font-size-el(@g-font-size-h2; 2); }
+h3 { .font-size-el(@g-font-size-h3); }
+h4 { .font-size-el(@g-font-size-h4); }
+h5 { .font-size-el(@g-font-size-h5); }
+h6 { .font-size-el(@g-font-size-h6); }
 
 h1 {
   margin-top: 0; // undo Normalize
@@ -158,7 +155,7 @@ hr {
   p {
   }
   pre {
-    .font-size-el(@g-font_size_mill);
+    .font-size-el(@g-font-size-mill);
     text-align: left; // code blocks are always aligned left, regardless of writing mode
     text-indent: 0;
     white-space: pre;
@@ -291,7 +288,7 @@ br {
     color: #080;
   }
   small {
-    font-size: (@g-font_size_mill * 1em);
+    font-size: (@g-font-size-mill * 1em);
   }
   s {
     text-decoration: line-through; // HACK fallback
@@ -335,7 +332,7 @@ br {
     font-style: italic;
   }
   sup, sub {
-    font-size: (@g-font_size_mill * 1em);
+    font-size: (@g-font-size-mill * 1em);
   }
   sup {
   }
@@ -351,7 +348,7 @@ br {
   time {
   }
   code, kbd, samp {
-    font-size: (@g-font_size_mill * 1em);
+    font-size: (@g-font-size-mill * 1em);
     white-space: nowrap;
     & & {
       font-size: inherit; // undo compounding font sizes
@@ -374,7 +371,7 @@ br {
 //++++++++++++++++++++++++++++++++//
 //    # FORMS
 //++++++++++++++++++++++++++++++++//
-@p-color_gray: rgba(0,0,0, 0.25);
+@p-color-gray: rgba(0,0,0, 0.25);
 
 fieldset {
   padding: 0 1rem;
@@ -392,22 +389,21 @@ textarea {
   line-height: inherit; // undo browser default
 }
 
-fieldset {
+html > body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
   .border-vert(all; 1px);
   border-style: solid;
-  border-color: @p-color_gray;
+  border-color: @p-color-gray;
   // NOTE cannot use box-shadow hack due to shadow covering <legend>
 }
 textarea {
-  box-shadow: 0 0 0 1px @p-color_gray; // HACK vertical border hack
+  box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
 
 textarea {
   display: block; // override browser default
   width: 30rem;
-  height: 6 * @g-vru; // HACK fallback
   height: calc(~'6 * var(--vru)');
-  .font-size-mod(@g-font_size_mill);
+  .font-size-mod(@g-font-size-mill);
 }
 
 input[type="button"],
@@ -421,7 +417,7 @@ label {
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 // input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED selector not supported yet
 select {
-  font-size: @g-font_size_mill * 1em;
+  font-size: @g-font-size-mill * 1em;
 }
 
 input[type="button"],

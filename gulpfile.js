@@ -1,5 +1,4 @@
 var gulp = require('gulp')
-var rename = require('gulp-rename')
 var pug = require('gulp-pug')
 var less = require('gulp-less')
 var autoprefixer = require('gulp-autoprefixer')
@@ -7,7 +6,7 @@ var clean_css = require('gulp-clean-css')
 var sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('pug:docs', function () {
-  return gulp.src('docs/{index,base,obj,comp,help,atom}.pug')
+  return gulp.src('docs/{index,base}.pug')
     .pipe(pug({
       basedir: './',
       locals: {
@@ -28,22 +27,24 @@ gulp.task('lessc:docs', function () {
 })
 
 gulp.task('lessc:core', function () {
-  return gulp.src('xmeter.less')
+  return gulp.src('src/xmeter.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
       cascade: false,
     }))
     .pipe(gulp.dest('./'))
-})
-
-gulp.task('minify', ['lessc:core'], function () {
-  return gulp.src('xmeter.css')
     .pipe(sourcemaps.init())
-    .pipe(clean_css())
-    .pipe(rename('xmeter.min.css'))
+    .pipe(clean_css({
+      level: {
+        2: {
+          overrideProperties: false, // need fallbacks for `initial` and `unset`
+          restructureRules: true, // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
+        },
+      },
+    }))
     .pipe(sourcemaps.write('./')) // writes to an external .map file
     .pipe(gulp.dest('./'))
 })
 
-gulp.task('build', ['pug:docs', 'lessc:docs', 'minify'])
+gulp.task('build', ['pug:docs', 'lessc:docs', 'lessc:core'])

@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "5.7.2",
+  "version": "6.0.0-beta",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "xmeter.css",
   "dependencies": {},
@@ -10,15 +10,16 @@
     "gulp-clean-css": "^3.4.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
-    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.0",
+    "kss": "^3.0.0-beta.18",
     "normalize.css": "^6.0.0",
     "sitepage": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "unbuild": "rm docs/{index,base,obj,comp,help,atom}.html {docs/styles/docs,xmeter,xmeter.min}.css",
-    "build": "gulp build"
+    "kss": "rm -r styleguide  ;  kss --config kss-config.json",
+    "unbuild": "rm docs/{index,base}.html {docs/styles/docs,xmeter}.css xmeter.css.map",
+    "build": "gulp build  &&  npm run kss"
   },
   "repository": {
     "type": "git",
