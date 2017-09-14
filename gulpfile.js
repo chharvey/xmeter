@@ -17,13 +17,13 @@ gulp.task('pug:docs', function () {
 })
 
 gulp.task('lessc:docs', function () {
-  return gulp.src('docs/styles/docs.less')
+  return gulp.src('docs/css/docs.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
       cascade: false,
     }))
-    .pipe(gulp.dest('./docs/styles/'))
+    .pipe(gulp.dest('./docs/css/'))
 })
 
 gulp.task('lessc:core', function () {

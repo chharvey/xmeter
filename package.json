@@ -18,7 +18,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "kss": "rm -r styleguide  ;  kss --config kss-config.json",
-    "unbuild": "rm docs/{index,base}.html {docs/styles/docs,css/xmeter}.css css/xmeter.css.map",
+    "unbuild": "rm docs/{index,base}.html {docs/css/docs,css/xmeter}.css css/xmeter.css.map",
     "build": "gulp build  &&  npm run kss"
   },
   "repository": {
