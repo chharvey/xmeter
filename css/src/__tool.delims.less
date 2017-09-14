@@ -1,9 +1,18 @@
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////--- CHANGED DEPRECATED! Use the `/css/src/` folder instead!  ---////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
 
+/*################################*\
+    xmeter  |  __tool.delims.less
+\*################################*/
+
+
+// This tool adds opening and closing punctuation marks surrounding an element.
+// The punctuation marks are given by the `quotes` property.
+//
+// @arg - (default: `none`) an even number of space-separated left/right delimiters,
+//        each pair used for one level of nested quotation.
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2016-05-05
 .delims(@arg: none) {
   quotes: @arg;
   &::before { content: open-quote; }

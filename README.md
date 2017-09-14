@@ -16,20 +16,20 @@ To install:
 
     $ npm install xmeter
 
-The `/src/` folder contains a set of partials, starting with 2 underscores,
+The `/css/src/` folder contains a set of partials, starting with 2 underscores,
 from which to pick and choose to use for your project.
 These files are used in preprocessing only—they don’t output any actual css.
-The *tools* (`/src/__tool.*.less`) group similar properties
+The *tools* (`/css/src/__tool.*.less`) group similar properties
 to create one functional styling unit.
 (Read `/docs/tools.md` for details and usage.)
-The settings file, `/src/__settings.less`, contains all global variables.
+The settings file, `/css/src/__settings.less`, contains all global variables.
 
 If you want to use a particular tool in your stylesheet, you will have to
 `@import (reference)` the stylesheet for that tool. For example,
 if you plan to use the `.font-size-el()` mixin in your Less, you must include
 
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fontsize.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.fontsize.less');
 ```
 
 at the top of your stylesheet. Then when you want to “call” the mixin, do
@@ -43,7 +43,7 @@ at the top of your stylesheet. Then when you want to “call” the mixin, do
 To use the Xmeter global variables, import the `__settings` stylesheet.
 
 ```less
-@import (reference) url('/node_modules/xmeter/src/__settings.less');
+@import (reference) url('/node_modules/xmeter/css/src/__settings.less');
 
 .my-selector {
   font-size: (1.5 * @g-font-size-kilo);
@@ -59,12 +59,12 @@ Locally:
 $ npm install xmeter
 ```
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/xmeter.css"/>
 ```
 
 Remotely from a CDN (not recommended, unless deploying your `/node_modules/` isn’t possible):
 ```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/xmeter.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/xmeter.css"/>
 ```
 where `‹master›` can be a branch or a tag.
 
@@ -72,7 +72,7 @@ The stylesheet `xmeter.css` is already minified, and is accompanied by a sourcem
 
 Xmeter’s stylesheet is a starting point that “normalizes” unclassed HTML elements.
 And now that Xmeter has a few design patterns built in, you can use them in your markup too!
-In addition to base styles, Xmeter has classes for Objects (`src/_o-*.less`), Components (`src/_c-*.less`) and Helpers (`src/_h-*.less`),
+In addition to base styles, Xmeter has classes for Objects (`css/src/_o-*.less`), Components (`css/src/_c-*.less`) and Helpers (`css/src/_h-*.less`),
 design patterns that aid in a consistent, easy-to-use, vertical rhythm system.
 These classes should be directly injected into elements’ HTML `[class]` attribute on your site.
 

@@ -1,19 +1,8 @@
-
-/*################################*\
-    xmeter  |  __tool.sprite.less
-\*################################*/
-
-
-// Sets the background position of an Object’s background sprite image.
-//
-// @{[horizontal|vertcial]} - whether the sprite’s images are linearly horizontally or vertically ordered.
-// @position                - the position of the sprite’s image to be used, starting at 1. must be a positive integer.
-// @iconsize                - the horizontal (x) size of the sprite’s image. in pixels.
-// @iconpadd                - the padding between images in the sprite’s image. in pixels.
-// ^author
-// : Chris Harvey
-// ^updated
-// : 2016-01-19
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////--- CHANGED DEPRECATED! Use the `/css/src/` folder instead!  ---////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 .sprite(horizontal; @position; @iconsize; @iconpadd) when (@position > 1) {
   background-position: ((@position - 1) * -(@iconsize + @iconpadd)) 0;
 }

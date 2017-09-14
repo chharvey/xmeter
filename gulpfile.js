@@ -27,13 +27,13 @@ gulp.task('lessc:docs', function () {
 })
 
 gulp.task('lessc:core', function () {
-  return gulp.src('src/xmeter.less')
+  return gulp.src('css/src/xmeter.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
       cascade: false,
     }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./css/'))
     .pipe(sourcemaps.init())
     .pipe(clean_css({
       level: {
@@ -44,7 +44,7 @@ gulp.task('lessc:core', function () {
       },
     }))
     .pipe(sourcemaps.write('./')) // writes to an external .map file
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./css/'))
 })
 
 gulp.task('build', ['pug:docs', 'lessc:docs', 'lessc:core'])

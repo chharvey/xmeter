@@ -1,8 +1,50 @@
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-///////--- CHANGED DEPRECATED! Use the `/css/src/` folder instead!  ---////////
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
+
+/*################################*\
+    xmeter  |  _-fz.less
+\*################################*/
+
+
+// font-size
+//
+// The font-size Atoms set the font-size property.
+//
+// These are two groups of Atoms: the first group simply sets the font size of an element,
+// and the second group uses the <code>.font-size-el()</code> mixin, which also affects line-height
+// for maintaining vertical rhythm. See <a>__tool.fontsize.less</a> for the mixin code.
+//
+// All font sizes are available in <a>/src/__settings.less</a>.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-02-09</time></dd>
+// </dl></header>
+//
+// Markup:
+// <ul>
+//   <li><u class="-fz-peta">universe</u> (6.00)</li>
+//   <li><u class="-fz-tera">galaxy  </u> (4.00)</li>
+//   <li><u class="-fz-giga">star    </u> (3.00)</li>
+//   <li><u class="-fz-mega">planet  </u> (2.00)</li>
+//   <li><u class="-fz-kilo">asteroid</u> (1.50)</li>
+//   <li><u class="-fz-norm">molecule</u> (1.00)</li>
+//   <li><u class="-fz-mill">atom    </u> (0.75)</li>
+//   <li><u class="-fz-micr">quark   </u> (0.50)</li>
+// </ul>
+// <ul style="overflow: auto; white-space: nowrap;">
+//   <li class="-fz-el-peta">universe (6.00/1.000)</li>
+//   <li class="-fz-el-tera">galaxy   (4.00/1.125)</li>
+//   <li class="-fz-el-giga">star     (3.00/1.000)</li>
+//   <li class="-fz-el-mega">planet   (2.00/1.500)</li>
+//   <li class="-fz-el-kilo">asteroid (1.50/1.000)</li>
+//   <li class="-fz-el-norm">molecule (1.00/1.500)</li>
+//   <li class="-fz-el-mill">atom     (0.75/2.000)</li>
+//   <li class="-fz-el-micr">quark    (0.50/3.000)</li>
+// </ul>
+//
+// Weight: 1
+//
+// Styleguide Atoms.font-size
+
+
 .-fz-peta { font-size: (@g-font-size-peta * 1em) !important; }
 .-fz-tera { font-size: (@g-font-size-tera * 1em) !important; }
 .-fz-giga { font-size: (@g-font-size-giga * 1em) !important; }

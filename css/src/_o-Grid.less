@@ -1,0 +1,70 @@
+
+/*################################*\
+    xmeter  |  _o-Grid.less
+\*################################*/
+
+
+// The Grid Object
+//
+// The Grid Object is similar to the Flex Object except that it can be controlled in two dimensions.
+//
+// It has the structure of a list in that all items share the same container
+// (unlike tables where cells might not share the same row), while at the same time
+// appearing like a table with rows and columns.
+//
+// The Grid Object has one column at <code>1fr</code>, unless overridden.
+// Using CSS Grid properties and media queries, you can achieve a flexible and responsive table effect,
+// adjusting the number of columns and rows based on screen size and/or content.
+//
+// See https://css-tricks.com/snippets/css/complete-guide-grid/ for details.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-06-09</time></dd>
+// </dl></header>
+//
+// Markup:
+// <ul class="o-List o-Grid">
+//   <li class="o-List__Item o-Grid__Item">Burns &amp; McDonnell Engineering</li>
+//   <li class="o-List__Item o-Grid__Item">DIS-TRAN Steel, LLC</li>
+//   <li class="o-List__Item o-Grid__Item">EDM International</li>
+//   <li class="o-List__Item o-Grid__Item">Electrical Consultants, Inc.</li>
+//   <li class="o-List__Item o-Grid__Item">Fabrimet Inc.</li>
+//   <li class="o-List__Item o-Grid__Item">Falcon Steel Company</li>
+//   <li class="o-List__Item o-Grid__Item">Sabre-FWT</li>
+//   <li class="o-List__Item o-Grid__Item">HDR</li>
+//   <li class="o-List__Item o-Grid__Item">Mitas Energy</li>
+//   <li class="o-List__Item o-Grid__Item">Power Consulting Associates, LLC</li>
+//   <li class="o-List__Item o-Grid__Item">Power Line Systems, Inc.</li>
+//   <li class="o-List__Item o-Grid__Item">Quanta Services</li>
+//   <li class="o-List__Item o-Grid__Item">ReliaPOLE Inspection Services</li>
+//   <li class="o-List__Item o-Grid__Item">Sabre-FWT</li>
+//   <li class="o-List__Item o-Grid__Item">SAE Towers</li>
+//   <li class="o-List__Item o-Grid__Item">TAPP Steel Poles</li>
+//   <li class="o-List__Item o-Grid__Item">Trinity Meyer Utility Structures</li>
+//   <li class="o-List__Item o-Grid__Item">TRC Engineers</li>
+//   <li class="o-List__Item o-Grid__Item">Underground Devices</li>
+//   <li class="o-List__Item o-Grid__Item">Valmont Newmark</li>
+// </ul>
+//
+// Weight: 3
+//
+// Styleguide Objects.Grid
+.o-Grid {
+  display: grid;
+  line-height: inherit; // override lh-z on text-level elements
+  grid-template-columns: 1fr;
+}
+
+.o-Grid__Item {
+}
+
+@media screen  and (min-width: 30em) { .o-Grid-sK { .o-Grid; }  .o-Grid__Item-sK { .o-Grid__Item; } }
+@media screen  and (min-width: 45em) { .o-Grid-sM { .o-Grid; }  .o-Grid__Item-sM { .o-Grid__Item; } }
+@media screen  and (min-width: 60em) { .o-Grid-sG { .o-Grid; }  .o-Grid__Item-sG { .o-Grid__Item; } }
+@media screen  and (min-width: 75em) { .o-Grid-sT { .o-Grid; }  .o-Grid__Item-sT { .o-Grid__Item; } }
+@media screen  and (min-width: 90em) { .o-Grid-sP { .o-Grid; }  .o-Grid__Item-sP { .o-Grid__Item; } }
+@media not all and (min-width: 30em) { .o-Grid-nK { .o-Grid; }  .o-Grid__Item-nK { .o-Grid__Item; } }
+@media not all and (min-width: 45em) { .o-Grid-nM { .o-Grid; }  .o-Grid__Item-nM { .o-Grid__Item; } }
+@media not all and (min-width: 60em) { .o-Grid-nG { .o-Grid; }  .o-Grid__Item-nG { .o-Grid__Item; } }
+@media not all and (min-width: 75em) { .o-Grid-nT { .o-Grid; }  .o-Grid__Item-nT { .o-Grid__Item; } }
+@media not all and (min-width: 90em) { .o-Grid-nP { .o-Grid; }  .o-Grid__Item-nP { .o-Grid__Item; } }
