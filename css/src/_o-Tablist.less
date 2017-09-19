@@ -1,0 +1,154 @@
+
+/*################################*\
+    neo  |  _o-Tablist.less
+\*################################*/
+
+
+// The Tablist Object
+//
+// The Tablist Object contains a series of corresponding tabs and panels.
+// It is similar to a carousel, but only one panel is shown at a time and
+// there is no timed automatic progression.
+//
+// Tabs and corresponding panels follow subsequently, as so:
+// <figure>tab-0, panel-0, tab-1, panel-1, tab-2, panel-2, etc.</figure>
+//
+// Note: All radio buttons in a group must have the same `[name]` attribute.
+// While the `[name]` attribute prevents the user from selecting multiple radio buttons
+// within the same groupat the same time, radio buttons should also be grouped within a
+// `fieldset` element (or if not a fieldset, any element with `[aria-role="group"]`).
+// Additionally, that `fieldest` element should also contain a visible `legend:first-child` element
+// (or if using an `[aria-role="group"]`, it should contain an `[aria-label]` attribute).
+//
+// Note: Enable Javascript to view carousel effects.
+// Without Javascript, this object won’t look like a carousel, just a regular `<dl>` list.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-09-14</time></dd>
+// </dl></header>
+//
+// Markup:
+// <fieldset class="o-Tablist" role="tablist">
+//   <legend class="h-Hidden">Tabs</legend>
+//   <dl class="o-Flex">
+//     <dt class="o-Flex__Item o-Tablist__Tab" role="tab">
+//       <label class="h-Block">
+//         <input class="o-Tablist__Check h-Hidden" type="radio" name="tablistdocs" value="slide1" checked=""/>
+//         Slide 1
+//       </label>
+//     </dt>
+//     <dd class="o-Flex__Item o-Tablist__Panel" role="tabpanel">
+//       <p>This is slide 1. Switch to the next panel by clicking its heading.</p>
+//     </dd>
+//     <dt class="o-Flex__Item o-Tablist__Tab" role="tab">
+//       <label class="h-Block">
+//         <input class="o-Tablist__Check h-Hidden" type="radio" name="tablistdocs" value="slide2"/>
+//         Slide 2
+//       </label>
+//     </dt>
+//     <dd class="o-Flex__Item o-Tablist__Panel" role="tabpanel">
+//       <p>This is slide 2. This slide is slightly larger than slide 1.</p>
+//       <p>This is slide 2. This slide is slightly larger than slide 1.</p>
+//     </dd>
+//     <dt class="o-Flex__Item o-Tablist__Tab" role="tab">
+//       <label class="h-Block">
+//         <input class="o-Tablist__Check h-Hidden" type="radio" name="tablistdocs" value="slide3"/>
+//         Slide 3
+//       </label>
+//     </dt>
+//     <dd class="o-Flex__Item o-Tablist__Panel" role="tabpanel">
+//       <p>This is slide 3. The largest slide.</p>
+//       <p>This is slide 3. The largest slide.</p>
+//       <p>This is slide 3. The largest slide.</p>
+//     </dd>
+//   </dl>
+// </fieldset>
+//
+// Weight: 4
+//
+// Styleguide Objects.Tablist
+.o-Tablist {
+  margin-top  : 0; margin-top  : initial; // HACK fallbacks
+  margin-left : 0; margin-left : initial; // HACK fallbacks
+  margin-right: 0; margin-right: initial; // HACK fallbacks
+  margin-top  : unset; // unset fieldset base
+  margin-left : unset; // unset fieldset base
+  margin-right: unset; // unset fieldset base
+  margin-block-start: unset; // CHANGED experimental support
+  margin-inline     : unset; // CHANGED experimental support
+
+  padding: 0; padding: initial; // HACK fallbacks
+  padding: unset; // unset fieldset base
+
+  border: 0; // unset fieldset base
+
+  & > .o-Flex {
+    flex-wrap: wrap;
+    margin-bottom: 0; // fixes a bug where fieldset vertical margins don’t collapse
+  }
+}
+
+
+// Tab
+//
+// The Tab subcomponent is a child of the Tablist Object.
+// It represents a tab for a panel, and semantically consists of a radio button
+// (although it may not appear anything like a radio button).
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-09-14</time></dd>
+// </dl></header>
+//
+// Markup:
+// <dt class="o-Flex__Item o-Tablist__Tab {{ modifier_class }}" role="tab">
+//   <label class="h-Block">
+//     <input class="o-Tablist__Check h-Hidden" type="radio" name="tablistdocs1" value="slide4" checked=""/>
+//     Slide 4
+//   </label>
+// </dt>
+//
+// .o-Tablist__Tab--js-selected - selected tab style (extend with your own skin)
+//
+// Weight: 1
+//
+// Styleguide Objects.Tablist.Tab
+.o-Tablist__Tab {
+}
+// NOTE! Do not add this class manually.
+// It will be added automatically by `o-Tablist.js`.
+.o-Tablist__Tab--js-selected {
+}
+
+.o-Tablist__Check {
+  position: absolute; // override `.h-Hidden:focus`
+}
+
+
+// Panel
+//
+// The Panel subcomponent is a child of the Tablist Object.
+// It represents a panel, and can contain any content.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-09-14</time></dd>
+// </dl></header>
+//
+// Markup:
+// <dd class="o-Flex__Item o-Tablist__Panel {{ modifier_class }}" role="tabpanel">
+//   <p>This is slide 4.</p>
+// </dd>
+//
+// .o-Tablist__Panel--js-selected - selected panel style (extend with your own skin)
+//
+// Weight: 2
+//
+// Styleguide Objects.Tablist.Panel
+.o-Tablist__Panel {
+  order: 1;
+  flex: 100%;
+}
+// NOTE! Do not add this class manually.
+// It will be added automatically by `o-Tablist.js`.
+.o-Tablist__Panel--js-selected {
+}
