@@ -3,7 +3,8 @@
   "source": "css/src/",
   "destination": "styleguide/",
   "css": [
-    "../css/xmeter.css"
+    "../css/xmeter.css",
+    "../docs/css/kss.css"
   ],
   "js": [
     "http://code.jquery.com/jquery-3.2.1.min.js",

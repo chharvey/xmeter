@@ -1,0 +1,50 @@
+
+/*################################*\
+    xmeter  |  _h-Lined.less
+\*################################*/
+
+
+// Lined
+//
+// The Lined Helper adds a lined background image for designing with vertical rhythm.
+// Each line corresponds to one line of text. Lines are separated by one vertical rhythm unit (VRU).
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-09-25</time></dd>
+// </dl></header>
+//
+// Markup:
+// <div class="h-Lined">
+//   <p><q>For instance, playing Ping-Pong on the train, one would find that
+//     the ball obeyed Newton’s laws just like a ball on a table by the track.
+//     So there is no way to tell whether it is the train or the earth that is moving.</q></p>
+//   <p><q>The laws of science should be the same for all freely moving observers,
+//     no matter what their speed. This was true for Netwon’s laws of motion,
+//     but now the idea was extended to include Maxwell’s theory. All observers
+//     should measure the same speed of light, no matter how fast they are moving.</q></p>
+//   <p><q>Gravity is not a force like other forces, but is a consequence of the
+//     fact that space-time is curved by the distribution of mass and energy in it.</q>
+//     An object in a gravitational field experiences the same effects as if it were
+//     accelerating at a rate proportional to the strength of that gravitational field.</p>
+// </div>
+//
+// Weight: 6
+//
+// Styleguide Helpers.Lined
+@p-color-gray: rgba(0,0,0, 0.25); // same as _base.less
+.h-Lined {
+  background-image: linear-gradient(to top, @p-color-gray 1px, transparent 1px);
+  background-size: 1px var(--vru);
+  background-position-y: top;
+}
+
+@media screen  and (min-width: 30em) { .h-Lined-sK { .h-Lined; } }
+@media screen  and (min-width: 45em) { .h-Lined-sM { .h-Lined; } }
+@media screen  and (min-width: 60em) { .h-Lined-sG { .h-Lined; } }
+@media screen  and (min-width: 75em) { .h-Lined-sT { .h-Lined; } }
+@media screen  and (min-width: 90em) { .h-Lined-sP { .h-Lined; } }
+@media not all and (min-width: 30em) { .h-Lined-nK { .h-Lined; } }
+@media not all and (min-width: 45em) { .h-Lined-nM { .h-Lined; } }
+@media not all and (min-width: 60em) { .h-Lined-nG { .h-Lined; } }
+@media not all and (min-width: 75em) { .h-Lined-nT { .h-Lined; } }
+@media not all and (min-width: 90em) { .h-Lined-nP { .h-Lined; } }

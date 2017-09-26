@@ -7,8 +7,6 @@
 /*================================*\
     docs.less
 \*================================*/
-@import (reference) url('../../src/__settings.less');
-@import (reference) url('../../src/__tool.borders.less');
 
 
 // Stylesheet for Xmeter documentation files.
@@ -18,48 +16,27 @@
   font-weight: bold;
 }
 
-.docs-body {
-  background-image: url('https://chharvey.github.io/core/images/crossgrid-lined.svg');
-  background-position: left top;
-  background-size: 1px 24px;
-  background-repeat: repeat;
-}
 .docs-main {
   margin: 0 1rem var(--vru);
 }
-.docs-pre,
 .docs-code {
+  padding: 2px 4px;
   background-color: #333;
   color: #ccc;
   border-radius: 0.25rem;
-  u { color: #6c6; } // override bad contrast ratio
-  strong { color: #eee; }
-}
-.docs-pre,
-.docs-figure {
-  padding: calc(~'0.5 * var(--vru)') 0.5rem;
-}
-.docs-code {
-  padding: 2px 4px;
 }
 .docs-figure {
   position: relative;
   margin-left: 1rem;
   margin-right: 1rem;
-  /*
-  .border-vert(all; 1px);
-  border-style: solid;
-  border-color: #ddd;
-  */ box-shadow: 0 0 0 1px #ddd; // HACK vertical border hack
+  padding: calc(~'0.5 * var(--vru)') 0.5rem;
   border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px #ddd; // HACK vertical border hack
   background-color: #eee;
   overflow: auto;
-  & > figcaption {
-    font-style: italic;
-  }
 }
 .docs-form {
-  background-color: #fff;
+  background-color: #ddd;
 }
 
 body > a:last-of-type {
