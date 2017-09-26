@@ -25,7 +25,6 @@ dd,
 fieldset {
   margin: 0;
 }
-ol, ul,
 th, td,
 legend {
   padding: 0;
@@ -50,16 +49,12 @@ mark {
   background: transparent;
 }
 a,
-u, s, ins, del {
+ins, del {
   text-decoration: none;
 }
 ol, ul {
   list-style: none;
 }
-q {
-  quotes: none;
-}
-a,
 mark {
   color: inherit;
 }
