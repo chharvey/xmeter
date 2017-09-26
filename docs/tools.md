@@ -117,6 +117,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
 ```
 
 ### transitions
+This mixin differs from the `transition` css shorthand property, which does not allow you to set comma-separated properties/durations/functions/delays.
 ```less
 @import (reference) url('/node_modules/xmeter/src/__tool.transitions.less');
 .your-class {
