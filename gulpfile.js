@@ -1,9 +1,9 @@
-var gulp = require('gulp')
-var pug = require('gulp-pug')
-var less = require('gulp-less')
-var autoprefixer = require('gulp-autoprefixer')
-var clean_css = require('gulp-clean-css')
-var sourcemaps = require('gulp-sourcemaps')
+const gulp         = require('gulp')
+const pug          = require('gulp-pug')
+const less         = require('gulp-less')
+const autoprefixer = require('gulp-autoprefixer')
+const clean_css    = require('gulp-clean-css')
+const sourcemaps   = require('gulp-sourcemaps')
 
 gulp.task('pug:docs', function () {
   return gulp.src('docs/{index,base}.pug')
@@ -11,7 +11,7 @@ gulp.task('pug:docs', function () {
       basedir: './',
       locals: {
         Xmeter: require('./class/Xmeter.class.js'),
-        Docs: require('./docs/_models/Docs.class.js'),
+        Docs  : require('./docs/class/Docs.class.js'),
       },
     }))
     .pipe(gulp.dest('./docs/'))
