@@ -1,12 +1,12 @@
 
 /*################################*\
-    xmeter  |  _h-Lined.less
+    xmeter  |  _h-Ruled.less
 \*################################*/
 
 
-// Lined
+// Ruled
 //
-// The Lined Helper adds a lined background image for designing with vertical rhythm.
+// The Ruled Helper adds background lines for designing with vertical rhythm.
 // Each line corresponds to one line of text. Lines are separated by one vertical rhythm unit (VRU).
 // <header><dl>
 //   <dt>author</dt>  <dd>Chris Harvey</dd>
@@ -14,7 +14,7 @@
 // </dl></header>
 //
 // Markup:
-// <div class="h-Lined">
+// <div class="h-Ruled">
 //   <p><q>For instance, playing Ping-Pong on the train, one would find that
 //     the ball obeyed Newton’s laws just like a ball on a table by the track.
 //     So there is no way to tell whether it is the train or the earth that is moving.</q></p>
@@ -30,21 +30,21 @@
 //
 // Weight: 6
 //
-// Styleguide Helpers.Lined
+// Styleguide Helpers.Ruled
 @p-color-gray: rgba(0,0,0, 0.25); // same as _base.less
-.h-Lined {
+.h-Ruled {
   background-image: linear-gradient(to top, @p-color-gray 1px, transparent 1px);
   background-size: 1px var(--vru);
   background-position-y: top;
 }
 
-@media screen  and (min-width: 30em) { .h-Lined-sK { .h-Lined; } }
-@media screen  and (min-width: 45em) { .h-Lined-sM { .h-Lined; } }
-@media screen  and (min-width: 60em) { .h-Lined-sG { .h-Lined; } }
-@media screen  and (min-width: 75em) { .h-Lined-sT { .h-Lined; } }
-@media screen  and (min-width: 90em) { .h-Lined-sP { .h-Lined; } }
-@media not all and (min-width: 30em) { .h-Lined-nK { .h-Lined; } }
-@media not all and (min-width: 45em) { .h-Lined-nM { .h-Lined; } }
-@media not all and (min-width: 60em) { .h-Lined-nG { .h-Lined; } }
-@media not all and (min-width: 75em) { .h-Lined-nT { .h-Lined; } }
-@media not all and (min-width: 90em) { .h-Lined-nP { .h-Lined; } }
+@media screen  and (min-width: 30em) { .h-Ruled-sK { .h-Ruled; } }
+@media screen  and (min-width: 45em) { .h-Ruled-sM { .h-Ruled; } }
+@media screen  and (min-width: 60em) { .h-Ruled-sG { .h-Ruled; } }
+@media screen  and (min-width: 75em) { .h-Ruled-sT { .h-Ruled; } }
+@media screen  and (min-width: 90em) { .h-Ruled-sP { .h-Ruled; } }
+@media not all and (min-width: 30em) { .h-Ruled-nK { .h-Ruled; } }
+@media not all and (min-width: 45em) { .h-Ruled-nM { .h-Ruled; } }
+@media not all and (min-width: 60em) { .h-Ruled-nG { .h-Ruled; } }
+@media not all and (min-width: 75em) { .h-Ruled-nT { .h-Ruled; } }
+@media not all and (min-width: 90em) { .h-Ruled-nP { .h-Ruled; } }
