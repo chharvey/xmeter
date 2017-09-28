@@ -1,3 +1,4 @@
+const kss          = require('kss')
 const gulp         = require('gulp')
 const gulp_doc     = require('gulp-documentation')
 const pug          = require('gulp-pug')
@@ -10,6 +11,10 @@ gulp.task('docs:api', function () {
   return gulp.src('./index.js')
     .pipe(gulp_doc('html'))
     .pipe(gulp.dest('./docs/api/'))
+})
+
+gulp.task('docs:kss', function () {
+  return kss(require('./kss-config.json'))
 })
 
 gulp.task('pug:docs', function () {
