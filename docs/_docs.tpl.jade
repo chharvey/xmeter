@@ -14,14 +14,6 @@ html(lang="en")
             = ': ' + item.description()
           if item.findAll().length && depth > 0
             +doctoc({pages: item.findAll(), classes: (classes.sub || {}), depth: depth-1}, true)
-  mixin newSection(n, page)
-    - var id = page.url().split('#')[1]
-    section(id=id)
-      | <h#{n}>#{page.name()}
-      include ../_views/_c-Permalink.view.pug
-      +permalink(id)
-      | </h#{n}>
-      block
   block vars
   head
     title= page.title() || `${page.name()} | ${Docs.DOCS.name()}`

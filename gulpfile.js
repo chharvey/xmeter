@@ -10,6 +10,7 @@ gulp.task('pug:docs', function () {
     .pipe(pug({
       basedir: './',
       locals: {
+        Xmeter: require('./class/Xmeter.class.js'),
         Docs: require('./docs/_models/Docs.class.js'),
       },
     }))
