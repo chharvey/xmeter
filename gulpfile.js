@@ -1,9 +1,16 @@
 const gulp         = require('gulp')
+const gulp_doc     = require('gulp-documentation')
 const pug          = require('gulp-pug')
 const less         = require('gulp-less')
 const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
 const sourcemaps   = require('gulp-sourcemaps')
+
+gulp.task('docs:api', function () {
+  return gulp.src('./index.js')
+    .pipe(gulp_doc('html'))
+    .pipe(gulp.dest('./docs/api/'))
+})
 
 gulp.task('pug:docs', function () {
   return gulp.src('docs/{index,base}.pug')

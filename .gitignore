@@ -31,5 +31,6 @@ node_modules
 
 # Compiled source files
 
-# Generated style guides
+# Generated documentation &  style guides
+docs/api
 styleguide

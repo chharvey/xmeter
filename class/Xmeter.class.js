@@ -3,7 +3,7 @@ const Element = require('extrajs-element')
 /**
  * A set of static members used for the site.
  * Similar to a utility class.
- * @module
+ * @module Xmeter
  */
 module.exports = class Xmeter {
   /** @private */ constructor() {}
@@ -18,11 +18,14 @@ module.exports = class Xmeter {
    */
   static view(data) {
     /**
+     * @private
      * @throws {Error} if no display has been chosen
      */
-    function returned(data) { throw new Error('Please select a display: Xmeter.view(data)[display](...args)') }
+    function returned() { throw new Error('Please select a display: Xmeter.view(data)[display](...args)') }
     /**
      * Return an <a.Permlink> element.
+     * Call `Xmeter.view(data).permalink()` to render this display.
+     * @memberof Xmeter.view
      * @param  {string=} content the text of the link
      * @param  {string=} label the value for `[aria-label]` attribute
      * @returns {string} HTML output
