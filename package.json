@@ -2,8 +2,10 @@
   "name": "xmeter",
   "version": "6.0.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
-  "main": "xmeter.css",
-  "dependencies": {},
+  "main": "index.js",
+  "dependencies": {
+    "extrajs-element": "^2.0.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",

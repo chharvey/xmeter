@@ -1,5 +1,6 @@
 - classname = classname || {}
-include ../../_views/_c-Permalink.view.pug
+mixin permalink(id)
+  != Xmeter.view({ id: id }).permalink()
 section#grouping-elements
   block groupingElements
     h2 Grouping Elements #[+permalink('grouping-elements')]
