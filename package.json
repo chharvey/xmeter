@@ -7,9 +7,11 @@
     "extrajs-element": "^2.0.0"
   },
   "devDependencies": {
+    "documentation": "^5.3.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.4.1",
+    "gulp-documentation": "^3.2.1",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
     "gulp-sourcemaps": "^2.6.0",
@@ -19,9 +21,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "kss": "rm -r styleguide  ;  kss --config kss-config.json",
     "unbuild": "rm docs/{index,base}.html {docs/css/docs,css/xmeter}.css css/xmeter.css.map",
-    "build": "gulp build  &&  npm run kss"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",

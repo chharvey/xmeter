@@ -1,9 +1,21 @@
+const kss          = require('kss')
 const gulp         = require('gulp')
+const gulp_doc     = require('gulp-documentation')
 const pug          = require('gulp-pug')
 const less         = require('gulp-less')
 const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
 const sourcemaps   = require('gulp-sourcemaps')
+
+gulp.task('docs:api', function () {
+  return gulp.src('./index.js')
+    .pipe(gulp_doc('html'))
+    .pipe(gulp.dest('./docs/api/'))
+})
+
+gulp.task('docs:kss', function () {
+  return kss(require('./kss-config.json'))
+})
 
 gulp.task('pug:docs', function () {
   return gulp.src('docs/{index,base}.pug')
@@ -27,6 +39,8 @@ gulp.task('lessc:docs', function () {
     .pipe(gulp.dest('./docs/css/'))
 })
 
+gulp.task('build:docs', ['docs:api', 'docs:kss', 'pug:docs', 'lessc:docs'])
+
 gulp.task('lessc:core', function () {
   return gulp.src('css/src/xmeter.less')
     .pipe(less())
@@ -48,4 +62,4 @@ gulp.task('lessc:core', function () {
     .pipe(gulp.dest('./css/'))
 })
 
-gulp.task('build', ['pug:docs', 'lessc:docs', 'lessc:core'])
+gulp.task('build', ['lessc:core', 'build:docs'])
