@@ -7,10 +7,10 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.4.1",
+    "gulp-clean-css": "^3.9.0",
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
-    "gulp-sourcemaps": "^2.6.0",
+    "gulp-sourcemaps": "^2.6.1",
     "kss": "^3.0.0-beta.18",
     "normalize.css": "^6.0.0",
     "sitepage": "^1.0.0"
