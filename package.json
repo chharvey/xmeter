@@ -19,7 +19,7 @@
     "sitepage": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test.js",
     "unbuild": "rm docs/{index,base}.html {docs/css/docs,css/xmeter}.css css/xmeter.css.map",
     "build": "gulp build"
   },
