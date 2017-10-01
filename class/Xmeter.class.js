@@ -8,21 +8,22 @@ class Xmeter {
   /** @private */ constructor() {}
 
   /**
-   * Render any data in HTML.
-   * Displays:
+   * @summary Render any data in HTML.
+   * @description Displays:
    * - `Xmeter.view(data).permalink()` - display a permalink
    * @param   {*} data any data to render
    * @returns {Xmeter.View} a function returning HTML output
    */
   static view(data) {
     /**
-     * @namespace Xmeter.View
+     * @mixin Xmeter.View
      */
     return {
       /**
-       * Return an <a.Permlink> element.
-       * Call `Xmeter.view(data).permalink()` to render this display.
+       * Return an `<a.Permlink>` element.
+       * @summary Call `Xmeter.view(data).permalink()` to render this display.
        * @memberof Xmeter.View
+       * @version STABLE
        * @param   {string=} content the text of the link
        * @param   {string=} label the value for `[aria-label]` attribute
        * @returns {string} HTML output
