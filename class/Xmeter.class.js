@@ -1,4 +1,4 @@
-const Element = require('extrajs-element')
+const Element = require('extrajs-dom').Element
 
 /**
  * Static members for the Xmeter package.
