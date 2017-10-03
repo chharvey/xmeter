@@ -9,14 +9,16 @@ class Xmeter {
 
   /**
    * @summary Render any data in HTML.
-   * @description Displays:
-   * - `Xmeter.view(data).permalink()` - display a permalink
    * @param   {*} data any data to render
-   * @returns {Xmeter.View} a function returning HTML output
+   * @returns {Xmeter.View}
    */
   static view(data) {
     /**
-     * @mixin Xmeter.View
+     * @summary A set of functions returning HTML output.
+     * @description Available displays:
+     * - `Xmeter.view(data).permalink()` - display a permalink
+     * @namespace Xmeter.View
+     * @type {!Object<function(?):string>}
      */
     return {
       /**
