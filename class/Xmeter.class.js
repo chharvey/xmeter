@@ -1,4 +1,5 @@
 const Element = require('extrajs-dom').Element
+const View = require('./View.class.js')
 
 /**
  * Static members for the Xmeter package.
@@ -9,34 +10,34 @@ class Xmeter {
 
   /**
    * @summary Render any data in HTML.
+   * @see Xmeter.VIEW
    * @param   {*} data any data to render
-   * @returns {Xmeter.View}
+   * @returns {View}
    */
   static view(data) {
     /**
-     * @summary A set of functions returning HTML output.
+     * @summary This view object is a set of functions returning HTML output.
      * @description Available displays:
      * - `Xmeter.view(data).permalink()` - display a permalink
-     * @namespace Xmeter.View
-     * @type {!Object<function(?):string>}
+     * @namespace Xmeter.VIEW
+     * @type {View}
      */
-    return {
+    return new View(null, data)
       /**
        * Return an `<a.Permlink>` element.
        * @summary Call `Xmeter.view(data).permalink()` to render this display.
-       * @memberof Xmeter.View
+       * @function Xmeter.VIEW.permalink
        * @version STABLE
        * @param   {string=} content the text of the link
        * @param   {string=} label the value for `[aria-label]` attribute
        * @returns {string} HTML output
        */
-      permalink(content = '&sect;', label = 'permalink') {
+      .addDisplay(function permalink(content = '&sect;', label = 'permalink') {
         return new Element('a').class('c-Permalink h-Inline h-Hidden')
-          .attr({ href: data.id, 'aria-label': label })
+          .attr({ href: `#${this.id}`, 'aria-label': label })
           .addContent(content)
           .html()
-      },
-    }
+      })
   }
 }
 
