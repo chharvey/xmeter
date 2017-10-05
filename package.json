@@ -4,7 +4,8 @@
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
-    "extrajs-dom": "^3.0.0"
+    "extrajs-dom": "^3.0.0",
+    "extrajs-view": "^1.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

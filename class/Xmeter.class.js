@@ -1,5 +1,5 @@
 const Element = require('extrajs-dom').Element
-const View = require('./View.class.js')
+const View = require('extrajs-view')
 
 /**
  * Static members for the Xmeter package.
