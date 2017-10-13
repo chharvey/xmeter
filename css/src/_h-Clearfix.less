@@ -1,0 +1,113 @@
+
+/*################################*\
+    xmeter  |  _h-Clearfix.less
+\*################################*/
+
+
+// Clearfix
+//
+// The Clearfix Helper creates a line break after an element
+// in order to push subsequent content below the container.
+// This could be a container of floats, or it could simply be an inline list item.
+// Use this as an alternative to the <code>br</code> element.
+//
+// The Clearfix Helper is used in the classical sense in the first example below (to clear a float).
+// In the second example, the Clearfix Helper creates a line break after the 2nd inline item.
+//
+// The last example shows an alternative to marking up postal addresses.
+// Instead of adding <code>br</code> elements to create line breaks in
+// postal addresses—the traditional approach—you may wrap each line of the address
+// with spans using the Clearfix Helper. This approach may be easier if the spans are already present,
+// for example, from microdata markup.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2017-02-09</time></dd>
+// </dl></header>
+//
+// Markup:
+// <div class="h-Clearfix">
+//   <div style="font-weight: 700; float:  left;">gravity</div>
+//   <div style="font-weight: 700; float: right;">supernova</div>
+// </div>
+// <div>spacetime black hole singularity</div>
+// <ul>
+//   <li class="h-Inline">spacetime </li>
+//   <li class="h-Inline h-Clearfix">black hole </li>
+//   <li class="h-Inline">singularity </li>
+//   <li class="h-Inline">neutron star </li>
+// </ul>
+// <p>
+//   <span class="h-Clearfix">The White House</span>
+//   <span class="h-Clearfix">1600 Pennsylvania Ave NW</span>
+//   <span class="h-Clearfix">Washington, DC 20500</span>
+// </p>
+//
+// Weight: 3
+//
+// Styleguide Helpers.Clearfix
+
+// Example 1
+//
+// The Clearfix Helper is used in the classical sense: to clear a float.
+//
+// Markup:
+// <div class="h-Clearfix">
+//   <div style="font-weight: 700; float:  left;">gravity</div>
+//   <div style="font-weight: 700; float: right;">supernova</div>
+// </div>
+// <div>spacetime black hole singularity</div>
+//
+// Styleguide Helpers.Clearfix.1
+
+
+// Example 2
+//
+// The Clearfix Helper creates a line break after the 2nd inline list item.
+//
+// Markup:
+// <ul>
+//   <li class="h-Inline">spacetime </li>
+//   <li class="h-Inline h-Clearfix">black hole </li>
+//   <li class="h-Inline">singularity </li>
+//   <li class="h-Inline">neutron star </li>
+// </ul>
+//
+// Styleguide Helpers.Clearfix.2
+
+
+// Example 3
+//
+// An alternative to marking up postal addresses.
+// Instead of adding <code>br</code> elements to create line breaks in
+// postal addresses—the traditional approach—you may wrap each line of the address
+// with spans using the Clearfix Helper. This approach may be easier if the spans are already present,
+// for example, from microdata markup.
+//
+// Markup:
+// <p>
+//   <span class="h-Clearfix">The White House</span>
+//   <span class="h-Clearfix">1600 Pennsylvania Ave NW</span>
+//   <span class="h-Clearfix">Washington, DC 20500</span>
+// </p>
+//
+// Styleguide Helpers.Clearfix.3
+
+.h-Clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@media screen  and (min-width: 30em) { .h-Clearfix-sK { .h-Clearfix; } }
+@media screen  and (min-width: 45em) { .h-Clearfix-sM { .h-Clearfix; } }
+@media screen  and (min-width: 60em) { .h-Clearfix-sG { .h-Clearfix; } }
+@media screen  and (min-width: 75em) { .h-Clearfix-sT { .h-Clearfix; } }
+@media screen  and (min-width: 90em) { .h-Clearfix-sP { .h-Clearfix; } }
+@media not all and (min-width: 30em) { .h-Clearfix-nK { .h-Clearfix; } }
+@media not all and (min-width: 45em) { .h-Clearfix-nM { .h-Clearfix; } }
+@media not all and (min-width: 60em) { .h-Clearfix-nG { .h-Clearfix; } }
+@media not all and (min-width: 75em) { .h-Clearfix-nT { .h-Clearfix; } }
+@media not all and (min-width: 90em) { .h-Clearfix-nP { .h-Clearfix; } }

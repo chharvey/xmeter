@@ -1,7 +1,9 @@
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////--- CHANGED DEPRECATED! Use the `/css/src/` folder instead!  ---////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
-/*################################*\
-    xmeter  |  _base.less
-\*################################*/
 
 
 // Contents
@@ -54,8 +56,6 @@ html {
   line-height: var(--line-height);
 }
 
-// Vertical spacing between typographical blocks
-// NOTE: `textarea` is inline by default but overriding here: should be block (opinionated)
 h1, h2, h3, h4, h5, h6,
 p, pre, figure, blockquote,
 ol, ul, dl,
@@ -68,12 +68,6 @@ h1 {
   padding-top: var(--vru);
 }
 
-// Font sizes for text-level elements should be in units of `em` instead of `rem` because
-// they should scale with their parents.
-// Also, inline elements should not affect vertical rhythm, thus line-heights are zero.
-// (The `display` property of these elements should automatically
-// have a value of `inline` (do not set manually), either by browser default
-// or by CSS **initial value**.)
 span, br,
 em, strong, i, mark, u, small, s,
 dfn, b, abbr, var, q, cite, sup, sub,
@@ -82,8 +76,6 @@ label {
   line-height: 0;
 }
 
-// Elements with a transparent content model
-// should display what their contents display.
 a, ins, del {
   // display: inherit;
   // line-height: inherit;
@@ -248,9 +240,6 @@ hr {
 //++++++++++++++++++++++++++++++++//
 //    # TEXT
 //++++++++++++++++++++++++++++++++//
-// RECOMMENDATION:
-// Do not use `br` to indicate line breaks, use CSS instead.
-// One exception: MAY use `address > br` to indicate line breaks (by convention)
 br {
 }
   //--------------------------------//
@@ -434,10 +423,6 @@ select[multiple] > optgroup > option {
 //++++++++++++++++++++++++++++++++//
 //    # EMBEDDED
 //++++++++++++++++++++++++++++++++//
-// [1] Correct squishing when one dimension changes
-// [2] fluid images for responsive purposes
-// [3] offset `[alt]` attribute text from surrounding copy
-// [4] safer alternative to `display: block;`
 img {
   width: auto;  // [1]
   height: auto; // [1]

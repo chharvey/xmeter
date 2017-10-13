@@ -19,7 +19,7 @@ $ npm install xmeter
 
 Use the global variables:
 ```less
-@import (reference) url('/node_modules/xmeter/src/__settings.less');
+@import (reference) url('/node_modules/xmeter/css/src/__settings.less');
 .my-selector {
   font-size: (1.5 * @g-font-size-kilo);
 }
@@ -28,7 +28,7 @@ See `/src/__settings.less` for all the variables available.
 
 Use the tools:
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fontsize.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.fontsize.less');
 .my-selector {
   .font-size-el(2.0; 1.5);
 }
@@ -45,12 +45,12 @@ Locally:
 $ npm install xmeter
 ```
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/xmeter.css"/>
 ```
 
 Remotely from a CDN (not recommended, unless deploying your `/node_modules/` isn’t possible):
 ```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/xmeter.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/xmeter.css"/>
 ```
 where `‹master›` can be any branch or tag.
 
@@ -61,7 +61,7 @@ The stylesheet `xmeter.css` is already minified, and is accompanied by a sourcem
 
 Xmeter’s stylesheet is a starting point that “normalizes” unclassed HTML elements.
 And now that Xmeter has a few [design patterns] (link pending) built in, you can use them in your markup too!
-In addition to base styles, Xmeter has classes for Objects (`src/_o-*.less`), Components (`src/_c-*.less`) and Helpers (`src/_h-*.less`),
+In addition to base styles, Xmeter has classes for Objects (`/css/src/_o-*.less`), Components (`/css/src/_c-*.less`) and Helpers (`/css/src/_h-*.less`),
 design patterns that aid in a consistent, easy-to-use, vertical rhythm system.
 These classes should be directly injected into elements’ HTML `[class]` attribute on your site.
 

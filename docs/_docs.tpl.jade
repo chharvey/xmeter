@@ -14,14 +14,6 @@ html(lang="en")
             = ': ' + item.description()
           if item.findAll().length && depth > 0
             +doctoc({pages: item.findAll(), classes: (classes.sub || {}), depth: depth-1}, true)
-  mixin newSection(n, page)
-    - var id = page.url().split('#')[1]
-    section(id=id)
-      | <h#{n}>#{page.name()}
-      include ../_views/_c-Permalink.view.pug
-      +permalink(id)
-      | </h#{n}>
-      block
   block vars
   head
     title= page.title() || `${page.name()} | ${Docs.DOCS.name()}`
@@ -30,9 +22,9 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     block styles
       //- link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.9.0/bangs.min.css")
-      link(rel="stylesheet" href="../xmeter.css")
-      link(rel="stylesheet" href="styles/docs.css")
-  body.docs-body#top
+      link(rel="stylesheet" href="../css/xmeter.css")
+      link(rel="stylesheet" href="css/docs.css")
+  body.h-Ruled#top
     a.h-Hidden(href="#main") skip to main content
     header
       h1= Docs.DOCS.name()

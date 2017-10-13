@@ -1,8 +1,0 @@
-{
-  "title": "Xmeter Style Guide",
-  "source": "src/",
-  "destination": "styleguide/",
-  "css": [
-    "../xmeter.css"
-  ]
-}

@@ -1,0 +1,135 @@
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
+    xmeter
+    Version: 6.0.0
+    Licence: MIT
+    Repo   : https://github.com/chharvey/xmeter.git
+    Home   : https://github.com/chharvey/xmeter#readme
+    Author : Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)
+\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+@import (inline) url('reset.css');
+@import (inline) url('../../node_modules/normalize.css/normalize.css');
+
+
+/*================================*\
+    xmeter.less
+\*================================*/
+@import (reference) url('src/__settings.less');
+@import (reference) url('src/__tool.fontsize.less');
+@import (reference) url('src/__tool.borders.less');
+@import (reference) url('src/__tool.delims.less');
+
+
+/**
+ * ////////////////    CONTENTS    ////////////////
+ *
+ * reset.css (above)...................strips all elements of all browser-default styles
+ * normalize.css (above)...............(@necolas) addresses browser discrepancies
+ *
+ * BASE--------------------------------BARE UNCLASSED ELEMENTS
+ * _base.css...........................unclassed html elements
+ *
+ * OBJECTS-----------------------------REUSABLE STRUCTURAL PATTERNS
+ * List................................plain, unstyled, blocky list
+ * Flex................................one-dimensional flexible box
+ * Grid................................two-dimensional flexible box
+ * Tablist.............................object containing tabs and panels
+ *
+ * COMPONENTS--------------------------SPECIFIC STYLE PATTERNS
+ * Permalink...........................internal documentation link
+ *
+ * THEMES & HELPERS--------------------LOCATION-DEPENDENT STYLES
+ * Block...............................gives a blocky look
+ * Inline..............................a simple inline object
+ * Clearfix............................creates a line break and clears floats
+ * Hidden..............................visually hides an element
+ * Measure.............................constrains an element’s inline-size for readability
+ * Ruled...............................adds background lines
+ *
+ * ATOMS-------------------------------FUNCTIONAL CSS
+ * fz..................................font-size
+ */
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+// Principles
+//
+// Parts of an overarching design theme.
+// - voice-and-tone, mood, and look-and-feel of the site
+// - typographical conventions & rhythm (typefaces, font sizes, and leading used throughout the site)
+// - additionally, any atypical writing modes / other languages required
+// - site-wide color scheme
+// - image treatment conventions (story-telling, image placement, quality, filters, etc)
+//
+// Weight: 1
+//
+// Styleguide Principles
+
+@import url('_base.less');
+
+// Objects
+//
+// Layout and structural design patterns that can be reused many times for many different purposes.
+// - layout display (grid/flexbox/multicol)
+// - positioning/floats/alignment
+// - sizing (width & height)
+// - spacing (padding & margin)
+//
+// Weight: 2
+//
+// Styleguide Objects
+
+@import url('_o-List.less');
+@import url('_o-Flex.less');
+@import url('_o-Grid.less');
+@import url('_o-Tablist.less');
+
+// Components
+//
+// Cosmetic design patterns that are each only used for one functional purpose.
+// - box effects (backgrounds, borders, opacity)
+// - typefaces and font weights/styles
+// - textual effects (letter-spacing, alignment, indentation, decoration, list-style, color)
+// - bells & whistles (transformations, overflows, shadows, filters, transitions, icons)
+//
+// Weight: 3
+//
+// Styleguide Components
+
+@import url('_c-Permalink.less');
+
+// Organisms
+//
+// Aggregate compositions of Objects and Components that form single, self-sustaining interfaces.
+//
+// Weight: 4
+//
+// Styleguide Organisms
+
+// Helpers
+//
+// Somewhat explicit classes used for enhancing default styles.
+//
+// Weight: 5
+//
+// Styleguide Helpers
+
+@import url('_h-Block.less');
+@import url('_h-Inline.less');
+@import url('_h-Clearfix.less');
+@import url('_h-Hidden.less');
+@import url('_h-Measure.less');
+@import url('_h-Ruled.less');
+
+// Atoms
+//
+// Very specific classes used for creating anomalies or fixing broken styles.
+//
+// Weight: 6
+//
+// Styleguide Atoms
+
+@import url('_-fz.less');

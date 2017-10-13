@@ -1,99 +1,26 @@
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
-    xmeter
-    Version: 6.0.0
-    Licence: MIT
-    Repo   : https://github.com/chharvey/xmeter.git
-    Home   : https://github.com/chharvey/xmeter#readme
-    Author : Chris Harvey <chrisharvey2pi@gmail.com> (https://chharvey.github.io/)
-\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////--- CHANGED DEPRECATED! Use the `/css/src/` folder instead!  ---////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 @import (inline) url('reset.css');
 @import (inline) url('../node_modules/normalize.css/normalize.css');
 
-
-/*================================*\
-    xmeter.less
-\*================================*/
 @import (reference) url('src/__settings.less');
 @import (reference) url('src/__tool.fontsize.less');
 @import (reference) url('src/__tool.borders.less');
 @import (reference) url('src/__tool.delims.less');
 
 
-/**
- * ////////////////    CONTENTS    ////////////////
- *
- * reset.css (above)...................strips all elements of all browser-default styles
- * normalize.css (above)...............(@necolas) addresses browser discrepancies
- *
- * BASE--------------------------------BARE UNCLASSED ELEMENTS
- * _base.css...........................unclassed html elements
- *
- * OBJECTS-----------------------------REUSABLE STRUCTURAL PATTERNS
- * List................................plain, unstyled, blocky list
- * Flex................................one-dimensional flexible box
- * Grid................................two-dimensional flexible box
- *
- * COMPONENTS--------------------------SPECIFIC STYLE PATTERNS
- * Permalink...........................internal documentation link
- *
- * THEMES & HELPERS--------------------LOCATION-DEPENDENT STYLES
- * Block...............................gives a blocky look
- * Inline..............................a simple inline object
- * Clearfix............................creates a line break and clears floats
- *
- * ATOMS-------------------------------FUNCTIONAL CSS
- * fz..................................font-size
- */
-
-///////////////////////////////////////////////////////////////////////////////
-
 
 @import url('_base.less');
-
-// Objects
-//
-// Patterns of structure that can be reused many times for many different purposes.
-//
-// Weight: 1
-//
-// Styleguide Objects
-
 @import url('_o-List.less');
 @import url('_o-Flex.less');
 @import url('_o-Grid.less');
-
-// Components
-//
-// Patterns of look-and-feel that are each only used for one purpose.
-//
-// Weight: 2
-//
-// Styleguide Components
-
 @import url('_c-Permalink.less');
-
-// Helpers
-//
-// Somewhat explicit classes used for enhancing default styles.
-//
-// Weight: 3
-//
-// Styleguide Helpers
-
 @import url('_h-Block.less');
 @import url('_h-Inline.less');
 @import url('_h-Clearfix.less');
 @import url('_h-Hidden.less');
-
-// Atoms
-//
-// Very specific classes used for creating anomalies or fixing broken styles.
-//
-// Weight: 4
-//
-// Styleguide Atoms
 
 @import url('_-fz.less');

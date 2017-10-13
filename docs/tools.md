@@ -30,7 +30,7 @@ or all 4 sides on a box, while preserving vertical rhythm. This tool subtracts a
 the `margin-top` of the box, equal to the sum of the widths of the box’s top and bottom borders,
 so that subsequent elements will not be pushed down the page.
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.borders.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.borders.less');
 .your-class {
   .border-vert([top | bot | topbot | all]; <length>?:0);
 }
@@ -78,7 +78,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
 
 ### border-radius
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.border-radius.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.border-radius.less');
 .your-class {
   .border-left-radius  (<radius_h>?:0 <radius_v>?:<radius_h>);
   .border-right-radius (<radius_h>?:0 <radius_v>?:<radius_h>);
@@ -89,7 +89,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
 
 ### Font Sizing Tools
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.fontsize.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.fontsize.less');
 .your-module {
   .font-size-mod(<number>?:1);
   .your-element {
@@ -100,7 +100,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
 
 ### delims
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.delims.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.delims.less');
 .your-class {
   .delims([!none | [<string> <string>]+]?);
   .parens();            // ( )
@@ -119,7 +119,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
 ### transitions
 This mixin differs from the `transition` css shorthand property, which does not allow you to set comma-separated properties/durations/functions/delays.
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.transitions.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.transitions.less');
 .your-class {
   .transitions(<single-transition-property>#; <time>#; <timing-function>#; <time>#);
   // example:
@@ -129,7 +129,7 @@ This mixin differs from the `transition` css shorthand property, which does not 
 
 ### sprite
 ```less
-@import (reference) url('/node_modules/xmeter/src/__tool.sprite.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.sprite.less');
 .your-class {
   .sprite([horizontal | vertical]; <integer>; <length>; <length>);
 }

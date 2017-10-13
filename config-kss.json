@@ -1,0 +1,13 @@
+{
+  "title": "Xmeter Style Guide",
+  "source": "css/src/",
+  "destination": "docs/styleguide/",
+  "css": [
+    "../../css/xmeter.css",
+    "../../docs/css/kss.css"
+  ],
+  "js": [
+    "http://code.jquery.com/jquery-3.2.1.min.js",
+    "../../js/o-Tablist.js"
+  ]
+}
