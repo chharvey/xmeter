@@ -1,6 +1,6 @@
 
 /*################################*\
-    neo  |  _o-Tablist.less
+    xmeter  |  _o-Tablist.less
 \*################################*/
 
 
@@ -69,6 +69,10 @@
 //
 // Styleguide Objects.Tablist
 .o-Tablist {
+  display: contents;
+  width: 100%; // FIXME HTML Spec bug: <https://thatemil.com/blog/2017/07/01/fixing-fieldsets/>
+
+  //---- if `display:contents` is not supported, unset all box styles: ----//
   margin-top  : 0; margin-top  : initial; // HACK fallbacks
   margin-left : 0; margin-left : initial; // HACK fallbacks
   margin-right: 0; margin-right: initial; // HACK fallbacks
