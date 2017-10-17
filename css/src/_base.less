@@ -281,14 +281,7 @@ br {
     font-style: italic;
   }
   mark {
-    // let ins = Color.fromString('#acf2bd') // GitHub-flavored green
-    // let del = Color.fromString('#fdb8c0') // GitHub-flavored red
-    // let mark = Color.fromHSL(...[
-    //   (ins.hslHue + del.hslHue)/2,
-    //   (ins.hslSat + del.hslSat)/2,
-    //   (ins.hslLum + del.hslLum)/2,
-    // ]).invert()
-    background-color: #f3f8b1;
+    background-color: fadeout(#ffe168, 50%); // Google-flavored comments in Google Docs
   }
   u {
     text-decoration: underline; // HACK fallback
@@ -309,10 +302,10 @@ br {
   //    ## Documentation
   //--------------------------------//
   ins {
-    background-color: #acf2bd; // GitHub-flavored
+    background-color: #acf2bd; // GitHub-flavored diff
   }
   del {
-    background-color: #fdb8c0; // GitHub-flavored
+    background-color: #fdb8c0; // GitHub-flavored diff
   }
   dfn {
     font-style: inherit; // undo Normalize
