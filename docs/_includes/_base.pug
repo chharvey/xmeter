@@ -195,8 +195,8 @@ section#text-level-elements
         h3 Links #[+permalink('links')]
         figure(class=classname.figure): ul
           block linksList
-            li: a placeholder link #[code(class=classname.code) a]
-            li: a(href="#0") regular link #[code(class=classname.code)= 'a[href]']
+            li: a placeholder anchor #[code(class=classname.code)= 'a:not([href])']
+            li: a(href="#0") hyperlink #[code(class=classname.code)= 'a[href]']
     section#stress
       block stress
         h3 Stress #[+permalink('stress')]
