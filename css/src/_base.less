@@ -48,7 +48,8 @@
 
 html {
   --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
-  --vru: calc(~'var(--line-height) * 1rem');
+  --lh: calc(~'var(--line-height) * 1rem'); // HACK fallback for `lh` units (https://drafts.csswg.org/css-values/#lh)
+  --vru: var(--lh); // CHANGED DEPRECATED: legacy support
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
   line-height: var(--line-height);
@@ -62,10 +63,12 @@ ol, ul, dl,
 table,
 form, fieldset, textarea,
 details {
-  margin-bottom: var(--vru);
+  margin-bottom: var(--lh);
+  margin-bottom: 1lh;
 }
 h1 {
-  padding-top: var(--vru);
+  padding-top: var(--lh);
+  padding-top: 1lh;
 }
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
@@ -401,7 +404,8 @@ textarea {
 textarea {
   display: block; // override browser default
   width: 30rem;
-  height: calc(~'6 * var(--vru)');
+  height: calc(~'6 * var(--lh)');
+  height: 6lh;
   .font-size-mod(@g-font-size-mill);
 }
 
