@@ -140,7 +140,7 @@ h5 { .font-size-el(@g-font-size-h5); }
 h6 { .font-size-el(@g-font-size-h6); }
 
 h1 {
-  margin-top: 0; margin-top: initial; // HACK fallbacks
+  margin-top: 0; // HACK fallbacks
   margin-top: unset;
   margin-block-start: unset; // undo Normalize
 }
@@ -172,13 +172,12 @@ hr {
   }
   figure {
     // undo Normalize
-    margin-top:   0; margin-top:   initial; // HACK fallbacks
-    margin-left:  0; margin-left:  initial; // HACK fallbacks
-    margin-right: 0; margin-right: initial; // HACK fallbacks
-    margin-top:   unset;
-    margin-left:  unset; margin-right: unset;
+    margin-top: 0; // HACK fallbacks
+    margin-left: 0; margin-right: 0;
+    margin-top: unset;
+    margin-left: unset; margin-right: unset;
     margin-block-start: unset;
-    margin-inline:      unset;
+    margin-inline: unset;
   }
   figcaption {
   }
@@ -405,8 +404,9 @@ textarea {
   line-height: inherit; // undo browser default
 }
 
-html > body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+html body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
   .border-vert(all; 1px);
+  .border-block(all; 1px);
   border-style: solid;
   border-color: @p-color-gray;
   // NOTE cannot use box-shadow hack due to shadow covering <legend>
