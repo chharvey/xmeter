@@ -43,10 +43,12 @@ code, kbd, samp {
 }
 caption,
 th {
-  text-align: inherit;
+  text-align: inherit; /* HACK fallback */
+  text-align: unset;
 }
 pre {
-  white-space: inherit;
+  white-space: inherit; /* HACK fallback */
+  white-space: unset;
 }
 a,
 u, s,
