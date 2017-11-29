@@ -70,17 +70,15 @@
 // Styleguide Objects.Tablist
 .o-Tablist {
   display: contents;
-  width: 100%; // FIXME HTML Spec bug: <https://thatemil.com/blog/2017/07/01/fixing-fieldsets/>
+  width: 100%; // HTML Spec BUG: <https://thatemil.com/blog/2017/07/01/fixing-fieldsets/>
 
   //---- if `display:contents` is not supported, unset all box styles: ----//
-  margin-top  : 0; margin-top  : initial; // HACK fallbacks
-  margin-left : 0; margin-left : initial; // HACK fallbacks
-  margin-right: 0; margin-right: initial; // HACK fallbacks
-  margin-top  : unset; // unset fieldset base
-  margin-left : unset; // unset fieldset base
-  margin-right: unset; // unset fieldset base
-  margin-block-start: unset; // CHANGED experimental support
-  margin-inline     : unset; // CHANGED experimental support
+  margin-top: 0; // HACK fallbacks
+  margin-left: 0; margin-right: 0;
+  margin-top: unset;
+  margin-left: unset; margin-right: unset;
+  margin-block-start: unset;
+  margin-inline: unset;
 
   padding: 0; padding: initial; // HACK fallbacks
   padding: unset; // unset fieldset base
@@ -89,7 +87,7 @@
 
   & > .o-Flex {
     flex-wrap: wrap;
-    margin-bottom: 0; // fixes a bug where fieldset vertical margins don’t collapse
+    margin-bottom: 0; // fixes a BUG where fieldset vertical margins don’t collapse
   }
 }
 
