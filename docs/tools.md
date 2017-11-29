@@ -33,6 +33,7 @@ so that subsequent elements will not be pushed down the page.
 @import (reference) url('/node_modules/xmeter/css/src/__tool.borders.less');
 .your-class {
   .border-vert([top | bot | topbot | all]; <length>?:0);
+  .border-block([start | end | block | all]; <length>?:0);
 }
 ```
 #### Box-Shadow Hack
@@ -53,7 +54,7 @@ an offset-y of 0, a blur of 0, and a spread of `<length>`, which is the effectiv
 ```less
 .border-all {
   // .border-vert(all; <length>); // using box-shadow instead
-  box-shadow 0 0 0 <length> <color>;
+  box-shadow: 0 0 0 <length> <color>;
 }
 ```
 To emulate a top or bottom border, use outset, offset-x 0, offset-y `<length>`, blur 0, and spread 0.
@@ -61,11 +62,11 @@ The shadow will emulate a border-bottom if `<length>` is positive, or border-top
 ```less
 .border-bottom {
   // .border-vert(bottom; <length>); // using box-shadow instead
-  box-shadow 0 <length> 0 0 <color>;
+  box-shadow: 0 <length> 0 0 <color>;
 }
 .border-top {
   // .border-vert(top; <length>); // using box-shadow instead
-  box-shadow 0 -<length> 0 0 <color>;
+  box-shadow: 0 -<length> 0 0 <color>;
 }
 ```
 
@@ -84,6 +85,10 @@ in the same declaration, and the effective border-style cannot be specified; it 
   .border-right-radius (<radius_h>?:0 <radius_v>?:<radius_h>);
   .border-top-radius   (<radius_h>?:0 <radius_v>?:<radius_h>);
   .border-bottom-radius(<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-block-start-radius (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-block-end-radius   (<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-inline-start-radius(<radius_h>?:0 <radius_v>?:<radius_h>);
+  .border-inline-end-radius  (<radius_h>?:0 <radius_v>?:<radius_h>);
 }
 ```
 
