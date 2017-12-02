@@ -81,6 +81,28 @@
         .quotes-double();
       }
       //.... end ## _base.less ....//
+    .o-List {
+      padding-left: 0;
+    }
+    .o-Tablist {
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      & > .o-Flex {
+        margin-bottom: 0;
+      }
+    }
+    .c-Permalink {
+      h1:hover > &,
+      h2:hover > &,
+      h3:hover > &,
+      h4:hover > &,
+      h5:hover > &,
+      h6:hover > & {
+        position: static;
+      }
+    }
     //---- end ## `initial` ----//
     //-------------------------------//
     // ## Pseudo Rems
