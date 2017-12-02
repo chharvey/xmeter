@@ -418,7 +418,7 @@ textarea {
   width: 30rem;
   height: calc(~'6 * var(--lh)');
   height: 6lh;
-  .font-size-mod(@g-font-size-mill);
+  font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
   block-size: calc(~'6 * var(--lh)');
   block-size: 6lh;
   inline-size: 30rem;
@@ -435,7 +435,7 @@ label {
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 // input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED selector not supported yet
 select {
-  font-size: @g-font-size-mill * 1em;
+  font-size: (@g-font-size-mill * 1em);
 }
 
 input[type="button"],
