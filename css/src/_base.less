@@ -415,13 +415,13 @@ textarea {
 
 textarea {
   display: block; // override browser default
-  width: 30rem;
   height: calc(~'6 * var(--lh)');
   height: 6lh;
-  font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
+  width: 30rem;
   block-size: calc(~'6 * var(--lh)');
   block-size: 6lh;
   inline-size: 30rem;
+  font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
 }
 
 input[type="button"],

@@ -141,6 +141,27 @@
     //-------------------------------//
     // ## Vertical rhythm unit
     //-------------------------------//
+    @p-lh: (@p-line-height * 1rem); // equivalent to unit `1lh`, or custom prop `--lh`
+    html {
+      line-height: @p-line-height;
+    }
+    h1, h2, h3, h4, h5, h6,
+    p, pre, figure, blockquote,
+    ol, ul, dl,
+    table,
+    form, fieldset, textarea,
+    details {
+      margin-bottom: @p-lh;
+    }
+    h1 {
+      padding-top: @p-lh;
+    }
+    textarea {
+      height: (6 * @p-lh);
+    }
+    .h-Ruled {
+      background-size: 1px @p-lh;
+    }
     //---- end ## Vertical rhythm unit ----//
     //-------------------------------//
     // ## Other custom props
