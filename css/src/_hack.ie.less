@@ -1,0 +1,58 @@
+
+/*################################*\
+    xmeter  |  _hack.ie.less
+\*################################*/
+
+
+// IE fixes go here. These styles should *only* be rendered on IE!
+// Using the -ms-high-contrast quirk: only IE supports -ms-high-contrast
+///////////////////////////////////////////////////////////////////////////////
+
+
+// Table of Contents
+// # IE QUIRK FALLBACKS
+//   ## `initial`
+//   ## Pseudo Rems
+// # CUSTOM PROPERTY FALLBACKS
+//   ## Vertical rhythm unit
+//   ## Other custom props
+// # CSS3 FALLBACKS
+//   ## Filters
+
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  //+++++++++++++++++++++++++++++++//
+  // # IE QUIRK FALLBACKS
+  //+++++++++++++++++++++++++++++++//
+    //-------------------------------//
+    // ## `initial`
+    // IE does not support the `initial` keyword for css values
+    //-------------------------------//
+    //---- end ## `initial` ----//
+    //-------------------------------//
+    // ## Pseudo Rems
+    // IE10 does not support the `rem` unit on pseudo-elements like `::before` or `::after`
+    //-------------------------------//
+    //---- end ## Pseudo Rems ----//
+  //++++ end # IE QUIRK FALLBACKS ++++//
+
+
+  //+++++++++++++++++++++++++++++++//
+  // # CUSTOM PROPERTY FALLBACKS
+  //+++++++++++++++++++++++++++++++//
+    //-------------------------------//
+    // ## Vertical rhythm unit
+    //-------------------------------//
+    //---- end ## Vertical rhythm unit ----//
+    //-------------------------------//
+    // ## Other custom props
+    //-------------------------------//
+    //---- end ## Other custom props ----//
+  //++++ end # CUSTOM PROPERTY FALLBACKS ++++//
+
+
+  //+++++++++++++++++++++++++++++++//
+  // # CSS3 FALLBACKS
+  //+++++++++++++++++++++++++++++++//
+  //++++ end # CSS3 FALLBACKS ++++//
+}
