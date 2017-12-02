@@ -12,6 +12,7 @@
 // Table of Contents
 // # IE QUIRK FALLBACKS
 //   ## `initial`
+//     ### reset.css
 //   ## Pseudo Rems
 // # CUSTOM PROPERTY FALLBACKS
 //   ## Vertical rhythm unit
@@ -28,6 +29,32 @@
     // ## `initial`
     // IE does not support the `initial` keyword for css values
     //-------------------------------//
+      //...............................//
+      // ## reset.css
+      //...............................//
+      sup, sub {
+        vertical-align: baseline;
+      }
+      body,
+      h1, h2, h3, h4, h5, h6,
+      hr,
+      p, figure, blockquote, pre,
+      ol, ul, dl,
+      dd,
+      fieldset {
+        margin: 0;
+      }
+      ol, ul,
+      th, td,
+      legend {
+        padding: 0;
+      }
+      a,
+      u, s,
+      ins, del {
+        text-decoration: none;
+      }
+      //.... end ## reset.css ....//
     //---- end ## `initial` ----//
     //-------------------------------//
     // ## Pseudo Rems
