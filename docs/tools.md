@@ -5,24 +5,25 @@ Functions and mixins used for development.
 These are the mixins and/or functions in the codebase that are used in development.
 These rules don’t output any CSS, but they do make writing CSS a lot easier
 by encapsulating reusable sets of property declarations.
-[Fallbacks](#fallbacks) are simply mixins that address
-browser vendor prefixes for CSS properties and values,
-whereas [Tools](#tools) combine properties commonly used together.
+The tools below combine properties commonly used together.
 
 **WARNING: Syntax shown in code below has not been completely resolved.
 Watch out for changes.**
 
+
+
 ## Table of Contents
 
-1. [Table of Contents](#table-contents)
-- [Tools](#tools)
   1. [borders](#borders)
   - [border-radius](#border-radius)
   - [Font Sizing Tools](#font-sizing-tools)
   - [delims](#delims)
   - [sprite](#sprite)
 
+
+
 ## Tools
+
 
 ### borders
 Use this tool to create borders on the top side, the bottom side, both top and bottom sides,
@@ -36,6 +37,7 @@ so that subsequent elements will not be pushed down the page.
   .border-block([start | end | block | all]; <length>?:0);
 }
 ```
+
 #### Box-Shadow Hack
 **Tip:** You may use a hack involving `box-shadow` to emulate a border that won’t affect
 vertical rhythm. Borders add to the box’s height, which slightly but noticeably
@@ -77,6 +79,7 @@ because you can’t get the box shadow to appear only on opposing sides.
 The effective border color must be provided
 in the same declaration, and the effective border-style cannot be specified; it will always be solid.
 
+
 ### border-radius
 ```less
 @import (reference) url('/node_modules/xmeter/css/src/__tool.border-radius.less');
@@ -92,6 +95,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
 }
 ```
 
+
 ### Font Sizing Tools
 ```less
 @import (reference) url('/node_modules/xmeter/css/src/__tool.fontsize.less');
@@ -102,6 +106,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
   }
 }
 ```
+
 
 ### delims
 ```less
@@ -121,6 +126,7 @@ in the same declaration, and the effective border-style cannot be specified; it 
 }
 ```
 
+
 ### transitions
 This mixin differs from the `transition` css shorthand property, which does not allow you to set comma-separated properties/durations/functions/delays.
 ```less
@@ -131,6 +137,7 @@ This mixin differs from the `transition` css shorthand property, which does not 
   .transitions(color, background-color, border-color; 500ms; ease-in-out);
 }
 ```
+
 
 ### sprite
 ```less
