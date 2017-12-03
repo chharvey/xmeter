@@ -73,21 +73,20 @@
   width: 100%; // HTML Spec BUG: <https://thatemil.com/blog/2017/07/01/fixing-fieldsets/>
 
   //---- if `display:contents` is not supported, unset all box styles: ----//
-  margin-top: 0; // HACK fallbacks
-  margin-left: 0; margin-right: 0;
-  margin-top: unset;
-  margin-left: unset; margin-right: unset;
+  margin-top: initial; margin-left: initial; margin-right: initial; // HACK fallbacks for `unset`
+  margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // HACK fallbacks for logical
   margin-block-start: unset;
   margin-inline: unset;
 
-  padding: 0; padding: initial; // HACK fallbacks
+  padding: initial; // HACK fallback for `unset`
   padding: unset; // unset fieldset base
 
   border: 0; // unset fieldset base
 
   & > .o-Flex {
     flex-wrap: wrap;
-    margin-bottom: 0; // fixes a BUG where fieldset vertical margins don’t collapse
+    margin-bottom: initial; // HACK fallback
+    margin-bottom: unset; // fixes a BUG where fieldset vertical margins don’t collapse
   }
 }
 

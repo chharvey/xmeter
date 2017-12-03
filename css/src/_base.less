@@ -140,8 +140,8 @@ h5 { .font-size-el(@g-font-size-h5); }
 h6 { .font-size-el(@g-font-size-h6); }
 
 h1 {
-  margin-top: 0; // HACK fallbacks
-  margin-top: unset;
+  margin-top: initial; // HACK fallback for `unset`
+  margin-top: unset;   // HACK fallback for logical
   margin-block-start: unset; // undo Normalize
 }
 
@@ -172,10 +172,8 @@ hr {
   }
   figure {
     // undo Normalize
-    margin-top: 0; // HACK fallbacks
-    margin-left: 0; margin-right: 0;
-    margin-top: unset;
-    margin-left: unset; margin-right: unset;
+    margin-top: initial; margin-left: initial; margin-right: initial; // HACK fallbacks for `unset`
+    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // HACK fallbacks for logical
     margin-block-start: unset;
     margin-inline: unset;
   }
@@ -194,19 +192,19 @@ hr {
     li > &,
     dt > &,
     dd > & {
-      margin-bottom: 0; margin-bottom: initial;
-      margin-bottom: unset;
+      margin-bottom: initial; // HACK fallback for `unset`
+      margin-bottom: unset;   // HACK fallback for logical
       margin-block-end: unset; // undo default vertical spacing for nested lists
     }
   }
   ol,
   ul {
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 4rem; // HACK fallback for logical
     padding: logical 0 4rem 0 0;
     li > &,
     dt > &,
     dd > & {
-      padding-left: 2rem;
+      padding-left: 2rem; // HACK fallback for logical
       padding-inline-start: 2rem;
     }
   }
@@ -214,7 +212,7 @@ hr {
     list-style-type: decimal;
   }
   ul {
-    list-style-type: disc;
+    list-style-type: disc; // not using `initial` because we explicitly want `disc`
   }
   dl {
     list-style: none; // remove counters from `dl > li`
@@ -332,14 +330,15 @@ br {
   abbr {
     &[title] {
       cursor: help;
-      text-decoration: none; // undo Normalize
+      text-decoration: none; // HACK fallback for `text-decoration-line` // also IE fallback for `initial`
+      text-decoration-line: initial; // HACK fallback for `unset`
+      text-decoration-line: unset; // undo Normalize
     }
   }
   var {
     font-style: italic;
   }
   q {
-    .quotes-double(); // fallback for `initial`
     quotes: initial;
   }
   cite {
@@ -416,13 +415,13 @@ textarea {
 
 textarea {
   display: block; // override browser default
-  width: 30rem;
   height: calc(~'6 * var(--lh)');
   height: 6lh;
-  .font-size-mod(@g-font-size-mill);
+  width: 30rem;
   block-size: calc(~'6 * var(--lh)');
   block-size: 6lh;
   inline-size: 30rem;
+  font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
 }
 
 input[type="button"],
@@ -436,7 +435,7 @@ label {
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 // input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED selector not supported yet
 select {
-  font-size: @g-font-size-mill * 1em;
+  font-size: (@g-font-size-mill * 1em);
 }
 
 input[type="button"],

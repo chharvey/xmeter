@@ -22,7 +22,8 @@
 // Styleguide Helpers.Block
 .h-Block {
   display: block;
-  line-height: inherit;
+  line-height: inherit; // HACK fallback for `unset`
+  line-height: unset;
 }
 
 @media screen  and (min-width: 30em) { .h-Block-sK { .h-Block; } }
