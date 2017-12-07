@@ -274,10 +274,20 @@ br {
   // Such elements are “placeholder anchors,” which do not lead anywhere.
   // A placeholder anchor can represent a placeholder for where a hyperlink might otherwise be placed,
   // or it can represent an anchor whose reference may change based on context (e.g., user interaction).
+  //
+  // Link color should have sufficient contrast with the background color
+  // *as well as* sufficient contrast with surrounding non-link text color.
+  // - Background contrast ratio:
+  //   - to meet AA  level: 4.5 normal ; 3.0 large (18pt or 14pt bold)
+  //   - to meet AAA level: 7.0 normal ; 4.5 large (18pt or 14pt bold)
+  // - Surrounding text contrast ratio:
+  //   - 3.0 for all
+  // Read Technique G183 for details: <https://www.w3.org/TR/WCAG20-TECHS/G183.html>
   a[href] {
-    color: #00e;       // default :link
+    // color: #00e;    // default :link
     // color: #551a8b; // default :visited
     // color: #f00;    // default :active
+    color: #06c; // 5.57 aginst white, 3.77 against black
   }
   //---- end ## Links ----//
 
