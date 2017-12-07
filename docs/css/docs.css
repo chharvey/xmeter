@@ -8,7 +8,8 @@
   font-weight: bold;
 }
 .docs-main {
-  margin: 0 1rem var(--vru);
+  margin: 0 1rem var(--lh);
+  margin: 0 1rem 1lh;
 }
 .docs-code {
   padding: 2px 4px;
@@ -20,7 +21,8 @@
   position: relative;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: calc(0.5 * var(--vru)) 0.5rem;
+  padding: calc(0.5 * var(--lh)) 0.5rem;
+  padding: 0.5lh 0.5rem;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 0 0 1px #ddd;
   box-shadow: 0 0 0 1px #ddd;
@@ -32,7 +34,8 @@
 }
 body > a:last-of-type {
   position: fixed;
-  bottom: var(--vru);
+  bottom: var(--lh);
+  bottom: 1lh;
   right: 1rem;
 }
 @media screen and (min-width: 60em) {
