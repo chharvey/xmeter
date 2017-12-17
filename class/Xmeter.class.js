@@ -1,4 +1,4 @@
-const Element = require('extrajs-dom').Element
+const HTMLElement = require('extrajs-dom').HTMLElement
 const View = require('extrajs-view')
 
 /**
@@ -25,6 +25,7 @@ class Xmeter {
     return new View(null, data)
       /**
        * Return an `<a.Permlink>` element.
+       * Parameter `data` should be of type `{id:string}` (an object with a string `id` property).
        * @summary Call `Xmeter.view(data).permalink()` to render this display.
        * @function Xmeter.VIEW.permalink
        * @version STABLE
@@ -33,7 +34,7 @@ class Xmeter {
        * @returns {string} HTML output
        */
       .addDisplay(function permalink(content = '&sect;', label = 'permalink') {
-        return new Element('a').class('c-Permalink h-Inline h-Hidden')
+        return new HTMLElement('a').class('c-Permalink h-Inline h-Hidden')
           .attr({ href: `#${this.id}`, 'aria-label': label })
           .addContent(content)
           .html()

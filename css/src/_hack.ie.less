@@ -1,0 +1,177 @@
+
+/*################################*\
+    xmeter  |  _hack.ie.less
+\*################################*/
+@import (reference) url('./__tool.delims.less');
+
+
+// IE fixes go here. These styles should *only* be rendered on IE!
+// Using the -ms-high-contrast quirk: only IE supports -ms-high-contrast
+///////////////////////////////////////////////////////////////////////////////
+
+
+// Table of Contents
+// # IE QUIRK FALLBACKS
+//   ## `initial`
+//     ### reset.css
+//     ### _base.less
+//   ## Pseudo Rems
+// # CUSTOM PROPERTY FALLBACKS
+//   ## Line height
+//   ## Vertical rhythm unit
+//   ## Other custom props
+// # CSS3 FALLBACKS
+//   ## Filters
+
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  //+++++++++++++++++++++++++++++++//
+  // # IE QUIRK FALLBACKS
+  //+++++++++++++++++++++++++++++++//
+    //-------------------------------//
+    // ## `initial`
+    // IE does not support the `initial` keyword for css values
+    //-------------------------------//
+      //...............................//
+      // ## reset.css
+      //...............................//
+      sup, sub {
+        vertical-align: baseline;
+      }
+      body,
+      h1, h2, h3, h4, h5, h6,
+      hr,
+      p, figure, blockquote, pre,
+      ol, ul, dl,
+      dd,
+      fieldset {
+        margin: 0;
+      }
+      ol, ul,
+      th, td,
+      legend {
+        padding: 0;
+      }
+      a,
+      u, s,
+      ins, del {
+        text-decoration: none;
+      }
+      //.... end ## reset.css ....//
+      //...............................//
+      // ## _base.less
+      //...............................//
+      h1 {
+        margin-top: 0;
+      }
+      figure {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      ol,
+      ul,
+      dl {
+        li > &,
+        dt > &,
+        dd > & {
+          margin-bottom: 0;
+        }
+      }
+      q {
+        .quotes-double();
+      }
+      //.... end ## _base.less ....//
+    .o-List {
+      padding-left: 0;
+    }
+    .o-Tablist {
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      & > .o-Flex {
+        margin-bottom: 0;
+      }
+    }
+    .c-Permalink {
+      h1:hover > &,
+      h2:hover > &,
+      h3:hover > &,
+      h4:hover > &,
+      h5:hover > &,
+      h6:hover > & {
+        position: static;
+      }
+    }
+    //---- end ## `initial` ----//
+    //-------------------------------//
+    // ## Pseudo Rems
+    // IE10 does not support the `rem` unit on pseudo-elements like `::before` or `::after`
+    //-------------------------------//
+    //---- end ## Pseudo Rems ----//
+  //++++ end # IE QUIRK FALLBACKS ++++//
+
+
+  //+++++++++++++++++++++++++++++++//
+  // # CUSTOM PROPERTY FALLBACKS
+  //+++++++++++++++++++++++++++++++//
+    //-------------------------------//
+    // ## Line height
+    //-------------------------------//
+    @p-line-height: 1.5; // equivalent to custom prop `--line-height`
+    h1 { line-height: (@p-line-height / (@g-font-size-h1 / 2)); }
+    h2 { line-height: (@p-line-height / (@g-font-size-h2 / 2)); }
+    h3 { line-height: (@p-line-height /  @g-font-size-h3     ); }
+    h4 { line-height: (@p-line-height /  @g-font-size-h4     ); }
+    h5 { line-height: (@p-line-height /  @g-font-size-h5     ); }
+    h6 { line-height: (@p-line-height /  @g-font-size-h6     ); }
+    pre {
+      line-height: (@p-line-height / @g-font-size-mill);
+    }
+    .-fz-el-peta { line-height: (@p-line-height / (@g-font-size-peta / 4)) !important; }
+    .-fz-el-tera { line-height: (@p-line-height / (@g-font-size-tera / 3)) !important; }
+    .-fz-el-giga { line-height: (@p-line-height / (@g-font-size-giga / 2)) !important; }
+    .-fz-el-mega { line-height: (@p-line-height / (@g-font-size-mega / 2)) !important; }
+    .-fz-el-kilo { line-height: (@p-line-height /  @g-font-size-kilo     ) !important; }
+    .-fz-el-norm { line-height: (@p-line-height /  @g-font-size-norm     ) !important; }
+    .-fz-el-mill { line-height: (@p-line-height /  @g-font-size-mill     ) !important; }
+    .-fz-el-micr { line-height: (@p-line-height /  @g-font-size-micr     ) !important; }
+    //---- end ## Line height ----//
+    //-------------------------------//
+    // ## Vertical rhythm unit
+    //-------------------------------//
+    @p-lh: (@p-line-height * 1rem); // equivalent to unit `1lh`, or custom prop `--lh`
+    html {
+      line-height: @p-line-height;
+    }
+    h1, h2, h3, h4, h5, h6,
+    p, pre, figure, blockquote,
+    ol, ul, dl,
+    table,
+    form, fieldset, textarea,
+    details {
+      margin-bottom: @p-lh;
+    }
+    h1 {
+      padding-top: @p-lh;
+    }
+    textarea {
+      height: (6 * @p-lh);
+    }
+    .h-Ruled {
+      background-size: 1px @p-lh;
+    }
+    //---- end ## Vertical rhythm unit ----//
+    //-------------------------------//
+    // ## Other custom props
+    //-------------------------------//
+    //---- end ## Other custom props ----//
+  //++++ end # CUSTOM PROPERTY FALLBACKS ++++//
+
+
+  //+++++++++++++++++++++++++++++++//
+  // # CSS3 FALLBACKS
+  //+++++++++++++++++++++++++++++++//
+  //++++ end # CSS3 FALLBACKS ++++//
+}

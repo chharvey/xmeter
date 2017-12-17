@@ -12,7 +12,6 @@ body {
 }
 
 sup, sub {
-  vertical-align: baseline; /* HACK fallback */
   vertical-align: initial;  /* HACK fallback */
   vertical-align: unset;
 }
@@ -23,13 +22,13 @@ p, figure, blockquote, pre,
 ol, ul, dl,
 dd,
 fieldset {
-  margin: 0; margin: initial; /* HACK fallback */
+  margin: initial; /* HACK fallback */
   margin: unset;
 }
 ol, ul,
 th, td,
 legend {
-  padding: 0; padding: initial; /* HACK fallback */
+  padding: initial; /* HACK fallback */
   padding: unset;
 }
 h1, h2, h3, h4, h5, h6,
@@ -43,15 +42,17 @@ code, kbd, samp {
 }
 caption,
 th {
-  text-align: inherit;
+  text-align: inherit; /* HACK fallback */
+  text-align: unset;
 }
 pre {
-  white-space: inherit;
+  white-space: inherit; /* HACK fallback */
+  white-space: unset;
 }
 a,
 u, s,
 ins, del {
-  text-decoration: none; text-decoration: initial; /* HACK fallback */
+  text-decoration: initial; /* HACK fallback */
   text-decoration: unset;
 }
 mark {

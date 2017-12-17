@@ -79,41 +79,7 @@ normalize.css is imported into xmeter.css, so there is *no need* to
 While **normalize.css** addresses discrepancies between different browsers’
 rendering of HTML elements, providing only the very basic and necessary styles,
 **xmeter.css** adds additional tools and styles for a more streamlined look and a
-vertical rhythm system. (For more information on vertical rhythm, see these articles in
-[24ways](http://24ways.org/2006/compose-to-a-vertical-rhythm/) and
-[Smashing Magazine](http://www.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/#tt-rhythm).)
-
-Every line on the page is exactly the same height
-(dubbed a “vertical rhythm unit” or “vru”) regardless of font size, and
-typographical block elements (headings, paragraphs, figures, blockquotes, lists,
-tables, etc.) are separated by integer multiples of that height.
-
-The following convention is used to preserve vertical rhythm:
-- Bottom margin is added to an element in order to push subsequent elements down the page.
-- Top padding is added to an element to push *itself* down the page.
-- Negative top margin is added to an element to pull it up the page.
-
-### Modular Font Size & Leading
-
-Font-size of `<html>` is set to `100%` to accommodate for user agent settings.
-
-Units for font-size on modules
-should be set in `rem`s, so that their vertical typography remains the same
-regardless of where that module is placed (style does not depend on location).
-(`<html>` is considered a module.) When font-size of a module changes, the line-height
-should remain unchanged, so that the module is scalable.
-
-Within a module however, font-size on an element
-should be set in `em`s, so that its vertical typography scales with
-its parent module’s font size.
-In addition to font-size, line-height should be adjusted to maintain vertical rhythm.
-For example, if font-size is doubled (x2.0), the line-height should be halved (x0.5) so that the final
-height of each text line is unchanged. Xmeter’s tools do this for you automatically.
-
-All line-height values are unitless. Line-height for all inline (text-level) elements is 0.
-This preserves vertical rhythm within a block.
-
-Tools add styles to blocks (font-size, borders) without disrupting vertical rhythm.
+[vertical rhythm system](https://github.com/chharvey/xmeter/wiki/Vertical-Rhythm).
 
 ### Base Styles
 

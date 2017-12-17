@@ -39,18 +39,27 @@
 // Styleguide Helpers.Measure
 .h-Measure {
   max-width: 33em; // HACK fallback for `ch` unit
-  max-width: 66ch; // HACK fallback for logical properties
-  max-inline-size: 66ch;
+  max-width: 66ch;
+  @supports (max-inline-size: 1ch) {
+    max-width: unset;
+    max-inline-size: 66ch;
+  }
 }
 .h-Measure--narrow {
   max-width: 22.5em; // HACK fallback for `ch` unit
-  max-width: 45ch; // HACK fallback for logical properties
-  max-inline-size: 45ch;
+  max-width: 45ch;
+  @supports (max-inline-size: 1ch) {
+    max-width: unset;
+    max-inline-size: 45ch;
+  }
 }
 .h-Measure--wide {
   max-width: 45em; // HACK fallback for `ch` unit
-  max-width: 90ch; // HACK fallback for logical properties
-  max-inline-size: 90ch;
+  max-width: 90ch;
+  @supports (max-inline-size: 1ch) {
+    max-width: unset;
+    max-inline-size: 90ch;
+  }
 }
 
 @media screen  and (min-width: 30em) { .h-Measure-sK { .h-Measure; }  .h-Measure--narrow-sK { .h-Measure--narrow; }  .h-Measure--wide-sK { .h-Measure--wide; } }

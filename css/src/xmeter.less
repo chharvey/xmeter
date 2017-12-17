@@ -1,7 +1,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\
     xmeter
-    Version: 6.1.1
+    Version: 6.2.0
     Licence: MIT
     Repo   : https://github.com/chharvey/xmeter.git
     Home   : https://github.com/chharvey/xmeter#readme
@@ -16,10 +16,10 @@
 /*================================*\
     xmeter.less
 \*================================*/
-@import (reference) url('src/__settings.less');
-@import (reference) url('src/__tool.fontsize.less');
-@import (reference) url('src/__tool.borders.less');
-@import (reference) url('src/__tool.delims.less');
+@import (reference) url('./__settings.less');
+@import (reference) url('./__tool.fontsize.less');
+@import (reference) url('./__tool.borders.less');
+@import (reference) url('./__tool.delims.less');
 
 
 /**
@@ -50,6 +50,9 @@
  *
  * ATOMS-------------------------------FUNCTIONAL CSS
  * fz..................................font-size
+ *
+ * HACKS-------------------------------HACKS
+ * _hack.ie.less.......................IE-only styles
  */
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -133,3 +136,13 @@
 // Styleguide Atoms
 
 @import url('_-fz.less');
+
+// Hacks
+//
+// Stylesheets for fixing specific external issues.
+//
+// Weight: 7
+//
+// Styleguide Hacks
+
+@import url('_hack.ie.less');

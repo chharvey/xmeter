@@ -27,6 +27,10 @@
     position: absolute;
   }
   left: -999999px;
+  @supports (inset-inline-start: 0) {
+    left: 0;
+    inset-inline-start: -999999px;
+  }
 }
 
 @media screen  and (min-width: 30em) { .h-Hidden-sK { .h-Hidden; } }

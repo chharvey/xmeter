@@ -48,7 +48,8 @@
 
 html {
   --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
-  --vru: calc(~'var(--line-height) * 1rem');
+  --lh: calc(~'var(--line-height) * 1rem'); // HACK fallback for `lh` units (https://drafts.csswg.org/css-values/#lh)
+  --vru: var(--lh); // CHANGED DEPRECATED: legacy support
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
   line-height: var(--line-height);
@@ -62,10 +63,16 @@ ol, ul, dl,
 table,
 form, fieldset, textarea,
 details {
-  margin-bottom: var(--vru);
+  margin-bottom: var(--lh);
+  margin-bottom: 1lh;
+  margin-block-end: var(--lh);
+  margin-block-end: 1lh;
 }
 h1 {
-  padding-top: var(--vru);
+  padding-top: var(--lh);
+  padding-top: 1lh;
+  padding-block-start: var(--lh);
+  padding-block-start: 1lh;
 }
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
@@ -133,7 +140,9 @@ h5 { .font-size-el(@g-font-size-h5); }
 h6 { .font-size-el(@g-font-size-h6); }
 
 h1 {
-  margin-top: 0; // undo Normalize
+  margin-top: initial; // HACK fallback for `unset`
+  margin-top: unset;   // HACK fallback for logical
+  margin-block-start: unset; // undo Normalize
 }
 
 address {
@@ -163,9 +172,10 @@ hr {
   }
   figure {
     // undo Normalize
-    margin-top:   0;
-    margin-left:  0;
-    margin-right: 0;
+    margin-top: initial; margin-left: initial; margin-right: initial; // HACK fallbacks for `unset`
+    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // HACK fallbacks for logical
+    margin-block-start: unset;
+    margin-inline: unset;
   }
   figcaption {
   }
@@ -182,23 +192,27 @@ hr {
     li > &,
     dt > &,
     dd > & {
-      margin-bottom: 0; // undo default bottom spacing for nested lists
+      margin-bottom: initial; // HACK fallback for `unset`
+      margin-bottom: unset;   // HACK fallback for logical
+      margin-block-end: unset; // undo default vertical spacing for nested lists
     }
   }
   ol,
   ul {
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 4rem; // HACK fallback for logical
+    padding: logical 0 4rem 0 0;
     li > &,
     dt > &,
     dd > & {
-      padding-left: 2rem;
+      padding-left: 2rem; // HACK fallback for logical
+      padding-inline-start: 2rem;
     }
   }
   ol {
     list-style-type: decimal;
   }
   ul {
-    list-style-type: disc;
+    list-style-type: disc; // not using `initial` because we explicitly want `disc`
   }
   dl {
     list-style: none; // remove counters from `dl > li`
@@ -217,7 +231,7 @@ hr {
   table {
     max-width: 100%; // fluid tables for responsive purposes
     border-collapse: collapse;
-    text-align: left; // FIXME fix browser bug... which? file an issue!
+    text-align: left; // fix browser BUG... which? file an issue!
   }
   caption {
     text-align: center;
@@ -237,7 +251,6 @@ hr {
   }
   th {
     font-weight: 700;
-    text-align: center;
   }
   td {
   }
@@ -248,7 +261,7 @@ hr {
 //++++++++++++++++++++++++++++++++//
 //    # TEXT
 //++++++++++++++++++++++++++++++++//
-// RECOMMENDATION:
+// NB: RECOMMENDATION:
 // Do not use `br` to indicate line breaks, use CSS instead.
 // One exception: MAY use `address > br` to indicate line breaks (by convention)
 br {
@@ -256,15 +269,25 @@ br {
   //--------------------------------//
   //    ## Links
   //--------------------------------//
-  a {
-    color: #00e;       // default :link
+  // NB: RECOMMENDATION:
+  // Do not style `a` elements without the `[href]` attribute.
+  // Such elements are “placeholder anchors,” which do not lead anywhere.
+  // A placeholder anchor can represent a placeholder for where a hyperlink might otherwise be placed,
+  // or it can represent an anchor whose reference may change based on context (e.g., user interaction).
+  //
+  // Link color should have sufficient contrast with the background color
+  // *as well as* sufficient contrast with surrounding non-link text color.
+  // - Background contrast ratio:
+  //   - to meet AA  level: 4.5 normal ; 3.0 large (18pt or 14pt bold)
+  //   - to meet AAA level: 7.0 normal ; 4.5 large (18pt or 14pt bold)
+  // - Surrounding text contrast ratio:
+  //   - 3.0 for all
+  // Read Technique G183 for details: <https://www.w3.org/TR/WCAG20-TECHS/G183.html>
+  a[href] {
+    // color: #00e;    // default :link
     // color: #551a8b; // default :visited
     // color: #f00;    // default :active
-  }
-  a:not([href]) {
-    @media screen {
-      opacity: 0.5;
-    }
+    color: #06c; // 5.57 aginst white, 3.77 against black
   }
   //---- end ## Links ----//
 
@@ -317,15 +340,16 @@ br {
   abbr {
     &[title] {
       cursor: help;
-      text-decoration: none; // undo Normalize
+      text-decoration: none; // HACK fallback for `text-decoration-line` // also IE fallback for `initial`
+      text-decoration-line: initial; // HACK fallback for `unset`
+      text-decoration-line: unset; // undo Normalize
     }
   }
   var {
     font-style: italic;
   }
   q {
-    .quotes-double(); // fallback for `initial`
-    quotes: initial;
+    .delims(initial);
   }
   cite {
     font-style: italic;
@@ -388,8 +412,9 @@ textarea {
   line-height: inherit; // undo browser default
 }
 
-html > body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+html body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
   .border-vert(all; 1px);
+  .border-block(all; 1px);
   border-style: solid;
   border-color: @p-color-gray;
   // NOTE cannot use box-shadow hack due to shadow covering <legend>
@@ -400,9 +425,13 @@ textarea {
 
 textarea {
   display: block; // override browser default
+  height: calc(~'6 * var(--lh)');
+  height: 6lh;
   width: 30rem;
-  height: calc(~'6 * var(--vru)');
-  .font-size-mod(@g-font-size-mill);
+  block-size: calc(~'6 * var(--lh)');
+  block-size: 6lh;
+  inline-size: 30rem;
+  font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
 }
 
 input[type="button"],
@@ -416,7 +445,7 @@ label {
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 // input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED selector not supported yet
 select {
-  font-size: @g-font-size-mill * 1em;
+  font-size: (@g-font-size-mill * 1em);
 }
 
 input[type="button"],
@@ -428,6 +457,7 @@ button {
 
 select[multiple] > optgroup > option {
   padding-left: 1rem;
+  padding-inline-start: 1rem;
 }
 //++++ end # FORMS ++++//
 
@@ -440,9 +470,11 @@ select[multiple] > optgroup > option {
 // [3] offset `[alt]` attribute text from surrounding copy
 // [4] safer alternative to `display: block;`
 img {
-  width: auto;  // [1]
-  height: auto; // [1]
-  max-width: 100%; // [2]
+  // HACK fallbacks for logical properties
+  height: auto; width: auto;
+  max-width: 100%;
+  block-size: auto; inline-size: auto; // [1]
+  max-inline-size: 100%; // [2]
   font-style: italic; // [3]
   vertical-align: middle; // [4]
 }

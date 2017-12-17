@@ -22,7 +22,7 @@
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-06-29
+// : 2017-11-28
 
 .border-left-radius(@radius: 0) {
   border-top-left-radius:    @radius;
@@ -42,4 +42,26 @@
 .border-bottom-radius(@radius: 0) {
   border-bottom-right-radius: @radius;
   border-bottom-left-radius:  @radius;
+}
+
+// Logical Properties below
+
+.border-block-start-radius(@radius: 0) {
+  border-start-start-radius: @radius;
+  border-start-end-radius:   @radius;
+}
+
+.border-block-end-radius(@radius: 0) {
+  border-end-start-radius: @radius;
+  border-end-end-radius:   @radius;
+}
+
+.border-inline-start-radius(@radius: 0) {
+  border-start-start-radius: @radius;
+  border-end-start-radius:   @radius;
+}
+
+.border-inline-end-radius(@radius: 0) {
+  border-start-end-radius: @radius;
+  border-end-end-radius:   @radius;
 }
