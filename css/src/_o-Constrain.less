@@ -1,0 +1,42 @@
+
+/*################################*\
+    xmeter  |  _o-Constrain.less
+\*################################*/
+
+
+// Constrain
+//
+// The Constrain Object wraps content, limiting its maximum width.
+// It ensures body content does not expand infinitely.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-01-31</time></dd>
+// </dl></header>
+//
+// Markup:
+// <div class="o-Constrain">
+//   <h1>content heading</h1>
+//   <p>This object is constrained to a maximum width. Expand
+//     your browser window (or zoom out) to see the effect.</p>
+// </div>
+//
+// Weight: 0.1
+//
+// Styleguide Objects.Constrain
+.o-Constrain {
+  max-width: 90em; // HACK fallback for logical prop
+  max-inline-size: 90em;
+  margin-left: auto; margin-right: auto; // HACK fallback for logical prop
+  margin-inline: auto;
+}
+
+// @media screen  and (min-width: 30em) { .o-Constrain-sK { .o-Constrain; } }
+// @media screen  and (min-width: 45em) { .o-Constrain-sM { .o-Constrain; } }
+// @media screen  and (min-width: 60em) { .o-Constrain-sG { .o-Constrain; } }
+// @media screen  and (min-width: 75em) { .o-Constrain-sT { .o-Constrain; } }
+// @media screen  and (min-width: 90em) { .o-Constrain-sP { .o-Constrain; } }
+// @media not all and (min-width: 30em) { .o-Constrain-nK { .o-Constrain; } }
+// @media not all and (min-width: 45em) { .o-Constrain-nM { .o-Constrain; } }
+// @media not all and (min-width: 60em) { .o-Constrain-nG { .o-Constrain; } }
+// @media not all and (min-width: 75em) { .o-Constrain-nT { .o-Constrain; } }
+// @media not all and (min-width: 90em) { .o-Constrain-nP { .o-Constrain; } }
