@@ -4,7 +4,7 @@
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
-    "extrajs-dom": "^4.0.0-alpha.1",
+    "extrajs-dom": "^4.0.0-alpha.2",
     "extrajs-view": "^1.1.2",
     "jsdom": "^11.6.2"
   },

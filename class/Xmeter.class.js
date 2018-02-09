@@ -1,5 +1,5 @@
-const HTMLElement = require('extrajs-dom').HTMLElement
 const View = require('extrajs-view')
+const xjs = require('extrajs-dom')
 
 /**
  * Static members for the Xmeter package.
@@ -34,12 +34,23 @@ class Xmeter {
        * @returns {string} HTML output
        */
       .addDisplay(function permalink(content = '&sect;', label = 'permalink') {
-        return new HTMLElement('a').class('c-Permalink h-Inline h-Hidden')
-          .attr({ href: `#${this.id}`, 'aria-label': label })
-          .addContent(content)
-          .html()
+        return new xjs.DocumentFragment(Xmeter.TEMPLATES.xPermalink.render({
+          id: this.id,
+          label: label,
+          text: content,
+        })).innerHTML()
       })
   }
+}
+
+/**
+ * @summary A set of component builders.
+ * @const {!Object<xjs.HTMLTemplateElement>}
+ */
+Xmeter.TEMPLATES = {
+  xPermalink: new xjs.HTMLTemplateElement(
+    xjs.HTMLTemplateElement.readTemplateFileSync(path.join(__dirname, '../tpl/x-permalink.tpl.html'))
+  ).setRenderer(require('./tpl/x-permalink.tpl.js')),
 }
 
 module.exports = Xmeter
