@@ -1,12 +1,11 @@
 {
   "name": "xmeter",
-  "version": "6.3.0-alpha",
+  "version": "6.3.0-alpha.1",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
-    "extrajs-dom": "^4.0.0-alpha.2",
-    "extrajs-view": "^1.1.2",
-    "jsdom": "^11.6.2"
+    "extrajs-dom": "^4.0.0-alpha.3",
+    "extrajs-view": "^1.1.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
