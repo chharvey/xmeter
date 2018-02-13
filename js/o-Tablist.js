@@ -65,9 +65,7 @@ document.querySelectorAll('.dev[role="tablist"]').forEach(function (tablist) {
       })
 
       // transfer the children
-      Array.from(summary.childNodes).forEach(function (child) {
-        tab.append(child)
-      })
+      tab.append(...summary.childNodes)
 
       summary.hidden = true
 
@@ -231,7 +229,7 @@ document.querySelectorAll('.dev[role="tablist"]').forEach(function (tablist) {
      * @private
      */
     panel._updateRendering = function () {
-      this.hidden = !this.open
+      this.hidden = !this.open // hide from screen readers & disabled tab-able items
       this._tab.setAttribute('aria-selected', this.open)
       this._tab.setAttribute('aria-expanded', this.open)
       this.parentNode.updateRendering()
