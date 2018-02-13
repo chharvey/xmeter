@@ -13,7 +13,7 @@ function xPermalink(frag, data) {
   new xjs.HTMLAnchorElement(frag.querySelector('a'))
     .href(`#${data.id}`)
     .attr('aria-label', data.label || 'permalink')
-    .textContent('aria-label', data.text || '§') // &sect;
+    .textContent(data.text || '§') // &sect;
   // frag.querySelector('a').href = `#${data.id}`
   // frag.querySelector('a').setAttribute('aria-label', data.label || 'permalink')
   // frag.querySelector('a').textContent = data.text || '§' // &sect;

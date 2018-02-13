@@ -1,3 +1,5 @@
+const path = require('path')
+
 const View = require('extrajs-view')
 const xjs = require('extrajs-dom')
 
@@ -59,7 +61,7 @@ Xmeter.TEMPLATES = {
    */
   xPermalink: new xjs.HTMLTemplateElement(
     xjs.HTMLTemplateElement.readTemplateFileSync(path.join(__dirname, '../tpl/x-permalink.tpl.html'))
-  ).setRenderer(require('./tpl/x-permalink.tpl.js')),
+  ).setRenderer(require('../tpl/x-permalink.tpl.js')),
 }
 
 module.exports = Xmeter
