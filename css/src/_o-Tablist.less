@@ -229,7 +229,7 @@
   }
   display: flex;
   flex-wrap: wrap;
-  appearance: tabpanels;
+  // appearance: tabpanels; // opinionated
 }
 
 .o-Tablist__Tab.dev {
@@ -238,7 +238,7 @@
   order: -1;
   flex: 1;
   cursor: pointer;
-  appearance: tab;
+  // appearance: tab; // opinionated
   &[aria-selected="true"] {
     font-weight: bold;
   }
@@ -251,5 +251,5 @@
   margin-bottom: 0; // HACK fallback
   margin-block-end: unset; // unset base `details`
   flex: 100%;
-  appearance: tabpanel;
+  // appearance: tabpanel; // opinionated
 }

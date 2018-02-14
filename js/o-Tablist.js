@@ -220,7 +220,7 @@ document.querySelectorAll('.dev[role="tablist"]').forEach(function (tablist) {
        */
       this._tab = this.previousElementSibling
 
-      this.setAttribute('aria-labeledby', this._tab.id)
+      this.setAttribute('aria-labelledby', this._tab.id)
     }).call(panel)
 
 
