@@ -54,7 +54,7 @@ class Xmeter {
  */
 Xmeter.TEMPLATES = {
   /**
-   * @summary An `<a.Permlink>` element.
+   * @summary An `<a.c-Permlink>` element.
    * @version EXPERIMENTAL
    * @see /tpl/x-permalink.tpl.js
    * @type {xjs.HTMLTemplateElement}
@@ -62,6 +62,9 @@ Xmeter.TEMPLATES = {
   xPermalink: new xjs.HTMLTemplateElement(
     xjs.HTMLTemplateElement.readTemplateFileSync(path.join(__dirname, '../tpl/x-permalink.tpl.html'))
   ).setRenderer(require('../tpl/x-permalink.tpl.js')),
+  /*
+  xPermalink: xjs.HTMLTemplateElement.fromFileSync(path.join(__dirname, '../tpl/x-permalink.tpl.html')).setRenderer(require('../tpl/x-permalink.tpl.js')),
+   */
 }
 
 module.exports = Xmeter
