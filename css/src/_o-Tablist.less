@@ -1,3 +1,8 @@
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+///////--- CHANGED DEPRECATED! Use `require('aria-patterns')` instead! ---////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 
 /*################################*\
     xmeter  |  _o-Tablist.less
@@ -6,9 +11,9 @@
 
 // The Tablist Object
 //
-// **WARNING: CHANGED: This object is DEPRECATED. [An alternative](#kssref-objects-dev-tablist)
-// has been added, which is much more semantically and accessibly appropriate.
+// **WARNING: CHANGED: This object is DEPRECATED.
 // This object will be removed in Version 7.**
+// It will be replaced by the Tablist Object in https://github.com/chharvey/aria-patterns.
 //
 // The Tablist Object contains a series of corresponding tabs and panels.
 // It is similar to a carousel, but only one panel is shown at a time and
@@ -156,100 +161,4 @@
 // NOTE! Do not add this class manually.
 // It will be added automatically by `o-Tablist.js`.
 .o-Tablist__Panel--js-selected {
-}
-
-
-
-
-
-
-
-
-
-
-// dev-tablist
-//
-// **NOTE: This pattern will replace [The Tablist Object](#kssref-objects-tablist) in Version 7+.**
-// The styles will be transferred to the `.o-Tablist`, `.o-Tablist__Tab`, and `.o-Tablist__Panel` objects.
-// For now, use the respective selectors `.o-Tablist.dev`, `.o-Tablist__Tab.dev`, and `.o-Tablist__Panel.dev`.
-// The `.dev` class acts as a “tag” marking these styles as “in development”.
-// See https://codepen.io/chharvey/pen/PEYxpb for more info.
-//
-// TODO replace `.o-Tablist` on v7.0.0+
-//
-// The Tablist Object contains a series of corresponding tabs and panels.
-// It is similar to a carousel, but only one panel is shown at a time and
-// there is no timed automatic progression.
-//
-// Note: Enable Javascript to view effects.
-//
-// Your markup should include a series of `<details>` elements, each with a single `<summary>` first child.
-// Add the `[open]` attribute to one and only one `<details>` element, representing the panel to be initially opened on load.
-// The script will transform your source code into the respective panels and tabs as necessary.
-// Without JavaScript enabled, this object will fall back to a set of fully-functional `<details>` expandables.
-//
-// <header><dl>
-//   <dt>author</dt> <dd>Chris Harvey</dd>
-//   <d>update</dt>  <dd><time>2018-02-07</time></dd>
-// </dl></header>
-//
-// Markup:
-// <script src="/node_modules/xmeter/js/o-Tablist.js"></script>
-// <div class="o-Tablist dev" role="tablist">
-//   <details class="o-Tablist__Panel dev" role="tabpanel" id="panel1">
-//     <summary class="o-Tablist__Tab dev" role="tab">Tab 1</summary>
-//     <h1>Panel 1</h1>
-//     <p>This is panel 1. Switch to the next <a href="#0">panel</a> by clicking its tab.</p>
-//   </details>
-//   <details class="o-Tablist__Panel dev" role="tabpanel" id="panel2" open="">
-//     <summary class="o-Tablist__Tab dev" role="tab">Tab 2</summary>
-//     <h1>Panel 2</h1>
-//     <p>This is panel 2. Panels can contain <a href="#0">flow content</a>.</p>
-//     <p>That is, you can put <a href="#0">block elements</a> here.</p>
-//   </details>
-//   <details class="o-Tablist__Panel dev" role="tabpanel" id="panel3">
-//     <summary class="o-Tablist__Tab dev" role="tab">Tab 3</summary>
-//     <h1>Panel 3</h1>
-//     <p>This is panel 3, the <a href="#0">largest</a> panel.</p>
-//     <form>
-//       <h2>A form:</h2>
-//       <p>This form has a <button type="button">button</button> and a <input type="text" placeholder="text input"/>.</p>
-//     </form>
-//     <p><a href="http://dev-chharvey.github.io/blog/html/tablist.html" rel="external" target="_blank">Read the proposal text here.</a></p>
-//   </details>
-// </div>
-//
-// Weight: 4.1
-//
-// Styleguide Objects.dev-tablist
-
-.o-Tablist.dev {
-  & { // NB override deprecated styles
-    width: auto
-  }
-  display: flex;
-  flex-wrap: wrap;
-  // appearance: tabpanels; // opinionated
-}
-
-.o-Tablist__Tab.dev {
-  & { // NB override deprecated styles
-  }
-  order: -1;
-  flex: 1;
-  cursor: pointer;
-  // appearance: tab; // opinionated
-  &[aria-selected="true"] {
-    font-weight: bold;
-  }
-}
-
-.o-Tablist__Panel.dev {
-  & { // NB override deprecated styles
-    order: 0; order: initial; order: unset;
-  }
-  margin-bottom: 0; // HACK fallback
-  margin-block-end: unset; // unset base `details`
-  flex: 100%;
-  // appearance: tabpanel; // opinionated
 }
