@@ -4,6 +4,7 @@
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
+    "aria-patterns": "^1.0.0-beta",
     "extrajs-dom": "^4.0.0-alpha.3",
     "extrajs-view": "^1.1.2"
   },
