@@ -2,6 +2,7 @@ const path = require('path')
 
 const View = require('extrajs-view')
 const xjs = require('extrajs-dom')
+const ARIAPatterns = require('aria-patterns')
 
 /**
  * Static members for the Xmeter package.
@@ -48,23 +49,8 @@ class Xmeter {
   }
 }
 
-/**
- * @summary A set of component builders.
- * @namespace
- */
 Xmeter.TEMPLATES = {
-  /**
-   * @summary An `<a.c-Permlink>` element.
-   * @version EXPERIMENTAL
-   * @see /tpl/x-permalink.tpl.js
-   * @type {xjs.HTMLTemplateElement}
-   */
-  xPermalink: new xjs.HTMLTemplateElement(
-    xjs.HTMLTemplateElement.readTemplateFileSync(path.join(__dirname, '../tpl/x-permalink.tpl.html'))
-  ).setRenderer(require('../tpl/x-permalink.tpl.js')),
-  /*
-  xPermalink: xjs.HTMLTemplateElement.fromFileSync(path.join(__dirname, '../tpl/x-permalink.tpl.html')).setRenderer(require('../tpl/x-permalink.tpl.js')),
-   */
+  xPermalink: ARIAPatterns.xPermalink,
 }
 
 module.exports = Xmeter
