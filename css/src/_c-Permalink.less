@@ -27,14 +27,7 @@
 // section#section-title
 //   h1
 //     | Section Title
-//     != Xmeter.TEMPLATES.xPermalink.render({id: 'section-title'}).querySelector('a').outerHTML
-// </pre>
-//
-// DOM:
-// <pre>
-// document.querySelector('#section-title > h1').append(
-//   Xmeter.TEMPLATES.xPermalink.render({id: 'section-title'})
-// )
+//     != Xmeter.view({id: 'section-title'}).permalink()
 // </pre>
 //
 // Markup:

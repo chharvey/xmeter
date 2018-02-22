@@ -34,23 +34,19 @@ class Xmeter {
        * @summary Call `Xmeter.view(data).permalink()` to render this display.
        * @function Xmeter.VIEW.permalink
        * @version DEPRECATED
-       * @deprecated
+       * @deprecated YES. Moved to {@link https://github.com/chharvey/aria-patterns}
        * @param   {string=} content the text of the link
        * @param   {string=} label the value for `[aria-label]` attribute
        * @returns {string} HTML output
        */
       .addDisplay(function permalink(content = '&sect;', label = 'permalink') {
-        return new xjs.DocumentFragment(Xmeter.TEMPLATES.xPermalink.render({
+        return new xjs.DocumentFragment(ARIAPatterns.xPermalink.render({
           id: this.id,
           label: label,
           text: content,
         })).innerHTML()
       })
   }
-}
-
-Xmeter.TEMPLATES = {
-  xPermalink: ARIAPatterns.xPermalink,
 }
 
 module.exports = Xmeter

@@ -1,6 +1,6 @@
 - classname = classname || {}
 mixin permalink(id)
-  != Xmeter.TEMPLATES.xPermalink.render({ id: id }).querySelector('a').outerHTML
+  != Xmeter.view({ id: id }).permalink('§')
 section#grouping-elements
   block groupingElements
     h2 Grouping Elements #[+permalink('grouping-elements')]
