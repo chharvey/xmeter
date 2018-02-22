@@ -74,10 +74,16 @@ The shadow will emulate a border-bottom if `<length>` is positive, or border-top
 
 **Sub-Tip:** Use `inset` to keep the box-shadow constrained within the bounds of the box’s `box-sizing`.
 
-There are a few limitations of this hack: it cannot be used in the case of `.border-vert(topbot)`,
-because you can’t get the box shadow to appear only on opposing sides.
-The effective border color must be provided
-in the same declaration, and the effective border-style cannot be specified; it will always be solid.
+There are a few limitations of this hack:
+
+1. It cannot be used to create a border on only the top/bottom sides, or left/right sides.
+You can only use this hack to create a pseudo-border on exactly 1 side, 2 adjacent sides, or all 4 sides.
+
+2. The effective border color must be provided in the same declaration as the width
+(there’s no `box-shadow-color` property),
+so you can’t use the Cascade to override the color.
+
+3. The effective border-style cannot be specified; it will always be solid.
 
 
 ### border-radius
