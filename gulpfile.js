@@ -42,13 +42,13 @@ gulp.task('build:docs', ['docs:api', 'docs:kss', 'pug:docs', 'lessc:docs'])
 
 gulp.task('lessc:core', function () {
   return gulp.src('css/src/xmeter.less')
+    .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
       cascade: false,
     }))
     .pipe(gulp.dest('./css/'))
-    .pipe(sourcemaps.init())
     .pipe(clean_css({
       level: {
         2: {
