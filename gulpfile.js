@@ -43,7 +43,12 @@ gulp.task('lessc:docs', function () {
 
 gulp.task('build:docs', ['docs:api', 'docs:kss', 'pug:docs', 'lessc:docs'])
 
-gulp.task('lessc:each', async function () {
+gulp.task('generate-less', async function () {
+  /**
+   * @summary List of breakpoints, corresponding to query-specific stylesheets.
+   * @private
+   * @type {Array<{suffix:string, query:string}>}
+   */
   let breakpoints = [
     { suffix: '-sK', query: 'screen  and (min-width: 30em)' },
     { suffix: '-sM', query: 'screen  and (min-width: 45em)' },
@@ -57,18 +62,29 @@ gulp.task('lessc:each', async function () {
     { suffix: '-nP', query: 'not all and (min-width: 90em)' },
   ]
 
-  let files = [
+  /**
+   * @summary List of files to import with `@import (reference) url();`.
+   * @private
+   * @type {Array<string>}
+   */
+  let imports = [
     // TODO use `fs.readdir(path.resolve(__dirname, './css/src/'))` and filter out only the ones you want
-    'o-List',
-    'o-Flex',
-    'o-Grid',
-    'h-Block',
-    'h-Inline',
-    'h-Clearfix',
-    'h-Measure',
-    'h-Ruled',
+    '_o-List.less',
+    '_o-Flex.less',
+    '_o-Grid.less',
+    '_h-Block.less',
+    '_h-Inline.less',
+    '_h-Clearfix.less',
+    '_h-Measure.less',
+    '_h-Ruled.less',
+    '_-fz.less',
   ]
 
+  /**
+   * @summary List of classnames that have suffix extensions.
+   * @private
+   * @type {Array<string>}
+   */
   let classes = [
     'o-List',
     'o-List__Item',
@@ -83,24 +99,56 @@ gulp.task('lessc:each', async function () {
     'h-Measure--narrow',
     'h-Measure--wide',
     'h-Ruled',
+    '-fz-peta',
+    '-fz-tera',
+    '-fz-giga',
+    '-fz-mega',
+    '-fz-kilo',
+    '-fz-norm',
+    '-fz-mill',
+    '-fz-micr',
+    '-fz-el-peta',
+    '-fz-el-tera',
+    '-fz-el-giga',
+    '-fz-el-mega',
+    '-fz-el-kilo',
+    '-fz-el-norm',
+    '-fz-el-mill',
+    '-fz-el-micr',
   ]
 
+  /**
+   * @summary Map the breakpoints to Less file setups.
+   * @type {{filename:string, contents:string}}
+   */
   let stylesheets = breakpoints.map((bp) => ({
     filename: `xmeter${bp.suffix}.less`,
     contents: `
-      ${files.map((filename) => `@import (reference) url('../src/_${filename}');`).join('\n')}
+      ${imports.map((filename) => `@import (reference) url('../../src/${filename}');`).join('\n')}
       @media ${bp.query} {
         ${classes.map((classname) => `.${classname}${bp.suffix} { .${classname}; }`).join('\n')}
       }
     `,
   }))
 
-  try {
-    await util.promisify(fs.mkdir)(path.resolve(__dirname, './css/build/'))
-  } catch (err) {}
 
+  /**
+   * @summary Test access of a directory; if error, make directory.
+   * @param   {string} dir directory name relative to `__dirname` (this file)
+   */
+  async function createDir(dir) {
+    try {
+      await util.promisify(fs.access)(path.resolve(__dirname, dir))
+    } catch (e) {
+      await util.promisify(fs.mkdir)(path.resolve(__dirname, dir))
+    }
+  }
+
+  // @summary Create the actual directories and files.
+  await createDir('./css/dist/')
+  await createDir('./css/dist/prod/')
   await Promise.all(stylesheets.map((ss) =>
-    util.promisify(fs.writeFile)(path.resolve(__dirname, './css/build/', ss.filename), ss.contents, 'utf8')
+    util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/prod/', ss.filename), ss.contents, 'utf8')
   ))
 })
 

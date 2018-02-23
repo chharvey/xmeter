@@ -32,7 +32,7 @@ node_modules
 .lock-wscript
 
 # Compiled source files
-css/build
+css/dist
 
 # Generated documentation &  style guides
 docs/api
