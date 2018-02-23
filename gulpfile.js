@@ -76,6 +76,7 @@ gulp.task('generate-less', async function () {
     '_h-Inline.less',
     '_h-Clearfix.less',
     '_h-Measure.less',
+    '_h-Constrain.less',
     '_h-Ruled.less',
     '_-fz.less',
   ]
@@ -98,6 +99,7 @@ gulp.task('generate-less', async function () {
     'h-Measure',
     'h-Measure--narrow',
     'h-Measure--wide',
+    'h-Constrain',
     'h-Ruled',
     '-fz-peta',
     '-fz-tera',
