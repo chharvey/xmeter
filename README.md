@@ -44,17 +44,28 @@ Locally:
 ```bash
 $ npm install xmeter
 ```
+Use the production code:
 ```html
 <link rel="stylesheet" href="/node_modules/xmeter/css/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sK.css" media="screen  and (min-width: 30em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sM.css" media="screen  and (min-width: 45em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sG.css" media="screen  and (min-width: 60em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sT.css" media="screen  and (min-width: 75em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sP.css" media="screen  and (min-width: 90em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sK.css" media="not all and (min-width: 30em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sM.css" media="not all and (min-width: 45em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sG.css" media="not all and (min-width: 60em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sT.css" media="not all and (min-width: 75em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sP.css" media="not all and (min-width: 90em)"/>
 ```
 
 Remotely from a CDN (not recommended, unless deploying your `/node_modules/` isn’t possible):
 ```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/xmeter.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-*.css"/>
 ```
-where `‹master›` can be any branch or tag.
+where `‹master›` can be any branch or tag, and `*` is a wildcard for the variants shown above.
 
-The stylesheet `xmeter.css` is already minified, and is accompanied by a sourcemap `xmeter.css.map`.
+The stylesheets are already minified, and are accompanied by a sourcemap ending in `.css.map`.
 
 
 ## Features

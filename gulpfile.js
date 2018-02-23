@@ -152,6 +152,26 @@ gulp.task('generate-less', async function () {
   ))
 })
 
+gulp.task('lessc-prod', ['generate-less'], function () {
+  return gulp.src('css/dist/prod/*.less')
+    .pipe(sourcemaps.init())
+    .pipe(less())
+    .pipe(autoprefixer({
+      grid: true,
+    }))
+    .pipe(gulp.dest('./css/dist/prod/'))
+    .pipe(clean_css({
+      level: {
+        2: {
+          overrideProperties: false, // need fallbacks for `initial` and `unset`
+          restructureRules: true, // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
+        },
+      },
+    }))
+    .pipe(sourcemaps.write('./')) // writes to an external .map file
+    .pipe(gulp.dest('./css/dist/prod/'))
+})
+
 gulp.task('lessc:core', function () {
   return gulp.src('css/src/xmeter.less')
     .pipe(sourcemaps.init())
