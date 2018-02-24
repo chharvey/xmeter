@@ -37,7 +37,8 @@
 @p-color-gray: rgba(0,0,0, 0.25); // same as _base.less
 .h-Ruled {
   background-image: linear-gradient(to top, @p-color-gray 1px, transparent 1px);
-  background-size: 1px var(--lh);
+  background-size: 1px 1.5rem;    // COMBAK-FALLBACK
+  background-size: 1px var(--lh); // COMBAK-FALLBACK
   background-size: 1px 1lh;
   background-position-y: top;
   background-position-block: start;

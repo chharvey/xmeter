@@ -65,3 +65,14 @@
 .-fz-el-norm { .font-size-el(@g-font-size-norm   ) !important; }
 .-fz-el-mill { .font-size-el(@g-font-size-mill   ) !important; }
 .-fz-el-micr { .font-size-el(@g-font-size-micr   ) !important; }
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  @line-height: 1.5; // equivalent to custom prop `--line-height` // COMBAK-FALLBACK for custom property
+  .-fz-el-peta { line-height: (@line-height / (@g-font-size-peta / 4)) !important; }
+  .-fz-el-tera { line-height: (@line-height / (@g-font-size-tera / 3)) !important; }
+  .-fz-el-giga { line-height: (@line-height / (@g-font-size-giga / 2)) !important; }
+  .-fz-el-mega { line-height: (@line-height / (@g-font-size-mega / 2)) !important; }
+  .-fz-el-kilo { line-height: (@line-height /  @g-font-size-kilo     ) !important; }
+  .-fz-el-norm { line-height: (@line-height /  @g-font-size-norm     ) !important; }
+  .-fz-el-mill { line-height: (@line-height /  @g-font-size-mill     ) !important; }
+  .-fz-el-micr { line-height: (@line-height /  @g-font-size-micr     ) !important; }
+}
