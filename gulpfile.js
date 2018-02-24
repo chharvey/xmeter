@@ -123,7 +123,16 @@ gulp.task('generate-less', async function () {
    */
   let stylesheets_prod = breakpoints.map((bp) => ({
     filename: `xmeter${bp.suffix}.less`,
-    contents: cssclassfiles.map((file) => `@import url('../dev/${path.parse(file.filename).name}${bp.suffix}.less');`).join('\n'),
+    contents: `
+      ${cssclassfiles.map((file) => `@import (reference) url('../../src/${file.filename}');`).join('\n')}
+      @media ${bp.query} {
+        ${
+          cssclassfiles.map((file) =>
+            file.classes.map((classname) => `.${classname}${bp.suffix} { .${classname} };`).join('\n')
+          ).join('\n')
+        }
+      }
+    `,
   }))
 
   /**
@@ -168,14 +177,13 @@ gulp.task('lessc-dev', ['generate-less'], function () {
     .pipe(gulp.dest('./css/dist/dev/'))
 })
 
-gulp.task('lessc-prod', ['generate-less'], function () {
+gulp.task('lessc-prod', ['lessc-dev'], function () {
   return gulp.src(['css/src/xmeter-a.less', 'css/dist/prod/xmeter-*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
     }))
-    .pipe(gulp.dest('./css/dist/prod/'))
     .pipe(clean_css({
       level: {
         2: {
@@ -195,7 +203,6 @@ gulp.task('lessc:core', function () {
     .pipe(autoprefixer({
       grid: true,
     }))
-    .pipe(gulp.dest('./css/'))
     .pipe(clean_css({
       level: {
         2: {
