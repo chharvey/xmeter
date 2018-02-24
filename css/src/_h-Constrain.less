@@ -1,0 +1,36 @@
+
+/*################################*\
+    xmeter  |  _h-Constrain.less
+\*################################*/
+
+
+// Constrain
+//
+// The Constrain Helper limits an element’s maximum inline-size
+// (width, in horizontal writing modes), ensuring body content does not expand infinitely.
+// It is very similar to the `.h-Measure` Helper, but it is meant for large containers,
+// not for individual elements of prose (such as a paragraph or list).
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-01-31</time></dd>
+// </dl></header>
+//
+// Markup:
+// <div class="h-Constrain">
+//   <h1>content heading</h1>
+//   <p>This object is constrained to a maximum width. Expand
+//     your browser window (or zoom out) to see the effect.</p>
+// </div>
+//
+// Weight: 5.1
+//
+// Styleguide Helpers.Constrain
+.h-Constrain {
+  max-width: 90em; // HACK fallback for logical prop
+  @supports (max-inline-size: 1ch) {
+    max-width: unset;
+    max-inline-size: 90em;
+  }
+  margin-left: auto; margin-right: auto; // HACK fallback for logical prop
+  margin-inline: auto;
+}

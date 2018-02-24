@@ -40,21 +40,60 @@ Read about all of Xmeter’s tools (see `/docs/tools.md`).
 Use Xmeter right out of the box on your own site.
 Want to see what Xmeter can do? [Check out the style guide] (link pending).
 
-Locally:
+#### Production Code
+Each stylesheet has been minified and optimized for production, and is accompanied by a sourcemap ending in `.css.map`.
+It is recommended that you split up the stylesheet into media queries as shown below.
+
+##### Locally:
 ```bash
 $ npm install xmeter
 ```
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/css/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter.css"    media="all"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sK.css" media="screen  and (min-width: 30em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sM.css" media="screen  and (min-width: 45em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sG.css" media="screen  and (min-width: 60em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sT.css" media="screen  and (min-width: 75em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sP.css" media="screen  and (min-width: 90em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nK.css" media="not all and (min-width: 30em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nM.css" media="not all and (min-width: 45em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nG.css" media="not all and (min-width: 60em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nT.css" media="not all and (min-width: 75em)"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nP.css" media="not all and (min-width: 90em)"/>
 ```
 
-Remotely from a CDN (not recommended, unless deploying your `/node_modules/` isn’t possible):
+The `/prod/xmeter.css` stylesheet contains all code not nested in a media query
+(thus applying to `@media all`), and additionally any deprecated code.
+
+##### Remotely from a CDN:
+(not recommended, unless deploying your `/node_modules/` isn’t possible)
+
+Change the `"/node_modules/xmeter/css/dist/prod/xmeter‹*›.css"` to
+`"https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter‹*›.css"`
+in the `[href]` attribute, where `‹master›` can be any branch or tag.
+The suffices (`-sK`, etc.) correspond to breakpoints.
+
+#### Development Code
+You can pick and choose which styles you want, but this technique is slower and less performant:
+No minification or sourcemapping is provided.
 ```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/base.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-List‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-Flex‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-Grid‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Block‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Inline‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Clearfix‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Measure‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Constrain‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Ruled‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/-fz‹-*›.css"/>
 ```
-where `‹master›` can be any branch or tag.
+where `‹-*›` is one of the media query suffices shown above. If omitted, `@media all` is assumed.
 
-The stylesheet `xmeter.css` is already minified, and is accompanied by a sourcemap `xmeter.css.map`.
+The `dev/xmeter.css` stylesheet concatenates all the classes into one giant stylesheet.
+It is the uncompressed version of `prod/xmeter.css`, but otherwise exactly the same.
 
 
 ## Features

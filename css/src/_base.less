@@ -2,8 +2,13 @@
 /*################################*\
     xmeter  |  _base.less
 \*################################*/
+@import (reference) url('./__settings.less');
+@import (reference) url('./__tool.fontsize.less');
+@import (reference) url('./__tool.borders.less');
+@import (reference) url('./__tool.delims.less');
 
 
+@p-line-height: 1.5; // equivalent to custom prop `--line-height` // COMBAK-FALLBACK for custom property
 // Contents
 // ------------------------------------
 // # GENERIC...........................`html` and far-reaching page-wide selectors
@@ -25,6 +30,9 @@
 //++++++++++++++++++++++++++++++++//
 //    # GENERIC
 //++++++++++++++++++++++++++++++++//
+@import (inline) url('reset.css');
+@import (inline) url('../../node_modules/normalize.css/normalize.css');
+
 * {
   &,
   &::before,
@@ -48,7 +56,7 @@
 
 html {
   --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
-  --lh: calc(~'var(--line-height) * 1rem'); // HACK fallback for `lh` units (https://drafts.csswg.org/css-values/#lh)
+  --lh: calc(var(--line-height) ~'*' 1rem); // COMBAK-FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
   --vru: var(--lh); // CHANGED DEPRECATED: legacy support
   // addresses support for `rem` units (otherwise these would be in `body` selector)
   font-size: 100%; // defined by user agent
@@ -65,14 +73,20 @@ form, fieldset, textarea,
 details {
   margin-bottom: var(--lh);
   margin-bottom: 1lh;
-  margin-block-end: var(--lh);
-  margin-block-end: 1lh;
+  @supports (margin-block-end: var(--variable)) {
+    margin-bottom: unset;
+    margin-block-end: var(--lh);
+    margin-block-end: 1lh;
+  }
 }
 h1 {
   padding-top: var(--lh);
   padding-top: 1lh;
-  padding-block-start: var(--lh);
-  padding-block-start: 1lh;
+  @supports (padding-block-start: var(--variable)) {
+    padding-top: unset;
+    padding-block-start: var(--lh);
+    padding-block-start: 1lh;
+  }
 }
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
@@ -103,6 +117,27 @@ a, ins, del {
   //   display: inline;
   //   line-height: 0;
   // }
+}
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  @lh: (@p-line-height * 1rem); // equivalent to unit `1lh`, or custom prop `--lh`
+  html {
+    line-height: @p-line-height;
+  }
+  h1, h2, h3, h4, h5, h6,
+  p, pre, figure, blockquote,
+  ol, ul, dl,
+  table,
+  form, fieldset, textarea,
+  details {
+    margin-bottom: @lh;
+  }
+  h1 {
+    padding-top: @lh;
+  }
+  textarea {
+    height: (6 * @lh);
+  }
 }
 //++++ end # GENERIC ++++//
 
@@ -138,10 +173,19 @@ h3 { .font-size-el(@g-font-size-h3); }
 h4 { .font-size-el(@g-font-size-h4); }
 h5 { .font-size-el(@g-font-size-h5); }
 h6 { .font-size-el(@g-font-size-h6); }
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  h1 { line-height: (@p-line-height / (@g-font-size-h1 / 2)); }
+  h2 { line-height: (@p-line-height / (@g-font-size-h2 / 2)); }
+  h3 { line-height: (@p-line-height /  @g-font-size-h3     ); }
+  h4 { line-height: (@p-line-height /  @g-font-size-h4     ); }
+  h5 { line-height: (@p-line-height /  @g-font-size-h5     ); }
+  h6 { line-height: (@p-line-height /  @g-font-size-h6     ); }
+}
 
 h1 {
-  margin-top: initial; // HACK fallback for `unset`
-  margin-top: unset;   // HACK fallback for logical
+  margin-top: 0;       // COMBAK-FALLBACK
+  margin-top: initial; // COMBAK-FALLBACK
+  margin-top: unset;   // COMBAK-FALLBACK
   margin-block-start: unset; // undo Normalize
 }
 
@@ -170,10 +214,16 @@ hr {
     white-space: pre;
     overflow: auto;
   }
+  @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    pre {
+      line-height: (@p-line-height / @g-font-size-mill);
+    }
+  }
   figure {
     // undo Normalize
-    margin-top: initial; margin-left: initial; margin-right: initial; // HACK fallbacks for `unset`
-    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // HACK fallbacks for logical
+    margin-top: 0      ; margin-left: 0      ; margin-right: 0      ; // COMBAK-FALLBACK
+    margin-top: initial; margin-left: initial; margin-right: initial; // COMBAK-FALLBACK
+    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // COMBAK-FALLBACK
     margin-block-start: unset;
     margin-inline: unset;
   }
@@ -192,20 +242,24 @@ hr {
     li > &,
     dt > &,
     dd > & {
-      margin-bottom: initial; // HACK fallback for `unset`
-      margin-bottom: unset;   // HACK fallback for logical
+      margin-bottom: 0;       // COMBAK-FALLBACK
+      margin-bottom: initial; // COMBAK-FALLBACK
+      margin-bottom: unset;   // COMBAK-FALLBACK
       margin-block-end: unset; // undo default vertical spacing for nested lists
     }
   }
   ol,
   ul {
-    padding: 0 0 0 4rem; // HACK fallback for logical
+    padding: 0 0 0 4rem; // COMBAK-FALLBACK
     padding: logical 0 4rem 0 0;
     li > &,
     dt > &,
     dd > & {
-      padding-left: 2rem; // HACK fallback for logical
-      padding-inline-start: 2rem;
+      padding-left: 2rem; // COMBAK-FALLBACK
+      @supports (padding-inline-start: 1rem) {
+        padding-left: unset;
+        padding-inline-start: 2rem;
+      }
     }
   }
   ol {
@@ -307,7 +361,7 @@ br {
     background-color: fadeout(#ffe168, 50%); // Google-flavored comments in Google Docs
   }
   u {
-    text-decoration: underline; // HACK fallback
+    text-decoration: underline; // COMBAK-FALLBACK
     text-decoration-line: underline;
     color: #080;
   }
@@ -315,7 +369,7 @@ br {
     font-size: (@g-font-size-mill * 1em);
   }
   s {
-    text-decoration: line-through; // HACK fallback
+    text-decoration: line-through; // COMBAK-FALLBACK
     text-decoration-line: line-through;
     color: #b00;
   }
@@ -340,8 +394,8 @@ br {
   abbr {
     &[title] {
       cursor: help;
-      text-decoration: none; // HACK fallback for `text-decoration-line` // also IE fallback for `initial`
-      text-decoration-line: initial; // HACK fallback for `unset`
+      text-decoration: none; // COMBAK-FALLBACK for `text-decoration-line` // also IE fallback for `initial`
+      text-decoration-line: initial; // COMBAK-FALLBACK
       text-decoration-line: unset; // undo Normalize
     }
   }
@@ -349,6 +403,7 @@ br {
     font-style: italic;
   }
   q {
+    .quotes-double(); // COMBAK-FALLBACK for `initial`
     .delims(initial);
   }
   cite {
@@ -377,7 +432,7 @@ br {
       font-size: inherit; // undo compounding font sizes
     }
     pre & {
-      white-space: inherit; // HACK fallback
+      white-space: inherit; // COMBAK-FALLBACK
       white-space: unset; // sometimes people put a `code` in a `pre` // override `nowrap` above
     }
   }
@@ -425,10 +480,10 @@ textarea {
 
 textarea {
   display: block; // override browser default
-  height: calc(~'6 * var(--lh)');
+  height: calc(6 ~'*' var(--lh));
   height: 6lh;
   width: 30rem;
-  block-size: calc(~'6 * var(--lh)');
+  block-size: calc(6 ~'*' var(--lh));
   block-size: 6lh;
   inline-size: 30rem;
   font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children

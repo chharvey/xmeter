@@ -5,14 +5,15 @@
 
 
 body {
-  text-align: start; /* HACK fallback */
+  text-align: start; /* COMBAK-FALLBACK */
   text-align: initial; /* fix unsupported browsers initial value */
   background: #fff;
   color: #000;
 }
 
 sup, sub {
-  vertical-align: initial;  /* HACK fallback */
+  vertical-align: baseline; /* COMBAK-FALLBACK */
+  vertical-align: initial;  /* COMBAK-FALLBACK */
   vertical-align: unset;
 }
 body,
@@ -22,13 +23,15 @@ p, figure, blockquote, pre,
 ol, ul, dl,
 dd,
 fieldset {
-  margin: initial; /* HACK fallback */
+  margin: 0;       /* COMBAK-FALLBACK */
+  margin: initial; /* COMBAK-FALLBACK */
   margin: unset;
 }
 ol, ul,
 th, td,
 legend {
-  padding: initial; /* HACK fallback */
+  padding: 0;       /* COMBAK-FALLBACK */
+  padding: initial; /* COMBAK-FALLBACK */
   padding: unset;
 }
 h1, h2, h3, h4, h5, h6,
@@ -42,20 +45,21 @@ code, kbd, samp {
 }
 caption,
 th {
-  text-align: inherit; /* HACK fallback */
+  text-align: inherit; /* COMBAK-FALLBACK */
   text-align: unset;
 }
 pre {
-  white-space: inherit; /* HACK fallback */
+  white-space: inherit; /* COMBAK-FALLBACK */
   white-space: unset;
 }
 a,
 u, s,
 ins, del {
-  text-decoration: initial; /* HACK fallback */
+  text-decoration: none;    /* COMBAK-FALLBACK */
+  text-decoration: initial; /* COMBAK-FALLBACK */
   text-decoration: unset;
 }
 mark {
-  color: inherit; /* HACK fallback */
+  color: inherit; /* COMBAK-FALLBACK */
   color: unset;
 }
