@@ -116,6 +116,11 @@ gulp.task('generate-less', async function () {
       }
     `
   }))).reduce((a,b) => a.concat(b), [])
+  // TODO: uncomment this after `/css/src/xmeter.less` is removed and can be automated (after v7)
+  // stylesheets_dev.push({
+  //   filename: 'xmeter.less',
+  //   contents: cssclassfiles.map((file) => `@import url('../../src/${file.filename}');`).join('\n')
+  // })
 
   /**
    * @summary Map the breakpoints to Less file setups.
@@ -166,7 +171,7 @@ gulp.task('generate-less', async function () {
 
 
 gulp.task('lessc-dev', ['generate-less'], function () {
-  return gulp.src(['./css/src/*.less', '!./css/src/xmeter*.less', './css/dist/dev/*.less'])
+  return gulp.src(['./css/src/*.less', './css/dist/dev/*.less'])
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
@@ -178,7 +183,7 @@ gulp.task('lessc-dev', ['generate-less'], function () {
 })
 
 gulp.task('lessc-prod', ['lessc-dev'], function () {
-  return gulp.src(['css/src/xmeter-a.less', 'css/dist/prod/xmeter-*.less'])
+  return gulp.src(['css/src/xmeter.less', 'css/dist/prod/xmeter-*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
