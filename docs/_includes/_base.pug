@@ -340,8 +340,8 @@ section#interactive-elements
         | Aenean consectetur #[code(class=classname.code) details] suscipit urna, non vehicula lacus blandit et.
     figure(class=classname.figure)
       dialog
-        h1 A Dialog
+        h1.-pt-0 A Dialog
         | text for #[code(class=classname.code) dialog] element
         p Can include flow content.
-        p: button(type="button" name="dialog-close") close
-      button(type="button" name="dialog-open") open
+        p.-mb-0: button(type="button" name="dialog-close") close dialog
+      button(type="button" name="dialog-open") open dialog
