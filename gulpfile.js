@@ -47,7 +47,6 @@ gulp.task('build:docs', ['docs:api', 'docs:kss', 'pug:docs', 'lessc:docs'])
 gulp.task('generate-less', async function () {
   /**
    * @summary List of breakpoints, corresponding to query-specific stylesheets.
-   * @private
    * @type {Array<{suffix:string, query:string}>}
    */
   let breakpoints = [
@@ -64,67 +63,13 @@ gulp.task('generate-less', async function () {
   ]
 
   /**
-   * @summary List of files to import with `@import (reference) url();`.
-   * @private
-   * @type {Array<string>}
-   */
-  let imports = [
-    // TODO use `fs.readdir(path.resolve(__dirname, './css/src/'))` and filter out only the ones you want
-    '_o-List.less',
-    '_o-Flex.less',
-    '_o-Grid.less',
-    '_h-Block.less',
-    '_h-Inline.less',
-    '_h-Clearfix.less',
-    '_h-Measure.less',
-    '_h-Ruled.less',
-    '_-fz.less',
-  ]
-
-  /**
-   * @summary List of classnames that have suffix extensions.
-   * @private
-   * @type {Array<string>}
-   */
-  let classes = [
-    'o-List',
-    'o-List__Item',
-    'o-Flex',
-    'o-Flex__Item',
-    'o-Grid',
-    'o-Grid__Item',
-    'h-Block',
-    'h-Inline',
-    'h-Clearfix',
-    'h-Measure',
-    'h-Measure--narrow',
-    'h-Measure--wide',
-    'h-Ruled',
-    '-fz-peta',
-    '-fz-tera',
-    '-fz-giga',
-    '-fz-mega',
-    '-fz-kilo',
-    '-fz-norm',
-    '-fz-mill',
-    '-fz-micr',
-    '-fz-el-peta',
-    '-fz-el-tera',
-    '-fz-el-giga',
-    '-fz-el-mega',
-    '-fz-el-kilo',
-    '-fz-el-norm',
-    '-fz-el-mill',
-    '-fz-el-micr',
-  ]
-
-  /**
    * @summary List of source files.
    * @type {Array<{filename:string, classes:Array<string>}>}
    * @property {string} filename the name of the file
    * @property {Array<string>} classes the classes written in the file
    */
   let cssclassfiles = [
+    // REVIEW use `fs.readdir(path.resolve(__dirname, './css/src/'))` and filter out only the ones you want
     { filename: '_o-List.less'     , classes: [ 'o-List', 'o-List__Item' ] },
     { filename: '_o-Flex.less'     , classes: [ 'o-Flex', 'o-Flex__Item' ] },
     { filename: '_o-Grid.less'     , classes: [ 'o-Grid', 'o-Grid__Item' ] },
@@ -132,6 +77,7 @@ gulp.task('generate-less', async function () {
     { filename: '_h-Inline.less'   , classes: [ 'h-Inline' ] },
     { filename: '_h-Clearfix.less' , classes: [ 'h-Clearfix' ] },
     { filename: '_h-Measure.less'  , classes: [ 'h-Measure', 'h-Measure--narrow', 'h-Measure--wide' ] },
+    { filename: '_h-Constrain.less', classes: [ 'h-Constrain' ] },
     { filename: '_h-Ruled.less'    , classes: [ 'h-Ruled' ] },
     {
       filename: '_-fz.less',
@@ -174,14 +120,9 @@ gulp.task('generate-less', async function () {
    * @summary Map the breakpoints to Less file setups.
    * @type {{filename:string, contents:string}}
    */
-  let stylesheets = breakpoints.map((bp) => ({
+  let stylesheets_prod = breakpoints.map((bp) => ({
     filename: `xmeter${bp.suffix}.less`,
-    contents: `
-      ${imports.map((filename) => `@import (reference) url('../../src/${filename}');`).join('\n')}
-      @media ${bp.query} {
-        ${classes.map((classname) => `.${classname}${bp.suffix} { .${classname}; }`).join('\n')}
-      }
-    `,
+    contents: cssclassfiles.map((file) => `@import url('../dev/${path.parse(file.filename).name}${bp.suffix}.less');`).join('\n'),
   }))
 
   /**
@@ -197,14 +138,20 @@ gulp.task('generate-less', async function () {
   }
 
   await createDir('./css/dist/')
+  await Promise.all([
+    (async function () {
   await createDir('./css/dist/dev/')
-  await createDir('./css/dist/prod/')
   await Promise.all(stylesheets_dev.map((ss) =>
     util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/dev/', ss.filename), ss.contents, 'utf8')
   ))
-  await Promise.all(stylesheets.map((ss) =>
+    })(),
+    (async function () {
+  await createDir('./css/dist/prod/')
+  await Promise.all(stylesheets_prod.map((ss) =>
     util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/prod/', ss.filename), ss.contents, 'utf8')
   ))
+    })(),
+  ])
 })
 
 
