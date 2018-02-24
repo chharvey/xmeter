@@ -15,6 +15,7 @@
     "gulp-jsdoc3": "^1.0.1",
     "gulp-less": "^3.4.0",
     "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.4",
     "kss": "^3.0.0-beta.18",
     "normalize.css": "^6.0.0",
@@ -23,7 +24,7 @@
   "scripts": {
     "test": "node test.js",
     "unbuild:docs": "rm -r docs/{styleguide,api}/  &&  rm docs/{{index,base}.html,css/docs.css}",
-    "unbuild": "npm run unbuild:docs  &&  rm css/xmeter.css{,.map}",
+    "unbuild": "npm run unbuild:docs &&  rm -r css/dist/  &&  rm css/xmeter.css{,.map}",
     "build": "gulp build"
   },
   "repository": {
