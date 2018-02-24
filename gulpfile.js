@@ -4,6 +4,7 @@ const util = require('util')
 
 const kss          = require('kss')
 const gulp         = require('gulp')
+const rename       = require("gulp-rename");
 const jsdoc        = require('gulp-jsdoc3')
 const pug          = require('gulp-pug')
 const less         = require('gulp-less')
@@ -107,7 +108,7 @@ gulp.task('generate-less', async function () {
    * @type {{filename:string, contents:string}}
    */
   let stylesheets_dev = cssclassfiles.map((file) => breakpoints.map((bp) => ({
-    filename: `${path.parse(file.filename).name}${bp.suffix}.less`,
+    filename: `${path.parse(file.filename).name.slice(1)}${bp.suffix}.less`, // slice(1) removes the underscore `_`
     contents: `
       @import (reference) url('../../src/${file.filename}');
       @media ${bp.query} {
@@ -160,6 +161,9 @@ gulp.task('lessc-dev', ['generate-less'], function () {
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
+    }))
+    .pipe(rename(function (pathish) {
+      if (pathish.basename[0] === '_') pathish.basename = pathish.basename.slice(1)
     }))
     .pipe(gulp.dest('./css/dist/dev/'))
 })

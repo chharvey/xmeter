@@ -83,17 +83,17 @@ where `‹master›` can be any branch or tag.
 You can pick and choose which styles you want, but this technique is slower and less performant:
 No minification or sourcemapping is provided.
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_base.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_o-List‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_o-Flex‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_o-Grid‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Block‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Inline‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Clearfix‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Measure‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Constrain‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Ruled‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_-fz‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/base.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-List‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-Flex‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-Grid‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Block‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Inline‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Clearfix‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Measure‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Constrain‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Ruled‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/-fz‹-*›.css"/>
 ```
 where `‹-*›` is one of the media query suffices shown above. If omitted, `-a` is assumed (`@media all`).
 
