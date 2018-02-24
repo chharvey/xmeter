@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en")#top
   mixin doctoc(args, inner)
     //- NOTE parameter validation
     -
@@ -21,10 +21,11 @@ html(lang="en")
     meta(name="description" content=Docs.DOCS.description())
     meta(name="viewport" content="width=device-width, initial-scale=1")
     block styles
-      //- link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.9.0/bangs.min.css")
+      link(rel="stylesheet" href="https://cdn.rawgit.com/chharvey/bangs/v0.15.0/bangs.css")
       link(rel="stylesheet" href="../css/xmeter.css")
       link(rel="stylesheet" href="css/docs.css")
-  body.h-Ruled#top
+    block scripts
+  body.h-Ruled.docs-body
     a.h-Hidden(href="#main") skip to main content
     header
       h1= Docs.DOCS.name()
