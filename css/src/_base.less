@@ -2,6 +2,10 @@
 /*################################*\
     xmeter  |  _base.less
 \*################################*/
+@import (reference) url('./__settings.less');
+@import (reference) url('./__tool.fontsize.less');
+@import (reference) url('./__tool.borders.less');
+@import (reference) url('./__tool.delims.less');
 
 
 // Contents
@@ -25,6 +29,9 @@
 //++++++++++++++++++++++++++++++++//
 //    # GENERIC
 //++++++++++++++++++++++++++++++++//
+@import (inline) url('reset.css');
+@import (inline) url('../../node_modules/normalize.css/normalize.css');
+
 * {
   &,
   &::before,

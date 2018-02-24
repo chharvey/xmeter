@@ -40,11 +40,14 @@ Read about all of Xmeter’s tools (see `/docs/tools.md`).
 Use Xmeter right out of the box on your own site.
 Want to see what Xmeter can do? [Check out the style guide] (link pending).
 
-Locally:
+#### Production Code
+Each stylesheet has been minified and optimized for production, and is accompanied by a sourcemap ending in `.css.map`.
+It is recommended that you split up the stylesheet into media queries as shown below.
+
+##### Locally:
 ```bash
 $ npm install xmeter
 ```
-Use the production code:
 ```html
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-a.css"  media="all"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sK.css" media="screen  and (min-width: 30em)"/>
@@ -59,13 +62,40 @@ Use the production code:
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sP.css" media="not all and (min-width: 90em)"/>
 ```
 
-Remotely from a CDN (not recommended, unless deploying your `/node_modules/` isn’t possible):
+##### Remotely from a CDN:
+(not recommended, unless deploying your `/node_modules/` isn’t possible)
 ```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-*.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-a.css"  media="all"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sK.css" media="screen  and (min-width: 30em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sM.css" media="screen  and (min-width: 45em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sG.css" media="screen  and (min-width: 60em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sT.css" media="screen  and (min-width: 75em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sP.css" media="screen  and (min-width: 90em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sK.css" media="not all and (min-width: 30em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sM.css" media="not all and (min-width: 45em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sG.css" media="not all and (min-width: 60em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sT.css" media="not all and (min-width: 75em)"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter-sP.css" media="not all and (min-width: 90em)"/>
 ```
-where `‹master›` can be any branch or tag, and `*` is a wildcard for the variants shown above.
+where `‹master›` can be any branch or tag.
 
-The stylesheets are already minified, and are accompanied by a sourcemap ending in `.css.map`.
+#### Development Code
+You can pick and choose which styles you want, but this technique is slower and less performant:
+No minification or sourcemapping is provided.
+```html
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_base.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_o-List‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_o-Flex‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_o-Grid‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Block‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Inline‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Clearfix‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Measure‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Constrain‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_h-Ruled‹-*›.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/_-fz‹-*›.css"/>
+```
+where `‹-*›` is one of the media query suffices shown above. If omitted, `-a` is assumed (`@media all`).
 
 
 ## Features

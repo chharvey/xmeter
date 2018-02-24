@@ -109,7 +109,7 @@ gulp.task('generate-less', async function () {
   let stylesheets_dev = cssclassfiles.map((file) => breakpoints.map((bp) => ({
     filename: `${path.parse(file.filename).name}${bp.suffix}.less`,
     contents: `
-      @import url('../../src/${file.filename}');
+      @import (reference) url('../../src/${file.filename}');
       @media ${bp.query} {
         ${file.classes.map((classname) => `.${classname}${bp.suffix} { .${classname} };`).join('\n')}
       }
@@ -154,6 +154,15 @@ gulp.task('generate-less', async function () {
   ])
 })
 
+
+gulp.task('lessc-dev', ['generate-less'], function () {
+  return gulp.src(['./css/src/*.less', '!./css/src/xmeter*.less', './css/dist/dev/*.less'])
+    .pipe(less())
+    .pipe(autoprefixer({
+      grid: true,
+    }))
+    .pipe(gulp.dest('./css/dist/dev/'))
+})
 
 gulp.task('lessc-prod', ['generate-less'], function () {
   return gulp.src(['css/src/xmeter-a.less', 'css/dist/prod/xmeter-*.less'])
