@@ -11,6 +11,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
 const sourcemaps   = require('gulp-sourcemaps')
 
+
 gulp.task('docs:api', function () {
   return gulp.src(['README.md', './index.js', 'class/Xmeter.class.js'], {read: false})
     .pipe(jsdoc(require('./config/jsdoc.json')))
@@ -118,6 +119,58 @@ gulp.task('generate-less', async function () {
   ]
 
   /**
+   * @summary List of source files.
+   * @type {Array<{filename:string, classes:Array<string>}>}
+   * @property {string} filename the name of the file
+   * @property {Array<string>} classes the classes written in the file
+   */
+  let cssclassfiles = [
+    { filename: '_o-List.less'     , classes: [ 'o-List', 'o-List__Item' ] },
+    { filename: '_o-Flex.less'     , classes: [ 'o-Flex', 'o-Flex__Item' ] },
+    { filename: '_o-Grid.less'     , classes: [ 'o-Grid', 'o-Grid__Item' ] },
+    { filename: '_h-Block.less'    , classes: [ 'h-Block' ] },
+    { filename: '_h-Inline.less'   , classes: [ 'h-Inline' ] },
+    { filename: '_h-Clearfix.less' , classes: [ 'h-Clearfix' ] },
+    { filename: '_h-Measure.less'  , classes: [ 'h-Measure', 'h-Measure--narrow', 'h-Measure--wide' ] },
+    { filename: '_h-Ruled.less'    , classes: [ 'h-Ruled' ] },
+    {
+      filename: '_-fz.less',
+      classes: [
+        '-fz-peta',
+        '-fz-tera',
+        '-fz-giga',
+        '-fz-mega',
+        '-fz-kilo',
+        '-fz-norm',
+        '-fz-mill',
+        '-fz-micr',
+        '-fz-el-peta',
+        '-fz-el-tera',
+        '-fz-el-giga',
+        '-fz-el-mega',
+        '-fz-el-kilo',
+        '-fz-el-norm',
+        '-fz-el-mill',
+        '-fz-el-micr',
+      ],
+    },
+  ]
+
+  /**
+   * @summary Explode each classfile to an array of breakpoint files, then concatenate.
+   * @type {{filename:string, contents:string}}
+   */
+  let stylesheets_dev = cssclassfiles.map((file) => breakpoints.map((bp) => ({
+    filename: `${path.parse(file.filename).name}${bp.suffix}.less`,
+    contents: `
+      @import url('../../src/${file.filename}');
+      @media ${bp.query} {
+        ${file.classes.map((classname) => `.${classname}${bp.suffix} { .${classname} };`).join('\n')}
+      }
+    `
+  }))).reduce((a,b) => a.concat(b), [])
+
+  /**
    * @summary Map the breakpoints to Less file setups.
    * @type {{filename:string, contents:string}}
    */
@@ -144,7 +197,11 @@ gulp.task('generate-less', async function () {
   }
 
   await createDir('./css/dist/')
+  await createDir('./css/dist/dev/')
   await createDir('./css/dist/prod/')
+  await Promise.all(stylesheets_dev.map((ss) =>
+    util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/dev/', ss.filename), ss.contents, 'utf8')
+  ))
   await Promise.all(stylesheets.map((ss) =>
     util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/prod/', ss.filename), ss.contents, 'utf8')
   ))
