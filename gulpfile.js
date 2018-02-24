@@ -183,7 +183,7 @@ gulp.task('lessc-dev', ['generate-less'], function () {
 })
 
 gulp.task('lessc-prod', ['lessc-dev'], function () {
-  return gulp.src(['css/src/xmeter.less', 'css/dist/prod/xmeter-*.less'])
+  return gulp.src(['./css/src/xmeter.less', './css/dist/prod/xmeter-*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
@@ -201,22 +201,8 @@ gulp.task('lessc-prod', ['lessc-dev'], function () {
     .pipe(gulp.dest('./css/dist/prod/'))
 })
 
-gulp.task('lessc:core', function () {
-  return gulp.src('css/src/xmeter.less')
-    .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(autoprefixer({
-      grid: true,
-    }))
-    .pipe(clean_css({
-      level: {
-        2: {
-          overrideProperties: false, // need fallbacks for `initial` and `unset`
-          restructureRules: true, // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
-        },
-      },
-    }))
-    .pipe(sourcemaps.write('./')) // writes to an external .map file
+gulp.task('lessc:core', ['lessc-prod'], function () {
+  return gulp.src('./css/dist/prod/xmeter.css{,.map}')
     .pipe(gulp.dest('./css/'))
 })
 
