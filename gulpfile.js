@@ -131,7 +131,6 @@ gulp.task('generate-less', async function () {
     `,
   }))
 
-
   /**
    * @summary Test access of a directory; if error, make directory.
    * @param   {string} dir directory name relative to `__dirname` (this file)
@@ -144,7 +143,6 @@ gulp.task('generate-less', async function () {
     }
   }
 
-  // @summary Create the actual directories and files.
   await createDir('./css/dist/')
   await createDir('./css/dist/prod/')
   await Promise.all(stylesheets.map((ss) =>
@@ -152,8 +150,9 @@ gulp.task('generate-less', async function () {
   ))
 })
 
+
 gulp.task('lessc-prod', ['generate-less'], function () {
-  return gulp.src('css/dist/prod/*.less')
+  return gulp.src(['css/src/xmeter-a.less', 'css/dist/prod/xmeter-*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({

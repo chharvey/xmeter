@@ -46,7 +46,7 @@ $ npm install xmeter
 ```
 Use the production code:
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/css/xmeter.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-a.css"  media="all"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sK.css" media="screen  and (min-width: 30em)"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sM.css" media="screen  and (min-width: 45em)"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sG.css" media="screen  and (min-width: 60em)"/>
