@@ -41,8 +41,18 @@ Use Xmeter right out of the box on your own site.
 Want to see what Xmeter can do? [Check out the style guide] (link pending).
 
 #### Production Code
-Each stylesheet has been minified and optimized for production, and is accompanied by a sourcemap ending in `.css.map`.
+Each stylesheet is minified and optimized for production, and accompanied by a sourcemap ending in `.css.map`.
 It is recommended that you split up the stylesheet into media queries as shown below.
+
+Only pick the ones you need, if you’re using a class ending in that suffix. For example, if you’re using
+`class="o-Flex-sG"`, then link the `xmeter-sG.css` stylesheet with `media="screen  and (min-width: 60em)"`.
+
+Mnemonic:
+1. Kilo
+2. Mega
+3. Giga
+4. Tera
+5. Peta
 
 ##### Locally:
 ```bash
@@ -68,13 +78,14 @@ The `/prod/xmeter.css` stylesheet contains all code not nested in a media query
 ##### Remotely from a CDN:
 (not recommended, unless deploying your `/node_modules/` isn’t possible)
 
-Change the `"/node_modules/xmeter/css/dist/prod/xmeter‹*›.css"` to
-`"https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter‹*›.css"`
-in the `[href]` attribute, where `‹master›` can be any branch or tag.
-The suffices (`-sK`, etc.) correspond to breakpoints.
+```html
+<link href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter‹breakpoint›.css"
+  rel="stylesheet" media="‹breakpoint›"/>
+```
+where `‹master›` can be any branch or tag, and `‹breakpoint›` represents the media query.
 
 #### Development Code
-You can pick and choose which styles you want, but this technique is slower and less performant:
+You can pick and choose which styles you want, but this technique is slower and less performant.
 No minification or sourcemapping is provided.
 ```html
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/xmeter.css"/>
@@ -90,7 +101,7 @@ No minification or sourcemapping is provided.
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Ruled‹-*›.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/-fz‹-*›.css"/>
 ```
-where `‹-*›` is one of the media query suffices shown above. If omitted, `@media all` is assumed.
+where `‹-*›` is one of the media query suffixes shown above. If omitted, `@media all` is assumed.
 
 The `dev/xmeter.css` stylesheet concatenates all the classes into one giant stylesheet.
 It is the uncompressed version of `prod/xmeter.css`, but otherwise exactly the same.
