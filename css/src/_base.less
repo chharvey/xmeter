@@ -542,4 +542,12 @@ img {
 summary {
   cursor: pointer;
 }
+
+dialog {
+  padding: calc(0.5 ~'*' var(--lh)) 1rem; // COMBAK-FALLBACK
+  padding: 0.5lh 1rem;
+  &::backdrop {
+    background-color: @p-color-gray;
+  }
+}
 //++++ end # INTERACTIVE ++++//
