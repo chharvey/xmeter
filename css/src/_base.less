@@ -47,7 +47,7 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select), // CHANGED selector not supported yet
+  // &:not(input, button, select), // CHANGED selector not supported yet // TODO NB-LINK once removed, fix line 470
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
@@ -467,7 +467,7 @@ textarea {
   line-height: inherit; // undo browser default
 }
 
-html body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+html body fieldset { // HACK NB-LINK need a specificity of 3 to override generic `*:not(input):not(button):not(select)` (line 50)
   .border-vert(all; 1px);
   .border-block(all; 1px);
   border-style: solid;
