@@ -4,6 +4,9 @@
 /*================================*\
     docs.less
 \*================================*/
+.docs-body {
+  margin-bottom: 50vh;
+}
 [aria-current="page"] {
   font-weight: bold;
 }
@@ -25,7 +28,7 @@
   padding: 0.5lh 0.5rem;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 0 0 1px #ddd;
-  box-shadow: 0 0 0 1px #ddd;
+          box-shadow: 0 0 0 1px #ddd;
   background-color: #eee;
   overflow: auto;
 }

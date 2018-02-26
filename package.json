@@ -1,29 +1,28 @@
 {
   "name": "xmeter",
-  "version": "6.2.0",
+  "version": "6.3.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
-    "extrajs-dom": "^3.2.0",
-    "extrajs-view": "^1.1.1"
+    "aria-patterns": "^0.2.0",
+    "extrajs-dom": "^4.0.0",
+    "extrajs-view": "^1.1.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.9.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
     "gulp-jsdoc3": "^1.0.1",
-    "gulp-less": "^3.3.0",
+    "gulp-less": "^3.4.0",
     "gulp-pug": "^3.3.0",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.4",
     "kss": "^3.0.0-beta.18",
     "normalize.css": "^6.0.0",
     "sitepage": "^1.0.0"
   },
   "scripts": {
     "test": "node test.js",
-    "unbuild:api": "rm -r docs/api/",
-    "unbuild:kss": "rm -r docs/styleguide/",
-    "unbuild:docs": "npm run unbuild:api  &&  npm run unbuild:kss  &&  rm docs/{{index,base}.html,css/docs.css}",
+    "unbuild:docs": "rm -r docs/{styleguide,api}/  &&  rm docs/{{index,base}.html,css/docs.css}",
     "unbuild": "npm run unbuild:docs  &&  rm css/xmeter.css{,.map}",
     "build": "gulp build"
   },

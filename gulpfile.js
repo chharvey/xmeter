@@ -9,11 +9,11 @@ const sourcemaps   = require('gulp-sourcemaps')
 
 gulp.task('docs:api', function () {
   return gulp.src(['README.md', './index.js', 'class/Xmeter.class.js'], {read: false})
-    .pipe(jsdoc(require('./config-jsdoc.json')))
+    .pipe(jsdoc(require('./config/jsdoc.json')))
 })
 
 gulp.task('docs:kss', function () {
-  return kss(require('./config-kss.json'))
+  return kss(require('./config/kss.json'))
 })
 
 gulp.task('pug:docs', function () {
@@ -33,7 +33,6 @@ gulp.task('lessc:docs', function () {
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
-      cascade: false,
     }))
     .pipe(gulp.dest('./docs/css/'))
 })
@@ -42,13 +41,12 @@ gulp.task('build:docs', ['docs:api', 'docs:kss', 'pug:docs', 'lessc:docs'])
 
 gulp.task('lessc:core', function () {
   return gulp.src('css/src/xmeter.less')
+    .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
-      cascade: false,
     }))
     .pipe(gulp.dest('./css/'))
-    .pipe(sourcemaps.init())
     .pipe(clean_css({
       level: {
         2: {

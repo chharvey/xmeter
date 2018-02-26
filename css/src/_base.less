@@ -65,14 +65,20 @@ form, fieldset, textarea,
 details {
   margin-bottom: var(--lh);
   margin-bottom: 1lh;
+  @supports (margin-block-end: var(--variable)) {
+    margin-bottom: unset;
   margin-block-end: var(--lh);
   margin-block-end: 1lh;
+  }
 }
 h1 {
   padding-top: var(--lh);
   padding-top: 1lh;
+  @supports (padding-block-start: var(--variable)) {
+    padding-top: unset;
   padding-block-start: var(--lh);
   padding-block-start: 1lh;
+  }
 }
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
@@ -205,7 +211,10 @@ hr {
     dt > &,
     dd > & {
       padding-left: 2rem; // HACK fallback for logical
+      @supports (padding-inline-start: 1rem) {
+        padding-left: unset;
       padding-inline-start: 2rem;
+      }
     }
   }
   ol {
@@ -486,5 +495,13 @@ img {
 //++++++++++++++++++++++++++++++++//
 summary {
   cursor: pointer;
+}
+
+dialog {
+  padding: calc(0.5 ~'*' var(--lh)) 1rem; // COMBAK-FALLBACK
+  padding: 0.5lh 1rem;
+  &::backdrop {
+    background-color: @p-color-gray;
+  }
 }
 //++++ end # INTERACTIVE ++++//
