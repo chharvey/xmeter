@@ -22,7 +22,8 @@
   font-size: (@ratio * 1rem);
   // line-height: inherit; // NOTE clarification
   & > * {
-    --lh: calc(@ratio ~' * var(--line-height) * 1rem'); // @ratio * parent lh
+    // COMBAK-FALLBACK for `lh` units. TODO remove after `lh` is supported.
+    --lh: calc(@ratio ~'*' var(--line-height) ~'*' 1rem); // @ratio * parent lh
   }
 }
 
@@ -45,5 +46,5 @@
 // : 2016-10-01
 .font-size-el(@ratio: 1; @lines: 1) {
   font-size: (@ratio * 1em);
-  line-height: calc(~'var(--line-height) / ' (@ratio/@lines));
+  line-height: calc(var(--line-height) ~'/' (@ratio / @lines));
 }

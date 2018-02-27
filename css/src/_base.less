@@ -54,13 +54,19 @@
   }
 }
 
+// Set up vertical rhythm system.
+// [1] default line-height. Change in your own project if you wish.
+// [2] COMBAK-FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
+// [3] CHANGED-DEPRECATED: legacy support
+// [4] addresses support for `rem` units (otherwise these would be in `body` selector)
+// [5] Root font-size (rem) should *not* be set to an absolute unit, so that users can specify
+//     font sizing settings in their user agent.
 html {
-  --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
-  --lh: calc(var(--line-height) ~'*' 1rem); // COMBAK-FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
-  --vru: var(--lh); // CHANGED DEPRECATED: legacy support
-  // addresses support for `rem` units (otherwise these would be in `body` selector)
-  font-size: 100%; // defined by user agent
-  line-height: var(--line-height);
+  --line-height: 1.5; // [1]
+  --lh: calc(var(--line-height) ~'*' 1rem); // [2]
+  --vru: var(--lh); // [3]
+  font-size: 100%; // [4] [5]
+  line-height: var(--line-height); // [4]
 }
 
 // Vertical spacing between typographical blocks
