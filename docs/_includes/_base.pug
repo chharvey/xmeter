@@ -1,6 +1,6 @@
 - classname = classname || {}
 mixin permalink(id)
-  != Xmeter.TEMPLATES.xPermalink.render({ id: id }).querySelector('a').outerHTML
+  != Xmeter.view({ id: id }).permalink('§')
 section#grouping-elements
   block groupingElements
     h2 Grouping Elements #[+permalink('grouping-elements')]
@@ -187,6 +187,28 @@ section#grouping-elements
                     - for (var j = 0; j < cols; j++)
                       td #[code(class=classname.code) tbody] #[code(class=classname.code) tr]ow #{i+1} #[code(class=classname.code) td]ata #{j+1}
               +tablebodyrows(3,3)
+section#transparent-elements
+  block transparentElements
+    h2 Transparent Elements #[+permalink('transparent-elements')]
+    p A transparent element can be either block-level or text-level, depending on its contents.
+    figure(class=classname.figure)
+      figcaption Transparent elements styled with inline display:
+      ul
+        block transparentInlineList
+          li: a.h-Inline placeholder anchor #[code(class=classname.code)= 'a:not([href])']
+          li: a.h-Inline(href="#0") hyperlink #[code(class=classname.code)= 'a[href]']
+          li: ins.h-Inline  content shown to be inserted into a document #[code(class=classname.code) ins]
+          li: del.h-Inline  content shown to be deleted from a document #[code(class=classname.code) del]
+          li: slot.h-Inline(name="") a placeholder for dynamic data #[code(class=classname.code) slot]
+    figure(class=classname.figure)
+      figcaption Transparent elements styled with block display:
+      ul
+        block transparentBlockList
+          li: a.h-Block placeholder anchor #[pre(class=classname.code)= 'a:not([href])']
+          li: a.h-Block(href="#0") hyperlink #[pre(class=classname.code)= 'a[href]']
+          li: ins.h-Block  content shown to be inserted into a document #[pre(class=classname.code) ins]
+          li: del.h-Block  content shown to be deleted from a document #[pre(class=classname.code) del]
+          li: slot.h-Block(name="") a placeholder for dynamic data #[pre(class=classname.code) slot]
 section#text-level-elements
   block textLevelElements
     h2 Text-Level Elements #[+permalink('text-level-elements')]
@@ -229,8 +251,9 @@ section#text-level-elements
         h3 Data #[+permalink('data')]
         figure(class=classname.figure): ul
           block dataList
-            li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
+            li: slot(name="") a placeholder for dynamic data #[code(class=classname.code) slot]
             li: data(value="") generic machine-readable data #[code(class=classname.code) data]
+            li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
             li: code     a fragment of code #[code(class=classname.code) code]
             li: kbd      user input #[code(class=classname.code) kbd]
             li: kbd: kbd a button or key on a physical device #[code(class=classname.code) kbd &gt; kbd]
@@ -338,3 +361,10 @@ section#interactive-elements
       details
         summary Integer at lacus et diam tristique #[code(class=classname.code) details summary] suscipit.
         | Aenean consectetur #[code(class=classname.code) details] suscipit urna, non vehicula lacus blandit et.
+    figure(class=classname.figure)
+      dialog
+        h1.-pt-0 A Dialog
+        | text for #[code(class=classname.code) dialog] element
+        p Can include flow content.
+        p.-mb-0: button(type="button" name="dialog-close") close dialog
+      button(type="button" name="dialog-open") open dialog

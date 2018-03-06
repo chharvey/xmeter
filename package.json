@@ -1,11 +1,11 @@
 {
   "name": "xmeter",
-  "version": "6.3.0-alpha.2",
+  "version": "6.3.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
-    "aria-patterns": "^1.0.0-beta",
-    "extrajs-dom": "^4.0.0-alpha.3",
+    "aria-patterns": "^0.2.0",
+    "extrajs-dom": "^4.0.0",
     "extrajs-view": "^1.1.2"
   },
   "devDependencies": {

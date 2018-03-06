@@ -47,20 +47,26 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select), // CHANGED selector not supported yet
+  // &:not(input, button, select), // CHANGED selector not supported yet // TODO NB-LINK once removed, fix line 470
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
   }
 }
 
+// Set up vertical rhythm system.
+// [1] default line-height. Change in your own project if you wish.
+// [2] COMBAK-FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
+// [3] CHANGED-DEPRECATED: legacy support
+// [4] addresses support for `rem` units (otherwise these would be in `body` selector)
+// [5] Root font-size (rem) should *not* be set to an absolute unit, so that users can specify
+//     font sizing settings in their user agent.
 html {
-  --line-height: 1.5; // default line-height. NOTE: change in your own project if you wish.
-  --lh: calc(var(--line-height) ~'*' 1rem); // COMBAK-FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
-  --vru: var(--lh); // CHANGED DEPRECATED: legacy support
-  // addresses support for `rem` units (otherwise these would be in `body` selector)
-  font-size: 100%; // defined by user agent
-  line-height: var(--line-height);
+  --line-height: 1.5; // [1]
+  --lh: calc(var(--line-height) ~'*' 1rem); // [2]
+  --vru: var(--lh); // [3]
+  font-size: 100%; // [4] [5]
+  line-height: var(--line-height); // [4]
 }
 
 // Vertical spacing between typographical blocks
@@ -105,18 +111,7 @@ label {
 
 // Elements with a transparent content model
 // should display what their contents display.
-a, ins, del {
-  // display: inherit;
-  // line-height: inherit;
-  // h1 > &, h2 > &, h3 > &, h4 > &, h5 > &, h6 > &,
-  // p > &, pre > &,
-  // figure > &, figcaption > &, blockquote > &,
-  // li > &, dt > &, dd > &,
-  // caption > &, th > &, td > &,
-  // legend > &, summary > & {
-  //   display: inline;
-  //   line-height: 0;
-  // }
+a, ins, del, slot {
 }
 
 @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -467,7 +462,7 @@ textarea {
   line-height: inherit; // undo browser default
 }
 
-html body fieldset { // HACK need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+html body fieldset { // HACK NB-LINK need a specificity of 3 to override generic `*:not(input):not(button):not(select)` (line 50)
   .border-vert(all; 1px);
   .border-block(all; 1px);
   border-style: solid;
@@ -541,5 +536,13 @@ img {
 //++++++++++++++++++++++++++++++++//
 summary {
   cursor: pointer;
+}
+
+dialog {
+  padding: calc(0.5 ~'*' var(--lh)) 1rem; // COMBAK-FALLBACK
+  padding: 0.5lh 1rem;
+  &::backdrop {
+    background-color: @p-color-gray;
+  }
 }
 //++++ end # INTERACTIVE ++++//
