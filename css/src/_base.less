@@ -3,6 +3,7 @@
     xmeter  |  _base.less
 \*################################*/
 @import (reference) url('./__settings.less');
+@import (reference) url('./__tool.fontsize.less');
 @import (reference) url('./__tool.borders.less');
 @import (reference) url('./__tool.delims.less');
 @import (reference) url('./_h-FontSize.less');
@@ -170,12 +171,12 @@ h4 { --font-scale: @g-font-size-h4;              }
 h5 { --font-scale: @g-font-size-h5;              }
 h6 { --font-scale: @g-font-size-h6;              }
 @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  h1 { font-size: (@g-font-size-h1 * 1em); line-height: (@p-line-height / (@g-font-size-h1 / 2)); }
-  h2 { font-size: (@g-font-size-h2 * 1em); line-height: (@p-line-height / (@g-font-size-h2 / 2)); }
-  h3 { font-size: (@g-font-size-h3 * 1em); line-height: (@p-line-height / (@g-font-size-h3    )); }
-  h4 { font-size: (@g-font-size-h4 * 1em); line-height: (@p-line-height / (@g-font-size-h4    )); }
-  h5 { font-size: (@g-font-size-h5 * 1em); line-height: (@p-line-height / (@g-font-size-h5    )); }
-  h6 { font-size: (@g-font-size-h6 * 1em); line-height: (@p-line-height / (@g-font-size-h6    )); }
+  h1 { .font-size-el(@g-font-size-h1; 2); }
+  h2 { .font-size-el(@g-font-size-h2; 2); }
+  h3 { .font-size-el(@g-font-size-h3;  ); }
+  h4 { .font-size-el(@g-font-size-h4;  ); }
+  h5 { .font-size-el(@g-font-size-h5;  ); }
+  h6 { .font-size-el(@g-font-size-h6;  ); }
 }
 
 h1 {
@@ -213,8 +214,7 @@ hr {
   }
   @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
     pre {
-      font-size: (@g-font-size-mill * 1em);
-      line-height: (@p-line-height / @g-font-size-mill);
+      .font-size-el(@g-font-size-mill);
     }
   }
   figure {

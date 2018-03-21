@@ -28,9 +28,9 @@ See `/src/__settings.less` for all the variables available.
 
 Use the tools:
 ```less
-@import (reference) url('/node_modules/xmeter/css/src/__tool.fontsize.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.transitions.less');
 .my-selector {
-  .font-size-el(2.0; 1.5);
+  .transitions(color, background-color; 500ms; ease-in-out);
 }
 ```
 Read about all of Xmeter’s tools (see `/docs/tools.md`).
