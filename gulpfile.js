@@ -62,7 +62,6 @@ gulp.task('generate-less', async function () {
     { suffix: '-nT', query: 'not all and (min-width: 75em)' },
     { suffix: '-nP', query: 'not all and (min-width: 90em)' },
   ]
-
   /**
    * @summary List of source files.
    * @type {Array<{filename:string, classes:Array<string>}>}
@@ -102,26 +101,6 @@ gulp.task('generate-less', async function () {
       ],
     },
   ]
-
-  /**
-   * @summary Explode each classfile to an array of breakpoint files, then concatenate.
-   * @type {{filename:string, contents:string}}
-   */
-  let stylesheets_dev = cssclassfiles.map((file) => breakpoints.map((bp) => ({
-    filename: `${path.parse(file.filename).name.slice(1)}${bp.suffix}.less`, // slice(1) removes the underscore `_`
-    contents: `
-      @import (reference) url('../../src/${file.filename}');
-      @media ${bp.query} {
-        ${file.classes.map((classname) => `.${classname}${bp.suffix} { .${classname} };`).join('\n')}
-      }
-    `
-  }))).reduce((a,b) => a.concat(b), [])
-  // TODO: uncomment this after `/css/src/xmeter.less` is removed and can be automated (after v7)
-  // stylesheets_dev.push({
-  //   filename: 'xmeter.less',
-  //   contents: cssclassfiles.map((file) => `@import url('../../src/${file.filename}');`).join('\n')
-  // })
-
   /**
    * @summary Map the breakpoints to Less file setups.
    * @type {{filename:string, contents:string}}
@@ -129,7 +108,7 @@ gulp.task('generate-less', async function () {
   let stylesheets_prod = breakpoints.map((bp) => ({
     filename: `xmeter${bp.suffix}.less`,
     contents: `
-      ${cssclassfiles.map((file) => `@import (reference) url('../../src/${file.filename}');`).join('\n')}
+      ${cssclassfiles.map((file) => `@import (reference) url('../src/${file.filename}');`).join('\n')}
       @media ${bp.query} {
         ${
           cssclassfiles.map((file) =>
@@ -139,7 +118,6 @@ gulp.task('generate-less', async function () {
       }
     `,
   }))
-
   /**
    * @summary Test access of a directory; if error, make directory.
    * @param   {string} dir directory name relative to `__dirname` (this file)
@@ -151,39 +129,14 @@ gulp.task('generate-less', async function () {
       await util.promisify(fs.mkdir)(path.resolve(__dirname, dir))
     }
   }
-
   await createDir('./css/dist/')
-  await Promise.all([
-    (async function () {
-  await createDir('./css/dist/dev/')
-  await Promise.all(stylesheets_dev.map((ss) =>
-    util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/dev/', ss.filename), ss.contents, 'utf8')
-  ))
-    })(),
-    (async function () {
-  await createDir('./css/dist/prod/')
   await Promise.all(stylesheets_prod.map((ss) =>
-    util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/prod/', ss.filename), ss.contents, 'utf8')
+    util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/', ss.filename), ss.contents, 'utf8')
   ))
-    })(),
-  ])
 })
 
-
-gulp.task('lessc-dev', ['generate-less'], function () {
-  return gulp.src(['./css/src/*.less', './css/dist/dev/*.less'])
-    .pipe(less())
-    .pipe(autoprefixer({
-      grid: true,
-    }))
-    .pipe(rename(function (pathish) {
-      if (pathish.basename[0] === '_') pathish.basename = pathish.basename.slice(1)
-    }))
-    .pipe(gulp.dest('./css/dist/dev/'))
-})
-
-gulp.task('lessc-prod', ['lessc-dev'], function () {
-  return gulp.src(['./css/src/xmeter.less', './css/dist/prod/xmeter-*.less'])
+gulp.task('lessc-dist', ['generate-less'], function () {
+  return gulp.src(['./css/src/xmeter.less', './css/dist/xmeter-*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
@@ -198,11 +151,11 @@ gulp.task('lessc-prod', ['lessc-dev'], function () {
       },
     }))
     .pipe(sourcemaps.write('./')) // writes to an external .map file
-    .pipe(gulp.dest('./css/dist/prod/'))
+    .pipe(gulp.dest('./css/dist/'))
 })
 
-gulp.task('lessc:core', ['lessc-prod'], function () {
-  return gulp.src('./css/dist/prod/xmeter.css{,.map}')
+gulp.task('lessc:core', ['lessc-dist'], function () {
+  return gulp.src('./css/dist/xmeter.css{,.map}')
     .pipe(gulp.dest('./css/'))
 })
 

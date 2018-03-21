@@ -3,7 +3,7 @@
   "source": "css/src/",
   "destination": "docs/styleguide/",
   "css": [
-    "../../css/dist/dev/xmeter.css",
+    "../../css/dist/xmeter.css",
     "../../docs/css/kss.css"
   ],
   "js": [
