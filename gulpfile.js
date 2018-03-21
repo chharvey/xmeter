@@ -78,6 +78,7 @@ gulp.task('generate-less', async function () {
     { filename: '_h-Clearfix.less' , classes: [ 'h-Clearfix' ] },
     { filename: '_h-Measure.less'  , classes: [ 'h-Measure', 'h-Measure--narrow', 'h-Measure--wide' ] },
     { filename: '_h-Constrain.less', classes: [ 'h-Constrain' ] },
+    { filename: '_h-FontSize.less' , classes: [ 'h-FontSize' ] },
     { filename: '_h-Ruled.less'    , classes: [ 'h-Ruled' ] },
     {
       filename: '_-fz.less',
