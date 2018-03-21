@@ -40,60 +40,50 @@ Read about all of Xmeter’s tools (see `/docs/tools.md`).
 Use Xmeter right out of the box on your own site.
 Want to see what Xmeter can do? [Check out the style guide] (link pending).
 
-#### Production Code
-Each stylesheet has been minified and optimized for production, and is accompanied by a sourcemap ending in `.css.map`.
+Each stylesheet is minified and optimized for production, and accompanied by a sourcemap ending in `.css.map`.
 It is recommended that you split up the stylesheet into media queries as shown below.
 
-##### Locally:
+The `dist/xmeter.css` stylesheet contains all code not nested in a media query
+(thus applying to `@media all`), and additionally any experimental code and deprecated code.
+All other stylesheets (`dist/xmeter-‹breakpoint›.css`) represents media-specific classes.
+For example, `xmeter-sG.css` contains `.o-Flex-sG`, which is identical to `.o-Flex`,
+but it only applies to media `screen and (min-width: 60em)`.
+The recommended approach is to link only the stylesheets you need, and update your `<link>`s when your needs change.
+Your users will appreciate that.
+
+Mnemonic:
+1. Kilo
+2. Mega
+3. Giga
+4. Tera
+5. Peta
+
+#### Locally:
 ```bash
 $ npm install xmeter
 ```
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter.css"    media="all"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sK.css" media="screen  and (min-width: 30em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sM.css" media="screen  and (min-width: 45em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sG.css" media="screen  and (min-width: 60em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sT.css" media="screen  and (min-width: 75em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-sP.css" media="screen  and (min-width: 90em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nK.css" media="not all and (min-width: 30em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nM.css" media="not all and (min-width: 45em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nG.css" media="not all and (min-width: 60em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nT.css" media="not all and (min-width: 75em)"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/prod/xmeter-nP.css" media="not all and (min-width: 90em)"/>
+<link rel="stylesheet" media="all"                           href="/node_modules/xmeter/css/dist/xmeter.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 30em)" href="/node_modules/xmeter/css/dist/xmeter-sK.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 45em)" href="/node_modules/xmeter/css/dist/xmeter-sM.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 60em)" href="/node_modules/xmeter/css/dist/xmeter-sG.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 75em)" href="/node_modules/xmeter/css/dist/xmeter-sT.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 90em)" href="/node_modules/xmeter/css/dist/xmeter-sP.css"/>
+<link rel="stylesheet" media="not all and (min-width: 30em)" href="/node_modules/xmeter/css/dist/xmeter-nK.css"/>
+<link rel="stylesheet" media="not all and (min-width: 45em)" href="/node_modules/xmeter/css/dist/xmeter-nM.css"/>
+<link rel="stylesheet" media="not all and (min-width: 60em)" href="/node_modules/xmeter/css/dist/xmeter-nG.css"/>
+<link rel="stylesheet" media="not all and (min-width: 75em)" href="/node_modules/xmeter/css/dist/xmeter-nT.css"/>
+<link rel="stylesheet" media="not all and (min-width: 90em)" href="/node_modules/xmeter/css/dist/xmeter-nP.css"/>
 ```
 
-The `/prod/xmeter.css` stylesheet contains all code not nested in a media query
-(thus applying to `@media all`), and additionally any deprecated code.
-
-##### Remotely from a CDN:
+#### Remotely from a CDN:
 (not recommended, unless deploying your `/node_modules/` isn’t possible)
 
-Change the `"/node_modules/xmeter/css/dist/prod/xmeter‹*›.css"` to
-`"https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/prod/xmeter‹*›.css"`
-in the `[href]` attribute, where `‹master›` can be any branch or tag.
-The suffices (`-sK`, etc.) correspond to breakpoints.
-
-#### Development Code
-You can pick and choose which styles you want, but this technique is slower and less performant:
-No minification or sourcemapping is provided.
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/xmeter.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/base.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-List‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-Flex‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/o-Grid‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Block‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Inline‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Clearfix‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Measure‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Constrain‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/h-Ruled‹-*›.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/dev/-fz‹-*›.css"/>
+<link rel="stylesheet" media="‹breakpoint›"
+  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/xmeter‹breakpoint›.css"/>
 ```
-where `‹-*›` is one of the media query suffices shown above. If omitted, `@media all` is assumed.
-
-The `dev/xmeter.css` stylesheet concatenates all the classes into one giant stylesheet.
-It is the uncompressed version of `prod/xmeter.css`, but otherwise exactly the same.
+where `‹master›` can be any release tag, commit, or branch, and `‹breakpoint›` represents the media query.
 
 
 ## Features
