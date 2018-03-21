@@ -10,14 +10,13 @@
 //
 // The font-size Atoms set the font-size property.
 //
-// These are two groups of Atoms: the first group simply sets the font size of an element,
-// and the second group uses the <code>.font-size-el()</code> mixin, which also affects line-height
-// for maintaining vertical rhythm. See <a>__tool.fontsize.less</a> for the mixin code.
+// CHANGED-DEPRECATED: Atoms starting with `.-fz-el-*` are deprecated and will be removed in v7.
+// Instead, you should use the `.h-FontSize` helper and define the `--font-scale` custom property on your own.
 //
 // All font sizes are available in <a>/src/__settings.less</a>.
 // <header><dl>
 //   <dt>author</dt>  <dd>Chris Harvey</dd>
-//   <dt>updated</dt> <dd><time>2017-02-09</time></dd>
+//   <dt>updated</dt> <dd><time>2018-03-21</time></dd>
 // </dl></header>
 //
 // Markup:
@@ -30,16 +29,6 @@
 //   <li><u class="-fz-norm">molecule</u> (1.00)</li>
 //   <li><u class="-fz-mill">atom    </u> (0.75)</li>
 //   <li><u class="-fz-micr">quark   </u> (0.50)</li>
-// </ul>
-// <ul style="overflow: auto; white-space: nowrap;">
-//   <li class="-fz-el-peta">universe (6.00/1.000)</li>
-//   <li class="-fz-el-tera">galaxy   (4.00/1.125)</li>
-//   <li class="-fz-el-giga">star     (3.00/1.000)</li>
-//   <li class="-fz-el-mega">planet   (2.00/1.500)</li>
-//   <li class="-fz-el-kilo">asteroid (1.50/1.000)</li>
-//   <li class="-fz-el-norm">molecule (1.00/1.500)</li>
-//   <li class="-fz-el-mill">atom     (0.75/2.000)</li>
-//   <li class="-fz-el-micr">quark    (0.50/3.000)</li>
 // </ul>
 //
 // Weight: 1
@@ -57,6 +46,7 @@
 .-fz-micr { font-size: (@g-font-size-micr * 1em) !important; }
 
 
+// CHANGED-DEPRECATED! Use inline styles or define your own stylesheets instead.
 .-fz-el-peta { --font-scale: @g-font-size-peta !important; --tracks: 4 !important; }
 .-fz-el-tera { --font-scale: @g-font-size-tera !important; --tracks: 3 !important; }
 .-fz-el-giga { --font-scale: @g-font-size-giga !important; --tracks: 2 !important; }
