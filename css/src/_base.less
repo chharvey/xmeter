@@ -24,6 +24,9 @@
 //   ## Documentation......................documentation elements
 //   ## Data...............................machine- or human-readable data
 // # FORMS.............................form elements
+//   ## Resets.............................resets for form elements
+//   ## Textual............................textual form elements
+//   ## Buttons............................button-like form elements
 // # EMBEDDED..........................images, videos, other media
 // # INTERACTIVE.......................user-interactive HTML elements
 
@@ -48,7 +51,7 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select), // CHANGED selector not supported yet // TODO NB-LINK once removed, fix line 470
+  // &:not(input, button, select), // CHANGED selector not supported yet // TODO once removed, fix NB-LINK (L468)
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
@@ -449,33 +452,35 @@ br {
 //++++++++++++++++++++++++++++++++//
 @p-color-gray: rgba(0,0,0, 0.25);
 
-fieldset {
-  padding: 0 1rem;
-}
-
-textarea,
-input {
-  padding: 0 0.25rem;
-}
-
+  //--------------------------------//
+  //    ## Resets
+  //--------------------------------//
 input,
 button,
 select,
 textarea {
-  line-height: inherit; // undo browser default
+  line-height: inherit; // override opinionated Normalize.css
+}
+  //---- end ## Resets ----//
+
+fieldset {
+  padding: 0 1rem;
+  html body & { // HACK NB-LINK (L54) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+    // NOTE cannot use box-shadow hack due to shadow covering <legend>
+    .border-vert(all; 1px);
+    .border-block(all; 1px);
+    border-style: solid;
+    border-color: @p-color-gray;
+  }
 }
 
-html body fieldset { // HACK NB-LINK need a specificity of 3 to override generic `*:not(input):not(button):not(select)` (line 50)
-  .border-vert(all; 1px);
-  .border-block(all; 1px);
-  border-style: solid;
-  border-color: @p-color-gray;
-  // NOTE cannot use box-shadow hack due to shadow covering <legend>
+  //--------------------------------//
+  //    ## Textual
+  //--------------------------------//
+textarea,
+input {
+  padding: 0 0.25rem;
 }
-textarea {
-  box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
-}
-
 textarea {
   display: block; // override browser default
   height: calc(6 ~'*' var(--lh));
@@ -485,27 +490,29 @@ textarea {
   block-size: 6lh;
   inline-size: 30rem;
   font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
+  box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
-
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-button,
-label {
-  cursor: pointer;
-}
-
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 // input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED selector not supported yet
 select {
   font-size: (@g-font-size-mill * 1em);
 }
+  //---- end ## Textual ----//
 
+  //--------------------------------//
+  //    ## Buttons
+  //--------------------------------//
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
+    cursor: pointer;
   padding: 0.125em 0.25em;
+}
+  //---- end ## Buttons ----//
+
+label {
+  cursor: pointer;
 }
 
 select[multiple] > optgroup > option {
