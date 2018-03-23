@@ -32,8 +32,11 @@ node_modules
 .lock-wscript
 
 # Compiled source files
-css/dist
 
 # Generated documentation &  style guides
 docs/api
+
+
+# Checked-in to `gh-pages` only
+css/dist
 docs/styleguide
