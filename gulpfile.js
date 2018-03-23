@@ -80,6 +80,7 @@ gulp.task('generate-less', async function () {
     { filename: '_h-Clearfix.less' , classes: [ 'h-Clearfix' ] },
     { filename: '_h-Measure.less'  , classes: [ 'h-Measure', 'h-Measure--narrow', 'h-Measure--wide' ] },
     { filename: '_h-Constrain.less', classes: [ 'h-Constrain' ] },
+    { filename: '_h-FontSize.less' , classes: [ 'h-FontSize' ] },
     { filename: '_h-Ruled.less'    , classes: [ 'h-Ruled' ] },
     {
       filename: '_-fz.less',
@@ -92,14 +93,14 @@ gulp.task('generate-less', async function () {
         '-fz-norm',
         '-fz-mill',
         '-fz-micr',
-        '-fz-el-peta',
-        '-fz-el-tera',
-        '-fz-el-giga',
-        '-fz-el-mega',
-        '-fz-el-kilo',
-        '-fz-el-norm',
-        '-fz-el-mill',
-        '-fz-el-micr',
+        '-fz-el-peta', // CHANGED-DEPRECATED
+        '-fz-el-tera', // CHANGED-DEPRECATED
+        '-fz-el-giga', // CHANGED-DEPRECATED
+        '-fz-el-mega', // CHANGED-DEPRECATED
+        '-fz-el-kilo', // CHANGED-DEPRECATED
+        '-fz-el-norm', // CHANGED-DEPRECATED
+        '-fz-el-mill', // CHANGED-DEPRECATED
+        '-fz-el-micr', // CHANGED-DEPRECATED
       ],
     },
   ]
