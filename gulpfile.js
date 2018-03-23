@@ -12,6 +12,8 @@ const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
 const sourcemaps   = require('gulp-sourcemaps')
 
+const createDir = require('./lib/createDir.js')
+
 
 gulp.task('docs:api', function () {
   return gulp.src(['README.md', './index.js', 'class/Xmeter.class.js'], {read: false})
@@ -118,17 +120,6 @@ gulp.task('generate-less', async function () {
       }
     `,
   }))
-  /**
-   * @summary Test access of a directory; if error, make directory.
-   * @param   {string} dir directory name relative to `__dirname` (this file)
-   */
-  async function createDir(dir) {
-    try {
-      await util.promisify(fs.access)(path.resolve(__dirname, dir))
-    } catch (e) {
-      await util.promisify(fs.mkdir)(path.resolve(__dirname, dir))
-    }
-  }
   await createDir('./css/dist/')
   await Promise.all(stylesheets_prod.map((ss) =>
     util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/', ss.filename), ss.contents, 'utf8')
