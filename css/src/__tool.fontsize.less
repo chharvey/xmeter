@@ -23,7 +23,7 @@
   // line-height: inherit; // NOTE clarification
   & > * {
     // COMBAK-FALLBACK for `lh` units. TODO remove after `lh` is supported.
-    --lh: calc(@ratio ~'*' var(--line-height) ~'*' 1rem); // @ratio * parent lh
+    --lh: calc(@ratio * var(--line-height) * 1rem); // @ratio * parent lh
   }
 }
 
@@ -53,5 +53,5 @@
 .font-size-el(@fontscale: 1; @tracks: 1) {
   @lineheight: 1.5;
   font-size: (@fontscale * 1em);
-  line-height: (@lineheight / (@fontscale / @tracks));
+  line-height: (@lineheight / @fontscale * @tracks);
 }

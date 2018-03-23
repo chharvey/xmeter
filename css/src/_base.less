@@ -67,7 +67,7 @@
 //     font sizing settings in their user agent.
 html {
   --line-height: 1.5; // [1]
-  --lh: calc(var(--line-height) ~'*' 1rem); // [2]
+  --lh: calc(var(--line-height) * 1rem); // [2]
   --vru: var(--lh); // [3]
   font-size: 100%; // [4] [5]
   line-height: var(--line-height); // [4]
@@ -483,10 +483,10 @@ input {
 }
 textarea {
   display: block; // override browser default
-  height: calc(6 ~'*' var(--lh));
+  height: calc(6 * var(--lh));
   height: 6lh;
   width: 30rem;
-  block-size: calc(6 ~'*' var(--lh));
+  block-size: calc(6 * var(--lh));
   block-size: 6lh;
   inline-size: 30rem;
   font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
@@ -549,7 +549,7 @@ summary {
 }
 
 dialog {
-  padding: calc(0.5 ~'*' var(--lh)) 1rem; // COMBAK-FALLBACK
+  padding: calc(0.5 * var(--lh)) 1rem; // COMBAK-FALLBACK
   padding: 0.5lh 1rem;
   &::backdrop {
     background-color: @p-color-gray;
