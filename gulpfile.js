@@ -4,13 +4,14 @@ const util = require('util')
 
 const kss          = require('kss')
 const gulp         = require('gulp')
-const rename       = require("gulp-rename");
 const jsdoc        = require('gulp-jsdoc3')
 const pug          = require('gulp-pug')
 const less         = require('gulp-less')
 const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
 const sourcemaps   = require('gulp-sourcemaps')
+
+const createDir = require('./lib/createDir.js')
 
 
 gulp.task('docs:api', function () {
@@ -119,17 +120,6 @@ gulp.task('generate-less', async function () {
       }
     `,
   }))
-  /**
-   * @summary Test access of a directory; if error, make directory.
-   * @param   {string} dir directory name relative to `__dirname` (this file)
-   */
-  async function createDir(dir) {
-    try {
-      await util.promisify(fs.access)(path.resolve(__dirname, dir))
-    } catch (e) {
-      await util.promisify(fs.mkdir)(path.resolve(__dirname, dir))
-    }
-  }
   await createDir('./css/dist/')
   await Promise.all(stylesheets_prod.map((ss) =>
     util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/', ss.filename), ss.contents, 'utf8')
