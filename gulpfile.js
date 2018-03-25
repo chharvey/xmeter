@@ -4,7 +4,6 @@ const util = require('util')
 
 const kss          = require('kss')
 const gulp         = require('gulp')
-const rename       = require("gulp-rename");
 const jsdoc        = require('gulp-jsdoc3')
 const pug          = require('gulp-pug')
 const less         = require('gulp-less')
