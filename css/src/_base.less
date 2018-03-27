@@ -169,14 +169,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 { --font-scale: @g-font-size-h1; --tracks: 2; }
 h2 { --font-scale: @g-font-size-h2; --tracks: 2; }
-h3 { --font-scale: @g-font-size-h3;              }
+h3 { --font-scale: @g-font-size-h3; --tracks: 2; }
 h4 { --font-scale: @g-font-size-h4;              }
 h5 { --font-scale: @g-font-size-h5;              }
 h6 { --font-scale: @g-font-size-h6;              }
 @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
   h1 { .font-size-el(@g-font-size-h1; 2); }
   h2 { .font-size-el(@g-font-size-h2; 2); }
-  h3 { .font-size-el(@g-font-size-h3;  ); }
+  h3 { .font-size-el(@g-font-size-h3; 2); }
   h4 { .font-size-el(@g-font-size-h4;  ); }
   h5 { .font-size-el(@g-font-size-h5;  ); }
   h6 { .font-size-el(@g-font-size-h6;  ); }
