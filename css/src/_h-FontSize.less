@@ -30,6 +30,6 @@
 .h-FontSize {
   // specify `--font-scale`
   // specify `--tracks`
-  font-size: calc(var(--font-scale, 1) ~'*' 1em);
-  line-height: calc(var(--line-height) ~'/' ~'(' var(--font-scale, 1) ~'/' var(--tracks, 1) ~')');
+  font-size: calc(var(--font-scale, 1) * 1em);
+  line-height: calc(var(--line-height) / var(--font-scale, 1) * var(--tracks, 1));
 }
