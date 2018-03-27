@@ -1,6 +1,6 @@
 {
   "name": "xmeter",
-  "version": "6.4.0-beta.1",
+  "version": "6.4.0-beta.2",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
