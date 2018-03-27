@@ -36,6 +36,12 @@ gulp.task('pug:docs', function () {
 })
 
 gulp.task('lessc:docs', function () {
+  gulp.src('./docs/css/kss-custom.less')
+    .pipe(less())
+    .pipe(autoprefixer({
+      grid: true,
+    }))
+    .pipe(gulp.dest('./docs/styleguide/'))
   return gulp.src('docs/css/docs.less')
     .pipe(less())
     .pipe(autoprefixer({
