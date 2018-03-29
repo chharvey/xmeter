@@ -325,10 +325,22 @@ br {
   //    ## Links
   //--------------------------------//
   // NB: RECOMMENDATION:
-  // Do not style `a` elements without the `[href]` attribute.
-  // Such elements are “placeholder anchors,” which do not lead anywhere.
-  // A placeholder anchor can represent a placeholder for where a hyperlink might otherwise be placed,
-  // or it can represent an anchor whose reference may change based on context (e.g., user interaction).
+  // Do not style `<a>` elements without the `[href]` attribute.
+  // Such elements are “placeholder anchors”, which do not lead anywhere.
+  // These placeholders should not be visibly discernable from surrounding prose,
+  // as they merely represent placeholders for where hyperlinks *could* be placed,
+  // or anchors whose references may change based on context.
+  // Read <https://www.w3.org/TR/html52/textlevel-semantics.html#the-a-element> for more info.
+  //
+  // The reason for this is that we may have a situation in which a possible hyperlink may be added,
+  // which is not yet determined at compile time.
+  // For example this could be done via front-end script, after the user loads the page;
+  // another example would be where a template wraps a component with an anchor,
+  // in the event that whether the component is linkable is based on a database entry.
+  // In these situations and we cannot change markup on the fly
+  // (e.g. we cannot change an `<a>` to a `<span>`),
+  // thus it is best practice to include a placeholder anchor (`<a>` element),
+  // and than use logic to set the `[href]` if and when necessary.
   //
   // Link color should have sufficient contrast with the background color
   // *as well as* sufficient contrast with surrounding non-link text color.
