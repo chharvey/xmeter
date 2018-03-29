@@ -22,10 +22,17 @@
   font-size: (@ratio * 1rem);
   // line-height: inherit; // NOTE clarification
   & > * {
-    --lh: calc(@ratio ~' * var(--line-height) * 1rem'); // @ratio * parent lh
+    // COMBAK-FALLBACK for `lh` units. TODO remove after `lh` is supported.
+    --lh: calc(@ratio * var(--line-height) * 1rem); // @ratio * parent lh
   }
 }
 
+// CHANGED:
+// This mixin no longer uses the `var(--line-height)` expression, and instead
+// uses the fallback value of 1.5. This mixin should only be used where
+// CSS custom properties are not supported. For the most recent method,
+// see documentation on the `.h-FontSize` helper.
+//
 // Sets the font size of an element within a module (or if not, in the root)
 // while preserving vertical rhythm.
 // Font size is set in ems so that it will scale accordingly with its
@@ -35,15 +42,16 @@
 // `font-size` * `line-height` = one vertical rhythm unit
 //
 // ^params
-// @ratio - (default: 1) the ratio of the new font size to
+// @fontscale - (default: 1) the ratio of the new font size to
 //          the parent font size, i.e., the number of ems
-// @lines - (default: 1) the number of vrus each line of text will take up.
+// @tracks - (default: 1) the number of vrus each line of text will take up.
 //          should be a whole number to satisfy vertical rhythm.
 // ^author
 // : Chris Harvey
 // ^updated
-// : 2016-10-01
-.font-size-el(@ratio: 1; @lines: 1) {
-  font-size: (@ratio * 1em);
-  line-height: calc(~'var(--line-height) / ' (@ratio/@lines));
+// : 2018-03-21
+.font-size-el(@fontscale: 1; @tracks: 1) {
+  @lineheight: 1.5;
+  font-size: (@fontscale * 1em);
+  line-height: (@lineheight / @fontscale * @tracks);
 }

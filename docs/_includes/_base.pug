@@ -86,12 +86,12 @@ section#grouping-elements
             Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
             Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         figure(class=classname.figure)
-          h1 Lorem Ipsum #[code(class=classname.code) h1]
-          h2 Lorem Ipsum #[code(class=classname.code) h2]
-          h3 Lorem Ipsum #[code(class=classname.code) h3]
-          h4 Lorem Ipsum #[code(class=classname.code) h4]
-          h5 Lorem Ipsum #[code(class=classname.code) h5]
-          h6 Lorem Ipsum #[code(class=classname.code) h6]
+          h1 Zero #[code(class=classname.code) h1] Two Three #[br] Four Five Six Seven
+          h2 Zero One #[code(class=classname.code) h2] Three #[br] Four Five Six Seven
+          h3 Zero One Two #[code(class=classname.code) h3]   #[br] Four Five Six Seven
+          h4 Zero One Two Three #[br] #[code(class=classname.code) h4]  Five Six Seven
+          h5 Zero One Two Three #[br] Four #[code(class=classname.code) h5]  Six Seven
+          h6 Zero One Two Three #[br] Four Five #[code(class=classname.code) h6] Seven
         figure(class=classname.figure)
           address.
             12345 #[code(class=classname.code) address] Ave #[code(class=classname.code) br]#[br]
@@ -187,6 +187,28 @@ section#grouping-elements
                     - for (var j = 0; j < cols; j++)
                       td #[code(class=classname.code) tbody] #[code(class=classname.code) tr]ow #{i+1} #[code(class=classname.code) td]ata #{j+1}
               +tablebodyrows(3,3)
+section#transparent-elements
+  block transparentElements
+    h2 Transparent Elements #[+permalink('transparent-elements')]
+    p A transparent element can be either block-level or text-level, depending on its contents.
+    figure(class=classname.figure)
+      figcaption Transparent elements styled with inline display:
+      ul
+        block transparentInlineList
+          li: a.h-Inline placeholder anchor #[code(class=classname.code)= 'a:not([href])']
+          li: a.h-Inline(href="#0") hyperlink #[code(class=classname.code)= 'a[href]']
+          li: ins.h-Inline  content shown to be inserted into a document #[code(class=classname.code) ins]
+          li: del.h-Inline  content shown to be deleted from a document #[code(class=classname.code) del]
+          li: slot.h-Inline(name="") a placeholder for dynamic data #[code(class=classname.code) slot]
+    figure(class=classname.figure)
+      figcaption Transparent elements styled with block display:
+      ul
+        block transparentBlockList
+          li: a.h-Block placeholder anchor #[pre(class=classname.code)= 'a:not([href])']
+          li: a.h-Block(href="#0") hyperlink #[pre(class=classname.code)= 'a[href]']
+          li: ins.h-Block  content shown to be inserted into a document #[pre(class=classname.code) ins]
+          li: del.h-Block  content shown to be deleted from a document #[pre(class=classname.code) del]
+          li: slot.h-Block(name="") a placeholder for dynamic data #[pre(class=classname.code) slot]
 section#text-level-elements
   block textLevelElements
     h2 Text-Level Elements #[+permalink('text-level-elements')]
@@ -229,8 +251,9 @@ section#text-level-elements
         h3 Data #[+permalink('data')]
         figure(class=classname.figure): ul
           block dataList
-            li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
+            li: slot(name="") a placeholder for dynamic data #[code(class=classname.code) slot]
             li: data(value="") generic machine-readable data #[code(class=classname.code) data]
+            li: time(datetime="Z") a specific date or time #[code(class=classname.code) time]
             li: code     a fragment of code #[code(class=classname.code) code]
             li: kbd      user input #[code(class=classname.code) kbd]
             li: kbd: kbd a button or key on a physical device #[code(class=classname.code) kbd &gt; kbd]

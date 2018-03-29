@@ -1,4 +1,4 @@
-# xmeter
+# [xmeter](https://chharvey.github.io/xmeter/)
 A default stylesheet with a set of tools that make designing with vertical rhythm easy.
 
 Pronounced “Cross Meter”.
@@ -28,9 +28,9 @@ See `/src/__settings.less` for all the variables available.
 
 Use the tools:
 ```less
-@import (reference) url('/node_modules/xmeter/css/src/__tool.fontsize.less');
+@import (reference) url('/node_modules/xmeter/css/src/__tool.transitions.less');
 .my-selector {
-  .font-size-el(2.0; 1.5);
+  .transitions(color, background-color; 500ms; ease-in-out);
 }
 ```
 Read about all of Xmeter’s tools (see `/docs/tools.md`).
@@ -40,21 +40,50 @@ Read about all of Xmeter’s tools (see `/docs/tools.md`).
 Use Xmeter right out of the box on your own site.
 Want to see what Xmeter can do? [Check out the style guide] (link pending).
 
-Locally:
+Each stylesheet is minified and optimized for production, and accompanied by a sourcemap ending in `.css.map`.
+It is recommended that you split up the stylesheet into media queries as shown below.
+
+The `dist/xmeter.css` stylesheet contains all code not nested in a media query
+(thus applying to `@media all`), and additionally any experimental code and deprecated code.
+All other stylesheets (`dist/xmeter-‹breakpoint›.css`) represents media-specific classes.
+For example, `xmeter-sG.css` contains `.o-Flex-sG`, which is identical to `.o-Flex`,
+but it only applies to media `screen and (min-width: 60em)`.
+The recommended approach is to link only the stylesheets you need, and update your `<link>`s when your needs change.
+Your users will appreciate that.
+
+Mnemonic:
+1. Kilo
+2. Mega
+3. Giga
+4. Tera
+5. Peta
+
+#### Locally:
 ```bash
 $ npm install xmeter
 ```
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/css/xmeter.css"/>
+<link rel="stylesheet" media="all"                           href="/node_modules/xmeter/css/dist/xmeter.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 30em)" href="/node_modules/xmeter/css/dist/xmeter-sK.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 45em)" href="/node_modules/xmeter/css/dist/xmeter-sM.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 60em)" href="/node_modules/xmeter/css/dist/xmeter-sG.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 75em)" href="/node_modules/xmeter/css/dist/xmeter-sT.css"/>
+<link rel="stylesheet" media="screen  and (min-width: 90em)" href="/node_modules/xmeter/css/dist/xmeter-sP.css"/>
+<link rel="stylesheet" media="not all and (min-width: 30em)" href="/node_modules/xmeter/css/dist/xmeter-nK.css"/>
+<link rel="stylesheet" media="not all and (min-width: 45em)" href="/node_modules/xmeter/css/dist/xmeter-nM.css"/>
+<link rel="stylesheet" media="not all and (min-width: 60em)" href="/node_modules/xmeter/css/dist/xmeter-nG.css"/>
+<link rel="stylesheet" media="not all and (min-width: 75em)" href="/node_modules/xmeter/css/dist/xmeter-nT.css"/>
+<link rel="stylesheet" media="not all and (min-width: 90em)" href="/node_modules/xmeter/css/dist/xmeter-nP.css"/>
 ```
 
-Remotely from a CDN (not recommended, unless deploying your `/node_modules/` isn’t possible):
+#### Remotely from a CDN:
+(not recommended, unless deploying your `/node_modules/` isn’t possible)
+
 ```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/xmeter.css"/>
+<link rel="stylesheet" media="‹breakpoint›"
+  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/xmeter‹breakpoint›.css"/>
 ```
-where `‹master›` can be any branch or tag.
-
-The stylesheet `xmeter.css` is already minified, and is accompanied by a sourcemap `xmeter.css.map`.
+where `‹master›` can be any release tag, commit, or branch, and `‹breakpoint›` represents the media query.
 
 
 ## Features

@@ -1,5 +1,3 @@
-.DS_Store
-
 .wiki
 
 # Logs
@@ -31,8 +29,9 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-# Compiled source files
+# Generated build files
+css/dist
 
-# Generated documentation &  style guides
+# Generated documentation & style guides
 docs/api
 docs/styleguide

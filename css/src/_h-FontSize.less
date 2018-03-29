@@ -1,0 +1,35 @@
+/*################################*\
+    xmeter  |  _h-FontSize.less
+\*################################*/
+
+
+// FontSize
+//
+// The FontSize Helper sets the font-size of an element while maintaining vertical rhythm.
+// Add `[class="h-Fontsize"]` to an element, and then set the `--font-scale`
+// custom property (and optionally the `--tracks` custom property), either via inline style or stylesheet.
+// This Helper adjusts the line-height of the element so that track size remains unaffected.
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-03-20</time></dd>
+// </dl></header>
+//
+// Markup:
+// <p class="h-FontSize" style="--font-scale: 2.25;">This paragraph has a font-size of 2.25em,
+//   and an adjusted line-height so that each line of text takes up exactly 1 track.
+//   Vertical rhythm is maintained.
+//   However, this example’s font-size is too big to be read clearly.</p>
+// <p class="h-FontSize" style="--font-scale: 2.25; --tracks: 2;">Set the `--tracks` to an integer
+//   in order to adjust the number of “tracks” each line of text takes up.
+//   In this paragraph, each line of text takes up 2 tracks instead of the default 1.
+//   This increased leading provides a more pleasant reading experience.</p>
+//
+// Weight: 5.2
+//
+// Styleguide Helpers.FontSize
+.h-FontSize {
+  // specify `--font-scale`
+  // specify `--tracks`
+  font-size: calc(var(--font-scale, 1) * 1em);
+  line-height: calc(var(--line-height) / var(--font-scale, 1) * var(--tracks, 1));
+}
