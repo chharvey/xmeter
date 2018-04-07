@@ -62,18 +62,6 @@ gulp.task('render:docs', async function () {
   await util.promisify(fs.writeFile)(path.resolve(__dirname, './docs/index.html'), dom.serialize(), 'utf8')
 })
 
-gulp.task('pug:docs', function () {
-  return gulp.src('docs/{index,base}.pug')
-    .pipe(pug({
-      basedir: './',
-      locals: {
-        Xmeter: require('./class/Xmeter.class.js'),
-        Docs  : require('./docs/class/Docs.class.js'),
-      },
-    }))
-    .pipe(gulp.dest('./docs/'))
-})
-
 gulp.task('lessc:docs', function () {
   gulp.src('./docs/css/kss-custom.less')
     .pipe(less())
@@ -89,7 +77,7 @@ gulp.task('lessc:docs', function () {
     .pipe(gulp.dest('./docs/css/'))
 })
 
-gulp.task('build:docs', ['docs:api', 'docs:kss', 'pug:docs', 'lessc:docs'])
+gulp.task('build:docs', ['docs:api', 'docs:kss', 'render:docs', 'lessc:docs'])
 
 gulp.task('generate-less', async function () {
   /**

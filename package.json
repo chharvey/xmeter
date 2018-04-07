@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "node test.js",
-    "unbuild:docs": "rm -r docs/{styleguide,api}/  &&  rm docs/{{index,base}.html,css/docs.css}",
+    "unbuild:docs": "rm -r docs/{styleguide,api}/  &&  rm docs/{index.html,css/docs.css}",
     "unbuild": "npm run unbuild:docs &&  rm -r css/dist/  &&  rm css/xmeter.css{,.map}",
     "build": "gulp build"
   },
