@@ -139,14 +139,6 @@ gulp.task('generate-less', async function () {
         '-fz-norm',
         '-fz-mill',
         '-fz-micr',
-        '-fz-el-peta', // CHANGED-DEPRECATED
-        '-fz-el-tera', // CHANGED-DEPRECATED
-        '-fz-el-giga', // CHANGED-DEPRECATED
-        '-fz-el-mega', // CHANGED-DEPRECATED
-        '-fz-el-kilo', // CHANGED-DEPRECATED
-        '-fz-el-norm', // CHANGED-DEPRECATED
-        '-fz-el-mill', // CHANGED-DEPRECATED
-        '-fz-el-micr', // CHANGED-DEPRECATED
       ],
     },
   ]

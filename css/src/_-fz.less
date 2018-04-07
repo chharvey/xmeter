@@ -13,9 +13,6 @@
 // [type scale](./section-principles.html).
 // You can see the source for the font-size settings in <a>/src/__settings.less</a>.
 //
-// CHANGED-DEPRECATED: Atoms starting with `.-fz-el-*` are deprecated and will be removed in v7.
-// Instead, you should use the `.h-FontSize` helper and define the `--font-scale` custom property on your own.
-//
 // <header><dl>
 //   <dt>author</dt>  <dd>Chris Harvey</dd>
 //   <dt>updated</dt> <dd><time>2018-03-26</time></dd>
@@ -46,24 +43,3 @@
 .-fz-giga { --font-scale: @g-font-size-giga; --tracks: 2; font-size: (@g-font-size-giga * 1em) !important; }
 .-fz-tera { --font-scale: @g-font-size-tera; --tracks: 2; font-size: (@g-font-size-tera * 1em) !important; }
 .-fz-peta { --font-scale: @g-font-size-peta; --tracks: 3; font-size: (@g-font-size-peta * 1em) !important; }
-
-
-// CHANGED-DEPRECATED! Use inline styles or define your own stylesheets instead.
-.-fz-el-micr { --font-scale: @g-font-size-micr !important;                         }
-.-fz-el-mill { --font-scale: @g-font-size-mill !important;                         }
-.-fz-el-norm { --font-scale: @g-font-size-norm !important;                         }
-.-fz-el-kilo { --font-scale: @g-font-size-kilo !important;                         }
-.-fz-el-mega { --font-scale: @g-font-size-mega !important; --tracks: 2 !important; }
-.-fz-el-giga { --font-scale: @g-font-size-giga !important; --tracks: 2 !important; }
-.-fz-el-tera { --font-scale: @g-font-size-tera !important; --tracks: 2 !important; }
-.-fz-el-peta { --font-scale: @g-font-size-peta !important; --tracks: 3 !important; }
-@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .-fz-el-micr { .font-size-el(@g-font-size-micr;  ) !important; }
-  .-fz-el-mill { .font-size-el(@g-font-size-mill;  ) !important; }
-  .-fz-el-norm { .font-size-el(@g-font-size-norm;  ) !important; }
-  .-fz-el-kilo { .font-size-el(@g-font-size-kilo;  ) !important; }
-  .-fz-el-mega { .font-size-el(@g-font-size-mega; 2) !important; }
-  .-fz-el-giga { .font-size-el(@g-font-size-giga; 2) !important; }
-  .-fz-el-tera { .font-size-el(@g-font-size-tera; 2) !important; }
-  .-fz-el-peta { .font-size-el(@g-font-size-peta; 3) !important; }
-}
