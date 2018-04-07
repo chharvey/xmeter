@@ -5,7 +5,6 @@ const util = require('util')
 const kss          = require('kss')
 const jsdom        = require('jsdom')
 const gulp         = require('gulp')
-const jsdoc        = require('gulp-jsdoc3')
 const less         = require('gulp-less')
 const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
@@ -16,11 +15,6 @@ const {xDirectory,xPermalink} = require('aria-patterns')
 
 const createDir = require('./lib/createDir.js')
 
-
-gulp.task('docs:api', function () {
-  return gulp.src(['README.md', './index.js', 'class/Xmeter.class.js'], {read: false})
-    .pipe(jsdoc(require('./config/jsdoc.json')))
-})
 
 gulp.task('docs:kss', function () {
   return kss(require('./config/kss.json'))
@@ -97,7 +91,7 @@ gulp.task('lessc:docs', function () {
     .pipe(gulp.dest('./docs/css/'))
 })
 
-gulp.task('build:docs', ['docs:api', 'docs:kss', 'render:docs', 'lessc:docs'])
+gulp.task('build:docs', ['docs:kss', 'render:docs', 'lessc:docs'])
 
 gulp.task('generate-less', async function () {
   /**
