@@ -38,14 +38,14 @@
 // Styleguide Atoms.font-size
 
 
-.-fz-micr { font-size: (@g-font-size-micr * 1em) !important; }
-.-fz-mill { font-size: (@g-font-size-mill * 1em) !important; }
-.-fz-norm { font-size: (@g-font-size-norm * 1em) !important; }
-.-fz-kilo { font-size: (@g-font-size-kilo * 1em) !important; }
-.-fz-mega { font-size: (@g-font-size-mega * 1em) !important; }
-.-fz-giga { font-size: (@g-font-size-giga * 1em) !important; }
-.-fz-tera { font-size: (@g-font-size-tera * 1em) !important; }
-.-fz-peta { font-size: (@g-font-size-peta * 1em) !important; }
+.-fz-micr { --font-scale: @g-font-size-micr;              font-size: (@g-font-size-micr * 1em) !important; }
+.-fz-mill { --font-scale: @g-font-size-mill;              font-size: (@g-font-size-mill * 1em) !important; }
+.-fz-norm { --font-scale: @g-font-size-norm;              font-size: (@g-font-size-norm * 1em) !important; }
+.-fz-kilo { --font-scale: @g-font-size-kilo;              font-size: (@g-font-size-kilo * 1em) !important; }
+.-fz-mega { --font-scale: @g-font-size-mega; --tracks: 2; font-size: (@g-font-size-mega * 1em) !important; }
+.-fz-giga { --font-scale: @g-font-size-giga; --tracks: 2; font-size: (@g-font-size-giga * 1em) !important; }
+.-fz-tera { --font-scale: @g-font-size-tera; --tracks: 2; font-size: (@g-font-size-tera * 1em) !important; }
+.-fz-peta { --font-scale: @g-font-size-peta; --tracks: 3; font-size: (@g-font-size-peta * 1em) !important; }
 
 
 // CHANGED-DEPRECATED! Use inline styles or define your own stylesheets instead.
