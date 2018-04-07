@@ -192,9 +192,6 @@ gulp.task('lessc-dist', ['generate-less'], function () {
     .pipe(gulp.dest('./css/dist/'))
 })
 
-gulp.task('lessc:core', ['lessc-dist'], function () {
-  return gulp.src('./css/dist/xmeter.css{,.map}')
-    .pipe(gulp.dest('./css/'))
-})
+gulp.task('lessc:core', ['lessc-dist'])
 
 gulp.task('build', ['lessc:core', 'build:docs'])
