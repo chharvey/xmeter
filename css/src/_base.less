@@ -51,7 +51,7 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select), // CHANGED:NEW selector not supported yet // TODO once removed, fix NB:LINK (L480)
+  // &:not(input, button, select), // CHANGED:NEW selector not supported yet // TODO once removed, fix NB:LINK (L478) // NB:LINK <https://caniuse.com/#feat=css-not-sel-list>
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
@@ -60,15 +60,13 @@
 
 // Set up vertical rhythm system.
 // [1] default line-height. Change in your own project if you wish.
-// [2] COMBAK-FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
-// [3] CHANGED-DEPRECATED: legacy support
+// [2] COMBAK:FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
 // [4] addresses support for `rem` units (otherwise these would be in `body` selector)
 // [5] Root font-size (rem) should *not* be set to an absolute unit, so that users can specify
 //     font sizing settings in their user agent.
 html {
   --line-height: 1.5; // [1]
   --lh: calc(var(--line-height) * 1rem); // [2]
-  --vru: var(--lh); // [3]
   font-size: 100%; // [4] [5]
   line-height: var(--line-height); // [4]
 }
@@ -286,7 +284,7 @@ hr {
   table {
     max-width: 100%; // fluid tables for responsive purposes
     border-collapse: collapse;
-    text-align: left; // fix browser BUG... which? file an issue!
+    text-align: left; // fix browser BUG // which? file an issue!
   }
   caption {
     text-align: center;
@@ -505,7 +503,7 @@ textarea {
   box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
-// input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED:NEW selector not supported yet
+// input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED:NEW selector not supported yet // NB:LINK <https://caniuse.com/#feat=css-not-sel-list>
 select {
   font-size: (@g-font-size-mill * 1em);
 }
