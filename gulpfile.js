@@ -13,7 +13,7 @@ const clean_css    = require('gulp-clean-css')
 const sourcemaps   = require('gulp-sourcemaps')
 
 const xjs          = require('extrajs-dom')
-const {xDirectory} = require('aria-patterns')
+const {xDirectory,xPermalink} = require('aria-patterns')
 
 const createDir = require('./lib/createDir.js')
 
@@ -56,7 +56,26 @@ gulp.task('render:docs', async function () {
       document.querySelector('#contents').append(xDirectory.render(require('./docs/index-toc.json')))
     })(),
     (async function () {
+      const classname = {
+        figure: 'docs-figure',
+        pre   : 'docs-pre',
+        code  : 'docs-code',
+        form  : 'docs-form',
+      }
       let fragment = (await xjs.HTMLTemplateElement.fromFile(path.resolve(__dirname, './docs/tpl/base.tpl.html'))).content()
+      fragment.querySelectorAll([
+        'section > h2:first-of-type',
+        'section > h3:first-of-type',
+        'section > h4:first-of-type',
+        'section > h5:first-of-type',
+        'section > h6:first-of-type',
+      ].join()).forEach(function (hn) {
+        hn.append(xPermalink.render({ id: hn.parentNode.id }))
+      })
+      fragment.querySelectorAll(Object.keys(classname).join()).forEach(function (el) {
+        let xel = new xjs.HTMLElement(el)
+        if (classname[xel.tagName]) xel.addClass(classname[xel.tagName])
+      })
       document.querySelector('main').append(fragment.cloneNode(true))
     })(),
   ])
