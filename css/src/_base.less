@@ -51,7 +51,7 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select), // CHANGED selector not supported yet // TODO once removed, fix NB-LINK (L468)
+  // &:not(input, button, select), // CHANGED:NEW selector not supported yet // TODO once removed, fix NB:LINK (L480)
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
@@ -183,9 +183,9 @@ h6 { --font-scale: @g-font-size-h6;              }
 }
 
 h1 {
-  margin-top: 0;       // COMBAK-FALLBACK
-  margin-top: initial; // COMBAK-FALLBACK
-  margin-top: unset;   // COMBAK-FALLBACK
+  margin-top: 0;       // COMBAK:FALLBACK
+  margin-top: initial; // COMBAK:FALLBACK
+  margin-top: unset;   // COMBAK:FALLBACK
   margin-block-start: unset; // undo Normalize
 }
 
@@ -222,9 +222,9 @@ hr {
   }
   figure {
     // undo Normalize
-    margin-top: 0      ; margin-left: 0      ; margin-right: 0      ; // COMBAK-FALLBACK
-    margin-top: initial; margin-left: initial; margin-right: initial; // COMBAK-FALLBACK
-    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // COMBAK-FALLBACK
+    margin-top: 0      ; margin-left: 0      ; margin-right: 0      ; // COMBAK:FALLBACK
+    margin-top: initial; margin-left: initial; margin-right: initial; // COMBAK:FALLBACK
+    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // COMBAK:FALLBACK
     margin-block-start: unset;
     margin-inline: unset;
   }
@@ -243,20 +243,20 @@ hr {
     li > &,
     dt > &,
     dd > & {
-      margin-bottom: 0;       // COMBAK-FALLBACK
-      margin-bottom: initial; // COMBAK-FALLBACK
-      margin-bottom: unset;   // COMBAK-FALLBACK
+      margin-bottom: 0;       // COMBAK:FALLBACK
+      margin-bottom: initial; // COMBAK:FALLBACK
+      margin-bottom: unset;   // COMBAK:FALLBACK
       margin-block-end: unset; // undo default vertical spacing for nested lists
     }
   }
   ol,
   ul {
-    padding: 0 0 0 4rem; // COMBAK-FALLBACK
+    padding: 0 0 0 4rem; // COMBAK:FALLBACK
     padding: logical 0 4rem 0 0;
     li > &,
     dt > &,
     dd > & {
-      padding-left: 2rem; // COMBAK-FALLBACK
+      padding-left: 2rem; // COMBAK:FALLBACK
       @supports (padding-inline-start: 1rem) {
         padding-left: unset;
         padding-inline-start: 2rem;
@@ -374,7 +374,7 @@ br {
     background-color: fadeout(#ffe168, 50%); // Google-flavored comments in Google Docs
   }
   u {
-    text-decoration: underline; // COMBAK-FALLBACK
+    text-decoration: underline; // COMBAK:FALLBACK
     text-decoration-line: underline;
     color: #080;
   }
@@ -382,7 +382,7 @@ br {
     font-size: (@g-font-size-mill * 1em);
   }
   s {
-    text-decoration: line-through; // COMBAK-FALLBACK
+    text-decoration: line-through; // COMBAK:FALLBACK
     text-decoration-line: line-through;
     color: #b00;
   }
@@ -407,8 +407,8 @@ br {
   abbr {
     &[title] {
       cursor: help;
-      text-decoration: none; // COMBAK-FALLBACK for `text-decoration-line` // also IE fallback for `initial`
-      text-decoration-line: initial; // COMBAK-FALLBACK
+      text-decoration: none; // COMBAK:FALLBACK for `text-decoration-line` // also IE fallback for `initial`
+      text-decoration-line: initial; // COMBAK:FALLBACK
       text-decoration-line: unset; // undo Normalize
     }
   }
@@ -416,7 +416,7 @@ br {
     font-style: italic;
   }
   q {
-    .quotes-double(); // COMBAK-FALLBACK for `initial`
+    .quotes-double(); // COMBAK:FALLBACK for `initial`
     .delims(initial);
   }
   cite {
@@ -445,7 +445,7 @@ br {
       font-size: inherit; // undo compounding font sizes
     }
     pre & {
-      white-space: inherit; // COMBAK-FALLBACK
+      white-space: inherit; // COMBAK:FALLBACK
       white-space: unset; // sometimes people put a `code` in a `pre` // override `nowrap` above
     }
   }
@@ -477,7 +477,7 @@ textarea {
 
 fieldset {
   padding: 0 1rem;
-  html body & { // HACK NB-LINK (L54) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+  html body & { // HACK NB:LINK (L54) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
     // NOTE cannot use box-shadow hack due to shadow covering <legend>
     .border-vert(all; 1px);
     .border-block(all; 1px);
@@ -505,7 +505,7 @@ textarea {
   box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
 input:not([type="button"]):not([type="reset"]):not([type="submit"]),
-// input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED selector not supported yet
+// input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED:NEW selector not supported yet
 select {
   font-size: (@g-font-size-mill * 1em);
 }
@@ -542,9 +542,8 @@ select[multiple] > optgroup > option {
 // [3] offset `[alt]` attribute text from surrounding copy
 // [4] safer alternative to `display: block;`
 img {
-  // HACK fallbacks for logical properties
-  height: auto; width: auto;
-  max-width: 100%;
+  height: auto; width: auto; // COMBAK:FALLBACK
+  max-width: 100%;           // COMBAK:FALLBACK
   block-size: auto; inline-size: auto; // [1]
   max-inline-size: 100%; // [2]
   font-style: italic; // [3]
@@ -561,7 +560,7 @@ summary {
 }
 
 dialog {
-  padding: calc(0.5 * var(--lh)) 1rem; // COMBAK-FALLBACK
+  padding: calc(0.5 * var(--lh)) 1rem; // COMBAK:FALLBACK
   padding: 0.5lh 1rem;
   &::backdrop {
     background-color: @p-color-gray;
