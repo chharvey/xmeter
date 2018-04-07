@@ -35,3 +35,8 @@ css/dist
 # Generated documentation & style guides
 docs/api
 docs/styleguide
+
+
+# Checked-in to `gh-pages`
+!css/dist
+!docs/styleguide
