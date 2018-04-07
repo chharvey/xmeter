@@ -4,7 +4,7 @@
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {
-    "aria-patterns": "^0.2.0",
+    "aria-patterns": "^0.4.0",
     "extrajs-dom": "^4.1.0",
     "extrajs-view": "^1.1.2"
   },
@@ -16,13 +16,14 @@
     "gulp-less": "^4.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-sourcemaps": "^2.6.4",
+    "jsdom": "^11.7.0",
     "kss": "^3.0.0-beta.18",
     "normalize.css": "^8.0.0",
     "sitepage": "^1.0.0"
   },
   "scripts": {
     "test": "node test.js",
-    "unbuild:docs": "rm -r docs/{styleguide,api}/  &&  rm docs/{{index,base}.html,css/docs.css}",
+    "unbuild:docs": "rm -r docs/{styleguide,api}/  &&  rm docs/{index.html,css/docs.css}",
     "unbuild": "npm run unbuild:docs &&  rm -r css/dist/  &&  rm css/xmeter.css{,.map}",
     "build": "gulp build"
   },
