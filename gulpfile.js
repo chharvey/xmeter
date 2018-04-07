@@ -52,7 +52,7 @@ gulp.task('render:docs', async function () {
 
   await Promise.all([
     (async function () {
-      document.querySelector('#contents').append(xDirectory.render({}))
+      document.querySelector('#contents').append(xDirectory.render(require('./docs/index-toc.json')))
     })(),
     (async function () {
       document.querySelector('main').append()

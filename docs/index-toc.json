@@ -1,0 +1,32 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "WebPage",
+  "name" : "Base Typography",
+  "url"  : "/docs/index.html",
+  "hasPart": [
+    {
+      "@type"  : "WebPage",
+      "name"   : "Grouping Elements",
+      "url"    : "/docs/index.html#grouping-elements",
+      "hasPart": [
+        { "@type": "WebPage", "name": "Headings & Paragraphs" , "url": "/docs/index.html#headings-paragraphs" },
+        { "@type": "WebPage", "name": "Lists"                 , "url": "/docs/index.html#lists" },
+        { "@type": "WebPage", "name": "Tables"                , "url": "/docs/index.html#tables" }
+      ]
+    },
+    {
+      "@type"  : "WebPage",
+      "name"   : "Text-Level Elements",
+      "url"    : "/docs/index.html#text-level-elements",
+      "hasPart": [
+        { "@type": "WebPage", "name": "Links"         , "url": "/docs/index.html#links" },
+        { "@type": "WebPage", "name": "Stress"        , "url": "/docs/index.html#stress" },
+        { "@type": "WebPage", "name": "Documentation" , "url": "/docs/index.html#documentation" },
+        { "@type": "WebPage", "name": "Data"          , "url": "/docs/index.html#data" }
+      ]
+    },
+    { "@type": "WebPage", "name": "Forms"                , "url": "/docs/index.html#forms" },
+    { "@type": "WebPage", "name": "Embedded Elements"    , "url": "/docs/index.html#embedded-elements" },
+    { "@type": "WebPage", "name": "Interactive Elements" , "url": "/docs/index.html#interactive-elements" }
+  ]
+}
