@@ -136,6 +136,26 @@ gulp.task('generate-less', async function () {
     { filename: '_h-FontSize.less' , classes: [ 'h-FontSize' ] },
     { filename: '_h-Ruled.less'    , classes: [ 'h-Ruled' ] },
     {
+      filename: '_-mb.less',
+      classes: [
+        '-mb-q',
+        '-mb-h',
+        '-mb-1',
+        '-mb-2',
+        '-mb-4',
+      ],
+    },
+    {
+      filename: '_-pt.less',
+      classes: [
+        '-pt-q',
+        '-pt-h',
+        '-pt-1',
+        '-pt-2',
+        '-pt-4',
+      ],
+    },
+    {
       filename: '_-fz.less',
       classes: [
         '-fz-peta',
