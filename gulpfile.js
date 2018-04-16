@@ -61,13 +61,13 @@ gulp.task('render:docs', async function () {
         code  : 'docs-code',
         form  : 'docs-form',
       }
-      let fragment = (await xjs.HTMLTemplateElement.fromFile(path.resolve(__dirname, './docs/tpl/base.tpl.html'))).content()
+      let fragment = (await xjs.HTMLTemplateElement.fromFile(path.resolve(__dirname, './docs/tpl/base.tpl.html'))).content().cloneNode(true)
       fragment.querySelectorAll([
-        'section > h2:first-of-type',
-        'section > h3:first-of-type',
-        'section > h4:first-of-type',
-        'section > h5:first-of-type',
-        'section > h6:first-of-type',
+        'section[id] > h2:first-of-type',
+        'section[id] > h3:first-of-type',
+        'section[id] > h4:first-of-type',
+        'section[id] > h5:first-of-type',
+        'section[id] > h6:first-of-type',
       ].join()).forEach(function (hn) {
         hn.append(xPermalink.render({ id: hn.parentNode.id }))
       })
@@ -75,7 +75,7 @@ gulp.task('render:docs', async function () {
         let xel = new xjs.HTMLElement(el)
         if (classname[xel.tagName]) xel.addClass(classname[xel.tagName])
       })
-      document.querySelector('main').append(fragment.cloneNode(true))
+      document.querySelector('main').append(fragment)
     })(),
   ])
 
