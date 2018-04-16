@@ -195,29 +195,45 @@
     <section id="tables">
       <h3>Tables</h3>
       <figure>
-            table
-              caption <code>table</code> <code>caption</code>
-              thead
-                mixin tableheaderrows(rows, cols)
-                  - for (var i = 0; i < rows; i++)
-                    tr
-                      - for (var j = 0; j < cols; j++)
-                        th(scope="col") <code>thead</code>er <code>tr</code>ow #{i+1} <code>th</code>eading #{j+1}
-                +tableheaderrows(1,3)
-              tfoot
-                mixin tablefooterrows(rows, cols)
-                  - for (var i = 0; i < rows; i++)
-                    tr
-                      - for (var j = 0; j < cols; j++)
-                        td <code>tfoot</code>er <code>tr</code>ow #{i+1} <code>td</code>ata #{j+1}
-                +tablefooterrows(2,3)
-              tbody
-                mixin tablebodyrows(rows, cols)
-                  - for (var i = 0; i < rows; i++)
-                    tr
-                      - for (var j = 0; j < cols; j++)
-                        td <code>tbody</code> <code>tr</code>ow #{i+1} <code>td</code>ata #{j+1}
-                +tablebodyrows(3,3)
+        <table>
+          <caption><code>table</code> <code>caption</code></caption>
+          <thead>
+            <tr>
+              <th scope="col">header row 1: heading 1</th>
+              <th scope="col">heading 2</th>
+              <th scope="col">heading 3</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td>footer row 1: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+            <tr>
+              <td>footer row 2: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>body row 1: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+            <tr>
+              <td>body row 2: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+            <tr>
+              <td>body row 3: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+          </tbody>
+        </table>
       </figure>
     </section>
   </section>
@@ -350,7 +366,7 @@
             <label>select</label>
             <label>
               <input type="checkbox"/>
-              | all
+              all
             </label>
             <input id="checkboxid" type="checkbox"/>
             <label for="checkboxid">applicable</label>
@@ -363,7 +379,7 @@
             <label>select</label>
             <label>
               <input type="radio" name="radiogroup1"/>
-              | only
+              only
             </label>
             <input id="radioid" type="radio" name="radiogroup1"/>
             <label for="radioid">one</label>
