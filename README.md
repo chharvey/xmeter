@@ -38,7 +38,7 @@ Read about all of Xmeter’s tools (see `/docs/tools.md`).
 ### Deployment
 
 Use Xmeter right out of the box on your own site.
-Want to see what Xmeter can do? [Check out the style guide] (link pending).
+Want to see what Xmeter can do? [Check out the style guide](http://chharvey.github.io/xmeter/docs/styleguide/).
 
 Each stylesheet is minified and optimized for production, and accompanied by a sourcemap ending in `.css.map`.
 It is recommended that you split up the stylesheet into media queries as shown below.
@@ -89,7 +89,7 @@ where `‹master›` can be any release tag, commit, or branch, and `‹breakpoi
 ## Features
 
 Xmeter’s stylesheet is a starting point that “normalizes” unclassed HTML elements.
-And now that Xmeter has a few [design patterns] (link pending) built in, you can use them in your markup too!
+And now that Xmeter has a few [design patterns](http://chharvey.github.io/xmeter/docs/styleguide/) built in, you can use them in your markup too!
 In addition to base styles, Xmeter has classes for Objects (`/css/src/_o-*.less`), Components (`/css/src/_c-*.less`) and Helpers (`/css/src/_h-*.less`),
 design patterns that aid in a consistent, easy-to-use, vertical rhythm system.
 These classes should be directly injected into elements’ HTML `[class]` attribute on your site.
