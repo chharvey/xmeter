@@ -1,9 +1,0 @@
-extends _docs.tpl.jade
-
-block append vars
-  - var page = Docs.DOCS.find('/docs/index.html')
-
-block toc
-  nav#contents
-    h2 Contents
-    +doctoc({pages: Docs.DOCS.findAll(), depth: Infinity})

@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../../css/dist/xmeter.css">
-<link rel="stylesheet" href="../../docs/css/kss.css">
+<link rel="stylesheet" href="./kss-custom.css">
 
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
@@ -73,7 +73,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-atoms-font-size">
             <span class="kss-title__ref">
-              6.1
+              6.3
               <span class="kss-title__permalink-hash">
                   #Atoms.font-size
               </span>
@@ -114,13 +114,15 @@
           </p>
 
           <div class="kss-description">
-            <p>The font-size Atoms set the font-size property.</p>
+            <p>Set the <code>font-size</code> property on an element.
+There are eight Atoms available, each corresponding to a font-size given by the project’s
+<a href="./section-principles.html">type scale</a>.
+You can see the source for the font-size settings in <a>/src/__settings.less</a>.</p>
 <p>CHANGED-DEPRECATED: Atoms starting with <code>.-fz-el-*</code> are deprecated and will be removed in v7.
 Instead, you should use the <code>.h-FontSize</code> helper and define the <code>--font-scale</code> custom property on your own.</p>
-<p>All font sizes are available in <a>/src/__settings.less</a>.</p>
 <header><dl>
   <dt>author</dt>  <dd>Chris Harvey</dd>
-  <dt>updated</dt> <dd><time>2018-03-21</time></dd>
+  <dt>updated</dt> <dd><time>2018-03-26</time></dd>
 </dl></header>
           </div>
 
@@ -134,14 +136,14 @@ Instead, you should use the <code>.h-FontSize</code> helper and define the <code
 
           <div class="kss-modifier__example">
             <ul>
-  <li><u class="-fz-peta">universe</u> (6.00)</li>
-  <li><u class="-fz-tera">galaxy  </u> (4.00)</li>
-  <li><u class="-fz-giga">star    </u> (3.00)</li>
-  <li><u class="-fz-mega">planet  </u> (2.00)</li>
-  <li><u class="-fz-kilo">asteroid</u> (1.50)</li>
-  <li><u class="-fz-norm">molecule</u> (1.00)</li>
-  <li><u class="-fz-mill">atom    </u> (0.75)</li>
-  <li><u class="-fz-micr">quark   </u> (0.50)</li>
+  <li class="-fz-micr">Quark    (0.625)</li>
+  <li class="-fz-mill">Atom     (0.75) </li>
+  <li class="-fz-norm">Molecule (1.00) </li>
+  <li class="-fz-kilo">Asteroid (1.25) </li>
+  <li class="-fz-mega">Planet   (1.75) </li>
+  <li class="-fz-giga">Star     (2.25) </li>
+  <li class="-fz-tera">Galaxy   (3.00) </li>
+  <li class="-fz-peta">Universe (4.00) </li>
 </ul>
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -153,14 +155,14 @@ Instead, you should use the <code>.h-FontSize</code> helper and define the <code
                 Markup
             </summary>
             <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-peta&quot;&gt;universe&lt;/u&gt; (6.00)&lt;/li&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-tera&quot;&gt;galaxy  &lt;/u&gt; (4.00)&lt;/li&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-giga&quot;&gt;star    &lt;/u&gt; (3.00)&lt;/li&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-mega&quot;&gt;planet  &lt;/u&gt; (2.00)&lt;/li&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-kilo&quot;&gt;asteroid&lt;/u&gt; (1.50)&lt;/li&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-norm&quot;&gt;molecule&lt;/u&gt; (1.00)&lt;/li&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-mill&quot;&gt;atom    &lt;/u&gt; (0.75)&lt;/li&gt;
-  &lt;li&gt;&lt;u class&#x3D;&quot;-fz-micr&quot;&gt;quark   &lt;/u&gt; (0.50)&lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-micr&quot;&gt;Quark    (0.625)&lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-mill&quot;&gt;Atom     (0.75) &lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-norm&quot;&gt;Molecule (1.00) &lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-kilo&quot;&gt;Asteroid (1.25) &lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-mega&quot;&gt;Planet   (1.75) &lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-giga&quot;&gt;Star     (2.25) &lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-tera&quot;&gt;Galaxy   (3.00) &lt;/li&gt;
+  &lt;li class&#x3D;&quot;-fz-peta&quot;&gt;Universe (4.00) &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
           </details>
 

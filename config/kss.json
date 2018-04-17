@@ -4,7 +4,7 @@
   "destination": "docs/styleguide/",
   "css": [
     "../../css/dist/xmeter.css",
-    "../../docs/css/kss.css"
+    "./kss-custom.css"
   ],
   "js": [
     "http://code.jquery.com/jquery-3.2.1.min.js",

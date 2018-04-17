@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../../css/dist/xmeter.css">
-<link rel="stylesheet" href="../../docs/css/kss.css">
+<link rel="stylesheet" href="./kss-custom.css">
 
 </head>
 <body id="kss-node" >
@@ -31,6 +31,14 @@
         <a class="kss-nav__menu-link" href="section-principles.html">
           <span class="kss-nav__ref">1</span><span class="kss-nav__name">Principles</span>
         </a>
+            <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-principles.html#kssref-principles-typescale">
+                  <span class="kss-nav__ref ">1.1</span
+                  ><span class="kss-nav__name">Type Scale</span>
+                </a>
+              </li>
+            </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-objects.html">
@@ -99,10 +107,93 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>styleguide.less</code>, line 1
+          Source: <code>kss-styleguide.scss</code>, line 1
         </div>
 
     </div>
+    <section id="kssref-principles-typescale" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-principles-typescale">
+            <span class="kss-title__ref">
+              1.1
+              <span class="kss-title__permalink-hash">
+                  #Principles.TypeScale
+              </span>
+            </span>
+            Type Scale
+          </a>
+        </h2>
+
+
+          <div class="kss-description">
+            <p>This stylesheet adheres to a pre-determined set of font sizes, shown below.
+This ensures a consistent look-and-feel while at the same time providing a sense of even vertical rhythm.</p>
+<table>
+  <tbody>
+    <tr title="sample">
+      <td><span class="-fz-peta">Abq</span></td>
+      <td><span class="-fz-tera">Abq</span></td>
+      <td><span class="-fz-giga">Abq</span></td>
+      <td><span class="-fz-mega">Abq</span></td>
+      <td><span class="-fz-kilo">Abq</span></td>
+      <td><span class="-fz-norm">Abq</span></td>
+      <td><span class="-fz-mill">Abq</span></td>
+      <td><span class="-fz-micr">Abq</span></td>
+    </tr>
+    <tr title="keyword">
+      <td>peta</td>
+      <td>tera</td>
+      <td>giga</td>
+      <td>mega</td>
+      <td>kilo</td>
+      <td>norm</td>
+      <td>mill</td>
+      <td>micr</td>
+    </tr>
+    <tr title="rems">
+      <td>4rem</td>
+      <td>3rem</td>
+      <td>2.25rem</td>
+      <td>1.75rem</td>
+      <td>1.25rem</td>
+      <td>1rem</td>
+      <td>0.75rem</td>
+      <td>0.625rem</td>
+    </tr>
+    <tr title="pixels">
+      <td>64px</td>
+      <td>48px</td>
+      <td>36px</td>
+      <td>28px</td>
+      <td>20px</td>
+      <td>16px</td>
+      <td>12px</td>
+      <td>10px</td>
+    </tr>
+    <tr title="points">
+      <td>48pt</td>
+      <td>36pt</td>
+      <td>27pt</td>
+      <td>21pt</td>
+      <td>15pt</td>
+      <td>12pt</td>
+      <td>9pt</td>
+      <td>7.5pt</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-principles.type-scale.scss</code>, line 7
+        </div>
+
+    </section>
 </article>
 
 <!-- SCRIPTS -->
