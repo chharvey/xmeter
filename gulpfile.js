@@ -137,6 +137,7 @@ gulp.task('generate-less', async function () {
     {
       filename: '_-mb.less',
       classes: [
+        '-mb-0',
         '-mb-q',
         '-mb-h',
         '-mb-1',
@@ -147,6 +148,7 @@ gulp.task('generate-less', async function () {
     {
       filename: '_-pt.less',
       classes: [
+        '-pt-0',
         '-pt-q',
         '-pt-h',
         '-pt-1',
