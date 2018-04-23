@@ -207,6 +207,30 @@ gulp.task('lessc-dist', ['generate-less'], function () {
     .pipe(gulp.dest('./css/dist/'))
 })
 
+gulp.task('lessc:each', async function () {
+  return gulp.src(['./css/src/*.less', '!./css/src/__*.less'])
+    .pipe(sourcemaps.init())
+    .pipe(less())
+    .pipe(autoprefixer({
+      grid: true,
+    }))
+    .pipe(clean_css({
+      level: {
+        2: {
+          overrideProperties: false, // need fallbacks for `initial` and `unset`
+          restructureRules: true, // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
+        },
+      },
+    }))
+    .pipe(rename(function (p) {
+      if (p.basename[0] === '_') {
+        p.basename = p.basename.slice(1)
+      }
+    }))
+    .pipe(sourcemaps.write('./')) // writes to an external .map file
+    .pipe(gulp.dest('./css/dist/'))
+})
+
 gulp.task('lessc:core', ['lessc-dist'])
 
 gulp.task('build', ['lessc:core', 'build:docs'])
