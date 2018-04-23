@@ -40,7 +40,13 @@ Read about all of Xmeter’s tools (see `/docs/tools.md`).
 Use Xmeter right out of the box on your own site.
 Want to see what Xmeter can do? [Check out the style guide](http://chharvey.github.io/xmeter/docs/styleguide/).
 
+The production stylesheets are split into class-specific partials, which you can link or import separately.
 Each stylesheet is minified and optimized for production, and accompanied by a sourcemap ending in `.css.map`.
+The recommended approach is to link only the stylesheets you need, and update your `<link>`s when your needs change.
+Your users will appreciate that. Additionally, this more fine-grained approach allows you to import the classes
+you need in the order you need, so you can work with specificity and overrides more easily.
+
+For development and testing, you can link/import `xmeter.css`, which concatenates all styles into one sheet.
 It is recommended that you split up the stylesheet into media queries as shown below.
 
 The `dist/xmeter.css` stylesheet contains all code not nested in a media query
@@ -48,8 +54,6 @@ The `dist/xmeter.css` stylesheet contains all code not nested in a media query
 All other stylesheets (`dist/xmeter-‹breakpoint›.css`) represents media-specific classes.
 For example, `xmeter-sG.css` contains `.o-Flex-sG`, which is identical to `.o-Flex`,
 but it only applies to media `screen and (min-width: 60em)`.
-The recommended approach is to link only the stylesheets you need, and update your `<link>`s when your needs change.
-Your users will appreciate that.
 
 Mnemonic:
 1. Kilo
@@ -74,6 +78,21 @@ $ npm install xmeter
 <link rel="stylesheet" media="not all and (min-width: 60em)" href="/node_modules/xmeter/css/dist/xmeter-nG.css"/>
 <link rel="stylesheet" media="not all and (min-width: 75em)" href="/node_modules/xmeter/css/dist/xmeter-nT.css"/>
 <link rel="stylesheet" media="not all and (min-width: 90em)" href="/node_modules/xmeter/css/dist/xmeter-nP.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/base.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-List.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-Flex.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-Grid.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Block.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Inline.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Clearfix.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Measure.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Constrain.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-FontSize.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Ruled.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mb.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pt.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-fz.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/xmeter.css"/> <!-- for development & testing only! -->
 ```
 
 #### Remotely from a CDN:
@@ -81,9 +100,9 @@ $ npm install xmeter
 
 ```html
 <link rel="stylesheet" media="‹breakpoint›"
-  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/xmeter‹breakpoint›.css"/>
+  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/‹filename›.css"/>
 ```
-where `‹master›` can be any release tag, commit, or branch, and `‹breakpoint›` represents the media query.
+where `‹master›` can be any release tag, commit, or branch, and `‹filename›` represents the stylesheet name.
 
 
 ## Features
