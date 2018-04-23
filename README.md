@@ -47,37 +47,12 @@ Your users will appreciate that. Additionally, this more fine-grained approach a
 you need in the order you need, so you can work with specificity and overrides more easily.
 
 For development and testing, you can link/import `xmeter.css`, which concatenates all styles into one sheet.
-It is recommended that you split up the stylesheet into media queries as shown below.
-
-The `dist/xmeter.css` stylesheet contains all code not nested in a media query
-(thus applying to `@media all`), and additionally any experimental code and deprecated code.
-All other stylesheets (`dist/xmeter-‹breakpoint›.css`) represents media-specific classes.
-For example, `xmeter-sG.css` contains `.o-Flex-sG`, which is identical to `.o-Flex`,
-but it only applies to media `screen and (min-width: 60em)`.
-
-Mnemonic:
-1. Kilo
-2. Mega
-3. Giga
-4. Tera
-5. Peta
 
 #### Locally:
 ```bash
 $ npm install xmeter
 ```
 ```html
-<link rel="stylesheet" media="all"                           href="/node_modules/xmeter/css/dist/xmeter.css"/>
-<link rel="stylesheet" media="screen  and (min-width: 30em)" href="/node_modules/xmeter/css/dist/xmeter-sK.css"/>
-<link rel="stylesheet" media="screen  and (min-width: 45em)" href="/node_modules/xmeter/css/dist/xmeter-sM.css"/>
-<link rel="stylesheet" media="screen  and (min-width: 60em)" href="/node_modules/xmeter/css/dist/xmeter-sG.css"/>
-<link rel="stylesheet" media="screen  and (min-width: 75em)" href="/node_modules/xmeter/css/dist/xmeter-sT.css"/>
-<link rel="stylesheet" media="screen  and (min-width: 90em)" href="/node_modules/xmeter/css/dist/xmeter-sP.css"/>
-<link rel="stylesheet" media="not all and (min-width: 30em)" href="/node_modules/xmeter/css/dist/xmeter-nK.css"/>
-<link rel="stylesheet" media="not all and (min-width: 45em)" href="/node_modules/xmeter/css/dist/xmeter-nM.css"/>
-<link rel="stylesheet" media="not all and (min-width: 60em)" href="/node_modules/xmeter/css/dist/xmeter-nG.css"/>
-<link rel="stylesheet" media="not all and (min-width: 75em)" href="/node_modules/xmeter/css/dist/xmeter-nT.css"/>
-<link rel="stylesheet" media="not all and (min-width: 90em)" href="/node_modules/xmeter/css/dist/xmeter-nP.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/base.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-List.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-Flex.css"/>

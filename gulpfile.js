@@ -94,119 +94,6 @@ gulp.task('lessc:docs', function () {
 
 gulp.task('build:docs', ['docs:kss', 'render:docs', 'lessc:docs'])
 
-gulp.task('generate-less', async function () {
-  /**
-   * @summary List of breakpoints, corresponding to query-specific stylesheets.
-   * @type {Array<{suffix:string, query:string}>}
-   */
-  let breakpoints = [
-    { suffix: '-sK', query: 'screen  and (min-width: 30em)' },
-    { suffix: '-sM', query: 'screen  and (min-width: 45em)' },
-    { suffix: '-sG', query: 'screen  and (min-width: 60em)' },
-    { suffix: '-sT', query: 'screen  and (min-width: 75em)' },
-    { suffix: '-sP', query: 'screen  and (min-width: 90em)' },
-    { suffix: '-nK', query: 'not all and (min-width: 30em)' },
-    { suffix: '-nM', query: 'not all and (min-width: 45em)' },
-    { suffix: '-nG', query: 'not all and (min-width: 60em)' },
-    { suffix: '-nT', query: 'not all and (min-width: 75em)' },
-    { suffix: '-nP', query: 'not all and (min-width: 90em)' },
-  ]
-  /**
-   * @summary List of source files.
-   * @type {Array<{filename:string, classes:Array<string>}>}
-   * @property {string} filename the name of the file
-   * @property {Array<string>} classes the classes written in the file
-   */
-  let cssclassfiles = [
-    // REVIEW use `fs.readdir(path.resolve(__dirname, './css/src/'))` and filter out only the ones you want
-    { filename: '_o-List.less'     , classes: [ 'o-List', 'o-List__Item' ] },
-    { filename: '_o-Flex.less'     , classes: [ 'o-Flex', 'o-Flex__Item' ] },
-    { filename: '_o-Grid.less'     , classes: [ 'o-Grid', 'o-Grid__Item' ] },
-    { filename: '_h-Block.less'    , classes: [ 'h-Block' ] },
-    { filename: '_h-Inline.less'   , classes: [ 'h-Inline' ] },
-    { filename: '_h-Clearfix.less' , classes: [ 'h-Clearfix' ] },
-    { filename: '_h-Measure.less'  , classes: [ 'h-Measure', 'h-Measure--narrow', 'h-Measure--wide' ] },
-    { filename: '_h-Constrain.less', classes: [ 'h-Constrain' ] },
-    { filename: '_h-FontSize.less' , classes: [ 'h-FontSize' ] },
-    { filename: '_h-Ruled.less'    , classes: [ 'h-Ruled' ] },
-    {
-      filename: '_-mb.less',
-      classes: [
-        '-mb-0',
-        '-mb-q',
-        '-mb-h',
-        '-mb-1',
-        '-mb-2',
-        '-mb-4',
-      ],
-    },
-    {
-      filename: '_-pt.less',
-      classes: [
-        '-pt-0',
-        '-pt-q',
-        '-pt-h',
-        '-pt-1',
-        '-pt-2',
-        '-pt-4',
-      ],
-    },
-    {
-      filename: '_-fz.less',
-      classes: [
-        '-fz-peta',
-        '-fz-tera',
-        '-fz-giga',
-        '-fz-mega',
-        '-fz-kilo',
-        '-fz-norm',
-        '-fz-mill',
-        '-fz-micr',
-      ],
-    },
-  ]
-  /**
-   * @summary Map the breakpoints to Less file setups.
-   * @type {{filename:string, contents:string}}
-   */
-  let stylesheets_prod = breakpoints.map((bp) => ({
-    filename: `xmeter${bp.suffix}.less`,
-    contents: `
-      ${cssclassfiles.map((file) => `@import (reference) url('../src/${file.filename}');`).join('\n')}
-      @media ${bp.query} {
-        ${
-          cssclassfiles.map((file) =>
-            file.classes.map((classname) => `.${classname}${bp.suffix} { .${classname} };`).join('\n')
-          ).join('\n')
-        }
-      }
-    `,
-  }))
-  await createDir('./css/dist/')
-  await Promise.all(stylesheets_prod.map((ss) =>
-    util.promisify(fs.writeFile)(path.resolve(__dirname, './css/dist/', ss.filename), ss.contents, 'utf8')
-  ))
-})
-
-gulp.task('lessc-dist', ['generate-less'], function () {
-  return gulp.src(['./css/src/xmeter.less', './css/dist/xmeter-*.less'])
-    .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(autoprefixer({
-      grid: true,
-    }))
-    .pipe(clean_css({
-      level: {
-        2: {
-          overrideProperties: false, // need fallbacks for `initial` and `unset`
-          restructureRules: true, // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
-        },
-      },
-    }))
-    .pipe(sourcemaps.write('./')) // writes to an external .map file
-    .pipe(gulp.dest('./css/dist/'))
-})
-
 gulp.task('lessc:each', async function () {
   return gulp.src(['./css/src/*.less', '!./css/src/__*.less'])
     .pipe(sourcemaps.init())
@@ -231,6 +118,6 @@ gulp.task('lessc:each', async function () {
     .pipe(gulp.dest('./css/dist/'))
 })
 
-gulp.task('lessc:core', ['lessc-dist'])
+gulp.task('lessc:core', ['lessc:each'])
 
 gulp.task('build', ['lessc:core', 'build:docs'])
