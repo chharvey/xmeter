@@ -25,7 +25,7 @@ gulp.task('render:docs', async function () {
   const dom = new jsdom.JSDOM(await util.promisify(fs.readFile)(path.join(__dirname, './docs/tpl/index.tpl.html'), 'utf8'))
   const {document} = dom.window
 
-  async function importLinks(relativepath) {
+  await (async function importLinks(relativepath) {
     if (!('import' in jsdom.JSDOM.fragment('<link rel="import" href="https://example.com/"/>').querySelector('link'))) {
       console.warn('`HTMLLinkElement#import` is not yet supported. Replacing `<link>`s with their imported contents.')
       return Promise.all(Array.from(document.querySelectorAll('link[rel~="import"][data-import]')).map(async function (link) {
@@ -41,9 +41,7 @@ gulp.task('render:docs', async function () {
         }
       }))
     } else return;
-  }
-
-  await importLinks(path.resolve(__dirname, './docs/tpl/'));
+  })(path.resolve(__dirname, './docs/tpl/'))
 
   await Promise.all([
     (async function () {
