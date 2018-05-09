@@ -2,31 +2,43 @@ const fs = require('fs')
 const path = require('path')
 const util = require('util')
 
-const kss          = require('kss')
-const jsdom        = require('jsdom')
 const gulp         = require('gulp')
 const jsdoc        = require('gulp-jsdoc3')
 const less         = require('gulp-less')
 const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
 const sourcemaps   = require('gulp-sourcemaps')
+const jsdom        = require('jsdom')
+const kss          = require('kss')
 
 const xjs          = require('extrajs-dom')
 const {xDirectory,xPermalink} = require('aria-patterns')
 
 const createDir = require('./lib/createDir.js')
 
-
-gulp.task('docs:api', function () {
+// HOW-TO: https://github.com/mlucool/gulp-jsdoc3#usage
+gulp.task('docs-api', async function () {
   return gulp.src(['README.md', './index.js', 'class/Xmeter.class.js'], {read: false})
     .pipe(jsdoc(require('./config/jsdoc.json')))
 })
 
-gulp.task('docs:kss', function () {
+// HOW-TO: https://github.com/kss-node/kss-node/issues/161#issuecomment-222292620
+gulp.task('docs-kss-markup', async function () {
   return kss(require('./config/kss.json'))
 })
 
-gulp.task('render:docs', async function () {
+gulp.task('docs-kss-style', async function () {
+  return gulp.src('./docs/css/kss-custom.less')
+    .pipe(less())
+    .pipe(autoprefixer({
+      grid: true,
+    }))
+    .pipe(gulp.dest('./docs/styleguide/'))
+})
+
+gulp.task('docs-kss', ['docs-kss-markup', 'docs-kss-style'])
+
+gulp.task('docs-my-markup', async function () {
   const dom = new jsdom.JSDOM(await util.promisify(fs.readFile)(path.join(__dirname, './docs/tpl/index.tpl.html'), 'utf8'))
   const {document} = dom.window
 
@@ -82,13 +94,7 @@ gulp.task('render:docs', async function () {
   await util.promisify(fs.writeFile)(path.resolve(__dirname, './docs/index.html'), dom.serialize(), 'utf8')
 })
 
-gulp.task('lessc:docs', function () {
-  gulp.src('./docs/css/kss-custom.less')
-    .pipe(less())
-    .pipe(autoprefixer({
-      grid: true,
-    }))
-    .pipe(gulp.dest('./docs/styleguide/'))
+gulp.task('docs-my-style', async function () {
   return gulp.src('docs/css/docs.less')
     .pipe(less())
     .pipe(autoprefixer({
@@ -97,9 +103,11 @@ gulp.task('lessc:docs', function () {
     .pipe(gulp.dest('./docs/css/'))
 })
 
-gulp.task('build:docs', ['docs:api', 'docs:kss', 'render:docs', 'lessc:docs'])
+gulp.task('docs-my', ['docs-my-markup', 'docs-my-style'])
 
-gulp.task('generate-less', async function () {
+gulp.task('docs', ['docs-api', 'docs-kss', 'docs-my'])
+
+gulp.task('pre:dist-style', async function () {
   /**
    * @summary List of breakpoints, corresponding to query-specific stylesheets.
    * @type {Array<{suffix:string, query:string}>}
@@ -201,7 +209,7 @@ gulp.task('generate-less', async function () {
   ))
 })
 
-gulp.task('lessc-dist', ['generate-less'], function () {
+gulp.task('dist-style', ['pre:dist-style'], async function () {
   return gulp.src(['./css/src/xmeter.less', './css/dist/xmeter-*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
@@ -220,9 +228,9 @@ gulp.task('lessc-dist', ['generate-less'], function () {
     .pipe(gulp.dest('./css/dist/'))
 })
 
-gulp.task('lessc:core', ['lessc-dist'], function () {
+gulp.task('dist', ['dist-style'], async function () {
   return gulp.src('./css/dist/xmeter.css{,.map}')
     .pipe(gulp.dest('./css/'))
 })
 
-gulp.task('build', ['lessc:core', 'build:docs'])
+gulp.task('build', ['docs', 'dist'])
