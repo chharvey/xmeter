@@ -322,7 +322,7 @@ br {
   //--------------------------------//
   //    ## Links
   //--------------------------------//
-  // NB: RECOMMENDATION:
+  // NB:RECOMMENDATION
   // Do not style `<a>` elements without the `[href]` attribute.
   // Such elements are “placeholder anchors”, which do not lead anywhere.
   // These placeholders should not be visibly discernable from surrounding prose,
@@ -339,6 +339,10 @@ br {
   // (e.g. we cannot change an `<a>` to a `<span>`),
   // thus it is best practice to include a placeholder anchor (`<a>` element),
   // and than use logic to set the `[href]` if and when necessary.
+  //
+  // Incidentally, it is advised to put the `[role="none"]` attribute on anchor placeholders,
+  // so that assistive technology does not misidentify them as active hyperlinks.
+  // If and when a placeholder gains a `[href]` attribute, `[role="none"]` should be removed.
   //
   // Link color should have sufficient contrast with the background color
   // *as well as* sufficient contrast with surrounding non-link text color.
