@@ -14,7 +14,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.4",
     "jsdom": "^11.9.0",
-    "kss": "^3.0.0-beta.19",
+    "kss": "3.0.0-beta.18",
     "normalize.css": "^8.0.0",
     "sitepage": "^1.0.0"
   },
