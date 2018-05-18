@@ -466,6 +466,7 @@ fieldset {
 textarea,
 input {
   padding: 0 0.25rem;
+  cursor: text;
 }
 textarea {
   display: block; // override browser default
@@ -486,19 +487,32 @@ select {
   //---- end ## Textual ----//
 
   //--------------------------------//
+  //    ## Non-Textual
+  //--------------------------------//
+input[type="color"],
+input[type="file"],
+input[type="range"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  cursor: default;
+}
+  //---- end ## Non-Textual ----//
+
+  //--------------------------------//
   //    ## Buttons
   //--------------------------------//
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
-    cursor: pointer;
   padding: 0.125em 0.25em;
+  cursor: default;
 }
   //---- end ## Buttons ----//
 
 label {
-  cursor: pointer;
+  cursor: default;
 }
 
 select[multiple] > optgroup > option {
@@ -530,7 +544,7 @@ img {
 //    # INTERACTIVE
 //++++++++++++++++++++++++++++++++//
 summary {
-  cursor: pointer;
+  cursor: default;
 }
 
 dialog {
