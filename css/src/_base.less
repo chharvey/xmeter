@@ -322,36 +322,6 @@ br {
   //--------------------------------//
   //    ## Links
   //--------------------------------//
-  // NB:RECOMMENDATION
-  // Do not style `<a>` elements without the `[href]` attribute.
-  // Such elements are “placeholder anchors”, which do not lead anywhere.
-  // These placeholders should not be visibly discernable from surrounding prose,
-  // as they merely represent placeholders for where hyperlinks *could* be placed,
-  // or anchors whose references may change based on context.
-  // Read <https://www.w3.org/TR/html52/textlevel-semantics.html#the-a-element> for more info.
-  //
-  // The reason for this is that we may have a situation in which a possible hyperlink may be added,
-  // which is not yet determined at compile time.
-  // For example this could be done via front-end script, after the user loads the page;
-  // another example would be where a template wraps a component with an anchor,
-  // in the event that whether the component is linkable is based on a database entry.
-  // In these situations and we cannot change markup on the fly
-  // (e.g. we cannot change an `<a>` to a `<span>`),
-  // thus it is best practice to include a placeholder anchor (`<a>` element),
-  // and than use logic to set the `[href]` if and when necessary.
-  //
-  // Incidentally, it is advised to put the `[role="none"]` attribute on anchor placeholders,
-  // so that assistive technology does not misidentify them as active hyperlinks.
-  // If and when a placeholder gains a `[href]` attribute, `[role="none"]` should be removed.
-  //
-  // Link color should have sufficient contrast with the background color
-  // *as well as* sufficient contrast with surrounding non-link text color.
-  // - Background contrast ratio:
-  //   - to meet AA  level: 4.5 normal ; 3.0 large (18pt or 14pt bold)
-  //   - to meet AAA level: 7.0 normal ; 4.5 large (18pt or 14pt bold)
-  // - Surrounding text contrast ratio:
-  //   - 3.0 for all
-  // Read Technique G183 for details: <https://www.w3.org/TR/WCAG20-TECHS/G183.html>
   a[href] {
     // color: #00e;    // default :link
     // color: #551a8b; // default :visited
