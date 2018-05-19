@@ -3,10 +3,11 @@ const path = require('path')
 const util = require('util')
 
 const gulp         = require('gulp')
-const rename       = require('gulp-rename')
-const less         = require('gulp-less')
 const autoprefixer = require('gulp-autoprefixer')
 const clean_css    = require('gulp-clean-css')
+const inject       = require('gulp-inject-string')
+const less         = require('gulp-less')
+const rename       = require('gulp-rename')
 const sourcemaps   = require('gulp-sourcemaps')
 const jsdom        = require('jsdom')
 const kss          = require('kss')
@@ -15,6 +16,14 @@ const xjs          = require('extrajs-dom')
 const {xDirectory,xPermalink} = require('aria-patterns')
 
 const createDir = require('./lib/createDir.js')
+
+const PACKAGE = require('./package.json')
+const META = JSON.stringify({
+  package: `https://www.npmjs.com/package/${PACKAGE.name}`,
+  version: PACKAGE.version,
+  license: PACKAGE.license,
+  built  : new Date().toISOString(),
+}, null, 2)
 
 
 // HOW-TO: https://github.com/kss-node/kss-node/issues/161#issuecomment-222292620
@@ -102,7 +111,7 @@ gulp.task('docs-my', ['docs-my-markup', 'docs-my-style'])
 
 gulp.task('docs', ['docs-kss', 'docs-my'])
 
-gulp.task('dist-style', async function () {
+gulp.task('dist', async function () {
   return gulp.src(['./css/src/*.less', '!./css/src/__*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
@@ -122,10 +131,9 @@ gulp.task('dist-style', async function () {
         p.basename = p.basename.slice(1)
       }
     }))
+    .pipe(inject.prepend(`/* ${META} */`))
     .pipe(sourcemaps.write('./')) // writes to an external .map file
     .pipe(gulp.dest('./css/dist/'))
 })
-
-gulp.task('dist', ['dist-style'])
 
 gulp.task('build', ['docs', 'dist'])
