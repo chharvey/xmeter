@@ -38,7 +38,7 @@ Read about all of Xmeter’s tools (see `/docs/tools.md`).
 ### Deployment
 
 Use Xmeter right out of the box on your own site.
-Want to see what Xmeter can do? [Check out the style guide](http://chharvey.github.io/xmeter/docs/styleguide/).
+Want to see what Xmeter can do? [Check out the style guide](https://chharvey.github.io/xmeter/docs/styleguide/).
 
 The production stylesheets are split into class-specific partials, which you can link or import separately.
 Each stylesheet is minified and optimized for production, and accompanied by a sourcemap ending in `.css.map`.
@@ -83,7 +83,7 @@ where `‹master›` can be any release tag, commit, or branch, and `‹filename
 ## Features
 
 Xmeter’s stylesheet is a starting point that “normalizes” unclassed HTML elements.
-And now that Xmeter has a few [design patterns](http://chharvey.github.io/xmeter/docs/styleguide/) built in, you can use them in your markup too!
+And now that Xmeter has a few [design patterns](https://chharvey.github.io/xmeter/docs/styleguide/) built in, you can use them in your markup too!
 In addition to base styles, Xmeter has classes for Objects (`/css/src/_o-*.less`), Components (`/css/src/_c-*.less`) and Helpers (`/css/src/_h-*.less`),
 design patterns that aid in a consistent, easy-to-use, vertical rhythm system.
 These classes should be directly injected into elements’ HTML `[class]` attribute on your site.
@@ -91,7 +91,7 @@ These classes should be directly injected into elements’ HTML `[class]` attrib
 ### normalize.css
 
 This stylesheet rides on top of **normalize.css** developed by
-[Nicolas Gallagher](http://necolas.github.io/normalize.css/).
+[Nicolas Gallagher](https://necolas.github.io/normalize.css/).
 
 This package has **normalize.css** as an npm dependency.
 normalize.css is imported into xmeter.css, so there is *no need* to
