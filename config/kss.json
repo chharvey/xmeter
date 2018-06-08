@@ -7,7 +7,5 @@
     "./kss-custom.css"
   ],
   "js": [
-    "http://code.jquery.com/jquery-3.2.1.min.js",
-    "../../js/o-Tablist.js"
   ]
 }

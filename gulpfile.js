@@ -105,8 +105,6 @@ gulp.task('docs-my-style', async function () {
     .pipe(gulp.dest('./docs/css/'))
 })
 
-gulp.task('build:docs', ['docs:kss', 'render:docs', 'lessc:docs'])
-
 gulp.task('docs-my', ['docs-my-markup', 'docs-my-style'])
 
 gulp.task('docs', ['docs-kss', 'docs-my'])
