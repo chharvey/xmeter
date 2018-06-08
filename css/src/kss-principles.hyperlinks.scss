@@ -30,8 +30,11 @@
 // When an anchor placeholder does become a live hyperlink, the `[href]` attribute should be added
 // (whose value is the target’s URL), and `[role="none"]` should be removed.
 //
-// Link color should have sufficient contrast with the background color
-// *as well as* sufficient contrast with surrounding non-link text color.
+// ### Link Text Color
+//
+// Like all foreground colors, link text color should have sufficient contrast with the background color.
+// Additionally, if *color alone* is used to convey where hyperlinks occur in prose,
+// then the link text color should also have sufficient contrast with surrounding non-link text color.
 // Read [Technique G183](https://www.w3.org/TR/WCAG20-TECHS/G183.html) for details.
 //
 // - Background contrast ratio:
