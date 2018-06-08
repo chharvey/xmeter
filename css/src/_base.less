@@ -297,10 +297,10 @@ br {
   //    ## Links
   //--------------------------------//
   a[href] {
-    // color: #00e;    // default :link
-    // color: #551a8b; // default :visited
-    // color: #f00;    // default :active
-    color: #06c; // 5.57 aginst white, 3.77 against black
+    // color: #00e;    // default `:link`
+    // color: #551a8b; // default `:visited`
+    // color: #f00;    // default `:active`
+    color: #06c; // `hsl(210deg, 100%, 40%)` // ratios: 5.57 aginst white, 3.77 against black
     text-decoration: underline; // COMBAK:FALLBACK
     text-decoration-line: underline;
   }
@@ -319,20 +319,25 @@ br {
     font-style: italic;
   }
   mark {
-    background-color: fadeout(#ffe168, 50%); // Google-flavored comments in Google Docs
+    background-color: fadeout(#ffe168, 50%); // COMBAK:FALLBACK
+    background-color: #ffe16880; // Google-flavored comments in Google Docs
+    color: inherit; // COMBAK:FALLBACK
+    color: unset; // unset browser default color
   }
   u {
+    color: #360; // `hsl(90deg, 100%, 20%)` // ratios: 6.90 aginst white, 3.04 against black
+    // color: #405a04; // StackOverflow-flavored diff // ratios: 7.83 against white, 2.68 against black
     text-decoration: underline; // COMBAK:FALLBACK
     text-decoration-line: underline;
-    color: #080;
   }
   small {
     font-size: (@g-font-size-mill * 1em);
   }
   s {
+    color: #c03; // `hsl(345deg, 100%, 40%)` // ratios: 5.81 aginst white, 3.62 against black
+    // color: #a82400; // StackOverflow-flavored diff // ratios: 7.20 against white, 2.92 against black
     text-decoration: line-through; // COMBAK:FALLBACK
     text-decoration-line: line-through;
-    color: #b00;
   }
   //---- end ## Stress ----//
 
@@ -340,9 +345,11 @@ br {
   //    ## Documentation
   //--------------------------------//
   ins {
+    // background-color: #d1e1ad; // StackOverflow-flavored diff
     background-color: #acf2bd; // GitHub-flavored diff
   }
   del {
+    // background-color: #e5bdb2; // StackOverflow-flavored diff
     background-color: #fdb8c0; // GitHub-flavored diff
   }
   dfn {
