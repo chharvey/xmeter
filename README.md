@@ -53,21 +53,21 @@ For development and testing, you can link/import `xmeter.css`, which concatenate
 $ npm install xmeter
 ```
 ```html
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/base.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-List.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-Flex.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/o-Grid.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Block.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Inline.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Clearfix.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Measure.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Constrain.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-FontSize.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Ruled.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mb.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pt.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-fz.css"/>
-<link rel="stylesheet" href="/node_modules/xmeter/css/dist/xmeter.css"/> <!-- for development & testing only! -->
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/base.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/o-List.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/o-Flex.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/o-Grid.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Block.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Inline.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Clearfix.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Measure.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Constrain.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-FontSize.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Ruled.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-mb.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-pt.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-fz.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/xmeter.css"/> <!-- for development & testing only! -->
 ```
 
 #### Remotely from a CDN:
@@ -75,7 +75,7 @@ $ npm install xmeter
 
 ```html
 <link rel="stylesheet" media="‹breakpoint›"
-  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/‹filename›.css"/>
+  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/dist/css/‹filename›.css"/>
 ```
 where `‹master›` can be any release tag, commit, or branch, and `‹filename›` represents the stylesheet name.
 

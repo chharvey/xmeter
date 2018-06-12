@@ -110,7 +110,7 @@ gulp.task('docs-my', ['docs-my-markup', 'docs-my-style'])
 gulp.task('docs', ['docs-kss', 'docs-my'])
 
 gulp.task('dist', async function () {
-  return gulp.src(['./css/src/*.less', '!./css/src/__*.less'])
+  return gulp.src(['./src/css/*.less', '!./src/css/__*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer({
@@ -131,7 +131,7 @@ gulp.task('dist', async function () {
     }))
     .pipe(inject.prepend(`/* ${META} */`))
     .pipe(sourcemaps.write('./')) // writes to an external .map file
-    .pipe(gulp.dest('./css/dist/'))
+    .pipe(gulp.dest('./dist/css/'))
 })
 
 gulp.task('build', ['docs', 'dist'])
