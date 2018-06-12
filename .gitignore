@@ -30,7 +30,7 @@ node_modules
 .lock-wscript
 
 # Generated build files
-css/dist
+dist/
 
 # Generated documentation & style guides
 docs/styleguide
