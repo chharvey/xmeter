@@ -15,8 +15,6 @@ const kss          = require('kss')
 const xjs          = require('extrajs-dom')
 const {xDirectory,xPermalink} = require('aria-patterns')
 
-const createDir = require('./lib/createDir.js')
-
 const PACKAGE = require('./package.json')
 const META = JSON.stringify({
   package: `https://www.npmjs.com/package/${PACKAGE.name}`,
