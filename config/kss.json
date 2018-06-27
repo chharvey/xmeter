@@ -1,9 +1,9 @@
 {
   "title": "Xmeter Style Guide",
-  "source": "css/src/",
+  "source": "src/css/",
   "destination": "docs/styleguide/",
   "css": [
-    "../../css/dist/xmeter.css",
+    "../../dist/css/xmeter.css",
     "./kss-custom.css"
   ],
   "js": [
