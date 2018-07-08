@@ -44,23 +44,7 @@ gulp.task('docs-my-markup', async function () {
   const dom = new jsdom.JSDOM(await util.promisify(fs.readFile)(path.join(__dirname, './docs/tpl/index.tpl.html'), 'utf8'))
   const {document} = dom.window
 
-  await (async function importLinks(relativepath) {
-    if (!('import' in jsdom.JSDOM.fragment('<link rel="import" href="https://example.com/"/>').querySelector('link'))) {
-      console.warn('`HTMLLinkElement#import` is not yet supported. Replacing `<link>`s with their imported contents.')
-      return Promise.all(Array.from(document.querySelectorAll('link[rel~="import"][data-import]')).map(async function (link) {
-        const import_switch = {
-          'document': async () => jsdom.JSDOM.fragment(await util.promisify(fs.readFile)(path.resolve(relativepath, link.href), 'utf8')),
-          'template': async () => (await xjs.HTMLTemplateElement.fromFile(path.resolve(relativepath, link.href))).content(),
-          async default() { return null },
-        }
-        let imported = await (import_switch[link.getAttribute('data-import')] || import_switch.default).call(null)
-        if (imported) {
-          link.after(imported)
-          link.remove() // link.href = path.resolve('https://example.com/index.html', link.href) // TODO set the href relative to the current window.location.href
-        }
-      }))
-    } else return;
-  })(path.resolve(__dirname, './docs/tpl/'))
+  await new xjs.Document(document).importLinksAsync(path.resolve(__dirname, './docs/tpl/'))
 
   await Promise.all([
     (async function () {
