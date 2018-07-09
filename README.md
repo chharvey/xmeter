@@ -67,9 +67,15 @@ $ npm install xmeter
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mt.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mb.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-my.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-ml.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mr.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mx.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pt.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pb.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-py.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pl.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pr.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-px.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-fz.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/xmeter.css"/> <!-- for development & testing only! -->
 ```
