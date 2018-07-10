@@ -12,7 +12,7 @@ const sourcemaps   = require('gulp-sourcemaps')
 const jsdom        = require('jsdom')
 const kss          = require('kss')
 
-const xjs          = require('extrajs-dom')
+const xjs = require('extrajs-dom')
 const {xDirectory,xPermalink} = require('aria-patterns')
 
 const PACKAGE = require('./package.json')
@@ -64,10 +64,10 @@ gulp.task('docs-my-markup', async function () {
         'section[id] > h4:first-of-type',
         'section[id] > h5:first-of-type',
         'section[id] > h6:first-of-type',
-      ].join()).forEach(function (hn) {
+      ].join()).forEach((hn) => {
         hn.append(xPermalink.render({ id: hn.parentNode.id }))
       })
-      fragment.querySelectorAll(Object.keys(classname).join()).forEach(function (el) {
+      fragment.querySelectorAll(Object.keys(classname).join()).forEach((el) => {
         let xel = new xjs.HTMLElement(el)
         if (classname[xel.tagName]) xel.addClass(classname[xel.tagName])
       })
@@ -106,7 +106,7 @@ gulp.task('dist', async function () {
         },
       },
     }))
-    .pipe(rename(function (p) {
+    .pipe(rename((p) => {
       if (p.basename[0] === '_') {
         p.basename = p.basename.slice(1)
       }
