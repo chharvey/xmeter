@@ -19,7 +19,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">Xmeter Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -65,7 +65,8 @@
     </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="Content">
+  <article>
 
     <div id="kssref-helpers-block" class="kss-section kss-section--depth-2 is-fullscreen">
 
@@ -85,7 +86,7 @@
           <p class="kss-toolbar">
             <a href="#kssref-helpers-block" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -106,7 +107,7 @@
             </a>
             <a href="#kssref-helpers-block" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -121,6 +122,7 @@
 </dl></header>
           </div>
 
+
       </div>
 
         <div class="kss-modifier__wrapper">
@@ -130,7 +132,8 @@
 
 
           <div class="kss-modifier__example">
-            <p>Albert Einstein was made famous by his equation
+            <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Block.css"/-->
+<p>Albert Einstein was made famous by his equation
   <b class="h-Block" style="text-align:center;">E = mc<sup>2</sup></b>
   which explains the relationship between energy and mass.</p>
             <div class="kss-modifier__example-footer"></div>
@@ -142,7 +145,8 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Albert Einstein was made famous by his equation
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;/node_modules/xmeter/css/dist/h-Block.css&quot;/--&gt;
+&lt;p&gt;Albert Einstein was made famous by his equation
   &lt;b class&#x3D;&quot;h-Block&quot; style&#x3D;&quot;text-align:center;&quot;&gt;E &#x3D; mc&lt;sup&gt;2&lt;/sup&gt;&lt;/b&gt;
   which explains the relationship between energy and mass.&lt;/p&gt;</code></pre>
           </details>
@@ -153,6 +157,7 @@
 
     </div>
 </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
@@ -180,8 +185,6 @@
     detailsClass: 'kss-markup'
   });
 </script>
-<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="../../js/o-Tablist.js"></script>
 
 
 
