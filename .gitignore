@@ -33,5 +33,4 @@ node_modules
 css/dist
 
 # Generated documentation & style guides
-docs/api
 docs/styleguide

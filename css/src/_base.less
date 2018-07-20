@@ -7,9 +7,14 @@
 @import (reference) url('./__tool.borders.less');
 @import (reference) url('./__tool.delims.less');
 @import (reference) url('./_h-FontSize.less');
+@import (reference) url('./_-mb.less');
+@import (reference) url('./_-pt.less');
 
 
 @p-line-height: 1.5; // equivalent to custom prop `--line-height` // COMBAK:FALLBACK for custom property
+@p-color-gray: rgba(0,0,0, 0.25);
+@p-lh: (@p-line-height * 1rem); // equivalent to unit `1lh`, or custom prop `--lh`
+
 // Contents
 // ------------------------------------
 // # GENERIC...........................`html` and far-reaching page-wide selectors
@@ -51,7 +56,7 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select), // CHANGED:NEW selector not supported yet // TODO once removed, fix NB:LINK (L480)
+  // &:not(input, button, select), // CHANGED:NEW selector not supported yet // NB:LINK <https://caniuse.com/#feat=css-not-sel-list> // TODO once removed, fix NB:LINK (L426)
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
@@ -60,16 +65,16 @@
 
 // Set up vertical rhythm system.
 // [1] default line-height. Change in your own project if you wish.
-// [2] COMBAK-FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
-// [3] CHANGED-DEPRECATED: legacy support
+// [2] COMBAK:FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
+// [3] COMBAK:FALLBACK for custom property
 // [4] addresses support for `rem` units (otherwise these would be in `body` selector)
 // [5] Root font-size (rem) should *not* be set to an absolute unit, so that users can specify
 //     font sizing settings in their user agent.
 html {
   --line-height: 1.5; // [1]
   --lh: calc(var(--line-height) * 1rem); // [2]
-  --vru: var(--lh); // [3]
   font-size: 100%; // [4] [5]
+  line-height: @p-line-height; // [3]
   line-height: var(--line-height); // [4]
 }
 
@@ -81,22 +86,10 @@ ol, ul, dl,
 table,
 form, fieldset, textarea,
 details {
-  margin-bottom: var(--lh);
-  margin-bottom: 1lh;
-  @supports (margin-block-end: var(--variable)) {
-    margin-bottom: unset;
-    margin-block-end: var(--lh);
-    margin-block-end: 1lh;
-  }
+  .-mb-1;
 }
 h1 {
-  padding-top: var(--lh);
-  padding-top: 1lh;
-  @supports (padding-block-start: var(--variable)) {
-    padding-top: unset;
-    padding-block-start: var(--lh);
-    padding-block-start: 1lh;
-  }
+  .-pt-1;
 }
 
 // Font sizes for text-level elements should be in units of `em` instead of `rem` because
@@ -116,27 +109,6 @@ label {
 // Elements with a transparent content model
 // should display what their contents display.
 a, ins, del, slot {
-}
-
-@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  @lh: (@p-line-height * 1rem); // equivalent to unit `1lh`, or custom prop `--lh`
-  html {
-    line-height: @p-line-height;
-  }
-  h1, h2, h3, h4, h5, h6,
-  p, pre, figure, blockquote,
-  ol, ul, dl,
-  table,
-  form, fieldset, textarea,
-  details {
-    margin-bottom: @lh;
-  }
-  h1 {
-    padding-top: @lh;
-  }
-  textarea {
-    height: (6 * @lh);
-  }
 }
 //++++ end # GENERIC ++++//
 
@@ -286,7 +258,7 @@ hr {
   table {
     max-width: 100%; // fluid tables for responsive purposes
     border-collapse: collapse;
-    text-align: left; // fix browser BUG... which? file an issue!
+    text-align: left; // fix browser BUG // which? file an issue!
   }
   caption {
     text-align: center;
@@ -324,37 +296,13 @@ br {
   //--------------------------------//
   //    ## Links
   //--------------------------------//
-  // NB: RECOMMENDATION:
-  // Do not style `<a>` elements without the `[href]` attribute.
-  // Such elements are “placeholder anchors”, which do not lead anywhere.
-  // These placeholders should not be visibly discernable from surrounding prose,
-  // as they merely represent placeholders for where hyperlinks *could* be placed,
-  // or anchors whose references may change based on context.
-  // Read <https://www.w3.org/TR/html52/textlevel-semantics.html#the-a-element> for more info.
-  //
-  // The reason for this is that we may have a situation in which a possible hyperlink may be added,
-  // which is not yet determined at compile time.
-  // For example this could be done via front-end script, after the user loads the page;
-  // another example would be where a template wraps a component with an anchor,
-  // in the event that whether the component is linkable is based on a database entry.
-  // In these situations and we cannot change markup on the fly
-  // (e.g. we cannot change an `<a>` to a `<span>`),
-  // thus it is best practice to include a placeholder anchor (`<a>` element),
-  // and than use logic to set the `[href]` if and when necessary.
-  //
-  // Link color should have sufficient contrast with the background color
-  // *as well as* sufficient contrast with surrounding non-link text color.
-  // - Background contrast ratio:
-  //   - to meet AA  level: 4.5 normal ; 3.0 large (18pt or 14pt bold)
-  //   - to meet AAA level: 7.0 normal ; 4.5 large (18pt or 14pt bold)
-  // - Surrounding text contrast ratio:
-  //   - 3.0 for all
-  // Read Technique G183 for details: <https://www.w3.org/TR/WCAG20-TECHS/G183.html>
   a[href] {
-    // color: #00e;    // default :link
-    // color: #551a8b; // default :visited
-    // color: #f00;    // default :active
-    color: #06c; // 5.57 aginst white, 3.77 against black
+    // color: #00e;    // default `:link`
+    // color: #551a8b; // default `:visited`
+    // color: #f00;    // default `:active`
+    color: #06c; // `hsl(210deg, 100%, 40%)` // ratios: 5.57 aginst white, 3.77 against black
+    text-decoration: underline; // COMBAK:FALLBACK
+    text-decoration-line: underline;
   }
   //---- end ## Links ----//
 
@@ -371,20 +319,25 @@ br {
     font-style: italic;
   }
   mark {
-    background-color: fadeout(#ffe168, 50%); // Google-flavored comments in Google Docs
+    background-color: fadeout(#ffe168, 50%); // COMBAK:FALLBACK
+    background-color: #ffe16880; // Google-flavored comments in Google Docs
+    color: inherit; // COMBAK:FALLBACK
+    color: unset; // unset browser default color
   }
   u {
+    color: #360; // `hsl(90deg, 100%, 20%)` // ratios: 6.90 aginst white, 3.04 against black
+    // color: #405a04; // StackOverflow-flavored diff // ratios: 7.83 against white, 2.68 against black
     text-decoration: underline; // COMBAK:FALLBACK
     text-decoration-line: underline;
-    color: #080;
   }
   small {
     font-size: (@g-font-size-mill * 1em);
   }
   s {
+    color: #c03; // `hsl(345deg, 100%, 40%)` // ratios: 5.81 aginst white, 3.62 against black
+    // color: #a82400; // StackOverflow-flavored diff // ratios: 7.20 against white, 2.92 against black
     text-decoration: line-through; // COMBAK:FALLBACK
     text-decoration-line: line-through;
-    color: #b00;
   }
   //---- end ## Stress ----//
 
@@ -392,9 +345,11 @@ br {
   //    ## Documentation
   //--------------------------------//
   ins {
+    // background-color: #d1e1ad; // StackOverflow-flavored diff
     background-color: #acf2bd; // GitHub-flavored diff
   }
   del {
+    // background-color: #e5bdb2; // StackOverflow-flavored diff
     background-color: #fdb8c0; // GitHub-flavored diff
   }
   dfn {
@@ -462,8 +417,6 @@ br {
 //++++++++++++++++++++++++++++++++//
 //    # FORMS
 //++++++++++++++++++++++++++++++++//
-@p-color-gray: rgba(0,0,0, 0.25);
-
   //--------------------------------//
   //    ## Resets
   //--------------------------------//
@@ -477,7 +430,7 @@ textarea {
 
 fieldset {
   padding: 0 1rem;
-  html body & { // HACK NB:LINK (L54) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+  html body & { // HACK NB:LINK (L59) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
     // NOTE cannot use box-shadow hack due to shadow covering <legend>
     .border-vert(all; 1px);
     .border-block(all; 1px);
@@ -492,24 +445,45 @@ fieldset {
 textarea,
 input {
   padding: 0 0.25rem;
+  cursor: text;
 }
 textarea {
   display: block; // override browser default
-  height: calc(6 * var(--lh));
+  height: (6 * @p-lh);         // COMBAK:FALLBACK
+  height: calc(6 * var(--lh)); // COMBAK:FALLBACK
   height: 6lh;
   width: 30rem;
-  block-size: calc(6 * var(--lh));
-  block-size: 6lh;
-  inline-size: 30rem;
+  @supports (block-size: var(-v)) and (inline-size: 1rem) {
+    height: unset;
+    width: unset;
+    block-size: calc(6 * var(--lh)); // COMBAK:FALLBACK
+    block-size: 6lh;
+    inline-size: 30rem;
+  }
   font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
   box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
-input:not([type="button"]):not([type="reset"]):not([type="submit"]),
-// input:not([type="button"], [type="reset"], [type="submit"]), // CHANGED:NEW selector not supported yet
-select {
+input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
+// input:not([type="button"], [type="reset"], [type="submit"]) { // CHANGED:NEW selector not supported yet // NB:LINK <https://caniuse.com/#feat=css-not-sel-list>
   font-size: (@g-font-size-mill * 1em);
 }
   //---- end ## Textual ----//
+
+  //--------------------------------//
+  //    ## Non-Textual
+  //--------------------------------//
+input[type="color"],
+input[type="file"],
+input[type="range"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  cursor: default;
+}
+select {
+  font-size: (@g-font-size-mill * 1em);
+}
+  //---- end ## Non-Textual ----//
 
   //--------------------------------//
   //    ## Buttons
@@ -518,13 +492,13 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 button {
-    cursor: pointer;
   padding: 0.125em 0.25em;
+  cursor: default;
 }
   //---- end ## Buttons ----//
 
 label {
-  cursor: pointer;
+  cursor: default;
 }
 
 select[multiple] > optgroup > option {
@@ -556,10 +530,11 @@ img {
 //    # INTERACTIVE
 //++++++++++++++++++++++++++++++++//
 summary {
-  cursor: pointer;
+  cursor: default;
 }
 
 dialog {
+  padding: (0.5 * @p-lh) 1rem;         // COMBAK:FALLBACK
   padding: calc(0.5 * var(--lh)) 1rem; // COMBAK:FALLBACK
   padding: 0.5lh 1rem;
   &::backdrop {

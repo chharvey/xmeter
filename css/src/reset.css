@@ -59,7 +59,3 @@ ins, del {
   text-decoration: initial; /* COMBAK:FALLBACK */
   text-decoration: unset;
 }
-mark {
-  color: inherit; /* COMBAK:FALLBACK */
-  color: unset;
-}
