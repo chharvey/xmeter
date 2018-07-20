@@ -1,0 +1,641 @@
+<!DOCTYPE html><html lang="en" id="top"><head>
+    <title>Base Typography</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Bare, unstyled HTML elements. No classes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/dist/xmeter.css">
+    <link rel="stylesheet" href="../node_modules/aria-patterns/x-permalink/css/dist/c-Permalink.css">
+    <link rel="stylesheet" href="../node_modules/aria-patterns/x-hidden/css/dist/h-Hidden.css">
+    <link rel="stylesheet" href="css/docs.css">
+    <script src="./js/base.js" defer=""></script>
+  </head>
+  <body class="h-Ruled docs-body">
+    <a class="h-Hidden" href="#main">skip to main content</a>
+    <main class="docs-main" id="main">
+      <header>
+        <h1>Base Typography</h1>
+        <p>Bare, unstyled HTML elements. No classes.</p>
+        <nav id="contents">
+          <h2>Contents</h2>
+          <template>
+  <ol role="directory">
+    <template>
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="{{ url }}" itemprop="url">
+          <slot itemprop="name">{{ name }}</slot>
+        </a>
+      </li>
+    </template>
+  </ol>
+</template>
+
+        
+  <ol role="directory">
+    <template>
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="{{ url }}" itemprop="url">
+          <slot itemprop="name">{{ name }}</slot>
+        </a>
+      </li>
+    </template>
+  
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#grouping-elements" itemprop="url">
+          <slot itemprop="name">Grouping Elements</slot>
+        </a>
+      
+  <ol role="directory">
+    <template>
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="{{ url }}" itemprop="url">
+          <slot itemprop="name">{{ name }}</slot>
+        </a>
+      </li>
+    </template>
+  
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#headings-paragraphs" itemprop="url">
+          <slot itemprop="name">Headings &amp; Paragraphs</slot>
+        </a>
+      </li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#lists" itemprop="url">
+          <slot itemprop="name">Lists</slot>
+        </a>
+      </li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#tables" itemprop="url">
+          <slot itemprop="name">Tables</slot>
+        </a>
+      </li>
+    </ol>
+</li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#text-level-elements" itemprop="url">
+          <slot itemprop="name">Text-Level Elements</slot>
+        </a>
+      
+  <ol role="directory">
+    <template>
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="{{ url }}" itemprop="url">
+          <slot itemprop="name">{{ name }}</slot>
+        </a>
+      </li>
+    </template>
+  
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#links" itemprop="url">
+          <slot itemprop="name">Links</slot>
+        </a>
+      </li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#stress" itemprop="url">
+          <slot itemprop="name">Stress</slot>
+        </a>
+      </li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#documentation" itemprop="url">
+          <slot itemprop="name">Documentation</slot>
+        </a>
+      </li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#data" itemprop="url">
+          <slot itemprop="name">Data</slot>
+        </a>
+      </li>
+    </ol>
+</li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#forms" itemprop="url">
+          <slot itemprop="name">Forms</slot>
+        </a>
+      </li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#embedded-elements" itemprop="url">
+          <slot itemprop="name">Embedded Elements</slot>
+        </a>
+      </li>
+    
+      <li itemprop="hasPart" itemscope="" itemtype="http://schema.org/WebPage">
+        <a href="/docs/index.html#interactive-elements" itemprop="url">
+          <slot itemprop="name">Interactive Elements</slot>
+        </a>
+      </li>
+    </ol>
+</nav>
+      </header>
+    
+  <section id="grouping-elements">
+    <h2>Grouping Elements
+  <a class="c-Permalink h-Inline h-Hidden" href="#grouping-elements" aria-label="permalink">§</a>
+</h2>
+    <section id="headings-paragraphs">
+      <h3>Headings &amp; Paragraphs
+  <a class="c-Permalink h-Inline h-Hidden" href="#headings-paragraphs" aria-label="permalink">§</a>
+</h3>
+          <figure class="docs-figure">
+            <h1>Heading 1 <code class="docs-code">h1</code></h1>
+            <p>
+              Paragraph <code class="docs-code">p</code>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Aliquam sagittis suscipit nunc, a cursus libero euismod at.
+              Nulla placerat neque massa, quis interdum leo efficitur vel.
+              Donec feugiat varius arcu non volutpat.
+              Mauris eget mauris ut mauris auctor mattis id vel justo.
+              Nulla dictum arcu nec suscipit mollis.
+              Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.
+            </p>
+            <h2>Heading 2 <code class="docs-code">h2</code></h2>
+            <p>
+              Paragraph <code class="docs-code">p</code>
+              Suspendisse ut auctor enim.
+              Aliquam viverra enim vitae ante aliquet venenatis.
+              Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
+              Praesent dapibus velit quis lectus tempus, ut ullamcorper nibh facilisis.
+              Aenean tincidunt ante risus, semper malesuada libero consectetur id.
+              Praesent vel ligula ut enim porttitor porta. Aenean eu ullamcorper mi.
+              Integer blandit est quam, eget mattis urna scelerisque quis.
+              Maecenas sapien sapien, ornare nec lobortis eget, tincidunt sed ligula.
+              Maecenas risus nibh, volutpat sed euismod non, semper eget neque.
+              Integer varius egestas risus, volutpat sagittis turpis convallis eget.
+              Vivamus pulvinar ligula eget mi tincidunt, eget faucibus justo laoreet.
+              In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+              Sed luctus congue tortor a scelerisque.
+            </p>
+            <h3>Heading 3 <code class="docs-code">h3</code></h3>
+            <p>
+              Paragraph <code class="docs-code">p</code>
+              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+              Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
+              Quisque id justo elit.
+              Fusce ut quam non sem efficitur accumsan sed id neque.
+              Mauris finibus dignissim gravida.
+              In dignissim mauris ac odio molestie volutpat.
+              Nulla tellus justo, finibus sed volutpat sed, tristique ac lacus.
+              Suspendisse sit amet fermentum sapien.
+              Aliquam luctus laoreet iaculis.
+              Proin lacinia orci vitae tellus pellentesque porttitor.
+            </p>
+            <h4>Heading 4 <code class="docs-code">h4</code></h4>
+            <p>
+              Paragraph <code class="docs-code">p</code>
+              Aenean consectetur suscipit urna, non vehicula lacus blandit et.
+              Integer at lacus et diam tristique suscipit.
+              Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
+              Vestibulum vitae magna ac tellus accumsan pharetra vulputate vitae erat.
+              Vestibulum est dui, elementum non sagittis ac, sagittis accumsan justo.
+              Donec at vestibulum diam. Nam et volutpat dolor, at pulvinar nisi.
+              Curabitur aliquam maximus nulla eu venenatis.
+              Nam aliquam lorem non felis dignissim dictum.
+              Pellentesque sagittis vehicula nisl non luctus.
+              Pellentesque eget ligula hendrerit, blandit enim consequat, dictum sem.
+              In quis lectus in lectus interdum laoreet eu quis quam.
+              Fusce auctor posuere purus, quis semper libero dignissim euismod.
+              Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.
+            </p>
+            <h5>Heading 5 <code class="docs-code">h5</code></h5>
+            <p>
+              Paragraph <code class="docs-code">p</code>
+              Donec finibus ut lectus finibus pellentesque.
+              Nulla euismod feugiat nulla nec posuere.
+              Sed ac est id sem sagittis rhoncus eu ac neque.
+              Aliquam eu metus sagittis, porta turpis id, scelerisque magna.
+              Nulla venenatis elementum est, semper viverra felis tristique sit amet.
+              Mauris nec ipsum id orci porttitor auctor sed sit amet sem.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.
+            </p>
+            <h6>Heading 6 <code class="docs-code">h6</code></h6>
+            <p>
+              Paragraph <code class="docs-code">p</code>
+              Donec vel dolor ut felis dapibus ultricies vitae a nibh.
+              Ut semper odio est, sed lacinia ligula gravida ut.
+              Vestibulum facilisis viverra pulvinar.
+              Suspendisse maximus nisl sit amet augue vulputate, vel porta nunc molestie.
+              Aliquam mauris diam, pharetra vel consectetur quis, rhoncus in risus.
+              Donec ut quam massa.
+              Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
+              Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </figure>
+      <figure class="docs-figure">
+        <h1>Zero <code class="docs-code">h1</code> Two Three <br> Four Five Six Seven</h1>
+        <h2>Zero One <code class="docs-code">h2</code> Three <br> Four Five Six Seven</h2>
+        <h3>Zero One Two <code class="docs-code">h3</code>   <br> Four Five Six Seven</h3>
+        <h4>Zero One Two Three <br> <code class="docs-code">h4</code>  Five Six Seven</h4>
+        <h5>Zero One Two Three <br> Four <code class="docs-code">h5</code>  Six Seven</h5>
+        <h6>Zero One Two Three <br> Four Five <code class="docs-code">h6</code> Seven</h6>
+      </figure>
+          <figure class="docs-figure">
+            <address>
+              12345 <code class="docs-code">address</code> Ave <code class="docs-code">br</code><br>
+              Washington, DC 00000 <code class="docs-code">br</code><br>
+              United States of America
+            </address>
+          </figure>
+          <figure class="docs-figure">
+            <pre class="docs-pre">              Pellentesque <code class="docs-code">pre</code> habitant() {
+                morbi.tristique = senectus;
+                et (netus = malesuada; fames &lt; ac; turpis.egestas++) {
+                  Nunc.sit += [amet, scelerisque][et];
+                  Cras = {
+                    lectus: cursus
+                  , sed: dui
+                  , quis: convallis(id () { justo Quisque.elit; })
+                  };
+                }
+              }
+            </pre>
+          </figure>
+      <figure class="docs-figure">
+        <figure class="docs-figure">
+          Aenean consectetur <code class="docs-code">figure</code> suscipit urna, non vehicula lacus blandit et.
+          <figcaption>Integer at lacus et diam tristique <code class="docs-code">figure</code> <code class="docs-code">figcaption</code> suscipit.</figcaption>
+        </figure>
+      </figure>
+      <figure class="docs-figure">
+        <blockquote>Donec <code class="docs-code">blockquote</code> vel dolor ut felis dapibus ultricies vitae a nibh.</blockquote>
+      </figure>
+      <figure class="docs-figure">
+        <figcaption>
+          A horizontal rule <code class="docs-code">hr</code> is present below.
+        </figcaption>
+        <hr>
+      </figure>
+    </section>
+    <section id="lists">
+      <h3>Lists
+  <a class="c-Permalink h-Inline h-Hidden" href="#lists" aria-label="permalink">§</a>
+</h3>
+      <figure class="docs-figure">
+        <figcaption>Ordered List <code class="docs-code">ol</code></figcaption>
+        <ol>
+          <li>List item <code class="docs-code">li</code></li>
+          <li>List item <code class="docs-code">li</code>
+            <ol>
+              <li>Nested list item</li>
+              <li>Nested list item
+                <ol>
+                  <li>Another nested list item</li>
+                  <li>Another nested list item</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </figure>
+      <figure class="docs-figure">
+        figcaption Unrdered List <code class="docs-code">ul</code>
+        <ul>
+          <li>List item <code class="docs-code">li</code></li>
+          <li>List item <code class="docs-code">li</code>
+            <ul>
+              <li>Nested list item</li>
+              <li>Nested list item
+                <ul>
+                  <li>Another nested list item</li>
+                  <li>Another nested list item</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </figure>
+      <figure class="docs-figure">
+        <figcaption>Dictionary List <code class="docs-code">dl</code></figcaption>
+        <dl>
+          <dt>key <code class="docs-code">dt</code></dt>
+          <dd>value <code class="docs-code">dd</code></dd>
+          <dt>
+            <ul>
+              <li>1st key</li>
+              <li>2nd key</li>
+            </ul>
+          </dt>
+          <dd>value</dd>
+          <dt>key</dt>
+          <dd>
+            <ul>
+              <li>1st value</li>
+              <li>2nd value</li>
+            </ul>
+          </dd>
+        </dl>
+      </figure>
+    </section>
+    <section id="tables">
+      <h3>Tables
+  <a class="c-Permalink h-Inline h-Hidden" href="#tables" aria-label="permalink">§</a>
+</h3>
+      <figure class="docs-figure">
+        <table>
+          <caption><code class="docs-code">table</code> <code class="docs-code">caption</code></caption>
+          <thead>
+            <tr>
+              <th scope="col">header row 1: heading 1</th>
+              <th scope="col">heading 2</th>
+              <th scope="col">heading 3</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td>footer row 1: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+            <tr>
+              <td>footer row 2: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>body row 1: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+            <tr>
+              <td>body row 2: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+            <tr>
+              <td>body row 3: data 1</td>
+              <td>data 2</td>
+              <td>data 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </section>
+  </section>
+  <section id="transparent-elements">
+    <h2>Transparent Elements
+  <a class="c-Permalink h-Inline h-Hidden" href="#transparent-elements" aria-label="permalink">§</a>
+</h2>
+    <p>A transparent element can be either block-level or text-level, depending on its contents.</p>
+    <figure class="docs-figure">
+      <figcaption>Transparent elements styled with inline display:</figcaption>
+      <ul>
+          <li><a class="h-Inline">placeholder anchor <code class="docs-code">a:not([href])</code></a></li>
+          <li><a class="h-Inline" href="#0">hyperlink <code class="docs-code">a[href]</code></a></li>
+          <li><ins class="h-Inline">content shown to be inserted into a document <code class="docs-code">ins</code></ins></li>
+          <li><del class="h-Inline">content shown to be deleted from a document <code class="docs-code">del</code></del></li>
+          <li><slot class="h-Inline" name="">a placeholder for dynamic data <code class="docs-code">slot</code></slot></li>
+      </ul>
+    </figure>
+    <figure class="docs-figure">
+      <figcaption>Transparent elements styled with block display:</figcaption>
+      <ul>
+          <li><a class="h-Block">placeholder anchor <pre class="docs-pre">a:not([href])</pre></a></li>
+          <li><a class="h-Block" href="#0">hyperlink <pre class="docs-pre">a[href]</pre></a></li>
+          <li><ins class="h-Block">content shown to be inserted into a document <pre class="docs-pre">ins</pre></ins></li>
+          <li><del class="h-Block">content shown to be deleted from a document <pre class="docs-pre">del</pre></del></li>
+          <li><slot class="h-Block" name="">a placeholder for dynamic data <pre class="docs-pre">slot</pre></slot></li>
+      </ul>
+    </figure>
+  </section>
+  <section id="text-level-elements">
+    <h2>Text-Level Elements
+  <a class="c-Permalink h-Inline h-Hidden" href="#text-level-elements" aria-label="permalink">§</a>
+</h2>
+    <section id="links">
+      <h3>Links
+  <a class="c-Permalink h-Inline h-Hidden" href="#links" aria-label="permalink">§</a>
+</h3>
+      <figure class="docs-figure">
+        <ul>
+          <li><a>placeholder anchor <code class="docs-code">a:not([href])</code></a></li>
+          <li><a href="#0">hyperlink <code class="docs-code">a[href]</code></a></li>
+          <li>
+            <p>Lorem ipsum <a>dolor</a> sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt <a>ut labore et dolore</a> magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. <a>Lorem ipsum dolor sit</a>
+              amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt <a>ut labore et dolore magna aliqua</a>.</p>
+            <p>Lorem ipsum <a href="#0">dolor</a> sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt <a href="#0">ut labore et dolore</a> magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. <a href="#0">Lorem ipsum dolor sit</a>
+              amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt <a href="#0">ut labore et dolore magna aliqua</a>.</p>
+          </li>
+        </ul>
+      </figure>
+    </section>
+    <section id="stress">
+      <h3>Stress
+  <a class="c-Permalink h-Inline h-Hidden" href="#stress" aria-label="permalink">§</a>
+</h3>
+      <figure class="docs-figure">
+        <ul>
+          <li><em>emphasized text <code class="docs-code">em</code></em></li>
+          <li><strong>important text <code class="docs-code">strong</code></strong></li>
+          <li><i>alternate voice/mood (scare quotes, mentioning words, foreign expressions) <code class="docs-code">i</code></i></li>
+          <li><mark>relevant in some context <code class="docs-code">mark</code></mark></li>
+          <li><u>unarticulated annotation <code class="docs-code">u</code></u></li>
+          <li><small>side comment <code class="docs-code">small</code></small></li>
+          <li><s>text shown to be no longer relevant <code class="docs-code">s</code></s></li>
+        </ul>
+      </figure>
+    </section>
+    <section id="documentation">
+      <h3>Documentation
+  <a class="c-Permalink h-Inline h-Hidden" href="#documentation" aria-label="permalink">§</a>
+</h3>
+      <figure class="docs-figure">
+        <ul>
+          <li><ins>content shown to be inserted into a document <code class="docs-code">ins</code></ins></li>
+          <li><del>content shown to be deleted from a document <code class="docs-code">del</code></del></li>
+          <li><dfn>definining instance of a term  <code class="docs-code">dfn</code></dfn></li>
+          <li><b>keyword or technical term <code class="docs-code">b</code></b></li>
+          <li><abbr title="">abbreviation or acronym <code class="docs-code">abbr[title]</code></abbr></li>
+          <li><var>variable  <code class="docs-code">var</code></var></li>
+          <li><q>quoted material <code class="docs-code">q</code></q></li>
+          <li><cite>reference to a work, some part of a work, or the creator of a work <code class="docs-code">cite</code></cite></li>
+          <li><sup>superscript <code class="docs-code">sup</code></sup></li>
+          <li><sub>subscript <code class="docs-code">sub</code></sub></li>
+        </ul>
+      </figure>
+    </section>
+    <section id="data">
+      <h3>Data
+  <a class="c-Permalink h-Inline h-Hidden" href="#data" aria-label="permalink">§</a>
+</h3>
+      <figure class="docs-figure">
+        <ul>
+          <li><slot name="">a placeholder for dynamic data <code class="docs-code">slot</code></slot></li>
+          <li><data value="">generic machine-readable data <code class="docs-code">data</code></data></li>
+          <li><time datetime="Z">a specific date or time <code class="docs-code">time</code></time></li>
+          <li><code class="docs-code">a fragment of code <code class="docs-code">code</code></code></li>
+          <li><kbd>user input <code class="docs-code">kbd</code></kbd></li>
+          <li><kbd><kbd>a button or key on a physical device <code class="docs-code">kbd &gt; kbd</code></kbd></kbd></li>
+          <li><samp>sample computer output <code class="docs-code">samp</code></samp></li>
+        </ul>
+      </figure>
+    </section>
+  </section>
+  <section id="forms">
+    <h2>Forms
+  <a class="c-Permalink h-Inline h-Hidden" href="#forms" aria-label="permalink">§</a>
+</h2>
+    <form class="docs-form">
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>Integer at lacus et diam tristique <code class="docs-code">fieldset legend</code> suscipit.</legend>
+          Aenean consectetur <code class="docs-code">fieldset</code> suscipit urna, non vehicula lacus blandit et.
+        </fieldset>
+      </figure>
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>single line text inputs</legend>
+          <input type="text" placeholder="input type text">
+          <input type="email" placeholder="input type email">
+          <input type="password" placeholder="input type password">
+          <input type="search" placeholder="input type search">
+          <input type="tel" placeholder="input type tel">
+          <input type="url" placeholder="input type url">
+        </fieldset>
+      </figure>
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>date/time</legend>
+          <input type="datetime">
+          <input type="datetime-local">
+          <input type="date">
+          <input type="time">
+          <input type="week">
+          <input type="month">
+        </fieldset>
+      </figure>
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>without text input</legend>
+          <input type="color">
+          <input type="file">
+          <input type="hidden">
+          <input type="number" placeholder="input type number">
+          <input type="range">
+        </fieldset>
+      </figure>
+        <figure class="docs-figure">
+          <fieldset>
+            <legend>check boxes</legend>
+            <input type="checkbox">
+            <label>select</label>
+            <label>
+              <input type="checkbox">
+              all
+            </label>
+            <input id="checkboxid" type="checkbox">
+            <label for="checkboxid">applicable</label>
+          </fieldset>
+        </figure>
+        <figure class="docs-figure">
+          <fieldset>
+            <legend>radio buttons</legend>
+            <input type="radio" name="radiogroup1">
+            <label>select</label>
+            <label>
+              <input type="radio" name="radiogroup1">
+              only
+            </label>
+            <input id="radioid" type="radio" name="radiogroup1">
+            <label for="radioid">one</label>
+          </fieldset>
+        </figure>
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>drop-down list (select only one)</legend>
+          <select>
+            <option>option 1</option>
+            <optgroup label="label for option 2">
+              <option>option 2a</option>
+              <option>option 2b</option>
+              <option>option 2c</option>
+            </optgroup>
+            <option>option 3</option>
+          </select>
+          <input list="b" placeholder="select it or type it">
+          <datalist id="b">
+            <!-- optgroup not a valid child of datalist -->
+            <option>option 1</option>
+            <option>option 2</option>
+            <option>option 3</option>
+          </datalist>
+        </fieldset>
+      </figure>
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>drop-down list (select multiple)</legend>
+          <select multiple="">
+            <option>option 1</option>
+            <optgroup label="label for option 2">
+              <option>option 2a</option>
+              <option>option 2b</option>
+              <option>option 2c</option>
+            </optgroup>
+            <option>option 3</option>
+          </select>
+        </fieldset>
+      </figure>
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>buttons</legend>
+          <input type="button" value="button">
+          <input type="reset">
+          <input type="submit">
+          <button type="button">button</button>
+          <button type="reset">reset</button>
+          <button type="submit">submit</button>
+        </fieldset>
+      </figure>
+      <figure class="docs-figure">
+        <fieldset>
+          <legend>textarea</legend>
+          <textarea></textarea>
+        </fieldset>
+      </figure>
+    </form>
+  </section>
+  <section id="embedded-elements">
+    <h2>Embedded Elements
+  <a class="c-Permalink h-Inline h-Hidden" href="#embedded-elements" aria-label="permalink">§</a>
+</h2>
+  </section>
+  <section id="interactive-elements">
+    <h2>Interactive Elements
+  <a class="c-Permalink h-Inline h-Hidden" href="#interactive-elements" aria-label="permalink">§</a>
+</h2>
+    <figure class="docs-figure">
+      <details>
+        <summary>Integer at lacus et diam tristique <code class="docs-code">details summary</code> suscipit.</summary>
+        Aenean consectetur <code class="docs-code">details</code> suscipit urna, non vehicula lacus blandit et.
+      </details>
+    </figure>
+    <figure class="docs-figure">
+      <dialog>
+        <h1 class="-pt-0">A Dialog</h1>
+        text for <code class="docs-code">dialog</code> element
+        <p>Can include flow content.</p>
+        <p class="-mb-0"><button type="button" name="dialog-close">close dialog</button></p>
+      </dialog>
+      <button type="button" name="dialog-open">open dialog</button>
+    </figure>
+  </section>
+</main>
+    <a href="#top">jump to top</a>
+  
+
+</body></html>
