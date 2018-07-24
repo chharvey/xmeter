@@ -6,6 +6,40 @@
 
 // Hyperlinks
 //
+// The anchor element (`a`) marks up a related resource. When the `<a>` has an `[href]` attribute,
+// it represents a hyperlink. This is one of the cornerstones of the World Wide Web.
+//
+// A link provides a promise to the user: The user could bookmark its reference,
+// open it in a new window, and activate it using the **return** key.
+// Additionally, some extensions, like Safari’s Reader, work well with links.
+//
+// If you need an element that *does something* but does not *go anywhere*,
+// you should use a `<button>` instead.
+//
+// ### Hyperlink Color & Style
+//
+// Like all foreground colors, link text color should have sufficient contrast with the background color.
+// Additionally, if *color alone* is used to convey where hyperlinks occur in prose,
+// then the link text color should also have sufficient contrast with surrounding non-link text color.
+// Read [Technique G183](https://www.w3.org/TR/WCAG20-TECHS/G183.html) for details.
+//
+// - Background contrast ratio:
+//   - to meet AA  level: 4.5 normal; 3.0 large (18pt or 14pt bold)
+//   - to meet AAA level: 7.0 normal; 4.5 large (18pt or 14pt bold)
+// - Surrounding text contrast ratio:
+//   - 3.0 for all
+//
+// Hyperlinks should be given the `curser: pointer;` value. The
+// [CSS Basic User Interface Module, Level 3](https://www.w3.org/TR/css-ui-3/#valdef-cursor-pointer)
+// specification says that the `pointer` value “indicates a link.”
+//
+// A common misconception is that the `pointer` value should be used to indicate
+// *any* interactivity at all, but that only blurrs the line between links and non-links.
+// It is strongly recommended to use `cursor: pointer;` for `a[href]` elements only,
+// and other cursor values for other interactive elements such as buttons and other form controls.
+//
+// ### Anchor Placeholders
+//
 // It is recommended not to style `<a>` elements without the `[href]` attribute.
 // Such elements are “placeholder anchors”, which do not lead anywhere.
 // These placeholders should not be visibly discernable from surrounding prose,
@@ -29,19 +63,6 @@
 // so that assistive technology does not misidentify them as active hyperlinks.
 // When an anchor placeholder does become a live hyperlink, the `[href]` attribute should be added
 // (whose value is the target’s URL), and `[role="none"]` should be removed.
-//
-// ### Link Text Color
-//
-// Like all foreground colors, link text color should have sufficient contrast with the background color.
-// Additionally, if *color alone* is used to convey where hyperlinks occur in prose,
-// then the link text color should also have sufficient contrast with surrounding non-link text color.
-// Read [Technique G183](https://www.w3.org/TR/WCAG20-TECHS/G183.html) for details.
-//
-// - Background contrast ratio:
-//   - to meet AA  level: 4.5 normal; 3.0 large (18pt or 14pt bold)
-//   - to meet AAA level: 7.0 normal; 4.5 large (18pt or 14pt bold)
-// - Surrounding text contrast ratio:
-//   - 3.0 for all
 //
 // Weight: 2
 //
