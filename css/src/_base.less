@@ -12,7 +12,8 @@
 
 
 @p-line-height: 1.5; // equivalent to custom prop `--line-height` // COMBAK:FALLBACK for custom property
-@p-color-gray: rgba(0,0,0, 0.25);
+@p-color-gray-fallback: rgba(0,0,0, 0.25); // COMBAK:FALLBACK for #rrggbbaa color syntax
+@p-color-gray: #00000040;
 @p-lh: (@p-line-height * 1rem); // equivalent to unit `1lh`, or custom prop `--lh`
 
 // Contents
@@ -320,7 +321,7 @@ br {
     font-style: italic;
   }
   mark {
-    background-color: fadeout(#ffe168, 50%); // COMBAK:FALLBACK
+    background-color: fadeout(#ffe168, 50%); // COMBAK:FALLBACK for #rrggbbaa color syntax
     background-color: #ffe16880; // Google-flavored comments in Google Docs
     color: inherit; // COMBAK:FALLBACK
     color: unset; // unset browser default color
@@ -436,6 +437,7 @@ fieldset {
     .border-vert(all; 1px);
     .border-block(all; 1px);
     border-style: solid;
+    border-color: @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
     border-color: @p-color-gray;
   }
 }
@@ -462,6 +464,7 @@ textarea {
     inline-size: 30rem;
   }
   font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
+  box-shadow: 0 0 0 1px @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
   box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
 input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
@@ -539,6 +542,7 @@ dialog {
   padding: calc(0.5 * var(--lh)) 1rem; // COMBAK:FALLBACK
   padding: 0.5lh 1rem;
   &::backdrop {
+    background-color: @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
     background-color: @p-color-gray;
   }
 }
