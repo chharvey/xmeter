@@ -435,7 +435,10 @@ fieldset {
   html body & { // HACK NB:LINK (L59) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
     // NOTE cannot use box-shadow hack due to shadow covering <legend>
     .border-vert(all; 1px);
-    .border-block(all; 1px);
+    @supports (margin-block-start: 0) {
+      .border-vert(all; 0);
+      .border-block(all; 1px);
+    }
     border-style: solid;
     border-color: @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
     border-color: @p-color-gray;
@@ -484,6 +487,19 @@ input[type="radio"],
 select {
   cursor: default;
 }
+input[type="checkbox"],
+input[type="radio"] {
+  label:hover & {
+    box-shadow: inset 0 0 0.25rem 0 @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
+    box-shadow: inset 0 0 0.25rem 0 @p-color-gray;
+  }
+}
+input[type="checkbox"] {
+  border-radius: 25%;
+}
+input[type="radio"] {
+  border-radius: 100%;
+}
 select {
   font-size: (@g-font-size-mill * 1em);
 }
@@ -498,6 +514,11 @@ input[type="submit"],
 button {
   padding: 0.125em 0.25em;
   cursor: default;
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0.25rem 0 @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
+    box-shadow: inset 0 0 0.25rem 0 @p-color-gray;
+  }
 }
   //---- end ## Buttons ----//
 
