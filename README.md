@@ -64,8 +64,12 @@ $ npm install xmeter
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Constrain.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-FontSize.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Ruled.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mt.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mb.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-my.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pt.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pb.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/css/dist/-py.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/-fz.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/css/dist/xmeter.css"/> <!-- for development & testing only! -->
 ```
