@@ -24,6 +24,31 @@ const META = JSON.stringify({
 }, null, 2)
 
 
+gulp.task('dist', async function () {
+	return gulp.src(['./css/src/*.less', '!./css/src/__*.less'])
+		.pipe(sourcemaps.init())
+		.pipe(less())
+		.pipe(autoprefixer({
+			grid: true,
+		}))
+		.pipe(clean_css({
+			level: {
+				2: {
+					overrideProperties: false, // need fallbacks for `initial` and `unset`
+					restructureRules: true, // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
+				},
+			},
+		}))
+		.pipe(rename((p) => {
+			if (p.basename[0] === '_') {
+				p.basename = p.basename.slice(1)
+			}
+		}))
+		.pipe(inject.prepend(`/* ${META} */`))
+		.pipe(sourcemaps.write('./')) // writes to an external .map file
+		.pipe(gulp.dest('./css/dist/'))
+})
+
 // HOW-TO: https://github.com/kss-node/kss-node/issues/161#issuecomment-222292620
 gulp.task('docs-kss-markup', async function () {
   return kss(require('./config/kss.json'))
@@ -91,29 +116,4 @@ gulp.task('docs-my', ['docs-my-markup', 'docs-my-style'])
 
 gulp.task('docs', ['docs-kss', 'docs-my'])
 
-gulp.task('dist', async function () {
-  return gulp.src(['./css/src/*.less', '!./css/src/__*.less'])
-    .pipe(sourcemaps.init())
-    .pipe(less())
-    .pipe(autoprefixer({
-      grid: true,
-    }))
-    .pipe(clean_css({
-      level: {
-        2: {
-          overrideProperties: false, // need fallbacks for `initial` and `unset`
-          restructureRules: true, // combines selectors having the same rule (akin to `&:extend()`) // REVIEW be careful here
-        },
-      },
-    }))
-    .pipe(rename((p) => {
-      if (p.basename[0] === '_') {
-        p.basename = p.basename.slice(1)
-      }
-    }))
-    .pipe(inject.prepend(`/* ${META} */`))
-    .pipe(sourcemaps.write('./')) // writes to an external .map file
-    .pipe(gulp.dest('./css/dist/'))
-})
-
-gulp.task('build', ['docs', 'dist'])
+gulp.task('build', ['dist', 'docs'])

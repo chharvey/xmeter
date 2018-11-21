@@ -22,7 +22,8 @@
     "test": "node test.js",
     "unbuild:docs": "rm -r docs/styleguide/  &&  rm docs/{index.html,css/docs.css}",
     "unbuild": "npm run unbuild:docs &&  rm -r css/dist/",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
