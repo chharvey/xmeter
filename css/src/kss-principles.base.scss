@@ -149,6 +149,63 @@
 
 // Lists
 //
+// Markup:
+// <figure class="h-Ruled">
+// 	<figcaption>Ordered List <code>ol</code></figcaption>
+// 	<ol>
+// 		<li>List item <code>li</code></li>
+// 		<li>List item <code>li</code>
+// 			<ol>
+// 				<li>Nested list item</li>
+// 				<li>Nested list item
+// 					<ol>
+// 						<li>Another nested list item</li>
+// 						<li>Another nested list item</li>
+// 					</ol>
+// 				</li>
+// 			</ol>
+// 		</li>
+// 	</ol>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figcaption>Unrdered List <code>ul</code></figcaption>
+// 	<ul>
+// 		<li>List item <code>li</code></li>
+// 		<li>List item <code>li</code>
+// 			<ul>
+// 				<li>Nested list item</li>
+// 				<li>Nested list item
+// 					<ul>
+// 						<li>Another nested list item</li>
+// 						<li>Another nested list item</li>
+// 					</ul>
+// 				</li>
+// 			</ul>
+// 		</li>
+// 	</ul>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figcaption>Dictionary List <code>dl</code></figcaption>
+// 	<dl>
+// 		<dt>key <code>dt</code></dt>
+// 		<dd>value <code>dd</code></dd>
+// 		<dt>
+// 			<ul>
+// 				<li>1st key</li>
+// 				<li>2nd key</li>
+// 			</ul>
+// 		</dt>
+// 		<dd>value</dd>
+// 		<dt>key</dt>
+// 		<dd>
+// 			<ul>
+// 				<li>1st value</li>
+// 				<li>2nd value</li>
+// 			</ul>
+// 		</dd>
+// 	</dl>
+// </figure>
+//
 // Weight: 2
 //
 // Styleguide Base.grouping-elements.lists
