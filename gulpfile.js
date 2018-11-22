@@ -9,11 +9,8 @@ const inject       = require('gulp-inject-string')
 const less         = require('gulp-less')
 const rename       = require('gulp-rename')
 const sourcemaps   = require('gulp-sourcemaps')
-const jsdom        = require('jsdom')
 const kss          = require('kss')
 
-const xjs = require('extrajs-dom')
-const {xDirectory,xPermalink} = require('aria-patterns')
 
 const PACKAGE = require('./package.json')
 const META = JSON.stringify({

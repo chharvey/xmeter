@@ -5,8 +5,6 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "aria-patterns": "^1.0.0-beta.4",
-    "extrajs-dom": "^4.3.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
@@ -14,7 +12,6 @@
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
-    "jsdom": "^11.12.0",
     "kss": "^3.0.0-beta.23",
     "normalize.css": "^8.0.0"
   },
