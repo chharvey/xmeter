@@ -1,4 +1,4 @@
-let interactive = document.querySelector('#interactive-elements')
+let interactive = document.querySelector('#kssref-base-interactive-elements')
 let dialog = interactive.querySelector('dialog')
 interactive.querySelector('button[name="dialog-open"]').addEventListener('click', function (e) {
   dialog.showModal()
