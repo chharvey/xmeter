@@ -213,6 +213,49 @@
 
 // Tables
 //
+// Markup:
+// <figure class="h-Ruled">
+// 	<table>
+// 		<caption><code>table</code> <code>caption</code></caption>
+// 		<thead>
+// 			<tr>
+// 				<th scope="col">header row 1: heading 1</th>
+// 				<th scope="col">heading 2</th>
+// 				<th scope="col">heading 3</th>
+// 			</tr>
+// 		</thead>
+// 		<tfoot>
+// 			<tr>
+// 				<td>footer row 1: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>footer row 2: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 		</tfoot>
+// 		<tbody>
+// 			<tr>
+// 				<td>body row 1: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>body row 2: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>body row 3: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 		</tbody>
+// 	</table>
+// </figure>
+//
 // Weight: 3
 //
 // Styleguide Base.grouping-elements.tables
