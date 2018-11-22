@@ -377,6 +377,19 @@
 
 // Data
 //
+// Markup:
+// <figure class="h-Ruled">
+// 	<dl>
+// 		<dt><code>slot</code></dt>         <dd><slot name="">a placeholder for dynamic data</slot></dd>
+// 		<dt><code>data</code></dt>         <dd><data value="">generic machine-readable data</data></dd>
+// 		<dt><code>time</code></dt>         <dd><time datetime="Z">a specific date or time</time></dd>
+// 		<dt><code>code</code></dt>         <dd><code>a fragment of code</code></dd>
+// 		<dt><code>kbd</code></dt>          <dd><kbd>user input</kbd></dd>
+// 		<dt><code>kbd &gt; kbd</code></dt> <dd><kbd><kbd>a button or key on a physical device</kbd></kbd></dd>
+// 		<dt><code>samp</code></dt>         <dd><samp>sample computer output</samp></dd>
+// 	</dl>
+// </figure>
+//
 // Weight: 4
 //
 // Styleguide Base.text-level-elements.data
