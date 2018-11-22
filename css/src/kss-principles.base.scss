@@ -261,9 +261,40 @@
 // Styleguide Base.grouping-elements.tables
 
 
-// Text-Level Elements
+// Transparent Elements
+//
+// A transparent element can be either block-level or text-level, depending on its contents.
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<figcaption>Transparent elements styled with inline display:</figcaption>
+// 	<dl>
+// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Inline">placeholder anchor </a></dd>
+// 		<dt><code>a[href]</code></dt>       <dd><a    class="h-Inline" href="#0">hyperlink</a></dd>
+// 		<dt><code>ins</code></dt>           <dd><ins  class="h-Inline">content shown to be inserted into a document</ins></dd>
+// 		<dt><code>del</code></dt>           <dd><del  class="h-Inline">content shown to be deleted from a document</del></dd>
+// 		<dt><code>slot</code></dt>          <dd><slot class="h-Inline" name="">a placeholder for dynamic data</slot></dd>
+// 	</dl>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figcaption>Transparent elements styled with block display:</figcaption>
+// 	<dl>
+// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Block">placeholder anchor </a></dd>
+// 		<dt><code>a[href]</code></dt>       <dd><a    class="h-Block" href="#0">hyperlink</a></dd>
+// 		<dt><code>ins</code></dt>           <dd><ins  class="h-Block">content shown to be inserted into a document</ins></dd>
+// 		<dt><code>del</code></dt>           <dd><del  class="h-Block">content shown to be deleted from a document</del></dd>
+// 		<dt><code>slot</code></dt>          <dd><slot class="h-Block" name="">a placeholder for dynamic data</slot></dd>
+// 	</dl>
+// </figure>
 //
 // Weight: 2
+//
+// Styleguide Base.transparent-elements
+
+
+// Text-Level Elements
+//
+// Weight: 3
 //
 // Styleguide Base.text-level-elements
 
@@ -298,20 +329,20 @@
 
 // Forms
 //
-// Weight: 3
+// Weight: 4
 //
 // Styleguide Base.forms
 
 
 // Embedded Elements
 //
-// Weight: 4
+// Weight: 5
 //
 // Styleguide Base.embedded-elements
 
 
 // Interactive Elements
 //
-// Weight: 5
+// Weight: 6
 //
 // Styleguide Base.interactive-elements
