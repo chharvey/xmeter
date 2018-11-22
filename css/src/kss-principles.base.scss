@@ -354,6 +354,22 @@
 
 // Documentation
 //
+// Markup:
+// <figure class="h-Ruled">
+// 	<dl>
+// 		<dt><code>ins</code></dt>         <dd><ins>content shown to be inserted into a document</ins></dd>
+// 		<dt><code>del</code></dt>         <dd><del>content shown to be deleted from a document</del></dd>
+// 		<dt><code>dfn</code></dt>         <dd><dfn>definining instance of a term</dfn></dd>
+// 		<dt><code>b</code></dt>           <dd><b>keyword or technical term</b></dd>
+// 		<dt><code>abbr[title]</code></dt> <dd><abbr title="">abbreviation, initialism, or acronym</abbr></dd>
+// 		<dt><code>var</code></dt>         <dd><var>variable</var></dd>
+// 		<dt><code>q</code></dt>           <dd><q>quoted material</q></dd>
+// 		<dt><code>cite</code></dt>        <dd><cite>reference to a work, some part of a work, or the creator of a work</cite></dd>
+// 		<dt><code>sup</code></dt>         <dd><sup>superscript</sup></dd>
+// 		<dt><code>sub</code></dt>         <dd><sub>subscript</sub></dd>
+// 	</dl>
+// </figure>
+//
 // Weight: 3
 //
 // Styleguide Base.text-level-elements.documentation
