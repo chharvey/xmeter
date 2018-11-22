@@ -513,6 +513,26 @@
 
 // Interactive Elements
 //
+// Markup:
+// <figure class="h-Ruled">
+// 	<details>
+// 		<summary>Integer at lacus et diam tristique <code>summary</code> suscipit.</summary>
+// 		<p>Aenean consectetur <code>details</code> suscipit urna, non vehicula lacus blandit et.
+// 			Nulla dictum arcu nec suscipit mollis.
+// 			In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+// 			Fusce auctor posuere purus, quis semper libero dignissim euismod.</p>
+// 	</details>
+// </figure>
+// <figure class="h-Ruled">
+// 	<dialog>
+// 		<h1 class="-pt-0">A Dialog</h1>
+// 		text for <code>dialog</code> element
+// 		<p>Can include flow content.</p>
+// 		<p class="-mb-0"><button type="button" name="dialog-close">close dialog</button></p>
+// 	</dialog>
+// 	<button type="button" name="dialog-open">open dialog</button>
+// </figure>
+//
 // Weight: 6
 //
 // Styleguide Base.interactive-elements
