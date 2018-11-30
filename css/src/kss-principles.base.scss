@@ -222,18 +222,6 @@
 // 				<th scope="col">heading 3</th>
 // 			</tr>
 // 		</thead>
-// 		<tfoot>
-// 			<tr>
-// 				<td>footer row 1: data 1</td>
-// 				<td>data 2</td>
-// 				<td>data 3</td>
-// 			</tr>
-// 			<tr>
-// 				<td>footer row 2: data 1</td>
-// 				<td>data 2</td>
-// 				<td>data 3</td>
-// 			</tr>
-// 		</tfoot>
 // 		<tbody>
 // 			<tr>
 // 				<td>body row 1: data 1</td>
@@ -251,6 +239,18 @@
 // 				<td>data 3</td>
 // 			</tr>
 // 		</tbody>
+// 		<tfoot>
+// 			<tr>
+// 				<td>footer row 1: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>footer row 2: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 		</tfoot>
 // 	</table>
 // </figure>
 //
@@ -267,7 +267,7 @@
 // <figure class="h-Ruled">
 // 	<figcaption>Transparent elements styled with inline display:</figcaption>
 // 	<dl>
-// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Inline">placeholder anchor </a></dd>
+// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Inline">placeholder anchor</a></dd>
 // 		<dt><code>a[href]</code></dt>       <dd><a    class="h-Inline" href="#0">hyperlink</a></dd>
 // 		<dt><code>ins</code></dt>           <dd><ins  class="h-Inline">content shown to be inserted into a document</ins></dd>
 // 		<dt><code>del</code></dt>           <dd><del  class="h-Inline">content shown to be deleted from a document</del></dd>
@@ -277,7 +277,7 @@
 // <figure class="h-Ruled">
 // 	<figcaption>Transparent elements styled with block display:</figcaption>
 // 	<dl>
-// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Block">placeholder anchor </a></dd>
+// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Block">placeholder anchor</a></dd>
 // 		<dt><code>a[href]</code></dt>       <dd><a    class="h-Block" href="#0">hyperlink</a></dd>
 // 		<dt><code>ins</code></dt>           <dd><ins  class="h-Block">content shown to be inserted into a document</ins></dd>
 // 		<dt><code>del</code></dt>           <dd><del  class="h-Block">content shown to be deleted from a document</del></dd>
@@ -413,7 +413,6 @@
 // 		</fieldset>
 // 		<fieldset>
 // 			<legend>date/time</legend>
-// 			<input type="datetime"/>
 // 			<input type="datetime-local"/>
 // 			<input type="date"/>
 // 			<input type="time"/>
@@ -479,7 +478,7 @@
 // 					<option>option 2c</option>
 // 				</optgroup>
 // 				<option>option 3</option>
-// 			</select multiple="">
+// 			</select>
 // 		</fieldset>
 // 		<fieldset>
 // 			<legend>buttons</legend>
