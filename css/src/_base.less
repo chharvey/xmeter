@@ -225,7 +225,7 @@ hr {
   ol,
   ul {
     padding: 0 0 0 4rem; // COMBAK{FALLBACK}
-    padding: logical 0 4rem 0 0;
+    padding: logical 0 4rem 0 0; // NB <https://github.com/w3c/csswg-drafts/issues/1282>
     li > &,
     dt > &,
     dd > & {
@@ -237,13 +237,10 @@ hr {
     }
   }
   ol {
-    list-style-type: decimal;
   }
   ul {
-    list-style-type: disc; // not using `initial` because we explicitly want `disc`
   }
   dl {
-    list-style: none; // remove counters from `dl > li`
   }
   li {
   }
