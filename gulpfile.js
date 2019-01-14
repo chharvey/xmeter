@@ -9,11 +9,8 @@ const inject       = require('gulp-inject-string')
 const less         = require('gulp-less')
 const rename       = require('gulp-rename')
 const sourcemaps   = require('gulp-sourcemaps')
-const jsdom        = require('jsdom')
 const kss          = require('kss')
 
-const xjs = require('extrajs-dom')
-const {xDirectory,xPermalink} = require('aria-patterns')
 
 const PACKAGE = require('./package.json')
 const META = JSON.stringify({
@@ -65,56 +62,7 @@ function docs_kss_style() {
 
 const docs_kss = gulp.parallel(docs_kss_markup, docs_kss_style)
 
-async function docs_my_markup() {
-  const dom = new jsdom.JSDOM(await util.promisify(fs.readFile)(path.join(__dirname, './docs/tpl/index.tpl.html'), 'utf8'))
-  const {document} = dom.window
-
-  await new xjs.Document(document).importLinksAsync(path.resolve(__dirname, './docs/tpl/'))
-
-  await Promise.all([
-    (async function () {
-      document.querySelector('#contents').append(xDirectory.render(require('./docs/index-toc.json')))
-    })(),
-    (async function () {
-      const classname = {
-        figure: 'docs-figure',
-        pre   : 'docs-pre',
-        code  : 'docs-code',
-        form  : 'docs-form',
-      }
-      let fragment = (await xjs.HTMLTemplateElement.fromFile(path.resolve(__dirname, './docs/tpl/base.tpl.html'))).content().cloneNode(true)
-      fragment.querySelectorAll([
-        'section[id] > h2:first-of-type',
-        'section[id] > h3:first-of-type',
-        'section[id] > h4:first-of-type',
-        'section[id] > h5:first-of-type',
-        'section[id] > h6:first-of-type',
-      ].join()).forEach((hn) => {
-        hn.append(xPermalink.render({ id: hn.parentNode.id }))
-      })
-      fragment.querySelectorAll(Object.keys(classname).join()).forEach((el) => {
-        let xel = new xjs.HTMLElement(el)
-        if (classname[xel.tagName]) xel.addClass(classname[xel.tagName])
-      })
-      document.querySelector('main').append(fragment)
-    })(),
-  ])
-
-  await util.promisify(fs.writeFile)(path.resolve(__dirname, './docs/index.html'), dom.serialize(), 'utf8')
-}
-
-function docs_my_style() {
-  return gulp.src('docs/css/docs.less')
-    .pipe(less())
-    .pipe(autoprefixer({
-      grid: true,
-    }))
-    .pipe(gulp.dest('./docs/css/'))
-}
-
-const docs_my = gulp.parallel(docs_my_markup, docs_my_style)
-
-const docs = gulp.parallel(docs_kss, docs_my)
+const docs = gulp.parallel(docs_kss)
 
 const build = gulp.parallel(dist, docs)
 
@@ -123,9 +71,6 @@ module.exports = {
 	docs_kss_markup,
 	docs_kss_style,
 	docs_kss,
-	docs_my_markup,
-	docs_my_style,
-	docs_my,
 	docs,
 	build,
 }
