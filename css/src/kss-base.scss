@@ -528,6 +528,16 @@
 // 		<p class="-mb-0"><button type="button" name="dialog-close">close dialog</button></p>
 // 	</dialog>
 // 	<button type="button" name="dialog-open">open dialog</button>
+// 	<script>
+// 		var dialog = document.querySelector('dialog')
+// 		document.querySelector('button[name="dialog-open"]').addEventListener('click', function (_e) {
+// 			dialog.showModal()
+// 		})
+// 		dialog.querySelector('button[name="dialog-close"]').addEventListener('click', function (_e) {
+// 			dialog.close('some result')
+// 			// access result with `dialog.returnValue`
+// 		})
+// 	</script>
 // </figure>
 //
 // Weight: 6
