@@ -24,7 +24,8 @@ Use the global variables:
   font-size: (1.5 * @g-font-size-kilo);
 }
 ```
-See `/src/__settings.less` for all the variables available.
+See [`/css/src/__settings.less`](https://github.com/chharvey/xmeter/blob/master/css/src/__settings.less)
+for all the variables available.
 
 Use the tools:
 ```less
@@ -33,7 +34,8 @@ Use the tools:
   .transitions(color, background-color; 500ms; ease-in-out);
 }
 ```
-Read about all of Xmeter’s tools (see `/docs/tools.md`).
+Read about all of Xmeter’s tools at
+[`/docs/tools.md`](https://github.com/chharvey/xmeter/blob/master/docs/tools.md).
 
 ### Deployment
 
@@ -78,10 +80,9 @@ $ npm install xmeter
 (not recommended, unless deploying your `/node_modules/` isn’t possible)
 
 ```html
-<link rel="stylesheet" media="‹breakpoint›"
-  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/css/dist/‹filename›.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xmeter@‹X.Y.Z›/css/dist/‹filename›.css"/>
 ```
-where `‹master›` can be any release tag, commit, or branch, and `‹filename›` represents the stylesheet name.
+where `‹X.Y.Z›` is any published version number, and `‹filename›` is the name of the stylesheet.
 
 
 ## Features
