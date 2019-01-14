@@ -17,14 +17,14 @@ const {xDirectory,xPermalink} = require('aria-patterns')
 
 const PACKAGE = require('./package.json')
 const META = JSON.stringify({
-  package: `https://www.npmjs.com/package/${PACKAGE.name}`,
-  version: PACKAGE.version,
-  license: PACKAGE.license,
-  built  : new Date().toISOString(),
-}, null, 2)
+	package: `https://www.npmjs.com/package/${PACKAGE.name}`,
+	version: PACKAGE.version,
+	license: PACKAGE.license,
+	built  : new Date().toISOString(),
+}, null, '\t')
 
 
-gulp.task('dist', async function () {
+function dist() {
 	return gulp.src(['./css/src/*.less', '!./css/src/__*.less'])
 		.pipe(sourcemaps.init())
 		.pipe(less())
@@ -47,25 +47,25 @@ gulp.task('dist', async function () {
 		.pipe(inject.prepend(`/* ${META} */`))
 		.pipe(sourcemaps.write('./')) // writes to an external .map file
 		.pipe(gulp.dest('./css/dist/'))
-})
+}
 
 // HOW-TO: https://github.com/kss-node/kss-node/issues/161#issuecomment-222292620
-gulp.task('docs-kss-markup', async function () {
+async function docs_kss_markup() {
   return kss(require('./config/kss.json'))
-})
+}
 
-gulp.task('docs-kss-style', async function () {
+function docs_kss_style() {
   return gulp.src('./docs/css/kss-custom.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
     }))
     .pipe(gulp.dest('./docs/styleguide/'))
-})
+}
 
-gulp.task('docs-kss', ['docs-kss-markup', 'docs-kss-style'])
+const docs_kss = gulp.parallel(docs_kss_markup, docs_kss_style)
 
-gulp.task('docs-my-markup', async function () {
+async function docs_my_markup() {
   const dom = new jsdom.JSDOM(await util.promisify(fs.readFile)(path.join(__dirname, './docs/tpl/index.tpl.html'), 'utf8'))
   const {document} = dom.window
 
@@ -101,19 +101,31 @@ gulp.task('docs-my-markup', async function () {
   ])
 
   await util.promisify(fs.writeFile)(path.resolve(__dirname, './docs/index.html'), dom.serialize(), 'utf8')
-})
+}
 
-gulp.task('docs-my-style', async function () {
+function docs_my_style() {
   return gulp.src('docs/css/docs.less')
     .pipe(less())
     .pipe(autoprefixer({
       grid: true,
     }))
     .pipe(gulp.dest('./docs/css/'))
-})
+}
 
-gulp.task('docs-my', ['docs-my-markup', 'docs-my-style'])
+const docs_my = gulp.parallel(docs_my_markup, docs_my_style)
 
-gulp.task('docs', ['docs-kss', 'docs-my'])
+const docs = gulp.parallel(docs_kss, docs_my)
 
-gulp.task('build', ['dist', 'docs'])
+const build = gulp.parallel(dist, docs)
+
+module.exports = {
+	dist,
+	docs_kss_markup,
+	docs_kss_style,
+	docs_kss,
+	docs_my_markup,
+	docs_my_style,
+	docs_my,
+	docs,
+	build,
+}
