@@ -486,7 +486,9 @@ select {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  label:hover & {
+  &:hover {
+		// NOTE: Chrome applies these styles to inputs even when their associated labels
+		// (having the correct `[for]` attribute) are hovered.
     box-shadow: inset 0 0 0.25rem 0 @p-color-gray-fallback; // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
     box-shadow: inset 0 0 0.25rem 0 @p-color-gray;
   }
