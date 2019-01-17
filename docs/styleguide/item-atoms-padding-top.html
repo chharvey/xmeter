@@ -74,7 +74,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-atoms-padding-top">
             <span class="kss-title__ref">
-              6.2
+              6.4
               <span class="kss-title__permalink-hash">
                   #Atoms.padding-top
               </span>
@@ -151,15 +151,15 @@ or <code>padding-block-start</code> if it is supported.</p>
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;/node_modules/xmeter/css/dist/-pt.css&quot;/--&gt;
-&lt;ul&gt;
-  &lt;li class&#x3D;&quot;-pt-0&quot;&gt;Point    (0.00)&lt;/li&gt;
-  &lt;li class&#x3D;&quot;-pt-q&quot;&gt;Quark    (0.25)&lt;/li&gt;
-  &lt;li class&#x3D;&quot;-pt-h&quot;&gt;Atom     (0.50)&lt;/li&gt;
-  &lt;li class&#x3D;&quot;-pt-1&quot;&gt;Molecule (1.00)&lt;/li&gt;
-  &lt;li class&#x3D;&quot;-pt-2&quot;&gt;Asteroid (2.00)&lt;/li&gt;
-  &lt;li class&#x3D;&quot;-pt-4&quot;&gt;Planet   (4.00)&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-comment">&lt;!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pt.css"/--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-pt-0"</span>&gt;</span>Point    (0.00)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-pt-q"</span>&gt;</span>Quark    (0.25)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-pt-h"</span>&gt;</span>Atom     (0.50)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-pt-1"</span>&gt;</span>Molecule (1.00)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-pt-2"</span>&gt;</span>Asteroid (2.00)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-pt-4"</span>&gt;</span>Planet   (4.00)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -173,12 +173,10 @@ or <code>padding-block-start</code> if it is supported.</p>
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

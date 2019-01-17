@@ -38,12 +38,6 @@
                   ><span class="kss-nav__name">Type Scale</span>
                 </a>
               </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-principles.html#kssref-principles-hyperlinks">
-                  <span class="kss-nav__ref ">1.2</span
-                  ><span class="kss-nav__name">Hyperlinks</span>
-                </a>
-              </li>
             </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -203,84 +197,16 @@ This ensures a consistent look-and-feel while at the same time providing a sense
         </div>
 
     </section>
-    <section id="kssref-principles-hyperlinks" class="kss-section kss-section--depth-2 ">
-
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-principles-hyperlinks">
-            <span class="kss-title__ref">
-              1.2
-              <span class="kss-title__permalink-hash">
-                  #Principles.Hyperlinks
-              </span>
-            </span>
-            Hyperlinks
-          </a>
-        </h2>
-
-
-          <div class="kss-description">
-            <p>It is recommended not to style <code>&lt;a&gt;</code> elements without the <code>[href]</code> attribute.
-Such elements are “placeholder anchors”, which do not lead anywhere.
-These placeholders should not be visibly discernable from surrounding prose,
-as they merely represent placeholders for where hyperlinks <em>could</em> be placed,
-or anchors whose references may change based on context.
-Therefore, any styling of “live” hyperlinks should be done with the <code>a[href]</code> selector.
-More information is available in the
-<a href="https://www.w3.org/TR/html52/textlevel-semantics.html#the-a-element">HTML Recommendation</a>.</p>
-<p>The reasoning behind this principle is that we may have a situation in which
-a possible hyperlink may be added, which is not yet determined at compile time.
-For example this could be done via front-end script, after the user loads the page;
-another example would be where a template wraps a component with an anchor,
-in the event that whether the component is linkable is based on a database entry.
-In these situations and we cannot change the element on the fly
-(e.g. we cannot change a <code>&lt;span&gt;</code> to an <code>&lt;a&gt;</code>),
-thus it is best practice to use a placeholder anchor (<code>&lt;a&gt;</code> element),
-and than use logic to adjust the attributes if and when necessary.</p>
-<p>It is advised to put the <code>[role=&quot;none&quot;]</code> attribute on anchor placeholders,
-so that assistive technology does not misidentify them as active hyperlinks.
-When an anchor placeholder does become a live hyperlink, the <code>[href]</code> attribute should be added
-(whose value is the target’s URL), and <code>[role=&quot;none&quot;]</code> should be removed.</p>
-<h3 id="link-text-color">Link Text Color</h3>
-<p>Like all foreground colors, link text color should have sufficient contrast with the background color.
-Additionally, if <em>color alone</em> is used to convey where hyperlinks occur in prose,
-then the link text color should also have sufficient contrast with surrounding non-link text color.
-Read <a href="https://www.w3.org/TR/WCAG20-TECHS/G183.html">Technique G183</a> for details.</p>
-<ul>
-<li>Background contrast ratio:<ul>
-<li>to meet AA  level: 4.5 normal; 3.0 large (18pt or 14pt bold)</li>
-<li>to meet AAA level: 7.0 normal; 4.5 large (18pt or 14pt bold)</li>
-</ul>
-</li>
-<li>Surrounding text contrast ratio:<ul>
-<li>3.0 for all</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>kss-principles.hyperlinks.scss</code>, line 7
-        </div>
-
-    </section>
 </article>
 </main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

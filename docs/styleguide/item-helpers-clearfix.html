@@ -168,23 +168,23 @@ for example, from microdata markup.</p>
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;/node_modules/xmeter/css/dist/h-Clearfix.css&quot;/--&gt;
-&lt;div class&#x3D;&quot;h-Clearfix&quot;&gt;
-  &lt;div style&#x3D;&quot;font-weight: 700; float:  left;&quot;&gt;gravity&lt;/div&gt;
-  &lt;div style&#x3D;&quot;font-weight: 700; float: right;&quot;&gt;supernova&lt;/div&gt;
-&lt;/div&gt;
-&lt;div&gt;spacetime black hole singularity&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li class&#x3D;&quot;h-Inline&quot;&gt;spacetime &lt;/li&gt;
-  &lt;li class&#x3D;&quot;h-Inline h-Clearfix&quot;&gt;black hole &lt;/li&gt;
-  &lt;li class&#x3D;&quot;h-Inline&quot;&gt;singularity &lt;/li&gt;
-  &lt;li class&#x3D;&quot;h-Inline&quot;&gt;neutron star &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-  &lt;span class&#x3D;&quot;h-Clearfix&quot;&gt;The White House&lt;/span&gt;
-  &lt;span class&#x3D;&quot;h-Clearfix&quot;&gt;1600 Pennsylvania Ave NW&lt;/span&gt;
-  &lt;span class&#x3D;&quot;h-Clearfix&quot;&gt;Washington, DC 20500&lt;/span&gt;
-&lt;/p&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-comment">&lt;!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Clearfix.css"/--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Clearfix"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"font-weight: 700; float:  left;"</span>&gt;</span>gravity<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"font-weight: 700; float: right;"</span>&gt;</span>supernova<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>spacetime black hole singularity<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span>&gt;</span>spacetime <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline h-Clearfix"</span>&gt;</span>black hole <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span>&gt;</span>singularity <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span>&gt;</span>neutron star <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Clearfix"</span>&gt;</span>The White House<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Clearfix"</span>&gt;</span>1600 Pennsylvania Ave NW<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Clearfix"</span>&gt;</span>Washington, DC 20500<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -198,12 +198,10 @@ for example, from microdata markup.</p>
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

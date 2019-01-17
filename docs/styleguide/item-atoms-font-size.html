@@ -74,7 +74,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-atoms-font-size">
             <span class="kss-title__ref">
-              6.3
+              6.7
               <span class="kss-title__permalink-hash">
                   #Atoms.font-size
               </span>
@@ -155,17 +155,17 @@ You can see the source for the font-size settings in <a>/src/__settings.less</a>
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;/node_modules/xmeter/css/dist/-fz.css&quot;/--&gt;
-&lt;ul&gt;
-  &lt;li class&#x3D;&quot;-fz-micr&quot;&gt;Quark    (0.625)&lt;/li&gt;
-  &lt;li class&#x3D;&quot;-fz-mill&quot;&gt;Atom     (0.75) &lt;/li&gt;
-  &lt;li class&#x3D;&quot;-fz-norm&quot;&gt;Molecule (1.00) &lt;/li&gt;
-  &lt;li class&#x3D;&quot;-fz-kilo&quot;&gt;Asteroid (1.25) &lt;/li&gt;
-  &lt;li class&#x3D;&quot;-fz-mega&quot;&gt;Planet   (1.75) &lt;/li&gt;
-  &lt;li class&#x3D;&quot;-fz-giga&quot;&gt;Star     (2.25) &lt;/li&gt;
-  &lt;li class&#x3D;&quot;-fz-tera&quot;&gt;Galaxy   (3.00) &lt;/li&gt;
-  &lt;li class&#x3D;&quot;-fz-peta&quot;&gt;Universe (4.00) &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-comment">&lt;!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-fz.css"/--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-micr"</span>&gt;</span>Quark    (0.625)<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-mill"</span>&gt;</span>Atom     (0.75) <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-norm"</span>&gt;</span>Molecule (1.00) <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-kilo"</span>&gt;</span>Asteroid (1.25) <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-mega"</span>&gt;</span>Planet   (1.75) <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-giga"</span>&gt;</span>Star     (2.25) <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-tera"</span>&gt;</span>Galaxy   (3.00) <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-fz-peta"</span>&gt;</span>Universe (4.00) <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -179,12 +179,10 @@ You can see the source for the font-size settings in <a>/src/__settings.less</a>
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

@@ -153,15 +153,15 @@ This Helper adjusts the line-height of the element so that track size remains un
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;/node_modules/xmeter/css/dist/h-FontSize.css&quot;/--&gt;
-&lt;p class&#x3D;&quot;h-FontSize&quot; style&#x3D;&quot;--font-scale: 2.25;&quot;&gt;This paragraph has a font-size of 2.25em,
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-comment">&lt;!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-FontSize.css"/--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-FontSize"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"--font-scale: 2.25;"</span>&gt;</span>This paragraph has a font-size of 2.25em,
   and an adjusted line-height so that each line of text takes up exactly 1 track.
   Vertical rhythm is maintained.
-  However, this example’s font-size is too big to be read clearly.&lt;/p&gt;
-&lt;p class&#x3D;&quot;h-FontSize&quot; style&#x3D;&quot;--font-scale: 2.25; --tracks: 2;&quot;&gt;Set the &#x60;--tracks&#x60; to an integer
+  However, this example’s font-size is too big to be read clearly.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-FontSize"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"--font-scale: 2.25; --tracks: 2;"</span>&gt;</span>Set the `--tracks` to an integer
   in order to adjust the number of “tracks” each line of text takes up.
   In this paragraph, each line of text takes up 2 tracks instead of the default 1.
-  This increased leading provides a more pleasant reading experience.&lt;/p&gt;</code></pre>
+  This increased leading provides a more pleasant reading experience.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -175,12 +175,10 @@ This Helper adjusts the line-height of the element so that track size remains un
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

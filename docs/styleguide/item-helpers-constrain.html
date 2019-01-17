@@ -150,12 +150,12 @@ not for individual elements of prose (such as a paragraph or list).</p>
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;/node_modules/xmeter/css/dist/h-Constrain.css&quot;/--&gt;
-&lt;div class&#x3D;&quot;h-Constrain&quot;&gt;
-  &lt;h1&gt;content heading&lt;/h1&gt;
-  &lt;p&gt;This object is constrained to a maximum width. Expand
-    your browser window (or zoom out) to see the effect.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-comment">&lt;!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/h-Constrain.css"/--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Constrain"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>content heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This object is constrained to a maximum width. Expand
+    your browser window (or zoom out) to see the effect.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -169,12 +169,10 @@ not for individual elements of prose (such as a paragraph or list).</p>
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

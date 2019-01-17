@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Xmeter Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../../css/dist/xmeter.css">
+<link rel="stylesheet" href="./kss-custom.css">
+
+</head>
+<body id="kss-node" >
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Xmeter Style Guide</h1>
+  </header>
+  <nav class="kss-nav" aria-label="Style Guide">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-principles.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Principles</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Base</span>
+        </a>
+            <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-grouping-elements">
+                  <span class="kss-nav__ref ">2.1</span
+                  ><span class="kss-nav__name">Grouping Elements</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-grouping-elements-headings-paragraphs">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.1</span
+                  ><span class="kss-nav__name">Headings &amp; Paragraphs</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-grouping-elements-lists">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.2</span
+                  ><span class="kss-nav__name">Lists</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-grouping-elements-tables">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.3</span
+                  ><span class="kss-nav__name">Tables</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-transparent-elements">
+                  <span class="kss-nav__ref ">2.2</span
+                  ><span class="kss-nav__name">Transparent Elements</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-text-level-elements">
+                  <span class="kss-nav__ref ">2.3</span
+                  ><span class="kss-nav__name">Text-Level Elements</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-text-level-elements-links">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.3.1</span
+                  ><span class="kss-nav__name">Links</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-text-level-elements-emphasis">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.3.2</span
+                  ><span class="kss-nav__name">Emphasis</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-text-level-elements-documentation">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.3.3</span
+                  ><span class="kss-nav__name">Documentation</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-text-level-elements-data">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.3.4</span
+                  ><span class="kss-nav__name">Data</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-forms">
+                  <span class="kss-nav__ref ">2.4</span
+                  ><span class="kss-nav__name">Forms</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-embedded-elements">
+                  <span class="kss-nav__ref ">2.5</span
+                  ><span class="kss-nav__name">Embedded Elements</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-base.html#kssref-base-interactive-elements">
+                  <span class="kss-nav__ref ">2.6</span
+                  ><span class="kss-nav__name">Interactive Elements</span>
+                </a>
+              </li>
+            </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-objects.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Objects</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Components</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-interfaces.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Interfaces</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-helpers.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Helpers</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-atoms.html">
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Atoms</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-hacks.html">
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Hacks</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<main class="kss-main" aria-label="Content">
+  <article>
+
+    <div id="kssref-base" class="kss-section kss-section--depth-1 ">
+
+      <div class="kss-style">
+        <h1 class="kss-title kss-title--level-1">
+          <a class="kss-title__permalink" href="#kssref-base">
+            <span class="kss-title__ref">
+              2
+              <span class="kss-title__permalink-hash">
+                  #Base
+              </span>
+            </span>
+            Base
+          </a>
+        </h1>
+
+
+          <div class="kss-description">
+            <p>Standard, unclassed typographical HTML elements.</p>
+
+          </div>
+
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 7
+        </div>
+
+    </div>
+    <section id="kssref-base-grouping-elements" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-grouping-elements">
+            <span class="kss-title__ref">
+              2.1
+              <span class="kss-title__permalink-hash">
+                  #Base.grouping-elements
+              </span>
+            </span>
+            Grouping Elements
+          </a>
+        </h2>
+
+
+
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 16
+        </div>
+
+    </section>
+    <section id="kssref-base-grouping-elements-headings-paragraphs" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-base-grouping-elements-headings-paragraphs">
+            <span class="kss-title__ref">
+              2.1.1
+              <span class="kss-title__permalink-hash">
+                  #Base.grouping-elements.headings-paragraphs
+              </span>
+            </span>
+            Headings &amp; Paragraphs
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-grouping-elements-headings-paragraphs" data-kss-fullscreen="kssref-base-grouping-elements-headings-paragraphs">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-grouping-elements-headings-paragraphs.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-grouping-elements-headings-paragraphs" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-grouping-elements-headings-paragraphs" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<h1>Heading 1 <code>h1</code></h1>
+	<p>Paragraph <code>p</code>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Aliquam sagittis suscipit nunc, a cursus libero euismod at.
+		Nulla placerat neque massa, quis interdum leo efficitur vel.
+		Donec feugiat varius arcu non volutpat.
+		Mauris eget mauris ut mauris auctor mattis id vel justo.
+		Nulla dictum arcu nec suscipit mollis.
+		Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.</p>
+	<h2>Heading 2 <code>h2</code></h2>
+	<p>Paragraph <code>p</code>
+		Suspendisse ut auctor enim.
+		Aliquam viverra enim vitae ante aliquet venenatis.
+		Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
+		Praesent dapibus velit quis lectus tempus, ut ullamcorper nibh facilisis.
+		Aenean tincidunt ante risus, semper malesuada libero consectetur id.
+		Praesent vel ligula ut enim porttitor porta. Aenean eu ullamcorper mi.
+		Integer blandit est quam, eget mattis urna scelerisque quis.
+		Maecenas sapien sapien, ornare nec lobortis eget, tincidunt sed ligula.
+		Maecenas risus nibh, volutpat sed euismod non, semper eget neque.
+		Integer varius egestas risus, volutpat sagittis turpis convallis eget.
+		Vivamus pulvinar ligula eget mi tincidunt, eget faucibus justo laoreet.
+		In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+		Sed luctus congue tortor a scelerisque.</p>
+	<h3>Heading 3 <code>h3</code></h3>
+	<p>Paragraph <code>p</code>
+		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
+		Quisque id justo elit.
+		Fusce ut quam non sem efficitur accumsan sed id neque.
+		Mauris finibus dignissim gravida.
+		In dignissim mauris ac odio molestie volutpat.
+		Nulla tellus justo, finibus sed volutpat sed, tristique ac lacus.
+		Suspendisse sit amet fermentum sapien.
+		Aliquam luctus laoreet iaculis.
+		Proin lacinia orci vitae tellus pellentesque porttitor.</p>
+	<h4>Heading 4 <code>h4</code></h4>
+	<p>Paragraph <code>p</code>
+		Aenean consectetur suscipit urna, non vehicula lacus blandit et.
+		Integer at lacus et diam tristique suscipit.
+		Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
+		Vestibulum vitae magna ac tellus accumsan pharetra vulputate vitae erat.
+		Vestibulum est dui, elementum non sagittis ac, sagittis accumsan justo.
+		Donec at vestibulum diam. Nam et volutpat dolor, at pulvinar nisi.
+		Curabitur aliquam maximus nulla eu venenatis.
+		Nam aliquam lorem non felis dignissim dictum.
+		Pellentesque sagittis vehicula nisl non luctus.
+		Pellentesque eget ligula hendrerit, blandit enim consequat, dictum sem.
+		In quis lectus in lectus interdum laoreet eu quis quam.
+		Fusce auctor posuere purus, quis semper libero dignissim euismod.
+		Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.</p>
+	<h5>Heading 5 <code>h5</code></h5>
+	<p>Paragraph <code>p</code>
+		Donec finibus ut lectus finibus pellentesque.
+		Nulla euismod feugiat nulla nec posuere.
+		Sed ac est id sem sagittis rhoncus eu ac neque.
+		Aliquam eu metus sagittis, porta turpis id, scelerisque magna.
+		Nulla venenatis elementum est, semper viverra felis tristique sit amet.
+		Mauris nec ipsum id orci porttitor auctor sed sit amet sem.
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.</p>
+	<h6>Heading 6 <code>h6</code></h6>
+	<p>Paragraph <code>p</code>
+		Donec vel dolor ut felis dapibus ultricies vitae a nibh.
+		Ut semper odio est, sed lacinia ligula gravida ut.
+		Vestibulum facilisis viverra pulvinar.
+		Suspendisse maximus nisl sit amet augue vulputate, vel porta nunc molestie.
+		Aliquam mauris diam, pharetra vel consectetur quis, rhoncus in risus.
+		Donec ut quam massa.
+		Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
+		Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</figure>
+<figure class="h-Ruled">
+	<h1>Zero <code>h1</code> Two Three <br/> Four Five Six Seven</h1>
+	<h2>Zero One <code>h2</code> Three <br/> Four Five Six Seven</h2>
+	<h3>Zero One Two <code>h3</code>   <br/> Four Five Six Seven</h3>
+	<h4>Zero One Two Three <br/> <code>h4</code>  Five Six Seven</h4>
+	<h5>Zero One Two Three <br/> Four <code>h5</code>  Six Seven</h5>
+	<h6>Zero One Two Three <br/> Four Five <code>h6</code> Seven</h6>
+</figure>
+<figure class="h-Ruled">
+	<address>
+		12345 <code>address</code> Ave <code>br</code><br/>
+		Washington, DC 00000 <code>br</code><br/>
+		United States of America
+	</address>
+</figure>
+<figure class="h-Ruled">
+	<pre>
+Pellentesque <code>pre</code> habitant() {
+	morbi.tristique = senectus;
+	et (netus = malesuada; fames &lt; ac; turpis.egestas++) {
+		Nunc.sit += [amet, scelerisque][et];
+		Cras = {
+			lectus: cursus,
+			sed: dui,
+			quis: convallis(id () { justo Quisque.elit; }),
+		};
+	}
+}
+	</pre>
+</figure>
+<figure class="h-Ruled">
+	<figure>
+		Aenean consectetur <code>figure</code> suscipit urna, non vehicula lacus blandit et.
+		<figcaption>Integer at lacus et diam tristique <code>figure</code> <code>figcaption</code> suscipit.</figcaption>
+	</figure>
+</figure>
+<figure class="h-Ruled">
+	<blockquote>Donec <code>blockquote</code> vel dolor ut felis dapibus ultricies vitae a nibh.</blockquote>
+</figure>
+<figure class="h-Ruled">
+	<figcaption>A horizontal rule <code>hr</code> is present below.</figcaption>
+	<hr/>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Heading 1 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Aliquam sagittis suscipit nunc, a cursus libero euismod at.
+		Nulla placerat neque massa, quis interdum leo efficitur vel.
+		Donec feugiat varius arcu non volutpat.
+		Mauris eget mauris ut mauris auctor mattis id vel justo.
+		Nulla dictum arcu nec suscipit mollis.
+		Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Heading 2 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+		Suspendisse ut auctor enim.
+		Aliquam viverra enim vitae ante aliquet venenatis.
+		Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
+		Praesent dapibus velit quis lectus tempus, ut ullamcorper nibh facilisis.
+		Aenean tincidunt ante risus, semper malesuada libero consectetur id.
+		Praesent vel ligula ut enim porttitor porta. Aenean eu ullamcorper mi.
+		Integer blandit est quam, eget mattis urna scelerisque quis.
+		Maecenas sapien sapien, ornare nec lobortis eget, tincidunt sed ligula.
+		Maecenas risus nibh, volutpat sed euismod non, semper eget neque.
+		Integer varius egestas risus, volutpat sagittis turpis convallis eget.
+		Vivamus pulvinar ligula eget mi tincidunt, eget faucibus justo laoreet.
+		In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+		Sed luctus congue tortor a scelerisque.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Heading 3 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h3<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
+		Quisque id justo elit.
+		Fusce ut quam non sem efficitur accumsan sed id neque.
+		Mauris finibus dignissim gravida.
+		In dignissim mauris ac odio molestie volutpat.
+		Nulla tellus justo, finibus sed volutpat sed, tristique ac lacus.
+		Suspendisse sit amet fermentum sapien.
+		Aliquam luctus laoreet iaculis.
+		Proin lacinia orci vitae tellus pellentesque porttitor.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Heading 4 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h4<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+		Aenean consectetur suscipit urna, non vehicula lacus blandit et.
+		Integer at lacus et diam tristique suscipit.
+		Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
+		Vestibulum vitae magna ac tellus accumsan pharetra vulputate vitae erat.
+		Vestibulum est dui, elementum non sagittis ac, sagittis accumsan justo.
+		Donec at vestibulum diam. Nam et volutpat dolor, at pulvinar nisi.
+		Curabitur aliquam maximus nulla eu venenatis.
+		Nam aliquam lorem non felis dignissim dictum.
+		Pellentesque sagittis vehicula nisl non luctus.
+		Pellentesque eget ligula hendrerit, blandit enim consequat, dictum sem.
+		In quis lectus in lectus interdum laoreet eu quis quam.
+		Fusce auctor posuere purus, quis semper libero dignissim euismod.
+		Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Heading 5 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h5<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+		Donec finibus ut lectus finibus pellentesque.
+		Nulla euismod feugiat nulla nec posuere.
+		Sed ac est id sem sagittis rhoncus eu ac neque.
+		Aliquam eu metus sagittis, porta turpis id, scelerisque magna.
+		Nulla venenatis elementum est, semper viverra felis tristique sit amet.
+		Mauris nec ipsum id orci porttitor auctor sed sit amet sem.
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Heading 6 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+		Donec vel dolor ut felis dapibus ultricies vitae a nibh.
+		Ut semper odio est, sed lacinia ligula gravida ut.
+		Vestibulum facilisis viverra pulvinar.
+		Suspendisse maximus nisl sit amet augue vulputate, vel porta nunc molestie.
+		Aliquam mauris diam, pharetra vel consectetur quis, rhoncus in risus.
+		Donec ut quam massa.
+		Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
+		Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Zero <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> Two Three <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span> Four Five Six Seven<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Zero One <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> Three <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span> Four Five Six Seven<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Zero One Two <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h3<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>   <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span> Four Five Six Seven<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Zero One Two Three <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h4<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>  Five Six Seven<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Zero One Two Three <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span> Four <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h5<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>  Six Seven<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>Zero One Two Three <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span> Four Five <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>h6<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> Seven<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">address</span>&gt;</span>
+		12345 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>address<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> Ave <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>br<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+		Washington, DC 00000 <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>br<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+		United States of America
+	<span class="hljs-tag">&lt;/<span class="hljs-name">address</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>
+Pellentesque <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>pre<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> habitant() {
+	morbi.tristique = senectus;
+	et (netus = malesuada; fames &amp;lt; ac; turpis.egestas++) {
+		Nunc.sit += [amet, scelerisque][et];
+		Cras = {
+			lectus: cursus,
+			sed: dui,
+			quis: convallis(id () { justo Quisque.elit; }),
+		};
+	}
+}
+	<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+		Aenean consectetur <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>figure<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit urna, non vehicula lacus blandit et.
+		<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Integer at lacus et diam tristique <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>figure<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>figcaption<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span>Donec <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>blockquote<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> vel dolor ut felis dapibus ultricies vitae a nibh.<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>A horizontal rule <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>hr<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> is present below.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 23
+        </div>
+
+    </section>
+    <section id="kssref-base-grouping-elements-lists" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-base-grouping-elements-lists">
+            <span class="kss-title__ref">
+              2.1.2
+              <span class="kss-title__permalink-hash">
+                  #Base.grouping-elements.lists
+              </span>
+            </span>
+            Lists
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-grouping-elements-lists" data-kss-fullscreen="kssref-base-grouping-elements-lists">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-grouping-elements-lists.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-grouping-elements-lists" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-grouping-elements-lists" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<figcaption>Ordered List <code>ol</code></figcaption>
+	<ol>
+		<li>List item <code>li</code></li>
+		<li>List item <code>li</code>
+			<ol>
+				<li>Nested list item</li>
+				<li>Nested list item
+					<ol>
+						<li>Another nested list item</li>
+						<li>Another nested list item</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+	</ol>
+</figure>
+<figure class="h-Ruled">
+	<figcaption>Unrdered List <code>ul</code></figcaption>
+	<ul>
+		<li>List item <code>li</code></li>
+		<li>List item <code>li</code>
+			<ul>
+				<li>Nested list item</li>
+				<li>Nested list item
+					<ul>
+						<li>Another nested list item</li>
+						<li>Another nested list item</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</figure>
+<figure class="h-Ruled">
+	<figcaption>Dictionary List <code>dl</code></figcaption>
+	<dl>
+		<dt>key <code>dt</code></dt>
+		<dd>value <code>dd</code></dd>
+		<dt>
+			<ul>
+				<li>1st key</li>
+				<li>2nd key</li>
+			</ul>
+		</dt>
+		<dd>value</dd>
+		<dt>key</dt>
+		<dd>
+			<ul>
+				<li>1st value</li>
+				<li>2nd value</li>
+			</ul>
+		</dd>
+	</dl>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Ordered List <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>ol<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>List item <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>li<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>List item <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>li<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Nested list item
+					<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+						<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another nested list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+						<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another nested list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+					<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Unrdered List <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>ul<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>List item <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>li<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>List item <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>li<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Nested list item
+					<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+						<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another nested list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+						<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another nested list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+					<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Dictionary List <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>dl<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>key <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>dt<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>value <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>dd<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>1st key<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>2nd key<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>value<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>key<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>1st value<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>2nd value<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 148
+        </div>
+
+    </section>
+    <section id="kssref-base-grouping-elements-tables" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-base-grouping-elements-tables">
+            <span class="kss-title__ref">
+              2.1.3
+              <span class="kss-title__permalink-hash">
+                  #Base.grouping-elements.tables
+              </span>
+            </span>
+            Tables
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-grouping-elements-tables" data-kss-fullscreen="kssref-base-grouping-elements-tables">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-grouping-elements-tables.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-grouping-elements-tables" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-grouping-elements-tables" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<table>
+		<caption><code>table</code> <code>caption</code></caption>
+		<thead>
+			<tr>
+				<th scope="col">header row 1: heading 1</th>
+				<th scope="col">heading 2</th>
+				<th scope="col">heading 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>body row 1: data 1</td>
+				<td>data 2</td>
+				<td>data 3</td>
+			</tr>
+			<tr>
+				<td>body row 2: data 1</td>
+				<td>data 2</td>
+				<td>data 3</td>
+			</tr>
+			<tr>
+				<td>body row 3: data 1</td>
+				<td>data 2</td>
+				<td>data 3</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>footer row 1: data 1</td>
+				<td>data 2</td>
+				<td>data 3</td>
+			</tr>
+			<tr>
+				<td>footer row 2: data 1</td>
+				<td>data 2</td>
+				<td>data 3</td>
+			</tr>
+		</tfoot>
+	</table>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>table<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>caption<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>header row 1: heading 1<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>heading 2<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">scope</span>=<span class="hljs-string">"col"</span>&gt;</span>heading 3<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>body row 1: data 1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>body row 2: data 1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>body row 3: data 1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">tfoot</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>footer row 1: data 1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>footer row 2: data 1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>data 3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">tfoot</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 212
+        </div>
+
+    </section>
+    <section id="kssref-base-transparent-elements" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-transparent-elements">
+            <span class="kss-title__ref">
+              2.2
+              <span class="kss-title__permalink-hash">
+                  #Base.transparent-elements
+              </span>
+            </span>
+            Transparent Elements
+          </a>
+        </h2>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-transparent-elements" data-kss-fullscreen="kssref-base-transparent-elements">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-transparent-elements.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-transparent-elements" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-transparent-elements" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>A transparent element can be either block-level or text-level, depending on its contents.</p>
+
+          </div>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<figcaption>Transparent elements styled with inline display:</figcaption>
+	<dl>
+		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Inline">placeholder anchor</a></dd>
+		<dt><code>a[href]</code></dt>       <dd><a    class="h-Inline" href="#0">hyperlink</a></dd>
+		<dt><code>ins</code></dt>           <dd><ins  class="h-Inline">content shown to be inserted into a document</ins></dd>
+		<dt><code>del</code></dt>           <dd><del  class="h-Inline">content shown to be deleted from a document</del></dd>
+		<dt><code>slot</code></dt>          <dd><slot class="h-Inline" name="">a placeholder for dynamic data</slot></dd>
+	</dl>
+</figure>
+<figure class="h-Ruled">
+	<figcaption>Transparent elements styled with block display:</figcaption>
+	<dl>
+		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Block">placeholder anchor</a></dd>
+		<dt><code>a[href]</code></dt>       <dd><a    class="h-Block" href="#0">hyperlink</a></dd>
+		<dt><code>ins</code></dt>           <dd><ins  class="h-Block">content shown to be inserted into a document</ins></dd>
+		<dt><code>del</code></dt>           <dd><del  class="h-Block">content shown to be deleted from a document</del></dd>
+		<dt><code>slot</code></dt>          <dd><slot class="h-Block" name="">a placeholder for dynamic data</slot></dd>
+	</dl>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Transparent elements styled with inline display:<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>a:not([href])<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>    <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span>&gt;</span>placeholder anchor<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>a[href]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>       <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>    <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>hyperlink<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>ins<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>           <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">ins</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span>&gt;</span>content shown to be inserted into a document<span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>del<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>           <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">del</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span>&gt;</span>content shown to be deleted from a document<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>slot<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>          <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Inline"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span>&gt;</span>a placeholder for dynamic data<span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Transparent elements styled with block display:<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>a:not([href])<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>    <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Block"</span>&gt;</span>placeholder anchor<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>a[href]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>       <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>    <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Block"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>hyperlink<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>ins<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>           <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">ins</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Block"</span>&gt;</span>content shown to be inserted into a document<span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>del<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>           <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">del</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Block"</span>&gt;</span>content shown to be deleted from a document<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>slot<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>          <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Block"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span>&gt;</span>a placeholder for dynamic data<span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 262
+        </div>
+
+    </section>
+    <section id="kssref-base-text-level-elements" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-text-level-elements">
+            <span class="kss-title__ref">
+              2.3
+              <span class="kss-title__permalink-hash">
+                  #Base.text-level-elements
+              </span>
+            </span>
+            Text-Level Elements
+          </a>
+        </h2>
+
+
+
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 293
+        </div>
+
+    </section>
+    <section id="kssref-base-text-level-elements-links" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-base-text-level-elements-links">
+            <span class="kss-title__ref">
+              2.3.1
+              <span class="kss-title__permalink-hash">
+                  #Base.text-level-elements.links
+              </span>
+            </span>
+            Links
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-text-level-elements-links" data-kss-fullscreen="kssref-base-text-level-elements-links">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-text-level-elements-links.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-text-level-elements-links" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-text-level-elements-links" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<dl>
+		<dt><code>a:not([href])</code></dt>
+		<dd><a>placeholder anchor</a></dd>
+		<dd>
+			<p>Lorem ipsum <a>dolor</a> sit amet, consectetur adipisicing elit, sed do
+				eiusmod tempor incididunt <a>ut labore et dolore</a> magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat. <a>Lorem ipsum dolor sit</a>
+				amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt <a>ut labore et dolore magna aliqua</a>.</p>
+		</dd>
+		<dt><code>a[href]</code></dt>
+		<dd><a href="#0">hyperlink</a></dd>
+		<dd>
+			<p>Lorem ipsum <a href="#0">dolor</a> sit amet, consectetur adipisicing elit, sed do
+				eiusmod tempor incididunt <a href="#0">ut labore et dolore</a> magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat. <a href="#0">Lorem ipsum dolor sit</a>
+				amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt <a href="#0">ut labore et dolore magna aliqua</a>.</p>
+		</dd>
+	</dl>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>a:not([href])<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>placeholder anchor<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum <span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>dolor<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> sit amet, consectetur adipisicing elit, sed do
+				eiusmod tempor incididunt <span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>ut labore et dolore<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat. <span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>Lorem ipsum dolor sit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+				amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt <span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>ut labore et dolore magna aliqua<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>a[href]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>hyperlink<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>dolor<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> sit amet, consectetur adipisicing elit, sed do
+				eiusmod tempor incididunt <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>ut labore et dolore<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat. <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>Lorem ipsum dolor sit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+				amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>ut labore et dolore magna aliqua<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 300
+        </div>
+
+    </section>
+    <section id="kssref-base-text-level-elements-emphasis" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-base-text-level-elements-emphasis">
+            <span class="kss-title__ref">
+              2.3.2
+              <span class="kss-title__permalink-hash">
+                  #Base.text-level-elements.emphasis
+              </span>
+            </span>
+            Emphasis
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-text-level-elements-emphasis" data-kss-fullscreen="kssref-base-text-level-elements-emphasis">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-text-level-elements-emphasis.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-text-level-elements-emphasis" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-text-level-elements-emphasis" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<dl>
+		<dt><code>em</code>     </dt><dd><em>stress emphasis</em></dd>
+		<dt><code>strong</code> </dt><dd><strong>importance or urgency</strong></dd>
+		<dt><code>i</code>      </dt><dd><i>alternate voice/mood (scare quotes, mentioning words, foreign expressions)</i></dd>
+		<dt><code>mark</code>   </dt><dd><mark>relevant in some context</mark></dd>
+		<dt><code>u</code>      </dt><dd><u>unarticulated annotation</u></dd>
+		<dt><code>small</code>  </dt><dd><small>side comment or caveat</small></dd>
+		<dt><code>s</code>      </dt><dd><s>text shown to be no longer relevant</s></dd>
+	</dl>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>em<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>     <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>stress emphasis<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>strong<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>importance or urgency<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>i<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>      <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>alternate voice/mood (scare quotes, mentioning words, foreign expressions)<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>mark<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>   <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mark</span>&gt;</span>relevant in some context<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>u<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>      <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">u</span>&gt;</span>unarticulated annotation<span class="hljs-tag">&lt;/<span class="hljs-name">u</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>small<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>side comment or caveat<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>s<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>      <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">s</span>&gt;</span>text shown to be no longer relevant<span class="hljs-tag">&lt;/<span class="hljs-name">s</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 333
+        </div>
+
+    </section>
+    <section id="kssref-base-text-level-elements-documentation" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-base-text-level-elements-documentation">
+            <span class="kss-title__ref">
+              2.3.3
+              <span class="kss-title__permalink-hash">
+                  #Base.text-level-elements.documentation
+              </span>
+            </span>
+            Documentation
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-text-level-elements-documentation" data-kss-fullscreen="kssref-base-text-level-elements-documentation">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-text-level-elements-documentation.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-text-level-elements-documentation" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-text-level-elements-documentation" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<dl>
+		<dt><code>ins</code></dt>         <dd><ins>content shown to be inserted into a document</ins></dd>
+		<dt><code>del</code></dt>         <dd><del>content shown to be deleted from a document</del></dd>
+		<dt><code>dfn</code></dt>         <dd><dfn>definining instance of a term</dfn></dd>
+		<dt><code>b</code></dt>           <dd><b>keyword or technical term</b></dd>
+		<dt><code>abbr[title]</code></dt> <dd><abbr title="">abbreviation, initialism, or acronym</abbr></dd>
+		<dt><code>var</code></dt>         <dd><var>variable</var></dd>
+		<dt><code>q</code></dt>           <dd><q>quoted material</q></dd>
+		<dt><code>cite</code></dt>        <dd><cite>reference to a work, some part of a work, or the creator of a work</cite></dd>
+		<dt><code>sup</code></dt>         <dd><sup>superscript</sup></dd>
+		<dt><code>sub</code></dt>         <dd><sub>subscript</sub></dd>
+	</dl>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>ins<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">ins</span>&gt;</span>content shown to be inserted into a document<span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>del<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">del</span>&gt;</span>content shown to be deleted from a document<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>dfn<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dfn</span>&gt;</span>definining instance of a term<span class="hljs-tag">&lt;/<span class="hljs-name">dfn</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>b<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>           <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>keyword or technical term<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>abbr[title]<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">""</span>&gt;</span>abbreviation, initialism, or acronym<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>var<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">var</span>&gt;</span>variable<span class="hljs-tag">&lt;/<span class="hljs-name">var</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>q<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>           <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">q</span>&gt;</span>quoted material<span class="hljs-tag">&lt;/<span class="hljs-name">q</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>cite<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>reference to a work, some part of a work, or the creator of a work<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>sup<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span>superscript<span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>sub<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">sub</span>&gt;</span>subscript<span class="hljs-tag">&lt;/<span class="hljs-name">sub</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 353
+        </div>
+
+    </section>
+    <section id="kssref-base-text-level-elements-data" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-base-text-level-elements-data">
+            <span class="kss-title__ref">
+              2.3.4
+              <span class="kss-title__permalink-hash">
+                  #Base.text-level-elements.data
+              </span>
+            </span>
+            Data
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-text-level-elements-data" data-kss-fullscreen="kssref-base-text-level-elements-data">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-text-level-elements-data.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-text-level-elements-data" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-text-level-elements-data" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<dl>
+		<dt><code>slot</code></dt>         <dd><slot name="">a placeholder for dynamic data</slot></dd>
+		<dt><code>data</code></dt>         <dd><data value="">generic machine-readable data</data></dd>
+		<dt><code>time</code></dt>         <dd><time datetime="Z">a specific date or time</time></dd>
+		<dt><code>code</code></dt>         <dd><code>a fragment of code</code></dd>
+		<dt><code>kbd</code></dt>          <dd><kbd>user input</kbd></dd>
+		<dt><code>kbd &gt; kbd</code></dt> <dd><kbd><kbd>a button or key on a physical device</kbd></kbd></dd>
+		<dt><code>samp</code></dt>         <dd><samp>sample computer output</samp></dd>
+	</dl>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>slot<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">slot</span> <span class="hljs-attr">name</span>=<span class="hljs-string">""</span>&gt;</span>a placeholder for dynamic data<span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>data<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">data</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>generic machine-readable data<span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>time<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"Z"</span>&gt;</span>a specific date or time<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>code<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>a fragment of code<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>kbd<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>          <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span>user input<span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>kbd &amp;gt; kbd<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span>a button or key on a physical device<span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>samp<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>         <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">samp</span>&gt;</span>sample computer output<span class="hljs-tag">&lt;/<span class="hljs-name">samp</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 376
+        </div>
+
+    </section>
+    <section id="kssref-base-forms" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-forms">
+            <span class="kss-title__ref">
+              2.4
+              <span class="kss-title__permalink-hash">
+                  #Base.forms
+              </span>
+            </span>
+            Forms
+          </a>
+        </h2>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-forms" data-kss-fullscreen="kssref-base-forms">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-forms.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-forms" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-forms" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure>
+	<form>
+		<fieldset>
+			<legend>Integer at lacus et diam tristique <code>fieldset legend</code> suscipit.</legend>
+			Aenean consectetur <code>fieldset</code> suscipit urna, non vehicula lacus blandit et.
+		</fieldset>
+		<fieldset>
+			<legend>single line text inputs</legend>
+			<input type="text" placeholder="input type text"/>
+			<input type="email" placeholder="input type email"/>
+			<input type="password" placeholder="input type password"/>
+			<input type="search" placeholder="input type search"/>
+			<input type="tel" placeholder="input type tel"/>
+			<input type="url" placeholder="input type url"/>
+		</fieldset>
+		<fieldset>
+			<legend>date/time</legend>
+			<input type="datetime-local"/>
+			<input type="date"/>
+			<input type="time"/>
+			<input type="week"/>
+			<input type="month"/>
+		</fieldset>
+		<fieldset>
+			<legend>without text input</legend>
+			<input type="color"/>
+			<input type="file"/>
+			<input type="hidden"/>
+			<input type="number" placeholder="input type number"/>
+			<input type="range"/>
+		</fieldset>
+		<fieldset>
+			<legend>check boxes</legend>
+			<input type="checkbox"/>
+			<label>select</label>
+			<label>
+				<input type="checkbox"/>
+				all
+			</label>
+			<input id="checkboxid" type="checkbox"/>
+			<label for="checkboxid">applicable</label>
+		</fieldset>
+		<fieldset>
+			<legend>radio buttons</legend>
+			<input type="radio" name="radiogroup1"/>
+			<label>select</label>
+			<label>
+				<input type="radio" name="radiogroup1"/>
+				only
+			</label>
+			<input id="radioid" type="radio" name="radiogroup1"/>
+			<label for="radioid">one</label>
+		</fieldset>
+		<fieldset>
+			<legend>drop-down list (select only one)</legend>
+			<select>
+				<option>option 1</option>
+				<optgroup label="label for option 2">
+					<option>option 2a</option>
+					<option>option 2b</option>
+					<option>option 2c</option>
+				</optgroup>
+				<option>option 3</option>
+			</select>
+			<input list="b" placeholder="select it or type it"/>
+			<datalist id="b">
+				<!-- optgroup not a valid child of datalist -->
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</datalist>
+		</fieldset>
+		<fieldset>
+			<legend>drop-down list (select multiple)</legend>
+			<select multiple="">
+				<option>option 1</option>
+				<optgroup label="label for option 2">
+					<option>option 2a</option>
+					<option>option 2b</option>
+					<option>option 2c</option>
+				</optgroup>
+				<option>option 3</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>buttons</legend>
+			<input type="button" value="button"/>
+			<input type="reset"/>
+			<input type="submit"/>
+			<button type="button">button</button>
+			<button type="reset">reset</button>
+			<button type="submit">submit</button>
+		</fieldset>
+		<fieldset>
+			<legend>textarea</legend>
+			<textarea></textarea>
+		</fieldset>
+	</form>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Integer at lacus et diam tristique <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fieldset legend<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit.<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			Aenean consectetur <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fieldset<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit urna, non vehicula lacus blandit et.
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>single line text inputs<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type text"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type email"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type password"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type search"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type tel"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type url"</span>/&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>date/time<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"datetime-local"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"time"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"week"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"month"</span>/&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>without text input<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"color"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type number"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span>/&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>check boxes<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>
+				all
+			<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkboxid"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkboxid"</span>&gt;</span>applicable<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>radio buttons<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radiogroup1"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radiogroup1"</span>/&gt;</span>
+				only
+			<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radioid"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radiogroup1"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radioid"</span>&gt;</span>one<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>drop-down list (select only one)<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"label for option 2"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2a<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2b<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2c<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">list</span>=<span class="hljs-string">"b"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"select it or type it"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"b"</span>&gt;</span>
+				<span class="hljs-comment">&lt;!-- optgroup not a valid child of datalist --&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">datalist</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>drop-down list (select multiple)<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">multiple</span>=<span class="hljs-string">""</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"label for option 2"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2a<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2b<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2c<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>buttons<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"button"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span>&gt;</span>reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>textarea<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">textarea</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 396
+        </div>
+
+    </section>
+    <section id="kssref-base-embedded-elements" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-embedded-elements">
+            <span class="kss-title__ref">
+              2.5
+              <span class="kss-title__permalink-hash">
+                  #Base.embedded-elements
+              </span>
+            </span>
+            Embedded Elements
+          </a>
+        </h2>
+
+
+
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 504
+        </div>
+
+    </section>
+    <section id="kssref-base-interactive-elements" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-interactive-elements">
+            <span class="kss-title__ref">
+              2.6
+              <span class="kss-title__permalink-hash">
+                  #Base.interactive-elements
+              </span>
+            </span>
+            Interactive Elements
+          </a>
+        </h2>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-base-interactive-elements" data-kss-fullscreen="kssref-base-interactive-elements">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-base-interactive-elements.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-base-interactive-elements" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-interactive-elements" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure class="h-Ruled">
+	<details>
+		<summary>Integer at lacus et diam tristique <code>summary</code> suscipit.</summary>
+		<p>Aenean consectetur <code>details</code> suscipit urna, non vehicula lacus blandit et.
+			Nulla dictum arcu nec suscipit mollis.
+			In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+			Fusce auctor posuere purus, quis semper libero dignissim euismod.</p>
+	</details>
+</figure>
+<figure class="h-Ruled">
+	<dialog>
+		<h1 class="-pt-0">A Dialog</h1>
+		text for <code>dialog</code> element
+		<p>Can include flow content.</p>
+		<p class="-mb-0"><button type="button" name="dialog-close">close dialog</button></p>
+	</dialog>
+	<button type="button" name="dialog-open">open dialog</button>
+	<script>
+		var dialog = document.querySelector('dialog')
+		document.querySelector('button[name="dialog-open"]').addEventListener('click', function (_e) {
+			dialog.showModal()
+		})
+		dialog.querySelector('button[name="dialog-close"]').addEventListener('click', function (_e) {
+			dialog.close('some result')
+			// access result with `dialog.returnValue`
+		})
+	</script>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span>Integer at lacus et diam tristique <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>summary<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit.<span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Aenean consectetur <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>details<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit urna, non vehicula lacus blandit et.
+			Nulla dictum arcu nec suscipit mollis.
+			In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+			Fusce auctor posuere purus, quis semper libero dignissim euismod.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Ruled"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">dialog</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-pt-0"</span>&gt;</span>A Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+		text for <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>dialog<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> element
+		<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Can include flow content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"-mb-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"dialog-close"</span>&gt;</span>close dialog<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">dialog</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"dialog-open"</span>&gt;</span>open dialog<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+		<span class="hljs-keyword">var</span> dialog = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'dialog'</span>)
+		<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'button[name="dialog-open"]'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_e</span>) </span>{
+			dialog.showModal()
+		})
+		dialog.querySelector(<span class="hljs-string">'button[name="dialog-close"]'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_e</span>) </span>{
+			dialog.close(<span class="hljs-string">'some result'</span>)
+			<span class="hljs-comment">// access result with `dialog.returnValue`</span>
+		})
+	</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 511
+        </div>
+
+    </section>
+</article>
+</main>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+<script src="../js/base.js"></script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
