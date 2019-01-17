@@ -1,0 +1,92 @@
+
+/*################################*\
+    xmeter  |  _-mt.less
+\*################################*/
+
+
+// margin-top
+//
+// Set the `margin-top` property on an element,
+// or `margin-block-start` if it is supported.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-07-07</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mt.css"/-->
+// <ul>
+//   <li class="-mt-0">Point    (0.00)</li>
+//   <li class="-mt-q">Quark    (0.25)</li>
+//   <li class="-mt-h">Atom     (0.50)</li>
+//   <li class="-mt-1">Molecule (1.00)</li>
+//   <li class="-mt-2">Asteroid (2.00)</li>
+//   <li class="-mt-4">Planet   (4.00)</li>
+// </ul>
+//
+// Weight: 1
+//
+// Styleguide Atoms.margin-top
+
+@p-lh: 1.5rem; // COMBAK{FALLBACK} for `lh` unit
+
+.-mt-0 {
+  margin-top: 0;
+  margin-block-start: 0;
+}
+
+.-mt-q {
+  margin-top: (0.25 * @p-lh);         // COMBAK{FALLBACK}
+  margin-top: calc(0.25 * var(--lh)); // COMBAK{FALLBACK}
+  margin-top: 0.25lh;
+  @supports (margin-block-start: var(--v)) {
+    margin-top: unset;
+    margin-block-start: calc(0.25 * var(--lh)); // COMBAK{FALLBACK}
+    margin-block-start: 0.25lh;
+  }
+}
+
+.-mt-h {
+  margin-top: (0.5 * @p-lh);         // COMBAK{FALLBACK}
+  margin-top: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
+  margin-top: 0.5lh;
+  @supports (margin-block-start: var(--v)) {
+    margin-top: unset;
+    margin-block-start: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
+    margin-block-start: 0.5lh;
+  }
+}
+
+.-mt-1 {
+  margin-top: @p-lh;     // COMBAK{FALLBACK}
+  margin-top: var(--lh); // COMBAK{FALLBACK}
+  margin-top: 1lh;
+  @supports (margin-block-start: var(--v)) {
+    margin-top: unset;
+    margin-block-start: var(--lh); // COMBAK{FALLBACK}
+    margin-block-start: 1lh;
+  }
+}
+
+.-mt-2 {
+  margin-top: (2 * @p-lh);         // COMBAK{FALLBACK}
+  margin-top: calc(2 * var(--lh)); // COMBAK{FALLBACK}
+  margin-top: 2lh;
+  @supports (margin-block-start: var(--v)) {
+    margin-top: unset;
+    margin-block-start: calc(2 * var(--lh)); // COMBAK{FALLBACK}
+    margin-block-start: 2lh;
+  }
+}
+
+.-mt-4 {
+  margin-top: (4 * @p-lh);         // COMBAK{FALLBACK}
+  margin-top: calc(4 * var(--lh)); // COMBAK{FALLBACK}
+  margin-top: 4lh;
+  @supports (margin-block-start: var(--v)) {
+    margin-top: unset;
+    margin-block-start: calc(4 * var(--lh)); // COMBAK{FALLBACK}
+    margin-block-start: 4lh;
+  }
+}

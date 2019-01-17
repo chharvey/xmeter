@@ -1,0 +1,92 @@
+
+/*################################*\
+    xmeter  |  _-pb.less
+\*################################*/
+
+
+// padding-bottom
+//
+// Set the `padding-bottom` property on an element,
+// or `padding-block-end` if it is supported.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-06-27</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pb.css"/-->
+// <ul>
+//   <li class="-pb-0">Point    (0.00)</li>
+//   <li class="-pb-q">Quark    (0.25)</li>
+//   <li class="-pb-h">Atom     (0.50)</li>
+//   <li class="-pb-1">Molecule (1.00)</li>
+//   <li class="-pb-2">Asteroid (2.00)</li>
+//   <li class="-pb-4">Planet   (4.00)</li>
+// </ul>
+//
+// Weight: 2.1
+//
+// Styleguide Atoms.padding-bottom
+
+@p-lh: 1.5rem; // COMBAK{FALLBACK} for `lh` unit
+
+.-pb-0 {
+  padding-bottom: 0;
+  padding-block-end: 0;
+}
+
+.-pb-q {
+  padding-bottom: (0.25 * @p-lh);         // COMBAK{FALLBACK}
+  padding-bottom: calc(0.25 * var(--lh)); // COMBAK{FALLBACK}
+  padding-bottom: 0.25lh;
+  @supports (padding-block-end: var(--v)) {
+    padding-bottom: unset;
+    padding-block-end: calc(0.25 * var(--lh)); // COMBAK{FALLBACK}
+    padding-block-end: 0.25lh;
+  }
+}
+
+.-pb-h {
+  padding-bottom: (0.5 * @p-lh);         // COMBAK{FALLBACK}
+  padding-bottom: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
+  padding-bottom: 0.5lh;
+  @supports (padding-block-end: var(--v)) {
+    padding-bottom: unset;
+    padding-block-end: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
+    padding-block-end: 0.5lh;
+  }
+}
+
+.-pb-1 {
+  padding-bottom: @p-lh;     // COMBAK{FALLBACK}
+  padding-bottom: var(--lh); // COMBAK{FALLBACK}
+  padding-bottom: 1lh;
+  @supports (padding-block-end: var(--v)) {
+    padding-bottom: unset;
+    padding-block-end: var(--lh); // COMBAK{FALLBACK}
+    padding-block-end: 1lh;
+  }
+}
+
+.-pb-2 {
+  padding-bottom: (2 * @p-lh);         // COMBAK{FALLBACK}
+  padding-bottom: calc(2 * var(--lh)); // COMBAK{FALLBACK}
+  padding-bottom: 2lh;
+  @supports (padding-block-end: var(--v)) {
+    padding-bottom: unset;
+    padding-block-end: calc(2 * var(--lh)); // COMBAK{FALLBACK}
+    padding-block-end: 2lh;
+  }
+}
+
+.-pb-4 {
+  padding-bottom: (4 * @p-lh);         // COMBAK{FALLBACK}
+  padding-bottom: calc(4 * var(--lh)); // COMBAK{FALLBACK}
+  padding-bottom: 4lh;
+  @supports (padding-block-end: var(--v)) {
+    padding-bottom: unset;
+    padding-block-end: calc(4 * var(--lh)); // COMBAK{FALLBACK}
+    padding-block-end: 4lh;
+  }
+}

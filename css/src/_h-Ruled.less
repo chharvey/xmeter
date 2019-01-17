@@ -35,14 +35,17 @@
 // Weight: 6
 //
 // Styleguide Helpers.Ruled
-@p-color-gray: rgba(0,0,0, 0.25); // same as _base.less
+@p-color-gray-fallback: rgba(0,0,0, 0.25); // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
+@p-color-gray: #00000040; // same as _base.less
 .h-Ruled {
+  background-image: linear-gradient(to top, @p-color-gray-fallback 1px, transparent 1px); // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
   background-image: linear-gradient(to top, @p-color-gray 1px, transparent 1px);
-  background-size: 1px 1.5rem;    // COMBAK:FALLBACK
-  background-size: 1px var(--lh); // COMBAK:FALLBACK
+  background-size: 1px 1.5rem;    // COMBAK{FALLBACK}
+  background-size: 1px var(--lh); // COMBAK{FALLBACK}
   background-size: 1px 1lh;
+  background-origin: content-box;
   background-position-y: top;
   background-position-block: start;
   // for logical background sizing, see `background-image-transform`: (extremely unstable)
-  // https://www.w3.org/TR/css-logical-1/#propdef-background-image-transform
+  // NB{LINK} https://www.w3.org/TR/css-logical-1/#propdef-background-image-transform
 }
