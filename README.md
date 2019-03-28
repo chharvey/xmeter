@@ -24,7 +24,8 @@ Use the global variables:
   font-size: (1.5 * @g-font-size-kilo);
 }
 ```
-See `/src/__settings.less` for all the variables available.
+See [`/css/src/__settings.less`](https://github.com/chharvey/xmeter/blob/master/css/src/__settings.less)
+for all the variables available.
 
 Use the tools:
 ```less
@@ -33,7 +34,8 @@ Use the tools:
   .transitions(color, background-color; 500ms; ease-in-out);
 }
 ```
-Read about all of Xmeter’s tools (see `/docs/tools.md`).
+Read about all of Xmeter’s tools at
+[`/docs/tools.md`](https://github.com/chharvey/xmeter/blob/master/docs/tools.md).
 
 ### Deployment
 
@@ -64,8 +66,18 @@ $ npm install xmeter
 <link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Constrain.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-FontSize.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Ruled.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-mt.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/dist/css/-mb.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-my.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-ml.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-mr.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-mx.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/dist/css/-pt.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-pb.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-py.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-pl.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-pr.css"/>
+<link rel="stylesheet" href="/node_modules/xmeter/dist/css/-px.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/dist/css/-fz.css"/>
 <link rel="stylesheet" href="/node_modules/xmeter/dist/css/xmeter.css"/> <!-- for development & testing only! -->
 ```
@@ -74,10 +86,9 @@ $ npm install xmeter
 (not recommended, unless deploying your `/node_modules/` isn’t possible)
 
 ```html
-<link rel="stylesheet" media="‹breakpoint›"
-  href="https://cdn.rawgit.com/chharvey/xmeter/‹master›/dist/css/‹filename›.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xmeter@‹X.Y.Z›/dist/css/‹filename›.css"/>
 ```
-where `‹master›` can be any release tag, commit, or branch, and `‹filename›` represents the stylesheet name.
+where `‹X.Y.Z›` is any published version number, and `‹filename›` is the name of the stylesheet.
 
 
 ## Features

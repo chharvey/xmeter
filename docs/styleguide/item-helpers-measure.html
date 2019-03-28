@@ -33,33 +33,38 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Base</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-objects.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Objects</span>
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Objects</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Components</span>
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Components</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-interfaces.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Interfaces</span>
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Interfaces</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-helpers.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Helpers</span>
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Helpers</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-atoms.html">
-          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Atoms</span>
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Atoms</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-hacks.html">
-          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Hacks</span>
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Hacks</span>
         </a>
       </li>
     </ul>
@@ -74,7 +79,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-helpers-measure">
             <span class="kss-title__ref">
-              5.4
+              6.4
               <span class="kss-title__permalink-hash">
                   #Helpers.Measure
               </span>
@@ -117,7 +122,7 @@
           <div class="kss-description">
             <p>The Measure Helper constrains an element’s inline-size
 (width, in horizontal writing modes) to a reasonable line length.</p>
-<p>The default style sets the max-inline-size of the block to 66 characters<sup>&lowast;</sup>,
+<p>The default style sets the max-inline-size of the block to 66 characters<sup>∗</sup>,
 but there are narrow and wide variants for differing cases.</p>
 <p>The narrow variant is useful in mobile design when the user might want to
 zoom in on text. Reading text with too large a measure on mobile devices requires a lot of
@@ -132,7 +137,6 @@ The actual number of characters in a line will depend on its content,
 if the font is a proportional font.
 Read [<cite>What is the CSS ‘ch’ Unit?</cite>](https://meyerweb.com/eric/thoughts/2018/06/28/what-is-the-css-ch-unit/) for more information.
 </footer>
-
 <header><dl>
   <dt>author</dt>  <dd>Chris Harvey</dd>
   <dt>updated</dt> <dd><time>2017-09-18</time></dd>
@@ -191,10 +195,10 @@ the reader is more likely to lose track of the previous line.</p>
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!--link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;/node_modules/xmeter/dist/css/h-Measure.css&quot;/--&gt;
-&lt;p class&#x3D;&quot;h-Measure [modifier class]&quot;&gt;If the measure is too short, the reader’s eyes
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-comment">&lt;!--link rel="stylesheet" href="/node_modules/xmeter/dist/css/h-Measure.css"/--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"h-Measure [modifier class]"</span>&gt;</span>If the measure is too short, the reader’s eyes
 have to dart back and forth more often, causing fatigue. If the measure is too long,
-the reader is more likely to lose track of the previous line.&lt;/p&gt;</code></pre>
+the reader is more likely to lose track of the previous line.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -208,12 +212,10 @@ the reader is more likely to lose track of the previous line.&lt;/p&gt;</code></
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'
@@ -231,6 +233,7 @@ the reader is more likely to lose track of the previous line.&lt;/p&gt;</code></
     detailsClass: 'kss-markup'
   });
 </script>
+<script src="../js/base.js"></script>
 
 
 

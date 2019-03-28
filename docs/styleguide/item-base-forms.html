@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Xmeter Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../../dist/css/xmeter.css">
+<link rel="stylesheet" href="./kss-custom.css">
+
+</head>
+<body id="kss-node" class="kss-fullscreen-mode">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Xmeter Style Guide</h1>
+  </header>
+  <nav class="kss-nav" aria-label="Style Guide">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-principles.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Principles</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Base</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-objects.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Objects</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Components</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-interfaces.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Interfaces</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-helpers.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Helpers</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-atoms.html">
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Atoms</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-hacks.html">
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Hacks</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<main class="kss-main" aria-label="Content">
+  <article>
+
+    <div id="kssref-base-forms" class="kss-section kss-section--depth-2 is-fullscreen">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-base-forms">
+            <span class="kss-title__ref">
+              2.4
+              <span class="kss-title__permalink-hash">
+                  #Base.forms
+              </span>
+            </span>
+            Forms
+          </a>
+        </h2>
+
+          <p class="kss-toolbar">
+            <a href="#kssref-base-forms" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-base-forms" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <figure>
+	<form>
+		<fieldset>
+			<legend>Integer at lacus et diam tristique <code>fieldset legend</code> suscipit.</legend>
+			Aenean consectetur <code>fieldset</code> suscipit urna, non vehicula lacus blandit et.
+		</fieldset>
+		<fieldset>
+			<legend>single line text inputs</legend>
+			<input type="text" placeholder="input type text"/>
+			<input type="email" placeholder="input type email"/>
+			<input type="password" placeholder="input type password"/>
+			<input type="search" placeholder="input type search"/>
+			<input type="tel" placeholder="input type tel"/>
+			<input type="url" placeholder="input type url"/>
+		</fieldset>
+		<fieldset>
+			<legend>date/time</legend>
+			<input type="datetime-local"/>
+			<input type="date"/>
+			<input type="time"/>
+			<input type="week"/>
+			<input type="month"/>
+		</fieldset>
+		<fieldset>
+			<legend>without text input</legend>
+			<input type="color"/>
+			<input type="file"/>
+			<input type="hidden"/>
+			<input type="number" placeholder="input type number"/>
+			<input type="range"/>
+		</fieldset>
+		<fieldset>
+			<legend>check boxes</legend>
+			<input type="checkbox"/>
+			<label>select</label>
+			<label>
+				<input type="checkbox"/>
+				all
+			</label>
+			<input id="checkboxid" type="checkbox"/>
+			<label for="checkboxid">applicable</label>
+		</fieldset>
+		<fieldset>
+			<legend>radio buttons</legend>
+			<input type="radio" name="radiogroup1"/>
+			<label>select</label>
+			<label>
+				<input type="radio" name="radiogroup1"/>
+				only
+			</label>
+			<input id="radioid" type="radio" name="radiogroup1"/>
+			<label for="radioid">one</label>
+		</fieldset>
+		<fieldset>
+			<legend>drop-down list (select only one)</legend>
+			<select>
+				<option>option 1</option>
+				<optgroup label="label for option 2">
+					<option>option 2a</option>
+					<option>option 2b</option>
+					<option>option 2c</option>
+				</optgroup>
+				<option>option 3</option>
+			</select>
+			<input list="b" placeholder="select it or type it"/>
+			<datalist id="b">
+				<!-- optgroup not a valid child of datalist -->
+				<option>option 1</option>
+				<option>option 2</option>
+				<option>option 3</option>
+			</datalist>
+		</fieldset>
+		<fieldset>
+			<legend>drop-down list (select multiple)</legend>
+			<select multiple="">
+				<option>option 1</option>
+				<optgroup label="label for option 2">
+					<option>option 2a</option>
+					<option>option 2b</option>
+					<option>option 2c</option>
+				</optgroup>
+				<option>option 3</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>buttons</legend>
+			<input type="button" value="button"/>
+			<input type="reset"/>
+			<input type="submit"/>
+			<button type="button">button</button>
+			<button type="reset">reset</button>
+			<button type="submit">submit</button>
+		</fieldset>
+		<fieldset>
+			<legend>textarea</legend>
+			<textarea></textarea>
+		</fieldset>
+	</form>
+</figure>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Integer at lacus et diam tristique <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fieldset legend<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit.<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			Aenean consectetur <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>fieldset<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> suscipit urna, non vehicula lacus blandit et.
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>single line text inputs<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type text"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type email"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type password"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type search"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type tel"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type url"</span>/&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>date/time<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"datetime-local"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"time"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"week"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"month"</span>/&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>without text input<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"color"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"input type number"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span>/&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>check boxes<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>
+				all
+			<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkboxid"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkboxid"</span>&gt;</span>applicable<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>radio buttons<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radiogroup1"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radiogroup1"</span>/&gt;</span>
+				only
+			<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radioid"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radiogroup1"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radioid"</span>&gt;</span>one<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>drop-down list (select only one)<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"label for option 2"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2a<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2b<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2c<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">list</span>=<span class="hljs-string">"b"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"select it or type it"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"b"</span>&gt;</span>
+				<span class="hljs-comment">&lt;!-- optgroup not a valid child of datalist --&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">datalist</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>drop-down list (select multiple)<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">multiple</span>=<span class="hljs-string">""</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"label for option 2"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2a<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2b<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 2c<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>buttons<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"button"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>/&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span>&gt;</span>reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>textarea<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">textarea</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>kss-base.scss</code>, line 396
+        </div>
+
+    </div>
+</article>
+</main>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+<script src="../js/base.js"></script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
