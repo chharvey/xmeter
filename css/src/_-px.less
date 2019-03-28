@@ -1,0 +1,75 @@
+
+/*################################*\
+    legacy  |  _-px.less
+\*################################*/
+
+
+// padding-horizontal
+//
+// Set the `padding-left` and `padding-right` properties on an element,
+// or `padding-inline` if it is supported.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-06-27</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-px.css"/-->
+// <ul>
+//   <li class="-px-0">Point    (0.00)</li>
+//   <li class="-px-q">Quark    (0.25)</li>
+//   <li class="-px-h">Atom     (0.50)</li>
+//   <li class="-px-1">Molecule (1.00)</li>
+//   <li class="-px-2">Asteroid (2.00)</li>
+//   <li class="-px-4">Planet   (4.00)</li>
+// </ul>
+//
+// Weight: 2.5
+//
+// Styleguide Atoms.padding-horizontal
+
+.-px-0 {
+  padding-left: 0; padding-right: 0;
+  padding-inline: 0;
+}
+
+.-px-q {
+  padding-left: 0.25rem; padding-right: 0.25rem;
+  @supports (padding-inline: 1rem) {
+    padding-left: unset; padding-right: unset;
+    padding-inline: 0.25rem;
+  }
+}
+
+.-px-h {
+  padding-left: 0.5rem; padding-right: 0.5rem;
+  @supports (padding-inline: 1rem) {
+    padding-left: unset; padding-right: unset;
+    padding-inline: 0.5rem;
+  }
+}
+
+.-px-1 {
+  padding-left: 1rem; padding-right: 1rem;
+  @supports (padding-inline: 1rem) {
+    padding-left: unset; padding-right: unset;
+    padding-inline: 1rem;
+  }
+}
+
+.-px-2 {
+  padding-left: 2rem; padding-right: 2rem;
+  @supports (padding-inline: 1rem) {
+    padding-left: unset; padding-right: unset;
+    padding-inline: 2rem;
+  }
+}
+
+.-px-4 {
+  padding-left: 4rem; padding-right: 4rem;
+  @supports (padding-inline: 1rem) {
+    padding-left: unset; padding-right: unset;
+    padding-inline: 4rem;
+  }
+}

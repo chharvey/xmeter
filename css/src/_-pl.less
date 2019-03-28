@@ -1,0 +1,75 @@
+
+/*################################*\
+    xmeter  |  _-pl.less
+\*################################*/
+
+
+// padding-left
+//
+// Set the `padding-left` property on an element,
+// or `padding-inline-start` if it is supported.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-06-27</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pl.css"/-->
+// <ul>
+//   <li class="-pl-0">Point    (0.00)</li>
+//   <li class="-pl-q">Quark    (0.25)</li>
+//   <li class="-pl-h">Atom     (0.50)</li>
+//   <li class="-pl-1">Molecule (1.00)</li>
+//   <li class="-pl-2">Asteroid (2.00)</li>
+//   <li class="-pl-4">Planet   (4.00)</li>
+// </ul>
+//
+// Weight: 2.3
+//
+// Styleguide Atoms.padding-left
+
+.-pl-0 {
+  padding-left: 0;
+  padding-inline-start: 0;
+}
+
+.-pl-q {
+  padding-left: 0.25rem;
+  @supports (padding-inline-start: 1rem) {
+    padding-left: unset;
+    padding-inline-start: 0.25rem;
+  }
+}
+
+.-pl-h {
+  padding-left: 0.5rem;
+  @supports (padding-inline-start: 1rem) {
+    padding-left: unset;
+    padding-inline-start: 0.5rem;
+  }
+}
+
+.-pl-1 {
+  padding-left: 1rem;
+  @supports (padding-inline-start: 1rem) {
+    padding-left: unset;
+    padding-inline-start: 1rem;
+  }
+}
+
+.-pl-2 {
+  padding-left: 2rem;
+  @supports (padding-inline-start: 1rem) {
+    padding-left: unset;
+    padding-inline-start: 2rem;
+  }
+}
+
+.-pl-4 {
+  padding-left: 4rem;
+  @supports (padding-inline-start: 1rem) {
+    padding-left: unset;
+    padding-inline-start: 4rem;
+  }
+}

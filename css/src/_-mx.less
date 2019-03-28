@@ -1,0 +1,75 @@
+
+/*################################*\
+    legacy  |  _-mx.less
+\*################################*/
+
+
+// margin-horizontal
+//
+// Set the `margin-left` and `margin-right` properties on an element,
+// or `margin-inline` if it is supported.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-07-07</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mx.css"/-->
+// <ul>
+//   <li class="-mx-0">Point    (0.00)</li>
+//   <li class="-mx-q">Quark    (0.25)</li>
+//   <li class="-mx-h">Atom     (0.50)</li>
+//   <li class="-mx-1">Molecule (1.00)</li>
+//   <li class="-mx-2">Asteroid (2.00)</li>
+//   <li class="-mx-4">Planet   (4.00)</li>
+// </ul>
+//
+// Weight: 1.5
+//
+// Styleguide Atoms.margin-horizontal
+
+.-mx-0 {
+  margin-left: 0; margin-right: 0;
+  margin-inline: 0;
+}
+
+.-mx-q {
+  margin-left: 0.25rem; margin-right: 0.25rem;
+  @supports (margin-inline: 1rem) {
+    margin-left: unset; margin-right: unset;
+    margin-inline: 0.25rem;
+  }
+}
+
+.-mx-h {
+  margin-left: 0.5rem; margin-right: 0.5rem;
+  @supports (margin-inline: 1rem) {
+    margin-left: unset; margin-right: unset;
+    margin-inline: 0.5rem;
+  }
+}
+
+.-mx-1 {
+  margin-left: 1rem; margin-right: 1rem;
+  @supports (margin-inline: 1rem) {
+    margin-left: unset; margin-right: unset;
+    margin-inline: 1rem;
+  }
+}
+
+.-mx-2 {
+  margin-left: 2rem; margin-right: 2rem;
+  @supports (margin-inline: 1rem) {
+    margin-left: unset; margin-right: unset;
+    margin-inline: 2rem;
+  }
+}
+
+.-mx-4 {
+  margin-left: 4rem; margin-right: 4rem;
+  @supports (margin-inline: 1rem) {
+    margin-left: unset; margin-right: unset;
+    margin-inline: 4rem;
+  }
+}
