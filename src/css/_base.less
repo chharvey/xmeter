@@ -11,8 +11,8 @@
 @import (reference) url('./_-pt.less');
 
 
-@p-line-height: 1.5; // equivalent to custom prop `--line-height` // COMBAK:FALLBACK for custom property
-@p-color-gray-fallback: rgba(0,0,0, 0.25); // COMBAK:FALLBACK for #rrggbbaa color syntax
+@p-line-height: 1.5; // equivalent to custom prop `--line-height` // COMBAK{FALLBACK} for custom property
+@p-color-gray-fallback: rgba(0,0,0, 0.25); // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
 @p-color-gray: #00000040;
 @p-lh: (@p-line-height * 1rem); // equivalent to unit `1lh`, or custom prop `--lh`
 
@@ -66,8 +66,8 @@
 
 // Set up vertical rhythm system.
 // [1] default line-height. Change in your own project if you wish.
-// [2] COMBAK:FALLBACK for `lh` units (https://drafts.csswg.org/css-values/#lh)
-// [3] COMBAK:FALLBACK for custom property
+// [2] COMBAK{FALLBACK} for `lh` units (https://drafts.csswg.org/css-values/#lh)
+// [3] COMBAK{FALLBACK} for custom property
 // [4] addresses support for `rem` units (otherwise these would be in `body` selector)
 // [5] Root font-size (rem) should *not* be set to an absolute unit, so that users can specify
 //     font sizing settings in their user agent.
@@ -156,9 +156,9 @@ h6 { --font-scale: @g-font-size-h6;              }
 }
 
 h1 {
-  margin-top: 0;       // COMBAK:FALLBACK
-  margin-top: initial; // COMBAK:FALLBACK
-  margin-top: unset;   // COMBAK:FALLBACK
+  margin-top: 0;       // COMBAK{FALLBACK}
+  margin-top: initial; // COMBAK{FALLBACK}
+  margin-top: unset;   // COMBAK{FALLBACK}
   margin-block-start: unset; // undo Normalize
 }
 
@@ -195,9 +195,9 @@ hr {
   }
   figure {
     // undo Normalize
-    margin-top: 0      ; margin-left: 0      ; margin-right: 0      ; // COMBAK:FALLBACK
-    margin-top: initial; margin-left: initial; margin-right: initial; // COMBAK:FALLBACK
-    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // COMBAK:FALLBACK
+    margin-top: 0      ; margin-left: 0      ; margin-right: 0      ; // COMBAK{FALLBACK}
+    margin-top: initial; margin-left: initial; margin-right: initial; // COMBAK{FALLBACK}
+    margin-top: unset  ; margin-left: unset  ; margin-right: unset  ; // COMBAK{FALLBACK}
     margin-block-start: unset;
     margin-inline: unset;
   }
@@ -216,20 +216,20 @@ hr {
     li > &,
     dt > &,
     dd > & {
-      margin-bottom: 0;       // COMBAK:FALLBACK
-      margin-bottom: initial; // COMBAK:FALLBACK
-      margin-bottom: unset;   // COMBAK:FALLBACK
+      margin-bottom: 0;       // COMBAK{FALLBACK}
+      margin-bottom: initial; // COMBAK{FALLBACK}
+      margin-bottom: unset;   // COMBAK{FALLBACK}
       margin-block-end: unset; // undo default vertical spacing for nested lists
     }
   }
   ol,
   ul {
-    padding: 0 0 0 4rem; // COMBAK:FALLBACK
-    padding: logical 0 4rem 0 0;
+    padding: 0 0 0 4rem; // COMBAK{FALLBACK}
+    padding: logical 0 4rem 0 0; // NB <https://github.com/w3c/csswg-drafts/issues/1282>
     li > &,
     dt > &,
     dd > & {
-      padding-left: 2rem; // COMBAK:FALLBACK
+      padding-left: 2rem; // COMBAK{FALLBACK}
       @supports (padding-inline-start: 1rem) {
         padding-left: unset;
         padding-inline-start: 2rem;
@@ -237,13 +237,10 @@ hr {
     }
   }
   ol {
-    list-style-type: decimal;
   }
   ul {
-    list-style-type: disc; // not using `initial` because we explicitly want `disc`
   }
   dl {
-    list-style: none; // remove counters from `dl > li`
   }
   li {
   }
@@ -302,7 +299,7 @@ br {
     // color: #551a8b; // default `:visited`
     // color: #f00;    // default `:active`
     color: #06c; // `hsl(210deg, 100%, 40%)` // ratios: 5.57 aginst white, 3.77 against black
-    text-decoration: underline; // COMBAK:FALLBACK
+    text-decoration: underline; // COMBAK{FALLBACK}
     text-decoration-line: underline;
     cursor: pointer;
   }
@@ -321,15 +318,15 @@ br {
     font-style: italic;
   }
   mark {
-    background-color: fadeout(#ffe168, 50%); // COMBAK:FALLBACK for #rrggbbaa color syntax
+    background-color: fadeout(#ffe168, 50%); // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
     background-color: #ffe16880; // Google-flavored comments in Google Docs
-    color: inherit; // COMBAK:FALLBACK
+    color: inherit; // COMBAK{FALLBACK}
     color: unset; // unset browser default color
   }
   u {
     color: #360; // `hsl(90deg, 100%, 20%)` // ratios: 6.90 aginst white, 3.04 against black
     // color: #405a04; // StackOverflow-flavored diff // ratios: 7.83 against white, 2.68 against black
-    text-decoration: underline; // COMBAK:FALLBACK
+    text-decoration: underline; // COMBAK{FALLBACK}
     text-decoration-line: underline;
   }
   small {
@@ -338,7 +335,7 @@ br {
   s {
     color: #c03; // `hsl(345deg, 100%, 40%)` // ratios: 5.81 aginst white, 3.62 against black
     // color: #a82400; // StackOverflow-flavored diff // ratios: 7.20 against white, 2.92 against black
-    text-decoration: line-through; // COMBAK:FALLBACK
+    text-decoration: line-through; // COMBAK{FALLBACK}
     text-decoration-line: line-through;
   }
   //---- end ## Stress ----//
@@ -364,8 +361,8 @@ br {
   abbr {
     &[title] {
       cursor: help;
-      text-decoration: none; // COMBAK:FALLBACK for `text-decoration-line` // also IE fallback for `initial`
-      text-decoration-line: initial; // COMBAK:FALLBACK
+      text-decoration: none; // COMBAK{FALLBACK} for `text-decoration-line` // also IE fallback for `initial`
+      text-decoration-line: initial; // COMBAK{FALLBACK}
       text-decoration-line: unset; // undo Normalize
     }
   }
@@ -373,7 +370,7 @@ br {
     font-style: italic;
   }
   q {
-    .quotes-double(); // COMBAK:FALLBACK for `initial`
+    .quotes-double(); // COMBAK{FALLBACK} for `initial`
     .delims(initial);
   }
   cite {
@@ -402,7 +399,7 @@ br {
       font-size: inherit; // undo compounding font sizes
     }
     pre & {
-      white-space: inherit; // COMBAK:FALLBACK
+      white-space: inherit; // COMBAK{FALLBACK}
       white-space: unset; // sometimes people put a `code` in a `pre` // override `nowrap` above
     }
   }
@@ -440,7 +437,7 @@ fieldset {
       .border-block(all; 1px);
     }
     border-style: solid;
-    border-color: @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
+    border-color: @p-color-gray-fallback; // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
     border-color: @p-color-gray;
   }
 }
@@ -455,19 +452,19 @@ input {
 }
 textarea {
   display: block; // override browser default
-  height: (6 * @p-lh);         // COMBAK:FALLBACK
-  height: calc(6 * var(--lh)); // COMBAK:FALLBACK
+  height: (6 * @p-lh);         // COMBAK{FALLBACK}
+  height: calc(6 * var(--lh)); // COMBAK{FALLBACK}
   height: 6lh;
   width: 30rem;
   @supports (block-size: var(-v)) and (inline-size: 1rem) {
     height: unset;
     width: unset;
-    block-size: calc(6 * var(--lh)); // COMBAK:FALLBACK
+    block-size: calc(6 * var(--lh)); // COMBAK{FALLBACK}
     block-size: 6lh;
     inline-size: 30rem;
   }
   font-size: (@g-font-size-mill * 1rem); // .font-size-mod(@g-font-size-mill); // textarea cannot contain any element children
-  box-shadow: 0 0 0 1px @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
+  box-shadow: 0 0 0 1px @p-color-gray-fallback; // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
   box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
 input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
@@ -489,8 +486,10 @@ select {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  label:hover & {
-    box-shadow: inset 0 0 0.25rem 0 @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
+  &:hover {
+		// NOTE: Chrome applies these styles to inputs even when their associated labels
+		// (having the correct `[for]` attribute) are hovered.
+    box-shadow: inset 0 0 0.25rem 0 @p-color-gray-fallback; // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
     box-shadow: inset 0 0 0.25rem 0 @p-color-gray;
   }
 }
@@ -516,7 +515,7 @@ button {
   cursor: default;
   &:hover,
   &:focus {
-    box-shadow: inset 0 0 0.25rem 0 @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
+    box-shadow: inset 0 0 0.25rem 0 @p-color-gray-fallback; // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
     box-shadow: inset 0 0 0.25rem 0 @p-color-gray;
   }
 }
@@ -541,8 +540,8 @@ select[multiple] > optgroup > option {
 // [3] offset `[alt]` attribute text from surrounding copy
 // [4] safer alternative to `display: block;`
 img {
-  height: auto; width: auto; // COMBAK:FALLBACK
-  max-width: 100%;           // COMBAK:FALLBACK
+  height: auto; width: auto; // COMBAK{FALLBACK}
+  max-width: 100%;           // COMBAK{FALLBACK}
   block-size: auto; inline-size: auto; // [1]
   max-inline-size: 100%; // [2]
   font-style: italic; // [3]
@@ -559,11 +558,11 @@ summary {
 }
 
 dialog {
-  padding: (0.5 * @p-lh) 1rem;         // COMBAK:FALLBACK
-  padding: calc(0.5 * var(--lh)) 1rem; // COMBAK:FALLBACK
+  padding: (0.5 * @p-lh) 1rem;         // COMBAK{FALLBACK}
+  padding: calc(0.5 * var(--lh)) 1rem; // COMBAK{FALLBACK}
   padding: 0.5lh 1rem;
   &::backdrop {
-    background-color: @p-color-gray-fallback; // COMBAK:FALLBACK for #rrggbbaa color syntax
+    background-color: @p-color-gray-fallback; // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
     background-color: @p-color-gray;
   }
 }

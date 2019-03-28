@@ -7,5 +7,6 @@
     "./kss-custom.css"
   ],
   "js": [
+    "../js/base.js"
   ]
 }
