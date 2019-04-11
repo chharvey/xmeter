@@ -536,8 +536,11 @@ select[multiple] > optgroup > option {
 // [3] offset `[alt]` attribute text from surrounding copy
 // [4] safer alternative to `display: block;`
 img {
-  max-width: 100%;           // COMBAK{FALLBACK}
-  max-inline-size: 100%; // [2]
+	max-width: 100%; // COMBAK{FALLBACK}
+	@supports (max-inline-size: 1%) {
+		max-width: unset;
+		max-inline-size: 100%; // [2]
+	}
   font-style: italic; // [3]
   vertical-align: middle; // [4]
 }
