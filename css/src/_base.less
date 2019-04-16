@@ -9,6 +9,7 @@
 @import (reference) url('./_h-FontSize.less');
 @import (reference) url('./_-mb.less');
 @import (reference) url('./_-pt.less');
+@import (reference) url('./_-pl.less');
 
 
 @p-line-height: 1.5; // equivalent to custom prop `--line-height` // COMBAK{FALLBACK} for custom property
@@ -118,6 +119,7 @@ a, ins, del, slot {
 //    # SECTIONS
 //++++++++++++++++++++++++++++++++//
 body {
+	tab-size: 4;
 }
 main {
 }
@@ -224,16 +226,11 @@ hr {
   }
   ol,
   ul {
-    padding: 0 0 0 4rem; // COMBAK{FALLBACK}
-    padding: logical 0 4rem 0 0; // NB <https://github.com/w3c/csswg-drafts/issues/1282>
+		.-pl-4;
     li > &,
     dt > &,
     dd > & {
-      padding-left: 2rem; // COMBAK{FALLBACK}
-      @supports (padding-inline-start: 1rem) {
-        padding-left: unset;
-        padding-inline-start: 2rem;
-      }
+			.-pl-2;
     }
   }
   ol {
@@ -535,15 +532,15 @@ select[multiple] > optgroup > option {
 //++++++++++++++++++++++++++++++++//
 //    # EMBEDDED
 //++++++++++++++++++++++++++++++++//
-// [1] Correct squishing when one dimension changes
 // [2] fluid images for responsive purposes
 // [3] offset `[alt]` attribute text from surrounding copy
 // [4] safer alternative to `display: block;`
 img {
-  height: auto; width: auto; // COMBAK{FALLBACK}
-  max-width: 100%;           // COMBAK{FALLBACK}
-  block-size: auto; inline-size: auto; // [1]
-  max-inline-size: 100%; // [2]
+	max-width: 100%; // COMBAK{FALLBACK}
+	@supports (max-inline-size: 1%) {
+		max-width: unset;
+		max-inline-size: 100%; // [2]
+	}
   font-style: italic; // [3]
   vertical-align: middle; // [4]
 }
