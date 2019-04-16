@@ -19,17 +19,17 @@ $ npm install xmeter
 
 Use the global variables:
 ```less
-@import (reference) url('/node_modules/xmeter/css/src/__settings.less');
+@import (reference) url('/node_modules/xmeter/src/css/__settings.less');
 .my-selector {
   font-size: (1.5 * @g-font-size-kilo);
 }
 ```
-See [`/css/src/__settings.less`](https://github.com/chharvey/xmeter/blob/master/css/src/__settings.less)
+See [`/src/css/__settings.less`](https://github.com/chharvey/xmeter/blob/master/src/css/__settings.less)
 for all the variables available.
 
 Use the tools:
 ```less
-@import (reference) url('/node_modules/xmeter/css/src/__tool.transitions.less');
+@import (reference) url('/node_modules/xmeter/src/css/__tool.transitions.less');
 .my-selector {
   .transitions(color, background-color; 500ms; ease-in-out);
 }
@@ -95,7 +95,7 @@ where `‹X.Y.Z›` is any published version number, and `‹filename›` is the
 
 Xmeter’s stylesheet is a starting point that “normalizes” unclassed HTML elements.
 And now that Xmeter has a few [design patterns](https://chharvey.github.io/xmeter/docs/styleguide/) built in, you can use them in your markup too!
-In addition to base styles, Xmeter has classes for Objects (`/css/src/_o-*.less`), Components (`/css/src/_c-*.less`) and Helpers (`/css/src/_h-*.less`),
+In addition to base styles, Xmeter has classes for Objects (`/src/css/_o-*.less`), Components (`/src/css/_c-*.less`) and Helpers (`/src/css/_h-*.less`),
 design patterns that aid in a consistent, easy-to-use, vertical rhythm system.
 These classes should be directly injected into elements’ HTML `[class]` attribute on your site.
 
