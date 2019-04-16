@@ -27,7 +27,7 @@ fieldset {
   margin: initial; /* COMBAK{FALLBACK} */
   margin: unset;
 }
-ol, ul,
+ol, ul, dl,
 th, td,
 legend {
   padding: 0;       /* COMBAK{FALLBACK} */

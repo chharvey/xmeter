@@ -7,6 +7,7 @@
 /*================================*\
     kss-custom.less
 \*================================*/
+@import (reference) url('../../css/src/xmeter.less');
 
 
 /* Custom stylesheet for KSS documentation files. */
@@ -24,4 +25,19 @@
   .kss-modifier__example p {
     text-indent: 2rem;
   }
+}
+
+#kssref-atoms-row-gap {
+	.kss-modifier__example ul {
+		.o-List;
+		.o-Grid;
+	}
+}
+
+#kssref-atoms-column-gap {
+	.kss-modifier__example ul {
+		.o-List;
+		.o-Grid;
+		grid-template-columns: 1fr 1fr;
+	}
 }

@@ -1,0 +1,80 @@
+
+/*################################*\
+		xmeter  |  _-rg.less
+\*################################*/
+
+
+// row-gap
+//
+// Set the `row-gap` property on an element,
+// with `grid-row-gap` as a fallback.
+//
+// <header><dl>
+// 	<dt>author</dt>  <dd>Chris Harvey</dd>
+// 	<dt>updated</dt> <dd><time>2019-04-16</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-rg.css"/-->
+// <ul class="-rg-0"><li>Point   </li><li>(0.00)</li></ul>
+// <ul class="-rg-q"><li>Quark   </li><li>(0.25)</li></ul>
+// <ul class="-rg-h"><li>Atom    </li><li>(0.50)</li></ul>
+// <ul class="-rg-1"><li>Molecule</li><li>(1.00)</li></ul>
+// <ul class="-rg-2"><li>Asteroid</li><li>(2.00)</li></ul>
+// <ul class="-rg-4"><li>Planet  </li><li>(4.00)</li></ul>
+//
+// Weight: 0.1
+//
+// Styleguide Atoms.row-gap
+
+@p-lh: 1.5rem; // COMBAK{FALLBACK} for `lh` unit
+
+.-rg-0 {
+	grid-row-gap: 0;
+	row-gap: 0;
+}
+
+.-rg-q {
+	grid-row-gap: (0.25 * @p-lh);         // COMBAK{FALLBACK}
+	grid-row-gap: calc(0.25 * var(--lh)); // COMBAK{FALLBACK}
+	grid-row-gap: 0.25lh;
+	row-gap: (0.25 * @p-lh);         // COMBAK{FALLBACK}
+	row-gap: calc(0.25 * var(--lh)); // COMBAK{FALLBACK}
+	row-gap: 0.25lh;
+}
+
+.-rg-h {
+	grid-row-gap: (0.5 * @p-lh);         // COMBAK{FALLBACK}
+	grid-row-gap: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
+	grid-row-gap: 0.5lh;
+	row-gap: (0.5 * @p-lh);         // COMBAK{FALLBACK}
+	row-gap: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
+	row-gap: 0.5lh;
+}
+
+.-rg-1 {
+	grid-row-gap: @p-lh;     // COMBAK{FALLBACK}
+	grid-row-gap: var(--lh); // COMBAK{FALLBACK}
+	grid-row-gap: 1lh;
+	row-gap: @p-lh;     // COMBAK{FALLBACK}
+	row-gap: var(--lh); // COMBAK{FALLBACK}
+	row-gap: 1lh;
+}
+
+.-rg-2 {
+	grid-row-gap: (2 * @p-lh);         // COMBAK{FALLBACK}
+	grid-row-gap: calc(2 * var(--lh)); // COMBAK{FALLBACK}
+	grid-row-gap: 2lh;
+	row-gap: (2 * @p-lh);         // COMBAK{FALLBACK}
+	row-gap: calc(2 * var(--lh)); // COMBAK{FALLBACK}
+	row-gap: 2lh;
+}
+
+.-rg-4 {
+	grid-row-gap: (4 * @p-lh);         // COMBAK{FALLBACK}
+	grid-row-gap: calc(4 * var(--lh)); // COMBAK{FALLBACK}
+	grid-row-gap: 4lh;
+	row-gap: (4 * @p-lh);         // COMBAK{FALLBACK}
+	row-gap: calc(4 * var(--lh)); // COMBAK{FALLBACK}
+	row-gap: 4lh;
+}
