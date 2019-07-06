@@ -1,27 +1,22 @@
 {
   "name": "xmeter",
-  "version": "7.1.0",
+  "version": "7.2.0",
   "description": "A default stylesheet with a set of tools that make designing with vertical rhythm easy.",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "aria-patterns": "^1.0.0-beta.4",
-    "extrajs-dom": "^4.3.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^3.10.0",
+    "gulp-clean-css": "^4.0.0",
     "gulp-inject-string": "^1.1.1",
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
-    "jsdom": "^11.12.0",
     "kss": "^3.0.0-beta.23",
     "normalize.css": "^8.0.0"
   },
   "scripts": {
     "test": "node test.js",
-    "unbuild:docs": "rm -r docs/styleguide/  &&  rm docs/{index.html,css/docs.css}",
-    "unbuild": "npm run unbuild:docs &&  rm -r css/dist/",
     "build": "gulp build",
     "prepublishOnly": "npm run build"
   },

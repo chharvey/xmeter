@@ -1,0 +1,75 @@
+
+/*################################*\
+    xmeter  |  _-pr.less
+\*################################*/
+
+
+// padding-right
+//
+// Set the `padding-right` property on an element,
+// or `padding-inline-end` if it is supported.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-06-27</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-pr.css"/-->
+// <ul>
+//   <li class="-pr-0">Point    (0.00)</li>
+//   <li class="-pr-q">Quark    (0.25)</li>
+//   <li class="-pr-h">Atom     (0.50)</li>
+//   <li class="-pr-1">Molecule (1.00)</li>
+//   <li class="-pr-2">Asteroid (2.00)</li>
+//   <li class="-pr-4">Planet   (4.00)</li>
+// </ul>
+//
+// Weight: 2.4
+//
+// Styleguide Atoms.padding-right
+
+.-pr-0 {
+  padding-right: 0;
+  padding-inline-end: 0;
+}
+
+.-pr-q {
+  padding-right: 0.25rem;
+  @supports (padding-inline-end: 1rem) {
+    padding-right: unset;
+    padding-inline-end: 0.25rem;
+  }
+}
+
+.-pr-h {
+  padding-right: 0.5rem;
+  @supports (padding-inline-end: 1rem) {
+    padding-right: unset;
+    padding-inline-end: 0.5rem;
+  }
+}
+
+.-pr-1 {
+  padding-right: 1rem;
+  @supports (padding-inline-end: 1rem) {
+    padding-right: unset;
+    padding-inline-end: 1rem;
+  }
+}
+
+.-pr-2 {
+  padding-right: 2rem;
+  @supports (padding-inline-end: 1rem) {
+    padding-right: unset;
+    padding-inline-end: 2rem;
+  }
+}
+
+.-pr-4 {
+  padding-right: 4rem;
+  @supports (padding-inline-end: 1rem) {
+    padding-right: unset;
+    padding-inline-end: 4rem;
+  }
+}
