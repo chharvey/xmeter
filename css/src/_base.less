@@ -58,7 +58,7 @@
     }
   }
   &:not(input):not(button):not(select), // NOTE be careful here: if overriding, specificity > 3
-  // &:not(input, button, select), // CHANGED:NEW selector not supported yet // NB:LINK <https://caniuse.com/#feat=css-not-sel-list> // TODO once removed, fix NB:LINK (L426)
+  // &:not(input, button, select), // CHANGED{NEW} selector not supported yet // NB{LINK} <https://caniuse.com/#feat=css-not-sel-list> // TODO once removed, fix NB:LINK (L430)
   &::before,
   &::after {
     border: 0 solid; // change initial border from `medium none`
@@ -427,7 +427,7 @@ textarea {
 
 fieldset {
   padding: 0 1rem;
-  html body & { // HACK NB:LINK (L59) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
+  html body & { // HACK NB{LINK} (L61) need a specificity of 3 to override generic `*:not(input):not(button):not(select)`
     // NOTE cannot use box-shadow hack due to shadow covering <legend>
     .border-vert(all; 1px);
     @supports (margin-block-start: 0) {
@@ -465,8 +465,8 @@ textarea {
   box-shadow: 0 0 0 1px @p-color-gray-fallback; // COMBAK{FALLBACK} for `#rrggbbaa` color syntax
   box-shadow: 0 0 0 1px @p-color-gray; // HACK vertical border hack
 }
-input:not([type="button"]):not([type="reset"]):not([type="submit"]) {
-// input:not([type="button"], [type="reset"], [type="submit"]) { // CHANGED:NEW selector not supported yet // NB:LINK <https://caniuse.com/#feat=css-not-sel-list>
+input:not([type="button"]):not([type="reset"]):not([type="submit"]) {  // NOTE be careful here: if overriding, specificity > 31
+// input:not([type="button"], [type="reset"], [type="submit"]) { // CHANGED{NEW} selector not supported yet // NB{LINK} <https://caniuse.com/#feat=css-not-sel-list>
   font-size: (@g-font-size-mill * 1em);
 }
   //---- end ## Textual ----//
@@ -533,10 +533,13 @@ select[multiple] > optgroup > option {
 //++++++++++++++++++++++++++++++++//
 //    # EMBEDDED
 //++++++++++++++++++++++++++++++++//
+// [1] Correct squishing when one dimension changes (override `[height]`/`[width]` attributes)
 // [2] fluid images for responsive purposes
 // [3] offset `[alt]` attribute text from surrounding copy
 // [4] safer alternative to `display: block;`
 img {
+	height: auto; width: auto; // COMBAK{FALLBACK}
+	block-size: auto; inline-size: auto; // [1]
 	max-width: 100%; // COMBAK{FALLBACK}
 	@supports (max-inline-size: 1%) {
 		max-width: unset;
