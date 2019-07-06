@@ -1,0 +1,545 @@
+
+/*################################*\
+		xmeter  |  kss-base.scss
+\*################################*/
+
+
+// Base
+//
+// Standard, unclassed typographical HTML elements.
+//
+// Weight: 1.1
+//
+// Styleguide Base
+
+
+// Grouping Elements
+//
+// Weight: 1
+//
+// Styleguide Base.grouping-elements
+
+
+// Headings & Paragraphs
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<h1>Heading 1 <code>h1</code></h1>
+// 	<p>Paragraph <code>p</code>
+// 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+// 		Aliquam sagittis suscipit nunc, a cursus libero euismod at.
+// 		Nulla placerat neque massa, quis interdum leo efficitur vel.
+// 		Donec feugiat varius arcu non volutpat.
+// 		Mauris eget mauris ut mauris auctor mattis id vel justo.
+// 		Nulla dictum arcu nec suscipit mollis.
+// 		Maecenas a iaculis nisl, ut pretium est. Nulla facilisi.</p>
+// 	<h2>Heading 2 <code>h2</code></h2>
+// 	<p>Paragraph <code>p</code>
+// 		Suspendisse ut auctor enim.
+// 		Aliquam viverra enim vitae ante aliquet venenatis.
+// 		Sed vel nibh sit amet sapien fermentum mattis nec non arcu.
+// 		Praesent dapibus velit quis lectus tempus, ut ullamcorper nibh facilisis.
+// 		Aenean tincidunt ante risus, semper malesuada libero consectetur id.
+// 		Praesent vel ligula ut enim porttitor porta. Aenean eu ullamcorper mi.
+// 		Integer blandit est quam, eget mattis urna scelerisque quis.
+// 		Maecenas sapien sapien, ornare nec lobortis eget, tincidunt sed ligula.
+// 		Maecenas risus nibh, volutpat sed euismod non, semper eget neque.
+// 		Integer varius egestas risus, volutpat sagittis turpis convallis eget.
+// 		Vivamus pulvinar ligula eget mi tincidunt, eget faucibus justo laoreet.
+// 		In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+// 		Sed luctus congue tortor a scelerisque.</p>
+// 	<h3>Heading 3 <code>h3</code></h3>
+// 	<p>Paragraph <code>p</code>
+// 		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+// 		Nunc sit amet scelerisque lectus. Cras cursus sed dui quis convallis.
+// 		Quisque id justo elit.
+// 		Fusce ut quam non sem efficitur accumsan sed id neque.
+// 		Mauris finibus dignissim gravida.
+// 		In dignissim mauris ac odio molestie volutpat.
+// 		Nulla tellus justo, finibus sed volutpat sed, tristique ac lacus.
+// 		Suspendisse sit amet fermentum sapien.
+// 		Aliquam luctus laoreet iaculis.
+// 		Proin lacinia orci vitae tellus pellentesque porttitor.</p>
+// 	<h4>Heading 4 <code>h4</code></h4>
+// 	<p>Paragraph <code>p</code>
+// 		Aenean consectetur suscipit urna, non vehicula lacus blandit et.
+// 		Integer at lacus et diam tristique suscipit.
+// 		Ut cursus massa sit amet nisl convallis, elementum accumsan sapien mattis.
+// 		Vestibulum vitae magna ac tellus accumsan pharetra vulputate vitae erat.
+// 		Vestibulum est dui, elementum non sagittis ac, sagittis accumsan justo.
+// 		Donec at vestibulum diam. Nam et volutpat dolor, at pulvinar nisi.
+// 		Curabitur aliquam maximus nulla eu venenatis.
+// 		Nam aliquam lorem non felis dignissim dictum.
+// 		Pellentesque sagittis vehicula nisl non luctus.
+// 		Pellentesque eget ligula hendrerit, blandit enim consequat, dictum sem.
+// 		In quis lectus in lectus interdum laoreet eu quis quam.
+// 		Fusce auctor posuere purus, quis semper libero dignissim euismod.
+// 		Curabitur commodo mauris a sapien vulputate, eget pharetra urna facilisis.</p>
+// 	<h5>Heading 5 <code>h5</code></h5>
+// 	<p>Paragraph <code>p</code>
+// 		Donec finibus ut lectus finibus pellentesque.
+// 		Nulla euismod feugiat nulla nec posuere.
+// 		Sed ac est id sem sagittis rhoncus eu ac neque.
+// 		Aliquam eu metus sagittis, porta turpis id, scelerisque magna.
+// 		Nulla venenatis elementum est, semper viverra felis tristique sit amet.
+// 		Mauris nec ipsum id orci porttitor auctor sed sit amet sem.
+// 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+// 		Etiam tellus leo, venenatis sit amet ipsum non, sagittis feugiat ante.</p>
+// 	<h6>Heading 6 <code>h6</code></h6>
+// 	<p>Paragraph <code>p</code>
+// 		Donec vel dolor ut felis dapibus ultricies vitae a nibh.
+// 		Ut semper odio est, sed lacinia ligula gravida ut.
+// 		Vestibulum facilisis viverra pulvinar.
+// 		Suspendisse maximus nisl sit amet augue vulputate, vel porta nunc molestie.
+// 		Aliquam mauris diam, pharetra vel consectetur quis, rhoncus in risus.
+// 		Donec ut quam massa.
+// 		Vestibulum sapien justo, commodo a eros in, rhoncus interdum nisl.
+// 		Etiam a porta lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+// </figure>
+// <figure class="h-Ruled">
+// 	<h1>Zero <code>h1</code> Two Three <br/> Four Five Six Seven</h1>
+// 	<h2>Zero One <code>h2</code> Three <br/> Four Five Six Seven</h2>
+// 	<h3>Zero One Two <code>h3</code>   <br/> Four Five Six Seven</h3>
+// 	<h4>Zero One Two Three <br/> <code>h4</code>  Five Six Seven</h4>
+// 	<h5>Zero One Two Three <br/> Four <code>h5</code>  Six Seven</h5>
+// 	<h6>Zero One Two Three <br/> Four Five <code>h6</code> Seven</h6>
+// </figure>
+// <figure class="h-Ruled">
+// 	<address>
+// 		12345 <code>address</code> Ave <code>br</code><br/>
+// 		Washington, DC 00000 <code>br</code><br/>
+// 		United States of America
+// 	</address>
+// </figure>
+// <figure class="h-Ruled">
+// 	<pre>
+// Pellentesque <code>pre</code> habitant() {
+// 	morbi.tristique = senectus;
+// 	et (netus = malesuada; fames &lt; ac; turpis.egestas++) {
+// 		Nunc.sit += [amet, scelerisque][et];
+// 		Cras = {
+// 			lectus: cursus,
+// 			sed: dui,
+// 			quis: convallis(id () { justo Quisque.elit; }),
+// 		};
+// 	}
+// }
+// 	</pre>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figure>
+// 		Aenean consectetur <code>figure</code> suscipit urna, non vehicula lacus blandit et.
+// 		<figcaption>Integer at lacus et diam tristique <code>figure</code> <code>figcaption</code> suscipit.</figcaption>
+// 	</figure>
+// </figure>
+// <figure class="h-Ruled">
+// 	<blockquote>Donec <code>blockquote</code> vel dolor ut felis dapibus ultricies vitae a nibh.</blockquote>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figcaption>A horizontal rule <code>hr</code> is present below.</figcaption>
+// 	<hr/>
+// </figure>
+//
+// Weight: 1
+//
+// Styleguide Base.grouping-elements.headings-paragraphs
+
+
+// Lists
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<figcaption>Ordered List <code>ol</code></figcaption>
+// 	<ol>
+// 		<li>List item <code>li</code></li>
+// 		<li>List item <code>li</code>
+// 			<ol>
+// 				<li>Nested list item</li>
+// 				<li>Nested list item
+// 					<ol>
+// 						<li>Another nested list item</li>
+// 						<li>Another nested list item</li>
+// 					</ol>
+// 				</li>
+// 			</ol>
+// 		</li>
+// 	</ol>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figcaption>Unrdered List <code>ul</code></figcaption>
+// 	<ul>
+// 		<li>List item <code>li</code></li>
+// 		<li>List item <code>li</code>
+// 			<ul>
+// 				<li>Nested list item</li>
+// 				<li>Nested list item
+// 					<ul>
+// 						<li>Another nested list item</li>
+// 						<li>Another nested list item</li>
+// 					</ul>
+// 				</li>
+// 			</ul>
+// 		</li>
+// 	</ul>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figcaption>Dictionary List <code>dl</code></figcaption>
+// 	<dl>
+// 		<dt>key <code>dt</code></dt>
+// 		<dd>value <code>dd</code></dd>
+// 		<dt>
+// 			<ul>
+// 				<li>1st key</li>
+// 				<li>2nd key</li>
+// 			</ul>
+// 		</dt>
+// 		<dd>value</dd>
+// 		<dt>key</dt>
+// 		<dd>
+// 			<ul>
+// 				<li>1st value</li>
+// 				<li>2nd value</li>
+// 			</ul>
+// 		</dd>
+// 	</dl>
+// </figure>
+//
+// Weight: 2
+//
+// Styleguide Base.grouping-elements.lists
+
+
+// Tables
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<table>
+// 		<caption><code>table</code> <code>caption</code></caption>
+// 		<thead>
+// 			<tr>
+// 				<th scope="col">header row 1: heading 1</th>
+// 				<th scope="col">heading 2</th>
+// 				<th scope="col">heading 3</th>
+// 			</tr>
+// 		</thead>
+// 		<tbody>
+// 			<tr>
+// 				<td>body row 1: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>body row 2: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>body row 3: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 		</tbody>
+// 		<tfoot>
+// 			<tr>
+// 				<td>footer row 1: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>footer row 2: data 1</td>
+// 				<td>data 2</td>
+// 				<td>data 3</td>
+// 			</tr>
+// 		</tfoot>
+// 	</table>
+// </figure>
+//
+// Weight: 3
+//
+// Styleguide Base.grouping-elements.tables
+
+
+// Transparent Elements
+//
+// A transparent element can be either block-level or text-level, depending on its contents.
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<figcaption>Transparent elements styled with inline display:</figcaption>
+// 	<dl>
+// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Inline">placeholder anchor</a></dd>
+// 		<dt><code>a[href]</code></dt>       <dd><a    class="h-Inline" href="#0">hyperlink</a></dd>
+// 		<dt><code>ins</code></dt>           <dd><ins  class="h-Inline">content shown to be inserted into a document</ins></dd>
+// 		<dt><code>del</code></dt>           <dd><del  class="h-Inline">content shown to be deleted from a document</del></dd>
+// 		<dt><code>slot</code></dt>          <dd><slot class="h-Inline" name="">a placeholder for dynamic data</slot></dd>
+// 	</dl>
+// </figure>
+// <figure class="h-Ruled">
+// 	<figcaption>Transparent elements styled with block display:</figcaption>
+// 	<dl>
+// 		<dt><code>a:not([href])</code></dt> <dd><a    class="h-Block">placeholder anchor</a></dd>
+// 		<dt><code>a[href]</code></dt>       <dd><a    class="h-Block" href="#0">hyperlink</a></dd>
+// 		<dt><code>ins</code></dt>           <dd><ins  class="h-Block">content shown to be inserted into a document</ins></dd>
+// 		<dt><code>del</code></dt>           <dd><del  class="h-Block">content shown to be deleted from a document</del></dd>
+// 		<dt><code>slot</code></dt>          <dd><slot class="h-Block" name="">a placeholder for dynamic data</slot></dd>
+// 	</dl>
+// </figure>
+//
+// Weight: 2
+//
+// Styleguide Base.transparent-elements
+
+
+// Text-Level Elements
+//
+// Weight: 3
+//
+// Styleguide Base.text-level-elements
+
+
+// Links
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<dl>
+// 		<dt><code>a:not([href])</code></dt>
+// 		<dd><a>placeholder anchor</a></dd>
+// 		<dd>
+// 			<p>Lorem ipsum <a>dolor</a> sit amet, consectetur adipisicing elit, sed do
+// 				eiusmod tempor incididunt <a>ut labore et dolore</a> magna aliqua. Ut
+// 				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+// 				nisi ut aliquip ex ea commodo consequat. <a>Lorem ipsum dolor sit</a>
+// 				amet, consectetur adipisicing elit, sed do eiusmod tempor
+// 				incididunt <a>ut labore et dolore magna aliqua</a>.</p>
+// 		</dd>
+// 		<dt><code>a[href]</code></dt>
+// 		<dd><a href="#0">hyperlink</a></dd>
+// 		<dd>
+// 			<p>Lorem ipsum <a href="#0">dolor</a> sit amet, consectetur adipisicing elit, sed do
+// 				eiusmod tempor incididunt <a href="#0">ut labore et dolore</a> magna aliqua. Ut
+// 				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+// 				nisi ut aliquip ex ea commodo consequat. <a href="#0">Lorem ipsum dolor sit</a>
+// 				amet, consectetur adipisicing elit, sed do eiusmod tempor
+// 				incididunt <a href="#0">ut labore et dolore magna aliqua</a>.</p>
+// 		</dd>
+// 	</dl>
+// </figure>
+//
+// Weight: 1
+//
+// Styleguide Base.text-level-elements.links
+
+
+// Emphasis
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<dl>
+// 		<dt><code>em</code>     </dt><dd><em>stress emphasis</em></dd>
+// 		<dt><code>strong</code> </dt><dd><strong>importance or urgency</strong></dd>
+// 		<dt><code>i</code>      </dt><dd><i>alternate voice/mood (scare quotes, mentioning words, foreign expressions)</i></dd>
+// 		<dt><code>mark</code>   </dt><dd><mark>relevant in some context</mark></dd>
+// 		<dt><code>u</code>      </dt><dd><u>unarticulated annotation</u></dd>
+// 		<dt><code>small</code>  </dt><dd><small>side comment or caveat</small></dd>
+// 		<dt><code>s</code>      </dt><dd><s>text shown to be no longer relevant</s></dd>
+// 	</dl>
+// </figure>
+//
+// Weight: 2
+//
+// Styleguide Base.text-level-elements.emphasis
+
+
+// Documentation
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<dl>
+// 		<dt><code>ins</code></dt>         <dd><ins>content shown to be inserted into a document</ins></dd>
+// 		<dt><code>del</code></dt>         <dd><del>content shown to be deleted from a document</del></dd>
+// 		<dt><code>dfn</code></dt>         <dd><dfn>definining instance of a term</dfn></dd>
+// 		<dt><code>b</code></dt>           <dd><b>keyword or technical term</b></dd>
+// 		<dt><code>abbr[title]</code></dt> <dd><abbr title="">abbreviation, initialism, or acronym</abbr></dd>
+// 		<dt><code>var</code></dt>         <dd><var>variable</var></dd>
+// 		<dt><code>q</code></dt>           <dd><q>quoted material</q></dd>
+// 		<dt><code>cite</code></dt>        <dd><cite>reference to a work, some part of a work, or the creator of a work</cite></dd>
+// 		<dt><code>sup</code></dt>         <dd><sup>superscript</sup></dd>
+// 		<dt><code>sub</code></dt>         <dd><sub>subscript</sub></dd>
+// 	</dl>
+// </figure>
+//
+// Weight: 3
+//
+// Styleguide Base.text-level-elements.documentation
+
+
+// Data
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<dl>
+// 		<dt><code>slot</code></dt>         <dd><slot name="">a placeholder for dynamic data</slot></dd>
+// 		<dt><code>data</code></dt>         <dd><data value="">generic machine-readable data</data></dd>
+// 		<dt><code>time</code></dt>         <dd><time datetime="Z">a specific date or time</time></dd>
+// 		<dt><code>code</code></dt>         <dd><code>a fragment of code</code></dd>
+// 		<dt><code>kbd</code></dt>          <dd><kbd>user input</kbd></dd>
+// 		<dt><code>kbd &gt; kbd</code></dt> <dd><kbd><kbd>a button or key on a physical device</kbd></kbd></dd>
+// 		<dt><code>samp</code></dt>         <dd><samp>sample computer output</samp></dd>
+// 	</dl>
+// </figure>
+//
+// Weight: 4
+//
+// Styleguide Base.text-level-elements.data
+
+
+// Forms
+//
+// Markup:
+// <figure>
+// 	<form>
+// 		<fieldset>
+// 			<legend>Integer at lacus et diam tristique <code>fieldset legend</code> suscipit.</legend>
+// 			Aenean consectetur <code>fieldset</code> suscipit urna, non vehicula lacus blandit et.
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>single line text inputs</legend>
+// 			<input type="text" placeholder="input type text"/>
+// 			<input type="email" placeholder="input type email"/>
+// 			<input type="password" placeholder="input type password"/>
+// 			<input type="search" placeholder="input type search"/>
+// 			<input type="tel" placeholder="input type tel"/>
+// 			<input type="url" placeholder="input type url"/>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>date/time</legend>
+// 			<input type="datetime-local"/>
+// 			<input type="date"/>
+// 			<input type="time"/>
+// 			<input type="week"/>
+// 			<input type="month"/>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>without text input</legend>
+// 			<input type="color"/>
+// 			<input type="file"/>
+// 			<input type="hidden"/>
+// 			<input type="number" placeholder="input type number"/>
+// 			<input type="range"/>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>check boxes</legend>
+// 			<input type="checkbox"/>
+// 			<label>select</label>
+// 			<label>
+// 				<input type="checkbox"/>
+// 				all
+// 			</label>
+// 			<input id="checkboxid" type="checkbox"/>
+// 			<label for="checkboxid">applicable</label>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>radio buttons</legend>
+// 			<input type="radio" name="radiogroup1"/>
+// 			<label>select</label>
+// 			<label>
+// 				<input type="radio" name="radiogroup1"/>
+// 				only
+// 			</label>
+// 			<input id="radioid" type="radio" name="radiogroup1"/>
+// 			<label for="radioid">one</label>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>drop-down list (select only one)</legend>
+// 			<select>
+// 				<option>option 1</option>
+// 				<optgroup label="label for option 2">
+// 					<option>option 2a</option>
+// 					<option>option 2b</option>
+// 					<option>option 2c</option>
+// 				</optgroup>
+// 				<option>option 3</option>
+// 			</select>
+// 			<input list="b" placeholder="select it or type it"/>
+// 			<datalist id="b">
+// 				<!-- optgroup not a valid child of datalist -->
+// 				<option>option 1</option>
+// 				<option>option 2</option>
+// 				<option>option 3</option>
+// 			</datalist>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>drop-down list (select multiple)</legend>
+// 			<select multiple="">
+// 				<option>option 1</option>
+// 				<optgroup label="label for option 2">
+// 					<option>option 2a</option>
+// 					<option>option 2b</option>
+// 					<option>option 2c</option>
+// 				</optgroup>
+// 				<option>option 3</option>
+// 			</select>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>buttons</legend>
+// 			<input type="button" value="button"/>
+// 			<input type="reset"/>
+// 			<input type="submit"/>
+// 			<button type="button">button</button>
+// 			<button type="reset">reset</button>
+// 			<button type="submit">submit</button>
+// 		</fieldset>
+// 		<fieldset>
+// 			<legend>textarea</legend>
+// 			<textarea></textarea>
+// 		</fieldset>
+// 	</form>
+// </figure>
+//
+// Weight: 4
+//
+// Styleguide Base.forms
+
+
+// Embedded Elements
+//
+// Weight: 5
+//
+// Styleguide Base.embedded-elements
+
+
+// Interactive Elements
+//
+// Markup:
+// <figure class="h-Ruled">
+// 	<details>
+// 		<summary>Integer at lacus et diam tristique <code>summary</code> suscipit.</summary>
+// 		<p>Aenean consectetur <code>details</code> suscipit urna, non vehicula lacus blandit et.
+// 			Nulla dictum arcu nec suscipit mollis.
+// 			In sapien lacus, egestas faucibus laoreet eu, tempor sit amet lorem.
+// 			Fusce auctor posuere purus, quis semper libero dignissim euismod.</p>
+// 	</details>
+// </figure>
+// <figure class="h-Ruled">
+// 	<dialog>
+// 		<h1 class="-pt-0">A Dialog</h1>
+// 		text for <code>dialog</code> element
+// 		<p>Can include flow content.</p>
+// 		<p class="-mb-0"><button type="button" name="dialog-close">close dialog</button></p>
+// 	</dialog>
+// 	<button type="button" name="dialog-open">open dialog</button>
+// 	<script>
+// 		var dialog = document.querySelector('dialog')
+// 		document.querySelector('button[name="dialog-open"]').addEventListener('click', function (_e) {
+// 			dialog.showModal()
+// 		})
+// 		dialog.querySelector('button[name="dialog-close"]').addEventListener('click', function (_e) {
+// 			dialog.close('some result')
+// 			// access result with `dialog.returnValue`
+// 		})
+// 	</script>
+// </figure>
+//
+// Weight: 6
+//
+// Styleguide Base.interactive-elements

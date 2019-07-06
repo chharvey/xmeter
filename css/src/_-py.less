@@ -25,7 +25,7 @@
 //   <li class="-py-4">Planet   (4.00)</li>
 // </ul>
 //
-// Weight: 2.4
+// Weight: 2.2
 //
 // Styleguide Atoms.padding-vertical
 
@@ -51,7 +51,7 @@
   padding-top: (0.5 * @p-lh);         padding-bottom: (0.5 * @p-lh);         // COMBAK{FALLBACK}
   padding-top: calc(0.5 * var(--lh)); padding-bottom: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
   padding-top: 0.5lh;                 padding-bottom: 0.5lh;
-  @supports (padding-block-end: var(--v)) {
+  @supports (padding-block: var(--v)) {
     padding-top: unset; padding-bottom: unset;
     padding-block: calc(0.5 * var(--lh)); // COMBAK{FALLBACK}
     padding-block: 0.5lh;

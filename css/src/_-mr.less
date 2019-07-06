@@ -1,0 +1,75 @@
+
+/*################################*\
+    xmeter  |  _-mr.less
+\*################################*/
+
+
+// margin-right
+//
+// Set the `margin-right` property on an element,
+// or `margin-inline-end` if it is supported.
+//
+// <header><dl>
+//   <dt>author</dt>  <dd>Chris Harvey</dd>
+//   <dt>updated</dt> <dd><time>2018-07-07</time></dd>
+// </dl></header>
+//
+// Markup:
+// <!--link rel="stylesheet" href="/node_modules/xmeter/css/dist/-mr.css"/-->
+// <ul>
+//   <li class="-mr-0">Point    (0.00)</li>
+//   <li class="-mr-q">Quark    (0.25)</li>
+//   <li class="-mr-h">Atom     (0.50)</li>
+//   <li class="-mr-1">Molecule (1.00)</li>
+//   <li class="-mr-2">Asteroid (2.00)</li>
+//   <li class="-mr-4">Planet   (4.00)</li>
+// </ul>
+//
+// Weight: 1.4
+//
+// Styleguide Atoms.margin-right
+
+.-mr-0 {
+  margin-right: 0;
+  margin-inline-end: 0;
+}
+
+.-mr-q {
+  margin-right: 0.25rem;
+  @supports (margin-inline-end: 1rem) {
+    margin-right: unset;
+    margin-inline-end: 0.25rem;
+  }
+}
+
+.-mr-h {
+  margin-right: 0.5rem;
+  @supports (margin-inline-end: 1rem) {
+    margin-right: unset;
+    margin-inline-end: 0.5rem;
+  }
+}
+
+.-mr-1 {
+  margin-right: 1rem;
+  @supports (margin-inline-end: 1rem) {
+    margin-right: unset;
+    margin-inline-end: 1rem;
+  }
+}
+
+.-mr-2 {
+  margin-right: 2rem;
+  @supports (margin-inline-end: 1rem) {
+    margin-right: unset;
+    margin-inline-end: 2rem;
+  }
+}
+
+.-mr-4 {
+  margin-right: 4rem;
+  @supports (margin-inline-end: 1rem) {
+    margin-right: unset;
+    margin-inline-end: 4rem;
+  }
+}
