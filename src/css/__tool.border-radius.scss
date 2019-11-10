@@ -1,0 +1,67 @@
+
+/*################################*\
+		xmeter  |  __tool.border-radius.scss
+\*################################*/
+
+
+// Shortcuts for setting `border-radius` on two corners of the same side of a box.
+// Also supports two values, for horizontal/vertical components.
+//
+// Examples:
+// - `@include border-left-radius(5%)` will do:
+//   - `border-top-left-radius: 5%;`
+//   - `border-bottom-left-radius: 5%;`
+// - `@include border-left-radius(5px 10px)` will do:
+//   - `border-top-left-radius: 5px 10px;`
+//   - `border-bottom-left-radius: 5px 10px;`
+//
+// ^params
+// $radius - (default: 0) the value of the border radius
+//         - one-value syntax: the horizontal and vertical value
+//         - two-value syntax, space-separated: the horizontal value, then vertical value
+// ^author
+// : Chris Harvey
+// ^updated
+// : 2017-11-28
+
+@mixin border-left-radius($radius: 0) {
+	border-top-left-radius:    $radius;
+	border-bottom-left-radius: $radius;
+}
+
+@mixin border-right-radius($radius: 0) {
+	border-top-right-radius:    $radius;
+	border-bottom-right-radius: $radius;
+}
+
+@mixin border-top-radius(@$adius: 0) {
+	border-top-left-radius:  $radius;
+	border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius: 0) {
+	border-bottom-right-radius: $radius;
+	border-bottom-left-radius:  $radius;
+}
+
+// Logical Properties below
+
+@mixin border-block-start-radius($radius: 0) {
+  border-start-start-radius: $radius;
+  border-start-end-radius:   $radius;
+}
+
+@mixin border-block-end-radius($radius: 0) {
+  border-end-start-radius: $radius;
+  border-end-end-radius:   $radius;
+}
+
+@mixin border-inline-start-radius($radius: 0) {
+  border-start-start-radius: $radius;
+  border-end-start-radius:   $radius;
+}
+
+@mixin border-inline-end-radius($radius: 0) {
+  border-start-end-radius: $radius;
+  border-end-end-radius:   $radius;
+}

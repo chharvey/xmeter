@@ -1,0 +1,30 @@
+
+/*################################*\
+		xmeter  |  __settings.scss
+\*################################*/
+
+
+// Note: the prefix `g-` on each variable stands for "global" because these variables
+// are globally (project-wide) accessible.
+// In each partial file, if need a private variable, use prefix `p-` for "private".
+// Parameters in mixins do not use any prefixes.
+
+
+// global font sizes
+$g-font-size-micr:  5/8; // 0.625 // tracks: ceil(0.625/line-height) == 1
+$g-font-size-mill:  6/8; // 0.750 // tracks: ceil(0.750/line-height) == 1
+$g-font-size-norm:  8/8; // 1.000 // tracks: ceil(1.000/line-height) == 1
+$g-font-size-kilo: 10/8; // 1.250 // tracks: ceil(1.250/line-height) == 1
+$g-font-size-mega: 14/8; // 1.750 // tracks: ceil(1.750/line-height) == 2
+$g-font-size-giga: 18/8; // 2.250 // tracks: ceil(2.250/line-height) == 2
+$g-font-size-tera: 24/8; // 3.000 // tracks: ceil(3.000/line-height) == 2
+$g-font-size-peta: 32/8; // 4.000 // tracks: ceil(4.000/line-height) == 3
+
+
+// heading sizes
+$g-font-size-h1: @g-font-size-tera;
+$g-font-size-h2: @g-font-size-giga;
+$g-font-size-h3: @g-font-size-mega;
+$g-font-size-h4: @g-font-size-kilo;
+$g-font-size-h5: @g-font-size-norm;
+$g-font-size-h6: @g-font-size-mill;
